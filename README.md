@@ -1,2 +1,0 @@
-# TrekMind
-TrekMind App
