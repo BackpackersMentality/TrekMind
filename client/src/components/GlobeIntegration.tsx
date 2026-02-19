@@ -8,8 +8,7 @@ import { SearchButton } from './SearchButton';
 import { SearchPopup } from './SearchPopup';
 import { TrekPreviewPanel } from './TrekPreviewPanel';
 import { getAllTreks } from '@/lib/treks';
-import type { FilterState } from '../types/filters';
-import { treksData } from '../data/treks.json';
+import type { FilterState } from '../types/filters';;
 
 interface GlobeIntegrationProps {
   height?: string;
