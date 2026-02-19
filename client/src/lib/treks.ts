@@ -1,6 +1,6 @@
-import treksData from "../data/treks.json";
-import itinerariesData from "../data/itineraries.json";
-import editorialData from "../data/editorial.json";
+import treksData from '../client/src/data/treks.json';
+import itinerariesData from '../client/src/data/itineraries.json';
+import editorialData from '../client/src/data/editorial.json';
 
 export interface Trek {
   id: string;
