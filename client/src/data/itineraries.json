@@ -1,0 +1,4450 @@
+{
+  "annapurna": {
+    "sheetName": "Annapurna",
+    "slug": "annapurna",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Kathmandu to Syange (Drive)",
+        "distanceKm": "\u2014",
+        "elevGainM": "\u2014",
+        "elevLossM": "\u2014",
+        "maxAltM": "1130.0"
+      },
+      {
+        "day": 2,
+        "route": "Syange to Dharapani",
+        "distanceKm": "15",
+        "elevGainM": "1100",
+        "elevLossM": "370",
+        "maxAltM": "1860.0"
+      },
+      {
+        "day": 3,
+        "route": "Dharapani to Chame",
+        "distanceKm": "16",
+        "elevGainM": "1000",
+        "elevLossM": "210",
+        "maxAltM": "2650.0"
+      },
+      {
+        "day": 4,
+        "route": "Chame to Upper Pisang",
+        "distanceKm": "15.2",
+        "elevGainM": "813",
+        "elevLossM": "216",
+        "maxAltM": "3300.0"
+      },
+      {
+        "day": 5,
+        "route": "Upper Pisang to Manang",
+        "distanceKm": "20.3",
+        "elevGainM": "843",
+        "elevLossM": "593",
+        "maxAltM": "3500.0"
+      },
+      {
+        "day": 6,
+        "route": "Manang (Acclimatization)",
+        "distanceKm": "\u2014",
+        "elevGainM": "\u2014",
+        "elevLossM": "\u2014",
+        "maxAltM": "3500.0"
+      },
+      {
+        "day": 7,
+        "route": "Manang to Yak Kharka",
+        "distanceKm": "9.2",
+        "elevGainM": "521",
+        "elevLossM": "102",
+        "maxAltM": "4050.0"
+      },
+      {
+        "day": 8,
+        "route": "Yak Kharka to Thorong Phedi",
+        "distanceKm": "7",
+        "elevGainM": "550",
+        "elevLossM": "100",
+        "maxAltM": "4500.0"
+      },
+      {
+        "day": 9,
+        "route": "Thorong Phedi to Muktinath (via Pass)",
+        "distanceKm": "15.5",
+        "elevGainM": "1000",
+        "elevLossM": "1700",
+        "maxAltM": "5416.0"
+      },
+      {
+        "day": 10,
+        "route": "Muktinath to Tatopani (Drive)",
+        "distanceKm": "\u2014",
+        "elevGainM": "\u2014",
+        "elevLossM": "\u2014",
+        "maxAltM": "1300.0"
+      },
+      {
+        "day": 11,
+        "route": "Tatopani to Ghorepani",
+        "distanceKm": "17",
+        "elevGainM": "1550",
+        "elevLossM": "0",
+        "maxAltM": "2850.0"
+      },
+      {
+        "day": 12,
+        "route": "Ghorepani > Poon Hill > Birethanti",
+        "distanceKm": "18",
+        "elevGainM": "360",
+        "elevLossM": "2360",
+        "maxAltM": "3210.0"
+      }
+    ]
+  },
+  "torres": {
+    "sheetName": "Torres del Paine",
+    "slug": "torres",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Central to Ser\u00f3n",
+        "distanceKm": "13.0",
+        "elevGainM": "250.0",
+        "elevLossM": "200.0",
+        "maxAltM": "300.0"
+      },
+      {
+        "day": 2,
+        "route": "Ser\u00f3n to Dickson",
+        "distanceKm": "18.0",
+        "elevGainM": "350.0",
+        "elevLossM": "300.0",
+        "maxAltM": "400.0"
+      },
+      {
+        "day": 3,
+        "route": "Dickson to Los Perros",
+        "distanceKm": "12.0",
+        "elevGainM": "400.0",
+        "elevLossM": "100.0",
+        "maxAltM": "600.0"
+      },
+      {
+        "day": 4,
+        "route": "Los Perros to Grey (via Gardner Pass)",
+        "distanceKm": "15.0",
+        "elevGainM": "700.0",
+        "elevLossM": "1200.0",
+        "maxAltM": "1200.0"
+      },
+      {
+        "day": 5,
+        "route": "Grey to Paine Grande",
+        "distanceKm": "11.0",
+        "elevGainM": "200.0",
+        "elevLossM": "250.0",
+        "maxAltM": "350.0"
+      },
+      {
+        "day": 6,
+        "route": "Paine Grande to Los Cuernos (via Frances)",
+        "distanceKm": "20.0",
+        "elevGainM": "950.0",
+        "elevLossM": "950.0",
+        "maxAltM": "760.0"
+      },
+      {
+        "day": 7,
+        "route": "Los Cuernos to Chileno",
+        "distanceKm": "14.0",
+        "elevGainM": "400.0",
+        "elevLossM": "300.0",
+        "maxAltM": "450.0"
+      },
+      {
+        "day": 8,
+        "route": "Chileno to Mirador Base Torres & Exit",
+        "distanceKm": "15.0",
+        "elevGainM": "600.0",
+        "elevLossM": "1000.0",
+        "maxAltM": "900.0"
+      }
+    ]
+  },
+  "tour-du-mont-blanc": {
+    "sheetName": "Tour du Mont Blanc",
+    "slug": "tour-du-mont-blanc",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Les Houches - Contamines",
+        "distance": "16 km",
+        "elevGain": "646 m",
+        "elevLoss": "633 m"
+      },
+      {
+        "day": 2,
+        "route": "Contamines - Les Chapieux",
+        "distance": "18 km",
+        "elevGain": "1,316 m",
+        "elevLoss": "929 m"
+      },
+      {
+        "day": 3,
+        "route": "Chapieux - Rif. Elisabetta",
+        "distance": "15 km",
+        "elevGain": "1,004 m",
+        "elevLoss": "258 m"
+      },
+      {
+        "day": 4,
+        "route": "Elisabetta - Courmayeur",
+        "distance": "18 km",
+        "elevGain": "460 m",
+        "elevLoss": "1,560 m"
+      },
+      {
+        "day": 5,
+        "route": "Courmayeur - Rif. Bonatti",
+        "distance": "12 km",
+        "elevGain": "860 m",
+        "elevLoss": "100 m"
+      },
+      {
+        "day": 6,
+        "route": "Bonatti - La Fouly",
+        "distance": "20 km",
+        "elevGain": "895 m",
+        "elevLoss": "1,410 m"
+      },
+      {
+        "day": 7,
+        "route": "La Fouly - Champex",
+        "distance": "15 km",
+        "elevGain": "420 m",
+        "elevLoss": "565 m"
+      },
+      {
+        "day": 8,
+        "route": "Champex - Trient",
+        "distance": "16 km",
+        "elevGain": "742 m",
+        "elevLoss": "682 m"
+      },
+      {
+        "day": 9,
+        "route": "Trient - Argenti\u00e8re",
+        "distance": "14 km",
+        "elevGain": "1,062 m",
+        "elevLoss": "1,178 m"
+      },
+      {
+        "day": 10,
+        "route": "Argenti\u00e8re - Les Houches",
+        "distance": "17 km",
+        "elevGain": "770 m",
+        "elevLoss": "1,600 m"
+      }
+    ]
+  },
+  "alta-via-1": {
+    "sheetName": "Alta Via 1",
+    "slug": "alta-via-1",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Lago di Braies to Rifugio Biella",
+        "distanceKm": "6.0",
+        "elevGainM": "900.0",
+        "elevLossM": "50.0",
+        "maxAltM": "2327.0"
+      },
+      {
+        "day": 2,
+        "route": "Rifugio Biella to Rifugio Fanes",
+        "distanceKm": "14.0",
+        "elevGainM": "550.0",
+        "elevLossM": "900.0",
+        "maxAltM": "2300.0"
+      },
+      {
+        "day": 3,
+        "route": "Rifugio Fanes to Rifugio Lagazuoi",
+        "distanceKm": "12.0",
+        "elevGainM": "1100.0",
+        "elevLossM": "400.0",
+        "maxAltM": "2752.0"
+      },
+      {
+        "day": 4,
+        "route": "Rifugio Lagazuoi to Rif. Cinque Torri",
+        "distanceKm": "12.0",
+        "elevGainM": "450.0",
+        "elevLossM": "1000.0",
+        "maxAltM": "2571.0"
+      },
+      {
+        "day": 5,
+        "route": "Rif. Cinque Torri to Rif. Citt\u00e0 di Fiume",
+        "distanceKm": "14.0",
+        "elevGainM": "500.0",
+        "elevLossM": "850.0",
+        "maxAltM": "2235.0"
+      },
+      {
+        "day": 6,
+        "route": "Rif. Citt\u00e0 di Fiume to Rifugio Coldai",
+        "distanceKm": "10.0",
+        "elevGainM": "700.0",
+        "elevLossM": "500.0",
+        "maxAltM": "2132.0"
+      },
+      {
+        "day": 7,
+        "route": "Rifugio Coldai to Rifugio Vazzoler",
+        "distanceKm": "14.0",
+        "elevGainM": "600.0",
+        "elevLossM": "1100.0",
+        "maxAltM": "2130.0"
+      },
+      {
+        "day": 8,
+        "route": "Rifugio Vazzoler to Rifugio Carestiato",
+        "distanceKm": "9.0",
+        "elevGainM": "650.0",
+        "elevLossM": "450.0",
+        "maxAltM": "1834.0"
+      }
+    ]
+  },
+  "kilimanjaro": {
+    "sheetName": "Kilimanjaro",
+    "slug": "kilimanjaro",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Machame Gate to Machame Camp",
+        "distanceKm": "11.0",
+        "elevGainM": "1200.0",
+        "elevLossM": "0.0",
+        "maxAltM": "2835.0"
+      },
+      {
+        "day": 2,
+        "route": "Machame Camp to Shira 2 Camp",
+        "distanceKm": "5.0",
+        "elevGainM": "840.0",
+        "elevLossM": "0.0",
+        "maxAltM": "3840.0"
+      },
+      {
+        "day": 3,
+        "route": "Lava Tower to Barranco Camp",
+        "distanceKm": "10.0",
+        "elevGainM": "800.0",
+        "elevLossM": "700.0",
+        "maxAltM": "4630.0"
+      },
+      {
+        "day": 4,
+        "route": "Barranco Wall to Karanga Camp",
+        "distanceKm": "5.0",
+        "elevGainM": "300.0",
+        "elevLossM": "300.0",
+        "maxAltM": "3995.0"
+      },
+      {
+        "day": 5,
+        "route": "Karanga Camp to Barafu Camp",
+        "distanceKm": "4.0",
+        "elevGainM": "600.0",
+        "elevLossM": "0.0",
+        "maxAltM": "4673.0"
+      },
+      {
+        "day": 6,
+        "route": "Summit Day (Uhuru Peak)",
+        "distanceKm": "15.0",
+        "elevGainM": "1222.0",
+        "elevLossM": "2800.0",
+        "maxAltM": "5895.0"
+      },
+      {
+        "day": 7,
+        "route": "Mweka Camp to Gate",
+        "distanceKm": "10.0",
+        "elevGainM": "0.0",
+        "elevLossM": "1600.0",
+        "maxAltM": "3100.0"
+      }
+    ]
+  },
+  "jmt": {
+    "sheetName": "JMT",
+    "slug": "jmt",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Happy Isles to Little Yosemite Valley",
+        "distance": "4.5 miles",
+        "elevGainLoss": "640.08",
+        "maxAlt": "1859.2800000000002",
+        "overnightStay": "LYV Camp"
+      },
+      {
+        "day": 2,
+        "route": "LYV to Sunrise High Sierra Camp",
+        "distance": "13 miles",
+        "elevGainLoss": "1005.84",
+        "maxAlt": "2865.1200000000003",
+        "overnightStay": "Sunrise Camp"
+      },
+      {
+        "day": 3,
+        "route": "Sunrise to Tuolumne Meadows",
+        "distance": "10 miles",
+        "elevGainLoss": "304.8",
+        "maxAlt": "2956.56",
+        "overnightStay": "Tuolumne (Resupply)"
+      },
+      {
+        "day": 4,
+        "route": "Tuolumne to Lyell Canyon",
+        "distance": "9 miles",
+        "elevGainLoss": "335.28000000000003",
+        "maxAlt": "2743.2000000000003",
+        "overnightStay": "Lyell Headwaters"
+      },
+      {
+        "day": 5,
+        "route": "Lyell to Thousand Island Lake",
+        "distance": "13 miles",
+        "elevGainLoss": "762.0",
+        "maxAlt": "3368.04",
+        "overnightStay": "Donohue Pass"
+      },
+      {
+        "day": 6,
+        "route": "Thousand Island Lake to Reds Meadow",
+        "distance": "13 miles",
+        "elevGainLoss": "365.76",
+        "maxAlt": "3048.0",
+        "overnightStay": "Reds (Resupply)"
+      },
+      {
+        "day": 7,
+        "route": "Reds Meadow to Duck Creek",
+        "distance": "11 miles",
+        "elevGainLoss": "762.0",
+        "maxAlt": "3291.84",
+        "overnightStay": "Duck Creek"
+      },
+      {
+        "day": 8,
+        "route": "Duck Creek to Virginia Lake",
+        "distance": "13 miles",
+        "elevGainLoss": "609.6",
+        "maxAlt": "3322.32",
+        "overnightStay": "Silver Pass"
+      },
+      {
+        "day": 9,
+        "route": "Virginia Lake to VVR / Edison Lake",
+        "distance": "11 miles",
+        "elevGainLoss": "335.28000000000003",
+        "maxAlt": "3048.0",
+        "overnightStay": "VVR (Resupply)"
+      },
+      {
+        "day": 10,
+        "route": "VVR to Bear Creek",
+        "distance": "10 miles",
+        "elevGainLoss": "731.52",
+        "maxAlt": "3322.32",
+        "overnightStay": "Bear Creek"
+      },
+      {
+        "day": 11,
+        "route": "Bear Creek to Marie Lake",
+        "distance": "11 miles",
+        "elevGainLoss": "609.6",
+        "maxAlt": "3322.32",
+        "overnightStay": "Selden Pass"
+      },
+      {
+        "day": 12,
+        "route": "Marie Lake to Muir Trail Ranch",
+        "distance": "8 miles",
+        "elevGainLoss": "152.4",
+        "maxAlt": "3230.88",
+        "overnightStay": "MTR (Resupply)"
+      },
+      {
+        "day": 13,
+        "route": "Muir Trail Ranch to Evolution Creek",
+        "distance": "11 miles",
+        "elevGainLoss": "670.5600000000001",
+        "maxAlt": "2926.08",
+        "overnightStay": "Evolution Meadow"
+      },
+      {
+        "day": 14,
+        "route": "Evolution to Helen Lake",
+        "distance": "12 miles",
+        "elevGainLoss": "762.0",
+        "maxAlt": "3657.6000000000004",
+        "overnightStay": "Muir Pass"
+      },
+      {
+        "day": 15,
+        "route": "Helen Lake to Deer Meadow",
+        "distance": "13 miles",
+        "elevGainLoss": "335.28000000000003",
+        "maxAlt": "3627.1200000000003",
+        "overnightStay": "Palisade Creek"
+      },
+      {
+        "day": 16,
+        "route": "Deer Meadow to Upper Basin",
+        "distance": "11 miles",
+        "elevGainLoss": "853.44",
+        "maxAlt": "3688.0800000000004",
+        "overnightStay": "Mather Pass"
+      },
+      {
+        "day": 17,
+        "route": "Upper Basin to Woods Creek",
+        "distance": "14 miles",
+        "elevGainLoss": "396.24",
+        "maxAlt": "3688.0800000000004",
+        "overnightStay": "Pinchot Pass"
+      },
+      {
+        "day": 18,
+        "route": "Woods Creek to Rae Lakes",
+        "distance": "7 miles",
+        "elevGainLoss": "792.48",
+        "maxAlt": "3200.4",
+        "overnightStay": "Painted Lady views"
+      },
+      {
+        "day": 19,
+        "route": "Rae Lakes to Vidette Meadow",
+        "distance": "12 miles",
+        "elevGainLoss": "792.48",
+        "maxAlt": "3627.1200000000003",
+        "overnightStay": "Glen Pass"
+      },
+      {
+        "day": 20,
+        "route": "Vidette Meadow to Tyndall Creek",
+        "distance": "12 miles",
+        "elevGainLoss": "1036.3200000000002",
+        "maxAlt": "3992.88",
+        "overnightStay": "Forester Pass"
+      },
+      {
+        "day": 21,
+        "route": "Tyndall Creek to Mount Whitney",
+        "distance": "15 miles",
+        "elevGainLoss": "1066.8",
+        "maxAlt": "4421.124",
+        "overnightStay": "Summit & Exit"
+      }
+    ]
+  },
+  "routeburn": {
+    "sheetName": "Routeburn",
+    "slug": "routeburn",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Routeburn Shelter to Falls Hut",
+        "distanceKm": "9.0",
+        "elevGainM": "550.0",
+        "elevLossM": "0.0",
+        "maxAltM": "1000.0"
+      },
+      {
+        "day": 2,
+        "route": "Falls Hut to Lake Mackenzie Hut",
+        "distanceKm": "11.0",
+        "elevGainM": "450.0",
+        "elevLossM": "700.0",
+        "maxAltM": "1255.0"
+      },
+      {
+        "day": 3,
+        "route": "Lake Mackenzie to The Divide",
+        "distanceKm": "13.0",
+        "elevGainM": "150.0",
+        "elevLossM": "600.0",
+        "maxAltM": "1100.0"
+      }
+    ]
+  },
+  "everest": {
+    "sheetName": "Everest",
+    "slug": "everest",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Fly to Lukla; Trek to Phakding",
+        "distance": "8 km",
+        "elevChange": "+200m / -400m",
+        "maxAltitude": "2,860 m"
+      },
+      {
+        "day": 2,
+        "route": "Phakding to Namche Bazaar",
+        "distance": "11 km",
+        "elevChange": "1,000m",
+        "maxAltitude": "3,440 m"
+      },
+      {
+        "day": 3,
+        "route": "Acclimatization Day (Namche)",
+        "distance": "5 km",
+        "elevChange": "400m",
+        "maxAltitude": "3,880 m"
+      },
+      {
+        "day": 4,
+        "route": "Namche to Tengboche",
+        "distance": "10 km",
+        "elevChange": "+750m / -300m",
+        "maxAltitude": "3,860 m"
+      },
+      {
+        "day": 5,
+        "route": "Tengboche to Dingboche",
+        "distance": "11 km",
+        "elevChange": "550m",
+        "maxAltitude": "4,410 m"
+      },
+      {
+        "day": 6,
+        "route": "Acclimatization Day (Dingboche)",
+        "distance": "6 km",
+        "elevChange": "500m",
+        "maxAltitude": "4,900 m"
+      },
+      {
+        "day": 7,
+        "route": "Dingboche to Lobuche",
+        "distance": "9 km",
+        "elevChange": "500m",
+        "maxAltitude": "4,910 m"
+      },
+      {
+        "day": 8,
+        "route": "Lobuche to Gorak Shep \u2192 EBC",
+        "distance": "13 km",
+        "elevChange": "450m",
+        "maxAltitude": "5,364 m"
+      },
+      {
+        "day": 9,
+        "route": "Kala Patthar \u2192 Pheriche",
+        "distance": "16 km",
+        "elevChange": "+400m / -1,200m",
+        "maxAltitude": "5,545 m"
+      },
+      {
+        "day": 10,
+        "route": "Pheriche to Namche Bazaar",
+        "distance": "20 km",
+        "elevChange": "-800m",
+        "maxAltitude": "4,200 m"
+      },
+      {
+        "day": 11,
+        "route": "Namche Bazaar to Lukla",
+        "distance": "19 km",
+        "elevChange": "-600m",
+        "maxAltitude": "3,440 m"
+      },
+      {
+        "day": 12,
+        "route": "Fly Lukla to Kathmandu",
+        "distance": "\u2014",
+        "elevChange": "\u2014",
+        "maxAltitude": "1,400 m"
+      }
+    ]
+  },
+  "laugavegur": {
+    "sheetName": "Laugavegur",
+    "slug": "laugavegur",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Landmannalaugar to Hrafntinnusker",
+        "distanceKm": "12.0",
+        "elevGainM": "470.0",
+        "elevLossM": "0.0",
+        "maxAltM": "1060.0"
+      },
+      {
+        "day": 2,
+        "route": "Hrafntinnusker to \u00c1lftavatn",
+        "distanceKm": "12.0",
+        "elevGainM": "500.0",
+        "elevLossM": "900.0",
+        "maxAltM": "1020.0"
+      },
+      {
+        "day": 3,
+        "route": "\u00c1lftavatn to Emstrur",
+        "distanceKm": "15.0",
+        "elevGainM": "100.0",
+        "elevLossM": "150.0",
+        "maxAltM": "550.0"
+      },
+      {
+        "day": 4,
+        "route": "Emstrur to \u00de\u00f3rsm\u00f6rk",
+        "distanceKm": "15.0",
+        "elevGainM": "300.0",
+        "elevLossM": "600.0",
+        "maxAltM": "300.0"
+      }
+    ]
+  },
+  "huayhuash": {
+    "sheetName": "Huayhuash",
+    "slug": "huayhuash",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Cuartelwain to Mitucocha",
+        "distanceKm": "12.0",
+        "elevGainM": "600.0",
+        "elevLossM": "500.0",
+        "maxAltM": "4700.0"
+      },
+      {
+        "day": 2,
+        "route": "Mitucocha to Carhuacocha",
+        "distanceKm": "10.0",
+        "elevGainM": "500.0",
+        "elevLossM": "600.0",
+        "maxAltM": "4600.0"
+      },
+      {
+        "day": 3,
+        "route": "Carhuacocha to Huayhuash",
+        "distanceKm": "14.0",
+        "elevGainM": "800.0",
+        "elevLossM": "700.0",
+        "maxAltM": "4800.0"
+      },
+      {
+        "day": 4,
+        "route": "Huayhuash to Viconga",
+        "distanceKm": "11.0",
+        "elevGainM": "550.0",
+        "elevLossM": "450.0",
+        "maxAltM": "4750.0"
+      },
+      {
+        "day": 5,
+        "route": "Viconga to Huanacpatay",
+        "distanceKm": "10.0",
+        "elevGainM": "700.0",
+        "elevLossM": "800.0",
+        "maxAltM": "5000.0"
+      },
+      {
+        "day": 6,
+        "route": "Huanacpatay to Huayllapa",
+        "distanceKm": "15.0",
+        "elevGainM": "100.0",
+        "elevLossM": "1100.0",
+        "maxAltM": "4300.0"
+      },
+      {
+        "day": 7,
+        "route": "Huayllapa to Gashpapampa",
+        "distanceKm": "14.0",
+        "elevGainM": "1300.0",
+        "elevLossM": "400.0",
+        "maxAltM": "4800.0"
+      },
+      {
+        "day": 8,
+        "route": "Gashpapampa to Jahuacocha",
+        "distanceKm": "12.0",
+        "elevGainM": "500.0",
+        "elevLossM": "700.0",
+        "maxAltM": "4750.0"
+      }
+    ]
+  },
+  "inca": {
+    "sheetName": "Inca Trail",
+    "slug": "inca",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Km 82 to Wayllabamba",
+        "distance": "12 km",
+        "elevGain": "300m",
+        "maxAltitude": "3,000 m"
+      },
+      {
+        "day": 2,
+        "route": "Wayllabamba to Pacaymayo",
+        "distance": "11 km",
+        "elevGain": "1,200m",
+        "maxAltitude": "4,215 m"
+      },
+      {
+        "day": 3,
+        "route": "Pacaymayo to Wi\u00f1ay Wayna",
+        "distance": "16 km",
+        "elevGain": "450m / -1400m",
+        "maxAltitude": "3,950 m"
+      },
+      {
+        "day": 4,
+        "route": "Wi\u00f1ay Wayna to Machu Picchu",
+        "distance": "5 km",
+        "elevGain": "200m",
+        "maxAltitude": "2,720 m"
+      }
+    ]
+  },
+  "gr20": {
+    "sheetName": "GR20",
+    "slug": "gr20",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Calenzana to Ortu di u Piobbu",
+        "distance": "12 km",
+        "elevGainLoss": "+1,520m / -50m",
+        "time": "7h",
+        "highlights&Terrain": "Steep opening. Massive elevation gain straight from sea level. No warm-up."
+      },
+      {
+        "day": 2,
+        "route": "Ortu to Carrozzu",
+        "distance": "7 km",
+        "elevGainLoss": "+780m / -920m",
+        "time": "6.5h",
+        "highlights&Terrain": "Technical ridge walking and boulders. Views of the Cirque de Bonifatu."
+      },
+      {
+        "day": 3,
+        "route": "Carrozzu to Ascu Stagnu",
+        "distance": "6 km",
+        "elevGainLoss": "+790m / -640m",
+        "time": "6h",
+        "highlights&Terrain": "Spasimata Bridge (famous suspension bridge). Smooth granite slabs that are slippery when wet."
+      },
+      {
+        "day": 4,
+        "route": "Ascu to Tighjettu",
+        "distance": "8 km",
+        "elevGainLoss": "+1,225m / -1,050m",
+        "time": "8h",
+        "highlights&Terrain": "The Roof of Corsica. Crosses Pointe des \u00c9boulis (2,607m). Variant: Summit Monte Cinto (+2h)."
+      },
+      {
+        "day": 5,
+        "route": "Tighjettu to Ciottulu di i Mori",
+        "distance": "6.5 km",
+        "elevGainLoss": "+630m / -80m",
+        "time": "4h",
+        "highlights&Terrain": "Shorter day. Passes the Bergerie de Vallone. Beautiful views of Paglia Orba."
+      },
+      {
+        "day": 6,
+        "route": "Ciottulu to Manganu",
+        "distance": "23 km",
+        "elevGainLoss": "+650m / -1,050m",
+        "time": "8h",
+        "highlights&Terrain": "Lac de Nino. Wild horses graze around this glacial lake. A long but visually rewarding day."
+      },
+      {
+        "day": 7,
+        "route": "Manganu to Petra Piana",
+        "distance": "8.5 km",
+        "elevGainLoss": "+870m / -640m",
+        "time": "6h",
+        "highlights&Terrain": "High ridge walking. Steep climb to Bocca alle Porte with views of Melo and Capitello lakes."
+      },
+      {
+        "day": 8,
+        "route": "Petra Piana to L'Onda",
+        "distance": "10 km",
+        "elevGainLoss": "+490m / -900m",
+        "time": "5h",
+        "highlights&Terrain": "Alpine Variant (ridges) vs. Valley route. The ridge route is spectacular but requires a head for heights."
+      },
+      {
+        "day": 9,
+        "route": "L'Onda to Vizzavona",
+        "distance": "10 km",
+        "elevGainLoss": "+710m / -1,220m",
+        "time": "6h",
+        "highlights&Terrain": "Descent into the forest. Passes the Cascades des Anglais (waterfalls/pools)."
+      },
+      {
+        "day": 10,
+        "route": "Vizzavona to Capannelle",
+        "distance": "14.5 km",
+        "elevGainLoss": "+890m / -220m",
+        "time": "5.5h",
+        "highlights&Terrain": "Entering the South. Gentler forest paths under the canopy of Laricio pines."
+      },
+      {
+        "day": 11,
+        "route": "Capannelle to Prati",
+        "distance": "16.5 km",
+        "elevGainLoss": "+890m / -600m",
+        "time": "6h",
+        "highlights&Terrain": "High-level contouring. Passes through Bocca di Verde. Views of the eastern coastline."
+      },
+      {
+        "day": 12,
+        "route": "Prati to Usciolu",
+        "distance": "10.5 km",
+        "elevGainLoss": "+700m / -750m",
+        "time": "6h",
+        "highlights&Terrain": "The Knife Edge. A stunning walk along a narrow, rocky spine. One of the most famous sections."
+      },
+      {
+        "day": 13,
+        "route": "Usciolu to Matalza",
+        "distance": "10.5 km",
+        "elevGainLoss": "+400m / -650m",
+        "time": "4.5h",
+        "highlights&Terrain": "Cuscione Plateau. Lush green meadows, wild pigs, and streams. A very different landscape."
+      },
+      {
+        "day": 14,
+        "route": "Matalza to Asinau",
+        "distance": "10 km",
+        "elevGainLoss": "+650m / -550m",
+        "time": "4.5h",
+        "highlights&Terrain": "Crossing Monte Incudine (2,134m), the highest point in the South. Expansive 360\u00b0 views."
+      },
+      {
+        "day": 15,
+        "route": "Asinau to Paliri",
+        "distance": "15 km",
+        "elevGainLoss": "+440m / -910m",
+        "time": "7h",
+        "highlights&Terrain": "Aiguilles de Bavella. Technical \"Alpine Variant\" (highly recommended) through granite needles."
+      },
+      {
+        "day": 16,
+        "route": "Paliri to Conca",
+        "distance": "12 km",
+        "elevGainLoss": "+160m / -930m",
+        "time": "5h",
+        "highlights&Terrain": "The victory lap. Descending through pink granite rock and Mediterranean scrub to the finish."
+      }
+    ]
+  },
+  "snowman": {
+    "sheetName": "Snowman",
+    "slug": "snowman",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Gunitsawa to Sharna Zampa",
+        "distance": "15 km",
+        "elevGain": "300m",
+        "maxAlt": "2,850m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Start of the Paro valley trail"
+      },
+      {
+        "day": 2,
+        "route": "Sharna Zampa to Thangthangka",
+        "distance": "22 km",
+        "elevGain": "750m",
+        "maxAlt": "3,610m",
+        "overnightStay": "Camp",
+        "keyHighlight": "First glimpse of Mt. Jomolhari"
+      },
+      {
+        "day": 3,
+        "route": "Thangthangka to Jangothang",
+        "distance": "19 km",
+        "elevGain": "450m",
+        "maxAlt": "4,080m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Jomolhari Base Camp views"
+      },
+      {
+        "day": 4,
+        "route": "Acclimatization Day",
+        "distance": "-",
+        "elevGain": "-",
+        "maxAlt": "4,080m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Exploring high glacial lakes"
+      },
+      {
+        "day": 5,
+        "route": "Jangothang to Lingshi",
+        "distance": "18 km",
+        "elevGain": "850m",
+        "maxAlt": "4,870m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Nyile La Pass; Lingshi Dzong"
+      },
+      {
+        "day": 6,
+        "route": "Lingshi to Chebisa",
+        "distance": "10 km",
+        "elevGain": "300m",
+        "maxAlt": "3,900m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Charming stone-house village"
+      },
+      {
+        "day": 7,
+        "route": "Chebisa to Shomuthang",
+        "distance": "17 km",
+        "elevGain": "900m",
+        "maxAlt": "4,410m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Gombu La Pass (4,400m)"
+      },
+      {
+        "day": 8,
+        "route": "Shomuthang to Robluthang",
+        "distance": "18 km",
+        "elevGain": "700m",
+        "maxAlt": "4,750m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Jare La Pass (4,750m)"
+      },
+      {
+        "day": 9,
+        "route": "Robluthang to Limithang",
+        "distance": "19 km",
+        "elevGain": "800m",
+        "maxAlt": "5,005m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Shinje La Pass (First 5k pass)"
+      },
+      {
+        "day": 10,
+        "route": "Limithang to Laya",
+        "distance": "10 km",
+        "elevGain": "-300m",
+        "maxAlt": "3,840m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Unique culture of the Laya people"
+      },
+      {
+        "day": 11,
+        "route": "Rest Day in Laya",
+        "distance": "-",
+        "elevGain": "-",
+        "maxAlt": "3,840m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Traditional dress & culture"
+      },
+      {
+        "day": 12,
+        "route": "Laya to Rodophu",
+        "distance": "19 km",
+        "elevGain": "1,000m",
+        "maxAlt": "4,150m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Massive peaks of Tsenda Gang"
+      },
+      {
+        "day": 13,
+        "route": "Rodophu to Narethang",
+        "distance": "17 km",
+        "elevGain": "800m",
+        "maxAlt": "4,905m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Tsemo La Pass (4,905m)"
+      },
+      {
+        "day": 14,
+        "route": "Narethang to Tarina",
+        "distance": "18 km",
+        "elevGain": "850m",
+        "maxAlt": "5,020m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Karakachu La Pass (5,020m)"
+      },
+      {
+        "day": 15,
+        "route": "Tarina to Woche",
+        "distance": "17 km",
+        "elevGain": "300m",
+        "maxAlt": "4,000m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Entering the Lunana region"
+      },
+      {
+        "day": 16,
+        "route": "Woche to Lhedi",
+        "distance": "17 km",
+        "elevGain": "600m",
+        "maxAlt": "4,650m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Keche La Pass (4,650m)"
+      },
+      {
+        "day": 17,
+        "route": "Lhedi to Thanza",
+        "distance": "17 km",
+        "elevGain": "450m",
+        "maxAlt": "4,150m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Table Mountain (Zongophu Gang)"
+      },
+      {
+        "day": 18,
+        "route": "Rest Day in Thanza",
+        "distance": "-",
+        "elevGain": "-",
+        "maxAlt": "4,150m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Remote Lunana village life"
+      },
+      {
+        "day": 19,
+        "route": "Thanza to Danji",
+        "distance": "8 km",
+        "elevGain": "450m",
+        "maxAlt": "4,600m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Steep climb to high meadows"
+      },
+      {
+        "day": 20,
+        "route": "Danji to Tsho Chena",
+        "distance": "12 km",
+        "elevGain": "700m",
+        "maxAlt": "5,100m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Jaze La Pass (5,100m)"
+      },
+      {
+        "day": 21,
+        "route": "Tsho Chena to Jichu Dramo",
+        "distance": "14 km",
+        "elevGain": "600m",
+        "maxAlt": "5,200m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Loju La Pass (5,100m)"
+      },
+      {
+        "day": 22,
+        "route": "Jichu Dramo to Chhu Alutang",
+        "distance": "18 km",
+        "elevGain": "800m",
+        "maxAlt": "5,320m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Rinchen Zoe La (Highest point)"
+      },
+      {
+        "day": 23,
+        "route": "Chhu Alutang to Tampetsho",
+        "distance": "18 km",
+        "elevGain": "650m",
+        "maxAlt": "4,600m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Crossing the Um Tsho lake"
+      },
+      {
+        "day": 24,
+        "route": "Tampetsho to Marothang",
+        "distance": "14 km",
+        "elevGain": "400m",
+        "maxAlt": "4,600m",
+        "overnightStay": "Camp",
+        "keyHighlight": "Thampe La Pass (4,600m)"
+      },
+      {
+        "day": 25,
+        "route": "Marothang to Nikachhu",
+        "distance": "23 km",
+        "elevGain": "-1,200m",
+        "maxAlt": "2,600m",
+        "overnightStay": "Finish",
+        "keyHighlight": "Long descent to Sephu roadhead"
+      }
+    ]
+  },
+  "camino": {
+    "sheetName": "Camino",
+    "slug": "camino",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "St. Jean Pied de Port to Roncesvalles",
+        "distance": "25 km",
+        "elevGainLoss": "+1,250m / -450m",
+        "maxAltitude": "1,430 m"
+      },
+      {
+        "day": 2,
+        "route": "Roncesvalles to Zubiri",
+        "distance": "21 km",
+        "elevGainLoss": "+300m / -750m",
+        "maxAltitude": "950 m"
+      },
+      {
+        "day": 3,
+        "route": "Zubiri to Pamplona",
+        "distance": "20 km",
+        "elevGainLoss": "+250m / -400m",
+        "maxAltitude": "650 m"
+      },
+      {
+        "day": 4,
+        "route": "Pamplona to Puente la Reina",
+        "distance": "24 km",
+        "elevGainLoss": "+450m / -550m",
+        "maxAltitude": "780 m"
+      },
+      {
+        "day": 5,
+        "route": "Puente la Reina to Estella",
+        "distance": "22 km",
+        "elevGainLoss": "+350m / -300m",
+        "maxAltitude": "500 m"
+      },
+      {
+        "day": 6,
+        "route": "Estella to Los Arcos",
+        "distance": "21 km",
+        "elevGainLoss": "+300m / -250m",
+        "maxAltitude": "600 m"
+      },
+      {
+        "day": 7,
+        "route": "Los Arcos to Logro\u00f1o",
+        "distance": "28 km",
+        "elevGainLoss": "+350m / -400m",
+        "maxAltitude": "620 m"
+      },
+      {
+        "day": 8,
+        "route": "Logro\u00f1o to N\u00e1jera",
+        "distance": "29 km",
+        "elevGainLoss": "+400m / -300m",
+        "maxAltitude": "610 m"
+      },
+      {
+        "day": 9,
+        "route": "N\u00e1jera to Santo Domingo de la Calzada",
+        "distance": "21 km",
+        "elevGainLoss": "+300m / -150m",
+        "maxAltitude": "640 m"
+      },
+      {
+        "day": 10,
+        "route": "Santo Domingo to Belorado",
+        "distance": "23 km",
+        "elevGainLoss": "+250m / -100m",
+        "maxAltitude": "770 m"
+      },
+      {
+        "day": 11,
+        "route": "Belorado to Ag\u00e9s",
+        "distance": "27 km",
+        "elevGainLoss": "+550m / -350m",
+        "maxAltitude": "1,150 m"
+      },
+      {
+        "day": 12,
+        "route": "Ag\u00e9s to Burgos",
+        "distance": "23 km",
+        "elevGainLoss": "+150m / -250m",
+        "maxAltitude": "1,000 m"
+      },
+      {
+        "day": 13,
+        "route": "Burgos to Hontanas",
+        "distance": "31 km",
+        "elevGainLoss": "+300m / -350m",
+        "maxAltitude": "930 m"
+      },
+      {
+        "day": 14,
+        "route": "Hontanas to Boadilla del Camino",
+        "distance": "29 km",
+        "elevGainLoss": "+200m / -300m",
+        "maxAltitude": "900 m"
+      },
+      {
+        "day": 15,
+        "route": "Boadilla to Carri\u00f3n de los Condes",
+        "distance": "25 km",
+        "elevGainLoss": "Flat",
+        "maxAltitude": "840 m"
+      },
+      {
+        "day": 16,
+        "route": "Carri\u00f3n de los Condes to Terradillos",
+        "distance": "27 km",
+        "elevGainLoss": "Flat",
+        "maxAltitude": "880 m"
+      },
+      {
+        "day": 17,
+        "route": "Terradillos to Sahag\u00fan",
+        "distance": "14 km",
+        "elevGainLoss": "Flat",
+        "maxAltitude": "830 m"
+      },
+      {
+        "day": 18,
+        "route": "Sahag\u00fan to Mansilla de las Mulas",
+        "distance": "37 km",
+        "elevGainLoss": "Flat",
+        "maxAltitude": "840 m"
+      },
+      {
+        "day": 19,
+        "route": "Mansilla de las Mulas to Le\u00f3n",
+        "distance": "19 km",
+        "elevGainLoss": "+100m / -50m",
+        "maxAltitude": "820 m"
+      },
+      {
+        "day": 20,
+        "route": "Le\u00f3n to San Mart\u00edn del Camino",
+        "distance": "26 km",
+        "elevGainLoss": "+100m / -50m",
+        "maxAltitude": "880 m"
+      },
+      {
+        "day": 21,
+        "route": "San Mart\u00edn to Astorga",
+        "distance": "24 km",
+        "elevGainLoss": "+200m / -100m",
+        "maxAltitude": "870 m"
+      },
+      {
+        "day": 22,
+        "route": "Astorga to Foncebad\u00f3n",
+        "distance": "26 km",
+        "elevGainLoss": "+650m / -50m",
+        "maxAltitude": "1,500 m"
+      },
+      {
+        "day": 23,
+        "route": "Foncebad\u00f3n to Ponferrada",
+        "distance": "27 km",
+        "elevGainLoss": "+200m / -1,100m",
+        "maxAltitude": "1,515 m"
+      },
+      {
+        "day": 24,
+        "route": "Ponferrada to Villafranca del Bierzo",
+        "distance": "24 km",
+        "elevGainLoss": "+150m / -250m",
+        "maxAltitude": "600 m"
+      },
+      {
+        "day": 25,
+        "route": "Villafranca to O Cebreiro",
+        "distance": "28 km",
+        "elevGainLoss": "+1,000m / -100m",
+        "maxAltitude": "1,300 m"
+      },
+      {
+        "day": 26,
+        "route": "O Cebreiro to Triacastela",
+        "distance": "21 km",
+        "elevGainLoss": "+200m / -850m",
+        "maxAltitude": "1,330 m"
+      },
+      {
+        "day": 27,
+        "route": "Triacastela to Sarria",
+        "distance": "18 km",
+        "elevGainLoss": "+250m / -400m",
+        "maxAltitude": "900 m"
+      },
+      {
+        "day": 28,
+        "route": "Sarria to Portomar\u00edn",
+        "distance": "22 km",
+        "elevGainLoss": "+350m / -500m",
+        "maxAltitude": "660 m"
+      },
+      {
+        "day": 29,
+        "route": "Portomar\u00edn to Palas de Rei",
+        "distance": "25 km",
+        "elevGainLoss": "+450m / -300m",
+        "maxAltitude": "720 m"
+      },
+      {
+        "day": 30,
+        "route": "Palas de Rei to Arz\u00faa",
+        "distance": "29 km",
+        "elevGainLoss": "+400m / -550m",
+        "maxAltitude": "560 m"
+      },
+      {
+        "day": 31,
+        "route": "Arz\u00faa to O Pedrouzo",
+        "distance": "19 km",
+        "elevGainLoss": "+200m / -300m",
+        "maxAltitude": "400 m"
+      },
+      {
+        "day": 32,
+        "route": "O Pedrouzo to Santiago de Compostela",
+        "distance": "20 km",
+        "elevGainLoss": "+250m / -300m",
+        "maxAltitude": "380 m"
+      },
+      {
+        "day": 33,
+        "route": "Bonus: Camino to Finisterre (The Coast)",
+        "distance": "Optional",
+        "elevGainLoss": "3-day hike",
+        "maxAltitude": "Sea Level"
+      }
+    ]
+  },
+  "kungsleden": {
+    "sheetName": "Kungsleden",
+    "slug": "kungsleden",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Abisko to Abiskojaure",
+        "distance": "14 km",
+        "elevGainLoss": "150m",
+        "maxAltitude": "490 m"
+      },
+      {
+        "day": 2,
+        "route": "Abiskojaure to Alesjaure",
+        "distance": "21 km",
+        "elevGainLoss": "300m",
+        "maxAltitude": "780 m"
+      },
+      {
+        "day": 3,
+        "route": "Alesjaure to Tj\u00e4ktja",
+        "distance": "13 km",
+        "elevGainLoss": "250m",
+        "maxAltitude": "1,000 m"
+      },
+      {
+        "day": 4,
+        "route": "Tj\u00e4ktja to S\u00e4lka (via Tj\u00e4ktja Pass)",
+        "distance": "12 km",
+        "elevGainLoss": "150m / -300m",
+        "maxAltitude": "1,150 m"
+      },
+      {
+        "day": 5,
+        "route": "S\u00e4lka to Singi",
+        "distance": "12 km",
+        "elevGainLoss": "-100m",
+        "maxAltitude": "800 m"
+      },
+      {
+        "day": 6,
+        "route": "Singi to Kebnekaise Mountain Station",
+        "distance": "14 km",
+        "elevGainLoss": "+150m / -250m",
+        "maxAltitude": "750 m"
+      },
+      {
+        "day": 7,
+        "route": "Kebnekaise to Nikkaluokta",
+        "distance": "19 km",
+        "elevGainLoss": "-200m",
+        "maxAltitude": "670 m"
+      }
+    ]
+  },
+  "milford": {
+    "sheetName": "Milford Track",
+    "slug": "milford",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Glade Wharf to Clinton Hut",
+        "distance": "5 km",
+        "elevGainLoss": "100m",
+        "maxAltitude": "250 m"
+      },
+      {
+        "day": 2,
+        "route": "Clinton Hut to Mintaro Hut",
+        "distance": "16.5 km",
+        "elevGainLoss": "400m",
+        "maxAltitude": "600 m"
+      },
+      {
+        "day": 3,
+        "route": "Mintaro to Dumpling (via Pass)",
+        "distance": "14 km",
+        "elevGainLoss": "+550m / -1,000m",
+        "maxAltitude": "1,154 m"
+      },
+      {
+        "day": 4,
+        "route": "Dumpling Hut to Sandfly Point",
+        "distance": "18 km",
+        "elevGainLoss": "-100m",
+        "maxAltitude": "100 m"
+      }
+    ]
+  },
+  "overland": {
+    "sheetName": "Overland",
+    "slug": "overland",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Ronny Creek to Waterfall Valley",
+        "distance": "11 km",
+        "elevGainLoss": "450m",
+        "maxAltitude": "1,250 m"
+      },
+      {
+        "day": 2,
+        "route": "Waterfall Valley to Windermere",
+        "distance": "8 km",
+        "elevGainLoss": "150m",
+        "maxAltitude": "1,100 m"
+      },
+      {
+        "day": 3,
+        "route": "Windermere to Pelion Plains",
+        "distance": "17 km",
+        "elevGainLoss": "-200m",
+        "maxAltitude": "1,000 m"
+      },
+      {
+        "day": 4,
+        "route": "Pelion to Kia Ora (via Mt Ossa opt.)",
+        "distance": "9 km",
+        "elevGainLoss": "300m",
+        "maxAltitude": "1,617 m"
+      },
+      {
+        "day": 5,
+        "route": "Kia Ora to Windy Ridge",
+        "distance": "10 km",
+        "elevGainLoss": "200m",
+        "maxAltitude": "1,000 m"
+      },
+      {
+        "day": 6,
+        "route": "Windy Ridge to Narcissus",
+        "distance": "10 km",
+        "elevGainLoss": "-100m",
+        "maxAltitude": "800 m"
+      }
+    ]
+  },
+  "abc": {
+    "sheetName": "ABC",
+    "slug": "abc",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Arrival in Pokhara",
+        "distance": "\u2014",
+        "time": "\u2014",
+        "maxAltitude": "825 m (2,700 ft)"
+      },
+      {
+        "day": 2,
+        "route": "Drive to Klue; Trek to Ghandruk",
+        "distance": "~6 km",
+        "time": "4\u20135 hrs",
+        "maxAltitude": "2,000 m (6,560 ft)"
+      },
+      {
+        "day": 3,
+        "route": "Ghandruk to Chhomrong",
+        "distance": "10 km",
+        "time": "6\u20137 hrs",
+        "maxAltitude": "2,200 m (7,200 ft)"
+      },
+      {
+        "day": 4,
+        "route": "Chhomrong to Bamboo",
+        "distance": "10 km",
+        "time": "5\u20136 hrs",
+        "maxAltitude": "2,300 m (7,600 ft)"
+      },
+      {
+        "day": 5,
+        "route": "Bamboo to Deurali",
+        "distance": "9 km",
+        "time": "5\u20136 hrs",
+        "maxAltitude": "3,200 m (10,550 ft)"
+      },
+      {
+        "day": 6,
+        "route": "Deurali to Annapurna Base Camp (ABC)",
+        "distance": "8 km",
+        "time": "6 hrs",
+        "maxAltitude": "4,130 m (13,550 ft)"
+      },
+      {
+        "day": 7,
+        "route": "ABC to Bamboo (Return)",
+        "distance": "13 km",
+        "time": "8\u20139 hrs",
+        "maxAltitude": "4,130 m (13,550 ft)"
+      },
+      {
+        "day": 8,
+        "route": "Bamboo to Jhinu Danda (Hot Springs)",
+        "distance": "8 km",
+        "time": "5\u20136 hrs",
+        "maxAltitude": "2,300 m (7,600 ft)"
+      },
+      {
+        "day": 9,
+        "route": "Jhinu Danda to Bridge & Drive to Pokhara",
+        "distance": "2 km",
+        "time": "45 min",
+        "maxAltitude": "1,700 m (5,600 ft)"
+      }
+    ]
+  },
+  "fuji": {
+    "sheetName": "Mount Fuji",
+    "slug": "fuji",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "5th Station to 8th Station Hut",
+        "distance": "6 km",
+        "elevGainLoss": "+800m",
+        "maxAltitude": "3,100 m"
+      },
+      {
+        "day": 2,
+        "route": "8th Station to Summit & Descent",
+        "distance": "9 km",
+        "elevGainLoss": "+670m / -1,470m",
+        "maxAltitude": "3,776 m"
+      }
+    ]
+  },
+  "mount-kailash-kora": {
+    "sheetName": "Mount Kailash Kora",
+    "slug": "mount-kailash-kora",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Darchen to Drirapuk",
+        "distance": "20 km",
+        "elevGainLoss": "400m",
+        "maxAltitude": "5,080 m"
+      },
+      {
+        "day": 2,
+        "route": "Drirapuk to Zutulpuk (via Pass)",
+        "distance": "18 km",
+        "elevGainLoss": "+600m / -800m",
+        "maxAltitude": "5,630 m"
+      },
+      {
+        "day": 3,
+        "route": "Zutulpuk to Darchen",
+        "distance": "14 km",
+        "elevGainLoss": "-200m",
+        "maxAltitude": "4,800 m"
+      }
+    ]
+  },
+  "west_coast": {
+    "sheetName": "West Coast Trail",
+    "slug": "west_coast",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Pachena Bay to Michigan Creek",
+        "distance": "12 km",
+        "elevGainLoss": "Flat / Sand",
+        "maxAltitude": "50 m"
+      },
+      {
+        "day": 2,
+        "route": "Michigan Creek to Tsusiat Falls",
+        "distance": "13 km",
+        "elevGainLoss": "Coastal",
+        "maxAltitude": "50 m"
+      },
+      {
+        "day": 3,
+        "route": "Tsusiat Falls to Cribs Creek",
+        "distance": "17 km",
+        "elevGainLoss": "Coastal / Ladders",
+        "maxAltitude": "100 m"
+      },
+      {
+        "day": 4,
+        "route": "Cribs Creek to Carmanah Beach",
+        "distance": "10 km",
+        "elevGainLoss": "Forest / Ladders",
+        "maxAltitude": "150 m"
+      },
+      {
+        "day": 5,
+        "route": "Carmanah to Camper Bay",
+        "distance": "13 km",
+        "elevGainLoss": "Mud / Ladders",
+        "maxAltitude": "150 m"
+      },
+      {
+        "day": 6,
+        "route": "Camper Bay to Thrasher Cove",
+        "distance": "9 km",
+        "elevGainLoss": "Steep / Mud",
+        "maxAltitude": "200 m"
+      },
+      {
+        "day": 7,
+        "route": "Thrasher Cove to Gordon River",
+        "distance": "6 km",
+        "elevGainLoss": "Very Steep",
+        "maxAltitude": "200 m"
+      }
+    ]
+  },
+  "haute_route": {
+    "sheetName": "Haute Route",
+    "slug": "haute_route",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Chamonix to Argenti\u00e8re",
+        "distance": "9 km",
+        "elevGainLoss": "+500m / -100m",
+        "highPoint": "1,250 m"
+      },
+      {
+        "day": 2,
+        "route": "Argenti\u00e8re to Trient",
+        "distance": "13 km",
+        "elevGainLoss": "+1,000m / -1,100m",
+        "highPoint": "Col de Balme (2,191m)"
+      },
+      {
+        "day": 3,
+        "route": "Trient to Champex-Lac",
+        "distance": "14 km",
+        "elevGainLoss": "+1,400m / -1,200m",
+        "highPoint": "Fen\u00eatre d'Arpette (2,665m)"
+      },
+      {
+        "day": 4,
+        "route": "Champex-Lac to Le Ch\u00e2ble",
+        "distance": "14 km",
+        "elevGainLoss": "+100m / -1,100m",
+        "highPoint": "Champex (1,477m)"
+      },
+      {
+        "day": 5,
+        "route": "Le Ch\u00e2ble to Cabane de Louvie",
+        "distance": "9 km",
+        "elevGainLoss": "1,400m",
+        "highPoint": "Col de Termin (2,648m)"
+      },
+      {
+        "day": 6,
+        "route": "Louvie to Cabane de Prafleuri",
+        "distance": "11 km",
+        "elevGainLoss": "+900m / -500m",
+        "highPoint": "Col de Louvie (2,921m)"
+      },
+      {
+        "day": 7,
+        "route": "Prafleuri to Arolla",
+        "distance": "17 km",
+        "elevGainLoss": "+750m / -1,350m",
+        "highPoint": "Pas de Ch\u00e8vres (2,855m)"
+      },
+      {
+        "day": 8,
+        "route": "Arolla to La Sage",
+        "distance": "11 km",
+        "elevGainLoss": "+200m / -600m",
+        "highPoint": "Arolla (1,998m)"
+      },
+      {
+        "day": 9,
+        "route": "La Sage to Cabane de Moiry",
+        "distance": "10 km",
+        "elevGainLoss": "+1,600m / -450m",
+        "highPoint": "Col de Tsat\u00e9 (2,868m)"
+      },
+      {
+        "day": 10,
+        "route": "Cabane de Moiry to Zinal",
+        "distance": "12 km",
+        "elevGainLoss": "+450m / -1,600m",
+        "highPoint": "Col de Sorebois (2,838m)"
+      },
+      {
+        "day": 11,
+        "route": "Zinal to Gruben",
+        "distance": "14 km",
+        "elevGainLoss": "+1,200m / -1,000m",
+        "highPoint": "Forcletta (2,874m)"
+      },
+      {
+        "day": 12,
+        "route": "Gruben to St. Niklaus",
+        "distance": "16 km",
+        "elevGainLoss": "+1,100m / -1,800m",
+        "highPoint": "Augstbordpass (2,894m)"
+      },
+      {
+        "day": 13,
+        "route": "St. Niklaus to Zermatt",
+        "distance": "18 km",
+        "elevGainLoss": "+1,100m / -500m",
+        "highPoint": "Europaweg (2,200m)"
+      }
+    ]
+  },
+  "kbc": {
+    "sheetName": "K2 Base Camp",
+    "slug": "kbc",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Jeep: Skardu to Askole",
+        "distance": "100 km",
+        "elevChange": "800m",
+        "maxAltitude": "3,000 m"
+      },
+      {
+        "day": 2,
+        "route": "Askole to Jola",
+        "distance": "18 km",
+        "elevChange": "200m",
+        "maxAltitude": "3,200 m"
+      },
+      {
+        "day": 3,
+        "route": "Jola to Paiju",
+        "distance": "20 km",
+        "elevChange": "250m",
+        "maxAltitude": "3,450 m"
+      },
+      {
+        "day": 4,
+        "route": "Rest & Acclimatization",
+        "distance": "\u2014",
+        "elevChange": "\u2014",
+        "maxAltitude": "3,450 m"
+      },
+      {
+        "day": 5,
+        "route": "Paiju to Khoburtse",
+        "distance": "15 km",
+        "elevChange": "350m",
+        "maxAltitude": "3,800 m"
+      },
+      {
+        "day": 6,
+        "route": "Khoburtse to Urdukas",
+        "distance": "7 km",
+        "elevChange": "250m",
+        "maxAltitude": "4,050 m"
+      },
+      {
+        "day": 7,
+        "route": "Urdukas to Goro II",
+        "distance": "12 km",
+        "elevChange": "330m",
+        "maxAltitude": "4,380 m"
+      },
+      {
+        "day": 8,
+        "route": "Goro II to Concordia",
+        "distance": "12 km",
+        "elevChange": "220m",
+        "maxAltitude": "4,600 m"
+      },
+      {
+        "day": 9,
+        "route": "Concordia to K2 BC & Back",
+        "distance": "20 km",
+        "elevChange": "+400m / -400m",
+        "maxAltitude": "4,980 m"
+      },
+      {
+        "day": 10,
+        "route": "Concordia to Ali Camp",
+        "distance": "12 km",
+        "elevChange": "200m",
+        "maxAltitude": "4,800 m"
+      },
+      {
+        "day": 11,
+        "route": "Ali Camp to Khuspang via Pass",
+        "distance": "8 km",
+        "elevChange": "+800m / -1,100m",
+        "maxAltitude": "5,585 m"
+      },
+      {
+        "day": 12,
+        "route": "Khuspang to Saicho",
+        "distance": "15 km",
+        "elevChange": "-1,300m",
+        "maxAltitude": "3,350 m"
+      },
+      {
+        "day": 13,
+        "route": "Saicho to Hushe",
+        "distance": "10 km",
+        "elevChange": "-300m",
+        "maxAltitude": "3,050 m"
+      },
+      {
+        "day": 14,
+        "route": "Jeep: Hushe to Skardu",
+        "distance": "\u2014",
+        "elevChange": "\u2014",
+        "maxAltitude": "2,230 m"
+      }
+    ]
+  },
+  "drakensberg": {
+    "sheetName": "Drakensberg Grand Traverse",
+    "slug": "drakensberg",
+    "itinerary": [
+      {
+        "day": 1,
+        "routeKeyCheckpoints": "Sentinel to Ifidi (via Chain Ladders)",
+        "distance": "14 km",
+        "elevGain": "950m",
+        "highPoint": "Mont-aux-Sources (3,282m)"
+      },
+      {
+        "day": 2,
+        "routeKeyCheckpoints": "Ifidi to Fangs Cave Area",
+        "distance": "16 km",
+        "elevGain": "600m",
+        "highPoint": "Ifidi Peak (3,225m)"
+      },
+      {
+        "day": 3,
+        "routeKeyCheckpoints": "Fangs to Ledger\u2019s Cave",
+        "distance": "15 km",
+        "elevGain": "700m",
+        "highPoint": "Mnweni Cut-back (3,150m)"
+      },
+      {
+        "day": 4,
+        "routeKeyCheckpoints": "Ledger\u2019s to Twins Cave",
+        "distance": "14 km",
+        "elevGain": "800m",
+        "highPoint": "Cape Eagle (3,250m)"
+      },
+      {
+        "day": 5,
+        "routeKeyCheckpoints": "Twins Cave to Kwakwatsi",
+        "distance": "18 km",
+        "elevGain": "900m",
+        "highPoint": "Cleft Peak (3,277m)"
+      },
+      {
+        "day": 6,
+        "routeKeyCheckpoints": "Kwakwatsi to Nkosazana River",
+        "distance": "17 km",
+        "elevGain": "750m",
+        "highPoint": "Champagne Castle (3,377m)"
+      },
+      {
+        "day": 7,
+        "routeKeyCheckpoints": "Nkosazana to Upper Injisuthi",
+        "distance": "15 km",
+        "elevGain": "600m",
+        "highPoint": "Mafadi (3,451m)"
+      },
+      {
+        "day": 8,
+        "routeKeyCheckpoints": "Mafadi to Bannerman Pass Area",
+        "distance": "20 km",
+        "elevGain": "500m",
+        "highPoint": "Popple Peak (3,331m)"
+      },
+      {
+        "day": 9,
+        "routeKeyCheckpoints": "Bannerman to Langalibalele Ridge",
+        "distance": "18 km",
+        "elevGain": "800m",
+        "highPoint": "Giant\u2019s Castle (3,314m)"
+      },
+      {
+        "day": 10,
+        "routeKeyCheckpoints": "Langalibalele to Sanqebethu River",
+        "distance": "22 km",
+        "elevGain": "600m",
+        "highPoint": "Thaba Kotu (3,240m)"
+      },
+      {
+        "day": 11,
+        "routeKeyCheckpoints": "Sanqebethu to Sani Pass Area",
+        "distance": "19 km",
+        "elevGain": "700m",
+        "highPoint": "Thabana Ntlenyana (3,482m)"
+      },
+      {
+        "day": 12,
+        "routeKeyCheckpoints": "Sani Pass to Thamathu Cave",
+        "distance": "23 km",
+        "elevGain": "500m",
+        "highPoint": "Black Mountain (3,300m)"
+      },
+      {
+        "day": 13,
+        "routeKeyCheckpoints": "Thamathu to Bushman\u2019s Neck",
+        "distance": "18 km",
+        "elevGain": "-1,200m",
+        "highPoint": "End (1,700m)"
+      }
+    ]
+  },
+  "manaslu-trek": {
+    "sheetName": "Manaslu Trek",
+    "slug": "manaslu-trek",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Drive Kathmandu to Machha Khola",
+        "distance": "\u2014",
+        "elevGain": "\u2014",
+        "maxAlt": "870 m",
+        "highlights": "Scenic, rugged 8-hour mountain drive"
+      },
+      {
+        "day": 2,
+        "route": "Machha Khola to Jagat",
+        "distance": "22 km",
+        "elevGain": "470 m",
+        "maxAlt": "1,340 m",
+        "highlights": "Suspension bridges & Tatopani hot springs"
+      },
+      {
+        "day": 3,
+        "route": "Jagat to Deng",
+        "distance": "20 km",
+        "elevGain": "520 m",
+        "maxAlt": "1,860 m",
+        "highlights": "Entry to restricted area; bamboo forests"
+      },
+      {
+        "day": 4,
+        "route": "Deng to Namrung",
+        "distance": "19 km",
+        "elevGain": "770 m",
+        "maxAlt": "2,630 m",
+        "highlights": "First Mani walls & Tibetan influences"
+      },
+      {
+        "day": 5,
+        "route": "Namrung to Lho",
+        "distance": "11 km",
+        "elevGain": "550 m",
+        "maxAlt": "3,180 m",
+        "highlights": "Stunning views of Manaslu\u2019s twin peaks"
+      },
+      {
+        "day": 6,
+        "route": "Lho to Samagaon",
+        "distance": "17 km",
+        "elevGain": "350 m",
+        "maxAlt": "3,530 m",
+        "highlights": "Pungyen Gompa & mountain panoramas"
+      },
+      {
+        "day": 7,
+        "route": "Acclimatization Day",
+        "distance": "\u2014",
+        "elevGain": "\u2014",
+        "maxAlt": "4,400 m",
+        "highlights": "Side trip to Birendra Lake or Manaslu BC"
+      },
+      {
+        "day": 8,
+        "route": "Samagaon to Samdo",
+        "distance": "16 km",
+        "elevGain": "330 m",
+        "maxAlt": "3,860 m",
+        "highlights": "Yak pastures & proximity to Tibetan border"
+      },
+      {
+        "day": 9,
+        "route": "Acclimatization Day",
+        "distance": "\u2014",
+        "elevGain": "\u2014",
+        "maxAlt": "5,000 m",
+        "highlights": "Hike toward Rui La (Tibetan border)"
+      },
+      {
+        "day": 10,
+        "route": "Samdo to Dharamsala",
+        "distance": "12 km",
+        "elevGain": "600 m",
+        "maxAlt": "4,460 m",
+        "highlights": "High-altitude \"Larkya Phedi\" base camp"
+      },
+      {
+        "day": 11,
+        "route": "Dharamsala to Bimthang via Pass",
+        "distance": "24 km",
+        "elevGain": "800 m",
+        "maxAlt": "5,106 m",
+        "highlights": "Larkya La Pass; steep glacier descent"
+      },
+      {
+        "day": 12,
+        "route": "Bimthang to Dharapani",
+        "distance": "26 km",
+        "elevGain": "-1,800 m",
+        "maxAlt": "3,700 m",
+        "highlights": "Massive descent into rhododendron forests"
+      },
+      {
+        "day": 13,
+        "route": "Dharapani to Besisahar",
+        "distance": "Jeep",
+        "elevGain": "\u2014",
+        "maxAlt": "760 m",
+        "highlights": "Exit via the Marsyangdi River valley"
+      },
+      {
+        "day": 14,
+        "route": "Drive Besisahar to Kathmandu",
+        "distance": "\u2014",
+        "elevGain": "\u2014",
+        "maxAlt": "1,400 m",
+        "highlights": "Return to the capital"
+      }
+    ]
+  },
+  "salkantay": {
+    "sheetName": "Salkantay",
+    "slug": "salkantay",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Mollepata to Soraypampa",
+        "distance": "12 km",
+        "elevGainLoss": "1,000m",
+        "maxAltitude": "3,900 m"
+      },
+      {
+        "day": 2,
+        "route": "Soraypampa to Chaullay (Pass)",
+        "distance": "22 km",
+        "elevGainLoss": "+730m / -1,700m",
+        "maxAltitude": "4,630 m"
+      },
+      {
+        "day": 3,
+        "route": "Chaullay to Lucmabamba",
+        "distance": "18 km",
+        "elevGainLoss": "-800m",
+        "maxAltitude": "2,800 m"
+      },
+      {
+        "day": 4,
+        "route": "Lucmabamba to Aguas Calientes",
+        "distance": "19 km",
+        "elevGainLoss": "+500m / -1,100m",
+        "maxAltitude": "2,800 m"
+      },
+      {
+        "day": 5,
+        "route": "Machu Picchu Tour",
+        "distance": "5 km",
+        "elevGainLoss": "400m",
+        "maxAltitude": "2,430 m"
+      }
+    ]
+  },
+  "whw": {
+    "sheetName": "West Highland Way",
+    "slug": "whw",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Milngavie to Drymen",
+        "distance": "19 km",
+        "elevGain": "210m",
+        "maxAlt": "140m",
+        "overnightStay": "Drymen",
+        "keyHighlight": "Start at the granite obelisk"
+      },
+      {
+        "day": 2,
+        "route": "Drymen to Balmaha",
+        "distance": "13 km",
+        "elevGain": "400m",
+        "maxAlt": "361m",
+        "overnightStay": "Balmaha",
+        "keyHighlight": "Conic Hill & Loch Lomond view"
+      },
+      {
+        "day": 3,
+        "route": "Balmaha to Rowardennan",
+        "distance": "11 km",
+        "elevGain": "350m",
+        "maxAlt": "100m",
+        "overnightStay": "Rowardennan",
+        "keyHighlight": "Forest paths along the loch shore"
+      },
+      {
+        "day": 4,
+        "route": "Rowardennan to Inverarnan",
+        "distance": "22 km",
+        "elevGain": "450m",
+        "maxAlt": "120m",
+        "overnightStay": "Inverarnan",
+        "keyHighlight": "Rob Roy\u2019s Cave & rocky terrain"
+      },
+      {
+        "day": 5,
+        "route": "Inverarnan to Tyndrum",
+        "distance": "19 km",
+        "elevGain": "450m",
+        "maxAlt": "330m",
+        "overnightStay": "Tyndrum",
+        "keyHighlight": "Falls of Falloch & Crianlarich hills"
+      },
+      {
+        "day": 6,
+        "route": "Tyndrum to Inveroran",
+        "distance": "15 km",
+        "elevGain": "350m",
+        "maxAlt": "350m",
+        "overnightStay": "Inveroran",
+        "keyHighlight": "Beinn Dorain & ancient military road"
+      },
+      {
+        "day": 7,
+        "route": "Inveroran to Kingshouse",
+        "distance": "16 km",
+        "elevGain": "300m",
+        "maxAlt": "450m",
+        "overnightStay": "Kingshouse",
+        "keyHighlight": "Rannoch Moor (Wilderness heart)"
+      },
+      {
+        "day": 8,
+        "route": "Kingshouse to Kinlochleven",
+        "distance": "14 km",
+        "elevGain": "400m",
+        "maxAlt": "550m",
+        "overnightStay": "Kinlochleven",
+        "keyHighlight": "Devil\u2019s Staircase & Buachaille Etive M\u00f2r"
+      },
+      {
+        "day": 9,
+        "route": "Kinlochleven to Fort William",
+        "distance": "24 km",
+        "elevGain": "500m",
+        "maxAlt": "330m",
+        "overnightStay": "Finish",
+        "keyHighlight": "Ben Nevis views & the \"Old Man\" statue"
+      }
+    ]
+  },
+  "balkans": {
+    "sheetName": "Peaks of the Balkans",
+    "slug": "balkans",
+    "itinerary": [
+      {
+        "day": 1,
+        "routeStandardLoop": "Theth to Valbona (Albania)",
+        "distance": "14 km",
+        "elevGainLoss": "+1,000m / -800m",
+        "maxAltitude": "1,800 m"
+      },
+      {
+        "day": 2,
+        "routeStandardLoop": "Valbona to \u00c7erem",
+        "distance": "14 km",
+        "elevGainLoss": "1,150m",
+        "maxAltitude": "1,980 m"
+      },
+      {
+        "day": 3,
+        "routeStandardLoop": "\u00c7erem to Doberdol",
+        "distance": "15 km",
+        "elevGainLoss": "1,000m",
+        "maxAltitude": "2,250 m"
+      },
+      {
+        "day": 4,
+        "routeStandardLoop": "Doberdol to Milishevc (Kosovo)",
+        "distance": "18 km",
+        "elevGainLoss": "900m",
+        "maxAltitude": "2,366 m"
+      },
+      {
+        "day": 5,
+        "routeStandardLoop": "Milishevc to Rek\u00eb e Allag\u00ebs",
+        "distance": "16 km",
+        "elevGainLoss": "800m",
+        "maxAltitude": "2,100 m"
+      },
+      {
+        "day": 6,
+        "routeStandardLoop": "Rek\u00eb e Allag\u00ebs to Ku\u00e7isht\u00eb",
+        "distance": "15 km",
+        "elevGainLoss": "1,100m",
+        "maxAltitude": "2,200 m"
+      },
+      {
+        "day": 7,
+        "routeStandardLoop": "Ku\u00e7isht\u00eb to Babino Polje (MNE)",
+        "distance": "15 km",
+        "elevGainLoss": "1,150m",
+        "maxAltitude": "2,277 m"
+      },
+      {
+        "day": 8,
+        "routeStandardLoop": "Babino Polje to Plav",
+        "distance": "20 km",
+        "elevGainLoss": "-700m",
+        "maxAltitude": "2,100 m"
+      },
+      {
+        "day": 9,
+        "routeStandardLoop": "Plav to Vusanje",
+        "distance": "27 km",
+        "elevGainLoss": "1,100m",
+        "maxAltitude": "2,100 m"
+      },
+      {
+        "day": 10,
+        "routeStandardLoop": "Vusanje to Theth",
+        "distance": "21 km",
+        "elevGainLoss": "1,100m",
+        "maxAltitude": "1,900 m"
+      }
+    ]
+  },
+  "markha": {
+    "sheetName": "Markha Valley",
+    "slug": "markha",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Chilling to Sko",
+        "distance": "7 km",
+        "elevGain": "200m",
+        "maxAltitude": "3,300 m"
+      },
+      {
+        "day": 2,
+        "route": "Sko to Markha",
+        "distance": "13 km",
+        "elevGain": "450m",
+        "maxAltitude": "3,750 m"
+      },
+      {
+        "day": 3,
+        "route": "Markha to Hankar",
+        "distance": "11 km",
+        "elevGain": "250m",
+        "maxAltitude": "4,000 m"
+      },
+      {
+        "day": 4,
+        "route": "Hankar to Nimaling",
+        "distance": "10 km",
+        "elevGain": "750m",
+        "maxAltitude": "4,750 m"
+      },
+      {
+        "day": 5,
+        "route": "Nimaling to Shang Sumdo (Pass)",
+        "distance": "16 km",
+        "elevGain": "+500m / -1200m",
+        "maxAltitude": "5,260 m"
+      }
+    ]
+  },
+  "arctic": {
+    "sheetName": "Arctic Circle Trail",
+    "slug": "arctic",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Kelly Ville to Hundes\u00f8",
+        "distance": "20 km",
+        "elevGainLoss": "300m / -200m",
+        "highPoint": "400 m"
+      },
+      {
+        "day": 2,
+        "route": "Hundes\u00f8 to Katiffik",
+        "distance": "20 km",
+        "elevGainLoss": "+350m / -350m",
+        "highPoint": "350 m"
+      },
+      {
+        "day": 3,
+        "route": "Katiffik to Canoe Center",
+        "distance": "20 km",
+        "elevGainLoss": "Flat (Lakeside)",
+        "highPoint": "160 m"
+      },
+      {
+        "day": 4,
+        "route": "Canoe Center to Ikkattooq",
+        "distance": "22 km",
+        "elevGainLoss": "+450m / -250m",
+        "highPoint": "450 m"
+      },
+      {
+        "day": 5,
+        "route": "Ikkattooq to Eqalugaarniarfik",
+        "distance": "19 km",
+        "elevGainLoss": "+300m / -500m",
+        "highPoint": "450 m"
+      },
+      {
+        "day": 6,
+        "route": "Eqalugaarniarfik to Innajuattoq",
+        "distance": "18 km",
+        "elevGainLoss": "+500m / -300m",
+        "highPoint": "500 m"
+      },
+      {
+        "day": 7,
+        "route": "Innajuattoq to Nerumaq",
+        "distance": "17 km",
+        "elevGainLoss": "+200m / -400m",
+        "highPoint": "450 m"
+      },
+      {
+        "day": 8,
+        "route": "Nerumaq to Kangerluarsuk Tulleq",
+        "distance": "17 km",
+        "elevGainLoss": "+400m / -400m",
+        "highPoint": "400 m"
+      },
+      {
+        "day": 9,
+        "route": "Kangerluarsuk Tulleq to Sisimiut",
+        "distance": "12 km",
+        "elevGainLoss": "+200m / -400m",
+        "highPoint": "300 m"
+      }
+    ]
+  },
+  "lycian": {
+    "sheetName": "Lycian Way",
+    "slug": "lycian",
+    "itinerary": [
+      {
+        "day": 1,
+        "routeKasToDemre": "Kas to Limanagzi",
+        "distance": "10 km",
+        "elevGain": "200m",
+        "feature": "Sea Caves"
+      },
+      {
+        "day": 2,
+        "routeKasToDemre": "Limanagzi to Bogazcik",
+        "distance": "14 km",
+        "elevGain": "500m",
+        "feature": "Ancient Ruins"
+      },
+      {
+        "day": 3,
+        "routeKasToDemre": "Bogazcik to Ucagiz",
+        "distance": "18 km",
+        "elevGain": "300m",
+        "feature": "Sunken City"
+      },
+      {
+        "day": 4,
+        "routeKasToDemre": "Ucagiz to Demre",
+        "distance": "20 km",
+        "elevGain": "400m",
+        "feature": "Lycian Tombs"
+      }
+    ]
+  },
+  "kumano": {
+    "sheetName": "Kumano  Kodo",
+    "slug": "kumano",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Takijiri to Chikatsuyu",
+        "distance": "13 km",
+        "elevGain": "700m",
+        "maxAltitude": "700 m"
+      },
+      {
+        "day": 2,
+        "route": "Chikatsuyu to Kumano Hongu",
+        "distance": "24 km",
+        "elevGain": "800m",
+        "maxAltitude": "800 m"
+      },
+      {
+        "day": 3,
+        "route": "Hongu to Koguchi",
+        "distance": "13 km",
+        "elevGain": "500m",
+        "maxAltitude": "500 m"
+      },
+      {
+        "day": 4,
+        "route": "Koguchi to Nachi Falls",
+        "distance": "14 km",
+        "elevGain": "800m",
+        "maxAltitude": "850 m"
+      }
+    ]
+  },
+  "fishermans": {
+    "sheetName": "Fishermans Trail",
+    "slug": "fishermans",
+    "itinerary": [
+      {
+        "day": 1,
+        "routeStandard4Day": "Porto Covo to Vila Nova Milfontes",
+        "distance": "20 km",
+        "terrain": "Sandy / Cliffs",
+        "elevGain": "150m"
+      },
+      {
+        "day": 2,
+        "routeStandard4Day": "Milfontes to Almograve",
+        "distance": "15 km",
+        "terrain": "Coastal",
+        "elevGain": "100m"
+      },
+      {
+        "day": 3,
+        "routeStandard4Day": "Almograve to Zambujeira do Mar",
+        "distance": "22 km",
+        "terrain": "Cliffs",
+        "elevGain": "200m"
+      },
+      {
+        "day": 4,
+        "routeStandard4Day": "Zambujeira to Odeceixe",
+        "distance": "18 km",
+        "terrain": "Dunes / River",
+        "elevGain": "200m"
+      }
+    ]
+  },
+  "simien": {
+    "sheetName": "Simien Mountains",
+    "slug": "simien",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Debark to Sankaber",
+        "distance": "10 km",
+        "elevGain": "600m",
+        "maxAltitude": "3,250 m"
+      },
+      {
+        "day": 2,
+        "route": "Sankaber to Gich",
+        "distance": "12 km",
+        "elevGain": "700m",
+        "maxAltitude": "3,600 m"
+      },
+      {
+        "day": 3,
+        "route": "Gich to Chennek (Imet Gogo)",
+        "distance": "15 km",
+        "elevGain": "600m",
+        "maxAltitude": "3,920 m"
+      },
+      {
+        "day": 4,
+        "route": "Chennek to Ambiko (Pass)",
+        "distance": "18 km",
+        "elevGain": "900m",
+        "maxAltitude": "4,200 m"
+      },
+      {
+        "day": 5,
+        "route": "Summit Ras Dashen",
+        "distance": "16 km",
+        "elevGain": "1,300m",
+        "maxAltitude": "4,533 m"
+      }
+    ]
+  },
+  "ausangate": {
+    "sheetName": "Ausangate Circuit",
+    "slug": "ausangate",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Tinqui to Upis",
+        "distance": "12 km",
+        "elevGain": "600m",
+        "maxAltitude": "4,400 m"
+      },
+      {
+        "day": 2,
+        "route": "Upis to Jatun Pucacocha",
+        "distance": "14 km",
+        "elevGain": "750m",
+        "maxAltitude": "4,850 m"
+      },
+      {
+        "day": 3,
+        "route": "Pucacocha to Anantapata",
+        "distance": "12 km",
+        "elevGain": "700m",
+        "maxAltitude": "4,930 m"
+      },
+      {
+        "day": 4,
+        "route": "Rainbow Mountain & Return",
+        "distance": "15 km",
+        "elevGain": "600m",
+        "maxAltitude": "5,040 m"
+      },
+      {
+        "day": 5,
+        "route": "Anantapata to Tinqui",
+        "distance": "16 km",
+        "elevGain": "-1,000m",
+        "maxAltitude": "4,800 m"
+      }
+    ]
+  },
+  "gokyo": {
+    "sheetName": "Gokyo Lakes",
+    "slug": "gokyo",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Flight to Lukla; Trek to Phakding",
+        "distance": "8 km",
+        "elevGain": "200m",
+        "maxAlt": "2,860m",
+        "overnightStay": "Phakding",
+        "keyHighlight": "Thrilling flight & Dudh Koshi river"
+      },
+      {
+        "day": 2,
+        "route": "Phakding to Namche Bazaar",
+        "distance": "11 km",
+        "elevGain": "1,000m",
+        "maxAlt": "3,440m",
+        "overnightStay": "Namche",
+        "keyHighlight": "First view of Everest; Hillary Bridge"
+      },
+      {
+        "day": 3,
+        "route": "Acclimatization Day",
+        "distance": "-",
+        "elevGain": "-",
+        "maxAlt": "3,880m",
+        "overnightStay": "Namche",
+        "keyHighlight": "Hike to Everest View Hotel"
+      },
+      {
+        "day": 4,
+        "route": "Namche to Thame",
+        "distance": "10 km",
+        "elevGain": "350m",
+        "maxAlt": "3,820m",
+        "overnightStay": "Thame",
+        "keyHighlight": "Traditional Sherpa village & monastery"
+      },
+      {
+        "day": 5,
+        "route": "Thame to Lungden",
+        "distance": "11 km",
+        "elevGain": "#ERROR!",
+        "maxAlt": "4,380m",
+        "overnightStay": "Lungden",
+        "keyHighlight": "Ancient salt trade route to Tibet"
+      },
+      {
+        "day": 6,
+        "route": "Lungden to Gokyo via Renjo La",
+        "distance": "12 km",
+        "elevGain": "1,000m",
+        "maxAlt": "5,360m",
+        "overnightStay": "Gokyo",
+        "keyHighlight": "Pass #1; View of Gokyo Lakes"
+      },
+      {
+        "day": 7,
+        "route": "Gokyo Ri Summit & Rest",
+        "distance": "4 km",
+        "elevGain": "600m",
+        "maxAlt": "5,357m",
+        "overnightStay": "Gokyo",
+        "keyHighlight": "Best 360\u00b0 pano of 8,000m peaks"
+      },
+      {
+        "day": 8,
+        "route": "Gokyo to Dragnag",
+        "distance": "5 km",
+        "elevGain": "100m",
+        "maxAlt": "4,750m",
+        "overnightStay": "Dragnag",
+        "keyHighlight": "Crossing the massive Ngozumpa Glacier"
+      },
+      {
+        "day": 9,
+        "route": "Dragnag to Dzongla via Cho La",
+        "distance": "10 km",
+        "elevGain": "800m",
+        "maxAlt": "5,420m",
+        "overnightStay": "Dzongla",
+        "keyHighlight": "Pass #2; Crossing the glacier pass"
+      },
+      {
+        "day": 10,
+        "route": "Dzongla to Lobuche",
+        "distance": "7 km",
+        "elevGain": "200m",
+        "maxAlt": "4,940m",
+        "overnightStay": "Lobuche",
+        "keyHighlight": "Views of Ama Dablam & Nuptse"
+      },
+      {
+        "day": 11,
+        "route": "Lobuche to Gorak Shep (EBC Side Trip)",
+        "distance": "12 km",
+        "elevGain": "450m",
+        "maxAlt": "5,364m",
+        "overnightStay": "Gorak Shep",
+        "keyHighlight": "Everest Base Camp"
+      },
+      {
+        "day": 12,
+        "route": "Kala Patthar Summit; to Lobuche",
+        "distance": "8 km",
+        "elevGain": "400m",
+        "maxAlt": "5,550m",
+        "overnightStay": "Lobuche",
+        "keyHighlight": "Sunrise over Everest"
+      },
+      {
+        "day": 13,
+        "route": "Lobuche to Chhukung via Kongma La",
+        "distance": "13 km",
+        "elevGain": "700m",
+        "maxAlt": "5,535m",
+        "overnightStay": "Chhukung",
+        "keyHighlight": "Pass #3; Highest & hardest pass"
+      },
+      {
+        "day": 14,
+        "route": "Chhukung Ri (Optional); to Pangboche",
+        "distance": "10 km",
+        "elevGain": "-1,400m",
+        "maxAlt": "5,546m",
+        "overnightStay": "Pangboche",
+        "keyHighlight": "Descending into thicker air"
+      },
+      {
+        "day": 15,
+        "route": "Pangboche to Namche Bazaar",
+        "distance": "14 km",
+        "elevGain": "-500m",
+        "maxAlt": "3,980m",
+        "overnightStay": "Namche",
+        "keyHighlight": "Tengboche Monastery visit"
+      },
+      {
+        "day": 16,
+        "route": "Namche to Lukla",
+        "distance": "19 km",
+        "elevGain": "-800m",
+        "maxAlt": "3,440m",
+        "overnightStay": "Lukla",
+        "keyHighlight": "Celebration of trek completion"
+      },
+      {
+        "day": 17,
+        "route": "Flight Lukla to Kathmandu",
+        "distance": "-",
+        "elevGain": "-",
+        "maxAlt": "2,860m",
+        "overnightStay": "Kathmandu",
+        "keyHighlight": "Buffer day for flight weather"
+      },
+      {
+        "day": 18,
+        "route": "Departure",
+        "distance": "-",
+        "elevGain": "-",
+        "maxAlt": "-",
+        "overnightStay": "-",
+        "keyHighlight": "Journey home"
+      }
+    ]
+  },
+  "banff": {
+    "sheetName": "Banff Highline",
+    "slug": "banff",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Sunshine Village to Howard Douglas",
+        "distance": "8 km",
+        "elevGain": "200m",
+        "maxAltitude": "2,300 m"
+      },
+      {
+        "day": 2,
+        "route": "Howard Douglas to Magog (Assiniboine)",
+        "distance": "20 km",
+        "elevGain": "700m",
+        "maxAltitude": "2,360 m"
+      },
+      {
+        "day": 3,
+        "route": "Day Hike (Nublet Peak)",
+        "distance": "8 km",
+        "elevGain": "600m",
+        "maxAltitude": "2,750 m"
+      },
+      {
+        "day": 4,
+        "route": "Magog to Mt. Shark Trailhead",
+        "distance": "26 km",
+        "elevGain": "-600m",
+        "maxAltitude": "2,200 m"
+      }
+    ]
+  },
+  "av2": {
+    "sheetName": "Alta Via 2",
+    "slug": "av2",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Bressanone to Rif. Genova",
+        "distance": "15 km",
+        "elevGain": "1,400m",
+        "maxAlt": "2,440m",
+        "overnightStay": "Rifugio Genova",
+        "keyHighlight": "Plose cable car & Odle peaks"
+      },
+      {
+        "day": 2,
+        "route": "Rif. Genova to Rif. Puez",
+        "distance": "15 km",
+        "elevGain": "1,000m",
+        "maxAlt": "2,640m",
+        "overnightStay": "Rifugio Puez",
+        "keyHighlight": "Crossing the Forcella del SIlla"
+      },
+      {
+        "day": 3,
+        "route": "Rif. Puez to Rif. Pisciad\u00f9",
+        "distance": "12 km",
+        "elevGain": "800m",
+        "maxAlt": "2,600m",
+        "overnightStay": "Rif. Pisciad\u00f9",
+        "keyHighlight": "Val Setus (steep cable section)"
+      },
+      {
+        "day": 4,
+        "route": "Rif. Pisciad\u00f9 to Rif. Castiglioni",
+        "distance": "12 km",
+        "elevGain": "600m",
+        "maxAlt": "2,980m",
+        "overnightStay": "Rif. Castiglioni",
+        "keyHighlight": "Piz Bo\u00e8 (High point of Sella)"
+      },
+      {
+        "day": 5,
+        "route": "Rif. Castiglioni to Rif. Viel dal Pan",
+        "distance": "8 km",
+        "elevGain": "650m",
+        "maxAlt": "2,430m",
+        "overnightStay": "Rif. Viel dal Pan",
+        "keyHighlight": "Unmatched views of Marmolada"
+      },
+      {
+        "day": 6,
+        "route": "Rif. Viel dal Pan to Rif. Contrin",
+        "distance": "12 km",
+        "elevGain": "500m",
+        "maxAlt": "2,400m",
+        "overnightStay": "Rifugio Contrin",
+        "keyHighlight": "Descent to Fedaia Lake"
+      },
+      {
+        "day": 7,
+        "route": "Rif. Contrin to Rif. Fuciade",
+        "distance": "12 km",
+        "elevGain": "900m",
+        "maxAlt": "2,730m",
+        "overnightStay": "Rifugio Fuciade",
+        "keyHighlight": "Crossing the Passo Cirelle"
+      },
+      {
+        "day": 8,
+        "route": "Rif. Fuciade to Rif. Mulaz",
+        "distance": "15 km",
+        "elevGain": "1,100m",
+        "maxAlt": "2,600m",
+        "overnightStay": "Rifugio Mulaz",
+        "keyHighlight": "Entering the Pale di San Martino"
+      },
+      {
+        "day": 9,
+        "route": "Rif. Mulaz to Rif. Rosetta",
+        "distance": "8 km",
+        "elevGain": "750m",
+        "maxAlt": "2,700m",
+        "overnightStay": "Rifugio Rosetta",
+        "keyHighlight": "Farangole Pass (technical)"
+      },
+      {
+        "day": 10,
+        "route": "Rif. Rosetta to Rif. Pradidali",
+        "distance": "8 km",
+        "elevGain": "600m",
+        "maxAlt": "2,650m",
+        "overnightStay": "Rif. Pradidali",
+        "keyHighlight": "Dramatic \"Moonscape\" plateau"
+      },
+      {
+        "day": 11,
+        "route": "Rif. Pradidali to Rif. Treviso",
+        "distance": "14 km",
+        "elevGain": "700m",
+        "maxAlt": "2,400m",
+        "overnightStay": "Rifugio Treviso",
+        "keyHighlight": "Steep descent into Val Canali"
+      },
+      {
+        "day": 12,
+        "route": "Rif. Treviso to Rif. Cereda",
+        "distance": "10 km",
+        "elevGain": "1,000m",
+        "maxAlt": "2,270m",
+        "overnightStay": "Passo Cereda",
+        "keyHighlight": "Forcella d'Oltro"
+      },
+      {
+        "day": 13,
+        "route": "Rif. Cereda to Croce d'Aune/Feltre",
+        "distance": "19 km",
+        "elevGain": "1,200m",
+        "maxAlt": "2,360m",
+        "overnightStay": "Feltre (Finish)",
+        "keyHighlight": "The wild Alpe di Vette"
+      }
+    ]
+  },
+  "av4": {
+    "sheetName": "Alta Via 4",
+    "slug": "av4",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Rif. Auronzo to Rif. Locatelli",
+        "distance": "8.0 km",
+        "elevGain": "#ERROR!",
+        "maxAltitude": "2,450 m"
+      },
+      {
+        "day": 2,
+        "route": "Locatelli to Rif. Fonda Savio",
+        "distance": "10.0 km",
+        "elevGain": "#ERROR!",
+        "maxAltitude": "2,367 m"
+      },
+      {
+        "day": 3,
+        "route": "Fonda Savio to Rif. Vandelli",
+        "distance": "12.0 km",
+        "elevGain": "#ERROR!",
+        "maxAltitude": "2,300 m"
+      },
+      {
+        "day": 4,
+        "route": "Vandelli to Rif. San Marco",
+        "distance": "14.0 km",
+        "elevGain": "#ERROR!",
+        "maxAltitude": "2,300 m"
+      },
+      {
+        "day": 5,
+        "route": "San Marco to Rif. Antelao",
+        "distance": "12.0 km",
+        "elevGain": "#ERROR!",
+        "maxAltitude": "2,000 m"
+      },
+      {
+        "day": 6,
+        "route": "Antelao to Pieve di Cadore",
+        "distance": "10.0 km",
+        "elevGain": "-1,200m",
+        "maxAltitude": "1,800 m"
+      }
+    ]
+  },
+  "c2c": {
+    "sheetName": "Coast to Coast",
+    "slug": "c2c",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "St Bees to Ennerdale Bridge",
+        "distance": "14 miles",
+        "maxAltM": "259.08000000000004",
+        "elevGainM": "426.72",
+        "overnightStay": "Ennerdale Bridge",
+        "keyHighlight": "Red sandstone sea cliffs"
+      },
+      {
+        "day": 2,
+        "route": "Ennerdale to Rosthwaite",
+        "distance": "14.5 miles",
+        "maxAltM": "579.12",
+        "elevGainM": "762.0",
+        "overnightStay": "Rosthwaite",
+        "keyHighlight": "Loft Crag & Black Sail Hut"
+      },
+      {
+        "day": 3,
+        "route": "Rosthwaite to Grasmere",
+        "distance": "9 miles",
+        "maxAltM": "609.6",
+        "elevGainM": "594.36",
+        "overnightStay": "Grasmere",
+        "keyHighlight": "Lining Crag & Greenup Edge"
+      },
+      {
+        "day": 4,
+        "route": "Grasmere to Patterdale",
+        "distance": "8.5 miles",
+        "maxAltM": "731.52",
+        "elevGainM": "655.32",
+        "overnightStay": "Patterdale",
+        "keyHighlight": "Grisedale Tarn (Helvellyn views)"
+      },
+      {
+        "day": 5,
+        "route": "Patterdale to Shap",
+        "distance": "16 miles",
+        "maxAltM": "780.288",
+        "elevGainM": "944.88",
+        "overnightStay": "Shap",
+        "keyHighlight": "Kidsty Pike (Trek High Point)"
+      },
+      {
+        "day": 6,
+        "route": "Shap to Kirkby Stephen",
+        "distance": "20 miles",
+        "maxAltM": "396.24",
+        "elevGainM": "441.96000000000004",
+        "overnightStay": "Kirkby Stephen",
+        "keyHighlight": "Smardale Gill Viaduct"
+      },
+      {
+        "day": 7,
+        "route": "Kirkby Stephen to Keld",
+        "distance": "13 miles",
+        "maxAltM": "661.416",
+        "elevGainM": "640.08",
+        "overnightStay": "Keld",
+        "keyHighlight": "Nine Standards Rigg"
+      },
+      {
+        "day": 8,
+        "route": "Keld to Reeth",
+        "distance": "11 miles",
+        "maxAltM": "548.64",
+        "elevGainM": "441.96000000000004",
+        "overnightStay": "Reeth",
+        "keyHighlight": "Swaledale & River Swale"
+      },
+      {
+        "day": 9,
+        "route": "Reeth to Richmond",
+        "distance": "11 miles",
+        "maxAltM": "335.28000000000003",
+        "elevGainM": "259.08000000000004",
+        "overnightStay": "Richmond",
+        "keyHighlight": "Richmond Castle (Norman ruins)"
+      },
+      {
+        "day": 10,
+        "route": "Richmond to Ingleby Cross",
+        "distance": "23 miles",
+        "maxAltM": "121.92",
+        "elevGainM": "274.32",
+        "overnightStay": "Ingleby Cross",
+        "keyHighlight": "Crossing the Vale of York"
+      },
+      {
+        "day": 11,
+        "route": "Ingleby Cross to Clay Bank",
+        "distance": "13 miles",
+        "maxAltM": "441.96000000000004",
+        "elevGainM": "762.0",
+        "overnightStay": "Clay Bank Top",
+        "keyHighlight": "The Wainstones (sandstone crags)"
+      },
+      {
+        "day": 12,
+        "route": "Clay Bank to Blakey Ridge",
+        "distance": "9 miles",
+        "maxAltM": "454.15200000000004",
+        "elevGainM": "335.28000000000003",
+        "overnightStay": "The Lion Inn",
+        "keyHighlight": "Disused Ironstone Railway track"
+      },
+      {
+        "day": 13,
+        "route": "Blakey Ridge to Glaisdale",
+        "distance": "13 miles",
+        "maxAltM": "426.72",
+        "elevGainM": "243.84",
+        "overnightStay": "Glaisdale",
+        "keyHighlight": "Glaisdale Rigg & Heather Moors"
+      },
+      {
+        "day": 14,
+        "route": "Glaisdale to Robin Hood's Bay",
+        "distance": "19 miles",
+        "maxAltM": "289.56",
+        "elevGainM": "594.36",
+        "overnightStay": "Finish",
+        "keyHighlight": "The North Sea boot dip"
+      }
+    ]
+  },
+  "tongariro": {
+    "sheetName": "Tongariro Northern Circuit",
+    "slug": "tongariro",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Whakapapa Village to Mangatepopo",
+        "distance": "9.4 km",
+        "elevGainLoss": "200m",
+        "maxAltitude": "1,190 m"
+      },
+      {
+        "day": 2,
+        "route": "Mangatepopo to Oturere (The Pass)",
+        "distance": "12.0 km",
+        "elevGainLoss": "+750m / -650m",
+        "maxAltitude": "1,886 m"
+      },
+      {
+        "day": 3,
+        "route": "Oturere to Waihohonu",
+        "distance": "8.1 km",
+        "elevGainLoss": "+150m / -250m",
+        "maxAltitude": "1,400 m"
+      },
+      {
+        "day": 4,
+        "route": "Waihohonu back to Whakapapa",
+        "distance": "15.4 km",
+        "elevGainLoss": "+250m / -350m",
+        "maxAltitude": "1,300 m"
+      }
+    ]
+  },
+  "kenya": {
+    "sheetName": "Mount Kenya",
+    "slug": "kenya",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Sirimon Gate to Old Moses Camp",
+        "distance": "9.0 km",
+        "elevGain": "860m",
+        "maxAltitude": "3,300 m"
+      },
+      {
+        "day": 2,
+        "route": "Old Moses to Shiptons Camp",
+        "distance": "14.0 km",
+        "elevGain": "900m",
+        "maxAltitude": "4,200 m"
+      },
+      {
+        "day": 3,
+        "route": "Shiptons to Point Lenana & Mintos",
+        "distance": "12.0 km",
+        "elevGain": "+800m / -1,200m",
+        "maxAltitude": "4,985 m"
+      },
+      {
+        "day": 4,
+        "route": "Mintos to Meru Bandas",
+        "distance": "14.0 km",
+        "elevGain": "-1,300m",
+        "maxAltitude": "4,300 m"
+      },
+      {
+        "day": 5,
+        "route": "Meru Bandas to Chogoria Gate",
+        "distance": "10.0 km",
+        "elevGain": "-500m",
+        "maxAltitude": "3,000 m"
+      }
+    ]
+  },
+  "wonderland": {
+    "sheetName": "Wonderland Trail",
+    "slug": "wonderland",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Longmire to Devil's Dream",
+        "distance": "7 miles",
+        "elevGainM": "640.08",
+        "maxAltM": "1542.288",
+        "overnightStay": "Devil's Dream",
+        "keyHighlight": "Old-growth forest & Squaw Lake"
+      },
+      {
+        "day": 2,
+        "route": "Devil's Dream to Klapatche",
+        "distance": "10 miles",
+        "elevGainM": "944.88",
+        "maxAltM": "1828.8000000000002",
+        "overnightStay": "Klapatche Park",
+        "keyHighlight": "Tahoma Suspension Bridge"
+      },
+      {
+        "day": 3,
+        "route": "Klapatche to Golden Lakes",
+        "distance": "8 miles",
+        "elevGainM": "548.64",
+        "maxAltM": "1706.88",
+        "overnightStay": "Golden Lakes",
+        "keyHighlight": "Sunset Park & Reflection views"
+      },
+      {
+        "day": 4,
+        "route": "Golden Lakes to Mowich Lake",
+        "distance": "10 miles",
+        "elevGainM": "762.0",
+        "maxAltM": "1554.48",
+        "overnightStay": "Mowich Lake",
+        "keyHighlight": "Resupply Point & deep blue water"
+      },
+      {
+        "day": 5,
+        "route": "Mowich Lake to Dick Creek",
+        "distance": "10 miles",
+        "elevGainM": "457.20000000000005",
+        "maxAltM": "1554.48",
+        "overnightStay": "Dick Creek",
+        "keyHighlight": "Carbon Glacier (lowest in US)"
+      },
+      {
+        "day": 6,
+        "route": "Dick Creek to Granite Creek",
+        "distance": "9 miles",
+        "elevGainM": "914.4000000000001",
+        "maxAltM": "1743.4560000000001",
+        "overnightStay": "Granite Creek",
+        "keyHighlight": "Mystic Pass & Mystic Lake"
+      },
+      {
+        "day": 7,
+        "route": "Granite Creek to White River",
+        "distance": "7 miles",
+        "elevGainM": "457.20000000000005",
+        "maxAltM": "1341.1200000000001",
+        "overnightStay": "White River",
+        "keyHighlight": "Resupply Point & Glacier Basin"
+      },
+      {
+        "day": 8,
+        "route": "White River to Indian Bar",
+        "distance": "11 miles",
+        "elevGainM": "975.36",
+        "maxAltM": "2057.4",
+        "overnightStay": "Indian Bar",
+        "keyHighlight": "Panhandle Gap (High Point)"
+      },
+      {
+        "day": 9,
+        "route": "Indian Bar to Maple Creek",
+        "distance": "10 miles",
+        "elevGainM": "487.68",
+        "maxAltM": "1798.3200000000002",
+        "overnightStay": "Maple Creek",
+        "keyHighlight": "Cowlitz Divide & Stevens Canyon"
+      },
+      {
+        "day": 10,
+        "route": "Maple Creek to Longmire",
+        "distance": "11 miles",
+        "elevGainM": "548.64",
+        "maxAltM": "1645.92",
+        "overnightStay": "Finish",
+        "keyHighlight": "Reflection Lakes & Narada Falls"
+      }
+    ]
+  },
+  "fitz_roy": {
+    "sheetName": "Fitz Roy Trek",
+    "slug": "fitz_roy",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "El Chalt\u00e9n to Poincenot",
+        "distance": "10.0 km",
+        "elevGain": "350m",
+        "maxAltitude": "750 m"
+      },
+      {
+        "day": 2,
+        "route": "Laguna de los Tres & Return",
+        "distance": "10.0 km",
+        "elevGain": "500m",
+        "maxAltitude": "1,170 m"
+      },
+      {
+        "day": 3,
+        "route": "Poincenot to De Agostini",
+        "distance": "12.0 km",
+        "elevGain": "200m",
+        "maxAltitude": "750 m"
+      },
+      {
+        "day": 4,
+        "route": "Laguna Torre & back to Chalt\u00e9n",
+        "distance": "11.0 km",
+        "elevGain": "-250m",
+        "maxAltitude": "700 m"
+      }
+    ]
+  },
+  "east_coast": {
+    "sheetName": "East Coast Trail",
+    "slug": "east_coast",
+    "itinerary": [
+      {
+        "day": 1,
+        "routePaths": "Cappahayden to Renews",
+        "distance": "17 km",
+        "elevGain": "450m",
+        "maxAlt": "60m",
+        "overnightStay": "Renews",
+        "keyHighlight": "Berry Head Arch (Sea arch)"
+      },
+      {
+        "day": 2,
+        "routePaths": "Renews to Ferryland",
+        "distance": "16 km",
+        "elevGain": "350m",
+        "maxAlt": "50m",
+        "overnightStay": "Ferryland",
+        "keyHighlight": "Historic Lighthouse & Colony"
+      },
+      {
+        "day": 3,
+        "routePaths": "Ferryland to Calvert",
+        "distance": "15 km",
+        "elevGain": "400m",
+        "maxAlt": "80m",
+        "overnightStay": "Calvert",
+        "keyHighlight": "Deep Water Point views"
+      },
+      {
+        "day": 4,
+        "routePaths": "Calvert to Brigus South",
+        "distance": "12 km",
+        "elevGain": "450m",
+        "maxAlt": "95m",
+        "overnightStay": "Brigus South",
+        "keyHighlight": "Sea stacks and \"The Scidder\""
+      },
+      {
+        "day": 5,
+        "routePaths": "Brigus South to Cape Broyle",
+        "distance": "14 km",
+        "elevGain": "500m",
+        "maxAlt": "110m",
+        "overnightStay": "Cape Broyle",
+        "keyHighlight": "Wilderness coves & bald eagles"
+      },
+      {
+        "day": 6,
+        "routePaths": "Cape Broyle to La Manche",
+        "distance": "18 km",
+        "elevGain": "600m",
+        "maxAlt": "120m",
+        "overnightStay": "La Manche",
+        "keyHighlight": "La Manche Suspension Bridge"
+      },
+      {
+        "day": 7,
+        "routePaths": "La Manche to Bauline East",
+        "distance": "15 km",
+        "elevGain": "450m",
+        "maxAlt": "100m",
+        "overnightStay": "Bauline East",
+        "keyHighlight": "Abandoned village ruins"
+      },
+      {
+        "day": 8,
+        "routePaths": "Bauline East to Mobile",
+        "distance": "16 km",
+        "elevGain": "400m",
+        "maxAlt": "90m",
+        "overnightStay": "Mobile",
+        "keyHighlight": "Witless Bay Bird Sanctuary"
+      },
+      {
+        "day": 9,
+        "routePaths": "Mobile to Bay Bulls",
+        "distance": "14 km",
+        "elevGain": "350m",
+        "maxAlt": "80m",
+        "overnightStay": "Bay Bulls",
+        "keyHighlight": "Whale watching from cliffs"
+      },
+      {
+        "day": 10,
+        "routePaths": "Bay Bulls to Petty Harbour",
+        "distance": "18 km",
+        "elevGain": "750m",
+        "maxAlt": "160m",
+        "overnightStay": "Petty Harbour",
+        "keyHighlight": "The Spout (Wave-powered geyser)"
+      },
+      {
+        "day": 11,
+        "routePaths": "Petty Harbour to Cape Spear",
+        "distance": "11 km",
+        "elevGain": "550m",
+        "maxAlt": "140m",
+        "overnightStay": "Cape Spear",
+        "keyHighlight": "Most Easterly Point in N. America"
+      },
+      {
+        "day": 12,
+        "routePaths": "Cape Spear to St. John's",
+        "distance": "15 km",
+        "elevGain": "500m",
+        "maxAlt": "160m",
+        "overnightStay": "St. John's",
+        "keyHighlight": "Signal Hill & Quidi Vidi Village"
+      },
+      {
+        "day": 13,
+        "routePaths": "St. John's to Outer Cove",
+        "distance": "17 km",
+        "elevGain": "650m",
+        "maxAlt": "150m",
+        "overnightStay": "Outer Cove",
+        "keyHighlight": "Sugarloaf Head (Rugged cliffs)"
+      },
+      {
+        "day": 14,
+        "routePaths": "Outer Cove to Flatrock",
+        "distance": "16 km",
+        "elevGain": "550m",
+        "maxAlt": "120m",
+        "overnightStay": "Flatrock",
+        "keyHighlight": "Torbay Bight & Beamer rock"
+      },
+      {
+        "day": 15,
+        "routePaths": "Flatrock to Pouch Cove",
+        "distance": "18 km",
+        "elevGain": "600m",
+        "maxAlt": "140m",
+        "overnightStay": "Pouch Cove",
+        "keyHighlight": "Marine Park & Biscan Cove"
+      },
+      {
+        "day": 16,
+        "routePaths": "Pouch Cove to Topsail Beach",
+        "distance": "20 km",
+        "elevGain": "850m",
+        "maxAlt": "260m",
+        "overnightStay": "Finish",
+        "keyHighlight": "White Horse (Trail High Point)"
+      }
+    ]
+  },
+  "triglav": {
+    "sheetName": "Triglav Circuit",
+    "slug": "triglav",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Pokljuka to Triglavski Dom",
+        "distance": "12.0 km",
+        "elevGain": "1,100m",
+        "maxAltitude": "2,515 m"
+      },
+      {
+        "day": 2,
+        "route": "Summit Triglav to Seven Lakes",
+        "distance": "14.0 km",
+        "elevGain": "+350m / -1,100m",
+        "maxAltitude": "2,864 m"
+      },
+      {
+        "day": 3,
+        "route": "Seven Lakes to Lake Bohinj",
+        "distance": "15.0 km",
+        "elevGain": "-1,100m",
+        "maxAltitude": "1,685 m"
+      }
+    ]
+  },
+  "jordan": {
+    "sheetName": "Jordan Trail",
+    "slug": "jordan",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Dana to Feynan",
+        "distance": "16.0 km",
+        "elevChange": "-1,100m",
+        "maxAltitude": "1,200 m"
+      },
+      {
+        "day": 2,
+        "route": "Feynan to Wadi Barwas",
+        "distance": "18.0 km",
+        "elevChange": "200m",
+        "maxAltitude": "400 m"
+      },
+      {
+        "day": 3,
+        "route": "Wadi Barwas to Little Petra",
+        "distance": "22.0 km",
+        "elevChange": "800m",
+        "maxAltitude": "1,050 m"
+      },
+      {
+        "day": 4,
+        "route": "Little Petra to Petra (Monastery)",
+        "distance": "14.0 km",
+        "elevChange": "400m",
+        "maxAltitude": "1,100 m"
+      }
+    ]
+  },
+  "kalalau": {
+    "sheetName": "Kalalau Trail",
+    "slug": "kalalau",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Ke'e Beach to Kalalau Beach",
+        "distance": "18.0 km",
+        "elevGain": "1,500m",
+        "maxAltitude": "250 m"
+      },
+      {
+        "day": 2,
+        "route": "Kalalau Beach back to Ke'e",
+        "distance": "18.0 km",
+        "elevGain": "1,500m",
+        "maxAltitude": "250 m"
+      }
+    ]
+  },
+  "larapinta": {
+    "sheetName": "Larapinta Trail",
+    "slug": "larapinta",
+    "itinerary": [
+      {
+        "day": 1,
+        "sectionRoute": "Telegraph Stn to Simpsons Gap",
+        "distance": "24.7 km",
+        "elevGain": "680m",
+        "maxAlt": "850m",
+        "overnightStay": "Simpsons Gap",
+        "keyHighlight": "Euro Ridge & Wallaby Gap"
+      },
+      {
+        "day": 2,
+        "sectionRoute": "Simpsons Gap to Jay Creek",
+        "distance": "26.2 km",
+        "elevGain": "380m",
+        "maxAlt": "820m",
+        "overnightStay": "Jay Creek",
+        "keyHighlight": "Spring Gap & ancient rock"
+      },
+      {
+        "day": 3,
+        "sectionRoute": "Jay Creek to Standley Chasm",
+        "distance": "13.6 km",
+        "elevGain": "500m",
+        "maxAlt": "950m",
+        "overnightStay": "Standley Chasm",
+        "keyHighlight": "The dramatic rock cleft"
+      },
+      {
+        "day": 4,
+        "sectionRoute": "Standley Chasm to Birthday W.H.",
+        "distance": "17.7 km",
+        "elevGain": "770m",
+        "maxAlt": "1,200m",
+        "overnightStay": "Brinkley Bluff",
+        "keyHighlight": "Brinkley Bluff (Iconic camp)"
+      },
+      {
+        "day": 5,
+        "sectionRoute": "Birthday W.H. to Hugh Gorge",
+        "distance": "16 km",
+        "elevGain": "1,070m",
+        "maxAlt": "1,150m",
+        "overnightStay": "Hugh Gorge",
+        "keyHighlight": "Razorback Ridge crossing"
+      },
+      {
+        "day": 6,
+        "sectionRoute": "Hugh Gorge to Ellery Creek",
+        "distance": "31.2 km",
+        "elevGain": "420m",
+        "maxAlt": "850m",
+        "overnightStay": "Ellery Creek",
+        "keyHighlight": "Longest Day & swim hole"
+      },
+      {
+        "day": 7,
+        "sectionRoute": "Ellery Creek to Serpentine Gorge",
+        "distance": "13.8 km",
+        "elevGain": "230m",
+        "maxAlt": "750m",
+        "overnightStay": "Serpentine Gorge",
+        "keyHighlight": "Dolomite hills & birdlife"
+      },
+      {
+        "day": 8,
+        "sectionRoute": "Serpentine Gorge to Chalet Dam",
+        "distance": "13.4 km",
+        "elevGain": "930m",
+        "maxAlt": "1,000m",
+        "overnightStay": "Chalet Dam",
+        "keyHighlight": "Counts Point (Epic panorama)"
+      },
+      {
+        "day": 9,
+        "sectionRoute": "Chalet Dam to Ormiston Gorge",
+        "distance": "28.6 km",
+        "elevGain": "740m",
+        "maxAlt": "1,100m",
+        "overnightStay": "Ormiston Gorge",
+        "keyHighlight": "Massive red walls & sand"
+      },
+      {
+        "day": 10,
+        "sectionRoute": "Ormiston Gorge to Finke River",
+        "distance": "9.1 km",
+        "elevGain": "260m",
+        "maxAlt": "850m",
+        "overnightStay": "Finke River",
+        "keyHighlight": "Ormiston Pound views"
+      },
+      {
+        "day": 11,
+        "sectionRoute": "Finke River to Redbank Gorge",
+        "distance": "26 km",
+        "elevGain": "500m",
+        "maxAlt": "850m",
+        "overnightStay": "Redbank Gorge",
+        "keyHighlight": "Crossing an ancient riverbed"
+      },
+      {
+        "day": 12,
+        "sectionRoute": "Redbank Gorge to Mt Sonder",
+        "distance": "15.8 km",
+        "elevGain": "780m",
+        "maxAlt": "1,379m",
+        "overnightStay": "Finish",
+        "keyHighlight": "Mt Sonder (High Point)"
+      }
+    ]
+  },
+  "tiger_leaping": {
+    "sheetName": "Tiger Leaping Gorge",
+    "slug": "tiger_leaping",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Qiaotou to Halfway GH (High Trail)",
+        "distance": "17.0 km",
+        "elevGain": "1,100m",
+        "maxAltitude": "2,670 m"
+      },
+      {
+        "day": 2,
+        "route": "Halfway to Tina\u2019s / Middle Gorge",
+        "distance": "7.0 km",
+        "elevGain": "-600m",
+        "maxAltitude": "2,400 m"
+      }
+    ]
+  },
+  "santa_cruz": {
+    "sheetName": "Santa Cruz",
+    "slug": "santa_cruz",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Cashapampa to Llamacorral",
+        "distance": "10 km",
+        "elevGainLoss": "800m",
+        "maxAltitude": "3,750 m"
+      },
+      {
+        "day": 2,
+        "route": "Llamacorral to Taullipampa",
+        "distance": "14 km",
+        "elevGainLoss": "500m",
+        "maxAltitude": "4,250 m"
+      },
+      {
+        "day": 3,
+        "route": "Taullipampa to Paria (via Punta Union)",
+        "distance": "14 km",
+        "elevGainLoss": "+500m / -1,000m",
+        "maxAltitude": "4,750 m"
+      },
+      {
+        "day": 4,
+        "route": "Paria to Vaquer\u00eda",
+        "distance": "12 km",
+        "elevGainLoss": "-400m",
+        "maxAltitude": "3,700 m"
+      }
+    ]
+  },
+  "lost_city": {
+    "sheetName": "Lost City",
+    "slug": "lost_city",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Mamey to Camp 1",
+        "distance": "9 km",
+        "elevGainLoss": "400m",
+        "maxAltitude": "450 m"
+      },
+      {
+        "day": 2,
+        "route": "Camp 1 to Camp 3 (Paraiso)",
+        "distance": "14 km",
+        "elevGainLoss": "600m",
+        "maxAltitude": "830 m"
+      },
+      {
+        "day": 3,
+        "route": "Lost City Tour to Camp 2",
+        "distance": "10 km",
+        "elevGainLoss": "+400m / -600m",
+        "maxAltitude": "1,200 m"
+      },
+      {
+        "day": 4,
+        "route": "Camp 2 back to Mamey",
+        "distance": "13 km",
+        "elevGainLoss": "-600m",
+        "maxAltitude": "450 m"
+      }
+    ]
+  },
+  "acatenango": {
+    "sheetName": "Acatenango\u2013Fuego Traverse",
+    "slug": "acatenango",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Trailhead to Base Camp",
+        "distance": "8 km",
+        "elevGainLoss": "1,100m",
+        "maxAltitude": "3,700 m"
+      },
+      {
+        "day": 2,
+        "route": "Summit & Descent (Optional Fuego Ridge)",
+        "distance": "10 km",
+        "elevGainLoss": "+300m / -1,400m",
+        "maxAltitude": "3,976 m"
+      }
+    ]
+  },
+  "el_choro": {
+    "sheetName": "El Choro",
+    "slug": "el_choro",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "La Cumbre to Challapampa",
+        "distance": "18 km",
+        "elevGainLoss": "+200m / -2,000m",
+        "maxAltitude": "4,800 m"
+      },
+      {
+        "day": 2,
+        "route": "Challapampa to Sandillani",
+        "distance": "20 km",
+        "elevGainLoss": "-800m",
+        "maxAltitude": "2,800 m"
+      },
+      {
+        "day": 3,
+        "route": "Sandillani to Chairo",
+        "distance": "15 km",
+        "elevGainLoss": "-900m",
+        "maxAltitude": "1,300 m"
+      }
+    ]
+  },
+  "cordillera": {
+    "sheetName": "Cordillera Real",
+    "slug": "cordillera",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Tuni to Laguna Chiarkhota",
+        "distance": "8 km",
+        "elevGainLoss": "300m",
+        "maxAltitude": "4,700 m"
+      },
+      {
+        "day": 2,
+        "route": "Paso Austria (Peak/Pass)",
+        "distance": "6 km",
+        "elevGainLoss": "+650m / -650m",
+        "maxAltitude": "5,350 m"
+      },
+      {
+        "day": 3,
+        "route": "Chiarkhota to Maria Lloco",
+        "distance": "14 km",
+        "elevGainLoss": "+400m / -300m",
+        "maxAltitude": "5,000 m"
+      },
+      {
+        "day": 4,
+        "route": "Maria Lloco to Base Huayna Potosi",
+        "distance": "12 km",
+        "elevGainLoss": "+300m / -400m",
+        "maxAltitude": "4,800 m"
+      }
+    ]
+  },
+  "mgoun": {
+    "sheetName": "Mgoun Trail",
+    "slug": "mgoun",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Ait Bougmez to Azib n'Ikkis",
+        "distance": "12 km",
+        "elevGainLoss": "400m",
+        "maxAltitude": "2,300 m"
+      },
+      {
+        "day": 2,
+        "route": "Azib n'Ikkis to Tarkeddit Plateau",
+        "distance": "14 km",
+        "elevGainLoss": "1,100m",
+        "maxAltitude": "3,400 m"
+      },
+      {
+        "day": 3,
+        "route": "Summit Mgoun to Oulilimt",
+        "distance": "18 km",
+        "elevGainLoss": "+700m / -1,400m",
+        "maxAltitude": "4,071 m"
+      },
+      {
+        "day": 4,
+        "route": "Oulilimt to Ain Aflafal",
+        "distance": "15 km",
+        "elevGainLoss": "-400m",
+        "maxAltitude": "2,300 m"
+      },
+      {
+        "day": 5,
+        "route": "Aflafal to Aguerd n'Ouzrou",
+        "distance": "16 km",
+        "elevGainLoss": "-300m",
+        "maxAltitude": "1,900 m"
+      }
+    ]
+  },
+  "toubkal": {
+    "sheetName": "Toubkal Trek",
+    "slug": "toubkal",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Imlil to Tizi n'Tamatert",
+        "distance": "12 km",
+        "elevGainLoss": "+600m",
+        "maxAltitude": "2,300 m"
+      },
+      {
+        "day": 2,
+        "route": "Tacheddirt to Azib n'Likemt",
+        "distance": "14 km",
+        "elevGainLoss": "+950m",
+        "maxAltitude": "3,550 m"
+      },
+      {
+        "day": 3,
+        "route": "Azib n'Likemt to Amsouzert",
+        "distance": "16 km",
+        "elevGainLoss": "+300m / -1,200m",
+        "maxAltitude": "2,400 m"
+      },
+      {
+        "day": 4,
+        "route": "Amsouzert to Lac d'Ifni",
+        "distance": "10 km",
+        "elevGainLoss": "+400m",
+        "maxAltitude": "2,300 m"
+      },
+      {
+        "day": 5,
+        "route": "Lac d'Ifni to Toubkal Refuge",
+        "distance": "12 km",
+        "elevGainLoss": "+1,200m",
+        "maxAltitude": "3,600 m"
+      },
+      {
+        "day": 6,
+        "route": "Summit Toubkal & Descent to Imlil",
+        "distance": "18 km",
+        "elevGainLoss": "+567m / -2,400m",
+        "maxAltitude": "4,167 m"
+      }
+    ]
+  },
+  "rwenzori": {
+    "sheetName": "Rwenzori Mountains",
+    "slug": "rwenzori",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Nyakalengija to Nyabitaba Hut",
+        "distance": "10 km",
+        "elevChange": "1,036m",
+        "maxAlt": "2,651m",
+        "overnightStay": "Nyabitaba Hut",
+        "keyHighlight": "Tropical forest & Mahoma river"
+      },
+      {
+        "day": 2,
+        "route": "Nyabitaba to John Matte Hut",
+        "distance": "7 km",
+        "elevChange": "854m",
+        "maxAlt": "3,505m",
+        "overnightStay": "John Matte Hut",
+        "keyHighlight": "Bamboo forest & Kurt Shafer Bridge"
+      },
+      {
+        "day": 3,
+        "route": "John Matte to Bujuku Hut",
+        "distance": "6 km",
+        "elevChange": "457m",
+        "maxAlt": "3,962m",
+        "overnightStay": "Bujuku Hut",
+        "keyHighlight": "Bigo Bog & Lake Bujuku"
+      },
+      {
+        "day": 4,
+        "route": "Bujuku to Elena Hut",
+        "distance": "5 km",
+        "elevChange": "579m",
+        "maxAlt": "4,541m",
+        "overnightStay": "Elena Hut",
+        "keyHighlight": "Steep \"Groundsel Gully\" climb"
+      },
+      {
+        "day": 5,
+        "route": "Elena to Margherita Peak to Kitandara",
+        "distance": "10 km",
+        "elevChange": "+568m / -1,082m",
+        "maxAlt": "5,109m",
+        "overnightStay": "Kitandara Hut",
+        "keyHighlight": "The Summit & glacier crossing"
+      },
+      {
+        "day": 6,
+        "route": "Kitandara to Guy Yeoman Hut",
+        "distance": "6 km",
+        "elevChange": "+255m / -830m",
+        "maxAlt": "4,282m",
+        "overnightStay": "Guy Yeoman Hut",
+        "keyHighlight": "Freshfield Pass & Congo views"
+      },
+      {
+        "day": 7,
+        "route": "Guy Yeoman to Nyabitaba Hut",
+        "distance": "7 km",
+        "elevChange": "-799m",
+        "maxAlt": "3,450m",
+        "overnightStay": "Nyabitaba Hut",
+        "keyHighlight": "Kichuchu cliffs & river crossings"
+      },
+      {
+        "day": 8,
+        "route": "Nyabitaba to Nyakalengija",
+        "distance": "10 km",
+        "elevChange": "-1,036m",
+        "maxAlt": "2,651m",
+        "overnightStay": "Finish",
+        "keyHighlight": "Descent to park gate"
+      }
+    ]
+  },
+  "ushguli": {
+    "sheetName": "Mestia to Ushguli",
+    "slug": "ushguli",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Mestia to Zhabeshi",
+        "distance": "16 km",
+        "elevGainLoss": "+500m / -400m",
+        "maxAltitude": "1,900 m"
+      },
+      {
+        "day": 2,
+        "route": "Zhabeshi to Adishi",
+        "distance": "11 km",
+        "elevGainLoss": "+900m / -400m",
+        "maxAltitude": "2,500 m"
+      },
+      {
+        "day": 3,
+        "route": "Adishi to Iprali (via Chkhunderi Pass)",
+        "distance": "19 km",
+        "elevGainLoss": "+700m / -850m",
+        "maxAltitude": "2,720 m"
+      },
+      {
+        "day": 4,
+        "route": "Iprali to Ushguli",
+        "distance": "12 km",
+        "elevGainLoss": "+400m / -300m",
+        "maxAltitude": "2,100 m"
+      }
+    ]
+  },
+  "tusheti": {
+    "sheetName": "Caucasus Traverse",
+    "slug": "tusheti",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Mestia to Zhabeshi",
+        "distance": "16 km",
+        "elevGain": "750m",
+        "maxAlt": "1,900m",
+        "overnightStay": "Zhabeshi",
+        "keyHighlight": "Views of Mt. Ushba (the \"Matterhorn\" of the Caucasus)"
+      },
+      {
+        "day": 2,
+        "route": "Zhabeshi to Adishi",
+        "distance": "11 km",
+        "elevGain": "900m",
+        "maxAlt": "2,500m",
+        "overnightStay": "Adishi",
+        "keyHighlight": "Ancient stone towers of Svaneti"
+      },
+      {
+        "day": 3,
+        "route": "Adishi to Iprali",
+        "distance": "19 km",
+        "elevGain": "850m",
+        "maxAlt": "2,720m",
+        "overnightStay": "Iprali",
+        "keyHighlight": "Adishi River crossing & Chkhunderi Pass"
+      },
+      {
+        "day": 4,
+        "route": "Iprali to Ushguli",
+        "distance": "12 km",
+        "elevGain": "650m",
+        "maxAlt": "2,100m",
+        "overnightStay": "Ushguli",
+        "keyHighlight": "Ushguli (Highest permanent village in Europe)"
+      },
+      {
+        "day": 5,
+        "route": "Ushguli to Zeskho",
+        "distance": "21 km",
+        "elevGain": "1,100m",
+        "maxAlt": "3,000m",
+        "overnightStay": "Zeskho",
+        "keyHighlight": "Latpari Pass & views of Shkhara Glacier"
+      },
+      {
+        "day": 6,
+        "route": "Zeskho to Tsana",
+        "distance": "15 km",
+        "elevGain": "800m",
+        "maxAlt": "2,500m",
+        "overnightStay": "Tsana",
+        "keyHighlight": "Remote wilderness of Lower Svaneti"
+      },
+      {
+        "day": 7,
+        "route": "Tsana to Mukhura",
+        "distance": "18 km",
+        "elevGain": "1,100m",
+        "maxAlt": "2,800m",
+        "overnightStay": "Mukhura",
+        "keyHighlight": "Vatsekhvari Pass (Crossing into Racha)"
+      },
+      {
+        "day": 8,
+        "route": "Mukhura to Ghebi",
+        "distance": "14 km",
+        "elevGain": "400m",
+        "maxAlt": "1,400m",
+        "overnightStay": "Ghebi",
+        "keyHighlight": "Rioni River valley & traditional Racha hospitality"
+      },
+      {
+        "day": 9,
+        "route": "Ghebi to Gona",
+        "distance": "15 km",
+        "elevGain": "600m",
+        "maxAlt": "1,850m",
+        "overnightStay": "Gona",
+        "keyHighlight": "\"The Switzerland of Georgia\" alpine scenery"
+      },
+      {
+        "day": 10,
+        "route": "Gona to Shovi",
+        "distance": "16 km",
+        "elevGain": "900m",
+        "maxAlt": "2,600m",
+        "overnightStay": "Finish (Shovi)",
+        "keyHighlight": "Final ridge views of the North Wall"
+      }
+    ]
+  },
+  "altai": {
+    "sheetName": "Altai Mountains",
+    "slug": "altai",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Drive Ulgii to Ranger Station",
+        "distance": "-",
+        "elevGain": "-",
+        "maxAlt": "3,100m",
+        "overnightStay": "Ranger Stn (Ger)",
+        "keyHighlight": "Entry into Altai NP"
+      },
+      {
+        "day": 2,
+        "route": "Ranger Stn to Base Camp",
+        "distance": "16 km",
+        "elevGain": "680m",
+        "maxAlt": "3,060m",
+        "overnightStay": "Base Camp (Tent)",
+        "keyHighlight": "Views of Potanin Glacier"
+      },
+      {
+        "day": 3,
+        "route": "Malchin Peak Ascent",
+        "distance": "14.5 km",
+        "elevGain": "970m",
+        "maxAlt": "4,050m",
+        "overnightStay": "Base Camp (Tent)",
+        "keyHighlight": "Non-technical 4,000m peak"
+      },
+      {
+        "day": 4,
+        "route": "Base Camp to Tsagaan Gol",
+        "distance": "18 km",
+        "elevGain": "-700m",
+        "maxAlt": "3,000m",
+        "overnightStay": "White River (Tent)",
+        "keyHighlight": "Milky \"Glacial Milk\" river"
+      },
+      {
+        "day": 5,
+        "route": "Tsagaan Gol to Khar Ayrag",
+        "distance": "15 km",
+        "elevGain": "500m",
+        "maxAlt": "3,100m",
+        "overnightStay": "Khar Ayrag (Tent)",
+        "keyHighlight": "Remote Tuvan nomadic areas"
+      },
+      {
+        "day": 6,
+        "route": "Khar Ayrag to Bear Valley",
+        "distance": "16 km",
+        "elevGain": "400m",
+        "maxAlt": "3,250m",
+        "overnightStay": "Bear Valley (Tent)",
+        "keyHighlight": "High passes & hidden lakes"
+      },
+      {
+        "day": 7,
+        "route": "Bear Valley to Aral Tolgoi",
+        "distance": "17 km",
+        "elevGain": "-500m",
+        "maxAlt": "2,800m",
+        "overnightStay": "Aral Tolgoi (Tent)",
+        "keyHighlight": "Crossing the \"Death Pass\""
+      },
+      {
+        "day": 8,
+        "route": "Aral Tolgoi to Khoton Lake",
+        "distance": "15 km",
+        "elevGain": "-300m",
+        "maxAlt": "2,100m",
+        "overnightStay": "Khoton Lake (Tent)",
+        "keyHighlight": "Ancient Turkic petroglyphs"
+      },
+      {
+        "day": 9,
+        "route": "Khoton Lake to Sagsai",
+        "distance": "12 km",
+        "elevGain": "-100m",
+        "maxAlt": "2,000m",
+        "overnightStay": "Sagsai (Homestay)",
+        "keyHighlight": "Finish & Eagle Hunter visit"
+      }
+    ]
+  },
+  "yading-kora": {
+    "sheetName": "Yading Kora",
+    "slug": "yading-kora",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Longtong to Milk Lake",
+        "distance": "15 km",
+        "elevGain": "800m",
+        "maxAltitude": "4,600 m"
+      },
+      {
+        "day": 2,
+        "route": "Five Color Lake to Chonggu",
+        "distance": "12 km",
+        "elevGain": "+200m / -600m",
+        "maxAltitude": "4,700 m"
+      }
+    ]
+  },
+  "fish_river": {
+    "sheetName": "Fish River Canyon",
+    "slug": "fish_river",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Main Lookout to River Bed",
+        "distance": "12 km",
+        "elevGain": "-500m",
+        "maxAlt": "600m",
+        "overnightStay": "Canyon Floor",
+        "keyHighlight": "The steep, technical descent"
+      },
+      {
+        "day": 2,
+        "route": "River Bed to Palm Springs",
+        "distance": "18 km",
+        "elevGain": "minimal",
+        "maxAlt": "320m",
+        "overnightStay": "Palm Springs",
+        "keyHighlight": "Natural hot sulfur springs"
+      },
+      {
+        "day": 3,
+        "route": "Palm Springs to Vasbyt Bend",
+        "distance": "22 km",
+        "elevGain": "minimal",
+        "maxAlt": "310m",
+        "overnightStay": "Vasbyt Bend",
+        "keyHighlight": "Iconic \"Three Sisters\" rock towers"
+      },
+      {
+        "day": 4,
+        "route": "Vasbyt Bend to Causeway",
+        "distance": "25 km",
+        "elevGain": "minimal",
+        "maxAlt": "290m",
+        "overnightStay": "The Causeway",
+        "keyHighlight": "\"Shortcut\" river crossings"
+      },
+      {
+        "day": 5,
+        "route": "Causeway to Ai-Ais Resort",
+        "distance": "13 km",
+        "elevGain": "minimal",
+        "maxAlt": "240m",
+        "overnightStay": "Ai-Ais (Finish)",
+        "keyHighlight": "The first cold beer at the resort"
+      }
+    ]
+  },
+  "timberline": {
+    "sheetName": "Timberline Trail",
+    "slug": "timberline",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Timberline Lodge to Sandy River",
+        "distance": "16 km",
+        "elevGainLoss": "+400m / -900m",
+        "maxAltitude": "1,800 m"
+      },
+      {
+        "day": 2,
+        "route": "Sandy River to Cairn Basin",
+        "distance": "14 km",
+        "elevGainLoss": "+900m",
+        "maxAltitude": "1,800 m"
+      },
+      {
+        "day": 3,
+        "route": "Cairn Basin to Cloud Cap",
+        "distance": "15 km",
+        "elevGainLoss": "+600m / -600m",
+        "maxAltitude": "2,200 m"
+      },
+      {
+        "day": 4,
+        "route": "Cloud Cap to Timberline Lodge",
+        "distance": "20 km",
+        "elevGainLoss": "+800m / -400m",
+        "maxAltitude": "2,100 m"
+      }
+    ]
+  },
+  "huemel": {
+    "sheetName": "Huemel Circuit",
+    "slug": "huemel",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "El Chalt\u00e9n to Laguna Toro",
+        "distance": "15 km",
+        "elevGainLoss": "+400m",
+        "maxAltitude": "700 m"
+      },
+      {
+        "day": 2,
+        "route": "Laguna Toro to Paso del Viento",
+        "distance": "12 km",
+        "elevGainLoss": "+900m",
+        "maxAltitude": "1,500 m"
+      },
+      {
+        "day": 3,
+        "route": "Paso del Viento to Paso Huemul",
+        "distance": "18 km",
+        "elevGainLoss": "+400m / -500m",
+        "maxAltitude": "1,300 m"
+      },
+      {
+        "day": 4,
+        "route": "Paso Huemul to Bah\u00eda T\u00fanel",
+        "distance": "18 km",
+        "elevGainLoss": "-1,000m",
+        "maxAltitude": "800 m"
+      }
+    ]
+  },
+  "rinjani": {
+    "sheetName": "Mount Rinjani",
+    "slug": "rinjani",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Sembalun to Rim II",
+        "distance": "10 km",
+        "elevGainLoss": "1,500m",
+        "maxAltitude": "2,639 m"
+      },
+      {
+        "day": 2,
+        "route": "Summit & Descent to Lake",
+        "distance": "12 km",
+        "elevGainLoss": "+1,100m / -1,100m",
+        "maxAltitude": "3,726 m"
+      },
+      {
+        "day": 3,
+        "route": "Lake to Senaru (Exit)",
+        "distance": "14 km",
+        "elevGainLoss": "+600m / -2,000m",
+        "maxAltitude": "2,641 m"
+      }
+    ]
+  },
+  "ala-kul": {
+    "sheetName": "Ala-Kul & Altyn-Arashan",
+    "slug": "ala-kul",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Karakol Valley to Sirota Camp",
+        "distance": "12 km",
+        "elevGainLoss": "600m",
+        "maxAltitude": "3,000 m"
+      },
+      {
+        "day": 2,
+        "route": "Sirota to Ala-Kul Lake",
+        "distance": "6 km",
+        "elevGainLoss": "500m",
+        "maxAltitude": "3,500 m"
+      },
+      {
+        "day": 3,
+        "route": "Lake to Altyn-Arashan (via Pass)",
+        "distance": "16 km",
+        "elevGainLoss": "+420m / -1,200m",
+        "maxAltitude": "3,920 m"
+      },
+      {
+        "day": 4,
+        "route": "Altyn-Arashan to Ak-Suu",
+        "distance": "18 km",
+        "elevGainLoss": "-600m",
+        "maxAltitude": "2,600 m"
+      }
+    ]
+  }
+}

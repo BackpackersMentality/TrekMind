@@ -1,0 +1,847 @@
+{
+  "annapurna-circuit": {
+    "name": "Annapurna Circuit",
+    "tier": 1,
+    "whySpecial": "The Annapurna Circuit traverses a complete spectrum of climatic zones, from subtropical valleys to high alpine desert, circling one of the Himalaya's most formidable massifs. The route crosses Thorong La pass and moves through traditional villages where Buddhist and Hindu cultures converge. This trek reveals both the raw power of high Himalayan terrain and the enduring rhythms of mountain life.",
+    "highlights": [
+      "Thorong La pass crossing at high altitude",
+      "Marsyangdi and Kali Gandaki river valleys",
+      "Gurung and Thakali villages with distinct cultural traditions",
+      "Manang's alpine setting beneath glaciated peaks",
+      "Varied landscapes from rice terraces to arid highlands",
+      "Buddhist monasteries and prayer flag-draped ridges"
+    ]
+  },
+  "everest-base-camp": {
+    "name": "Everest Base Camp",
+    "tier": 1,
+    "whySpecial": "This route follows the footsteps of mountaineering expeditions toward the base of the world's highest peak, winding through the Khumbu Valley beneath a horizon dominated by monumental summits. Sherpa villages and Buddhist monasteries mark the ascent through rhododendron forests and rocky moraines. The journey offers an immersion in both high-altitude landscape and the culture that has thrived in its shadow for generations.",
+    "highlights": [
+      "Namche Bazaar's terraced Sherpa settlement",
+      "Tengboche Monastery with Ama Dablam views",
+      "Khumbu Icefall visible from base camp",
+      "Kala Patthar viewpoint facing Everest's south face",
+      "High-altitude river valleys and glacial terrain",
+      "Buddhist stupas and prayer wheels along the trail"
+    ]
+  },
+  "tour-du-mont-blanc": {
+    "name": "Tour du Mont Blanc",
+    "tier": 1,
+    "whySpecial": "Circling the Mont Blanc massif, this route crosses multiple mountain passes and national borders, weaving through Alpine valleys shaped by glaciers and centuries of human settlement. The trek transitions between French, Italian, and Swiss landscapes, each offering distinct architecture, cuisine, and mountain culture. High meadows, limestone ridges, and glaciated peaks define the visual rhythm of this classic Alpine traverse.",
+    "highlights": [
+      "Mont Blanc's glaciated north face",
+      "Col du Bonhomme and other Alpine passes",
+      "Chamonix, Courmayeur, and mountain refuges",
+      "Wildflower meadows in summer months",
+      "Larch forests and limestone formations",
+      "Traditional Alpine hamlets and farming valleys"
+    ]
+  },
+  "torres-del-paine-o": {
+    "name": "Torres del Paine (O)",
+    "tier": 1,
+    "whySpecial": "The O Circuit encircles the Torres del Paine massif through Patagonian steppe, glacial valleys, and subantarctic beech forests, revealing the raw forces that continue to shape this southern wilderness. Wind-sculpted landscapes open onto views of granite spires, turquoise lakes, and the Southern Patagonian Ice Field. This trek offers a complete experience of one of South America's most dramatic mountain environments.",
+    "highlights": [
+      "Torres del Paine granite towers",
+      "Grey Glacier and ice field views",
+      "Valle del Franc\u00e9s with hanging glaciers",
+      "Lago Nordenskj\u00f6ld and Lago Peho\u00e9",
+      "Guanaco herds on open steppe",
+      "Lenga and \u00f1irre forest ecosystems"
+    ]
+  },
+  "pct-high-sierra": {
+    "name": "PCT (High Sierra)",
+    "tier": 1,
+    "whySpecial": "This section of the Pacific Crest Trail traverses California's High Sierra through granite wilderness, alpine lakes, and meadows beneath some of North America's highest peaks. The route follows John Muir's Range of Light across remote backcountry where glacial processes continue to reshape the landscape. Extended stretches above treeline reveal the Sierra's characteristic domes, cirques, and polished granite surfaces.",
+    "highlights": [
+      "Whitney Portal and Forester Pass crossings",
+      "Sequoia and Kings Canyon high country",
+      "Thousand Island Lake beneath Banner Peak",
+      "Tuolumne Meadows alpine expanse",
+      "Granite formations and glacial valleys",
+      "High-elevation pine forests and tarns"
+    ]
+  },
+  "kilimanjaro-machame": {
+    "name": "Kilimanjaro (Machame)",
+    "tier": 1,
+    "whySpecial": "The Machame Route ascends through distinct ecological zones toward the volcanic summit of Africa's highest mountain, from rainforest to alpine desert and finally to glaciated summit terrain. The route approaches Uhuru Peak through Barranco Wall and high camps perched on volcanic ridges. This trek offers passage through dramatically changing environments and the experience of equatorial high-altitude conditions.",
+    "highlights": [
+      "Barranco Wall scramble and volcanic formations",
+      "Shira Plateau's expansive high-altitude moorland",
+      "Lava Tower and arrow glaciers",
+      "Summit crater rim at Uhuru Peak",
+      "Heather and moorland zones",
+      "Views across the Tanzanian plains"
+    ]
+  },
+  "laugavegur-trail": {
+    "name": "Laugavegur Trail",
+    "tier": 1,
+    "whySpecial": "The Laugavegur Trail crosses Iceland's volcanic interior through geothermal valleys, obsidian deserts, and glacier-fed rivers, traversing terrain shaped by ongoing volcanic and glacial activity. Rhyolite mountains give way to black sand plains and moss-covered lava fields. This trek reveals a landscape in constant flux, where elemental forces remain visible and active.",
+    "highlights": [
+      "Landmannalaugar's rhyolite peaks and hot springs",
+      "Hrafntinnusker obsidian plateau",
+      "Emstrur glacial river crossings",
+      "\u00de\u00f3rsm\u00f6rk valley beneath Eyjafjallaj\u00f6kull",
+      "Volcanic black sand and ash fields",
+      "Steaming fumaroles and geothermal areas"
+    ]
+  },
+  "routeburn-track": {
+    "name": "Routeburn Track",
+    "tier": 1,
+    "whySpecial": "The Routeburn Track traverses New Zealand's Southern Alps through beech forests, alpine valleys, and mountain passes that connect two national parks. The route follows ancient M\u0101ori greenstone trading paths through terrain carved by glaciers and sculpted by heavy rainfall. Waterfalls, tarns, and snow-capped peaks define this passage through temperate rainforest and subalpine environments.",
+    "highlights": [
+      "Harris Saddle and Conical Hill viewpoint",
+      "Routeburn Falls and alpine meadows",
+      "Ancient beech forest ecosystems",
+      "Hollyford and Routeburn valleys",
+      "Mountain tarns and glacial formations",
+      "Fiordland and Mount Aspiring parklands"
+    ]
+  },
+  "gr20": {
+    "name": "GR20",
+    "tier": 1,
+    "whySpecial": "The GR20 follows the spine of Corsica from north to south through granite peaks, pine forests, and rocky ridges that demand continuous scrambling and navigation. The route traverses some of Europe's most rugged terrain, passing through landscapes shaped by Mediterranean climate and geological upheaval. This trek offers relentless verticality and exposure to Corsica's wild interior.",
+    "highlights": [
+      "Cirque de la Solitude and Monte Cinto massif",
+      "Granite pinnacles and boulder fields",
+      "Corsican pine and larch forests",
+      "Alpine lakes and cascading streams",
+      "Mountain refuges in remote valleys",
+      "Ridge walking with coastal views"
+    ]
+  },
+  "snowman-trek": {
+    "name": "Snowman Trek",
+    "tier": 1,
+    "whySpecial": "The Snowman Trek crosses multiple high passes through Bhutan's remote northern highlands, traversing terrain rarely visited even by Bhutanese locals. The route passes glacial lakes, yak-herding settlements, and Buddhist monasteries in landscapes where Himalayan peaks dominate the horizon. This trek represents one of the most demanding high-altitude journeys accessible to trekkers, moving through a region where traditional mountain culture remains largely unchanged.",
+    "highlights": [
+      "Gangkhar Puensum and surrounding Himalayan giants",
+      "Remote dzongs and Buddhist monasteries",
+      "Yak herder camps and highland pastures",
+      "Glacial lakes beneath snow-covered passes",
+      "Lunana region's isolated valleys",
+      "Prayer flags marking high mountain crossings"
+    ]
+  },
+  "overland-track": {
+    "name": "Overland Track",
+    "tier": 1,
+    "whySpecial": "The Overland Track cuts through Tasmania's central highlands, traversing alpine plateaus, ancient rainforests, and glacial valleys within a temperate wilderness. The route passes Cradle Mountain and follows boardwalks across buttongrass moorlands dotted with glacial tarns. This trek offers immersion in an environment where Gondwanan plant species persist and weather patterns shift rapidly across exposed ridges.",
+    "highlights": [
+      "Cradle Mountain's dolerite columns",
+      "Lake St Clair and surrounding peaks",
+      "Ancient myrtle and King Billy pine forests",
+      "Glacial cirques and tarn-studded plateaus",
+      "Buttongrass moorlands and alpine heathlands",
+      "Waterfalls cascading through temperate rainforest"
+    ]
+  },
+  "kungsleden": {
+    "name": "Kungsleden",
+    "tier": 1,
+    "whySpecial": "The Kungsleden traverses Swedish Lapland through birch forests, mountain plateaus, and tundra landscapes within the Arctic Circle. The route passes Sami settlements and crosses terrain where reindeer migrations follow ancient patterns. Extended daylight during summer months reveals a northern wilderness shaped by glaciers and characterized by vast open horizons.",
+    "highlights": [
+      "Kebnekaise massif and glacial valleys",
+      "Arctic birch forests and tundra",
+      "Sami cultural sites and reindeer herding areas",
+      "Mountain huts along the route",
+      "Midnight sun phenomenon in summer",
+      "River valleys and mountain plateaus"
+    ]
+  },
+  "milford-track": {
+    "name": "Milford Track",
+    "tier": 1,
+    "whySpecial": "The Milford Track follows a glacially carved valley through Fiordland's temperate rainforest, passing beneath towering waterfalls and granite peaks draped in permanent snowfields. The route crosses Mackinnon Pass and descends toward Milford Sound through landscapes receiving extraordinary rainfall. This trek moves through one of the world's most intact temperate ecosystems, where geological drama and ecological richness converge.",
+    "highlights": [
+      "Mackinnon Pass crossing beneath Mount Balloon",
+      "Sutherland Falls plunging through forest",
+      "Clinton and Arthur valleys",
+      "Ancient beech forest and fern gullies",
+      "Granite peaks and hanging glaciers",
+      "Milford Sound fiord terminus"
+    ]
+  },
+  "camino-de-santiago": {
+    "name": "Camino de Santiago",
+    "tier": 1,
+    "whySpecial": "The Camino Frances crosses northern Spain through wheat fields, medieval villages, and mountain passes, following a pilgrimage route walked for over a millennium. The path connects Romanesque churches, monasteries, and towns shaped by centuries of religious and cultural exchange. This trek offers both physical passage across varied Iberian landscapes and connection to a living tradition that continues to draw walkers from around the world.",
+    "highlights": [
+      "Pyrenees crossing and Meseta plateau",
+      "Romanesque churches and medieval architecture",
+      "Santiago de Compostela cathedral",
+      "Vineyard regions and agricultural valleys",
+      "Pilgrim refuges and historic towns",
+      "Cruz de Ferro mountain crossing"
+    ]
+  },
+  "annapurna-base-camp-abc": {
+    "name": "Annapurna Base Camp (ABC)",
+    "tier": 1,
+    "whySpecial": "This route ascends through terraced farmland and rhododendron forests into the Annapurna Sanctuary, a high-altitude basin surrounded by some of the Himalaya's most formidable peaks. The trail enters a natural amphitheater where glaciers descend from walls rising directly overhead. The trek offers intimate proximity to towering summits and passage through Gurung villages that maintain traditional mountain agriculture.",
+    "highlights": [
+      "Annapurna Sanctuary glacial basin",
+      "Machapuchare's fishtail peak",
+      "Rhododendron forests and bamboo groves",
+      "Gurung villages and terraced hillsides",
+      "Morning light on surrounding summits",
+      "Modi Khola gorge and waterfalls"
+    ]
+  },
+  "mount-fuji": {
+    "name": "Mount Fuji",
+    "tier": 1,
+    "whySpecial": "Mount Fuji's ascent follows volcanic trails through forest zones to alpine desert and finally to the summit crater of Japan's most iconic peak. The route passes mountain huts and torii gates, ascending through elevation zones that mark both ecological and spiritual transitions. This trek offers passage up a near-perfect volcanic cone that has shaped Japanese culture and art for centuries.",
+    "highlights": [
+      "Summit crater rim and sunrise views",
+      "Volcanic scree fields and lava formations",
+      "Mountain huts at different elevation stations",
+      "Views across the Kanto Plain and Pacific",
+      "Subalpine forest transitions",
+      "Torii gates and mountain shrines"
+    ]
+  },
+  "mount-kailash-kora": {
+    "name": "Mount Kailash Kora",
+    "tier": 1,
+    "whySpecial": "The kora circumambulates Mount Kailash through the high Tibetan Plateau, following a pilgrimage route sacred to multiple religions. The circuit crosses Drolma La pass and traverses barren valleys where prayer flags mark the path. This trek offers passage through landscapes of stark beauty and profound cultural significance, where the act of walking carries spiritual weight for pilgrims from across Asia.",
+    "highlights": [
+      "Mount Kailash's distinctive pyramid shape",
+      "Drolma La pass with prayer flags",
+      "Tibetan Buddhist monasteries",
+      "High-altitude desert and glacial valleys",
+      "Lake Manasarovar sacred waters",
+      "Pilgrims performing prostrations along the route"
+    ]
+  },
+  "west-coast-trail": {
+    "name": "West Coast Trail",
+    "tier": 1,
+    "whySpecial": "The West Coast Trail follows Vancouver Island's rugged Pacific coastline through temperate rainforest, along rocky beaches, and across surge channels carved by ocean swells. The route traces a historic lifesaving path built for shipwreck survivors. This trek offers immersion in one of North America's most productive marine and terrestrial ecosystems, where massive trees, tidal pools, and sea stacks define the coastal wilderness.",
+    "highlights": [
+      "Pacific coastal headlands and sea caves",
+      "Ancient Sitka spruce and cedar forests",
+      "Tidal surge channels and suspension bridges",
+      "Marine wildlife including whales and sea lions",
+      "Indigenous cultural sites and middens",
+      "Rugged beaches with offshore rock formations"
+    ]
+  },
+  "walkers-haute-route": {
+    "name": "Walker's Haute Route",
+    "tier": 1,
+    "whySpecial": "The Haute Route traverses the Alps from Chamonix to Zermatt through high mountain passes and glacier-fed valleys beneath some of Europe's most celebrated peaks. The route connects Swiss and French Alpine regions through terrain demanding sustained high-altitude travel. This trek offers continuous exposure to glaciated summits and passage through mountain landscapes that have defined European alpinism.",
+    "highlights": [
+      "Matterhorn and Mont Blanc massifs",
+      "Multiple Alpine pass crossings",
+      "Swiss and French mountain villages",
+      "Glacial valleys and moraines",
+      "Alpine meadows and pine forests",
+      "Mountain refuges and traditional chalets"
+    ]
+  },
+  "karakoram-baltoro": {
+    "name": "Karakoram Baltoro",
+    "tier": 1,
+    "whySpecial": "The Baltoro Glacier trek approaches K2 through one of the world's most concentrated assemblages of high peaks, following a massive glacier corridor flanked by granite spires and ice walls. The route passes Concordia, where multiple glaciers converge beneath summits exceeding considerable elevation. This trek offers passage through the Karakoram's most dramatic terrain, where scale and remoteness define the experience.",
+    "highlights": [
+      "K2 and surrounding Karakoram giants",
+      "Baltoro Glacier's vast ice highway",
+      "Concordia junction of glaciers",
+      "Trango Towers granite spires",
+      "Broad Peak and Gasherbrum massifs",
+      "Baltoro Muztagh mountain panoramas"
+    ]
+  },
+  "drakensberg-grand-traverse": {
+    "name": "Drakensberg Grand Traverse",
+    "tier": 1,
+    "whySpecial": "The Grand Traverse follows the high escarpment of South Africa's Drakensberg through grasslands, sandstone formations, and basalt cliffs that rise abruptly from surrounding lowlands. The route crosses mountain passes and traverses terrain inhabited by eland and other highland fauna. This trek offers sustained ridge walking through landscapes where San rock art documents millennia of human presence.",
+    "highlights": [
+      "Escarpment ridge walking and high passes",
+      "San rock art sites in cave shelters",
+      "Basalt cliffs and sandstone formations",
+      "Montane grasslands and wildflowers",
+      "Views across KwaZulu-Natal and Lesotho",
+      "Chain ladders and exposed scrambles"
+    ]
+  },
+  "huayhuash-circuit": {
+    "name": "Huayhuash Circuit",
+    "tier": 2,
+    "whySpecial": "The Huayhuash Circuit encircles one of Peru's most dramatic mountain ranges through high passes and remote valleys beneath glaciated peaks. The route traverses terrain where traditional herding communities maintain seasonal camps. This trek offers sustained high-altitude travel through landscapes of exceptional verticality and glacial presence.",
+    "highlights": [
+      "Siula Grande and Yerupaj\u00e1 peaks",
+      "Multiple high passes with glacier views",
+      "Turquoise glacial lakes",
+      "Alpaca and llama herding camps",
+      "Andean valleys and puna grasslands",
+      "Ice-draped ridges and hanging glaciers"
+    ]
+  },
+  "alta-via-1": {
+    "name": "Alta Via 1",
+    "tier": 2,
+    "whySpecial": "Alta Via 1 traverses the Dolomites from north to south through limestone towers, alpine meadows, and valleys shaped by erosion and uplift. The route passes mountain rifugios and connects valleys through terrain where rock climbing and mountaineering traditions remain strong. This trek offers passage through landscapes where pale limestone formations rise dramatically against Alpine skies.",
+    "highlights": [
+      "Dolomite limestone towers and spires",
+      "Lagazuoi and Tofane massifs",
+      "Alpine meadows and pine forests",
+      "Mountain rifugios serving regional cuisine",
+      "Via ferrata routes on surrounding peaks",
+      "Views across South Tyrol valleys"
+    ]
+  },
+  "alta-via-2": {
+    "name": "Alta Via 2",
+    "tier": 2,
+    "whySpecial": "Alta Via 2 extends deeper into the Dolomites through more remote terrain and higher passes than its northern counterpart. The route traverses beneath Marmolada and other glaciated peaks through landscapes where limestone geology creates dramatic vertical relief. This trek offers extended immersion in Dolomite wilderness with sustained elevation gain and loss.",
+    "highlights": [
+      "Marmolada glacier and summit",
+      "Passo di Ball and other high crossings",
+      "Remote valleys and mountain lakes",
+      "Pale di San Martino limestone group",
+      "Mountain rifugios in isolated settings",
+      "Larch forests and scree slopes"
+    ]
+  },
+  "alta-via-4": {
+    "name": "Alta Via 4",
+    "tier": 2,
+    "whySpecial": "Alta Via 4 follows a less-traveled route through the Dolomites, connecting valleys and passes through terrain offering solitude and technical challenges. The circuit moves through landscapes where limestone pinnacles rise above forested valleys. This trek provides access to Dolomite environments away from more frequented routes.",
+    "highlights": [
+      "San Pellegrino Pass and surrounding peaks",
+      "Limestone formations and alpine cirques",
+      "Remote rifugios and mountain shelters",
+      "Ladin cultural valleys",
+      "Conifer forests and meadowlands",
+      "Exposed ridge sections"
+    ]
+  },
+  "manaslu-circuit": {
+    "name": "Manaslu Circuit",
+    "tier": 2,
+    "whySpecial": "The Manaslu Circuit circles the world's eighth-highest peak through valleys that have only recently opened to trekkers. The route crosses Larkya La pass and traverses terrain where Tibetan Buddhist culture predominates. This trek offers passage through landscapes retaining a sense of remoteness and traditional mountain life less affected by tourism.",
+    "highlights": [
+      "Larkya La pass with Manaslu views",
+      "Tibetan Buddhist monasteries and gompas",
+      "Budhi Gandaki gorge",
+      "Glaciated peaks and high valleys",
+      "Traditional Tibetan villages",
+      "Prayer wheels and mani walls"
+    ]
+  },
+  "salkantay-trek": {
+    "name": "Salkantay Trek",
+    "tier": 2,
+    "whySpecial": "The Salkantay Trek approaches Machu Picchu through high passes beneath glaciated peaks and descends through cloud forest into the subtropical Urubamba Valley. The route offers an alternative to the Inca Trail through landscapes transitioning from alpine to tropical. This trek combines dramatic mountain scenery with ecological diversity and archaeological context.",
+    "highlights": [
+      "Salkantay peak and glacial pass",
+      "Humantay Lake beneath ice walls",
+      "Cloud forest descent",
+      "Coffee plantations in lower valleys",
+      "Santa Teresa hot springs",
+      "Machu Picchu approach from the south"
+    ]
+  },
+  "peaks-of-the-balkans": {
+    "name": "Peaks of the Balkans",
+    "tier": 2,
+    "whySpecial": "This route crosses the borders of Albania, Kosovo, and Montenegro through limestone mountains and glacial valleys where traditional mountain culture persists. The trek passes through villages where shepherding and subsistence agriculture continue as they have for generations. This circuit offers passage through landscapes shaped by both geological forces and human history in a region where cultural traditions remain deeply rooted.",
+    "highlights": [
+      "Accursed Mountains limestone peaks",
+      "Traditional mountain guesthouses",
+      "Theth and Valbona valleys",
+      "Border crossings through remote passes",
+      "Glacial lakes and karst formations",
+      "Shepherds' trails and summer pastures"
+    ]
+  },
+  "markha-valley": {
+    "name": "Markha Valley",
+    "tier": 2,
+    "whySpecial": "The Markha Valley trek crosses Ladakh's high desert through Buddhist villages and beneath peaks that rise abruptly from barren valleys. The route traverses terrain where water is scarce and settlements cluster around streams. This trek offers passage through landscapes where Tibetan Buddhist culture thrives in one of the world's highest inhabited regions.",
+    "highlights": [
+      "Kang Yatse peak backdrop",
+      "Buddhist monasteries and chortens",
+      "High-altitude desert landscape",
+      "Ladakhi villages with traditional architecture",
+      "Hemis National Park wildlife habitat",
+      "Dramatic gorge sections"
+    ]
+  },
+  "lycian-way": {
+    "name": "Lycian Way",
+    "tier": 2,
+    "whySpecial": "The Lycian Way follows Turkey's Mediterranean coast through pine forests, ancient ruins, and clifftop paths overlooking turquoise waters. The route connects Lycian cities and tombs carved into cliff faces. This trek offers passage through landscapes where classical history, coastal scenery, and rural Turkish life converge.",
+    "highlights": [
+      "Lycian rock tombs and ancient cities",
+      "Mediterranean coastal views",
+      "Pine and cedar forests",
+      "Mountain villages maintaining traditional life",
+      "Secluded coves and beaches",
+      "Byzantine and Roman archaeological sites"
+    ]
+  },
+  "kumano-kodo": {
+    "name": "Kumano Kodo",
+    "tier": 2,
+    "whySpecial": "The Kumano Kodo follows ancient pilgrimage routes through the forested mountains of the Kii Peninsula, connecting Shinto shrines revered for over a millennium. The trails pass through cedar groves, alongside waterfalls, and over mountain passes marked by stone monuments. This trek offers passage through landscapes imbued with spiritual significance and natural beauty in equal measure.",
+    "highlights": [
+      "Grand shrines of Kumano",
+      "Ancient cedar forests",
+      "Stone-paved pilgrimage paths",
+      "Mountain onsen hot springs",
+      "Rural villages and traditional guesthouses",
+      "Waterfalls and mossy gorges"
+    ]
+  },
+  "arctic-circle-trail": {
+    "name": "Arctic Circle Trail",
+    "tier": 2,
+    "whySpecial": "The Arctic Circle Trail crosses Greenland's ice-free interior through tundra, glacier-fed rivers, and landscapes shaped by continuous permafrost. The route passes abandoned settlements and traverses terrain where caribou migrate and muskoxen graze. This trek offers extended immersion in Arctic wilderness where summer's brief intensity is followed by months of darkness and ice.",
+    "highlights": [
+      "Ice sheet views from inland hills",
+      "Tundra vegetation and wildflowers",
+      "Caribou and muskox habitat",
+      "Glacial rivers requiring fording",
+      "Midnight sun conditions",
+      "Abandoned Inuit settlements"
+    ]
+  },
+  "fishermans-trail": {
+    "name": "Fisherman's Trail",
+    "tier": 2,
+    "whySpecial": "The Fisherman's Trail follows Portugal's Atlantic coastline through fishing villages, across clifftops, and along beaches where the ocean's force has carved dramatic rock formations. The route traces paths used by local fishermen for generations. This trek offers sustained coastal walking through landscapes where maritime culture and natural beauty shape the experience.",
+    "highlights": [
+      "Atlantic coastal cliffs and headlands",
+      "Traditional fishing villages",
+      "Sandy beaches and rocky coves",
+      "Seafood cuisine and coastal culture",
+      "Wildflowers on clifftop meadows",
+      "Seabird colonies and marine life"
+    ]
+  },
+  "simien-mountains": {
+    "name": "Simien Mountains",
+    "tier": 2,
+    "whySpecial": "The Simien Mountains trek traverses Ethiopia's highest ranges through landscapes of dramatic escarpments, deep gorges, and afroalpine moorlands. The route passes through habitat for endemic wildlife including gelada baboons and Ethiopian wolves. This trek offers passage through terrain where geological upheaval has created one of Africa's most distinctive mountain environments.",
+    "highlights": [
+      "Escarpment edges with precipitous drops",
+      "Gelada baboon troops on clifftops",
+      "Ras Dashen peak approaches",
+      "Afroalpine vegetation zones",
+      "Giant lobelia and heather moorlands",
+      "Views across the Ethiopian highlands"
+    ]
+  },
+  "ausangate-circuit": {
+    "name": "Ausangate Circuit",
+    "tier": 2,
+    "whySpecial": "The Ausangate Circuit circles a sacred peak in the Peruvian Andes through high passes and past glacial lakes in shades of turquoise and emerald. The route traverses terrain where traditional herding communities maintain llama and alpaca flocks. This trek offers sustained high-altitude travel through landscapes of intense color and spiritual significance to local Quechua communities.",
+    "highlights": [
+      "Ausangate's glaciated peak",
+      "Rainbow-colored mineral lakes",
+      "High passes with glacier panoramas",
+      "Alpaca herding communities",
+      "Hot springs in remote valleys",
+      "Andean condor habitat"
+    ]
+  },
+  "gokyo-lakes": {
+    "name": "Gokyo Lakes",
+    "tier": 2,
+    "whySpecial": "The Gokyo Lakes trek ascends the Dudh Kosi valley to a chain of turquoise glacial lakes beneath Cho Oyu. The route offers an alternative perspective on the Khumbu region, with Gokyo Ri providing panoramic views of Himalayan giants. This trek combines Sherpa cultural immersion with high-altitude lake scenery and glacier travel.",
+    "highlights": [
+      "Gokyo Lakes turquoise waters",
+      "Gokyo Ri viewpoint summit",
+      "Ngozumpa Glacier, the Himalaya's longest",
+      "Cho Oyu and Everest views",
+      "Sherpa villages and monasteries",
+      "High-altitude yak pastures"
+    ]
+  },
+  "banff-highline": {
+    "name": "Banff Highline",
+    "tier": 2,
+    "whySpecial": "The Banff Highline traverses the Canadian Rockies through alpine meadows, conifer forests, and passes beneath limestone peaks. The route connects valleys through terrain where grizzly bears and elk range. This trek offers extended backcountry travel through one of North America's most protected mountain ecosystems.",
+    "highlights": [
+      "Rocky Mountain peaks and glaciers",
+      "Subalpine meadows with wildflowers",
+      "Grizzly bear and elk habitat",
+      "Turquoise glacial lakes",
+      "Remote backcountry campgrounds",
+      "Limestone cliffs and scree slopes"
+    ]
+  },
+  "coast-to-coast": {
+    "name": "Coast to Coast",
+    "tier": 2,
+    "whySpecial": "The Coast to Coast walk crosses northern England from the Irish Sea to the North Sea through the Lake District, Yorkshire Dales, and North York Moors. The route traverses varied terrain including mountain passes, limestone valleys, and moorland. This trek offers passage through landscapes shaped by both natural forces and centuries of human habitation.",
+    "highlights": [
+      "Lake District fells and tarns",
+      "Yorkshire Dales limestone country",
+      "North York Moors heather expanses",
+      "Historic market towns and villages",
+      "Dry-stone walls and pastoral valleys",
+      "Coastal arrivals at both termini"
+    ]
+  },
+  "tongariro-circuit": {
+    "name": "Tongariro Circuit",
+    "tier": 2,
+    "whySpecial": "The Tongariro Circuit circles a volcanic massif through landscapes of active geothermal features, crater lakes, and lava flows. The route crosses emerald and blue crater lakes and traverses terrain where volcanic processes remain visible. This trek offers passage through New Zealand's most accessible volcanic environment.",
+    "highlights": [
+      "Emerald Lakes volcanic crater pools",
+      "Mount Ngauruhoe volcanic cone",
+      "Red Crater summit rim",
+      "Active geothermal areas",
+      "Alpine vegetation and tussock lands",
+      "Views across the North Island volcanic plateau"
+    ]
+  },
+  "mount-kenya": {
+    "name": "Mount Kenya",
+    "tier": 2,
+    "whySpecial": "Mount Kenya's circuits ascend through montane forests, bamboo zones, and alpine moorlands to glaciated peaks near the equator. The route passes through ecosystems hosting unique afroalpine flora. This trek offers passage through elevation zones where tropical and alpine conditions intersect.",
+    "highlights": [
+      "Point Lenana summit approach",
+      "Giant groundsels and lobelias",
+      "Glaciers and permanent snowfields",
+      "Montane forest wildlife",
+      "Volcanic plugs and rock towers",
+      "Alpine tarns and moorland"
+    ]
+  },
+  "wonderland-trail": {
+    "name": "Wonderland Trail",
+    "tier": 2,
+    "whySpecial": "The Wonderland Trail circumnavigates Mount Rainier through old-growth forests, wildflower meadows, and glacial valleys beneath the volcano's massive summit. The route crosses ridges offering perspectives on Rainier's glaciers and traverses watersheds radiating from the peak. This trek provides continuous immersion in Pacific Northwest wilderness.",
+    "highlights": [
+      "Mount Rainier's glaciated dome",
+      "Subalpine wildflower meadows",
+      "Old-growth Douglas fir forests",
+      "Glacial rivers and waterfalls",
+      "Black bear and elk habitat",
+      "Volcanic mudflow terrain"
+    ]
+  },
+  "fitz-roy-trek": {
+    "name": "Fitz Roy Trek",
+    "tier": 2,
+    "whySpecial": "The Fitz Roy trek approaches one of Patagonia's most distinctive granite spires through lenga forests and glacial valleys. The route offers views of the Fitz Roy massif and surrounding peaks from multiple vantage points. This trek provides access to Argentine Patagonia's iconic mountain scenery within a concentrated area.",
+    "highlights": [
+      "Fitz Roy granite spire",
+      "Laguna de los Tres glacial tarn",
+      "Cerro Torre views",
+      "Southern beech forests",
+      "Glacial rivers and moraines",
+      "Patagonian steppe transitions"
+    ]
+  },
+  "east-coast-trail": {
+    "name": "East Coast Trail",
+    "tier": 2,
+    "whySpecial": "The East Coast Trail follows Newfoundland's Atlantic coastline through fishing outports, across headlands, and along cliffs where seabirds nest in vast colonies. The route traces paths through landscapes shaped by maritime weather and centuries of coastal settlement. This trek offers sustained ocean views and access to isolated coves and cultural sites.",
+    "highlights": [
+      "Atlantic coastal cliffs and sea stacks",
+      "Seabird colonies including puffins",
+      "Historic fishing communities",
+      "Icebergs in spring and early summer",
+      "Whale watching opportunities",
+      "Boreal forest and coastal barrens"
+    ]
+  },
+  "triglav-circuit": {
+    "name": "Triglav Circuit",
+    "tier": 2,
+    "whySpecial": "The Triglav Circuit encircles Slovenia's highest peak through Julian Alps terrain of limestone karst, alpine meadows, and glacial valleys. The route passes mountain huts and traverses landscapes where Slovenian alpinism developed. This trek offers passage through compact Alpine scenery with sustained verticality.",
+    "highlights": [
+      "Triglav summit routes",
+      "Limestone karst formations",
+      "Alpine meadows and pine forests",
+      "Mountain huts serving Slovenian cuisine",
+      "Glacial valleys and lakes",
+      "Views across Slovenia and into Italy"
+    ]
+  },
+  "kalalau-trail": {
+    "name": "Kalalau Trail",
+    "tier": 2,
+    "whySpecial": "The Kalalau Trail follows Kauai's Na Pali coastline across stream-cut valleys and beneath fluted cliffs rising directly from the Pacific. The route traverses terrain where native Hawaiian vegetation persists and archaeological sites mark ancient settlements. This trek offers sustained exposure to one of Hawaii's most dramatic coastal landscapes.",
+    "highlights": [
+      "Na Pali Coast cliffs and valleys",
+      "Kalalau Beach and valley terminus",
+      "Tropical vegetation and native species",
+      "Stream crossings through hanging valleys",
+      "Sea caves and coastal geology",
+      "Ancient Hawaiian settlement sites"
+    ]
+  },
+  "larapinta-trail": {
+    "name": "Larapinta Trail",
+    "tier": 2,
+    "whySpecial": "The Larapinta Trail traverses the West MacDonnell Ranges through red quartzite ridges, desert gorges, and waterholes that have sustained life in Australia's arid interior for millennia. The route passes through landscapes sacred to the Arrernte people and offers views across seemingly endless desert horizons. This trek provides immersion in Central Australian environments where water scarcity shapes all life.",
+    "highlights": [
+      "Mount Sonder summit",
+      "Ochre quartzite ridges",
+      "Desert waterholes and gorges",
+      "Spinifex grasslands and ghost gums",
+      "Aboriginal cultural sites",
+      "Desert wildlife including rock wallabies"
+    ]
+  },
+  "tiger-leaping-gorge": {
+    "name": "Tiger Leaping Gorge",
+    "tier": 2,
+    "whySpecial": "Tiger Leaping Gorge follows a trail carved into cliff walls high above the Jinsha River as it cuts through one of the world's deepest gorges. The route offers constant views of Jade Dragon Snow Mountain and the river far below. This trek provides passage through dramatic terrain where scale and verticality define the experience.",
+    "highlights": [
+      "Jade Dragon Snow Mountain massif",
+      "Jinsha River gorge far below",
+      "Naxi minority villages",
+      "Exposed cliff-side trail sections",
+      "Alpine meadows and pine forests",
+      "Traditional guesthouses along the route"
+    ]
+  },
+  "west-highland-way": {
+    "name": "West Highland Way",
+    "tier": 2,
+    "whySpecial": "The West Highland Way crosses the Scottish Highlands from lowlands to mountains through glens, alongside lochs, and over moorland. The route traverses terrain shaped by volcanic activity, glaciation, and centuries of clan history. This trek offers passage through landscapes where Highland culture and natural beauty remain intertwined.",
+    "highlights": [
+      "Loch Lomond's eastern shore",
+      "Rannoch Moor expanses",
+      "Glen Coe volcanic valley",
+      "Ben Nevis approaches",
+      "Highland bothies and villages",
+      "Caledonian pine remnants"
+    ]
+  },
+  "santa-cruz-trek": {
+    "name": "Santa Cruz Trek",
+    "tier": 3,
+    "whySpecial": "The Santa Cruz Trek crosses Peru's Cordillera Blanca through glaciated valleys beneath some of the Andes' highest tropical peaks. The route passes turquoise lakes and traverses high passes with views of ice-covered summits. This trek offers concentrated exposure to Andean mountain scenery in a relatively compact route.",
+    "highlights": [
+      "Alpamayo and surrounding peaks",
+      "Punta Union pass crossing",
+      "Laguna Churup and other glacial lakes",
+      "Quebrada Santa Cruz valley",
+      "Andean farming communities",
+      "Ice walls and hanging glaciers"
+    ]
+  },
+  "lost-city-trek": {
+    "name": "Lost City Trek",
+    "tier": 3,
+    "whySpecial": "The Lost City trek ascends through Colombia's Sierra Nevada cloud forests to Teyuna, an archaeological site predating Machu Picchu. The route crosses rivers and climbs stone steps through terrain where indigenous Kogi communities maintain traditional lifestyles. This trek combines archaeological discovery with immersion in tropical mountain environments.",
+    "highlights": [
+      "Teyuna archaeological terraces",
+      "Buritaca River valley and crossings",
+      "Cloud forest and jungle vegetation",
+      "Indigenous Kogi communities",
+      "Stone stairways through dense forest",
+      "Orchids and tropical flora"
+    ]
+  },
+  "acatenango-fuego": {
+    "name": "Acatenango-Fuego",
+    "tier": 3,
+    "whySpecial": "This ascent climbs Acatenango volcano for views of neighboring Fuego's constant eruptions. The route passes through agricultural lands and pine forests before emerging onto volcanic slopes. This trek offers the experience of observing active volcanism from a safe vantage point while camping on a dormant volcano's flanks.",
+    "highlights": [
+      "Fuego's active eruptions at close range",
+      "Acatenango summit views",
+      "Cloud inversion at sunrise",
+      "Volcanic ash fields and lava formations",
+      "Pine and cloud forest zones",
+      "Guatemalan highlands panorama"
+    ]
+  },
+  "el-choro-trek": {
+    "name": "El Choro Trek",
+    "tier": 3,
+    "whySpecial": "El Choro descends from the Bolivian altiplano through cloud forests to subtropical valleys, following a pre-Columbian trade route. The route traverses multiple ecological zones in rapid succession. This trek offers dramatic transitions from high Andean environments to jungle lowlands.",
+    "highlights": [
+      "Cumbre pass at high altitude",
+      "Cloud forest and tropical vegetation",
+      "Pre-Columbian paved sections",
+      "Waterfalls and river valleys",
+      "Coca plantations in lower zones",
+      "Andean to Amazonian transition"
+    ]
+  },
+  "cordillera-real": {
+    "name": "Cordillera Real",
+    "tier": 3,
+    "whySpecial": "The Cordillera Real traverse crosses multiple passes through glaciated peaks rising above Bolivia's high plateau. The route passes mining communities and traverses terrain where traditional Aymara culture persists. This trek offers sustained high-altitude travel through landscapes of stark beauty and cultural depth.",
+    "highlights": [
+      "Huayna Potosi and surrounding peaks",
+      "High passes with glacier views",
+      "Aymara villages and agriculture",
+      "Alpine lakes at extreme altitude",
+      "Mining heritage sites",
+      "Views across Lake Titicaca"
+    ]
+  },
+  "mgoun-traverse": {
+    "name": "Mgoun Traverse",
+    "tier": 3,
+    "whySpecial": "The Mgoun Traverse crosses Morocco's High Atlas through Berber villages, river gorges, and high passes beneath North Africa's second-highest peak. The route traverses landscapes where traditional agropastoral life continues in isolated valleys. This trek offers passage through terrain where geology and culture create distinctive mountain environments.",
+    "highlights": [
+      "Mgoun massif and ridges",
+      "Berber villages and kasbahs",
+      "Ait Bougmez valley terraces",
+      "Gorge sections and river crossings",
+      "High passes with Atlas views",
+      "Traditional Berber hospitality"
+    ]
+  },
+  "toubkal-circuit": {
+    "name": "Toubkal Circuit",
+    "tier": 3,
+    "whySpecial": "The Toubkal Circuit circles North Africa's highest peak through Berber villages, walnut groves, and high passes in the Atlas Mountains. The route traverses terrain where traditional mountain life adapts to extreme seasonal conditions. This trek offers immersion in Moroccan mountain culture alongside approaches to Toubkal's summit.",
+    "highlights": [
+      "Toubkal summit approaches",
+      "Berber villages and agriculture",
+      "Atlas mountain valleys",
+      "Mule trails and mountain passes",
+      "Walnut and almond orchards",
+      "Traditional mountain guesthouses"
+    ]
+  },
+  "rwenzori-mountains": {
+    "name": "Rwenzori Mountains",
+    "tier": 3,
+    "whySpecial": "The Rwenzori trek ascends through equatorial rainforests, bamboo zones, and alpine moorlands to glaciated peaks on the Uganda-Congo border. The route passes through ecosystems of exceptional biodiversity. This trek offers passage through elevation zones where African and alpine environments create unique combinations of flora and fauna.",
+    "highlights": [
+      "Margherita Peak glaciers",
+      "Giant heather and groundsel zones",
+      "Equatorial rainforest with primates",
+      "Alpine lakes and bogs",
+      "Permanent snowfields at the equator",
+      "Endemic plant and animal species"
+    ]
+  },
+  "mestia-to-ushguli": {
+    "name": "Mestia to Ushguli",
+    "tier": 3,
+    "whySpecial": "This route crosses Georgia's Upper Svaneti through valleys dominated by defensive towers and beneath Caucasus peaks. The trail connects medieval villages where Svan culture and architecture remain intact. This trek offers passage through landscapes where mountain isolation has preserved unique cultural traditions.",
+    "highlights": [
+      "Svan defensive towers",
+      "Caucasus mountain panoramas",
+      "Medieval churches with frescoes",
+      "Ushguli's UNESCO-listed village",
+      "Alpine meadows and glacial valleys",
+      "Traditional Svan hospitality and cuisine"
+    ]
+  },
+  "caucasus-tusheti": {
+    "name": "Caucasus (Tusheti)",
+    "tier": 3,
+    "whySpecial": "The Tusheti trek crosses remote valleys in Georgia's northeastern Caucasus through landscapes where traditional shepherding continues in seasonal settlements. The route traverses high passes and follows trails connecting villages accessible only part of the year. This trek offers immersion in one of the Caucasus's most isolated regions.",
+    "highlights": [
+      "Tusheti defensive towers and villages",
+      "Greater Caucasus mountain views",
+      "Shepherds' settlements and cheese-making",
+      "Alpine passes and river valleys",
+      "Traditional architecture in stone",
+      "Wildlife including East Caucasian tur"
+    ]
+  },
+  "altai-mountains": {
+    "name": "Altai Mountains",
+    "tier": 3,
+    "whySpecial": "The Altai trek traverses southern Siberia's mountains through taiga forests, alpine meadows, and valleys where nomadic cultures persist. The route crosses terrain where Russian, Mongolian, Chinese, and Kazakh borders converge. This trek offers passage through landscapes where Central Asian and Siberian environments meet.",
+    "highlights": [
+      "Belukha peak, Altai's highest summit",
+      "Taiga forests and tundra",
+      "Nomadic herder camps",
+      "Alpine lakes and glacial valleys",
+      "Petroglyphs and ancient sites",
+      "Remote mountain passes"
+    ]
+  },
+  "yading-kora": {
+    "name": "Yading Kora",
+    "tier": 3,
+    "whySpecial": "The Yading Kora circles three sacred peaks in Sichuan's highlands through alpine meadows and forests where Tibetan pilgrims perform ritual circumambulations. The route traverses terrain where Buddhist spirituality and mountain scenery converge. This trek offers passage through landscapes of religious significance and natural beauty in China's western mountains.",
+    "highlights": [
+      "Three sacred peaks of Yading",
+      "Tibetan pilgrimage circuits",
+      "Alpine meadows and forests",
+      "Milk Lake and Pearl Lake tarns",
+      "Tibetan Buddhist prayer flags",
+      "Yak herder camps and settlements"
+    ]
+  },
+  "fish-river-canyon": {
+    "name": "Fish River Canyon",
+    "tier": 3,
+    "whySpecial": "The Fish River Canyon trek descends into one of Africa's largest canyons, following the riverbed through arid desert landscapes carved over millions of years. The route traverses terrain where water is scarce and temperatures extreme. This trek offers passage through geological formations of immense age in southern Namibia's remote interior.",
+    "highlights": [
+      "Canyon walls and rock layers",
+      "Fish River pools and hot springs",
+      "Desert landscapes and rock formations",
+      "Ancient geological strata",
+      "Arid zone flora adapted to extremes",
+      "Views from canyon rim and floor"
+    ]
+  },
+  "mount-hood-timberline": {
+    "name": "Mount Hood Timberline",
+    "tier": 3,
+    "whySpecial": "The Timberline Trail circles Mount Hood through old-growth forests, across glacial streams, and past waterfalls beneath Oregon's highest peak. The route traverses terrain where volcanic activity has shaped valleys and created distinct ecosystems. This trek offers passage through Pacific Northwest wilderness within view of Portland's urban area.",
+    "highlights": [
+      "Mount Hood's glaciated summit cone",
+      "Old-growth forest ecosystems",
+      "Glacial river crossings",
+      "Alpine wildflower meadows",
+      "Cascade Range views",
+      "Waterfalls and volcanic formations"
+    ]
+  },
+  "huemul-circuit": {
+    "name": "Huemul Circuit",
+    "tier": 3,
+    "whySpecial": "The Huemul Circuit traverses southern Patagonia through lenga forests and alongside glacial lakes beneath the Fitz Roy massif. The route crosses technical sections requiring basic mountaineering skills. This trek offers passage through landscapes where ice, rock, and forest create dramatic contrasts in a remote corner of Argentina.",
+    "highlights": [
+      "Fitz Roy massif backdrop",
+      "Glacial lakes including Lago del Desierto",
+      "Technical rope sections and glacier crossings",
+      "Southern beech forests",
+      "Patagonian wildlife including huemul deer",
+      "Remote wilderness conditions"
+    ]
+  },
+  "mount-rinjani": {
+    "name": "Mount Rinjani",
+    "tier": 3,
+    "whySpecial": "Mount Rinjani's ascent climbs an active volcano to a summit crater containing a crescent lake and smaller volcanic cone. The route traverses savanna, montane forest, and volcanic slopes. This trek offers views across Lombok and neighboring islands from one of Indonesia's most sacred peaks.",
+    "highlights": [
+      "Segara Anak crater lake",
+      "Barujari active volcanic cone",
+      "Summit rim sunrise views",
+      "Hot springs on crater floor",
+      "Views across Bali and Sumbawa",
+      "Sasak cultural significance"
+    ]
+  },
+  "ala-kul-and-altyn-arashan": {
+    "name": "Ala-Kul & Altyn-Arashan",
+    "tier": 3,
+    "whySpecial": "This Kyrgyz trek crosses a high pass between two mountain valleys, passing an alpine lake and natural hot springs beneath the Terskey Alatau range. The route traverses terrain where Soviet-era mountaineering infrastructure meets traditional nomadic culture. This trek offers passage through Central Asian mountain scenery with opportunities for cultural exchange.",
+    "highlights": [
+      "Ala-Kul alpine lake",
+      "Altyn-Arashan hot springs",
+      "High pass crossing",
+      "Kyrgyz yurt camps",
+      "Tien Shan mountain views",
+      "Wildflower meadows and forests"
+    ]
+  }
+}
