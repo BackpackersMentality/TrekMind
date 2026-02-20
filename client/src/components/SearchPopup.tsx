@@ -1,7 +1,7 @@
 import { X, Search } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { createPortal } from 'react-dom';
-import { getAllTreks } from '@/../../lib/treks';
+import { getAllTreks } from '@/lib/treks';  // ✅ CORRECT
 import { getTrekImageUrl } from '@/lib/images';
 
 interface SearchPopupProps {
