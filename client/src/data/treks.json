@@ -132,6 +132,25 @@
     "season": "June-September",
     "popularityScore": 9
   },
+    {
+    "id": "haute_route",
+    "name": "Walker's Haute Route",
+    "tier": 1,
+    "region": "Europe",
+    "country": "France/Switzerland",
+    "terrain": "High alpine",
+    "accommodation": "Refuges, hotels",
+    "keyFeatures": "Classic Alpine traverse, Matterhorn, glaciers",
+    "distance": "180 km",
+    "totalDays": "12 days",
+    "maxAltitude": "2921m",
+    "permits": "Not required",
+    "latitude": 46.02,
+    "longitude": 7.74,
+    "imageFilename": "haute_route",
+    "season": "June-September",
+    "popularityScore": 10
+  },
   {
     "id": "huayhuash",
     "name": "Huayhuash Circuit",
@@ -287,7 +306,7 @@
   {
     "id": "fuji",
     "name": "Mount Fuji",
-    "tier": 1,
+    "tier": 2,
     "region": "Asia",
     "country": "Japan",
     "terrain": "Volcanic, scree",
