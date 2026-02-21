@@ -2,15 +2,30 @@ import { useState } from 'react';
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Ruler, Mountain, Calendar, ArrowRight } from "lucide-react";
+import { MapPin, Clock, Ruler, Mountain, Calendar, ArrowRight, X } from "lucide-react";
 import { getTrekImageUrl } from '@/lib/images';
 
-export function TrekCard({ trek }: { trek: any }) {
+export function TrekCard({ trek, onClose }: { trek: any; onClose?: () => void }) {
   const [imgError, setImgError] = useState(false);
 
   return (
     <Link href={`/trek/${trek.id}`} className="group block h-full">
-      <Card className="overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+      <Card className="overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col relative">
+        {/* Close button - only show if onClose prop provided */}
+        {onClose && (
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onClose();
+            }}
+            className="absolute top-3 left-3 z-50 w-8 h-8 bg-black/70 hover:bg-black/90 rounded-full flex items-center justify-center transition-colors shadow-lg"
+            aria-label="Close and return to globe"
+          >
+            <X className="w-4 h-4 text-white" />
+          </button>
+        )}
+        
         {/* Header: Trek Name */}
         <div className="p-4 border-b bg-card/50">
           <h3 className="text-lg font-bold truncate group-hover:text-primary transition-colors">
@@ -30,6 +45,8 @@ export function TrekCard({ trek }: { trek: any }) {
             onError={() => setImgError(true)}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             loading="lazy"
+            width={400}
+            height={192}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           <div className="absolute bottom-3 left-3">
