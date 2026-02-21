@@ -40,13 +40,13 @@ export default function Home() {
       {/* Main Container */}
       <main className="flex-1 relative">
         {/* View Toggle Button */}
-        <button 
-        onClick={() => setViewMode('cards')}
-        className="px-4 py-2 bg-gray-900 text-white rounded-full shadow-lg hover:bg-gray-800 transition-all flex items-center gap-2 font-semibold"
-        >
-        <Grid className="w-4 h-4" />
-        View Cards
-        </button>
+           <button 
+      onClick={() => setViewMode('cards')}
+      className="absolute top-4 left-4 z-30 px-4 py-2 bg-gray-900 text-white rounded-full shadow-xl hover:bg-black hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-bold border-2 border-white"
+    >
+      <LayoutGrid className="w-4 h-4" />
+      View Cards
+    </button>
 
         {/* Globe Container */}
         {viewMode === "globe" && (
