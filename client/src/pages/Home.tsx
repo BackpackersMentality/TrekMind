@@ -39,14 +39,16 @@ export default function Home() {
 
       {/* Main Container */}
       <main className="flex-1 relative">
-        {/* View Toggle Button */}
-           <button 
-      onClick={() => setViewMode('cards')}
-      className="absolute top-4 left-4 z-30 px-4 py-2 bg-gray-900 text-white rounded-full shadow-xl hover:bg-black hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-bold border-2 border-white"
-    >
-      <LayoutGrid className="w-4 h-4" />
-      View Cards
-    </button>
+        {/* View Toggle Button - Show in Globe Mode */}
+        {viewMode === "globe" && (
+          <button 
+            onClick={() => setViewMode('cards')}
+            className="absolute top-4 left-4 z-30 px-4 py-2 bg-gray-900 text-white rounded-full shadow-xl hover:bg-black hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-bold border-2 border-white"
+          >
+            <LayoutGrid className="w-4 h-4" />
+            View Cards
+          </button>
+        )}
 
         {/* Globe Container */}
         {viewMode === "globe" && (
@@ -56,6 +58,15 @@ export default function Home() {
         {/* Trek Cards View Container */}
         {viewMode === "cards" && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
+            {/* Back to Globe Button */}
+            <button 
+              onClick={() => setViewMode('globe')}
+              className="mb-6 px-4 py-2 bg-gray-900 text-white rounded-full shadow-lg hover:bg-black hover:shadow-xl transition-all flex items-center gap-2 font-semibold"
+            >
+              <Map className="w-4 h-4" />
+              Back to Globe
+            </button>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
               {filteredTreks.map((trek: any, index: number) => (
                 <div key={trek.id} className="animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-backwards" style={{ animationDelay: `${index * 50}ms` }}>
@@ -63,21 +74,6 @@ export default function Home() {
                 </div>
               ))}
 
-                  {/* Back to Globe Button */}
-    <button 
-      onClick={() => setViewMode('globe')}
-      className="mb-6 px-4 py-2 bg-gray-900 text-white rounded-full shadow-lg hover:bg-black hover:shadow-xl transition-all flex items-center gap-2 font-semibold"
-    >
-      <Map className="w-4 h-4" />
-      Back to Globe
-    </button>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
-      {filteredTreks.map((trek: any, index: number) => (
-        <div key={trek.id} className="animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-backwards" style={{ animationDelay: `${index * 50}ms` }}>
-          <TrekCard trek={trek} />
-        </div>
-      ))}
               {filteredTreks.length === 0 && (
                 <div className="col-span-full py-20 text-center" data-testid="text-no-results">
                   <Info className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
