@@ -62,7 +62,22 @@ export default function Home() {
                   <TrekCard trek={trek} />
                 </div>
               ))}
-              
+
+                  {/* Back to Globe Button */}
+    <button 
+      onClick={() => setViewMode('globe')}
+      className="mb-6 px-4 py-2 bg-gray-900 text-white rounded-full shadow-lg hover:bg-black hover:shadow-xl transition-all flex items-center gap-2 font-semibold"
+    >
+      <Map className="w-4 h-4" />
+      Back to Globe
+    </button>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
+      {filteredTreks.map((trek: any, index: number) => (
+        <div key={trek.id} className="animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-backwards" style={{ animationDelay: `${index * 50}ms` }}>
+          <TrekCard trek={trek} />
+        </div>
+      ))}
               {filteredTreks.length === 0 && (
                 <div className="col-span-full py-20 text-center" data-testid="text-no-results">
                   <Info className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
