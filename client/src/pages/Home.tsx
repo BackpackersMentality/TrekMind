@@ -32,7 +32,7 @@ export default function Home() {
             TrekMind
           </h1>
           <p className="text-xs md:text-sm text-white/85 max-w-xl mx-auto font-light leading-relaxed">
-            Discover the world's most breathtaking trekking routes.
+            The Global Trekking Discovery App: find the world's most breathtaking trekking routes.
           </p>
         </div>
       </header>
@@ -80,7 +80,8 @@ export default function Home() {
       <footer className="border-t border-border bg-card py-6 shrink-0 relative z-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="font-display font-bold text-sm mb-1 text-foreground">TrekMind</p>
-          <p className="text-[10px] text-muted-foreground">© 2024 TrekMind. Adventure responsibly.</p>
+          <p className="text-[10px] text-muted-foreground">© 2024 TrekMind. Adventure responsibly. 
+            AI features are for guidance and can make mistakes. Please check routes and recommendations thoroughly.</p>
         </div>
       </footer>
     </div>
