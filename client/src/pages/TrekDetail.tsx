@@ -45,6 +45,7 @@ export default function TrekDetail() {
         <img
           src={imgError ? '/images/placeholder-trek.jpg' : getTrekImageUrl(trek.imageFilename)}
           alt={trek.name}
+          loading="lazy" 
           onError={() => setImgError(true)}
           className="w-full h-full object-cover"
         />
