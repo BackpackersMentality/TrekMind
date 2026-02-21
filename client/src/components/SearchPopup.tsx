@@ -126,6 +126,7 @@ export function SearchPopup({ isOpen, onClose, onTrekSelect }: SearchPopupProps)
                     <img
                       src={getTrekImageUrl(trek.imageFilename)}
                       alt={trek.name}
+                      loading="lazy" 
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         e.currentTarget.src = '/images/placeholder-trek.jpg';
