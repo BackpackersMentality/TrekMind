@@ -68,6 +68,7 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
                   : `${GITHUB_CDN}/${trek.imageFilename}.jpg`
               }
               alt={trek.name}
+              loading="lazy" 
               className="w-full h-full object-cover"
               onError={() => setImgError(true)}
             />
@@ -153,4 +154,5 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
       </div>
     </>
   );
+
 }
