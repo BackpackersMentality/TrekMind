@@ -41,12 +41,11 @@ export default function Home() {
       <main className="flex-1 relative">
         {/* View Toggle Button */}
         <button 
-          onClick={() => setViewMode(viewMode === "globe" ? "cards" : "globe")} 
-          className="absolute top-4 left-4 z-50 px-4 py-2 rounded-full bg-background/20 backdrop-blur-md border border-white/20 text-white text-sm font-medium shadow-lg hover:bg-background/30 transition-all flex items-center gap-2"
-          data-testid="button-view-toggle"
+        onClick={() => setViewMode('cards')}
+        className="px-4 py-2 bg-gray-900 text-white rounded-full shadow-lg hover:bg-gray-800 transition-all flex items-center gap-2 font-semibold"
         >
-          {viewMode === "globe" ? <LayoutGrid className="w-4 h-4" /> : <Map className="w-4 h-4" />}
-          {viewMode === "globe" ? "View Cards" : "View Globe"}
+        <Grid className="w-4 h-4" />
+        View Cards
         </button>
 
         {/* Globe Container */}
