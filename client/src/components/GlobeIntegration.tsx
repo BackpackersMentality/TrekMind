@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { useFilterStore } from '../store/useFilterStore';
 import { useLocation } from 'wouter';
-import { Loader2, AlertCircle, Plus, Minus } from 'lucide-react';
+import { Loader2, AlertCircle, Plus, Minus, X } from 'lucide-react';
 import { FilterButton } from './FilterButton';
 import { FilterPopup } from './FilterPopup';
 import { SearchButton } from './SearchButton';
@@ -15,9 +15,9 @@ interface GlobeIntegrationProps {
   className?: string;
 }
 
-const GLOBE_URL = "https://6e90758d.trekmind-globe-app.pages.dev/?embed=true";
+const GLOBE_URL = "https://6e90758d.trekmind-globe-app.pages.dev/?embed=true&hideCards=true";
 
-export function GlobeIntegration({ height = "80vh", className = "" }: GlobeIntegrationProps) {
+export function GlobeIntegration({ height = "100vh", className = "" }: GlobeIntegrationProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -25,6 +25,7 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
   const [selectedTrek, setSelectedTrek] = useState<any | null>(null);
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [, setLocation] = useLocation();
 
   const tier = useFilterStore((state) => state.tier);
@@ -79,6 +80,33 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
     );
   };
 
+  // Prevent page zoom, only allow globe zoom
+  useEffect(() => {
+    const preventPageZoom = (e: WheelEvent) => {
+      if (e.ctrlKey || e.metaKey) {
+        // This is a zoom gesture
+        if (containerRef.current?.contains(e.target as Node)) {
+          e.preventDefault();
+          // Let the iframe handle the zoom
+        }
+      }
+    };
+
+    const preventPinchZoom = (e: TouchEvent) => {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener('wheel', preventPageZoom, { passive: false });
+    document.addEventListener('touchmove', preventPinchZoom, { passive: false });
+
+    return () => {
+      document.removeEventListener('wheel', preventPageZoom);
+      document.removeEventListener('touchmove', preventPinchZoom);
+    };
+  }, []);
+
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       // Only accept messages from our globe URL
@@ -124,46 +152,47 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
 
   return (
     <div 
-      className={`relative w-full overflow-hidden bg-muted transition-all duration-500 ${className}`} 
-      style={{ height }}
-      onClick={() => {
-        // Close trek preview when clicking the globe background
-        if (selectedTrek) {
-          setSelectedTrek(null);
-        }
-      }}
+      ref={containerRef}
+      className={`relative w-full overflow-hidden bg-muted ${className}`} 
+      style={{ height, touchAction: 'none' }}
     >
-      {/* Filter, Search, and Zoom Controls */}
-      <div className="absolute top-4 right-4 z-20 flex flex-col gap-3">
+      {/* TOP RIGHT: Filter Button */}
+      <div className="absolute top-4 right-4 z-20">
         <FilterButton 
           activeCount={activeFilterCount}
           onClick={() => setIsFilterOpen(true)}
         />
+      </div>
+
+      {/* BOTTOM LEFT: Search Button */}
+      <div className="absolute bottom-4 left-4 z-20">
         <SearchButton 
           onClick={() => setIsSearchOpen(true)}
         />
-        
-        {/* Zoom Controls */}
-        <div className="flex flex-col bg-background border border-border rounded-md shadow-lg overflow-hidden">
+      </div>
+
+      {/* BOTTOM RIGHT: Zoom Controls */}
+      <div className="absolute bottom-4 right-4 z-20">
+        <div className="flex flex-col bg-background border border-border rounded-lg shadow-lg overflow-hidden">
           <button 
             onClick={(e) => {
               e.stopPropagation();
               handleZoomIn();
             }}
-            className="p-2 hover:bg-muted transition-colors font-bold text-lg border-b border-border"
+            className="p-3 hover:bg-muted transition-colors border-b border-border"
             aria-label="Zoom in"
           >
-            <Plus className="w-4 h-4" />
+            <Plus className="w-5 h-5" />
           </button>
           <button 
             onClick={(e) => {
               e.stopPropagation();
               handleZoomOut();
             }}
-            className="p-2 hover:bg-muted transition-colors font-bold text-lg"
+            className="p-3 hover:bg-muted transition-colors"
             aria-label="Zoom out"
           >
-            <Minus className="w-4 h-4" />
+            <Minus className="w-5 h-5" />
           </button>
         </div>
       </div>
@@ -181,10 +210,17 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
         onTrekSelect={handleTrekSelect}
       />
 
-      <TrekPreviewPanel 
-        trek={selectedTrek}
-        onClose={() => setSelectedTrek(null)}
-      />
+      {/* Trek Preview Panel with Close Button */}
+      {selectedTrek && (
+        <div className="absolute inset-0 z-30 pointer-events-none">
+          <div className="relative w-full h-full pointer-events-auto">
+            <TrekPreviewPanel 
+              trek={selectedTrek}
+              onClose={() => setSelectedTrek(null)}
+            />
+          </div>
+        </div>
+      )}
 
       {isLoading && (
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-muted/80 backdrop-blur-sm">
@@ -215,6 +251,7 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
         }}
         loading="lazy"
         allow="accelerometer; gyroscope; autoplay; clipboard-write; encrypted-media; picture-in-picture"
+        style={{ pointerEvents: 'auto' }}
       />
     </div>
   );
