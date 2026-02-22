@@ -149,7 +149,7 @@ useEffect(() => {
         <div className="flex flex-col bg-background border border-border rounded-md shadow-sm overflow-hidden mt-4">
           <button onClick={handleZoomIn} className="p-2 hover:bg-muted font-bold text-lg border-b border-border">+</button>
           <button onClick={handleZoomOut} className="p-2 hover:bg-muted font-bold text-lg">-</button>
-      /
+      </div>
       
       <TrekPreviewPanel 
         trek={selectedTrek}
@@ -188,3 +188,4 @@ useEffect(() => {
       />
     </div>
   );
+}
