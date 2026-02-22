@@ -11,7 +11,7 @@ import { useState, useMemo, useEffect, Suspense, lazy } from "react";
 import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from '@/lib/images';
 
-const RouteMap = lazy(() => import("@/components/RouteMap"));
+const RouteMap = lazy(() => import("@/components/TrekMap"));
 
 export default function TrekDetail() {
   const [, params] = useRoute("/trek/:id");
