@@ -65,13 +65,22 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
     }
   };
 
-  useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
-      if (event.origin !== "https://5f451930.trekmind-globe-app.pages.dev") return;
+  const handleZoomIn = () => {
+    iframeRef.current?.contentWindow?.postMessage({ type: "TREKMIND_ZOOM_IN" }, "*");
+  };
+  const handleZoomOut = () => {
+    iframeRef.current?.contentWindow?.postMessage({ type: "TREKMIND_ZOOM_OUT" }, "*");
+  };
 
+useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
       if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         const { id } = event.data.payload;
         if (id) handleTrekSelect(id);
+      }
+      // NEW: Clear selection when empty globe is clicked
+      if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
+        setSelectedTrek(null);
       }
     };
     window.addEventListener("message", handleMessage);
@@ -129,6 +138,17 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
         onTrekSelect={handleTrekSelect}
       />
 
+      {/* ADJUSTED POSITIONING: Changed top-4 to top-24 to prevent overlap */}
+      <div className="absolute top-24 right-4 z-20 flex flex-col gap-3">
+        <FilterButton activeCount={activeFilterCount} onClick={() => setIsFilterOpen(true)} />
+        <SearchButton onClick={() => setIsSearchOpen(true)} />
+        
+        {/* NEW ZOOM BUTTONS */}
+        <div className="flex flex-col bg-background border border-border rounded-md shadow-sm overflow-hidden mt-4">
+          <button onClick={handleZoomIn} className="p-2 hover:bg-muted font-bold text-lg border-b border-border">+</button>
+          <button onClick={handleZoomOut} className="p-2 hover:bg-muted font-bold text-lg">-</button>
+      />
+      
       <TrekPreviewPanel 
         trek={selectedTrek}
         onClose={() => setSelectedTrek(null)}
