@@ -1,21 +1,21 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { useFilterStore } from '../store/useFilterStore';
 import { useLocation } from 'wouter';
-import { Loader2, AlertCircle } from 'lucide-react';
+import { Loader2, AlertCircle, Plus, Minus } from 'lucide-react';
 import { FilterButton } from './FilterButton';
 import { FilterPopup } from './FilterPopup';
 import { SearchButton } from './SearchButton';
 import { SearchPopup } from './SearchPopup';
 import { TrekPreviewPanel } from './TrekPreviewPanel';
 import { getAllTreks } from '@/lib/treks';
-import type { FilterState } from '../types/filters';;
+import type { FilterState } from '../types/filters';
 
 interface GlobeIntegrationProps {
   height?: string;
   className?: string;
 }
 
-const GLOBE_URL = "https://5f451930.trekmind-globe-app.pages.dev/?embed=true";
+const GLOBE_URL = "https://6e90758d.trekmind-globe-app.pages.dev/?embed=true";
 
 export function GlobeIntegration({ height = "80vh", className = "" }: GlobeIntegrationProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,32 +59,42 @@ export function GlobeIntegration({ height = "80vh", className = "" }: GlobeInteg
 
   const handleTrekSelect = (id: string) => {
     const treks = getAllTreks();
-    const trek = treks.find(t => t.id === id || t.slug === id);
+    const trek = treks.find(t => t.id === id || (t as any).slug === id);
     if (trek) {
       setSelectedTrek(trek);
     }
   };
 
   const handleZoomIn = () => {
-    iframeRef.current?.contentWindow?.postMessage({ type: "TREKMIND_ZOOM_IN" }, "*");
-  };
-  const handleZoomOut = () => {
-    iframeRef.current?.contentWindow?.postMessage({ type: "TREKMIND_ZOOM_OUT" }, "*");
+    iframeRef.current?.contentWindow?.postMessage(
+      { type: "TREKMIND_ZOOM_IN" },
+      "https://6e90758d.trekmind-globe-app.pages.dev"
+    );
   };
 
-useEffect(() => {
+  const handleZoomOut = () => {
+    iframeRef.current?.contentWindow?.postMessage(
+      { type: "TREKMIND_ZOOM_OUT" },
+      "https://6e90758d.trekmind-globe-app.pages.dev"
+    );
+  };
+
+  useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
+      // Only accept messages from our globe URL
+      if (event.origin !== "https://6e90758d.trekmind-globe-app.pages.dev") return;
+
       if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         const { id } = event.data.payload;
         if (id) handleTrekSelect(id);
       }
-      // NEW: Clear selection when empty globe is clicked
+
+      // Clear selection when empty globe is clicked
       if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
         setSelectedTrek(null);
       }
-      if (event.data?.type === "TREKMIND_ZOOM_IN") handleZoomIn()
-      if (event.data?.type === "TREKMIND_ZOOM_OUT") handleZoomOut()
-    }
+    };
+
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
   }, []);
@@ -95,7 +105,7 @@ useEffect(() => {
         iframeRef.current.contentWindow.postMessage({
           type: "TREKMIND_FILTER_UPDATE",
           payload: currentFilters
-        }, "https://5f451930.trekmind-globe-app.pages.dev");
+        }, "https://6e90758d.trekmind-globe-app.pages.dev");
       }
     };
     const timer = setTimeout(sendUpdate, 300);
@@ -108,7 +118,7 @@ useEffect(() => {
       iframeRef.current.contentWindow.postMessage({
         type: "TREKMIND_FILTER_UPDATE",
         payload: currentFilters
-      }, "https://5f451930.trekmind-globe-app.pages.dev");
+      }, "https://6e90758d.trekmind-globe-app.pages.dev");
     }
   };
 
@@ -116,7 +126,14 @@ useEffect(() => {
     <div 
       className={`relative w-full overflow-hidden bg-muted transition-all duration-500 ${className}`} 
       style={{ height }}
+      onClick={() => {
+        // Close trek preview when clicking the globe background
+        if (selectedTrek) {
+          setSelectedTrek(null);
+        }
+      }}
     >
+      {/* Filter, Search, and Zoom Controls */}
       <div className="absolute top-4 right-4 z-20 flex flex-col gap-3">
         <FilterButton 
           activeCount={activeFilterCount}
@@ -125,6 +142,30 @@ useEffect(() => {
         <SearchButton 
           onClick={() => setIsSearchOpen(true)}
         />
+        
+        {/* Zoom Controls */}
+        <div className="flex flex-col bg-background border border-border rounded-md shadow-lg overflow-hidden">
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              handleZoomIn();
+            }}
+            className="p-2 hover:bg-muted transition-colors font-bold text-lg border-b border-border"
+            aria-label="Zoom in"
+          >
+            <Plus className="w-4 h-4" />
+          </button>
+          <button 
+            onClick={(e) => {
+              e.stopPropagation();
+              handleZoomOut();
+            }}
+            className="p-2 hover:bg-muted transition-colors font-bold text-lg"
+            aria-label="Zoom out"
+          >
+            <Minus className="w-4 h-4" />
+          </button>
+        </div>
       </div>
 
       <FilterPopup 
@@ -140,17 +181,6 @@ useEffect(() => {
         onTrekSelect={handleTrekSelect}
       />
 
-      {/* ADJUSTED POSITIONING: Changed top-4 to top-24 to prevent overlap */}
-      <div className="absolute top-24 right-4 z-20 flex flex-col gap-3">
-        <FilterButton activeCount={activeFilterCount} onClick={() => setIsFilterOpen(true)} />
-        <SearchButton onClick={() => setIsSearchOpen(true)} />
-        
-        {/* NEW ZOOM BUTTONS */}
-        <div className="flex flex-col bg-background border border-border rounded-md shadow-sm overflow-hidden mt-4">
-          <button onClick={handleZoomIn} className="p-2 hover:bg-muted font-bold text-lg border-b border-border">+</button>
-          <button onClick={handleZoomOut} className="p-2 hover:bg-muted font-bold text-lg">-</button>
-      </div>
-      
       <TrekPreviewPanel 
         trek={selectedTrek}
         onClose={() => setSelectedTrek(null)}
