@@ -15,7 +15,7 @@ interface GlobeIntegrationProps {
   className?: string;
 }
 
-const GLOBE_URL = "https://6e90758d.trekmind-globe-app.pages.dev/?embed=true&hideCards=true";
+const GLOBE_URL = "https://trekmind-globe-app.green-dew-b724.workers.dev/?embed=true&hideCards=true";
 
 export function GlobeIntegration({ height = "100vh", className = "" }: GlobeIntegrationProps) {
   const [isLoading, setIsLoading] = useState(true);
