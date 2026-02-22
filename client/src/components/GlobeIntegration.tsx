@@ -82,6 +82,9 @@ useEffect(() => {
       if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
         setSelectedTrek(null);
       }
+      if (event.data?.type === "TREKMIND_ZOOM_IN") handleZoomIn();
+      if (event.data?.type === "TREKMIND_ZOOM_OUT") handleZoomOut();
+      }
     };
     window.addEventListener("message", handleMessage);
     return () => window.removeEventListener("message", handleMessage);
