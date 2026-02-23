@@ -110,17 +110,30 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       // Only accept messages from our globe URL
-      if (event.origin !== "https://trekmind-globe-app.pages.dev") return;
-
-      if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
-        const { id } = event.data.payload;
-        if (id) handleTrekSelect(id);
+if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
+        const payload = event.data.payload;
+        
+        // NEW: Check if the payload is an array (a cluster)
+        if (Array.isArray(payload)) {
+          const allTreks = getAllTreks();
+          // Map the incoming IDs to their full trek objects
+          const clusterTreks = payload
+            .map(p => allTreks.find(t => t.id === p.id))
+            .filter(Boolean); // removes any undefined results
+          
+          setSelectedTrek(clusterTreks);
+        } else {
+          // Standard single trek click
+          if (payload.id) {
+            const singleTrek = getAllTreks().find(t => t.id === payload.id);
+            setSelectedTrek(singleTrek || null);
+          }
+        }
       }
-
-      // Clear selection when empty globe is clicked
+      
       if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
-        setSelectedTrek(null);
-      }
+        setSelectedTrek(null); // Closes the panel
+          }
     };
 
     window.addEventListener("message", handleMessage);
