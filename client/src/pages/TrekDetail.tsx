@@ -192,7 +192,8 @@ export default function TrekDetail() {
             {/* Gear Assistant */}
             <div className="space-y-6 pt-8 border-t">
               <h3 className="text-2xl font-bold">Recommended Gear</h3>
-              <GearAssistant 
+              <GearAssistant
+                trekName={trek.name}
                 difficulty={trek.terrain} 
                 maxAltitude={trek.maxAltitude || trek.maxAltitudeM || 0}
                 durationDays={parseInt(trek.totalDays || String(trek.durationDays))}
