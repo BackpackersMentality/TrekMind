@@ -17,7 +17,7 @@ interface GlobeIntegrationProps {
 
 const GLOBE_URL = "https://trekmind-globe-app.pages.dev/?embed=true&hideCards=true";
 
-export function GlobeIntegration({ height = "100vh", className = "" }: GlobeIntegrationProps) {
+export function GlobeIntegration({ height = "100%", className = "" }: GlobeIntegrationProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
