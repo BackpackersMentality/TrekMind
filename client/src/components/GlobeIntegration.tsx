@@ -69,14 +69,14 @@ export function GlobeIntegration({ height = "100vh", className = "" }: GlobeInte
   const handleZoomIn = () => {
     iframeRef.current?.contentWindow?.postMessage(
       { type: "TREKMIND_ZOOM_IN" },
-      "https://6e90758d.trekmind-globe-app.pages.dev"
+      "https://trekmind-globe-app.pages.dev"
     );
   };
 
   const handleZoomOut = () => {
     iframeRef.current?.contentWindow?.postMessage(
       { type: "TREKMIND_ZOOM_OUT" },
-      "https://6e90758d.trekmind-globe-app.pages.dev"
+      "https://trekmind-globe-app.pages.dev/"
     );
   };
 
@@ -110,7 +110,7 @@ export function GlobeIntegration({ height = "100vh", className = "" }: GlobeInte
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
       // Only accept messages from our globe URL
-      if (event.origin !== "https://6e90758d.trekmind-globe-app.pages.dev") return;
+      if (event.origin !== "https://trekmind-globe-app.pages.dev") return;
 
       if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         const { id } = event.data.payload;
@@ -133,7 +133,7 @@ export function GlobeIntegration({ height = "100vh", className = "" }: GlobeInte
         iframeRef.current.contentWindow.postMessage({
           type: "TREKMIND_FILTER_UPDATE",
           payload: currentFilters
-        }, "https://6e90758d.trekmind-globe-app.pages.dev");
+        }, "https://trekmind-globe-app.pages.dev");
       }
     };
     const timer = setTimeout(sendUpdate, 300);
@@ -146,7 +146,7 @@ export function GlobeIntegration({ height = "100vh", className = "" }: GlobeInte
       iframeRef.current.contentWindow.postMessage({
         type: "TREKMIND_FILTER_UPDATE",
         payload: currentFilters
-      }, "https://6e90758d.trekmind-globe-app.pages.dev");
+      }, "https://trekmind-globe-app.pages.dev");
     }
   };
 
