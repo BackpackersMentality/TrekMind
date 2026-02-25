@@ -11,14 +11,14 @@ import { useState, useMemo, useEffect, Suspense, lazy } from "react";
 import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from '@/lib/images';
 
-const RouteMap = lazy(() => import("@/components/TrekMap"));
+// ✅ FIX: Correct import path
+const RouteMap = lazy(() => import("@/components/RouteMap"));
 
 export default function TrekDetail() {
   const [, params] = useRoute("/trek/:id");
   const trekId = params?.id;
   const [imgError, setImgError] = useState(false);
 
-  // Scroll to top on mount or when trekId changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [trekId]);
