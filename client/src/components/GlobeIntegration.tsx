@@ -109,37 +109,33 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
     };
   }, []);
 
-  useEffect(() => {
+useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      console.log('📩 Main app received message:', event.data);
-
       if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         const payload = event.data.payload;
+        const allTreks = getAllTreks();
         
-        // ✅ FIX: Check if payload is an array (cluster) or single object
+        // NEW LOGIC: Check if the globe sent a cluster (an array)
         if (Array.isArray(payload)) {
-          console.log('📦 Received cluster with', payload.length, 'treks');
-          const allTreks = getAllTreks();
-          // Map IDs to full trek objects
           const clusterTreks = payload
-            .map((p: any) => allTreks.find(t => t.id === p.id))
-            .filter(Boolean);
+            .map(p => allTreks.find(t => t.id === p.id))
+            .filter(Boolean); // Clean out any undefined treks
           
-          console.log('✅ Mapped cluster treks:', clusterTreks.length);
-          setSelectedTrek(clusterTreks);
+          setSelectedTrek(clusterTreks); // Pass the array to TrekPreviewPanel!
         } else {
-          // Single trek
-          console.log('🎯 Received single trek:', payload.id);
+          // It's just a single trek
           if (payload.id) {
-            handleTrekSelect(payload.id);
+            const singleTrek = allTreks.find(t => t.id === payload.id);
+            setSelectedTrek(singleTrek || null);
           }
         }
       }
       
       if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
-        console.log('❌ Closing trek preview');
-        setSelectedTrek(null);
+        setSelectedTrek(null); // Close the panel
       }
+      if (event.data?.type === "TREKMIND_ZOOM_IN") handleZoomIn();
+      if (event.data?.type === "TREKMIND_ZOOM_OUT") handleZoomOut();
     };
 
     window.addEventListener("message", handleMessage);
