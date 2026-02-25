@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import { useFilterStore } from '../store/useFilterStore';
 import { useLocation } from 'wouter';
-import { Loader2, AlertCircle, Plus, Minus, X } from 'lucide-react';
+import { Loader2, AlertCircle, Plus, Minus } from 'lucide-react';
 import { FilterButton } from './FilterButton';
 import { FilterPopup } from './FilterPopup';
 import { SearchButton } from './SearchButton';
@@ -16,6 +16,7 @@ interface GlobeIntegrationProps {
 }
 
 const GLOBE_URL = "https://trekmind-globe-app.pages.dev/?embed=true&hideCards=true";
+const GLOBE_ORIGIN = "https://trekmind-globe-app.pages.dev";
 
 export function GlobeIntegration({ height = "100%", className = "" }: GlobeIntegrationProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -59,35 +60,36 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   };
 
   const handleTrekSelect = (id: string) => {
+    console.log('🔍 Main app looking for trek:', id);
     const treks = getAllTreks();
     const trek = treks.find(t => t.id === id || (t as any).slug === id);
     if (trek) {
+      console.log('✅ Trek found:', trek.name);
       setSelectedTrek(trek);
+    } else {
+      console.warn('❌ Trek not found for id:', id);
     }
   };
 
   const handleZoomIn = () => {
     iframeRef.current?.contentWindow?.postMessage(
       { type: "TREKMIND_ZOOM_IN" },
-      "https://trekmind-globe-app.pages.dev"
+      GLOBE_ORIGIN
     );
   };
 
   const handleZoomOut = () => {
     iframeRef.current?.contentWindow?.postMessage(
       { type: "TREKMIND_ZOOM_OUT" },
-      "https://trekmind-globe-app.pages.dev/"
+      GLOBE_ORIGIN
     );
   };
 
-  // Prevent page zoom, only allow globe zoom
   useEffect(() => {
     const preventPageZoom = (e: WheelEvent) => {
       if (e.ctrlKey || e.metaKey) {
-        // This is a zoom gesture
         if (containerRef.current?.contains(e.target as Node)) {
           e.preventDefault();
-          // Let the iframe handle the zoom
         }
       }
     };
@@ -109,31 +111,35 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      // Only accept messages from our globe URL
-if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
+      console.log('📩 Main app received message:', event.data);
+
+      if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         const payload = event.data.payload;
         
-        // NEW: Check if the payload is an array (a cluster)
+        // ✅ FIX: Check if payload is an array (cluster) or single object
         if (Array.isArray(payload)) {
+          console.log('📦 Received cluster with', payload.length, 'treks');
           const allTreks = getAllTreks();
-          // Map the incoming IDs to their full trek objects
+          // Map IDs to full trek objects
           const clusterTreks = payload
-            .map(p => allTreks.find(t => t.id === p.id))
-            .filter(Boolean); // removes any undefined results
+            .map((p: any) => allTreks.find(t => t.id === p.id))
+            .filter(Boolean);
           
+          console.log('✅ Mapped cluster treks:', clusterTreks.length);
           setSelectedTrek(clusterTreks);
         } else {
-          // Standard single trek click
+          // Single trek
+          console.log('🎯 Received single trek:', payload.id);
           if (payload.id) {
-            const singleTrek = getAllTreks().find(t => t.id === payload.id);
-            setSelectedTrek(singleTrek || null);
+            handleTrekSelect(payload.id);
           }
         }
       }
       
       if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
-        setSelectedTrek(null); // Closes the panel
-          }
+        console.log('❌ Closing trek preview');
+        setSelectedTrek(null);
+      }
     };
 
     window.addEventListener("message", handleMessage);
@@ -143,10 +149,11 @@ if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
   useEffect(() => {
     const sendUpdate = () => {
       if (iframeRef.current?.contentWindow) {
+        console.log('📤 Sending filters to globe:', currentFilters);
         iframeRef.current.contentWindow.postMessage({
           type: "TREKMIND_FILTER_UPDATE",
           payload: currentFilters
-        }, "https://trekmind-globe-app.pages.dev");
+        }, GLOBE_ORIGIN);
       }
     };
     const timer = setTimeout(sendUpdate, 300);
@@ -156,10 +163,11 @@ if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
   const handleLoad = () => {
     setIsLoading(false);
     if (iframeRef.current?.contentWindow) {
+      console.log('✅ Globe loaded, sending initial filters');
       iframeRef.current.contentWindow.postMessage({
         type: "TREKMIND_FILTER_UPDATE",
         payload: currentFilters
-      }, "https://trekmind-globe-app.pages.dev");
+      }, GLOBE_ORIGIN);
     }
   };
 
@@ -169,7 +177,6 @@ if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
       className={`relative w-full overflow-hidden bg-muted ${className}`} 
       style={{ height, touchAction: 'none' }}
     >
-      {/* TOP RIGHT: Filter Button */}
       <div className="absolute top-4 right-4 z-20">
         <FilterButton 
           activeCount={activeFilterCount}
@@ -177,14 +184,12 @@ if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         />
       </div>
 
-      {/* BOTTOM LEFT: Search Button */}
       <div className="absolute bottom-4 left-4 z-20">
         <SearchButton 
           onClick={() => setIsSearchOpen(true)}
         />
       </div>
 
-      {/* BOTTOM RIGHT: Zoom Controls */}
       <div className="absolute bottom-4 right-4 z-20">
         <div className="flex flex-col bg-background border border-border rounded-lg shadow-lg overflow-hidden">
           <button 
@@ -223,7 +228,6 @@ if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         onTrekSelect={handleTrekSelect}
       />
 
-      {/* Trek Preview Panel with Close Button */}
       {selectedTrek && (
         <div className="absolute inset-0 z-30 pointer-events-none">
           <div className="relative w-full h-full pointer-events-auto">
