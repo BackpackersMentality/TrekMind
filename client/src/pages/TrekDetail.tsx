@@ -11,8 +11,12 @@ import { useState, useMemo, useEffect, Suspense, lazy } from "react";
 import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from '@/lib/images';
 
-// ✅ FIX: Correct import path
 const RouteMap = lazy(() => import("@/components/RouteMap"));
+
+// ... down in the JSX:
+<Suspense fallback={<div className="w-full h-96 bg-muted animate-pulse rounded-xl" />}>
+  <RouteMap stops={itinerary} />
+</Suspense>
 
 export default function TrekDetail() {
   const [, params] = useRoute("/trek/:id");
