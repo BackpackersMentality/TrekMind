@@ -89,7 +89,7 @@ export default function TrekDetail() {
             <div className="bg-card rounded-2xl p-6 md:p-8 shadow-lg border border-border grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <StatItem icon={Clock} label="Duration" value={trek.totalDays || `${trek.durationDays} Days`} />
               <StatItem icon={Activity} label="Distance" value={trek.distance || `${trek.distanceKm}km`} />
-              <StatItem icon={Mountain} label="Max Alt" value={`${trek.maxAltitude || trek.maxAltitudeM || "N/A"}m`} highlight={(trek.maxAltitude || trek.maxAltitudeM || 0) > 4000} />
+              <StatItem icon={Mountain} label="Max Alt" value={`${trek.maxAltitude || trek.maxAltitudeM || "N/A"}`} highlight={(trek.maxAltitude || trek.maxAltitudeM || 0) > 4000} />
               <StatItem icon={TrendingUp} label="Daily Avg" value={`${Math.round(parseInt(trek.distance || String(trek.distanceKm)) / parseInt(trek.totalDays || String(trek.durationDays)))} km`} />
             </div>
 
