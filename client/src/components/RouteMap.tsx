@@ -4,7 +4,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 interface RouteMapProps {
   stops: any[] | null;
-  trek: any; // Accept the main trek data
+  trek: any;
 }
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
@@ -13,14 +13,12 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
 
-  // Extract any stops that actually have valid coordinates
   const validStops = useMemo(() => {
     if (!stops || !Array.isArray(stops)) return [];
     return stops.filter(stop => stop.lat !== undefined && stop.lng !== undefined);
   }, [stops]);
 
   useEffect(() => {
-    // If no token or no main trek coordinates, exit gracefully
     if (!mapContainer.current || !MAPBOX_TOKEN || !trek?.latitude || !trek?.longitude) return;
 
     mapboxgl.accessToken = MAPBOX_TOKEN;
@@ -29,19 +27,42 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
       try {
         map.current = new mapboxgl.Map({
           container: mapContainer.current,
-          style: 'mapbox://styles/mapbox/outdoors-v12',
-          center: [trek.longitude, trek.latitude], // Guaranteed to work!
-          zoom: validStops.length > 0 ? 10 : 7, // Zoom out a bit if no specific route
+          style: 'mapbox://styles/mapbox/satellite-streets-v12', // ✅ Gives us beautiful satellite imagery
+          center: [trek.longitude, trek.latitude],
+          zoom: validStops.length > 0 ? 10 : 4,
+          pitch: 60, // ✅ Tilts the camera for a 3D effect
+          bearing: 0,
+          projection: 'globe' as any // ✅ Turns the flat map into a 3D Globe!
         });
 
         map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
-        map.current.on('load', () => {
+        map.current.on('style.load', () => {
           if (!map.current) return;
 
+          // ✅ Add Atmosphere (Space background and horizon glow)
+          map.current.setFog({
+            color: 'rgb(186, 210, 235)',
+            'high-color': 'rgb(36, 92, 223)',
+            'horizon-blend': 0.02,
+            'space-color': 'rgb(11, 11, 25)',
+            'star-intensity': 0.6
+          });
+
+          // ✅ Add 3D Mountain Terrain
+          map.current.addSource('mapbox-dem', {
+            'type': 'raster-dem',
+            'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+            'tileSize': 512,
+            'maxzoom': 14
+          });
+          map.current.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+        });
+
+        map.current.on('load', () => {
+          if (!map.current) return;
           const bounds = new mapboxgl.LngLatBounds();
 
-          // SCENARIO 1: We have a detailed itinerary with coordinates (e.g., Alta Via)
           if (validStops.length > 0) {
             const coordinates = validStops.map(stop => [stop.lng, stop.lat]);
             
@@ -60,7 +81,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
 
             validStops.forEach((stop, index) => {
               const el = document.createElement('div');
-              el.className = 'w-4 h-4 rounded-full border-2 border-white shadow-md';
+              el.className = 'w-4 h-4 rounded-full border-2 border-white shadow-md cursor-pointer hover:scale-125 transition-transform';
               el.style.backgroundColor = index === 0 ? '#10b981' : index === validStops.length - 1 ? '#ef4444' : '#3b82f6';
 
               const popup = new mapboxgl.Popup({ offset: 15 }).setHTML(`
@@ -77,10 +98,10 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             map.current.fitBounds(bounds, { padding: 60, maxZoom: 12 });
             
           } else {
-            // SCENARIO 2: No specific itinerary coords. Drop one main pin for the Trek!
+            // Fallback to the main trek location
             const el = document.createElement('div');
             el.className = 'w-5 h-5 rounded-full border-2 border-white shadow-lg';
-            el.style.backgroundColor = '#f59e0b'; // Amber pin for the main region
+            el.style.backgroundColor = '#f59e0b'; 
 
             const popup = new mapboxgl.Popup({ offset: 15 }).setHTML(`
               <div style="padding: 4px; font-family: sans-serif;">
@@ -90,6 +111,9 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             `);
 
             new mapboxgl.Marker(el).setLngLat([trek.longitude, trek.latitude]).setPopup(popup).addTo(map.current!);
+            
+            // For a single point on a globe, we just fly to it instead of fitting bounds
+            map.current.flyTo({ center: [trek.longitude, trek.latitude], zoom: 8, essential: true });
           }
         });
       } catch (err) {
@@ -103,7 +127,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
   }, [validStops, trek]);
 
   return (
-    <div className="relative w-full h-[450px] rounded-xl overflow-hidden border border-border shadow-sm">
+    <div className="relative w-full h-[500px] rounded-xl overflow-hidden border border-border shadow-sm">
       <div ref={mapContainer} className="w-full h-full" />
     </div>
   );
