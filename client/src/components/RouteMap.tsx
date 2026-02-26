@@ -12,6 +12,33 @@ const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 // ─── Session cache: geocoded coords persist across page navigations ────────────
 const geocodeCache = new Map<string, [number, number] | null>();
 
+// ─── Haversine distance in km between two lat/lng points ───────────────────────
+function distanceKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLng = ((lng2 - lng1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+// ─── Build a bounding box [minLng, minLat, maxLng, maxLat] around a point ──────
+// 1000km radius: covers the longest continuous treks in the dataset (Camino de
+// Santiago is ~800km end-to-end). Cross-continent errors like Patagonia →
+// Venezuela (~6,800km) are still rejected with huge margin to spare.
+function trekBbox(lat: number, lng: number, radiusKm = 1000): string {
+  const latOff = radiusKm / 111.0;
+  const lngOff = radiusKm / (111.0 * Math.cos((lat * Math.PI) / 180));
+  const minLng = Math.max(-180, lng - lngOff);
+  const minLat = Math.max(-90,  lat - latOff);
+  const maxLng = Math.min(180,  lng + lngOff);
+  const maxLat = Math.min(90,   lat + latOff);
+  return `${minLng},${minLat},${maxLng},${maxLat}`;
+}
+
 // ─── Parse a location name out of itinerary strings ────────────────────────────
 // Handles formats like:
 //   "Lukla to Namche Bazaar"  → "Namche Bazaar"
@@ -20,34 +47,36 @@ const geocodeCache = new Map<string, [number, number] | null>();
 //   "Camp 1 (5100m)"          → "Camp 1"
 function parseLocationName(raw: string): string {
   if (!raw) return '';
-  // "X to Y" → take Y (the overnight destination)
   const toMatch = raw.match(/\bto\s+(.+)$/i);
-  if (toMatch) return toMatch[1].trim().replace(/\s*\(.*?\)/, '').trim();
-  // "rest day at X" → take X
+  if (toMatch) return toMatch[1].trim().replace(/\s*\(.*?\)/g, '').trim();
   const atMatch = raw.match(/\bat\s+(.+)$/i);
-  if (atMatch) return atMatch[1].trim().replace(/\s*\(.*?\)/, '').trim();
-  // Strip parenthetical elevation notes: "Thorong La (5416m)" → "Thorong La"
-  return raw.replace(/\s*\(.*?\)/, '').trim();
+  if (atMatch) return atMatch[1].trim().replace(/\s*\(.*?\)/g, '').trim();
+  return raw.replace(/\s*\(.*?\)/g, '').trim();
 }
 
-// ─── Geocode a single clean place name via Mapbox Geocoding v5 ─────────────────
+// ─── Geocode with bbox + distance guard ────────────────────────────────────────
+// Two-layer defence against wrong-continent results:
+//   Layer 1 — bbox param tells Mapbox to only return results inside the box
+//   Layer 2 — after response, reject any result still > 1000km from trek centre
 async function geocode(
   placeName: string,
   country: string,
-  proximityLng: number,
-  proximityLat: number,
-  token: string
+  trekLng: number,
+  trekLat: number,
+  token: string,
+  maxDistKm = 1000
 ): Promise<[number, number] | null> {
-  const key = `${placeName}|${country}`;
+  const key = `${placeName}|${trekLat.toFixed(2)},${trekLng.toFixed(2)}`;
   if (geocodeCache.has(key)) return geocodeCache.get(key)!;
 
   try {
-    // Include country name for disambiguation, e.g. "Namche Bazaar Nepal"
-    const query = encodeURIComponent(`${placeName} ${country}`);
-    const proximity = `${proximityLng},${proximityLat}`;
+    const query     = encodeURIComponent(`${placeName} ${country}`);
+    const bbox      = trekBbox(trekLat, trekLng);     // server-side geo filter
+    const proximity = `${trekLng},${trekLat}`;         // bias toward trek centre
     const url =
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${query}.json` +
-      `?proximity=${proximity}&limit=1&types=place,locality,neighborhood,poi&access_token=${token}`;
+      `?bbox=${bbox}&proximity=${proximity}&limit=1` +
+      `&types=place,locality,neighborhood,poi,region&access_token=${token}`;
 
     const res = await fetch(url);
     if (!res.ok) {
@@ -55,10 +84,28 @@ async function geocode(
       geocodeCache.set(key, null);
       return null;
     }
+
     const data = await res.json();
     const coords = data.features?.[0]?.geometry?.coordinates as [number, number] | undefined;
-    geocodeCache.set(key, coords ?? null);
-    return coords ?? null;
+
+    if (!coords) {
+      console.warn(`[RouteMap] No result within bbox for "${placeName}"`);
+      geocodeCache.set(key, null);
+      return null;
+    }
+
+    // Layer 2: distance guard — belt-and-braces rejection of outliers
+    const dist = distanceKm(trekLat, trekLng, coords[1], coords[0]);
+    if (dist > maxDistKm) {
+      console.warn(
+        `[RouteMap] Rejected "${placeName}" — result is ${Math.round(dist)}km away (max ${maxDistKm}km)`
+      );
+      geocodeCache.set(key, null);
+      return null;
+    }
+
+    geocodeCache.set(key, coords);
+    return coords;
   } catch (err) {
     console.error(`[RouteMap] Geocoding error for "${placeName}":`, err);
     geocodeCache.set(key, null);
