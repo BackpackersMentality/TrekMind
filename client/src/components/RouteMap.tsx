@@ -15,7 +15,7 @@ export default function RouteMap({ stops }: RouteMapProps) {
   const [processedStops, setProcessedStops] = useState<any[]>([]);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // 1. AUTO-GEOCODER: Automatically fetch missing coordinates
+  // 1. AUTO-GEOCODER
   useEffect(() => {
     const fetchMissingCoordinates = async () => {
       if (!stops || stops.length === 0) {
@@ -27,47 +27,59 @@ export default function RouteMap({ stops }: RouteMapProps) {
 
       const resolvedStops = await Promise.all(
         stops.map(async (stop) => {
-          // If the stop already has coordinates in the JSON, use them!
+          // If already has coords, keep them
           if (stop.lat !== undefined && stop.lng !== undefined) return stop;
 
-          // If coordinates are missing, extract the destination name
-          // E.g., "Syange to Dharapani" -> searches for "Dharapani"
+          // Cleaning logic: "Day 2: Syange to Dharapani" -> "Dharapani"
+          // Also removes common trekking terms that confuse the geocoder
           const rawName = stop.location || stop.route || "";
-          const searchName = rawName.split(' to ').pop()?.replace('(Drive)', '').trim();
+          let searchName = rawName.split(' to ').pop() || rawName;
+          searchName = searchName
+            .replace(/\(Drive\)|\(Jeep\)|\(Bus\)|\(Trek\)/gi, '')
+            .replace(/Camp|Hut|Lodge/gi, '') // Remove generic terms to find the town name
+            .trim();
 
-          if (!searchName) return null;
+          if (!searchName || searchName.length < 3) return null;
 
           try {
-            // Ask Mapbox API for the coordinates silently in the background
+            console.log(`🔍 Geocoding: ${searchName}...`);
             const response = await fetch(
-              `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-                searchName
-              )}.json?access_token=${MAPBOX_TOKEN}&limit=1`
+              `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(searchName)}.json?access_token=${MAPBOX_TOKEN}&limit=1`
             );
+            
+            if (!response.ok) {
+              console.warn(`❌ Mapbox API Error for ${searchName}: ${response.status}`);
+              return null;
+            }
+
             const data = await response.json();
 
             if (data.features && data.features.length > 0) {
               const [lng, lat] = data.features[0].center;
-              return { ...stop, lat, lng }; // Inject the new coordinates
+              console.log(`✅ Found ${searchName}:`, lat, lng);
+              return { ...stop, lat, lng };
+            } else {
+              console.warn(`⚠️ No results found for: ${searchName}`);
             }
           } catch (error) {
-            console.error(`Failed to find coordinates for: ${searchName}`);
+            console.error(`Failed to geocode: ${searchName}`, error);
           }
-          return null; // Skip drawing this point if Mapbox can't find it
+          return null;
         })
       );
 
-      // Filter out any stops that completely failed to resolve
       setProcessedStops(resolvedStops.filter(Boolean));
       setIsProcessing(false);
     };
 
     if (MAPBOX_TOKEN) {
       fetchMissingCoordinates();
+    } else {
+      console.error("Missing VITE_MAPBOX_TOKEN");
     }
   }, [stops]);
 
-  // Compute elevation stats based on the successfully processed stops
+  // Compute elevation stats
   const stats = useMemo(() => {
     let totalAscent = 0;
     let totalDescent = 0;
@@ -93,7 +105,7 @@ export default function RouteMap({ stops }: RouteMapProps) {
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/outdoors-v12',
         center: [processedStops[0].lng, processedStops[0].lat],
-        zoom: 10,
+        zoom: 9, // Zoomed out slightly to see more context
       });
 
       map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
@@ -101,7 +113,6 @@ export default function RouteMap({ stops }: RouteMapProps) {
       map.current.on('load', () => {
         if (!map.current) return;
 
-        // Draw the route line connecting the stops
         const coordinates = processedStops.map(stop => [stop.lng, stop.lat]);
         
         map.current.addSource('route', {
@@ -121,16 +132,15 @@ export default function RouteMap({ stops }: RouteMapProps) {
           paint: { 'line-color': '#3b82f6', 'line-width': 4, 'line-dasharray': [2, 2] }
         });
 
-        // Add custom markers for each stop
         const bounds = new mapboxgl.LngLatBounds();
 
         processedStops.forEach((stop, index) => {
           const el = document.createElement('div');
           el.className = 'w-4 h-4 rounded-full border-2 border-white shadow-md cursor-pointer hover:scale-125 transition-transform';
           
-          if (index === 0) el.style.backgroundColor = '#10b981'; // Start
-          else if (index === processedStops.length - 1) el.style.backgroundColor = '#ef4444'; // Finish
-          else el.style.backgroundColor = '#3b82f6'; // Overnight
+          if (index === 0) el.style.backgroundColor = '#10b981';
+          else if (index === processedStops.length - 1) el.style.backgroundColor = '#ef4444';
+          else el.style.backgroundColor = '#3b82f6';
 
           const displayName = stop.location || stop.route || 'Checkpoint';
           const popup = new mapboxgl.Popup({ offset: 15 }).setHTML(`
@@ -149,7 +159,6 @@ export default function RouteMap({ stops }: RouteMapProps) {
           bounds.extend([stop.lng, stop.lat]);
         });
 
-        // Fit map to show all pins
         map.current.fitBounds(bounds, { padding: 60, maxZoom: 12 });
       });
     }
@@ -157,12 +166,9 @@ export default function RouteMap({ stops }: RouteMapProps) {
     const resizeObserver = new ResizeObserver(() => map.current?.resize());
     resizeObserver.observe(mapContainer.current);
 
-    return () => {
-      resizeObserver.disconnect();
-    };
+    return () => resizeObserver.disconnect();
   }, [processedStops, isProcessing]);
 
-  // Clean up on unmount
   useEffect(() => {
     return () => {
       if (map.current) {
@@ -172,25 +178,21 @@ export default function RouteMap({ stops }: RouteMapProps) {
     };
   }, []);
 
-  // UI STATES
   if (isProcessing) {
     return (
       <div className="w-full h-[450px] bg-muted/30 rounded-xl border border-dashed border-border flex flex-col items-center justify-center text-muted-foreground p-6">
         <Loader2 className="w-8 h-8 animate-spin text-primary mb-4" />
-        <p className="font-bold text-foreground">Generating Map...</p>
-        <p className="text-sm">Auto-locating itinerary coordinates via Mapbox.</p>
+        <p className="font-bold text-foreground">Locating Route...</p>
+        <p className="text-sm">Connecting to Mapbox Satellite...</p>
       </div>
     );
   }
 
   if (!stops || stops.length === 0 || processedStops.length === 0) {
     return (
-      <div className="w-full h-[450px] bg-muted/30 rounded-xl border border-dashed border-border flex flex-col items-center justify-center text-muted-foreground p-6">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-        </svg>
+      <div className="w-full h-[450px] bg-muted/30 rounded-xl border border-dashed border-border flex flex-col items-center justify-center text-muted-foreground p-6 text-center">
         <p className="font-bold text-foreground">Interactive Map Unavailable</p>
-        <p className="text-sm">We couldn't generate coordinates for this route.</p>
+        <p className="text-sm mt-1">We couldn't generate coordinates. Check console (F12) for API errors.</p>
       </div>
     );
   }
@@ -218,16 +220,6 @@ export default function RouteMap({ stops }: RouteMapProps) {
       </div>
 
       <div className="relative w-full h-[450px] rounded-xl overflow-hidden border border-border shadow-sm">
-        {!MAPBOX_TOKEN && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-muted/80 backdrop-blur-sm p-4 text-center">
-            <div className="bg-background p-4 rounded-lg shadow-lg border border-border max-w-sm">
-              <p className="text-sm font-bold text-foreground mb-2">Mapbox Token Missing</p>
-              <p className="text-xs text-muted-foreground">
-                Please configure <code className="bg-muted px-1 py-0.5 rounded">VITE_MAPBOX_TOKEN</code>
-              </p>
-            </div>
-          </div>
-        )}
         <div ref={mapContainer} className="w-full h-full" />
       </div>
     </div>
