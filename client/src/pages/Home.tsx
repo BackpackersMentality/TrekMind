@@ -93,7 +93,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-card py-4 shrink-0 relative z-10">
+      <footer className="border-t border-border bg-card py-6 shrink-0 relative z-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="font-display font-bold text-xs md:text-sm mb-1 text-foreground">
             TrekMind
