@@ -159,9 +159,9 @@ export default function TrekDetail() {
             <div className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Interactive Route Map</h2>
           
-          {/* ✅ The map goes safely inside the UI render block here! ✅ */}
+{/* ✅ Pass both stops AND trek */}
           <Suspense fallback={<div className="w-full h-96 bg-muted animate-pulse rounded-xl" />}>
-            <RouteMap stops={itinerary} />
+            <RouteMap stops={itinerary} trek={trek} /> 
           </Suspense>
           
         </div>
