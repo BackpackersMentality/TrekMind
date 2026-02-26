@@ -111,37 +111,31 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
 
 useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
+      // 1. OPEN TREK / CLUSTER
       if (event.data?.type === "TREK_SELECTED_FROM_GLOBE") {
         const payload = event.data.payload;
+        console.log("📥 Received from Globe:", payload); // <-- Check F12 to see this!
+        
         const allTreks = getAllTreks();
         
-        let incomingIds: string[] = [];
-
-        // Aggressively parse the payload to find multiple treks (clusters)
+        // Since we updated the Globe, payload is ALWAYS an array now!
         if (Array.isArray(payload)) {
-          incomingIds = payload.map((p: any) => p.id || p);
-        } else if (payload?.points && Array.isArray(payload.points)) {
-          incomingIds = payload.points.map((p: any) => p.id);
-        } else if (payload?.treks && Array.isArray(payload.treks)) {
-          incomingIds = payload.treks.map((p: any) => p.id);
-        } else if (payload?.id) {
-          incomingIds = [payload.id]; // Fallback to single trek
-        }
-
-        // Map IDs to full trek objects and filter out missing ones
-        const foundTreks = incomingIds
-          .map(id => allTreks.find(t => t.id === id))
-          .filter(Boolean);
-
-        // If we found multiple, pass the array to trigger the swipe arrows!
-        if (foundTreks.length > 0) {
-          setSelectedTrek(foundTreks.length === 1 ? foundTreks[0] : foundTreks);
+          const foundTreks = payload
+            .map((p: any) => allTreks.find(t => t.id === p.id))
+            .filter(Boolean); // Remove missing treks
+            
+          if (foundTreks.length > 0) {
+            setSelectedTrek(foundTreks); // Pass array to TrekPreviewPanel
+          }
         }
       }
       
+      // 2. CLOSE CARD (Fired when ocean is clicked)
       if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
+        console.log("🌊 Ocean clicked, closing card");
         setSelectedTrek(null); 
       }
+      
       if (event.data?.type === "TREKMIND_ZOOM_IN") handleZoomIn();
       if (event.data?.type === "TREKMIND_ZOOM_OUT") handleZoomOut();
     };
