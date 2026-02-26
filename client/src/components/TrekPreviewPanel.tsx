@@ -22,7 +22,7 @@ interface TrekPreview {
 }
 
 interface TrekPreviewPanelProps {
-  // Now accepts either a single trek OR an array of treks from a cluster
+  // ✅ NEW: Accepts a single trek OR an array of treks (for clusters)
   trek: TrekPreview | TrekPreview[] | null;
   onClose: () => void;
 }
@@ -84,7 +84,7 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         
-        {/* Navigation Arrows for Clusters */}
+        {/* ✅ NEW: Navigation Arrows for Clusters */}
         {isCluster && (
           <>
             <button onClick={handlePrev} className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-black/40 hover:bg-black/70 text-white rounded-full flex items-center justify-center backdrop-blur-sm transition-colors z-10">
