@@ -156,18 +156,15 @@ export default function TrekDetail() {
 
             {/* Route Map */}
             {itinerary && itinerary.length > 0 && (
-              <div className="space-y-6 pt-8 border-t">
-                <h3 className="text-2xl font-bold flex items-center gap-2">
-                  <MapIcon className="w-6 h-6 text-primary" /> Interactive Route Map
-                </h3>
-                <Suspense fallback={
-                  <div className="w-full h-[400px] bg-muted animate-pulse rounded-xl flex items-center justify-center">
-                    <p className="text-muted-foreground">Loading interactive map...</p>
-                  </div>
-                }>
-                  <RouteMap stops={itinerary as any} />
-                </Suspense>
-              </div>
+            <div className="mt-8">
+          <h2 className="text-2xl font-bold mb-4">Interactive Route Map</h2>
+          
+          {/* ✅ The map goes safely inside the UI render block here! ✅ */}
+          <Suspense fallback={<div className="w-full h-96 bg-muted animate-pulse rounded-xl" />}>
+            <RouteMap stops={itinerary} />
+          </Suspense>
+          
+        </div>
             )}
 
             {/* Itinerary */}
