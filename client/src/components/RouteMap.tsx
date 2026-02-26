@@ -2,10 +2,6 @@ import React, { useEffect, useRef, useMemo } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-// Geocoder Imports
-import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
-
 interface Stop {
   day: number;
   location: string;
@@ -50,17 +46,8 @@ export default function RouteMap({ stops }: RouteMapProps) {
         style: 'mapbox://styles/mapbox/outdoors-v12',
         center: [stops[0].lng, stops[0].lat],
         zoom: 10,
+        attributionControl: false
       });
-
-      // ✅ Initialize and add the Geocoder Search Box
-      const geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl as any,
-        marker: true,
-        placeholder: 'Search nearby towns or trails...'
-      });
-      
-      map.current.addControl(geocoder, 'top-right');
 
       // Add navigation controls (zoom in/out/rotate)
       map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
@@ -93,8 +80,7 @@ export default function RouteMap({ stops }: RouteMapProps) {
           },
           paint: {
             'line-color': '#3b82f6',
-            'line-width': 4,
-            'line-dasharray': [2, 2]
+            'line-width': 4
           }
         });
 
@@ -111,10 +97,10 @@ export default function RouteMap({ stops }: RouteMapProps) {
 
           // Create Popup
           const popup = new mapboxgl.Popup({ offset: 15 }).setHTML(`
-            <div style="padding: 4px; font-family: sans-serif;">
+            <div style="padding: 8px; font-family: sans-serif;">
               <strong style="font-size: 14px;">Day ${stop.day}</strong><br/>
-              <span style="color: #666;">${stop.location}</span><br/>
-              ${stop.elevation ? `<span style="font-weight: bold;">${stop.elevation}m</span>` : ''}
+              <span style="color: #666; font-size: 12px;">${stop.location}</span><br/>
+              ${stop.elevation ? `<span style="font-weight: bold; color: #3b82f6;">${stop.elevation}m</span>` : ''}
             </div>
           `);
 
@@ -163,10 +149,12 @@ export default function RouteMap({ stops }: RouteMapProps) {
             <span className="w-2.5 h-2.5 rounded-full bg-[#ef4444] shadow-sm" /> Finish
           </div>
         </div>
-        <div className="flex gap-3">
-          <span className="text-[#10b981]">↑ {stats.totalAscent}m</span>
-          <span className="text-[#ef4444]">↓ {stats.totalDescent}m</span>
-        </div>
+        {stats.totalAscent > 0 && (
+          <div className="flex gap-3">
+            <span className="text-[#10b981]">↑ {stats.totalAscent}m</span>
+            <span className="text-[#ef4444]">↓ {stats.totalDescent}m</span>
+          </div>
+        )}
       </div>
 
       {/* Map Container */}
