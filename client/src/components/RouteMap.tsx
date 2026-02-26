@@ -108,10 +108,7 @@ try {
             });
             
             // Fit bounds with pitch preserved!
-            map.current.fitBounds(bounds, { padding: 80, maxZoom: 13, pitch: 75, bearing: 45 });
-            
-          } else {
-            // ... (keep your single marker logic)
+            map.current.fitBounds(bounds, { padding: 80, maxZoom: 13, pitch: 75, bearing: 45 })
             
           } else {
             // Fallback to the main trek location
