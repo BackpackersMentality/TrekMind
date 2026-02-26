@@ -115,24 +115,32 @@ useEffect(() => {
         const payload = event.data.payload;
         const allTreks = getAllTreks();
         
-        // NEW LOGIC: Check if the globe sent a cluster (an array)
+        let incomingIds: string[] = [];
+
+        // Aggressively parse the payload to find multiple treks (clusters)
         if (Array.isArray(payload)) {
-          const clusterTreks = payload
-            .map(p => allTreks.find(t => t.id === p.id))
-            .filter(Boolean); // Clean out any undefined treks
-          
-          setSelectedTrek(clusterTreks); // Pass the array to TrekPreviewPanel!
-        } else {
-          // It's just a single trek
-          if (payload.id) {
-            const singleTrek = allTreks.find(t => t.id === payload.id);
-            setSelectedTrek(singleTrek || null);
-          }
+          incomingIds = payload.map((p: any) => p.id || p);
+        } else if (payload?.points && Array.isArray(payload.points)) {
+          incomingIds = payload.points.map((p: any) => p.id);
+        } else if (payload?.treks && Array.isArray(payload.treks)) {
+          incomingIds = payload.treks.map((p: any) => p.id);
+        } else if (payload?.id) {
+          incomingIds = [payload.id]; // Fallback to single trek
+        }
+
+        // Map IDs to full trek objects and filter out missing ones
+        const foundTreks = incomingIds
+          .map(id => allTreks.find(t => t.id === id))
+          .filter(Boolean);
+
+        // If we found multiple, pass the array to trigger the swipe arrows!
+        if (foundTreks.length > 0) {
+          setSelectedTrek(foundTreks.length === 1 ? foundTreks[0] : foundTreks);
         }
       }
       
       if (event.data?.type === "TREK_DESELECTED_FROM_GLOBE") {
-        setSelectedTrek(null); // Close the panel
+        setSelectedTrek(null); 
       }
       if (event.data?.type === "TREKMIND_ZOOM_IN") handleZoomIn();
       if (event.data?.type === "TREKMIND_ZOOM_OUT") handleZoomOut();
