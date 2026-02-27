@@ -27,7 +27,6 @@ export default function Home() {
       <header className="bg-foreground text-background py-4 md:py-6 px-4 relative overflow-hidden shrink-0 z-10">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
-
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <h1 className="text-xl md:text-3xl font-display font-bold mb-1 tracking-tight text-white drop-shadow-lg">
             TrekMind
@@ -38,8 +37,8 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Container - Takes remaining space */}
-      <main className="flex-1 relative overflow-hidden">
+      {/* Main Container - Takes ALL remaining space between header and footer */}
+      <main className="flex-1 relative overflow-hidden min-h-0">
         {viewMode === "globe" && (
           <>
             <button
@@ -49,6 +48,7 @@ export default function Home() {
               <LayoutGrid className="w-4 h-4" />
               View Cards
             </button>
+            {/* FIX #1: height="100%" fills the full flex-1 main area */}
             <GlobeIntegration height="100%" className="animate-in fade-in duration-500" />
           </>
         )}
@@ -92,15 +92,12 @@ export default function Home() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border bg-card py-6 shrink-0 relative z-10">
+      {/* FIX #1: Footer shrunk to minimum — py-1 instead of py-6 */}
+      <footer className="border-t border-border bg-card py-1 shrink-0 relative z-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="font-display font-bold text-xs md:text-sm mb-1 text-foreground">
-            TrekMind
-          </p>
-          <p className="text-[8px] text-muted-foreground">
-            © 2024 TrekMind. Adventure responsibly. AI features are for guidance and can make
-            mistakes. Please check routes and recommendations thoroughly.
+          <p className="font-display font-bold text-[10px] text-foreground">TrekMind</p>
+          <p className="text-[7px] text-muted-foreground">
+            © 2024 TrekMind. Adventure responsibly. AI features are for guidance and can make mistakes. Please check routes and recommendations thoroughly.
           </p>
         </div>
       </footer>
