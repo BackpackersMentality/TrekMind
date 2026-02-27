@@ -113,7 +113,63 @@ async function geocode(
   }
 }
 
-export default function RouteMap({ stops, trek }: RouteMapProps) {
+// ─── Detect whether a stop name is too vague to geocode reliably ───────────────
+// "Camp 1", "High Camp", "Base Camp", "Pass" etc. are mountain-specific names
+// that Mapbox will either miss entirely or return wrong results for.
+// For these we interpolate a position between known neighbouring stops instead.
+const VAGUE_PATTERNS = [
+  /^camp\s*\d+$/i,
+  /^high\s+camp$/i,
+  /^base\s+camp$/i,
+  /^advanced\s+base\s+camp$/i,
+  /^abc$/i,
+  /^high\s+pass$/i,
+  /^col\s+de/i,
+  /^pass$/i,
+  /^summit$/i,
+  /^checkpoint\s*\d*$/i,
+  /^rest\s+day$/i,
+  /^acclimatisation\s+day$/i,
+];
+
+function isVague(name: string): boolean {
+  return VAGUE_PATTERNS.some((p) => p.test(name.trim()));
+}
+
+// Linear interpolation between two [lng, lat] coords at fraction t (0–1)
+function interpolateCoord(
+  a: [number, number],
+  b: [number, number],
+  t: number
+): [number, number] {
+  return [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+}
+
+// For stops that couldn't be geocoded, fill their coords by interpolating
+// between the nearest known neighbours (prev and next geocoded stop).
+// This keeps the route line continuous without wild cross-continent jumps.
+function interpolateMissingStops(
+  results: (any | null)[],
+  trekLng: number,
+  trekLat: number
+): any[] {
+  // Seed with the trek centre so we always have at least one anchor
+  const anchored: (any | null)[] = [...results];
+
+  // Forward pass: fill nulls using last known + next known
+  let lastKnown: [number, number] = [trekLng, trekLat];
+  // Find first real coord to use as the right anchor for each null run
+  const filled = anchored.map((stop, i) => {
+    if (stop) { lastKnown = [stop.lng, stop.lat]; return stop; }
+    // Look ahead to find next known
+    const next = anchored.slice(i + 1).find(Boolean);
+    const nextCoord: [number, number] = next ? [next.lng, next.lat] : lastKnown;
+    const coord = interpolateCoord(lastKnown, nextCoord, 0.5);
+    return { ...(results[i] ?? {}), lng: coord[0], lat: coord[1], _interpolated: true };
+  });
+
+  return filled;
+}
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const [geocodedStops, setGeocodedStops] = useState<any[]>([]);
@@ -150,16 +206,42 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
 
     setStatus('geocoding');
 
+    // ── Build a guaranteed start anchor from the trek's known coordinates ───
+    // This ensures the route always begins at the correct location even if
+    // "Day 1: Camp 1" or similar can't be geocoded.
+    const firstStop = stops[0];
+    const lastStop  = stops[stops.length - 1];
+
     // Geocode each stop in parallel
     Promise.all(
-      stops.map(async (stop) => {
+      stops.map(async (stop, idx) => {
         // Get the raw location string - try all common field names
         const rawName = stop.location || stop.route || stop.overnightStay || stop.place || '';
-        if (!rawName) return null;
 
-        // Clean up "Lukla to Namche Bazaar" → "Namche Bazaar"
+        // ── If first or last stop fails to geocode, anchor to trek coords ───
+        // This guarantees the route line always starts and ends in the right
+        // country even when Day 1 is "Base Camp" or similar.
+        const isFirst = idx === 0;
+        const isLast  = idx === stops.length - 1;
+
+        if (!rawName) {
+          if (isFirst) return { ...stop, lng: trek.longitude, lat: trek.latitude, _anchored: true };
+          if (isLast)  return { ...stop, lng: trek.longitude, lat: trek.latitude, _anchored: true };
+          return null;
+        }
+
         const cleanName = parseLocationName(rawName);
-        if (!cleanName) return null;
+
+        // ── Detect vague/generic names that geocoding can't handle ───────────
+        // For these we skip geocoding now and interpolate coords later once we
+        // know where the neighbouring stops landed.
+        if (isVague(cleanName)) {
+          console.log(`[RouteMap] Skipping vague stop "${cleanName}" — will interpolate`);
+          // Anchor first/last to trek centre so the route line stays grounded
+          if (isFirst) return { ...stop, lng: trek.longitude, lat: trek.latitude, _anchored: true };
+          if (isLast)  return { ...stop, lng: trek.longitude, lat: trek.latitude, _anchored: true };
+          return null; // will be interpolated in post-processing
+        }
 
         const coords = await geocode(
           cleanName,
@@ -171,14 +253,19 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
 
         if (!coords) {
           console.warn(`[RouteMap] No coords for "${cleanName}" (from "${rawName}")`);
+          if (isFirst) return { ...stop, lng: trek.longitude, lat: trek.latitude, _anchored: true };
+          if (isLast)  return { ...stop, lng: trek.longitude, lat: trek.latitude, _anchored: true };
           return null;
         }
 
         return { ...stop, lng: coords[0], lat: coords[1], _geocodedName: cleanName };
       })
     ).then((results) => {
-      const valid = results.filter(Boolean) as any[];
-      console.log(`[RouteMap] Geocoded ${valid.length}/${stops.length} stops`);
+      // Fill in nulls (vague stops, failed geocodes) by interpolating between
+      // their nearest geocoded neighbours so the route line stays continuous.
+      const interpolated = interpolateMissingStops(results, trek.longitude, trek.latitude);
+      const valid = interpolated.filter(Boolean) as any[];
+      console.log(`[RouteMap] ${valid.length}/${stops.length} stops placed (including interpolated)`);
       setGeocodedStops(valid);
       setStatus(valid.length > 0 ? 'ready' : 'error');
     });
@@ -271,13 +358,19 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
           geocodedStops.forEach((stop, i) => {
             const isFirst = i === 0;
             const isLast = i === geocodedStops.length - 1;
-            const size = isFirst || isLast ? 14 : 9;
+            const isInterpolated = stop._interpolated === true;
+            const isAnchored = stop._anchored === true;
+            // Interpolated/anchored stops get a smaller dashed ring to signal
+            // they're approximate positions, not precise geocodes.
+            const size = isFirst || isLast ? 14 : isInterpolated ? 7 : 9;
 
             const el = document.createElement('div');
             el.style.cssText = `
               width:${size}px; height:${size}px; border-radius:50%;
-              background:${isFirst ? '#10b981' : isLast ? '#ef4444' : '#3b82f6'};
-              border:2px solid white; box-shadow:0 2px 6px rgba(0,0,0,0.5);
+              background:${isFirst || isAnchored ? '#10b981' : isLast ? '#ef4444' : isInterpolated ? '#94a3b8' : '#3b82f6'};
+              border:${isInterpolated ? '1.5px dashed rgba(255,255,255,0.6)' : '2px solid white'};
+              box-shadow:0 2px 6px rgba(0,0,0,0.5);
+              opacity:${isInterpolated ? '0.7' : '1'};
               cursor:pointer; transition:transform 0.15s;
             `;
             el.onmouseenter = () => (el.style.transform = 'scale(1.6)');
@@ -286,8 +379,9 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             const locationLabel = stop._geocodedName || stop.location || stop.route || 'Stop';
             const popup = new mapboxgl.Popup({ offset: 14, closeButton: false }).setHTML(`
               <div style="padding:6px 8px;font-family:sans-serif;font-size:13px;color:#111;min-width:120px;">
-                <strong>Day ${stop.day}${isFirst ? ' · Start' : isLast ? ' · Finish' : ''}</strong>
+                <strong>Day ${stop.day}${isFirst || isAnchored ? ' · Start' : isLast ? ' · Finish' : ''}</strong>
                 <div style="color:#444;margin-top:2px;">${locationLabel}</div>
+                ${isInterpolated ? '<div style="color:#f59e0b;font-size:10px;margin-top:2px;">⚠ Approximate position</div>' : ''}
                 ${stop.maxAltM || stop.maxAlt ? `<div style="color:#888;font-size:11px;margin-top:2px;">⛰ ${stop.maxAltM || stop.maxAlt}m</div>` : ''}
                 ${stop.distanceKm || stop.distance ? `<div style="color:#888;font-size:11px;">📏 ${stop.distanceKm || stop.distance}km</div>` : ''}
               </div>
@@ -381,6 +475,9 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
           <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-emerald-500 border border-white inline-block" />Start</span>
           <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-blue-500 border border-white inline-block" />Waypoint</span>
           <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-red-500 border border-white inline-block" />Finish</span>
+          {geocodedStops.some(s => s._interpolated) && (
+            <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-slate-400 border border-white/60 border-dashed inline-block opacity-70" />Approx</span>
+          )}
         </div>
       )}
     </div>
