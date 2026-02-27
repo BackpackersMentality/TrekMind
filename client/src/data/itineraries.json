@@ -171,9 +171,9 @@
       }
     ]
   },
-  "tour-du-mont-blanc": {
+  "tmb": {
     "sheetName": "Tour du Mont Blanc",
-    "slug": "tour-du-mont-blanc",
+    "slug": "tmb",
     "itinerary": [
       {
         "day": 1,
@@ -247,9 +247,9 @@
       }
     ]
   },
-  "alta-via-1": {
+  "av1": {
     "sheetName": "Alta Via 1",
-    "slug": "alta-via-1",
+    "slug": "av1",
     "itinerary": [
       {
         "day": 1,
@@ -1643,9 +1643,9 @@
       }
     ]
   },
-  "mount-kailash-kora": {
+  "mount-kailash": {
     "sheetName": "Mount Kailash Kora",
-    "slug": "mount-kailash-kora",
+    "slug": "kailash",
     "itinerary": [
       {
         "day": 1,
@@ -2023,9 +2023,9 @@
       }
     ]
   },
-  "manaslu-trek": {
+  "manaslu": {
     "sheetName": "Manaslu Trek",
-    "slug": "manaslu-trek",
+    "slug": "manaslu",
     "itinerary": [
       {
         "day": 1,
