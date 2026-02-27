@@ -170,6 +170,8 @@ function interpolateMissingStops(
 
   return filled;
 }
+
+export default function RouteMap({ stops, trek }: RouteMapProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const [geocodedStops, setGeocodedStops] = useState<any[]>([]);
