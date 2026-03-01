@@ -1,0 +1,37 @@
+# ── Cloudflare Pages _headers file ───────────────────────────────────────────
+# Place this at: client/public/_headers
+# It gets copied to the dist root by Vite's build.
+#
+# Strategy:
+# - HTML: no-cache (always revalidate so users get new deployments)
+# - JS/CSS chunks: immutable 1-year cache (Vite adds content hash to filename)
+# - JSON data: 1-hour cache with stale-while-revalidate (data rarely changes)
+# - Images: 1-week cache
+# - Fonts: 1-year immutable
+
+# HTML pages — always revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Vite-generated assets (have content hash in filename — safe to cache forever)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Per-trek JSON data (changes rarely, 1hr cache + serve stale for 24hr)
+/data/itineraries/*.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Root treks.json
+/data/treks.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Static images
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Security headers on all routes
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
