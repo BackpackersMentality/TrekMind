@@ -1,38 +1,43 @@
+// store/useFilterStore.ts
+// Zustand store for filter state.
+// Replaces: difficulty field removed (no data in treks.json)
+// Added: terrain, popularity fields
+
 import { create } from 'zustand';
 
-interface FilterState {
-  tier: number | null;
-  region: string | null;
+interface FilterStore {
+  tier:          string | null;
+  region:        string | null;
   accommodation: string | null;
-  duration: string | null;
-  difficulty: string | null;
-  
-  setTier: (tier: number | null) => void;
-  setRegion: (region: string | null) => void;
+  terrain:       string | null;
+  duration:      string | null;
+  popularity:    string | null;
+
+  setTier:          (tier: string | null) => void;
+  setRegion:        (region: string | null) => void;
   setAccommodation: (accommodation: string | null) => void;
-  setDuration: (duration: string | null) => void;
-  setDifficulty: (difficulty: string | null) => void;
-  resetFilters: () => void;
+  setTerrain:       (terrain: string | null) => void;
+  setDuration:      (duration: string | null) => void;
+  setPopularity:    (popularity: string | null) => void;
+  resetFilters:     () => void;
 }
 
-export const useFilterStore = create<FilterState>((set) => ({
-  tier: null,
-  region: null,
+export const useFilterStore = create<FilterStore>((set) => ({
+  tier:          null,
+  region:        null,
   accommodation: null,
-  duration: null,
-  difficulty: null,
-  
-  setTier: (tier) => set({ tier }),
-  setRegion: (region) => set({ region }),
+  terrain:       null,
+  duration:      null,
+  popularity:    null,
+
+  setTier:          (tier)          => set({ tier }),
+  setRegion:        (region)        => set({ region }),
   setAccommodation: (accommodation) => set({ accommodation }),
-  setDuration: (duration) => set({ duration }),
-  setDifficulty: (difficulty) => set({ difficulty }),
-  
-  resetFilters: () => set({
-    tier: null,
-    region: null,
-    accommodation: null,
-    duration: null,
-    difficulty: null,
+  setTerrain:       (terrain)       => set({ terrain }),
+  setDuration:      (duration)      => set({ duration }),
+  setPopularity:    (popularity)    => set({ popularity }),
+  resetFilters:     ()              => set({
+    tier: null, region: null, accommodation: null,
+    terrain: null, duration: null, popularity: null,
   }),
 }));
