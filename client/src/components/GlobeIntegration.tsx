@@ -15,7 +15,7 @@ import { SearchButton } from './SearchButton';
 import { SearchPopup } from './SearchPopup';
 import { TrekPreviewPanel } from './TrekPreviewPanel';
 import { getAllTreks } from '@/lib/treks';
-import type { FilterState } from '../types/filters';
+import { type FilterState, countActiveFilters } from '../types/filters';
 
 interface GlobeIntegrationProps {
   height?: string;
