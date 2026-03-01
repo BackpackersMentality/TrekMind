@@ -39,16 +39,27 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   // ✅ Cache trek list — getAllTreks() reads JSON, no need to call it repeatedly
   const allTreks = useMemo(() => getAllTreks(), []);
 
-  const { tier, region, accommodation, duration, difficulty,
-          setTier, setRegion, setAccommodation, setDuration, setDifficulty } = useFilterStore();
+  const tier          = useFilterStore((state) => state.tier);
+  const region        = useFilterStore((state) => state.region);
+  const accommodation = useFilterStore((state) => state.accommodation);
+  const terrain       = useFilterStore((state) => state.terrain);
+  const duration      = useFilterStore((state) => state.duration);
+  const popularity    = useFilterStore((state) => state.popularity);
+  const setTier          = useFilterStore((state) => state.setTier);
+  const setRegion        = useFilterStore((state) => state.setRegion);
+  const setAccommodation = useFilterStore((state) => state.setAccommodation);
+  const setTerrain       = useFilterStore((state) => state.setTerrain);
+  const setDuration      = useFilterStore((state) => state.setDuration);
+  const setPopularity    = useFilterStore((state) => state.setPopularity);
 
-  const currentFilters: FilterState = useMemo(() => ({
+const currentFilters: FilterState = useMemo(() => ({
     tier:          tier === null ? "ALL" : String(tier) as any,
     region:        (region || "ALL") as any,
     accommodation: (accommodation || "ALL") as any,
+    terrain:       (terrain || "ALL") as any,
     duration:      (duration || "ALL") as any,
-    difficulty:    (difficulty || "ALL") as any,
-  }), [tier, region, accommodation, duration, difficulty]);
+    popularity:    (popularity || "ALL") as any,
+  }), [tier, region, accommodation, terrain, duration, popularity]);
 
   const activeFilterCount = useMemo(
     () => Object.values(currentFilters).filter(v => v !== "ALL").length,
@@ -56,13 +67,14 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   );
 
   const handleApplyFilters = useCallback((newFilters: FilterState) => {
-    setTier(newFilters.tier === "ALL" ? null : parseInt(newFilters.tier) as any);
+    setTier(newFilters.tier === "ALL" ? null : newFilters.tier);
     setRegion(newFilters.region === "ALL" ? null : newFilters.region);
     setAccommodation(newFilters.accommodation === "ALL" ? null : newFilters.accommodation);
+    setTerrain(newFilters.terrain === "ALL" ? null : newFilters.terrain);
     setDuration(newFilters.duration === "ALL" ? null : newFilters.duration);
-    setDifficulty(newFilters.difficulty === "ALL" ? null : newFilters.difficulty);
+    setPopularity(newFilters.popularity === "ALL" ? null : newFilters.popularity);
     setIsFilterOpen(false);
-  }, [setTier, setRegion, setAccommodation, setDuration, setDifficulty]);
+  }, [setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity]);
 
   const sendToGlobe = useCallback((msg: object) => {
     iframeRef.current?.contentWindow?.postMessage(msg, GLOBE_ORIGIN);
