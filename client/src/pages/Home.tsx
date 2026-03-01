@@ -10,11 +10,13 @@ export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
   const [viewMode, setViewMode] = useState<"globe" | "cards">("globe");
 
-  const { tier, region, duration, difficulty, accommodation } = useFilterStore();
+  const { tier, region, duration, accommodation, terrain, popularity } = useFilterStore();
+
+// ② REPLACE the filters useMemo:
 
   const filters = useMemo(
-    () => ({ tier, region, duration, difficulty, accommodation }),
-    [tier, region, duration, difficulty, accommodation]
+    () => ({ tier, region, duration, accommodation, terrain, popularity }),
+    [tier, region, duration, accommodation, terrain, popularity]
   );
 
   const filteredTreks = useMemo(() => {
