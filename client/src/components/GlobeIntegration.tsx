@@ -39,43 +39,29 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   // ✅ Cache trek list — getAllTreks() reads JSON, no need to call it repeatedly
   const allTreks = useMemo(() => getAllTreks(), []);
 
-  const tier          = useFilterStore((state) => state.tier);
-  const region        = useFilterStore((state) => state.region);
-  const accommodation = useFilterStore((state) => state.accommodation);
-  const terrain       = useFilterStore((state) => state.terrain);
-  const duration      = useFilterStore((state) => state.duration);
-  const popularity    = useFilterStore((state) => state.popularity);
-  const setTier          = useFilterStore((state) => state.setTier);
-  const setRegion        = useFilterStore((state) => state.setRegion);
-  const setAccommodation = useFilterStore((state) => state.setAccommodation);
-  const setTerrain       = useFilterStore((state) => state.setTerrain);
-  const setDuration      = useFilterStore((state) => state.setDuration);
-  const setPopularity    = useFilterStore((state) => state.setPopularity);
+  const { tier, region, accommodation, terrain, duration, popularity,
+          setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity
+        } = useFilterStore();
 
-const currentFilters: FilterState = useMemo(() => ({
-    tier:          tier === null ? "ALL" : String(tier) as any,
-    region:        (region || "ALL") as any,
-    accommodation: (accommodation || "ALL") as any,
-    terrain:       (terrain || "ALL") as any,
-    duration:      (duration || "ALL") as any,
-    popularity:    (popularity || "ALL") as any,
+  const currentFilters: FilterState = useMemo(() => ({
+    tier, region, accommodation, terrain, duration, popularity,
   }), [tier, region, accommodation, terrain, duration, popularity]);
 
   const activeFilterCount = useMemo(
-    () => Object.values(currentFilters).filter(v => v !== "ALL").length,
+    () => countActiveFilters(currentFilters),
     [currentFilters]
   );
 
   const handleApplyFilters = useCallback((newFilters: FilterState) => {
-    setTier(newFilters.tier === "ALL" ? null : newFilters.tier);
-    setRegion(newFilters.region === "ALL" ? null : newFilters.region);
-    setAccommodation(newFilters.accommodation === "ALL" ? null : newFilters.accommodation);
-    setTerrain(newFilters.terrain === "ALL" ? null : newFilters.terrain);
-    setDuration(newFilters.duration === "ALL" ? null : newFilters.duration);
-    setPopularity(newFilters.popularity === "ALL" ? null : newFilters.popularity);
+    setTier(newFilters.tier);
+    setRegion(newFilters.region);
+    setAccommodation(newFilters.accommodation);
+    setTerrain(newFilters.terrain);
+    setDuration(newFilters.duration);
+    setPopularity(newFilters.popularity);
     setIsFilterOpen(false);
   }, [setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity]);
-
+  
   const sendToGlobe = useCallback((msg: object) => {
     iframeRef.current?.contentWindow?.postMessage(msg, GLOBE_ORIGIN);
   }, []);
