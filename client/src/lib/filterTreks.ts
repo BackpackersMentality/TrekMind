@@ -1,89 +1,103 @@
-export interface Trek {
-  id: string;
-  name: string;
-  region: string;
-  country: string;
-  totalDays: string;
-  maxAltitude: string;
-  accommodation: string;
-  tier: number;
-  [key: string]: any;
-}
+// lib/filterTreks.ts
+// All filters map to real fields in treks.json.
+// Accommodation + terrain use category matching since raw values are verbose strings.
 
 interface Filters {
-  tier: number | null;
-  region: string | null;
-  accommodation: string | null;
-  duration: string | null;
-  difficulty: string | null;
+  tier?:          string | number | null;
+  region?:        string | null;
+  accommodation?: string | null;
+  terrain?:       string | null;
+  duration?:      string | null;
+  popularity?:    string | null;
 }
 
-// Helper to calculate difficulty from trek data
-function calculateDifficulty(trek: Trek): string {
-  const altitude = parseInt(trek.maxAltitude);
-  const days = parseInt(trek.totalDays);
-  
-  if (altitude > 5000 || days > 20) return 'Extreme';
-  if (altitude > 4000 || days > 12) return 'Hard';
-  if (altitude > 3000 || days > 7) return 'Moderate';
-  return 'Easy';
-}
+export function filterTreks(treks: any[], filters: Filters): any[] {
+  return treks.filter((trek) => {
 
-// Helper to categorize accommodation
-function categorizeAccommodation(accommodation: string): string {
-  const lower = (accommodation || '').toLowerCase();
-  if (lower.includes('camping') && !lower.includes(',')) return 'Camping';
-  if (lower.includes('teahouse')) return 'Teahouses';
-  if (lower.includes('hut') || lower.includes('refuge') || lower.includes('rifugio')) return 'Huts/Refugios';
-  if (lower.includes('hotel') || lower.includes('lodge') || lower.includes('b&b') || lower.includes('guesthouse')) return 'Hotels/Lodges';
-  return 'Mixed';
-}
+    // ── Tier: matches trek.tier (1 | 2 | 3) ──────────────────────────────
+    if (filters.tier && filters.tier !== "ALL") {
+      const n = parseInt(String(filters.tier).replace(/\D/g, ""), 10);
+      if (!isNaN(n) && trek.tier !== n) return false;
+    }
 
-// Helper to categorize duration
-function categorizeDuration(totalDays: string): string {
-  const days = parseInt(totalDays);
-  if (days <= 4) return 'Short';
-  if (days <= 9) return 'Medium';
-  return 'Long';
-}
+    // ── Region: matches trek.region exactly ───────────────────────────────
+    if (filters.region && filters.region !== "ALL") {
+      if (trek.region !== filters.region) return false;
+    }
 
-export function filterTreks(treks: Trek[], filters: Filters): Trek[] {
-  if (!treks) return [];
-  return treks.filter(trek => {
-    // Tier filter
-    if (filters.tier !== null && trek.tier !== filters.tier) {
-      return false;
+    // ── Accommodation: category-matched against trek.accommodation ────────
+    // Raw values are verbose ("Camping, refugios", "Mountain huts, camping")
+    // so we bucket them before comparing.
+    if (filters.accommodation && filters.accommodation !== "ALL") {
+      if (getAccommodationCategory(trek.accommodation) !== filters.accommodation) return false;
     }
-    
-    // Region filter
-    if (filters.region !== null && trek.region !== filters.region) {
-      return false;
+
+    // ── Terrain: category-matched against trek.terrain ────────────────────
+    // 54 raw terrain strings → 7 categories
+    if (filters.terrain && filters.terrain !== "ALL") {
+      if (getTerrainCategory(trek.terrain) !== filters.terrain) return false;
     }
-    
-    // Accommodation filter
-    if (filters.accommodation !== null) {
-      const trekAccom = categorizeAccommodation(trek.accommodation);
-      if (trekAccom !== filters.accommodation) {
-        return false;
-      }
+
+    // ── Duration: bucketed from trek.totalDays string ─────────────────────
+    if (filters.duration && filters.duration !== "ALL") {
+      if (getDurationBucket(trek.totalDays) !== filters.duration) return false;
     }
-    
-    // Duration filter
-    if (filters.duration !== null) {
-      const trekDuration = categorizeDuration(trek.totalDays);
-      if (trekDuration !== filters.duration) {
-        return false;
-      }
+
+    // ── Popularity: bucketed from trek.popularityScore (1–10) ────────────
+    if (filters.popularity && filters.popularity !== "ALL") {
+      if (getPopularityBucket(trek.popularityScore) !== filters.popularity) return false;
     }
-    
-    // Difficulty filter
-    if (filters.difficulty !== null) {
-      const trekDifficulty = calculateDifficulty(trek);
-      if (trekDifficulty !== filters.difficulty) {
-        return false;
-      }
-    }
-    
+
     return true;
   });
+}
+
+// ── Category helpers (exported so FilterPopup can use same logic) ─────────────
+
+export function getAccommodationCategory(raw: string = ""): string {
+  const a = raw.toLowerCase();
+  if (a.includes("teahouse"))                                             return "Teahouses";
+  if (a.includes("rifugio") || a.includes("refuge") || a.includes("hut") ||
+      a.includes("albergue") || a.includes("gite") || a.includes("ryokan") ||
+      a.includes("minshuku") || a.includes("monastery") || a.includes("cave") ||
+      a.includes("public hut") || a.includes("mountain hut"))            return "Huts/Refuges";
+  if (a.includes("guesthouse") || a.includes("homestay") || a.includes("hotel") ||
+      a.includes("b&b") || a.includes("pension") || a.includes("lodge"))  return "Guesthouses";
+  if (a.includes("camp") || a.includes("wilderness") || a.includes("backcountry"))
+                                                                          return "Camping";
+  return "Guesthouses"; // fallback
+}
+
+export function getTerrainCategory(raw: string = ""): string {
+  const t = raw.toLowerCase();
+  if (t.includes("volcanic"))                                              return "Volcanic";
+  if (t.includes("coastal") || t.includes("coast"))                       return "Coastal";
+  if (t.includes("jungle") || t.includes("rainforest") ||
+      t.includes("cloud forest") || t.includes("tropical"))               return "Jungle/Forest";
+  if (t.includes("desert") || t.includes("canyon") ||
+      t.includes("wadi") || t.includes("sandstone"))                      return "Desert";
+  if (t.includes("arctic") || t.includes("tundra") ||
+      t.includes("glacial") || t.includes("glaciated"))                   return "Glacial/Arctic";
+  if (t.includes("high alpine") || t.includes("high sierra") ||
+      t.includes("andean") || t.includes("high plateau") ||
+      t.includes("high desert"))                                           return "High Alpine";
+  if (t.includes("alpine"))                                               return "Alpine";
+  return "Alpine"; // fallback — most treks are some form of alpine
+}
+
+export function getDurationBucket(totalDays: string | number | undefined): string {
+  const m = String(totalDays ?? "").match(/\d+/);
+  if (!m) return "Medium";
+  const d = parseInt(m[0], 10);
+  if (d <= 5)  return "Short";   // 1–5 days
+  if (d <= 10) return "Medium";  // 6–10 days
+  if (d <= 16) return "Long";    // 11–16 days
+  return "Epic";                 // 17+ days
+}
+
+export function getPopularityBucket(score: number | undefined): string {
+  if (!score) return "Hidden Gem";
+  if (score >= 8) return "Iconic";     // 20 treks
+  if (score >= 5) return "Popular";    // 22 treks
+  return "Hidden Gem";                 // 24 treks
 }
