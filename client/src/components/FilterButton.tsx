@@ -1,3 +1,4 @@
+// components/FilterButton.tsx — clean, no emojis
 import React from 'react';
 import { SlidersHorizontal } from 'lucide-react';
 
@@ -10,14 +11,12 @@ export function FilterButton({ activeCount, onClick }: FilterButtonProps) {
   return (
     <button
       onClick={onClick}
-      className="absolute top-4 right-4 z-20 w-12 h-12 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center border border-slate-100"
+      className="w-11 h-11 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center border border-slate-200"
       aria-label={`Filters${activeCount > 0 ? ` (${activeCount} active)` : ''}`}
     >
-      <SlidersHorizontal className="w-5 h-5 text-slate-700" />
-      
-      {/* Badge */}
+      <SlidersHorizontal className="w-4 h-4 text-slate-700" />
       {activeCount > 0 && (
-        <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm">
+        <span className="absolute -top-1 -right-1 w-4 h-4 bg-slate-900 text-white text-[9px] font-bold rounded-full flex items-center justify-center">
           {activeCount}
         </span>
       )}
