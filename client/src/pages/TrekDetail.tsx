@@ -194,7 +194,15 @@ export default function TrekDetail() {
 
         {/* Interactive Route Map */}
         <div className="pt-8 border-t">
-          <h2 className="text-2xl font-bold mb-6">Interactive Route Map</h2>
+          <h2 className="text-2xl font-bold mb-2">Interactive Route Map</h2>
+          <p className="text-sm text-muted-foreground mb-6 flex items-center gap-1.5">
+            <MapPin className="w-3.5 h-3.5 shrink-0" />
+            Shows key waypoints &amp; overnight stops only — not a navigation tool.
+            For full trail maps use{" "}
+            <a href="https://www.alltrails.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">AllTrails</a>,{" "}
+            <a href="https://www.gaiagps.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">Gaia GPS</a>,
+            or download the official GPX from the trail authority.
+          </p>
           {/*
             ✅ MapSkeleton matches h-[500px] — prevents CLS while Mapbox chunk downloads.
             RouteMap lazy chunk (~300KB) only downloads here, never on the homepage.
