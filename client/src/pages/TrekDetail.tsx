@@ -20,6 +20,7 @@ import { cn } from "@/lib/utils";
 import { useState, useMemo, useEffect, Suspense, lazy } from "react";
 import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from "@/lib/images";
+import { Helmet } from "react-helmet-async";
 
 const RouteMap = lazy(() => import("@/components/RouteMap"));
 
@@ -76,8 +77,46 @@ export default function TrekDetail() {
     );
   }
 
+  // ── SEO meta — unique per trek page ───────────────────────────────────────
+  const pageTitle       = `${trek.name} Trek Guide — ${trek.country} | TrekMind`;
+  const pageDescription = `Plan your ${trek.name} trek in ${trek.country}. ${trek.totalDays}, ${trek.distance}, max altitude ${trek.maxAltitude || "N/A"}. ${trek.terrain} terrain in ${trek.region}.`;
+  const pageUrl         = `https://trekmind.pages.dev/trek/${trekId}`;
+  const pageImage       = getTrekImageUrl(trek.imageFilename);
+
   return (
     <div className="min-h-screen bg-background pb-20">
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords"    content={`${trek.name}, ${trek.country} trekking, ${trek.region} hiking, ${trek.terrain} trek, trekking routes`} />
+        <link rel="canonical"    href={pageUrl} />
+        {/* OpenGraph — controls how the link looks when shared on social */}
+        <meta property="og:type"        content="article" />
+        <meta property="og:url"         content={pageUrl} />
+        <meta property="og:title"       content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image"       content={pageImage} />
+        {/* Twitter card */}
+        <meta name="twitter:card"        content="summary_large_image" />
+        <meta name="twitter:title"       content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image"       content={pageImage} />
+        {/* JSON-LD structured data — helps Google show rich results */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "TouristAttraction",
+          "name": trek.name,
+          "description": pageDescription,
+          "url": pageUrl,
+          "image": pageImage,
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": trek.country,
+            "addressRegion": trek.region,
+          },
+          "touristType": "Trekking / Hiking",
+        })}</script>
+      </Helmet>
 
       {/* ── Hero Section ─────────────────────────────────────────────────── */}
       <div className="relative h-[60vh] min-h-[500px] w-full overflow-hidden">
