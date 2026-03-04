@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block any internal/api paths that shouldn't be indexed
+Disallow: /api/
+
+Sitemap: https://trekmind.pages.dev/sitemap.xml
