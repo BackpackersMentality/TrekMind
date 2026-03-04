@@ -5,6 +5,7 @@ import { Map, LayoutGrid, Info } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterTreks } from "@/lib/filterTreks";
 import { GlobeIntegration } from "@/components/GlobeIntegration";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
@@ -25,6 +26,23 @@ export default function Home() {
 
   return (
     <div className="h-screen bg-background relative flex flex-col overflow-hidden">
+      <Helmet>
+        <title>TrekMind — Discover the World's Best Trekking Routes</title>
+        <meta name="description" content="Explore the world's most breathtaking trekking routes on an interactive 3D globe. Filter by region, terrain, duration and difficulty. Find your next great adventure." />
+        <meta name="keywords" content="trekking routes, hiking trails, best treks, adventure travel, trekking guide, hiking app" />
+        <link rel="canonical" href="https://trekmind.pages.dev/" />
+        {/* OpenGraph */}
+        <meta property="og:type"        content="website" />
+        <meta property="og:url"         content="https://trekmind.pages.dev/" />
+        <meta property="og:title"       content="TrekMind — Discover the World's Best Trekking Routes" />
+        <meta property="og:description" content="Explore the world's most breathtaking trekking routes on an interactive 3D globe. Filter by region, terrain, duration and difficulty." />
+        <meta property="og:image"       content="https://trekmind.pages.dev/og-image.jpg" />
+        {/* Twitter */}
+        <meta name="twitter:card"        content="summary_large_image" />
+        <meta name="twitter:title"       content="TrekMind — Discover the World's Best Trekking Routes" />
+        <meta name="twitter:description" content="Explore the world's most breathtaking trekking routes on an interactive 3D globe." />
+        <meta name="twitter:image"       content="https://trekmind.pages.dev/og-image.jpg" />
+      </Helmet>
       {/* Top Banner */}
       <header className="bg-foreground text-background py-4 md:py-6 px-4 relative overflow-hidden shrink-0 z-10">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
