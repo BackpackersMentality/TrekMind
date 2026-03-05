@@ -59,8 +59,42 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
     iframeRef.current?.contentWindow?.postMessage(msg, GLOBE_ORIGIN);
   }, []);
 
+  // ── Hold-to-zoom: native pointer events bypass iframe event capture ────────
+  const holdTimerRef  = useRef<ReturnType<typeof setInterval> | null>(null);
+  const zoomInBtnRef  = useRef<HTMLButtonElement>(null);
+  const zoomOutBtnRef = useRef<HTMLButtonElement>(null);
+
+  const stopHold = useCallback(() => {
+    if (holdTimerRef.current) { clearInterval(holdTimerRef.current); holdTimerRef.current = null; }
+  }, []);
+
   const handleZoomIn  = useCallback(() => sendToGlobe({ type: "TREKMIND_ZOOM_IN" }),  [sendToGlobe]);
   const handleZoomOut = useCallback(() => sendToGlobe({ type: "TREKMIND_ZOOM_OUT" }), [sendToGlobe]);
+
+  useEffect(() => {
+    const attach = (btn: HTMLButtonElement | null, fn: () => void) => {
+      if (!btn) return;
+      const onDown = (e: PointerEvent) => {
+        e.preventDefault(); e.stopPropagation();
+        fn();
+        holdTimerRef.current = setInterval(fn, 120);
+      };
+      const onUp = () => stopHold();
+      btn.addEventListener("pointerdown",   onDown);
+      btn.addEventListener("pointerup",     onUp);
+      btn.addEventListener("pointerleave",  onUp);
+      btn.addEventListener("pointercancel", onUp);
+      return () => {
+        btn.removeEventListener("pointerdown",   onDown);
+        btn.removeEventListener("pointerup",     onUp);
+        btn.removeEventListener("pointerleave",  onUp);
+        btn.removeEventListener("pointercancel", onUp);
+      };
+    };
+    const c1 = attach(zoomInBtnRef.current,  handleZoomIn);
+    const c2 = attach(zoomOutBtnRef.current, handleZoomOut);
+    return () => { c1?.(); c2?.(); };
+  }, [handleZoomIn, handleZoomOut, stopHold]);
 
   useEffect(() => {
     const preventPageZoom = (e: WheelEvent) => {
@@ -154,8 +188,8 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
       {/* Zoom controls — bottom-right */}
       <div className="absolute bottom-4 right-4 z-20">
         <div className="flex flex-col bg-background border border-border rounded-lg shadow-lg overflow-hidden">
-          <button onClick={handleZoomIn}  className="p-3 hover:bg-muted transition-colors border-b border-border" aria-label="Zoom in"><Plus  className="w-5 h-5" /></button>
-          <button onClick={handleZoomOut} className="p-3 hover:bg-muted transition-colors" aria-label="Zoom out"><Minus className="w-5 h-5" /></button>
+          <button ref={zoomInBtnRef}  className="p-3 hover:bg-muted transition-colors border-b border-border" aria-label="Zoom in"  style={{ touchAction: "none", userSelect: "none" }}><Plus  className="w-5 h-5" /></button>
+          <button ref={zoomOutBtnRef} className="p-3 hover:bg-muted transition-colors"                        aria-label="Zoom out" style={{ touchAction: "none", userSelect: "none" }}><Minus className="w-5 h-5" /></button>
         </div>
       </div>
 
