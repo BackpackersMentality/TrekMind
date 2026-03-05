@@ -1,62 +1,104 @@
-// filterTreks.ts
-// Filters the trek list based on the active filter state.
-// Duration uses the pre-computed "durationBucket" field (Short/Medium/Long)
-// based on totalDays: Short ≤7 days, Medium 8-14 days, Long ≥15 days.
-// Difficulty uses the "difficulty" field (Easy/Moderate/Hard/Extreme).
+// lib/filterTreks.ts — multi-select version
+// Tier 4 = Thru-hike (section-hikeable long-distance trails)
+// Duration bucket "Thru" added for tier-4 treks
 
 interface Filters {
-  tier?: string | number | null;
-  region?: string | null;
-  accommodation?: string | null;
-  duration?: string | null;
-  difficulty?: string | null;
+  tier?:          (string | number)[];
+  region?:        string[];
+  accommodation?: string[];
+  terrain?:       string[];
+  duration?:      string[];
+  popularity?:    string[];
 }
 
 export function filterTreks(treks: any[], filters: Filters): any[] {
   return treks.filter((trek) => {
-    // ── Tier ────────────────────────────────────────────────────────────────
-    if (filters.tier && filters.tier !== "ALL" && filters.tier !== null) {
-      // Handle both numeric (1) and string formats ("Tier 1", "1")
-      const filterTierNum = parseInt(String(filters.tier).replace(/\D/g, ""), 10);
-      if (!isNaN(filterTierNum) && trek.tier !== filterTierNum) return false;
+
+    // ── Tier ──────────────────────────────────────────────────────────────
+    if (filters.tier?.length) {
+      const nums = filters.tier.map(t => parseInt(String(t).replace(/\D/g,""), 10));
+      if (!nums.includes(trek.tier)) return false;
     }
 
-    // ── Region ──────────────────────────────────────────────────────────────
-    if (filters.region && filters.region !== "ALL") {
-      if (trek.region !== filters.region) return false;
+    // ── Region ────────────────────────────────────────────────────────────
+    if (filters.region?.length) {
+      if (!filters.region.includes(trek.region)) return false;
     }
 
-    // ── Accommodation ────────────────────────────────────────────────────────
-    if (filters.accommodation && filters.accommodation !== "ALL") {
-      // Fuzzy match: "Huts/Refugios" should match filter "Huts"
-      const acc = (trek.accommodation || "").toLowerCase();
-      const filterAcc = filters.accommodation.toLowerCase();
-      if (!acc.includes(filterAcc) && !filterAcc.includes(acc)) return false;
+    // ── Accommodation ─────────────────────────────────────────────────────
+    if (filters.accommodation?.length) {
+      if (!filters.accommodation.includes(getAccommodationCategory(trek.accommodation))) return false;
     }
 
-    // ── Duration — uses durationBucket field ─────────────────────────────────
-    // Short: ≤7 days | Medium: 8–14 days | Long: ≥15 days
-    if (filters.duration && filters.duration !== "ALL") {
-      const bucket = trek.durationBucket || getDurationBucket(trek.totalDays);
-      if (bucket !== filters.duration) return false;
+    // ── Terrain ───────────────────────────────────────────────────────────
+    if (filters.terrain?.length) {
+      if (!filters.terrain.includes(getTerrainCategory(trek.terrain))) return false;
     }
 
-    // ── Difficulty — uses difficulty field ───────────────────────────────────
-    // Easy | Moderate | Hard | Extreme
-    if (filters.difficulty && filters.difficulty !== "ALL") {
-      if ((trek.difficulty || "").toLowerCase() !== filters.difficulty.toLowerCase()) return false;
+    // ── Duration ──────────────────────────────────────────────────────────
+    if (filters.duration?.length) {
+      if (!filters.duration.includes(getDurationBucket(trek.totalDays, trek.tier))) return false;
+    }
+
+    // ── Popularity ────────────────────────────────────────────────────────
+    if (filters.popularity?.length) {
+      if (!filters.popularity.includes(getPopularityBucket(trek.popularityScore))) return false;
     }
 
     return true;
   });
 }
 
-// Fallback: compute duration bucket from totalDays string if field missing
-function getDurationBucket(totalDays: string | number | undefined): string {
-  const match = String(totalDays || "").match(/\d+/);
-  if (!match) return "Medium";
-  const days = parseInt(match[0], 10);
-  if (days <= 7) return "Short";
-  if (days <= 14) return "Medium";
-  return "Long";
+export function getAccommodationCategory(raw: string = ""): string {
+  const a = raw.toLowerCase();
+  if (a.includes("teahouse"))                                              return "Teahouses";
+  if (a.includes("rifugio") || a.includes("refuge") || a.includes("hut") ||
+      a.includes("albergue") || a.includes("gite") || a.includes("ryokan") ||
+      a.includes("minshuku") || a.includes("monastery") || a.includes("cave"))
+                                                                           return "Huts/Refuges";
+  if (a.includes("guesthouse") || a.includes("homestay") || a.includes("hotel") ||
+      a.includes("b&b") || a.includes("pension") || a.includes("lodge"))  return "Guesthouses";
+  if (a.includes("camp") || a.includes("wilderness") || a.includes("backcountry"))
+                                                                           return "Camping";
+  return "Guesthouses";
+}
+
+export function getTerrainCategory(raw: string = ""): string {
+  const t = raw.toLowerCase();
+  if (t.includes("volcanic"))                                              return "Volcanic";
+  if (t.includes("coastal") || t.includes("coast"))                       return "Coastal";
+  if (t.includes("jungle") || t.includes("rainforest") ||
+      t.includes("cloud forest") || t.includes("tropical"))               return "Jungle/Forest";
+  if (t.includes("desert") || t.includes("canyon") ||
+      t.includes("wadi") || t.includes("sandstone"))                      return "Desert";
+  if (t.includes("arctic") || t.includes("tundra") ||
+      t.includes("glacial") || t.includes("glaciated"))                   return "Glacial/Arctic";
+  if (t.includes("high alpine") || t.includes("high sierra") ||
+      t.includes("andean") || t.includes("high plateau") ||
+      t.includes("high desert"))                                           return "High Alpine";
+  if (t.includes("alpine"))                                               return "Alpine";
+  return "Alpine";
+}
+
+// ── Duration bucket ────────────────────────────────────────────────────────
+// Tier 4 (thru-hikes) always return "Thru" regardless of totalDays string,
+// which encodes the full distance (e.g. "150 days (thru) / 3-14 days (sections)").
+// This means the Duration filter can show "Thru" as a discrete option,
+// and tier-4 treks are excluded from Short/Medium/Long/Epic buckets.
+export function getDurationBucket(totalDays: string | number | undefined, tier?: number): string {
+  if (tier === 4) return "Thru";
+  const m = String(totalDays ?? "").match(/\d+/);
+  if (!m) return "Medium";
+  const d = parseInt(m[0], 10);
+  if (d <= 5)  return "Short";
+  if (d <= 10) return "Medium";
+  if (d <= 16) return "Long";
+  return "Epic";
+}
+
+export function getPopularityBucket(score: number | undefined): string {
+  if (!score) return "Hidden Gem";
+  if (score >= 8) return "Iconic";
+  if (score >= 5) return "Popular";
+  return "Hidden Gem";
 }
