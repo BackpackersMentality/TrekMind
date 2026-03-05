@@ -62,21 +62,23 @@ export default function Home() {
       <main className="flex-1 relative overflow-hidden min-h-0">
         {viewMode === "globe" && (
           <>
-            <button
-              onClick={() => setViewMode("cards")}
-              className="absolute top-4 left-4 z-30 px-4 py-2 bg-gray-900 text-white rounded-full shadow-xl hover:bg-black hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-bold border-2 border-white"
-            >
-              <LayoutGrid className="w-4 h-4" />
-              View Cards
-            </button>
-
-            {/* Trek Finder CTA — sits just right of View Cards */}
-            <Link href="/trek-finder">
-              <button className="absolute top-4 left-36 z-30 px-4 py-2 bg-primary text-primary-foreground rounded-full shadow-xl hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-bold">
-                <Sparkles className="w-4 h-4" />
-                Find My Trek
+            {/* Button row — stacks tightly on mobile, never overlaps */}
+            <div className="absolute top-3 left-3 z-30 flex gap-2">
+              <button
+                onClick={() => setViewMode("cards")}
+                className="px-3 py-1.5 bg-gray-900/95 text-white rounded-full shadow-lg hover:bg-black transition-all flex items-center gap-1.5 font-semibold text-xs border border-white/30 backdrop-blur-sm"
+              >
+                <LayoutGrid className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">View </span>Cards
               </button>
-            </Link>
+
+              <Link href="/trek-finder">
+                <button className="px-3 py-1.5 bg-primary text-primary-foreground rounded-full shadow-lg hover:bg-primary/90 transition-all flex items-center gap-1.5 font-semibold text-xs backdrop-blur-sm">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  Find My Trek
+                </button>
+              </Link>
+            </div>
             {/* FIX #1: height="100%" fills the full flex-1 main area */}
             <GlobeIntegration height="100%" className="animate-in fade-in duration-500" />
           </>
