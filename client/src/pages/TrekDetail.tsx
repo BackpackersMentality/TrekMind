@@ -17,14 +17,14 @@ import {
   Bed, Tent, Home, Building2, AlertTriangle
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useState, useMemo, useEffect, Suspense, lazy } from "react";
+import { useState, useMemo, useEffect, useRef, Suspense, lazy } from "react";
 import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from "@/lib/images";
 import { Helmet } from "react-helmet-async";
 
 const RouteMap = lazy(() => import("@/components/RouteMap"));
 
-// ── Map skeleton matches the actual rendered map height ───────────────────────
+// ── Map skeleton ──────────────────────────────────────────────────────────────
 function MapSkeleton() {
   return (
     <div className="w-full h-[500px] rounded-xl bg-muted/40 animate-pulse flex items-center justify-center border border-border">
@@ -32,6 +32,177 @@ function MapSkeleton() {
         <div className="w-8 h-8 border-2 border-muted-foreground/30 border-t-muted-foreground rounded-full animate-spin" />
         <span>Loading map…</span>
       </div>
+    </div>
+  );
+}
+
+// ── Elevation Profile ─────────────────────────────────────────────────────────
+// Reads maxAltM / maxAlt / elevation per itinerary day and draws a smooth
+// area chart using a <canvas> element — no extra dependencies needed.
+function ElevationProfile({ itinerary }: { itinerary: any[] }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  // Extract altitude values from itinerary days
+  const altData = useMemo(() => {
+    return itinerary
+      .map(day => {
+        const raw = day.maxAltM ?? day.maxAlt ?? day.elevation ?? null;
+        return raw !== null ? parseFloat(String(raw).replace(/[^\d.]/g, "")) : null;
+      })
+      .filter((v): v is number => v !== null && !isNaN(v));
+  }, [itinerary]);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || altData.length < 2) return;
+
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    canvas.width  = rect.width  * dpr;
+    canvas.height = rect.height * dpr;
+    const ctx = canvas.getContext("2d")!;
+    ctx.scale(dpr, dpr);
+
+    const W = rect.width;
+    const H = rect.height;
+    const pad = { top: 28, right: 16, bottom: 36, left: 52 };
+    const chartW = W - pad.left - pad.right;
+    const chartH = H - pad.top  - pad.bottom;
+
+    const minV = Math.min(...altData);
+    const maxV = Math.max(...altData);
+    const range = maxV - minV || 1;
+
+    // Helpers
+    const xOf = (i: number) => pad.left + (i / (altData.length - 1)) * chartW;
+    const yOf = (v: number) => pad.top + chartH - ((v - minV) / range) * chartH;
+
+    // Background
+    ctx.clearRect(0, 0, W, H);
+
+    // Horizontal grid lines + y-axis labels
+    const gridCount = 4;
+    for (let g = 0; g <= gridCount; g++) {
+      const y    = pad.top + (g / gridCount) * chartH;
+      const altV = Math.round(maxV - (g / gridCount) * range);
+      ctx.strokeStyle = "rgba(156,163,175,0.15)";
+      ctx.lineWidth   = 1;
+      ctx.setLineDash([4, 4]);
+      ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(pad.left + chartW, y); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle   = "rgb(107,114,128)";
+      ctx.font        = `10px system-ui`;
+      ctx.textAlign   = "right";
+      ctx.textBaseline = "middle";
+      ctx.fillText(altV.toLocaleString() + "m", pad.left - 6, y);
+    }
+
+    // Filled area gradient
+    const gradient = ctx.createLinearGradient(0, pad.top, 0, pad.top + chartH);
+    gradient.addColorStop(0,   "rgba(59,130,246,0.35)");
+    gradient.addColorStop(0.6, "rgba(59,130,246,0.12)");
+    gradient.addColorStop(1,   "rgba(59,130,246,0.02)");
+
+    ctx.beginPath();
+    ctx.moveTo(xOf(0), yOf(altData[0]));
+    for (let i = 1; i < altData.length; i++) {
+      // smooth cubic bezier between points
+      const x0 = xOf(i - 1), x1 = xOf(i);
+      const y0 = yOf(altData[i - 1]), y1 = yOf(altData[i]);
+      ctx.bezierCurveTo((x0 + x1) / 2, y0, (x0 + x1) / 2, y1, x1, y1);
+    }
+    ctx.lineTo(xOf(altData.length - 1), pad.top + chartH);
+    ctx.lineTo(xOf(0), pad.top + chartH);
+    ctx.closePath();
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    // Profile line
+    ctx.beginPath();
+    ctx.moveTo(xOf(0), yOf(altData[0]));
+    for (let i = 1; i < altData.length; i++) {
+      const x0 = xOf(i - 1), x1 = xOf(i);
+      const y0 = yOf(altData[i - 1]), y1 = yOf(altData[i]);
+      ctx.bezierCurveTo((x0 + x1) / 2, y0, (x0 + x1) / 2, y1, x1, y1);
+    }
+    ctx.strokeStyle = "rgb(59,130,246)";
+    ctx.lineWidth   = 2.5;
+    ctx.lineJoin    = "round";
+    ctx.stroke();
+
+    // Peak marker dot + label
+    const peakIdx = altData.indexOf(maxV);
+    const px = xOf(peakIdx), py = yOf(maxV);
+    ctx.beginPath();
+    ctx.arc(px, py, 5, 0, Math.PI * 2);
+    ctx.fillStyle   = "rgb(59,130,246)";
+    ctx.fill();
+    ctx.strokeStyle = "white";
+    ctx.lineWidth   = 2;
+    ctx.stroke();
+    ctx.fillStyle   = "rgb(30,58,138)";
+    ctx.font        = "bold 10px system-ui";
+    ctx.textAlign   = "center";
+    ctx.textBaseline = "bottom";
+    // nudge label above chart top if needed
+    const labelY = py - 10 < pad.top ? py + 16 : py - 10;
+    ctx.fillStyle = "rgb(59,130,246)";
+    ctx.fillText(maxV.toLocaleString() + "m", px, labelY);
+
+    // X-axis day labels — show first, last, and a few in between
+    ctx.fillStyle    = "rgb(107,114,128)";
+    ctx.font         = "10px system-ui";
+    ctx.textBaseline = "top";
+    const labelEvery = Math.max(1, Math.ceil(altData.length / 6));
+    for (let i = 0; i < altData.length; i++) {
+      if (i === 0 || i === altData.length - 1 || i % labelEvery === 0) {
+        ctx.textAlign = i === 0 ? "left" : i === altData.length - 1 ? "right" : "center";
+        ctx.fillText(`Day ${i + 1}`, xOf(i), pad.top + chartH + 6);
+      }
+    }
+  }, [altData]);
+
+  if (altData.length < 2) return null;
+
+  const maxAlt  = Math.max(...altData);
+  const gainPts = altData.filter((v, i) => i > 0 && v > altData[i - 1]);
+  const totalGain = gainPts.reduce((acc, v, i) => {
+    const idx = altData.indexOf(v); // find original index for gain calc
+    return acc;
+  }, 0);
+  // simpler gain calc
+  let gain = 0;
+  for (let i = 1; i < altData.length; i++) {
+    if (altData[i] > altData[i - 1]) gain += altData[i] - altData[i - 1];
+  }
+
+  return (
+    <div className="space-y-3">
+      {/* Summary stats row */}
+      <div className="grid grid-cols-3 gap-3">
+        {[
+          { label: "Peak altitude",  value: `${maxAlt.toLocaleString()}m` },
+          { label: "Start altitude", value: `${altData[0].toLocaleString()}m` },
+          { label: "Total ascent",   value: `~${gain.toLocaleString()}m` },
+        ].map(({ label, value }) => (
+          <div key={label} className="bg-muted/40 rounded-lg p-3 text-center border border-border/40">
+            <div className="text-xs text-muted-foreground mb-0.5">{label}</div>
+            <div className="text-sm font-bold text-foreground">{value}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Canvas chart */}
+      <div className="bg-card border border-border rounded-xl p-4">
+        <canvas
+          ref={canvasRef}
+          style={{ width: "100%", height: 180, display: "block" }}
+        />
+      </div>
+
+      <p className="text-xs text-muted-foreground">
+        Altitude data is approximate — based on overnight stop elevations per day, not continuous GPS track.
+      </p>
     </div>
   );
 }
@@ -250,6 +421,20 @@ export default function TrekDetail() {
             )}
           </Suspense>
         </div>
+
+        {/* Elevation Profile — shown once itinerary data is loaded */}
+        {itinerary && itinerary.length > 0 && (
+          <div className="pt-8 border-t">
+            <h2 className="text-2xl font-bold mb-1 flex items-center gap-2">
+              <TrendingUp className="w-6 h-6 text-primary" />
+              Elevation Profile
+            </h2>
+            <p className="text-sm text-muted-foreground mb-4">
+              Altitude by day across the full route.
+            </p>
+            <ElevationProfile itinerary={itinerary} />
+          </div>
+        )}
 
         {/* Itinerary */}
         {itinerary && itinerary.length > 0 && (
