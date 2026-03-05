@@ -1,7 +1,8 @@
 import { useState, useMemo } from "react";
+import { Link } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
-import { Map, LayoutGrid, Info } from "lucide-react";
+import { Map, LayoutGrid, Info, Sparkles } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterTreks } from "@/lib/filterTreks";
 import { GlobeIntegration } from "@/components/GlobeIntegration";
@@ -68,6 +69,14 @@ export default function Home() {
               <LayoutGrid className="w-4 h-4" />
               View Cards
             </button>
+
+            {/* Trek Finder CTA — sits just right of View Cards */}
+            <Link href="/trek-finder">
+              <button className="absolute top-4 left-36 z-30 px-4 py-2 bg-primary text-primary-foreground rounded-full shadow-xl hover:bg-primary/90 hover:shadow-2xl hover:scale-105 transition-all flex items-center gap-2 font-bold">
+                <Sparkles className="w-4 h-4" />
+                Find My Trek
+              </button>
+            </Link>
             {/* FIX #1: height="100%" fills the full flex-1 main area */}
             <GlobeIntegration height="100%" className="animate-in fade-in duration-500" />
           </>
