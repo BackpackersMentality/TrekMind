@@ -97,7 +97,25 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
             
             <div className="absolute bottom-3 left-3 right-3">
               <div className="flex items-center gap-2 mb-1">
-                <span className={`w-2 h-2 rounded-full shadow-sm ${currentTrek.tier === 1 ? 'bg-amber-500' : currentTrek.tier === 2 ? 'bg-slate-400' : 'bg-amber-700'}`} />
+                <span className={`w-2 h-2 rounded-full shadow-sm flex-shrink-0 ${
+                  currentTrek.tier === 1 ? 'bg-amber-400' :
+                  currentTrek.tier === 2 ? 'bg-blue-400'  :
+                  currentTrek.tier === 3 ? 'bg-slate-400' :
+                  currentTrek.tier === 4 ? 'bg-violet-400':
+                  'bg-blue-400'
+                }`} />
+                <span className={`text-[10px] font-bold uppercase tracking-wide ${
+                  currentTrek.tier === 1 ? 'text-amber-300' :
+                  currentTrek.tier === 2 ? 'text-blue-300'  :
+                  currentTrek.tier === 3 ? 'text-slate-300' :
+                  currentTrek.tier === 4 ? 'text-violet-300':
+                  'text-blue-300'
+                }`}>
+                  {currentTrek.tier === 4 ? 'Thru-hike' :
+                   currentTrek.tier === 1 ? 'Tier 1 · Iconic' :
+                   currentTrek.tier === 2 ? 'Tier 2 · Legendary' :
+                   'Tier 3 · Remote'}
+                </span>
                 <h3 className="text-lg font-bold text-white leading-tight truncate">
                   {currentTrek.name}
                 </h3>
