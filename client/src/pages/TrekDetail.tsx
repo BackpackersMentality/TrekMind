@@ -234,14 +234,6 @@ export default function TrekDetail() {
         {/* Interactive Route Map */}
         <div className="pt-8 border-t">
           <h2 className="text-2xl font-bold mb-2">Interactive Route Map</h2>
-          <p className="text-sm text-muted-foreground mb-6 flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 shrink-0" />
-            Shows key waypoints &amp; overnight stops only — not a navigation tool.
-            For full trail maps use{" "}
-            <a href="https://www.alltrails.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">AllTrails</a>,{" "}
-            <a href="https://www.gaiagps.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">Gaia GPS</a>,
-            or download the official GPX from the trail authority.
-          </p>
           {/*
             ✅ MapSkeleton matches h-[500px] — prevents CLS while Mapbox chunk downloads.
             RouteMap lazy chunk (~300KB) only downloads here, never on the homepage.
@@ -302,9 +294,17 @@ export default function TrekDetail() {
         <div className="pt-8 border-t">
           <div className="bg-muted/30 rounded-lg p-4 flex gap-3 items-start border border-border/50">
             <Info className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              Disclaimer: Trek itineraries, risk information, and gear recommendations provided by TrekMind are AI-generated and intended for planning inspiration only. Details may be incomplete or inaccurate. Always verify routes, permits, weather conditions, and equipment with official sources or certified guides. TrekMind has no affiliation with any gear brands mentioned.
-            </p>
+            <div className="space-y-2">
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-muted-foreground/80">AI-generated content:</span> Trek itineraries, risk information, and gear recommendations are AI-generated and intended for planning inspiration only. Details may be incomplete or inaccurate. Always verify routes, permits, weather conditions, and equipment requirements with official sources or certified guides before setting out. TrekMind has no affiliation with any gear brands mentioned.
+              </p>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                <span className="font-semibold text-muted-foreground/80">Route map:</span> The interactive map shows key waypoints and overnight stops only — it is not a navigation tool and should not be used in the field. For full trail maps and GPS tracks, use{" "}
+                <a href="https://www.alltrails.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">AllTrails</a>,{" "}
+                <a href="https://www.gaiagps.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-foreground transition-colors">Gaia GPS</a>,
+                {" "}or download the official GPX from the relevant trail authority.
+              </p>
+            </div>
           </div>
         </div>
 
