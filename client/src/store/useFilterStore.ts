@@ -1,54 +1,24 @@
-import { create } from "zustand";
+// store/useFilterStore.ts — multi-select: each filter is an array
+import { create } from 'zustand';
+import { FilterState, EMPTY_FILTERS } from '../types/filters';
 
-export type Continent = "Africa" | "Asia" | "Europe" | "North America" | "South America" | "Oceania";
-export type Accommodation = "Camping" | "Teahouses" | "Huts" | "Hotels" | "Various";
-export type LengthBucket = "Short" | "Medium" | "Long" | "Epic" | "Thru";
-export type TrekTier = "Tier 1" | "Tier 2" | "Tier 3" | "Tier 4";
-
-interface FilterState {
-  continent: "ALL" | Continent;
-  region: string | null;
-  accommodation: "ALL" | Accommodation;
-  length: "ALL" | LengthBucket;
-  tier: "ALL" | TrekTier;
-  duration: string | null;
-  difficulty: string | null;
-  isExpanded: boolean;
-  setContinent: (continent: "ALL" | Continent) => void;
-  setRegion: (region: string | null) => void;
-  setAccommodation: (accommodation: "ALL" | Accommodation) => void;
-  setLength: (length: "ALL" | LengthBucket) => void;
-  setTier: (tier: "ALL" | TrekTier) => void;
-  setDuration: (duration: string | null) => void;
-  setDifficulty: (difficulty: string | null) => void;
-  setIsExpanded: (isExpanded: boolean) => void;
-  resetFilters: () => void;
+interface FilterStore extends FilterState {
+  setTier:          (tier: string[]) => void;
+  setRegion:        (region: string[]) => void;
+  setAccommodation: (accommodation: string[]) => void;
+  setTerrain:       (terrain: string[]) => void;
+  setDuration:      (duration: string[]) => void;
+  setPopularity:    (popularity: string[]) => void;
+  resetFilters:     () => void;
 }
 
-export const useFilterStore = create<FilterState>((set) => ({
-  continent: "ALL",
-  region: null,
-  accommodation: "ALL",
-  length: "ALL",
-  tier: "ALL",
-  duration: null,
-  difficulty: null,
-  isExpanded: false,
-  setContinent: (continent) => set({ continent }),
-  setRegion: (region) => set({ region }),
+export const useFilterStore = create<FilterStore>((set) => ({
+  ...EMPTY_FILTERS,
+  setTier:          (tier)          => set({ tier }),
+  setRegion:        (region)        => set({ region }),
   setAccommodation: (accommodation) => set({ accommodation }),
-  setLength: (length) => set({ length }),
-  setTier: (tier) => set({ tier }),
-  setDuration: (duration) => set({ duration }),
-  setDifficulty: (difficulty) => set({ difficulty }),
-  setIsExpanded: (isExpanded) => set({ isExpanded }),
-  resetFilters: () => set({ 
-    continent: "ALL", 
-    region: null,
-    accommodation: "ALL", 
-    length: "ALL", 
-    tier: "ALL",
-    duration: null,
-    difficulty: null
-  }),
+  setTerrain:       (terrain)       => set({ terrain }),
+  setDuration:      (duration)      => set({ duration }),
+  setPopularity:    (popularity)    => set({ popularity }),
+  resetFilters:     ()              => set(EMPTY_FILTERS),
 }));
