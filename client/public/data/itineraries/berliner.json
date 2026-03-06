@@ -1,0 +1,124 @@
+{
+  "sheetName": "Berliner Höhenweg",
+  "slug": "berliner",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Ginzling to Friesenberghaus",
+      "distanceKm": "11",
+      "elevGainM": "1250",
+      "elevLossM": "200",
+      "maxAltM": "2498.0",
+      "lat": 47.107,
+      "lng": 11.843,
+      "overnight": "Friesenberghaus",
+      "mapNote": "Zillertal valley start. Climb to first hut above the treeline. 2498m."
+    },
+    {
+      "day": 2,
+      "route": "Friesenberghaus to Olpererhütte",
+      "distanceKm": "10",
+      "elevGainM": "650",
+      "elevLossM": "500",
+      "maxAltM": "2388.0",
+      "lat": 47.068,
+      "lng": 11.766,
+      "overnight": "Olpererhütte",
+      "mapNote": "The famous suspended bridge. Schlegeis reservoir views. 2388m."
+    },
+    {
+      "day": 3,
+      "route": "Olpererhütte to Furtschaglhaus",
+      "distanceKm": "13",
+      "elevGainM": "900",
+      "elevLossM": "900",
+      "maxAltM": "2295.0",
+      "lat": 47.028,
+      "lng": 11.747,
+      "overnight": "Furtschaglhaus",
+      "mapNote": "Glacier traverses. Crevasse awareness needed. 2295m."
+    },
+    {
+      "day": 4,
+      "route": "Furtschaglhaus to Greizer Hütte",
+      "distanceKm": "15",
+      "elevGainM": "800",
+      "elevLossM": "700",
+      "maxAltM": "2227.0",
+      "lat": 47.075,
+      "lng": 11.97,
+      "overnight": "Greizer Hütte",
+      "mapNote": "The high route above Floitengrund valley. Most remote section. 2227m."
+    },
+    {
+      "day": 5,
+      "route": "Greizer to Kasseler Hütte",
+      "distanceKm": "12",
+      "elevGainM": "850",
+      "elevLossM": "800",
+      "maxAltM": "2178.0",
+      "lat": 47.108,
+      "lng": 12.01,
+      "overnight": "Kasseler Hütte",
+      "mapNote": "Dramatic Stillupgrund crossing. Hanging valley scenery. 2178m."
+    },
+    {
+      "day": 6,
+      "route": "Kasseler to Edelhütte",
+      "distanceKm": "16",
+      "elevGainM": "1200",
+      "elevLossM": "1100",
+      "maxAltM": "2238.0",
+      "lat": 47.179,
+      "lng": 11.93,
+      "overnight": "Edelhütte",
+      "mapNote": "Cross into the lower Zillertal system. Final hut. 2238m."
+    },
+    {
+      "day": 7,
+      "route": "Edelhütte to Mayrhofen",
+      "distanceKm": "8",
+      "elevGainM": "50",
+      "elevLossM": "1300",
+      "maxAltM": "633.0",
+      "lat": 47.166,
+      "lng": 11.862,
+      "overnight": "Mayrhofen",
+      "mapNote": "Descent to the Zillertal's main valley town. Route complete. 633m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Olperer",
+      "lat": 47.058,
+      "lng": 11.76,
+      "type": "summit",
+      "altM": 3476,
+      "note": "Zillertal's signature peak. Visible from the famous suspension bridge."
+    },
+    {
+      "name": "Olperer Suspension Bridge",
+      "lat": 47.068,
+      "lng": 11.766,
+      "type": "landmark",
+      "altM": 2388,
+      "note": "Instagram's most photographed bridge. 100m above Schlegeis reservoir."
+    },
+    {
+      "name": "Schlegeis Reservoir",
+      "lat": 47.08,
+      "lng": 11.79,
+      "type": "viewpoint",
+      "altM": 1800,
+      "note": "Turquoise high-altitude reservoir. Road accessible but stunning."
+    },
+    {
+      "name": "Großer Möseler",
+      "lat": 47.03,
+      "lng": 11.878,
+      "type": "summit",
+      "altM": 3480,
+      "note": "Second highest Zillertal peak. Summit panorama includes Dolomites."
+    }
+  ]
+}

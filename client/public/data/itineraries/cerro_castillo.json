@@ -1,0 +1,88 @@
+{
+  "sheetName": "Cerro Castillo Circuit",
+  "slug": "cerro_castillo",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Villa Cerro Castillo to Laguna Desierta",
+      "distanceKm": "16",
+      "elevGainM": "1100",
+      "elevLossM": "200",
+      "maxAltM": "1550.0",
+      "lat": -46.1,
+      "lng": -72.18,
+      "overnight": "Laguna Desierta",
+      "mapNote": "Steep climb from Patagonian steppe to first views of the castle spires. 1550m."
+    },
+    {
+      "day": 2,
+      "route": "Laguna Desierta to Laguna Cerro Castillo",
+      "distanceKm": "13",
+      "elevGainM": "600",
+      "elevLossM": "700",
+      "maxAltM": "1400.0",
+      "lat": -46.062,
+      "lng": -72.23,
+      "overnight": "Lago Cerro Castillo",
+      "mapNote": "Glacier lagoon below the basalt towers. Icebergs calving constantly. 1400m."
+    },
+    {
+      "day": 3,
+      "route": "Laguna Cerro Castillo to Campamento Neozelandes",
+      "distanceKm": "14",
+      "elevGainM": "800",
+      "elevLossM": "500",
+      "maxAltM": "1600.0",
+      "lat": -46.04,
+      "lng": -72.29,
+      "overnight": "Camp Neozelandes",
+      "mapNote": "Cross Paso Cerro Castillo with full tower panorama. 1600m."
+    },
+    {
+      "day": 4,
+      "route": "Campamento Neozelandes to Villa Bahía Murta",
+      "distanceKm": "16",
+      "elevGainM": "200",
+      "elevLossM": "1200",
+      "maxAltM": "200.0",
+      "lat": -46.03,
+      "lng": -72.42,
+      "overnight": "Villa Bahía Murta",
+      "mapNote": "Descend to Carretera Austral and General Carrera Lake. 200m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Cerro Castillo",
+      "lat": -46.062,
+      "lng": -72.23,
+      "type": "summit",
+      "altM": 2675,
+      "note": "The castle — basalt spires hanging over a hanging glacier. Patagonia's hidden gem."
+    },
+    {
+      "name": "Lago Cerro Castillo",
+      "lat": -46.062,
+      "lng": -72.23,
+      "type": "glacier",
+      "altM": 1400,
+      "note": "Turquoise glacial lake with calving ice from Glaciar Cerro Castillo."
+    },
+    {
+      "name": "Paso Cerro Castillo",
+      "lat": -46.04,
+      "lng": -72.27,
+      "type": "pass",
+      "altM": 1700,
+      "note": "Full panoramic view of the castle from above. Best photography point."
+    },
+    {
+      "name": "General Carrera Lake",
+      "lat": -46.6,
+      "lng": -72.7,
+      "type": "viewpoint",
+      "altM": 217,
+      "note": "World's second largest lake in South America. Marble Caves nearby."
+    }
+  ]
+}

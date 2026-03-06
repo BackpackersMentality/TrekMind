@@ -1,0 +1,112 @@
+{
+  "sheetName": "Wind River High Route",
+  "slug": "wind_river",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Big Sandy Lodge to Big Sandy Lake",
+      "distanceKm": "10",
+      "elevGainM": "350",
+      "elevLossM": "50",
+      "maxAltM": "2926.0",
+      "lat": 42.703,
+      "lng": -109.228,
+      "overnight": "Big Sandy Lake",
+      "mapNote": "Classic Wyoming trail start. Pine forests to open granite. 2926m."
+    },
+    {
+      "day": 2,
+      "route": "Big Sandy Lake to Cirque of Towers",
+      "distanceKm": "14",
+      "elevGainM": "700",
+      "elevLossM": "200",
+      "maxAltM": "3200.0",
+      "lat": 42.735,
+      "lng": -109.224,
+      "overnight": "Cirque of Towers",
+      "mapNote": "Destination highlight — granite spires surrounding a perfect alpine lake. 3200m."
+    },
+    {
+      "day": 3,
+      "route": "Cirque of Towers to Lonesome Lake",
+      "distanceKm": "13",
+      "elevGainM": "550",
+      "elevLossM": "480",
+      "maxAltM": "3050.0",
+      "lat": 42.778,
+      "lng": -109.27,
+      "overnight": "Lonesome Lake",
+      "mapNote": "Cross Jackass Pass, descend to impossibly blue Lonesome Lake. 3050m."
+    },
+    {
+      "day": 4,
+      "route": "Lonesome Lake to Skull Lake",
+      "distanceKm": "15",
+      "elevGainM": "620",
+      "elevLossM": "390",
+      "maxAltM": "3100.0",
+      "lat": 42.82,
+      "lng": -109.35,
+      "overnight": "Skull Lake",
+      "mapNote": "Off-trail navigation begins in earnest. Granite slabs and boulder fields. 3100m."
+    },
+    {
+      "day": 5,
+      "route": "Skull Lake to Shadow Lake",
+      "distanceKm": "16",
+      "elevGainM": "700",
+      "elevLossM": "650",
+      "maxAltM": "3000.0",
+      "lat": 42.865,
+      "lng": -109.42,
+      "overnight": "Shadow Lake",
+      "mapNote": "Spectacular high route traversing unnamed passes. Route-finding essential. 3000m."
+    },
+    {
+      "day": 6,
+      "route": "Shadow Lake to Elkhart Park",
+      "distanceKm": "18",
+      "elevGainM": "250",
+      "elevLossM": "980",
+      "maxAltM": "2490.0",
+      "lat": 42.905,
+      "lng": -109.6,
+      "overnight": "Elkhart Park TH",
+      "mapNote": "Final descent on good trail. Fremont Lake visible below. 2490m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Cirque of Towers",
+      "lat": 42.735,
+      "lng": -109.224,
+      "type": "viewpoint",
+      "altM": 3200,
+      "note": "One of America's most dramatic alpine cirques. 10 granite spires."
+    },
+    {
+      "name": "Jackass Pass",
+      "lat": 42.754,
+      "lng": -109.224,
+      "type": "pass",
+      "altM": 3323,
+      "note": "Gateway to the Cirque. Views back to Wind River peaks."
+    },
+    {
+      "name": "Gannet Peak",
+      "lat": 43.184,
+      "lng": -109.654,
+      "type": "summit",
+      "altM": 4207,
+      "note": "Wyoming's highest point. Visible from high points on the route."
+    },
+    {
+      "name": "Lonesome Lake",
+      "lat": 42.778,
+      "lng": -109.27,
+      "type": "viewpoint",
+      "altM": 3012,
+      "note": "Electric blue glacial lake below sheer granite walls."
+    }
+  ]
+}

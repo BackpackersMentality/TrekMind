@@ -1,0 +1,124 @@
+{
+  "sheetName": "Stubai High Trail",
+  "slug": "stubai",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Neustift to Starkenburger Hut",
+      "distanceKm": "11",
+      "elevGainM": "1450",
+      "elevLossM": "200",
+      "maxAltM": "2237.0",
+      "lat": 47.057,
+      "lng": 11.118,
+      "overnight": "Starkenburger Hütte",
+      "mapNote": "Climb from Stubaital valley to first hut. Panoramic terrace views. 2237m."
+    },
+    {
+      "day": 2,
+      "route": "Starkenburger to Bremer Hut",
+      "distanceKm": "15",
+      "elevGainM": "950",
+      "elevLossM": "950",
+      "maxAltM": "2413.0",
+      "lat": 47.06,
+      "lng": 11.22,
+      "overnight": "Bremer Hütte",
+      "mapNote": "Traverse the Wilde Grube. Wild high-alpine terrain. 2413m."
+    },
+    {
+      "day": 3,
+      "route": "Bremer to Innsbrucker Hut",
+      "distanceKm": "12",
+      "elevGainM": "950",
+      "elevLossM": "650",
+      "maxAltM": "2369.0",
+      "lat": 47.018,
+      "lng": 11.313,
+      "overnight": "Innsbrucker Hütte",
+      "mapNote": "Highest fixed point on trail. Glacier views in every direction. 2369m."
+    },
+    {
+      "day": 4,
+      "route": "Innsbrucker to Sulzenauhütte",
+      "distanceKm": "14",
+      "elevGainM": "600",
+      "elevLossM": "900",
+      "maxAltM": "1884.0",
+      "lat": 47.021,
+      "lng": 11.151,
+      "overnight": "Sulzenauhütte",
+      "mapNote": "Cross the Feuerstein saddle. Waterfall scenery on descent. 1884m."
+    },
+    {
+      "day": 5,
+      "route": "Sulzenauhütte to Nürnberger Hut",
+      "distanceKm": "12",
+      "elevGainM": "900",
+      "elevLossM": "600",
+      "maxAltM": "2280.0",
+      "lat": 47.005,
+      "lng": 11.082,
+      "overnight": "Nürnberger Hütte",
+      "mapNote": "Below Wilder Freiger glacier. Classic Stubai high camp. 2280m."
+    },
+    {
+      "day": 6,
+      "route": "Nürnberger to Dresdner Hut",
+      "distanceKm": "13",
+      "elevGainM": "800",
+      "elevLossM": "700",
+      "maxAltM": "2302.0",
+      "lat": 47.036,
+      "lng": 11.083,
+      "overnight": "Dresdner Hütte",
+      "mapNote": "Final high traverse. Zugspitze visible in clear conditions. 2302m."
+    },
+    {
+      "day": 7,
+      "route": "Dresdner Hut to Neustift",
+      "distanceKm": "10",
+      "elevGainM": "100",
+      "elevLossM": "1250",
+      "maxAltM": "950.0",
+      "lat": 47.1,
+      "lng": 11.12,
+      "overnight": "Neustift im Stubaital",
+      "mapNote": "Gondola option or walk out. Circuit complete. 950m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Wilder Pfaff",
+      "lat": 47.029,
+      "lng": 11.126,
+      "type": "summit",
+      "altM": 3456,
+      "note": "Stubai's classic summit ascent from Dresdner Hütte."
+    },
+    {
+      "name": "Stubaier Gletscher",
+      "lat": 47.036,
+      "lng": 11.083,
+      "type": "glacier",
+      "altM": 2900,
+      "note": "Austria's largest easily-accessible glacier. Visible from multiple huts."
+    },
+    {
+      "name": "Innsbrucker Hütte",
+      "lat": 47.018,
+      "lng": 11.313,
+      "type": "landmark",
+      "altM": 2369,
+      "note": "Most spectacular hut position on the circuit."
+    },
+    {
+      "name": "Wilder Freiger",
+      "lat": 47.005,
+      "lng": 11.082,
+      "type": "summit",
+      "altM": 3418,
+      "note": "Highest peak in the southern Stubai. Classic glacier tour summit."
+    }
+  ]
+}

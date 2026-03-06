@@ -1,0 +1,100 @@
+{
+  "sheetName": "Dientes Circuit",
+  "slug": "dientes",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Puerto Williams to Laguna del Salto",
+      "distanceKm": "8",
+      "elevGainM": "600",
+      "elevLossM": "100",
+      "maxAltM": "280.0",
+      "lat": -55.04,
+      "lng": -67.67,
+      "overnight": "Laguna del Salto",
+      "mapNote": "Town exit, immediate subantarctic forest. Wind picks up fast. 280m."
+    },
+    {
+      "day": 2,
+      "route": "Laguna del Salto to Laguna Los Dientes",
+      "distanceKm": "10",
+      "elevGainM": "700",
+      "elevLossM": "300",
+      "maxAltM": "430.0",
+      "lat": -55.06,
+      "lng": -67.71,
+      "overnight": "Laguna Los Dientes",
+      "mapNote": "First views of the Dientes spires. Most dramatic section. 430m."
+    },
+    {
+      "day": 3,
+      "route": "Laguna Los Dientes to Laguna Escondida",
+      "distanceKm": "11",
+      "elevGainM": "400",
+      "elevLossM": "500",
+      "maxAltM": "350.0",
+      "lat": -55.075,
+      "lng": -67.76,
+      "overnight": "Laguna Escondida",
+      "mapNote": "Cross Col sur Paso Virginia. Beech forest camp. 350m."
+    },
+    {
+      "day": 4,
+      "route": "Laguna Escondida to Paso Ventarrón",
+      "distanceKm": "12",
+      "elevGainM": "500",
+      "elevLossM": "400",
+      "maxAltM": "450.0",
+      "lat": -55.055,
+      "lng": -67.81,
+      "overnight": "Near Paso Ventarrón",
+      "mapNote": "Southernmost section. Exposed moorland. Serious wind exposure. 450m."
+    },
+    {
+      "day": 5,
+      "route": "Paso Ventarrón to Puerto Williams",
+      "distanceKm": "12",
+      "elevGainM": "100",
+      "elevLossM": "550",
+      "maxAltM": "50.0",
+      "lat": -55.02,
+      "lng": -67.62,
+      "overnight": "Puerto Williams",
+      "mapNote": "Final descent to world's southernmost city. Circuit complete. 50m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Dientes de Navarino",
+      "lat": -55.06,
+      "lng": -67.7,
+      "type": "summit",
+      "altM": 1329,
+      "note": "The 'Teeth of Navarino'. Southernmost trekking peaks in the world."
+    },
+    {
+      "name": "Paso Virginia",
+      "lat": -55.064,
+      "lng": -67.748,
+      "type": "pass",
+      "altM": 770,
+      "note": "Main col crossing. Exposed to Fuegian winds. Usually snowfield."
+    },
+    {
+      "name": "Beagle Channel View",
+      "lat": -55.04,
+      "lng": -67.66,
+      "type": "viewpoint",
+      "altM": 350,
+      "note": "Views across Beagle Channel to Argentine Tierra del Fuego."
+    },
+    {
+      "name": "Puerto Williams",
+      "lat": -55.02,
+      "lng": -67.62,
+      "type": "landmark",
+      "altM": 50,
+      "note": "World's southernmost city. Population ~2,800. End of the trail."
+    }
+  ]
+}

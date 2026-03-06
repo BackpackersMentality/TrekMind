@@ -1,0 +1,88 @@
+{
+  "sheetName": "Mount Meru Trek",
+  "slug": "mount_meru",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Momella Gate to Miriakamba Hut",
+      "distanceKm": "10",
+      "elevGainM": "1200",
+      "elevLossM": "100",
+      "maxAltM": "2514.0",
+      "lat": -3.224,
+      "lng": 36.746,
+      "overnight": "Miriakamba Hut",
+      "mapNote": "Through giraffe and buffalo country in Arusha NP. Forest to heath zone. 2514m."
+    },
+    {
+      "day": 2,
+      "route": "Miriakamba to Saddle Hut",
+      "distanceKm": "10",
+      "elevGainM": "1385",
+      "elevLossM": "100",
+      "maxAltM": "3570.0",
+      "lat": -3.225,
+      "lng": 36.752,
+      "overnight": "Saddle Hut",
+      "mapNote": "Moorland zone. Colobus monkeys. First views of the ash cone crater. 3570m."
+    },
+    {
+      "day": 3,
+      "route": "Saddle Hut to Summit + descent",
+      "distanceKm": "14",
+      "elevGainM": "990",
+      "elevLossM": "990",
+      "maxAltM": "4566.0",
+      "lat": -3.24,
+      "lng": 36.751,
+      "overnight": "Saddle Hut",
+      "mapNote": "Pre-dawn start. Dramatic knife-edge ridge to Socialist Peak summit. 4566m."
+    },
+    {
+      "day": 4,
+      "route": "Saddle Hut to Momella Gate",
+      "distanceKm": "14",
+      "elevGainM": "0",
+      "elevLossM": "2390",
+      "maxAltM": "1524.0",
+      "lat": -3.224,
+      "lng": 36.746,
+      "overnight": "Momella Gate (exit)",
+      "mapNote": "Full descent through all vegetation zones. Wildlife on way out. 1524m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Socialist Peak",
+      "lat": -3.24,
+      "lng": 36.751,
+      "type": "summit",
+      "altM": 4566,
+      "note": "Meru summit. Named by Julius Nyerere. Views of Kilimanjaro at sunrise."
+    },
+    {
+      "name": "Ash Cone",
+      "lat": -3.236,
+      "lng": 36.75,
+      "type": "viewpoint",
+      "altM": 3800,
+      "note": "1910 eruption cone inside the main crater. Eerie volcanic landscape."
+    },
+    {
+      "name": "Momella Lakes",
+      "lat": -3.261,
+      "lng": 36.793,
+      "type": "viewpoint",
+      "altM": 1524,
+      "note": "Alkaline lakes with flamingos. Hippos at dawn."
+    },
+    {
+      "name": "Little Meru",
+      "lat": -3.229,
+      "lng": 36.75,
+      "type": "summit",
+      "altM": 3820,
+      "note": "Secondary summit. Used as acclimatisation point before main ascent."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "sheetName": "Makalu Base Camp",
+  "slug": "makalu_bc",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Num to Seduwa",
+      "distanceKm": "8",
+      "elevGainM": "900",
+      "elevLossM": "500",
+      "maxAltM": "1480.0",
+      "lat": 27.372,
+      "lng": 87.207,
+      "overnight": "Seduwa",
+      "mapNote": "Trailhead village. Remote eastern Nepal. Rice paddies give way to forest. 1480m."
+    },
+    {
+      "day": 2,
+      "route": "Seduwa to Tashigaon",
+      "distanceKm": "14",
+      "elevGainM": "1400",
+      "elevLossM": "200",
+      "maxAltM": "2100.0",
+      "lat": 27.432,
+      "lng": 87.186,
+      "overnight": "Tashigaon",
+      "mapNote": "Last permanent settlement. 1400m climb through terraced fields. 2100m."
+    },
+    {
+      "day": 3,
+      "route": "Tashigaon to Khongma Danda",
+      "distanceKm": "12",
+      "elevGainM": "1700",
+      "elevLossM": "200",
+      "maxAltM": "3559.0",
+      "lat": 27.468,
+      "lng": 87.122,
+      "overnight": "Khongma Danda",
+      "mapNote": "Strenuous climb from subtropical to alpine. Stunning views behind. 3559m."
+    },
+    {
+      "day": 4,
+      "route": "Khongma to Dobato",
+      "distanceKm": "13",
+      "elevGainM": "800",
+      "elevLossM": "400",
+      "maxAltM": "3630.0",
+      "lat": 27.499,
+      "lng": 87.06,
+      "overnight": "Dobato",
+      "mapNote": "Enter the Barun Valley. High yak pastures. First Makalu glimpse. 3630m."
+    },
+    {
+      "day": 5,
+      "route": "Dobato to Lower Barun Camp",
+      "distanceKm": "14",
+      "elevGainM": "700",
+      "elevLossM": "300",
+      "maxAltM": "3900.0",
+      "lat": 27.531,
+      "lng": 87.01,
+      "overnight": "Lower Barun Camp",
+      "mapNote": "The Barun Valley opens up. Makalu's south face dominates. 3900m."
+    },
+    {
+      "day": 6,
+      "route": "Lower Barun to Sherson",
+      "distanceKm": "10",
+      "elevGainM": "750",
+      "elevLossM": "200",
+      "maxAltM": "4615.0",
+      "lat": 27.573,
+      "lng": 86.98,
+      "overnight": "Sherson",
+      "mapNote": "Last major camp before base camp. Stunning valley position. 4615m."
+    },
+    {
+      "day": 7,
+      "route": "Sherson to Makalu Base Camp",
+      "distanceKm": "10",
+      "elevGainM": "935",
+      "elevLossM": "0",
+      "maxAltM": "5550.0",
+      "lat": 27.612,
+      "lng": 86.926,
+      "overnight": "Makalu Base Camp",
+      "mapNote": "The fifth highest peak on Earth from below. Complete isolation. 5550m."
+    },
+    {
+      "day": 8,
+      "route": "Base Camp rest/acclimatisation",
+      "distanceKm": "5",
+      "elevGainM": "200",
+      "elevLossM": "200",
+      "maxAltM": "5550.0",
+      "lat": 27.612,
+      "lng": 86.926,
+      "overnight": "Makalu Base Camp",
+      "mapNote": "Explore glacier margins. Incredible views into Tibet. 5550m."
+    },
+    {
+      "day": 9,
+      "route": "Base Camp to Sherson",
+      "distanceKm": "10",
+      "elevGainM": "0",
+      "elevLossM": "935",
+      "maxAltM": "4615.0",
+      "lat": 27.573,
+      "lng": 86.98,
+      "overnight": "Sherson",
+      "mapNote": "Descent begins. Body grateful for dropping altitude. 4615m."
+    },
+    {
+      "day": 10,
+      "route": "Sherson to Dobato",
+      "distanceKm": "16",
+      "elevGainM": "200",
+      "elevLossM": "900",
+      "maxAltM": "3630.0",
+      "lat": 27.499,
+      "lng": 87.06,
+      "overnight": "Dobato",
+      "mapNote": "Long valley descent. Barun River rushing below. 3630m."
+    },
+    {
+      "day": 11,
+      "route": "Dobato to Tashigaon",
+      "distanceKm": "19",
+      "elevGainM": "400",
+      "elevLossM": "1800",
+      "maxAltM": "2100.0",
+      "lat": 27.432,
+      "lng": 87.186,
+      "overnight": "Tashigaon",
+      "mapNote": "Big descent day. Subtropical warmth returns. 2100m."
+    },
+    {
+      "day": 12,
+      "route": "Tashigaon to Num (drive exit)",
+      "distanceKm": "22",
+      "elevGainM": "500",
+      "elevLossM": "1900",
+      "maxAltM": "950.0",
+      "lat": 27.372,
+      "lng": 87.207,
+      "overnight": "Num",
+      "mapNote": "Final walk out. Jeep to Tumlingtar for flight. 950m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Makalu",
+      "lat": 27.889,
+      "lng": 87.088,
+      "type": "summit",
+      "altM": 8485,
+      "note": "World's fifth highest peak. The pyramid-shaped giant of eastern Nepal."
+    },
+    {
+      "name": "Makalu Base Camp",
+      "lat": 27.612,
+      "lng": 86.926,
+      "type": "base_camp",
+      "altM": 5550,
+      "note": "Remote and rarely visited. One of the most spectacular in the Himalaya."
+    },
+    {
+      "name": "Barun Valley",
+      "lat": 27.54,
+      "lng": 87.0,
+      "type": "viewpoint",
+      "altM": 3900,
+      "note": "Protected valley — one of the last pristine Himalayan valleys remaining."
+    },
+    {
+      "name": "Baruntse",
+      "lat": 27.869,
+      "lng": 86.953,
+      "type": "summit",
+      "altM": 7129,
+      "note": "Neighbouring 7000m peak visible from the route. Popular mountaineering objective."
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "sheetName": "Dhaulagiri Circuit",
+  "slug": "dhaulagiri",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Beni to Darbang",
+      "distanceKm": "18",
+      "elevGainM": "600",
+      "elevLossM": "0",
+      "maxAltM": "1180.0",
+      "lat": 28.332,
+      "lng": 83.37,
+      "overnight": "Darbang",
+      "mapNote": "Road walk start. Myagdi River. Teahouses thin quickly. 1180m."
+    },
+    {
+      "day": 2,
+      "route": "Darbang to Muri",
+      "distanceKm": "16",
+      "elevGainM": "700",
+      "elevLossM": "200",
+      "maxAltM": "1840.0",
+      "lat": 28.43,
+      "lng": 83.31,
+      "overnight": "Muri",
+      "mapNote": "River gorge narrows. Suspension bridges. Tropical forest. 1840m."
+    },
+    {
+      "day": 3,
+      "route": "Muri to Boghara",
+      "distanceKm": "14",
+      "elevGainM": "900",
+      "elevLossM": "200",
+      "maxAltM": "2130.0",
+      "lat": 28.512,
+      "lng": 83.269,
+      "overnight": "Boghara",
+      "mapNote": "Last major settlement. Stock up. Route becomes remote. 2130m."
+    },
+    {
+      "day": 4,
+      "route": "Boghara to Dobang",
+      "distanceKm": "12",
+      "elevGainM": "1050",
+      "elevLossM": "200",
+      "maxAltM": "3010.0",
+      "lat": 28.589,
+      "lng": 83.248,
+      "overnight": "Dobang",
+      "mapNote": "Dhaulagiri's south face begins to loom. 3010m."
+    },
+    {
+      "day": 5,
+      "route": "Dobang to Italian Base Camp",
+      "distanceKm": "11",
+      "elevGainM": "1500",
+      "elevLossM": "200",
+      "maxAltM": "3660.0",
+      "lat": 28.66,
+      "lng": 83.234,
+      "overnight": "Italian Base Camp",
+      "mapNote": "Historic base camp of the first Dhaulagiri ascent. 3660m."
+    },
+    {
+      "day": 6,
+      "route": "Italian BC to Dhaulagiri Base Camp",
+      "distanceKm": "11",
+      "elevGainM": "1300",
+      "elevLossM": "300",
+      "maxAltM": "4750.0",
+      "lat": 28.718,
+      "lng": 83.197,
+      "overnight": "Dhaulagiri Base Camp",
+      "mapNote": "The seventh highest mountain from below. Immense scale. 4750m."
+    },
+    {
+      "day": 7,
+      "route": "Base Camp to French Pass",
+      "distanceKm": "10",
+      "elevGainM": "610",
+      "elevLossM": "0",
+      "maxAltM": "5360.0",
+      "lat": 28.7,
+      "lng": 83.171,
+      "overnight": "Camp below French Pass",
+      "mapNote": "The circuit's highest point. Crevassed glacier approach. 5360m."
+    },
+    {
+      "day": 8,
+      "route": "French Pass to Hidden Valley",
+      "distanceKm": "8",
+      "elevGainM": "0",
+      "elevLossM": "500",
+      "maxAltM": "4760.0",
+      "lat": 28.7,
+      "lng": 83.14,
+      "overnight": "Hidden Valley Camp",
+      "mapNote": "Over the pass into the extraordinary hidden plateau. 4760m."
+    },
+    {
+      "day": 9,
+      "route": "Hidden Valley to Marpha",
+      "distanceKm": "18",
+      "elevGainM": "0",
+      "elevLossM": "2700",
+      "maxAltM": "2665.0",
+      "lat": 28.748,
+      "lng": 83.676,
+      "overnight": "Marpha",
+      "mapNote": "Epic descent to the Kali Gandaki. Apple orchards. Civilisation. 2665m."
+    },
+    {
+      "day": 10,
+      "route": "Marpha to Larjung",
+      "distanceKm": "8",
+      "elevGainM": "50",
+      "elevLossM": "100",
+      "maxAltM": "2560.0",
+      "lat": 28.68,
+      "lng": 83.67,
+      "overnight": "Larjung",
+      "mapNote": "Short valley day. Rest after the circuit's hardest section. 2560m."
+    },
+    {
+      "day": 11,
+      "route": "Larjung to Kalopani",
+      "distanceKm": "12",
+      "elevGainM": "50",
+      "elevLossM": "100",
+      "maxAltM": "2530.0",
+      "lat": 28.62,
+      "lng": 83.65,
+      "overnight": "Kalopani",
+      "mapNote": "Annapurna Circuit junction. Trek connects here. 2530m."
+    },
+    {
+      "day": 12,
+      "route": "Kalopani to Tatopani",
+      "distanceKm": "18",
+      "elevGainM": "50",
+      "elevLossM": "800",
+      "maxAltM": "1190.0",
+      "lat": 28.49,
+      "lng": 83.62,
+      "overnight": "Tatopani",
+      "mapNote": "Famous hot springs. Soak tired legs. 1190m."
+    },
+    {
+      "day": 13,
+      "route": "Tatopani to Beni (bus)",
+      "distanceKm": "18",
+      "elevGainM": "50",
+      "elevLossM": "750",
+      "maxAltM": "900.0",
+      "lat": 28.34,
+      "lng": 83.52,
+      "overnight": "Beni",
+      "mapNote": "Trail or bus to Beni. Circuit complete. 900m."
+    },
+    {
+      "day": 14,
+      "route": "Buffer/acclimatisation day",
+      "distanceKm": "0",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "1190.0",
+      "lat": 28.49,
+      "lng": 83.62,
+      "overnight": "Tatopani",
+      "mapNote": "Rest day built in for weather or altitude adjustment. 1190m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Dhaulagiri",
+      "lat": 28.698,
+      "lng": 83.49,
+      "type": "summit",
+      "altM": 8167,
+      "note": "World's seventh highest mountain. Meaning 'dazzling white mountain'."
+    },
+    {
+      "name": "French Pass",
+      "lat": 28.7,
+      "lng": 83.171,
+      "type": "pass",
+      "altM": 5360,
+      "note": "Most demanding crossing on the circuit. Crevasse navigation required."
+    },
+    {
+      "name": "Hidden Valley",
+      "lat": 28.7,
+      "lng": 83.14,
+      "type": "viewpoint",
+      "altM": 4760,
+      "note": "High plateau hidden behind Dhaulagiri. Completely isolated from the world."
+    },
+    {
+      "name": "Italian Base Camp",
+      "lat": 28.66,
+      "lng": 83.234,
+      "type": "base_camp",
+      "altM": 3660,
+      "note": "Original 1960 French/Swiss base camp. Historic mountaineering site."
+    }
+  ]
+}

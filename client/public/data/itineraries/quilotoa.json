@@ -1,0 +1,88 @@
+{
+  "sheetName": "Quilotoa Loop",
+  "slug": "quilotoa",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Sigchos to Isinliví",
+      "distanceKm": "15",
+      "elevGainM": "600",
+      "elevLossM": "400",
+      "maxAltM": "2900.0",
+      "lat": -0.794,
+      "lng": -78.879,
+      "overnight": "Isinliví",
+      "mapNote": "Start in agricultural highlands. Small indigenous Kichwa villages. 2900m."
+    },
+    {
+      "day": 2,
+      "route": "Isinliví to Chugchilán",
+      "distanceKm": "18",
+      "elevGainM": "700",
+      "elevLossM": "900",
+      "maxAltM": "3180.0",
+      "lat": -0.829,
+      "lng": -78.929,
+      "overnight": "Chugchilán",
+      "mapNote": "Cloud forest descent and ascent. Andean condors often visible. 3180m."
+    },
+    {
+      "day": 3,
+      "route": "Chugchilán to Quilotoa",
+      "distanceKm": "22",
+      "elevGainM": "1000",
+      "elevLossM": "500",
+      "maxAltM": "3914.0",
+      "lat": -0.861,
+      "lng": -78.899,
+      "overnight": "Quilotoa Crater Rim",
+      "mapNote": "Climb to the volcanic crater. Turquoise lake fills the caldera. 3914m."
+    },
+    {
+      "day": 4,
+      "route": "Quilotoa to Latacunga (bus exit)",
+      "distanceKm": "6",
+      "elevGainM": "50",
+      "elevLossM": "600",
+      "maxAltM": "3200.0",
+      "lat": -0.929,
+      "lng": -78.616,
+      "overnight": "Latacunga",
+      "mapNote": "Hike down to crater lake, explore. Bus back to Latacunga. 3200m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Quilotoa Crater Lake",
+      "lat": -0.861,
+      "lng": -78.899,
+      "type": "viewpoint",
+      "altM": 3914,
+      "note": "Electric turquoise volcanic crater lake. One of Ecuador's most dramatic sights."
+    },
+    {
+      "name": "Chugchilán",
+      "lat": -0.829,
+      "lng": -78.929,
+      "type": "landmark",
+      "altM": 3180,
+      "note": "Cloud forest village. Famous hostel. Andean condors in surrounding valleys."
+    },
+    {
+      "name": "Isinliví",
+      "lat": -0.794,
+      "lng": -78.879,
+      "type": "landmark",
+      "altM": 2900,
+      "note": "Traditional woodcarving village. Excellent base for Day 1."
+    },
+    {
+      "name": "Toachi Canyon",
+      "lat": -0.82,
+      "lng": -78.94,
+      "type": "viewpoint",
+      "altM": 2200,
+      "note": "Deep canyon visible from trail. Subtropical forest far below."
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "sheetName": "Tour of Monte Rosa",
+  "slug": "monte_rosa",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Zermatt to Riffelalp",
+      "distanceKm": "8",
+      "elevGainM": "850",
+      "elevLossM": "0",
+      "maxAltM": "2222.0",
+      "lat": 45.98,
+      "lng": 7.75,
+      "overnight": "Riffelalp Resort",
+      "mapNote": "Leave Zermatt. First Matterhorn views. Gornergletscher panorama. 2222m."
+    },
+    {
+      "day": 2,
+      "route": "Riffelalp to Rif. Quintino Sella",
+      "distanceKm": "16",
+      "elevGainM": "1200",
+      "elevLossM": "600",
+      "maxAltM": "3585.0",
+      "lat": 45.91,
+      "lng": 7.87,
+      "overnight": "Rif. Quintino Sella",
+      "mapNote": "Cross into Italy via Felik Pass. Highest overnight on the route. 3585m."
+    },
+    {
+      "day": 3,
+      "route": "Quintino Sella to Alagna Valsesia",
+      "distanceKm": "14",
+      "elevGainM": "200",
+      "elevLossM": "2600",
+      "maxAltM": "1191.0",
+      "lat": 45.857,
+      "lng": 7.939,
+      "overnight": "Alagna Valsesia",
+      "mapNote": "Long Italian descent into the Valsesia valley. Culture shift. 1191m."
+    },
+    {
+      "day": 4,
+      "route": "Alagna to Rif. Pastore",
+      "distanceKm": "13",
+      "elevGainM": "1700",
+      "elevLossM": "200",
+      "maxAltM": "2970.0",
+      "lat": 45.83,
+      "lng": 7.89,
+      "overnight": "Rifugio Pastore",
+      "mapNote": "Long climb back to altitude. Italian hut culture. 2970m."
+    },
+    {
+      "day": 5,
+      "route": "Pastore to Macugnaga",
+      "distanceKm": "10",
+      "elevGainM": "200",
+      "elevLossM": "1350",
+      "maxAltM": "1327.0",
+      "lat": 45.96,
+      "lng": 7.97,
+      "overnight": "Macugnaga",
+      "mapNote": "Swiss/Italian mountain village below Monte Rosa's massive East Face. 1327m."
+    },
+    {
+      "day": 6,
+      "route": "Macugnaga to Rif. Città di Novara",
+      "distanceKm": "11",
+      "elevGainM": "1700",
+      "elevLossM": "200",
+      "maxAltM": "3020.0",
+      "lat": 45.956,
+      "lng": 7.981,
+      "overnight": "Rif. Città di Novara",
+      "mapNote": "Climb out of Macugnaga. Views of the East Face grow with every step. 3020m."
+    },
+    {
+      "day": 7,
+      "route": "Novara to Saas Almagell",
+      "distanceKm": "14",
+      "elevGainM": "600",
+      "elevLossM": "1600",
+      "maxAltM": "1672.0",
+      "lat": 46.02,
+      "lng": 7.97,
+      "overnight": "Saas Almagell",
+      "mapNote": "Cross into Switzerland. Mattmark reservoir. 1672m."
+    },
+    {
+      "day": 8,
+      "route": "Saas Almagell to Rif. Ciarforon",
+      "distanceKm": "16",
+      "elevGainM": "1500",
+      "elevLossM": "400",
+      "maxAltM": "3100.0",
+      "lat": 45.942,
+      "lng": 7.831,
+      "overnight": "Rif. Ciarforon",
+      "mapNote": "Traverse high above the Saas Valley. Weissmies and Alphubel. 3100m."
+    },
+    {
+      "day": 9,
+      "route": "Ciarforon to St Niklaus",
+      "distanceKm": "14",
+      "elevGainM": "200",
+      "elevLossM": "1900",
+      "maxAltM": "1127.0",
+      "lat": 46.175,
+      "lng": 7.8,
+      "overnight": "St Niklaus",
+      "mapNote": "Descent to the Matter Valley. Final valley transit. 1127m."
+    },
+    {
+      "day": 10,
+      "route": "St Niklaus to Zermatt",
+      "distanceKm": "12",
+      "elevGainM": "950",
+      "elevLossM": "200",
+      "maxAltM": "1608.0",
+      "lat": 46.02,
+      "lng": 7.749,
+      "overnight": "Zermatt",
+      "mapNote": "Return to Zermatt. Matterhorn welcomes you back. 1608m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Monte Rosa",
+      "lat": 45.937,
+      "lng": 7.867,
+      "type": "summit",
+      "altM": 4634,
+      "note": "Switzerland's highest peak. Dominates the circuit."
+    },
+    {
+      "name": "Matterhorn",
+      "lat": 45.977,
+      "lng": 7.658,
+      "type": "summit",
+      "altM": 4478,
+      "note": "Zermatt's iconic pyramid. Start and finish backdrop."
+    },
+    {
+      "name": "Felik Pass",
+      "lat": 45.906,
+      "lng": 7.87,
+      "type": "pass",
+      "altM": 3820,
+      "note": "Italy-Switzerland border crossing. Magnificent glacier views."
+    },
+    {
+      "name": "Monte Rosa East Face",
+      "lat": 45.96,
+      "lng": 7.97,
+      "type": "viewpoint",
+      "altM": 1350,
+      "note": "One of the Alps' great walls — 2500m vertical drop visible from Macugnaga."
+    }
+  ]
+}

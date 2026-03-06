@@ -1,0 +1,88 @@
+{
+  "sheetName": "Rockwall Trail",
+  "slug": "rockwall",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Floe Lake TH to Floe Lake",
+      "distanceKm": "10",
+      "elevGainM": "930",
+      "elevLossM": "50",
+      "maxAltM": "2010.0",
+      "lat": 51.214,
+      "lng": -116.005,
+      "overnight": "Floe Lake Campsite",
+      "mapNote": "Iconic Kootenay campsite directly below the Rockwall. 2010m."
+    },
+    {
+      "day": 2,
+      "route": "Floe Lake to Tumbling Creek",
+      "distanceKm": "17",
+      "elevGainM": "680",
+      "elevLossM": "970",
+      "maxAltM": "1900.0",
+      "lat": 51.253,
+      "lng": -116.08,
+      "overnight": "Tumbling Creek Camp",
+      "mapNote": "Cross Numa Pass. First full view of the 30km limestone wall. 1900m."
+    },
+    {
+      "day": 3,
+      "route": "Tumbling Creek to Helmet Falls",
+      "distanceKm": "16",
+      "elevGainM": "750",
+      "elevLossM": "650",
+      "maxAltM": "1950.0",
+      "lat": 51.296,
+      "lng": -116.13,
+      "overnight": "Helmet Falls Camp",
+      "mapNote": "Helmet Falls — one of Canada's tallest waterfalls. 1950m."
+    },
+    {
+      "day": 4,
+      "route": "Helmet Falls to Paint Pots TH",
+      "distanceKm": "16",
+      "elevGainM": "200",
+      "elevLossM": "1100",
+      "maxAltM": "1020.0",
+      "lat": 51.195,
+      "lng": -116.2,
+      "overnight": "Paint Pots Trailhead",
+      "mapNote": "Ochre natural mineral springs at trail end. Kootenay NP exit. 1020m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Rockwall",
+      "lat": 51.25,
+      "lng": -116.08,
+      "type": "viewpoint",
+      "altM": 2350,
+      "note": "30km continuous limestone escarpment — most dramatic wall in Canadian Rockies."
+    },
+    {
+      "name": "Numa Pass",
+      "lat": 51.253,
+      "lng": -116.065,
+      "type": "pass",
+      "altM": 2355,
+      "note": "Highest point on trail. The full Rockwall reveals itself here."
+    },
+    {
+      "name": "Helmet Falls",
+      "lat": 51.296,
+      "lng": -116.125,
+      "type": "viewpoint",
+      "altM": 1800,
+      "note": "330m free-fall waterfall. One of Canada's tallest. Spectacular camp nearby."
+    },
+    {
+      "name": "Floe Lake",
+      "lat": 51.214,
+      "lng": -116.005,
+      "type": "viewpoint",
+      "altM": 2010,
+      "note": "Turquoise glacial lake directly below sheer Rockwall face."
+    }
+  ]
+}

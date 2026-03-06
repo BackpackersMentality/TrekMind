@@ -1,0 +1,184 @@
+{
+  "sheetName": "Great Himalaya Trail",
+  "slug": "ght",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Kanchenjunga Section start",
+      "distanceKm": "15",
+      "elevGainM": "1000",
+      "elevLossM": "200",
+      "maxAltM": "3600.0",
+      "lat": 27.7,
+      "lng": 87.9,
+      "overnight": "Ghunsa",
+      "mapNote": "Eastern Nepal start. GHT High Route begins in Kanchenjunga region. 3600m."
+    },
+    {
+      "day": 2,
+      "route": "Ghunsa to Lhonak",
+      "distanceKm": "14",
+      "elevGainM": "1200",
+      "elevLossM": "200",
+      "maxAltM": "4790.0",
+      "lat": 27.771,
+      "lng": 87.714,
+      "overnight": "Lhonak",
+      "mapNote": "Enter the Kanchenjunga conservation area high country. 4790m."
+    },
+    {
+      "day": 3,
+      "route": "Cross to Kangchenjunga North BC",
+      "distanceKm": "12",
+      "elevGainM": "350",
+      "elevLossM": "200",
+      "maxAltM": "5143.0",
+      "lat": 27.793,
+      "lng": 87.689,
+      "overnight": "Lhonak",
+      "mapNote": "World's 3rd highest base camp. GHT traverses here on its eastern segment. 5143m."
+    },
+    {
+      "day": 4,
+      "route": "Transition to Makalu Section",
+      "distanceKm": "0",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "3000.0",
+      "lat": 27.5,
+      "lng": 87.1,
+      "overnight": "Num (transit)",
+      "mapNote": "Inter-section jeep transfer. GHT links all Nepal's conservation areas. 3000m."
+    },
+    {
+      "day": 5,
+      "route": "Makalu Section via Barun Valley",
+      "distanceKm": "14",
+      "elevGainM": "1400",
+      "elevLossM": "200",
+      "maxAltM": "4615.0",
+      "lat": 27.573,
+      "lng": 86.98,
+      "overnight": "Sherson",
+      "mapNote": "The Barun Valley — one of Nepal's last pristine wilderness corridors. 4615m."
+    },
+    {
+      "day": 6,
+      "route": "Khumbu Section - Kongma La",
+      "distanceKm": "14",
+      "elevGainM": "1200",
+      "elevLossM": "800",
+      "maxAltM": "5535.0",
+      "lat": 27.93,
+      "lng": 86.87,
+      "overnight": "Chhukung",
+      "mapNote": "Cross the Kongma La. Entering the Everest region via high route. 5535m."
+    },
+    {
+      "day": 7,
+      "route": "Everest Section via Renjo La",
+      "distanceKm": "16",
+      "elevGainM": "800",
+      "elevLossM": "1200",
+      "maxAltM": "5340.0",
+      "lat": 28.08,
+      "lng": 86.6,
+      "overnight": "Thame",
+      "mapNote": "Three high passes of Khumbu. Renjo La with Everest Group panorama. 5340m."
+    },
+    {
+      "day": 8,
+      "route": "Manaslu Section - Larkya La",
+      "distanceKm": "13",
+      "elevGainM": "1250",
+      "elevLossM": "1600",
+      "maxAltM": "5160.0",
+      "lat": 28.592,
+      "lng": 84.577,
+      "overnight": "Samdo",
+      "mapNote": "Larkya La — Manaslu Circuit's great high pass. GHT continues west. 5160m."
+    },
+    {
+      "day": 9,
+      "route": "Annapurna Section - Thorong La",
+      "distanceKm": "11",
+      "elevGainM": "900",
+      "elevLossM": "1600",
+      "maxAltM": "5416.0",
+      "lat": 28.783,
+      "lng": 83.948,
+      "overnight": "Muktinath",
+      "mapNote": "Annapurna Circuit's iconic high pass. 5416m — the GHT's centrepiece. 5416m."
+    },
+    {
+      "day": 10,
+      "route": "Mustang High Route Section",
+      "distanceKm": "16",
+      "elevGainM": "800",
+      "elevLossM": "600",
+      "maxAltM": "4500.0",
+      "lat": 29.0,
+      "lng": 83.9,
+      "overnight": "Yara Village",
+      "mapNote": "Remote trails through Upper Mustang. Ancient kingdom. 4500m."
+    },
+    {
+      "day": 11,
+      "route": "Dolpo Section - Shey Gompa",
+      "distanceKm": "18",
+      "elevGainM": "1000",
+      "elevLossM": "800",
+      "maxAltM": "4300.0",
+      "lat": 29.158,
+      "lng": 82.802,
+      "overnight": "Shey Phoksundo",
+      "mapNote": "Crystal Mountain. Deepest lake in Nepal. Tibetan Buddhism. 4300m."
+    },
+    {
+      "day": 12,
+      "route": "Western Nepal Finale",
+      "distanceKm": "15",
+      "elevGainM": "700",
+      "elevLossM": "700",
+      "maxAltM": "3500.0",
+      "lat": 29.3,
+      "lng": 82.2,
+      "overnight": "Remote camp",
+      "mapNote": "Far western Nepal. Virtually no other trekkers. Wilderness complete. 3500m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Kangchenjunga BC",
+      "lat": 27.793,
+      "lng": 87.689,
+      "type": "base_camp",
+      "altM": 5143,
+      "note": "Eastern GHT anchor. World's 3rd highest peak base camp."
+    },
+    {
+      "name": "Everest",
+      "lat": 27.988,
+      "lng": 86.925,
+      "type": "summit",
+      "altM": 8849,
+      "note": "The GHT High Route passes within sight of Everest's base camp."
+    },
+    {
+      "name": "Shey Gompa",
+      "lat": 29.158,
+      "lng": 82.802,
+      "type": "landmark",
+      "altM": 4300,
+      "note": "Crystal Mountain shrine. Dolpo's sacred heart. Snow leopard country."
+    },
+    {
+      "name": "Thorong La",
+      "lat": 28.783,
+      "lng": 83.948,
+      "type": "pass",
+      "altM": 5416,
+      "note": "Annapurna Circuit pass. GHT's most travelled high crossing."
+    }
+  ]
+}

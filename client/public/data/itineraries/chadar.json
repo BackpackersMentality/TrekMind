@@ -1,0 +1,136 @@
+{
+  "sheetName": "Chadar Trek",
+  "slug": "chadar",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Leh acclimatisation",
+      "distanceKm": "0",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "3500.0",
+      "lat": 34.165,
+      "lng": 77.585,
+      "overnight": "Leh",
+      "mapNote": "Arrive Leh. Mandatory rest day at 3500m before trek begins. 3500m."
+    },
+    {
+      "day": 2,
+      "route": "Chilling to Shingra Koma",
+      "distanceKm": "14",
+      "elevGainM": "200",
+      "elevLossM": "100",
+      "maxAltM": "3280.0",
+      "lat": 33.91,
+      "lng": 77.45,
+      "overnight": "Shingra Koma Camp",
+      "mapNote": "Walk on or alongside the frozen Zanskar River. Ice camping begins. 3280m."
+    },
+    {
+      "day": 3,
+      "route": "Shingra Koma to Tibb Cave",
+      "distanceKm": "14",
+      "elevGainM": "150",
+      "elevLossM": "100",
+      "maxAltM": "3230.0",
+      "lat": 33.87,
+      "lng": 77.41,
+      "overnight": "Tibb Cave Camp",
+      "mapNote": "The famous overhang cave. River ice thickens. Stunning canyon walls. 3230m."
+    },
+    {
+      "day": 4,
+      "route": "Tibb Cave to Nerak",
+      "distanceKm": "13",
+      "elevGainM": "150",
+      "elevLossM": "100",
+      "maxAltM": "3180.0",
+      "lat": 33.83,
+      "lng": 77.38,
+      "overnight": "Nerak Village",
+      "mapNote": "Nerak waterfall — frozen solid, 30m of blue ice. Magical campsite. 3180m."
+    },
+    {
+      "day": 5,
+      "route": "Nerak exploration + rest",
+      "distanceKm": "8",
+      "elevGainM": "300",
+      "elevLossM": "300",
+      "maxAltM": "3200.0",
+      "lat": 33.83,
+      "lng": 77.38,
+      "overnight": "Nerak Village",
+      "mapNote": "Visit Nerak village. Frozen waterfall exploration. Cultural exchange. 3200m."
+    },
+    {
+      "day": 6,
+      "route": "Nerak to Tibb Cave",
+      "distanceKm": "13",
+      "elevGainM": "100",
+      "elevLossM": "150",
+      "maxAltM": "3230.0",
+      "lat": 33.87,
+      "lng": 77.41,
+      "overnight": "Tibb Cave Camp",
+      "mapNote": "Return journey begins. Ice conditions change daily. 3230m."
+    },
+    {
+      "day": 7,
+      "route": "Tibb Cave to Shingra Koma",
+      "distanceKm": "14",
+      "elevGainM": "100",
+      "elevLossM": "150",
+      "maxAltM": "3280.0",
+      "lat": 33.91,
+      "lng": 77.45,
+      "overnight": "Shingra Koma Camp",
+      "mapNote": "River return. Ice sheet walking. Canyon silence. 3280m."
+    },
+    {
+      "day": 8,
+      "route": "Shingra Koma to Chilling + drive",
+      "distanceKm": "15",
+      "elevGainM": "100",
+      "elevLossM": "200",
+      "maxAltM": "3280.0",
+      "lat": 33.91,
+      "lng": 77.45,
+      "overnight": "Chilling / Leh",
+      "mapNote": "Exit trek. Drive back to Leh along Indus Valley. 3280m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Nerak Waterfall",
+      "lat": 33.83,
+      "lng": 77.38,
+      "type": "landmark",
+      "altM": 3180,
+      "note": "30m frozen waterfall. Completely solid in January-February. Iconic image."
+    },
+    {
+      "name": "Zanskar Gorge",
+      "lat": 33.87,
+      "lng": 77.41,
+      "type": "viewpoint",
+      "altM": 3200,
+      "note": "300m vertical walls above frozen river. Most dramatic canyon in Ladakh."
+    },
+    {
+      "name": "Tibb Cave",
+      "lat": 33.87,
+      "lng": 77.41,
+      "type": "landmark",
+      "altM": 3230,
+      "note": "Natural overhang used as campsite. Locals and trekkers share the space."
+    },
+    {
+      "name": "Leh Palace",
+      "lat": 34.165,
+      "lng": 77.585,
+      "type": "landmark",
+      "altM": 3500,
+      "note": "17th century palace overlooking Leh. Acclimatisation day visit."
+    }
+  ]
+}

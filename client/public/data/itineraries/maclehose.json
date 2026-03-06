@@ -1,0 +1,100 @@
+{
+  "sheetName": "MacLehose Trail",
+  "slug": "maclehose",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Pak Tam Chung to Kei Ling Ha Hoi",
+      "distanceKm": "20",
+      "elevGainM": "500",
+      "elevLossM": "400",
+      "maxAltM": "400.0",
+      "lat": 22.392,
+      "lng": 114.282,
+      "overnight": "Kei Ling Ha Hoi",
+      "mapNote": "Sai Kung coastline. Volcanic hexagonal rock columns. Clear water bays. 400m."
+    },
+    {
+      "day": 2,
+      "route": "Kei Ling Ha to Gilwell Camp",
+      "distanceKm": "20",
+      "elevGainM": "650",
+      "elevLossM": "600",
+      "maxAltM": "350.0",
+      "lat": 22.408,
+      "lng": 114.222,
+      "overnight": "Gilwell Camp",
+      "mapNote": "Cross Sharp Peak and Nam Sheong. Remote Sai Kung interior. 350m."
+    },
+    {
+      "day": 3,
+      "route": "Gilwell Camp to Shui Long Wo",
+      "distanceKm": "18",
+      "elevGainM": "600",
+      "elevLossM": "550",
+      "maxAltM": "400.0",
+      "lat": 22.42,
+      "lng": 114.15,
+      "overnight": "Shui Long Wo",
+      "mapNote": "Traverse Maclehose Ridge. City skyline appears on horizon. 400m."
+    },
+    {
+      "day": 4,
+      "route": "Shui Long Wo to Lead Mine Pass",
+      "distanceKm": "22",
+      "elevGainM": "700",
+      "elevLossM": "700",
+      "maxAltM": "400.0",
+      "lat": 22.438,
+      "lng": 114.08,
+      "overnight": "Lead Mine Pass",
+      "mapNote": "Cross the reservoirs catchment. Lion Rock visible ahead. 400m."
+    },
+    {
+      "day": 5,
+      "route": "Lead Mine Pass to Tuen Mun",
+      "distanceKm": "20",
+      "elevGainM": "400",
+      "elevLossM": "800",
+      "maxAltM": "957.0",
+      "lat": 22.45,
+      "lng": 114.01,
+      "overnight": "Tuen Mun",
+      "mapNote": "Final section past Lead Mine Pass. Highest point at Needle Hill. 957m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Sharp Peak",
+      "lat": 22.379,
+      "lng": 114.3,
+      "type": "summit",
+      "altM": 468,
+      "note": "Sai Kung's dramatic rocky fin. Most iconic summit on the trail."
+    },
+    {
+      "name": "High Island Reservoir",
+      "lat": 22.38,
+      "lng": 114.33,
+      "type": "viewpoint",
+      "altM": 80,
+      "note": "Sea wall reservoir. Hexagonal volcanic columns. Geological wonder."
+    },
+    {
+      "name": "Needle Hill",
+      "lat": 22.439,
+      "lng": 114.062,
+      "type": "summit",
+      "altM": 532,
+      "note": "Highest point on the trail. Views to Shenzhen skyline."
+    },
+    {
+      "name": "Lion Rock",
+      "lat": 22.34,
+      "lng": 114.185,
+      "type": "summit",
+      "altM": 495,
+      "note": "Symbol of Hong Kong. Silhouette visible from downtown."
+    }
+  ]
+}

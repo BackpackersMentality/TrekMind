@@ -1,0 +1,100 @@
+{
+  "sheetName": "Teton Crest Trail",
+  "slug": "teton_crest",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Teton Village to Marion Lake",
+      "distanceKm": "16",
+      "elevGainM": "1050",
+      "elevLossM": "200",
+      "maxAltM": "2747.0",
+      "lat": 43.638,
+      "lng": -110.863,
+      "overnight": "Marion Lake Camp",
+      "mapNote": "Aerial Tramway bypass to valley floor, then climb to stunning Marion Lake. 2747m."
+    },
+    {
+      "day": 2,
+      "route": "Marion Lake to Death Canyon Shelf",
+      "distanceKm": "13",
+      "elevGainM": "610",
+      "elevLossM": "180",
+      "maxAltM": "2865.0",
+      "lat": 43.652,
+      "lng": -110.815,
+      "overnight": "Death Canyon Shelf",
+      "mapNote": "Dramatic shelf camp with sweeping Teton views. Exposed camping. 2865m."
+    },
+    {
+      "day": 3,
+      "route": "Death Canyon Shelf to Alaska Basin",
+      "distanceKm": "14",
+      "elevGainM": "420",
+      "elevLossM": "490",
+      "maxAltM": "3008.0",
+      "lat": 43.698,
+      "lng": -110.803,
+      "overnight": "Alaska Basin",
+      "mapNote": "Wildflower meadows and the extraordinary Alaska Basin basin camps. 3008m."
+    },
+    {
+      "day": 4,
+      "route": "Alaska Basin to South Fork Cascade",
+      "distanceKm": "15",
+      "elevGainM": "850",
+      "elevLossM": "920",
+      "maxAltM": "2987.0",
+      "lat": 43.74,
+      "lng": -110.82,
+      "overnight": "South Fork Cascade",
+      "mapNote": "Cross Hurricane Pass with Grand Teton's full north face revealed. 2987m."
+    },
+    {
+      "day": 5,
+      "route": "South Fork to Leigh Lake Trailhead",
+      "distanceKm": "17",
+      "elevGainM": "180",
+      "elevLossM": "1230",
+      "maxAltM": "2073.0",
+      "lat": 43.82,
+      "lng": -110.65,
+      "overnight": "String Lake / Trailhead",
+      "mapNote": "Final descent through ancient moraines to the valley floor. 2073m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Hurricane Pass",
+      "lat": 43.715,
+      "lng": -110.825,
+      "type": "pass",
+      "altM": 3261,
+      "note": "Highest point on the trail. Grand Teton's north face fills the sky."
+    },
+    {
+      "name": "Grand Teton",
+      "lat": 43.741,
+      "lng": -110.802,
+      "type": "summit",
+      "altM": 4197,
+      "note": "Highest peak in the Teton Range. Dominates every viewpoint on the trail."
+    },
+    {
+      "name": "Alaska Basin",
+      "lat": 43.698,
+      "lng": -110.803,
+      "type": "viewpoint",
+      "altM": 3008,
+      "note": "Wildflower paradise — best alpine meadows in Wyoming."
+    },
+    {
+      "name": "Death Canyon Shelf",
+      "lat": 43.652,
+      "lng": -110.815,
+      "type": "viewpoint",
+      "altM": 2865,
+      "note": "Dramatic shelf with 50km views across the range."
+    }
+  ]
+}

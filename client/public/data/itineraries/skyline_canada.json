@@ -1,0 +1,76 @@
+{
+  "sheetName": "Skyline Trail",
+  "slug": "skyline_canada",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Maligne Lake TH to Little Shovel Pass",
+      "distanceKm": "17",
+      "elevGainM": "800",
+      "elevLossM": "200",
+      "maxAltM": "2150.0",
+      "lat": 52.82,
+      "lng": -117.85,
+      "overnight": "Little Shovel Camp",
+      "mapNote": "Leave Maligne Lake behind, climb through subalpine to first high camp. 2150m."
+    },
+    {
+      "day": 2,
+      "route": "Little Shovel to Shovel Pass Camp",
+      "distanceKm": "16",
+      "elevGainM": "600",
+      "elevLossM": "450",
+      "maxAltM": "2350.0",
+      "lat": 52.88,
+      "lng": -117.82,
+      "overnight": "Shovel Pass Camp",
+      "mapNote": "The famous ridge traverse. Panoramic views of Jasper's high country. 2350m."
+    },
+    {
+      "day": 3,
+      "route": "Shovel Pass to Signal Mountain TH",
+      "distanceKm": "19",
+      "elevGainM": "200",
+      "elevLossM": "980",
+      "maxAltM": "1670.0",
+      "lat": 52.94,
+      "lng": -117.64,
+      "overnight": "Jasper (Signal Mtn)",
+      "mapNote": "Descend from alpine to valley through old-growth forest. 1670m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Shovel Pass",
+      "lat": 52.86,
+      "lng": -117.83,
+      "type": "pass",
+      "altM": 2560,
+      "note": "Highest point of the trail. Classic Jasper viewpoint. 2560m."
+    },
+    {
+      "name": "Little Shovel Pass",
+      "lat": 52.82,
+      "lng": -117.855,
+      "type": "pass",
+      "altM": 2150,
+      "note": "First high point. Gateway to the main ridge walk."
+    },
+    {
+      "name": "Maligne Lake",
+      "lat": 52.68,
+      "lng": -117.58,
+      "type": "viewpoint",
+      "altM": 1694,
+      "note": "Iconic Canadian Rockies lake. Trail start. Most photographed in Jasper."
+    },
+    {
+      "name": "Curator Lake",
+      "lat": 52.868,
+      "lng": -117.815,
+      "type": "viewpoint",
+      "altM": 2280,
+      "note": "Remote alpine lake below Shovel Pass. Perfect reflection pool."
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "sheetName": "Mount Roraima Trek",
+  "slug": "roraima",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Paraitepui to Rio Kukenán Camp",
+      "distanceKm": "19",
+      "elevGainM": "200",
+      "elevLossM": "0",
+      "maxAltM": "1050.0",
+      "lat": 5.048,
+      "lng": -60.755,
+      "overnight": "Río Kukenán Camp",
+      "mapNote": "Open savanna with first views of tepui walls rising from the plain. 1050m."
+    },
+    {
+      "day": 2,
+      "route": "Río Kukenán to Base Camp",
+      "distanceKm": "14",
+      "elevGainM": "600",
+      "elevLossM": "0",
+      "maxAltM": "1300.0",
+      "lat": 5.1,
+      "lng": -60.762,
+      "overnight": "Roraima Base Camp",
+      "mapNote": "Approaching the wall. Camp directly below the vertical escarpment. 1300m."
+    },
+    {
+      "day": 3,
+      "route": "Base Camp to Summit via La Rampa",
+      "distanceKm": "8",
+      "elevGainM": "1500",
+      "elevLossM": "0",
+      "maxAltM": "2810.0",
+      "lat": 5.143,
+      "lng": -60.763,
+      "overnight": "Summit Camp",
+      "mapNote": "The only natural ramp. Dramatic climb to the otherworldly plateau. 2810m."
+    },
+    {
+      "day": 4,
+      "route": "Summit exploration",
+      "distanceKm": "10",
+      "elevGainM": "300",
+      "elevLossM": "300",
+      "maxAltM": "2810.0",
+      "lat": 5.145,
+      "lng": -60.75,
+      "overnight": "Summit Camp",
+      "mapNote": "Explore the alien plateau: crystal fields, carnivorous plants, black rocks. 2810m."
+    },
+    {
+      "day": 5,
+      "route": "Summit descent to Paraitepui",
+      "distanceKm": "35",
+      "elevGainM": "0",
+      "elevLossM": "1760",
+      "maxAltM": "1000.0",
+      "lat": 5.048,
+      "lng": -60.755,
+      "overnight": "Paraitepui",
+      "mapNote": "Full descent day via La Rampa and savanna return. 1000m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Roraima Summit",
+      "lat": 5.143,
+      "lng": -60.763,
+      "type": "summit",
+      "altM": 2810,
+      "note": "Ancient tepui plateau. Has been isolated for 2 billion years. Lost World."
+    },
+    {
+      "name": "La Rampa",
+      "lat": 5.13,
+      "lng": -60.763,
+      "type": "viewpoint",
+      "altM": 2000,
+      "note": "The natural ramp — only non-technical ascent route onto the tepui."
+    },
+    {
+      "name": "El Foso",
+      "lat": 5.144,
+      "lng": -60.75,
+      "type": "viewpoint",
+      "altM": 2810,
+      "note": "'The Pit' — deep circular canyon cut into summit plateau."
+    },
+    {
+      "name": "Triple Point",
+      "lat": 5.144,
+      "lng": -60.734,
+      "type": "viewpoint",
+      "altM": 2720,
+      "note": "Where Venezuela, Brazil and Guyana meet. Three countries summit."
+    }
+  ]
+}

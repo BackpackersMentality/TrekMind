@@ -1,0 +1,100 @@
+{
+  "sheetName": "Hornstrandir Traverse",
+  "slug": "hornstrandir",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Isafjordur ferry to Hesteyri",
+      "distanceKm": "6",
+      "elevGainM": "200",
+      "elevLossM": "100",
+      "maxAltM": "50.0",
+      "lat": 66.443,
+      "lng": -22.54,
+      "overnight": "Hesteyri",
+      "mapNote": "Arrive by ferry to the abandoned fishing village. Arctic fox immediately visible. 50m."
+    },
+    {
+      "day": 2,
+      "route": "Hesteyri to Hornvík via Hornbjarg",
+      "distanceKm": "16",
+      "elevGainM": "700",
+      "elevLossM": "700",
+      "maxAltM": "200.0",
+      "lat": 66.48,
+      "lng": -22.47,
+      "overnight": "Hornvík Beach Camp",
+      "mapNote": "Cross to Hornvík bay. Pass Hornbjarg cliffs with the seabird colonies. 200m."
+    },
+    {
+      "day": 3,
+      "route": "Hornvík to Hlöðuver",
+      "distanceKm": "14",
+      "elevGainM": "650",
+      "elevLossM": "650",
+      "maxAltM": "300.0",
+      "lat": 66.45,
+      "lng": -22.35,
+      "overnight": "Hlöðuver",
+      "mapNote": "The dramatic high crossing. Views to Greenland on clear days. 300m."
+    },
+    {
+      "day": 4,
+      "route": "Hlöðuver to Veiðileysufjörður",
+      "distanceKm": "12",
+      "elevGainM": "400",
+      "elevLossM": "400",
+      "maxAltM": "100.0",
+      "lat": 66.42,
+      "lng": -22.26,
+      "overnight": "Veiðileysufjörður",
+      "mapNote": "Descend into abandoned farm fjord. Pure solitude. 100m."
+    },
+    {
+      "day": 5,
+      "route": "Veiðileysufjörður to Isafjordur ferry",
+      "distanceKm": "10",
+      "elevGainM": "300",
+      "elevLossM": "300",
+      "maxAltM": "50.0",
+      "lat": 66.4,
+      "lng": -22.37,
+      "overnight": "Ferry pickup point",
+      "mapNote": "Final fjord crossing. Ferry returns to Isafjordur. 50m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Hornbjarg Cliffs",
+      "lat": 66.48,
+      "lng": -22.46,
+      "type": "viewpoint",
+      "altM": 534,
+      "note": "Iceland's most dramatic bird cliffs. Half a million seabirds nest here."
+    },
+    {
+      "name": "Hesteyri",
+      "lat": 66.443,
+      "lng": -22.54,
+      "type": "landmark",
+      "altM": 50,
+      "note": "Abandoned doctor's house. Last inhabited 1952. Arctic fox colony now."
+    },
+    {
+      "name": "Kálfatindar",
+      "lat": 66.465,
+      "lng": -22.38,
+      "type": "summit",
+      "altM": 534,
+      "note": "Highest point of the traverse. Greenland visible in clear conditions."
+    },
+    {
+      "name": "Hornvík",
+      "lat": 66.48,
+      "lng": -22.47,
+      "type": "viewpoint",
+      "altM": 5,
+      "note": "Most dramatic beach in Iceland. Backed by 500m cliffs."
+    }
+  ]
+}

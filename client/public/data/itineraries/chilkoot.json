@@ -1,0 +1,88 @@
+{
+  "sheetName": "Chilkoot Trail",
+  "slug": "chilkoot",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Dyea to Canyon City",
+      "distanceKm": "13",
+      "elevGainM": "330",
+      "elevLossM": "50",
+      "maxAltM": "260.0",
+      "lat": 59.569,
+      "lng": -135.33,
+      "overnight": "Canyon City",
+      "mapNote": "Coastal rainforest along Taiya River. Gold Rush tramway ruins. 260m."
+    },
+    {
+      "day": 2,
+      "route": "Canyon City to Sheep Camp",
+      "distanceKm": "12",
+      "elevGainM": "280",
+      "elevLossM": "60",
+      "maxAltM": "330.0",
+      "lat": 59.644,
+      "lng": -135.302,
+      "overnight": "Sheep Camp",
+      "mapNote": "Last trees before the pass. Historic camp used by 1898 stampeders. 330m."
+    },
+    {
+      "day": 3,
+      "route": "Sheep Camp to Bare Loon Lake",
+      "distanceKm": "14",
+      "elevGainM": "760",
+      "elevLossM": "530",
+      "maxAltM": "660.0",
+      "lat": 59.706,
+      "lng": -135.266,
+      "overnight": "Bare Loon Lake",
+      "mapNote": "The infamous Chilkoot Pass — 45° scramble over boulders. Arctic tundra beyond. 660m."
+    },
+    {
+      "day": 4,
+      "route": "Bare Loon Lake to Bennett",
+      "distanceKm": "19",
+      "elevGainM": "150",
+      "elevLossM": "300",
+      "maxAltM": "663.0",
+      "lat": 59.722,
+      "lng": -135.04,
+      "overnight": "Lake Bennett",
+      "mapNote": "Canadian side to Lake Bennett. Where stampeders built their boats. 663m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Chilkoot Pass",
+      "lat": 59.706,
+      "lng": -135.29,
+      "type": "pass",
+      "altM": 1067,
+      "note": "The Golden Stairs. 45° boulder scramble to the summit. 1067m."
+    },
+    {
+      "name": "The Scales",
+      "lat": 59.695,
+      "lng": -135.295,
+      "type": "landmark",
+      "altM": 914,
+      "note": "Last stop before the summit. Gold Rush stampeders cached loads here."
+    },
+    {
+      "name": "Lake Bennett",
+      "lat": 59.722,
+      "lng": -135.04,
+      "type": "landmark",
+      "altM": 663,
+      "note": "End of the trail. Where thousands built boats to float north to Dawson."
+    },
+    {
+      "name": "Dyea Flats",
+      "lat": 59.569,
+      "lng": -135.33,
+      "type": "landmark",
+      "altM": 0,
+      "note": "Starting point. Only ghost town remains of original Dyea settlement."
+    }
+  ]
+}

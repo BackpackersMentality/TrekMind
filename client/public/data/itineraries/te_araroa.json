@@ -1,0 +1,148 @@
+{
+  "sheetName": "Te Araroa",
+  "slug": "te_araroa",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Cape Reinga (SoBo start, October)",
+      "distanceKm": "20",
+      "elevGainM": "200",
+      "elevLossM": "200",
+      "maxAltM": "436.0",
+      "lat": -34.429,
+      "lng": 172.677,
+      "overnight": "Ninety Mile Beach access",
+      "mapNote": "New Zealand's top. Lighthouse at the merging of two oceans. 436m."
+    },
+    {
+      "day": 2,
+      "route": "Ninety Mile Beach section",
+      "distanceKm": "30",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "5.0",
+      "lat": -34.8,
+      "lng": 173.05,
+      "overnight": "Beach camp",
+      "mapNote": "Literally walking 90 miles of beach. Sunset camps on sand. 5m."
+    },
+    {
+      "day": 3,
+      "route": "Auckland urban section",
+      "distanceKm": "20",
+      "elevGainM": "300",
+      "elevLossM": "300",
+      "maxAltM": "196.0",
+      "lat": -36.83,
+      "lng": 174.76,
+      "overnight": "Auckland city",
+      "mapNote": "Urban section through Auckland. Volcanoes, harbours, bridges. 196m."
+    },
+    {
+      "day": 4,
+      "route": "Tongariro Alpine Crossing (section)",
+      "distanceKm": "19",
+      "elevGainM": "900",
+      "elevLossM": "900",
+      "maxAltM": "1967.0",
+      "lat": -39.2,
+      "lng": 175.56,
+      "overnight": "Whakapapa Village",
+      "mapNote": "World-famous alpine crossing. Active volcanoes. Red crater. 1967m."
+    },
+    {
+      "day": 5,
+      "route": "Taumarunui Canoe section",
+      "distanceKm": "50",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "155.0",
+      "lat": -38.882,
+      "lng": 175.259,
+      "overnight": "Canoe camp on Whanganui",
+      "mapNote": "5-day canoe section on the Whanganui River. Unique Te Araroa feature. 155m."
+    },
+    {
+      "day": 6,
+      "route": "Wellington to Picton ferry",
+      "distanceKm": "0",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "5.0",
+      "lat": -41.2,
+      "lng": 174.9,
+      "overnight": "Picton (South Island)",
+      "mapNote": "Ferry crossing Cook Strait. North Island complete. South begins. 5m."
+    },
+    {
+      "day": 7,
+      "route": "Richmond Ranges section",
+      "distanceKm": "18",
+      "elevGainM": "1200",
+      "elevLossM": "1000",
+      "maxAltM": "1754.0",
+      "lat": -41.47,
+      "lng": 173.4,
+      "overnight": "Pelorus Bridge",
+      "mapNote": "Toughest South Island section. Remote ranges above Nelson. 1754m."
+    },
+    {
+      "day": 8,
+      "route": "St James Walkway section",
+      "distanceKm": "20",
+      "elevGainM": "900",
+      "elevLossM": "900",
+      "maxAltM": "1400.0",
+      "lat": -42.12,
+      "lng": 172.68,
+      "overnight": "St James homestead",
+      "mapNote": "Historic high country sheep station. Wide open Canterbury landscape. 1400m."
+    },
+    {
+      "day": 9,
+      "route": "Bluff (NoBo terminus)",
+      "distanceKm": "8",
+      "elevGainM": "100",
+      "elevLossM": "200",
+      "maxAltM": "265.0",
+      "lat": -46.6,
+      "lng": 168.34,
+      "overnight": "Bluff",
+      "mapNote": "Land's End of the South Island. Signpost. Journey complete. 265m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Cape Reinga",
+      "lat": -34.429,
+      "lng": 172.677,
+      "type": "landmark",
+      "altM": 436,
+      "note": "Northern tip of New Zealand. Lighthouse at confluence of Tasman and Pacific."
+    },
+    {
+      "name": "Tongariro Crossing",
+      "lat": -39.2,
+      "lng": 175.56,
+      "type": "viewpoint",
+      "altM": 1967,
+      "note": "World's most famous day walk. Inside the volcanic crater."
+    },
+    {
+      "name": "Bluff Signpost",
+      "lat": -46.6,
+      "lng": 168.34,
+      "type": "landmark",
+      "altM": 5,
+      "note": "The end. Signpost measuring distances to world capitals."
+    },
+    {
+      "name": "Mount Ruapehu",
+      "lat": -39.281,
+      "lng": 175.563,
+      "type": "summit",
+      "altM": 2797,
+      "note": "New Zealand's highest North Island volcano. Visible for days of walking."
+    }
+  ]
+}

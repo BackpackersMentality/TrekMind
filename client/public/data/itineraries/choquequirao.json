@@ -1,0 +1,100 @@
+{
+  "sheetName": "Choquequirao Trek",
+  "slug": "choquequirao",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Cachora to Chiquisca",
+      "distanceKm": "13",
+      "elevGainM": "200",
+      "elevLossM": "1200",
+      "maxAltM": "1550.0",
+      "lat": -13.47,
+      "lng": -72.78,
+      "overnight": "Chiquisca",
+      "mapNote": "Descend dramatically into the Apurímac canyon. Tropical heat. 1550m."
+    },
+    {
+      "day": 2,
+      "route": "Chiquisca to Playa Rosalina",
+      "distanceKm": "10",
+      "elevGainM": "200",
+      "elevLossM": "400",
+      "maxAltM": "1480.0",
+      "lat": -13.488,
+      "lng": -72.814,
+      "overnight": "Playa Rosalina",
+      "mapNote": "Cross the Apurímac River suspension bridge. Remote canyon camp. 1480m."
+    },
+    {
+      "day": 3,
+      "route": "Playa Rosalina to Choquequirao",
+      "distanceKm": "12",
+      "elevGainM": "1600",
+      "elevLossM": "200",
+      "maxAltM": "3085.0",
+      "lat": -13.533,
+      "lng": -72.851,
+      "overnight": "Choquequirao Ruins",
+      "mapNote": "Long steep climb to the ruins. The citadel emerges from the cloud forest. 3085m."
+    },
+    {
+      "day": 4,
+      "route": "Explore ruins + return to Maranpata",
+      "distanceKm": "8",
+      "elevGainM": "400",
+      "elevLossM": "800",
+      "maxAltM": "2850.0",
+      "lat": -13.51,
+      "lng": -72.835,
+      "overnight": "Maranpata",
+      "mapNote": "Full morning exploring 'the other Machu Picchu'. Llama terraces. 2850m."
+    },
+    {
+      "day": 5,
+      "route": "Maranpata to Cachora",
+      "distanceKm": "22",
+      "elevGainM": "200",
+      "elevLossM": "2500",
+      "maxAltM": "2900.0",
+      "lat": -13.47,
+      "lng": -72.78,
+      "overnight": "Cachora",
+      "mapNote": "Long return ascent out of the canyon. Stunning views all the way. 2900m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Choquequirao Citadel",
+      "lat": -13.533,
+      "lng": -72.851,
+      "type": "landmark",
+      "altM": 3085,
+      "note": "Major Inca royal estate. Only 30% excavated. Far fewer crowds than Machu Picchu."
+    },
+    {
+      "name": "Apurímac Canyon",
+      "lat": -13.488,
+      "lng": -72.814,
+      "type": "viewpoint",
+      "altM": 1300,
+      "note": "One of the world's deepest canyons. The Inca called it 'God of speech'."
+    },
+    {
+      "name": "Llama Terraces",
+      "lat": -13.54,
+      "lng": -72.848,
+      "type": "landmark",
+      "altM": 2900,
+      "note": "Unique white llama inlaid in the terracing — only found at Choquequirao."
+    },
+    {
+      "name": "Capuliyoq Pass",
+      "lat": -13.46,
+      "lng": -72.8,
+      "type": "pass",
+      "altM": 2900,
+      "note": "Gateway views into the canyon. Cachora village visible below."
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "sheetName": "Dusky Track",
+  "slug": "dusky",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Tuatapere to Lake Hauroko",
+      "distanceKm": "14",
+      "elevGainM": "200",
+      "elevLossM": "100",
+      "maxAltM": "330.0",
+      "lat": -45.897,
+      "lng": 167.342,
+      "overnight": "Lake Hauroko Hut",
+      "mapNote": "Access via jet boat. NZ's deepest lake. Beech forest. Pure wilderness. 330m."
+    },
+    {
+      "day": 2,
+      "route": "Lake Hauroko to Halfway Hut",
+      "distanceKm": "15",
+      "elevGainM": "700",
+      "elevLossM": "600",
+      "maxAltM": "400.0",
+      "lat": -45.87,
+      "lng": 167.24,
+      "overnight": "Halfway Hut",
+      "mapNote": "Muddy Fiordland terrain begins immediately. Track often submerged. 400m."
+    },
+    {
+      "day": 3,
+      "route": "Halfway Hut to Loch Maree Hut",
+      "distanceKm": "13",
+      "elevGainM": "500",
+      "elevLossM": "500",
+      "maxAltM": "400.0",
+      "lat": -45.84,
+      "lng": 167.15,
+      "overnight": "Loch Maree Hut",
+      "mapNote": "Remote loch camp. No shortcuts, no alternatives, no mobile signal. 400m."
+    },
+    {
+      "day": 4,
+      "route": "Loch Maree to Lake Roe Hut",
+      "distanceKm": "12",
+      "elevGainM": "600",
+      "elevLossM": "400",
+      "maxAltM": "600.0",
+      "lat": -45.78,
+      "lng": 167.05,
+      "overnight": "Lake Roe Hut",
+      "mapNote": "Alpine crossing. Views finally. Most dramatic section. 600m."
+    },
+    {
+      "day": 5,
+      "route": "Lake Roe to Centre Pass",
+      "distanceKm": "13",
+      "elevGainM": "400",
+      "elevLossM": "400",
+      "maxAltM": "600.0",
+      "lat": -45.73,
+      "lng": 166.95,
+      "overnight": "Centre Pass Bivouac",
+      "mapNote": "Exposed ridge bivouac. Weather dependent — be prepared to wait. 600m."
+    },
+    {
+      "day": 6,
+      "route": "Centre Pass to Supper Cove",
+      "distanceKm": "12",
+      "elevGainM": "100",
+      "elevLossM": "700",
+      "maxAltM": "0.0",
+      "lat": -45.75,
+      "lng": 166.88,
+      "overnight": "Supper Cove Hut",
+      "mapNote": "Descend to Dusky Sound. Water taxi pre-booked from here. 0m (sea level)."
+    },
+    {
+      "day": 7,
+      "route": "Supper Cove to Manapouri (water taxi)",
+      "distanceKm": "0",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "0.0",
+      "lat": -45.57,
+      "lng": 167.55,
+      "overnight": "Manapouri",
+      "mapNote": "Water taxi to Lake Manapouri, then bus to Te Anau. Civilisation. 0m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Lake Hauroko",
+      "lat": -45.897,
+      "lng": 167.342,
+      "type": "viewpoint",
+      "altM": 330,
+      "note": "New Zealand's deepest lake. Jet boat access. Complete wilderness."
+    },
+    {
+      "name": "Dusky Sound",
+      "lat": -45.75,
+      "lng": 166.88,
+      "type": "viewpoint",
+      "altM": 0,
+      "note": "One of Fiordland's most remote fiords. Accessed only by this trail or boat."
+    },
+    {
+      "name": "Loch Maree",
+      "lat": -45.84,
+      "lng": 167.15,
+      "type": "viewpoint",
+      "altM": 400,
+      "note": "Remote loch deep in the Fiordland interior. No road access ever."
+    },
+    {
+      "name": "Mount Seaforth",
+      "lat": -45.7,
+      "lng": 167.0,
+      "type": "summit",
+      "altM": 1280,
+      "note": "Highest point visible from the route. Classic Fiordland dark pyramid."
+    }
+  ]
+}

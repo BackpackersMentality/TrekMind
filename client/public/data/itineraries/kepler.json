@@ -1,0 +1,88 @@
+{
+  "sheetName": "Kepler Track",
+  "slug": "kepler",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Te Anau to Luxmore Hut",
+      "distanceKm": "14",
+      "elevGainM": "1000",
+      "elevLossM": "0",
+      "maxAltM": "1472.0",
+      "lat": -45.47,
+      "lng": 167.65,
+      "overnight": "Luxmore Hut",
+      "mapNote": "Lakeshore then steep climb to bush-line. Luxmore Caves. Panoramic ridge. 1472m."
+    },
+    {
+      "day": 2,
+      "route": "Luxmore Hut to Iris Burn Hut",
+      "distanceKm": "14",
+      "elevGainM": "200",
+      "elevLossM": "1700",
+      "maxAltM": "570.0",
+      "lat": -45.52,
+      "lng": 167.6,
+      "overnight": "Iris Burn Hut",
+      "mapNote": "Spectacular alpine ridge walk. Views of Fiordland peaks and lakes. 570m."
+    },
+    {
+      "day": 3,
+      "route": "Iris Burn to Moturau Hut",
+      "distanceKm": "16",
+      "elevGainM": "200",
+      "elevLossM": "400",
+      "maxAltM": "200.0",
+      "lat": -45.59,
+      "lng": 167.71,
+      "overnight": "Moturau Hut",
+      "mapNote": "Manapouri lakeside hut. Beech forest. Remote and tranquil. 200m."
+    },
+    {
+      "day": 4,
+      "route": "Moturau to Te Anau",
+      "distanceKm": "18",
+      "elevGainM": "100",
+      "elevLossM": "200",
+      "maxAltM": "210.0",
+      "lat": -45.446,
+      "lng": 167.719,
+      "overnight": "Te Anau (finish)",
+      "mapNote": "Flat lakeside walk back. Rainbow trout visible in crystal water. 210m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Mount Luxmore",
+      "lat": -45.467,
+      "lng": 167.63,
+      "type": "summit",
+      "altM": 1472,
+      "note": "Kepler summit. Alpine meadows and one of NZ's great ridge walks."
+    },
+    {
+      "name": "Luxmore Caves",
+      "lat": -45.477,
+      "lng": 167.646,
+      "type": "landmark",
+      "altM": 1000,
+      "note": "Limestone cave system. Large colony of cave weta inside."
+    },
+    {
+      "name": "Lake Te Anau",
+      "lat": -45.446,
+      "lng": 167.719,
+      "type": "viewpoint",
+      "altM": 210,
+      "note": "NZ's largest South Island lake. Gateway to Fiordland."
+    },
+    {
+      "name": "Fiordland",
+      "lat": -45.58,
+      "lng": 167.6,
+      "type": "viewpoint",
+      "altM": 400,
+      "note": "20,000km² of raw Fiordland wilderness visible from the ridge."
+    }
+  ]
+}

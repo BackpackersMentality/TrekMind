@@ -1,0 +1,148 @@
+{
+  "sheetName": "Sierra High Route",
+  "slug": "sierra_high",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Road's End to Grouse Lake",
+      "distanceKm": "13",
+      "elevGainM": "1050",
+      "elevLossM": "200",
+      "maxAltM": "2987.0",
+      "lat": 36.73,
+      "lng": -118.57,
+      "overnight": "Grouse Lake",
+      "mapNote": "Off-trail immediately. Climb through boulder fields to first high lake. 2987m."
+    },
+    {
+      "day": 2,
+      "route": "Grouse Lake to Upper Gardiner Basin",
+      "distanceKm": "15",
+      "elevGainM": "900",
+      "elevLossM": "350",
+      "maxAltM": "3400.0",
+      "lat": 36.8,
+      "lng": -118.58,
+      "overnight": "Upper Gardiner Basin",
+      "mapNote": "Full off-trail day. Cross Window Pass. Vast granite wilderness. 3400m."
+    },
+    {
+      "day": 3,
+      "route": "Gardiner to Bench Lake",
+      "distanceKm": "14",
+      "elevGainM": "550",
+      "elevLossM": "700",
+      "maxAltM": "3200.0",
+      "lat": 36.86,
+      "lng": -118.62,
+      "overnight": "Bench Lake",
+      "mapNote": "JMT briefly joined at Rae Lakes. Leave trail immediately after. 3200m."
+    },
+    {
+      "day": 4,
+      "route": "Bench Lake to Lake Basin",
+      "distanceKm": "16",
+      "elevGainM": "800",
+      "elevLossM": "600",
+      "maxAltM": "3350.0",
+      "lat": 36.93,
+      "lng": -118.66,
+      "overnight": "Lake Basin",
+      "mapNote": "Remote basin rarely visited. Dragon Peak dominates skyline. 3350m."
+    },
+    {
+      "day": 5,
+      "route": "Lake Basin to Muro Blanco",
+      "distanceKm": "15",
+      "elevGainM": "700",
+      "elevLossM": "400",
+      "maxAltM": "3300.0",
+      "lat": 36.99,
+      "lng": -118.72,
+      "overnight": "Muro Blanco",
+      "mapNote": "The White Wall — most dramatic off-trail section of the route. 3300m."
+    },
+    {
+      "day": 6,
+      "route": "Muro Blanco to Second Recess",
+      "distanceKm": "14",
+      "elevGainM": "600",
+      "elevLossM": "850",
+      "maxAltM": "3100.0",
+      "lat": 37.05,
+      "lng": -118.78,
+      "overnight": "Second Recess",
+      "mapNote": "Classic Sierra glacially-carved recess. Perfect granite camping. 3100m."
+    },
+    {
+      "day": 7,
+      "route": "Second Recess to Grinnell Lake",
+      "distanceKm": "16",
+      "elevGainM": "850",
+      "elevLossM": "650",
+      "maxAltM": "3250.0",
+      "lat": 37.11,
+      "lng": -118.84,
+      "overnight": "Grinnell Lake",
+      "mapNote": "High traverse above Mono Creek. Views extend to distant ranges. 3250m."
+    },
+    {
+      "day": 8,
+      "route": "Grinnell to Duck Lake",
+      "distanceKm": "15",
+      "elevGainM": "700",
+      "elevLossM": "800",
+      "maxAltM": "3180.0",
+      "lat": 37.17,
+      "lng": -118.9,
+      "overnight": "Duck Lake",
+      "mapNote": "Pass over Silver Divide. JMT rejoined briefly at Purple Lake. 3180m."
+    },
+    {
+      "day": 9,
+      "route": "Duck Lake to Mammoth Pass TH",
+      "distanceKm": "18",
+      "elevGainM": "200",
+      "elevLossM": "1200",
+      "maxAltM": "2600.0",
+      "lat": 37.6,
+      "lng": -119.03,
+      "overnight": "Mammoth Pass Trailhead",
+      "mapNote": "Descent through lodgepole pines to Mammoth Lakes trailhead. 2600m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Window Peak",
+      "lat": 36.8,
+      "lng": -118.58,
+      "type": "summit",
+      "altM": 3770,
+      "note": "Critical navigation landmark on Day 2. 360° Sierra panorama."
+    },
+    {
+      "name": "Dragon Peak",
+      "lat": 36.905,
+      "lng": -118.66,
+      "type": "summit",
+      "altM": 3823,
+      "note": "Iconic jagged summit visible from Lake Basin."
+    },
+    {
+      "name": "Muro Blanco",
+      "lat": 36.99,
+      "lng": -118.72,
+      "type": "viewpoint",
+      "altM": 3400,
+      "note": "The White Wall — granite swept clean of soil. Most dramatic section."
+    },
+    {
+      "name": "Mount Whitney",
+      "lat": 36.578,
+      "lng": -118.292,
+      "type": "summit",
+      "altM": 4418,
+      "note": "Southern terminus landmark. Highest peak in contiguous USA."
+    }
+  ]
+}

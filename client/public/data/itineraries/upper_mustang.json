@@ -1,0 +1,160 @@
+{
+  "sheetName": "Upper Mustang Trek",
+  "slug": "upper_mustang",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Jomsom to Kagbeni",
+      "distanceKm": "9",
+      "elevGainM": "150",
+      "elevLossM": "50",
+      "maxAltM": "2810.0",
+      "lat": 28.982,
+      "lng": 83.776,
+      "overnight": "Kagbeni",
+      "mapNote": "Gateway to Upper Mustang. Ancient walled town on the Kali Gandaki. 2810m."
+    },
+    {
+      "day": 2,
+      "route": "Kagbeni to Chele",
+      "distanceKm": "17",
+      "elevGainM": "850",
+      "elevLossM": "100",
+      "maxAltM": "3050.0",
+      "lat": 29.062,
+      "lng": 83.798,
+      "overnight": "Chele",
+      "mapNote": "Leave Lower Mustang. Wind-carved ochre badlands begin. 3050m."
+    },
+    {
+      "day": 3,
+      "route": "Chele to Syangboche",
+      "distanceKm": "14",
+      "elevGainM": "700",
+      "elevLossM": "300",
+      "maxAltM": "3800.0",
+      "lat": 29.128,
+      "lng": 83.8,
+      "overnight": "Syangboche",
+      "mapNote": "Plateau landscape. Blue sky above terracotta earth. 3800m."
+    },
+    {
+      "day": 4,
+      "route": "Syangboche to Lo Manthang",
+      "distanceKm": "16",
+      "elevGainM": "500",
+      "elevLossM": "200",
+      "maxAltM": "3840.0",
+      "lat": 29.181,
+      "lng": 83.957,
+      "overnight": "Lo Manthang",
+      "mapNote": "The walled capital of the ancient Kingdom of Mustang. 3840m."
+    },
+    {
+      "day": 5,
+      "route": "Lo Manthang exploration",
+      "distanceKm": "8",
+      "elevGainM": "400",
+      "elevLossM": "400",
+      "maxAltM": "3840.0",
+      "lat": 29.181,
+      "lng": 83.957,
+      "overnight": "Lo Manthang",
+      "mapNote": "Explore the royal palace, monasteries, cave cities. 3840m."
+    },
+    {
+      "day": 6,
+      "route": "Lo Manthang to Drakmar",
+      "distanceKm": "18",
+      "elevGainM": "600",
+      "elevLossM": "600",
+      "maxAltM": "3820.0",
+      "lat": 29.1,
+      "lng": 83.938,
+      "overnight": "Drakmar",
+      "mapNote": "Red cliff village. Return route via different valleys. 3820m."
+    },
+    {
+      "day": 7,
+      "route": "Drakmar to Ghami",
+      "distanceKm": "14",
+      "elevGainM": "400",
+      "elevLossM": "500",
+      "maxAltM": "3520.0",
+      "lat": 29.052,
+      "lng": 83.867,
+      "overnight": "Ghami",
+      "mapNote": "Long mani wall — one of the longest in Nepal. 3520m."
+    },
+    {
+      "day": 8,
+      "route": "Ghami to Tsarang",
+      "distanceKm": "12",
+      "elevGainM": "600",
+      "elevLossM": "400",
+      "maxAltM": "3640.0",
+      "lat": 29.075,
+      "lng": 83.9,
+      "overnight": "Tsarang",
+      "mapNote": "Second largest town. 500-year-old dzong fortress. 3640m."
+    },
+    {
+      "day": 9,
+      "route": "Tsarang to Kagbeni",
+      "distanceKm": "22",
+      "elevGainM": "200",
+      "elevLossM": "900",
+      "maxAltM": "2810.0",
+      "lat": 28.982,
+      "lng": 83.776,
+      "overnight": "Kagbeni",
+      "mapNote": "Descend back through the dramatic Mustang plateau. 2810m."
+    },
+    {
+      "day": 10,
+      "route": "Kagbeni to Jomsom (flight or walk)",
+      "distanceKm": "10",
+      "elevGainM": "0",
+      "elevLossM": "150",
+      "maxAltM": "2720.0",
+      "lat": 28.78,
+      "lng": 83.72,
+      "overnight": "Jomsom",
+      "mapNote": "Return to Jomsom. Flight or jeep track to Pokhara. 2720m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Lo Manthang",
+      "lat": 29.181,
+      "lng": 83.957,
+      "type": "landmark",
+      "altM": 3840,
+      "note": "Ancient walled capital of the Kingdom of Mustang. Still partially restricted."
+    },
+    {
+      "name": "Luri Gompa",
+      "lat": 29.21,
+      "lng": 83.94,
+      "type": "landmark",
+      "altM": 4050,
+      "note": "Ancient cave monastery. 800-year-old murals. Hidden valley location."
+    },
+    {
+      "name": "Chungsi Cave",
+      "lat": 29.069,
+      "lng": 83.827,
+      "type": "landmark",
+      "altM": 3350,
+      "note": "Pilgrimage cave monastery. 1,000 years of butter lamp offerings."
+    },
+    {
+      "name": "Kali Gandaki",
+      "lat": 28.982,
+      "lng": 83.776,
+      "type": "viewpoint",
+      "altM": 2810,
+      "note": "World's deepest gorge between Annapurna and Dhaulagiri."
+    }
+  ]
+}

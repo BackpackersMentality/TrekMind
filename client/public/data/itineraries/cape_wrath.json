@@ -1,0 +1,136 @@
+{
+  "sheetName": "Cape Wrath Trail",
+  "slug": "cape_wrath",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Fort William to Glenfinnan",
+      "distanceKm": "22",
+      "elevGainM": "800",
+      "elevLossM": "400",
+      "maxAltM": "300.0",
+      "lat": 56.876,
+      "lng": -5.442,
+      "overnight": "Glenfinnan",
+      "mapNote": "Leave Ben Nevis behind. Loch Shiel and the famous viaduct. 300m."
+    },
+    {
+      "day": 2,
+      "route": "Glenfinnan to Strathan",
+      "distanceKm": "22",
+      "elevGainM": "600",
+      "elevLossM": "600",
+      "maxAltM": "50.0",
+      "lat": 56.94,
+      "lng": -5.49,
+      "overnight": "Strathan",
+      "mapNote": "Remote glen walking. No waymarks. Navigation essential from here. 50m."
+    },
+    {
+      "day": 3,
+      "route": "Strathan to Sourlies Bothy",
+      "distanceKm": "19",
+      "elevGainM": "700",
+      "elevLossM": "650",
+      "maxAltM": "50.0",
+      "lat": 56.985,
+      "lng": -5.58,
+      "overnight": "Sourlies Bothy",
+      "mapNote": "Famous bothy at the head of Loch Nevis. Only accessible by foot or boat. 50m."
+    },
+    {
+      "day": 4,
+      "route": "Sourlies to Shiel Bridge",
+      "distanceKm": "24",
+      "elevGainM": "900",
+      "elevLossM": "900",
+      "maxAltM": "100.0",
+      "lat": 57.22,
+      "lng": -5.42,
+      "overnight": "Shiel Bridge",
+      "mapNote": "Wild crossing through the Rough Bounds. Scotland's most remote country. 100m."
+    },
+    {
+      "day": 5,
+      "route": "Shiel Bridge to Kinlochewe",
+      "distanceKm": "35",
+      "elevGainM": "1200",
+      "elevLossM": "1200",
+      "maxAltM": "400.0",
+      "lat": 57.57,
+      "lng": -5.31,
+      "overnight": "Kinlochewe",
+      "mapNote": "Through Torridon. Ancient 750-million-year-old Torridonian sandstone. 400m."
+    },
+    {
+      "day": 6,
+      "route": "Kinlochewe to Inchnadamph",
+      "distanceKm": "34",
+      "elevGainM": "1100",
+      "elevLossM": "1100",
+      "maxAltM": "300.0",
+      "lat": 58.11,
+      "lng": -5.0,
+      "overnight": "Inchnadamph",
+      "mapNote": "Cross the remote Fisherfield — Scotland's last great wilderness. 300m."
+    },
+    {
+      "day": 7,
+      "route": "Inchnadamph to Rhiconich",
+      "distanceKm": "32",
+      "elevGainM": "900",
+      "elevLossM": "900",
+      "maxAltM": "200.0",
+      "lat": 58.45,
+      "lng": -5.06,
+      "overnight": "Rhiconich",
+      "mapNote": "Assynt landscape — isolated mountains rising from flat boggy moorland. 200m."
+    },
+    {
+      "day": 8,
+      "route": "Rhiconich to Cape Wrath",
+      "distanceKm": "38",
+      "elevGainM": "600",
+      "elevLossM": "600",
+      "maxAltM": "122.0",
+      "lat": 58.625,
+      "lng": -4.992,
+      "overnight": "Cape Wrath Lighthouse",
+      "mapNote": "The end. Britain's most remote lighthouse. Journey complete. 122m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Cape Wrath Lighthouse",
+      "lat": 58.625,
+      "lng": -4.992,
+      "type": "landmark",
+      "altM": 122,
+      "note": "Britain's most northwesterly point. End of the trail."
+    },
+    {
+      "name": "Fisherfield",
+      "lat": 57.7,
+      "lng": -5.2,
+      "type": "viewpoint",
+      "altM": 600,
+      "note": "Scotland's last great wilderness. No roads. Complete solitude."
+    },
+    {
+      "name": "Sourlies Bothy",
+      "lat": 56.985,
+      "lng": -5.58,
+      "type": "landmark",
+      "altM": 50,
+      "note": "Famous bothie. Only way in is on foot or by boat from Mallaig."
+    },
+    {
+      "name": "Liathach",
+      "lat": 57.592,
+      "lng": -5.386,
+      "type": "summit",
+      "altM": 1055,
+      "note": "Torridon's iconic ridge. 750-million-year-old red sandstone."
+    }
+  ]
+}

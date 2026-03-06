@@ -1,0 +1,208 @@
+{
+  "sheetName": "Kanchenjunga Base Camp",
+  "slug": "kanchenjunga",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Taplejung to Chirwa",
+      "distanceKm": "15",
+      "elevGainM": "600",
+      "elevLossM": "200",
+      "maxAltM": "1270.0",
+      "lat": 27.632,
+      "lng": 87.914,
+      "overnight": "Chirwa",
+      "mapNote": "Remote East Nepal start. Tamur River valley. Rhododendron forests. 1270m."
+    },
+    {
+      "day": 2,
+      "route": "Chirwa to Sekathum",
+      "distanceKm": "14",
+      "elevGainM": "700",
+      "elevLossM": "100",
+      "maxAltM": "1660.0",
+      "lat": 27.648,
+      "lng": 87.896,
+      "overnight": "Sekathum",
+      "mapNote": "River junction camp. Traditional Limbu villages. 1660m."
+    },
+    {
+      "day": 3,
+      "route": "Sekathum to Amjilosa",
+      "distanceKm": "16",
+      "elevGainM": "800",
+      "elevLossM": "200",
+      "maxAltM": "2490.0",
+      "lat": 27.68,
+      "lng": 87.87,
+      "overnight": "Amjilosa",
+      "mapNote": "Climbing into higher country. Kanchenjunga begins appearing. 2490m."
+    },
+    {
+      "day": 4,
+      "route": "Amjilosa to Gyabla",
+      "distanceKm": "14",
+      "elevGainM": "750",
+      "elevLossM": "200",
+      "maxAltM": "3730.0",
+      "lat": 27.711,
+      "lng": 87.843,
+      "overnight": "Gyabla",
+      "mapNote": "Dramatic cliffs and waterfalls. High alpine zone begins. 3730m."
+    },
+    {
+      "day": 5,
+      "route": "Gyabla to Ghunsa",
+      "distanceKm": "12",
+      "elevGainM": "400",
+      "elevLossM": "200",
+      "maxAltM": "3595.0",
+      "lat": 27.685,
+      "lng": 87.82,
+      "overnight": "Ghunsa",
+      "mapNote": "Main supply village. Sherpa/Tibetan culture. Last teahouses. 3595m."
+    },
+    {
+      "day": 6,
+      "route": "Ghunsa to Khambachen",
+      "distanceKm": "14",
+      "elevGainM": "900",
+      "elevLossM": "200",
+      "maxAltM": "4050.0",
+      "lat": 27.706,
+      "lng": 87.762,
+      "overnight": "Khambachen",
+      "mapNote": "Valley narrows. Kanchenjunga North Face begins to dominate. 4050m."
+    },
+    {
+      "day": 7,
+      "route": "Khambachen to Lhonak",
+      "distanceKm": "13",
+      "elevGainM": "800",
+      "elevLossM": "100",
+      "maxAltM": "4790.0",
+      "lat": 27.771,
+      "lng": 87.714,
+      "overnight": "Lhonak",
+      "mapNote": "High plateau camp. Glacier views. Altitude hits hard. 4790m."
+    },
+    {
+      "day": 8,
+      "route": "Lhonak to North Base Camp + return",
+      "distanceKm": "12",
+      "elevGainM": "350",
+      "elevLossM": "350",
+      "maxAltM": "5143.0",
+      "lat": 27.793,
+      "lng": 87.689,
+      "overnight": "Lhonak",
+      "mapNote": "North Base Camp — the world's third highest peak base. 5143m."
+    },
+    {
+      "day": 9,
+      "route": "Lhonak to Ghunsa",
+      "distanceKm": "26",
+      "elevGainM": "0",
+      "elevLossM": "1200",
+      "maxAltM": "3595.0",
+      "lat": 27.685,
+      "lng": 87.82,
+      "overnight": "Ghunsa",
+      "mapNote": "Long descent day. Body recovering from altitude. 3595m."
+    },
+    {
+      "day": 10,
+      "route": "Ghunsa to Sele La Pass",
+      "distanceKm": "14",
+      "elevGainM": "1300",
+      "elevLossM": "100",
+      "maxAltM": "4290.0",
+      "lat": 27.68,
+      "lng": 87.786,
+      "overnight": "Below Sele La",
+      "mapNote": "Cross-valley route. Dramatic high pass to southern approach. 4290m."
+    },
+    {
+      "day": 11,
+      "route": "Sele La to Tseram",
+      "distanceKm": "15",
+      "elevGainM": "200",
+      "elevLossM": "1050",
+      "maxAltM": "3870.0",
+      "lat": 27.638,
+      "lng": 87.746,
+      "overnight": "Tseram",
+      "mapNote": "Descend to southern valley. Very different vegetation and culture. 3870m."
+    },
+    {
+      "day": 12,
+      "route": "Tseram to South Base Camp + return",
+      "distanceKm": "16",
+      "elevGainM": "700",
+      "elevLossM": "700",
+      "maxAltM": "4580.0",
+      "lat": 27.62,
+      "lng": 87.725,
+      "overnight": "Tseram",
+      "mapNote": "South Base Camp — classic cirque. Yalung Glacier. 4580m."
+    },
+    {
+      "day": 13,
+      "route": "Tseram to Tortong",
+      "distanceKm": "16",
+      "elevGainM": "100",
+      "elevLossM": "1100",
+      "maxAltM": "2995.0",
+      "lat": 27.58,
+      "lng": 87.78,
+      "overnight": "Tortong",
+      "mapNote": "Descend Yalung valley. Bamboo forest. Rhododendron. 2995m."
+    },
+    {
+      "day": 14,
+      "route": "Tortong to Taplejung (+ drive)",
+      "distanceKm": "20",
+      "elevGainM": "100",
+      "elevLossM": "900",
+      "maxAltM": "1820.0",
+      "lat": 27.632,
+      "lng": 87.914,
+      "overnight": "Taplejung",
+      "mapNote": "Final valley walk. Jeep possible for last section. 1820m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Kanchenjunga",
+      "lat": 27.702,
+      "lng": 88.147,
+      "type": "summit",
+      "altM": 8586,
+      "note": "World's third highest peak. Sacred to local Sikkimese and Nepali people."
+    },
+    {
+      "name": "North Base Camp",
+      "lat": 27.793,
+      "lng": 87.689,
+      "type": "base_camp",
+      "altM": 5143,
+      "note": "Kanchenjunga North Base Camp. Remote and rarely visited."
+    },
+    {
+      "name": "South Base Camp",
+      "lat": 27.62,
+      "lng": 87.725,
+      "type": "base_camp",
+      "altM": 4580,
+      "note": "Classic Yalung Glacier cirque. Dramatic south face views."
+    },
+    {
+      "name": "Sele La Pass",
+      "lat": 27.68,
+      "lng": 87.786,
+      "type": "pass",
+      "altM": 4290,
+      "note": "Crossing between north and south approaches. Outstanding panorama."
+    }
+  ]
+}
