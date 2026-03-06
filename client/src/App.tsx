@@ -10,6 +10,7 @@ import { HelmetProvider } from "react-helmet-async";
 const Home       = lazy(() => import("@/pages/Home"));
 const TrekDetail = lazy(() => import("@/pages/TrekDetail"));
 const TrekFinder = lazy(() => import("@/pages/TrekFinder"));
+const Top100     = lazy(() => import("@/pages/Top100"));
 const NotFound   = lazy(() => import("@/pages/not-found"));
 
 function PageSkeleton() {
@@ -28,10 +29,11 @@ function PageSkeleton() {
 function Router() {
   return (
     <Switch>
-      <Route path="/"              component={Home} />
-      <Route path="/trek/:id"      component={TrekDetail} />
-      <Route path="/trek-finder"   component={TrekFinder} />
-      <Route                       component={NotFound} />
+      <Route path="/"            component={Home} />
+      <Route path="/trek/:id"    component={TrekDetail} />
+      <Route path="/trek-finder" component={TrekFinder} />
+      <Route path="/top-100"     component={Top100} />
+      <Route                   component={NotFound} />
     </Switch>
   );
 }
