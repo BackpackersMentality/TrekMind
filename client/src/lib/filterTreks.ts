@@ -36,7 +36,7 @@ export function filterTreks(treks: any[], filters: Filters): any[] {
 
     // ── Duration ──────────────────────────────────────────────────────────
     if (filters.duration?.length) {
-      if (!filters.duration.includes(getDurationBucket(trek.totalDays))) return false;
+      if (!filters.duration.includes(getDurationBucket(trek.totalDays, trek.tier))) return false;
     }
 
     // ── Popularity ────────────────────────────────────────────────────────
@@ -79,7 +79,8 @@ export function getTerrainCategory(raw: string = ""): string {
   return "Alpine";
 }
 
-export function getDurationBucket(totalDays: string | number | undefined): string {
+export function getDurationBucket(totalDays: string | number | undefined, tier?: number): string {
+  if (tier === 4) return "Thru";
   const m = String(totalDays ?? "").match(/\d+/);
   if (!m) return "Medium";
   const d = parseInt(m[0], 10);
