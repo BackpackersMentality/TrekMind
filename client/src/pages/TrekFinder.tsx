@@ -75,12 +75,12 @@ function scoreTrek(trek: any, prefs: Prefs): ScoredTrek {
   const reasons: string[] = [];
   const days  = parseDays(trek.totalDays);
   const alt   = parseAlt(trek.maxAltitude);
-  const acc   = accBucket(trek.accommodation);
+  const acc   = accBucket(trek.accommodation ?? "");
   const diff  = deriveDifficulty(trek);
 
   // ── Duration (30 pts) ───────────────────────────────────────────────────────
   const durRanges: Record<string, [number, number]> = {
-    short: [1, 5], medium: [6, 10], long: [11, 18], epic: [19, 99],
+    short: [1, 5], medium: [6, 10], long: [11, 18], epic: [19, 9999],
   };
   const [dMin, dMax] = durRanges[prefs.duration] || [0, 99];
   if (days >= dMin && days <= dMax) {
@@ -131,7 +131,7 @@ function scoreTrek(trek: any, prefs: Prefs): ScoredTrek {
   if (prefs.region === "anywhere") {
     score += 10;
   } else {
-    const tregion = trek.region.toLowerCase();
+    const tregion = (trek.region ?? "").toLowerCase();
     const prefR   = prefs.region.toLowerCase();
     // "Himalaya" maps to Asia in our database
     const match = tregion === prefR ||
@@ -541,7 +541,7 @@ export default function TrekFinder() {
     <div className="min-h-screen bg-background pb-20">
       <Helmet>
         <title>AI Trek Finder — Find Your Perfect Trek | TrekMind</title>
-        <meta name="description" content="Answer 6 quick questions and TrekMind's AI matches you with your perfect trek from 67 world-class routes. Personalised by experience, altitude, duration and region." />
+        <meta name="description" content="Answer 6 quick questions and TrekMind's AI matches you with your perfect trek from 100 world-class routes. Personalised by experience, altitude, duration and region." />
         <link rel="canonical" href="https://trekmind.pages.dev/trek-finder" />
       </Helmet>
 
