@@ -1,0 +1,104 @@
+{
+  "sheetName": "Berg Lake Trail",
+  "slug": "berg_lake",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Berg Lake TH to Kinney Lake",
+      "distanceKm": "10",
+      "elevGainM": "190",
+      "elevLossM": "30",
+      "maxAltM": "1050.0",
+      "lat": 53.05,
+      "lng": -119.1,
+      "overnight": "Kinney Lake Camp",
+      "mapNote": "Flat valley walk beside the Robson River. Kinney Lake turquoise water backed by Mount Robson's lower walls. 1050m."
+    },
+    {
+      "day": 2,
+      "route": "Kinney Lake to Berg Lake via Valley of a Thousand Falls",
+      "distanceKm": "12",
+      "elevGainM": "780",
+      "elevLossM": "60",
+      "maxAltM": "1646.0",
+      "lat": 53.1,
+      "lng": -119.08,
+      "overnight": "Berg Lake Camp",
+      "mapNote": "Emperor Falls at 67m, Robson Falls, and Whitehorn Falls — three major cascades in quick succession. Berg Lake arrival. 1646m."
+    },
+    {
+      "day": 3,
+      "route": "Berg Lake day exploration — Hargreaves Glacier Meadows",
+      "distanceKm": "14",
+      "elevGainM": "480",
+      "elevLossM": "480",
+      "maxAltM": "2100.0",
+      "lat": 53.12,
+      "lng": -119.05,
+      "overnight": "Berg Lake Camp",
+      "mapNote": "Hargreaves Meadows above the lake — full view of Mount Robson and the Berg Glacier calving into the lake. 2100m."
+    },
+    {
+      "day": 4,
+      "route": "Berg Lake to Trailhead — full return",
+      "distanceKm": "22",
+      "elevGainM": "80",
+      "elevLossM": "970",
+      "maxAltM": "1646.0",
+      "lat": 52.97,
+      "lng": -119.22,
+      "overnight": "Return to Valemount",
+      "mapNote": "Descent past all falls again in reverse. Mount Robson's summit often revealed on morning return. 856m TH."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Mount Robson Summit",
+      "lat": 53.12,
+      "lng": -119.15,
+      "type": "summit",
+      "altM": 3954,
+      "note": "Highest peak in the Canadian Rockies — often cloud-capped. A clear sighting is rare and celebrated."
+    },
+    {
+      "name": "Emperor Falls",
+      "lat": 53.07,
+      "lng": -119.1,
+      "type": "viewpoint",
+      "altM": 1280,
+      "note": "67-metre waterfall — the trail passes directly beside the cascade on a narrow ledge trail."
+    },
+    {
+      "name": "Berg Lake",
+      "lat": 53.1,
+      "lng": -119.08,
+      "type": "viewpoint",
+      "altM": 1646,
+      "note": "Turquoise glacial lake with icebergs calved from the Berg Glacier. Mount Robson rises directly above."
+    },
+    {
+      "name": "Berg Glacier",
+      "lat": 53.11,
+      "lng": -119.09,
+      "type": "glacier",
+      "altM": 1800,
+      "note": "Active glacier calving directly into Berg Lake — watch for iceberg falls from the camp or meadows."
+    },
+    {
+      "name": "Hargreaves Glacier Meadows",
+      "lat": 53.13,
+      "lng": -119.05,
+      "type": "viewpoint",
+      "altM": 2100,
+      "note": "The finest viewpoint on the trail — Mount Robson, Berg Glacier, and the lake all visible simultaneously."
+    },
+    {
+      "name": "Kinney Lake",
+      "lat": 53.05,
+      "lng": -119.1,
+      "type": "viewpoint",
+      "altM": 1050,
+      "note": "Turquoise lake at the foot of Mount Robson's approach walls — striking on arrival and departure."
+    }
+  ]
+}

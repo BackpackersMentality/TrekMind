@@ -1,0 +1,96 @@
+{
+  "sheetName": "Tombstone Territorial Park",
+  "slug": "tombstone",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Dempster Highway TH to Grizzly Lake",
+      "distanceKm": "14",
+      "elevGainM": "520",
+      "elevLossM": "80",
+      "maxAltM": "1420.0",
+      "lat": 64.38,
+      "lng": -138.45,
+      "overnight": "Grizzly Lake Camp",
+      "mapNote": "First tundra views open up immediately. Grizzly Lake sits below the Ogilvie ridgeline. 1420m."
+    },
+    {
+      "day": 2,
+      "route": "Grizzly Lake to Divide Lake via Grizzly Col",
+      "distanceKm": "18",
+      "elevGainM": "710",
+      "elevLossM": "640",
+      "maxAltM": "1650.0",
+      "lat": 64.45,
+      "lng": -138.28,
+      "overnight": "Divide Lake Camp",
+      "mapNote": "Grizzly Col at 1650m — the route's high point. Divide Lake below is the classic Tombstone image. 1650m."
+    },
+    {
+      "day": 3,
+      "route": "Divide Lake to Talus Lake",
+      "distanceKm": "12",
+      "elevGainM": "180",
+      "elevLossM": "390",
+      "maxAltM": "1540.0",
+      "lat": 64.52,
+      "lng": -138.18,
+      "overnight": "Talus Lake Camp",
+      "mapNote": "Off-trail descent to Talus Lake beneath Tombstone Mountain's jagged face. 1540m."
+    },
+    {
+      "day": 4,
+      "route": "Talus Lake to Goldensides Loop and return to TH",
+      "distanceKm": "22",
+      "elevGainM": "430",
+      "elevLossM": "610",
+      "maxAltM": "1580.0",
+      "lat": 64.47,
+      "lng": -138.38,
+      "overnight": "Return to Dawson City or Whitehorse",
+      "mapNote": "Goldensides viewpoint — full Tombstone panorama. Autumn tundra colour at its peak in late August. 1580m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Tombstone Mountain",
+      "lat": 64.49,
+      "lng": -138.22,
+      "type": "summit",
+      "altM": 2193,
+      "note": "The jagged summit that defines the park — not a trekking summit but always visible."
+    },
+    {
+      "name": "Grizzly Col",
+      "lat": 64.43,
+      "lng": -138.35,
+      "type": "pass",
+      "altM": 1650,
+      "note": "High point of the backpacking circuit. Sweeping tundra panoramas in all directions."
+    },
+    {
+      "name": "Divide Lake",
+      "lat": 64.45,
+      "lng": -138.28,
+      "type": "viewpoint",
+      "altM": 1420,
+      "note": "The most photographed spot in Tombstone — turquoise lake below jagged peaks."
+    },
+    {
+      "name": "Talus Lake",
+      "lat": 64.52,
+      "lng": -138.18,
+      "type": "viewpoint",
+      "altM": 1310,
+      "note": "Remote high lake beneath boulder fields and the north face of the Ogilvie Mountains."
+    },
+    {
+      "name": "Goldensides",
+      "lat": 64.47,
+      "lng": -138.42,
+      "type": "viewpoint",
+      "altM": 1580,
+      "note": "Named for autumn tundra colour — a viewpoint above the Dempster Highway with full park panorama."
+    }
+  ]
+}
