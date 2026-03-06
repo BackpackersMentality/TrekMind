@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
-import { Map, LayoutGrid, Info, Sparkles } from "lucide-react";
+import { Map, LayoutGrid, Info, Sparkles, Trophy } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterTreks } from "@/lib/filterTreks";
 import { GlobeIntegration } from "@/components/GlobeIntegration";
@@ -55,6 +55,14 @@ export default function Home() {
           <p className="text-xs md:text-sm text-white/85 max-w-xl mx-auto font-light leading-relaxed">
             The Global Trekking Discovery App: find the world's most breathtaking trekking routes.
           </p>
+          <div className="mt-2">
+            <Link href="/top-100">
+              <button className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-500/90 hover:bg-amber-400 text-white text-[11px] font-bold rounded-full shadow-lg transition-all uppercase tracking-wider backdrop-blur-sm border border-amber-300/30">
+                <Trophy className="w-3 h-3" />
+                Top 100 Treks
+              </button>
+            </Link>
+          </div>
         </div>
       </header>
 
