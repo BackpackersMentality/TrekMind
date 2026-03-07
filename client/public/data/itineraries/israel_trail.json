@@ -1,0 +1,160 @@
+{
+  "sheetName": "Israel National Trail",
+  "slug": "israel_trail",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Eilat (Southern terminus)",
+      "distanceKm": "20",
+      "elevGainM": "500",
+      "elevLossM": "100",
+      "maxAltM": "300.0",
+      "lat": 29.558,
+      "lng": 34.952,
+      "overnight": "Timna Area",
+      "mapNote": "Red Sea and Eilat Mountains. Desert from the first step. 300m."
+    },
+    {
+      "day": 2,
+      "route": "Timna to Yehoram Spring",
+      "distanceKm": "22",
+      "elevGainM": "600",
+      "elevLossM": "500",
+      "maxAltM": "580.0",
+      "lat": 30.1,
+      "lng": 35.02,
+      "overnight": "Yehoram Spring camp",
+      "mapNote": "Ramon Crater approaches. Negev desert. Ancient copper mines. 580m."
+    },
+    {
+      "day": 3,
+      "route": "Makhtesh Ramon Circuit",
+      "distanceKm": "18",
+      "elevGainM": "400",
+      "elevLossM": "400",
+      "maxAltM": "1035.0",
+      "lat": 30.58,
+      "lng": 34.795,
+      "overnight": "Mitzpe Ramon",
+      "mapNote": "The Grand Canyon of Israel. Volcanic rocks and fossils. 1035m."
+    },
+    {
+      "day": 4,
+      "route": "Mitzpe Ramon to Sde Boker",
+      "distanceKm": "22",
+      "elevGainM": "300",
+      "elevLossM": "400",
+      "maxAltM": "450.0",
+      "lat": 30.87,
+      "lng": 34.79,
+      "overnight": "Sde Boker",
+      "mapNote": "Ben Gurion's desert kibbutz. His grave and legacy. 450m."
+    },
+    {
+      "day": 5,
+      "route": "Negev Highlands to Beer Sheva",
+      "distanceKm": "25",
+      "elevGainM": "200",
+      "elevLossM": "400",
+      "maxAltM": "300.0",
+      "lat": 31.24,
+      "lng": 34.79,
+      "overnight": "Beer Sheva",
+      "mapNote": "Ancient biblical city. Abraham's wells. Transition to lowlands. 300m."
+    },
+    {
+      "day": 6,
+      "route": "Judean Lowlands",
+      "distanceKm": "22",
+      "elevGainM": "300",
+      "elevLossM": "200",
+      "maxAltM": "200.0",
+      "lat": 31.6,
+      "lng": 34.85,
+      "overnight": "Kiryat Gat area",
+      "mapNote": "Footsteps of Samson and Delilah country. Rolling agricultural land. 200m."
+    },
+    {
+      "day": 7,
+      "route": "Jerusalem approach via Judean Hills",
+      "distanceKm": "20",
+      "elevGainM": "700",
+      "elevLossM": "500",
+      "maxAltM": "800.0",
+      "lat": 31.77,
+      "lng": 35.22,
+      "overnight": "Jerusalem",
+      "mapNote": "Approach to Jerusalem through biblical landscape. 800m."
+    },
+    {
+      "day": 8,
+      "route": "Northern crossing to Jezreel Valley",
+      "distanceKm": "22",
+      "elevGainM": "400",
+      "elevLossM": "500",
+      "maxAltM": "100.0",
+      "lat": 32.6,
+      "lng": 35.2,
+      "overnight": "Afula area",
+      "mapNote": "Armageddon plain. Carmel ridge ahead. 100m."
+    },
+    {
+      "day": 9,
+      "route": "Haifa to Western Galilee",
+      "distanceKm": "22",
+      "elevGainM": "600",
+      "elevLossM": "500",
+      "maxAltM": "547.0",
+      "lat": 32.82,
+      "lng": 35.0,
+      "overnight": "Nahariya",
+      "mapNote": "Carmel coast. Baha'i Gardens. Western Galilee coastal plain. 547m."
+    },
+    {
+      "day": 10,
+      "route": "Upper Galilee to Dan (Northern end)",
+      "distanceKm": "20",
+      "elevGainM": "700",
+      "elevLossM": "400",
+      "maxAltM": "700.0",
+      "lat": 33.22,
+      "lng": 35.65,
+      "overnight": "Dan (Northern Terminus)",
+      "mapNote": "Mount Hermon views. Tel Dan archaeological site. Trail complete. 700m."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Makhtesh Ramon",
+      "lat": 30.58,
+      "lng": 34.795,
+      "type": "viewpoint",
+      "altM": 1035,
+      "note": "Largest erosion crater in the world. 40km long, 400m deep."
+    },
+    {
+      "name": "Jerusalem",
+      "lat": 31.77,
+      "lng": 35.22,
+      "type": "landmark",
+      "altM": 800,
+      "note": "The trail passes through or near Jerusalem's ancient walls."
+    },
+    {
+      "name": "Sea of Galilee",
+      "lat": 32.83,
+      "lng": 35.58,
+      "type": "viewpoint",
+      "altM": -213,
+      "note": "Lowest freshwater lake on earth. Jesus walked these shores."
+    },
+    {
+      "name": "Mount Hermon",
+      "lat": 33.415,
+      "lng": 35.857,
+      "type": "summit",
+      "altM": 2814,
+      "note": "Highest point in Israel. Snow-capped most of the year."
+    }
+  ]
+}

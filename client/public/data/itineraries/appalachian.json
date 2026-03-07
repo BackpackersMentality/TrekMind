@@ -1,0 +1,176 @@
+{
+  "sheetName": "Appalachian Trail",
+  "slug": "appalachian",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Georgia — Springer Mountain to NC Border",
+      "distanceKm": "126",
+      "elevGainM": "20000",
+      "elevLossM": "18000",
+      "maxAltM": "1372",
+      "lat": 34.627,
+      "lng": -84.194,
+      "overnight": "Hawk Mountain Shelter / Standing Indian",
+      "mapNote": "Section 1/8 · Georgia · Southern terminus Springer Mountain. Blood Mountain 1372m — highest GA point. 78 miles."
+    },
+    {
+      "day": 2,
+      "route": "Great Smoky Mountains — Fontana Dam to Davenport Gap",
+      "distanceKm": "177",
+      "elevGainM": "38000",
+      "elevLossM": "36000",
+      "maxAltM": "2025",
+      "lat": 35.558,
+      "lng": -83.498,
+      "overnight": "Mount Collins Shelter / Cosby Knob Shelter",
+      "mapNote": "Section 2/8 · GSMNP · Clingmans Dome 2025m — highest point on entire AT. Shelter reservations required. 110 miles."
+    },
+    {
+      "day": 3,
+      "route": "Roan Highlands — Davenport Gap to Damascus VA",
+      "distanceKm": "290",
+      "elevGainM": "47000",
+      "elevLossM": "46000",
+      "maxAltM": "1916",
+      "lat": 36.268,
+      "lng": -82.108,
+      "overnight": "Roan High Knob Shelter / Damascus hostel",
+      "mapNote": "Section 3/8 · TN/NC border · Roan Mountain balds 1916m. Grassy ridge walks. Damascus — the friendliest trail town. 180 miles."
+    },
+    {
+      "day": 4,
+      "route": "Southern Virginia — Damascus to Pearisburg",
+      "distanceKm": "282",
+      "elevGainM": "54000",
+      "elevLossM": "53000",
+      "maxAltM": "1746",
+      "lat": 36.756,
+      "lng": -81.519,
+      "overnight": "Thomas Knob Shelter / Partnership Shelter",
+      "mapNote": "Section 4/8 · Southern VA · Grayson Highlands wild ponies. Mount Rogers 1746m — highest point in Virginia. 175 miles."
+    },
+    {
+      "day": 5,
+      "route": "Central Virginia — Pearisburg to Waynesboro",
+      "distanceKm": "275",
+      "elevGainM": "56000",
+      "elevLossM": "55000",
+      "maxAltM": "1085",
+      "lat": 37.531,
+      "lng": -80.557,
+      "overnight": "Pickle Branch Shelter / The Home Place area",
+      "mapNote": "Section 5/8 · Central VA · McAfee Knob — most photographed spot on AT. Tinker Cliffs. Dragon's Tooth. The notorious Virginia blues. 170 miles."
+    },
+    {
+      "day": 6,
+      "route": "Shenandoah NP — Waynesboro to Front Royal",
+      "distanceKm": "169",
+      "elevGainM": "24000",
+      "elevLossM": "23000",
+      "maxAltM": "1235",
+      "lat": 38.531,
+      "lng": -78.434,
+      "overnight": "Skyland Resort / Big Meadows Wayside",
+      "mapNote": "Section 6/8 · Shenandoah NP · 105 miles of Skyline Drive ridgeline. Waysides every 20 miles. Deer everywhere. Hawksbill Mountain 1235m."
+    },
+    {
+      "day": 7,
+      "route": "Mid-Atlantic — Front Royal to Connecticut Border",
+      "distanceKm": "692",
+      "elevGainM": "60000",
+      "elevLossM": "59000",
+      "maxAltM": "655",
+      "lat": 41.226,
+      "lng": -73.987,
+      "overnight": "Ed Garvey Shelter / Delaware Water Gap / Graymoor",
+      "mapNote": "Section 7/8 · WV / MD / PA / NJ / NY · Harpers Ferry emotional halfway. Pennsylvania Rocksylvania boulder fields. Bear Mountain NY. 430 miles."
+    },
+    {
+      "day": 8,
+      "route": "New England — CT/MA/VT/NH/ME to Katahdin",
+      "distanceKm": "1016",
+      "elevGainM": "165000",
+      "elevLossM": "163000",
+      "maxAltM": "1917",
+      "lat": 45.904,
+      "lng": -68.921,
+      "overnight": "Lake of the Clouds Hut / Katahdin Stream Campground",
+      "mapNote": "Section 8/8 · New England · Presidential Range — Mount Washington 1917m. NH Whites most brutal terrain. Maine 100-Mile Wilderness. Katahdin finish. 630 miles."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Springer Mountain",
+      "lat": 34.627,
+      "lng": -84.194,
+      "type": "landmark",
+      "altM": 1165,
+      "note": "Southern terminus. The bronze plaque where every NOBO thru-hike begins."
+    },
+    {
+      "name": "Blood Mountain",
+      "lat": 34.742,
+      "lng": -83.934,
+      "type": "summit",
+      "altM": 1372,
+      "note": "Highest point in Georgia on the AT. Rocky exposed summit with stone shelter."
+    },
+    {
+      "name": "Clingmans Dome",
+      "lat": 35.563,
+      "lng": -83.498,
+      "type": "summit",
+      "altM": 2025,
+      "note": "Highest point on the entire Appalachian Trail. Concrete observation tower."
+    },
+    {
+      "name": "Roan Mountain",
+      "lat": 36.101,
+      "lng": -82.107,
+      "type": "summit",
+      "altM": 1916,
+      "note": "Vast grassy balds above treeline. Rhododendron tunnels in June. Roan High Knob shelter at 1915m."
+    },
+    {
+      "name": "Grayson Highlands",
+      "lat": 36.635,
+      "lng": -81.508,
+      "type": "landmark",
+      "altM": 1600,
+      "note": "Wild ponies roam the highland plateau freely. One of the AT's most magical landscapes."
+    },
+    {
+      "name": "McAfee Knob",
+      "lat": 37.392,
+      "lng": -80.038,
+      "type": "viewpoint",
+      "altM": 1085,
+      "note": "The most photographed location on the entire AT. Iconic overhanging rock ledge."
+    },
+    {
+      "name": "Harpers Ferry",
+      "lat": 39.325,
+      "lng": -77.729,
+      "type": "landmark",
+      "altM": 265,
+      "note": "ATC headquarters. Emotional psychological halfway point for NOBO hikers. Historic Civil War town."
+    },
+    {
+      "name": "Mount Washington",
+      "lat": 44.27,
+      "lng": -71.303,
+      "type": "summit",
+      "altM": 1917,
+      "note": "Home of the world's worst recorded weather. Lake of the Clouds AMC hut just below summit."
+    },
+    {
+      "name": "Katahdin — Baxter Peak",
+      "lat": 45.904,
+      "lng": -68.921,
+      "type": "summit",
+      "altM": 1606,
+      "note": "The northern terminus. The wooden sign. The end of 2,190 miles. Baxter State Park."
+    }
+  ]
+}

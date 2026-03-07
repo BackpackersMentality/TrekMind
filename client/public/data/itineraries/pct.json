@@ -1,0 +1,140 @@
+{
+  "sheetName": "Pacific Crest Trail",
+  "slug": "pct",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Southern California Desert — Campo to Kennedy Meadows",
+      "distanceKm": "1130",
+      "elevGainM": "110000",
+      "elevLossM": "105000",
+      "maxAltM": "3302",
+      "lat": 35.882,
+      "lng": -118.068,
+      "overnight": "Kennedy Meadows General Store",
+      "mapNote": "Section 1/5 · SoCal Desert · Mexican border at Campo. Mojave heat, 20-mile water carries. San Jacinto 3302m. Vasquez Rocks. 702 miles."
+    },
+    {
+      "day": 2,
+      "route": "High Sierra — Kennedy Meadows to South Lake Tahoe",
+      "distanceKm": "507",
+      "elevGainM": "70000",
+      "elevLossM": "68000",
+      "maxAltM": "4009",
+      "lat": 38.933,
+      "lng": -119.985,
+      "overnight": "Rae Lakes / Tyndall Creek / Muir Trail Ranch",
+      "mapNote": "Section 2/5 · High Sierra · Forester Pass 4009m — highest point on PCT. Full JMT overlap. Muir Hut. Bear canisters mandatory. The crown of the trail. 315 miles."
+    },
+    {
+      "day": 3,
+      "route": "Northern California — South Lake Tahoe to Oregon Border",
+      "distanceKm": "740",
+      "elevGainM": "100000",
+      "elevLossM": "99000",
+      "maxAltM": "2928",
+      "lat": 41.835,
+      "lng": -123.188,
+      "overnight": "Drakesbad Guest Ranch / Burney Falls State Park",
+      "mapNote": "Section 3/5 · NorCal Cascades · Desolation Wilderness. Lassen Volcanic NP. Burney Falls. Long resupply gaps. Active fire risk. 675 miles."
+    },
+    {
+      "day": 4,
+      "route": "Oregon Cascade Crest — Oregon Border to Bridge of the Gods",
+      "distanceKm": "734",
+      "elevGainM": "65000",
+      "elevLossM": "64000",
+      "maxAltM": "2303",
+      "lat": 45.669,
+      "lng": -121.895,
+      "overnight": "Timberline Lodge / Mazama Village / Cascade Locks",
+      "mapNote": "Section 4/5 · Oregon · Crater Lake rim walk. Three Sisters Wilderness. Mount Hood. Timberline Lodge. Oregon's fast, flat miles — the 'Oregon bubble'. 456 miles."
+    },
+    {
+      "day": 5,
+      "route": "Washington North Cascades — Bridge of the Gods to Manning Park",
+      "distanceKm": "814",
+      "elevGainM": "129000",
+      "elevLossM": "127000",
+      "maxAltM": "2534",
+      "lat": 48.728,
+      "lng": -120.687,
+      "overnight": "Stehekin / Glacier Peak camps / Manning Park Lodge",
+      "mapNote": "Section 5/5 · Washington · Goat Rocks knife-edge. Glacier Peak Wilderness. North Cascades. Monument 78 at Canadian border. The hardest and most spectacular state. 506 miles."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Campo Southern Terminus",
+      "lat": 32.596,
+      "lng": -116.468,
+      "type": "landmark",
+      "altM": 762,
+      "note": "Monument 1 at the Mexican border wall. The NOBO start for most PCT hikers."
+    },
+    {
+      "name": "San Jacinto Peak",
+      "lat": 33.815,
+      "lng": -116.679,
+      "type": "summit",
+      "altM": 3302,
+      "note": "Optional aerial-tram-accessed peak above Palm Springs. One of California's finest viewpoints."
+    },
+    {
+      "name": "Kennedy Meadows",
+      "lat": 35.882,
+      "lng": -118.068,
+      "type": "landmark",
+      "altM": 1976,
+      "note": "End of the desert, start of the Sierra. Bear canisters become mandatory. Resupply and rest."
+    },
+    {
+      "name": "Forester Pass",
+      "lat": 36.677,
+      "lng": -118.402,
+      "type": "summit",
+      "altM": 4009,
+      "note": "Highest point on the entire PCT. Steep snow chutes in early season. Notched into a granite wall."
+    },
+    {
+      "name": "Muir Trail Ranch",
+      "lat": 37.175,
+      "lng": -118.736,
+      "type": "landmark",
+      "altM": 2408,
+      "note": "Remote High Sierra resupply. No road access — float buckets pre-sent by hikers."
+    },
+    {
+      "name": "Crater Lake",
+      "lat": 42.946,
+      "lng": -122.099,
+      "type": "viewpoint",
+      "altM": 1883,
+      "note": "The deepest lake in North America. Impossibly blue. Rim walk at 2000m with full crater views."
+    },
+    {
+      "name": "Timberline Lodge",
+      "lat": 45.33,
+      "lng": -121.711,
+      "type": "landmark",
+      "altM": 1829,
+      "note": "Historic Mount Hood lodge. Hot meals, beds, and the famous PCT hiker welcome since 1937."
+    },
+    {
+      "name": "Goat Rocks Wilderness",
+      "lat": 46.503,
+      "lng": -121.502,
+      "type": "viewpoint",
+      "altM": 2163,
+      "note": "The knife-edge ridge above glaciers with Mount Rainier dominating. The finest day in Washington."
+    },
+    {
+      "name": "Monument 78",
+      "lat": 49.0,
+      "lng": -120.688,
+      "type": "landmark",
+      "altM": 1270,
+      "note": "The northern terminus at the Canadian border. Manning Park 13 miles beyond on a dirt road."
+    }
+  ]
+}

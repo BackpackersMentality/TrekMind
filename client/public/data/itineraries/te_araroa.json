@@ -1,0 +1,184 @@
+{
+  "sheetName": "Te Araroa",
+  "slug": "te_araroa",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Northland — Cape Reinga to Mangawhai Heads",
+      "distanceKm": "290",
+      "elevGainM": "12000",
+      "elevLossM": "11000",
+      "maxAltM": "390",
+      "lat": -36.089,
+      "lng": 174.562,
+      "overnight": "Ninety Mile Beach camps / Mangawhai DOC campsite",
+      "mapNote": "Section 1/10 · Northland · Cape Reinga lighthouse — tip of Aotearoa. Te Paki sand dunes. 90-mile beach road walk. Waipoua Kauri forest."
+    },
+    {
+      "day": 2,
+      "route": "Auckland Region — Mangawhai to Mercer via Auckland",
+      "distanceKm": "200",
+      "elevGainM": "8000",
+      "elevLossM": "8000",
+      "maxAltM": "260",
+      "lat": -37.32,
+      "lng": 174.89,
+      "overnight": "Auckland hostels / Mercer campground",
+      "mapNote": "Section 2/10 · Auckland · Urban traverse of NZ's largest city. Volcanic cones — One Tree Hill, Mount Eden. The TA passes through city streets."
+    },
+    {
+      "day": 3,
+      "route": "Waikato & King Country — Mercer to Taumarunui",
+      "distanceKm": "310",
+      "elevGainM": "18000",
+      "elevLossM": "17500",
+      "maxAltM": "959",
+      "lat": -38.88,
+      "lng": 175.255,
+      "overnight": "Timber Trail huts / Taumarunui Top 10",
+      "mapNote": "Section 3/10 · Waikato · Hauraki Rail Trail. Timber Trail on converted railway. Hauhungaroa Range dense bush. Long section through farmland and forest."
+    },
+    {
+      "day": 4,
+      "route": "Whanganui River Journey — Taumarunui to Whanganui city",
+      "distanceKm": "145",
+      "elevGainM": "500",
+      "elevLossM": "500",
+      "maxAltM": "200",
+      "lat": -39.93,
+      "lng": 175.05,
+      "overnight": "River camps / John Coull Hut / Pipiriki Lodge",
+      "mapNote": "Section 4/10 · Whanganui River · 5 days by canoe or kayak down the sacred Whanganui. One of NZ's Great Journeys. Bridge to Nowhere side trip."
+    },
+    {
+      "day": 5,
+      "route": "Central Plateau — Whanganui to Tongariro Crossing",
+      "distanceKm": "120",
+      "elevGainM": "14000",
+      "elevLossM": "13500",
+      "maxAltM": "1967",
+      "lat": -39.203,
+      "lng": 175.587,
+      "overnight": "Whakapapa Village / Tongariro park huts",
+      "mapNote": "Section 5/10 · Tongariro · The Alpine Crossing — most-walked day hike in NZ. Mount Ngauruhoe (Mount Doom). Red Crater 1967m. Emerald Lakes."
+    },
+    {
+      "day": 6,
+      "route": "Tararua Ranges — Palmerston North to Wellington",
+      "distanceKm": "220",
+      "elevGainM": "30000",
+      "elevLossM": "30000",
+      "maxAltM": "1571",
+      "lat": -41.286,
+      "lng": 174.776,
+      "overnight": "Tararua huts / Wellington city / Interislander ferry",
+      "mapNote": "Section 6/10 · Tararua Ranges · Hardest North Island section. Extreme weather. Mitre 1571m. Wellington ferry crossing to South Island."
+    },
+    {
+      "day": 7,
+      "route": "Marlborough & Nelson — Picton to St Arnaud",
+      "distanceKm": "230",
+      "elevGainM": "22000",
+      "elevLossM": "21000",
+      "maxAltM": "1795",
+      "lat": -41.804,
+      "lng": 172.843,
+      "overnight": "Queen Charlotte huts / Richmond Range huts",
+      "mapNote": "Section 7/10 · Marlborough · Queen Charlotte Track along the Sounds. Richmond Ranges exposed ridge walking. Mount Richmond 1760m."
+    },
+    {
+      "day": 8,
+      "route": "Nelson Lakes & St James — St Arnaud to Boyle Village",
+      "distanceKm": "175",
+      "elevGainM": "18000",
+      "elevLossM": "17500",
+      "maxAltM": "1874",
+      "lat": -42.36,
+      "lng": 172.44,
+      "overnight": "St James Walkway huts / Boyle Lodge",
+      "mapNote": "Section 8/10 · Nelson Lakes · Alpine St James high country. Tussock passes. Merino sheep stations. The Canterbury high country character changes the trail."
+    },
+    {
+      "day": 9,
+      "route": "Southern Alps — Arthur's Pass to Queenstown",
+      "distanceKm": "420",
+      "elevGainM": "55000",
+      "elevLossM": "54000",
+      "maxAltM": "2400",
+      "lat": -45.032,
+      "lng": 168.662,
+      "overnight": "Brewster Hut / Haast township / Queenstown",
+      "mapNote": "Section 9/10 · Southern Alps · Avalanche Peak 1833m. Brewster Glacier. Haast Pass. Mount Aspiring NP. Most technical section — river crossings, route-finding essential."
+    },
+    {
+      "day": 10,
+      "route": "Southland — Queenstown to Bluff",
+      "distanceKm": "420",
+      "elevGainM": "35000",
+      "elevLossM": "35000",
+      "maxAltM": "1588",
+      "lat": -46.6,
+      "lng": 168.343,
+      "overnight": "Mavora Lakes camp / Bluff Hill",
+      "mapNote": "Section 10/10 · Southland · Mavora Lakes tussock. The Southland flats. Bluff — the southern terminus. The famous directional signpost. End of 3000km."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Cape Reinga",
+      "lat": -34.429,
+      "lng": 172.68,
+      "type": "landmark",
+      "altM": 165,
+      "note": "The northern terminus — the very tip of New Zealand. Where the Tasman Sea and Pacific Ocean meet."
+    },
+    {
+      "name": "Ninety Mile Beach",
+      "lat": -35.0,
+      "lng": 173.3,
+      "type": "landmark",
+      "altM": 0,
+      "note": "90 miles of hard-sand beach. Tide timing critical. The TA's most monotonous and iconic section."
+    },
+    {
+      "name": "Mount Ngauruhoe",
+      "lat": -39.157,
+      "lng": 175.632,
+      "type": "summit",
+      "altM": 2291,
+      "note": "The perfect volcanic cone. Mount Doom from Lord of the Rings. Side trip off the main TA route."
+    },
+    {
+      "name": "Red Crater",
+      "lat": -39.13,
+      "lng": 175.658,
+      "type": "summit",
+      "altM": 1967,
+      "note": "Highest point on the Tongariro Alpine Crossing. Vivid red-ochre volcanic landscape."
+    },
+    {
+      "name": "Whanganui River",
+      "lat": -39.5,
+      "lng": 175.05,
+      "type": "landmark",
+      "altM": 60,
+      "note": "Sacred Māori river — the first river in the world granted legal personhood. Canoe section of the TA."
+    },
+    {
+      "name": "Brewster Glacier",
+      "lat": -44.08,
+      "lng": 169.42,
+      "type": "viewpoint",
+      "altM": 1650,
+      "note": "One of the most accessible Southern Alps glaciers. Views down the Haast River valley."
+    },
+    {
+      "name": "Bluff",
+      "lat": -46.6,
+      "lng": 168.343,
+      "type": "landmark",
+      "altM": 10,
+      "note": "The southern terminus. The famous signpost with distances to everywhere. 3000km from Cape Reinga."
+    }
+  ]
+}

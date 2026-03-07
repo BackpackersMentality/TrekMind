@@ -1,0 +1,140 @@
+{
+  "sheetName": "Continental Divide Trail",
+  "slug": "cdt",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "New Mexico — Crazy Cook Monument to Cumbres Pass",
+      "distanceKm": "1320",
+      "elevGainM": "90000",
+      "elevLossM": "88000",
+      "maxAltM": "3445",
+      "lat": 36.973,
+      "lng": -106.453,
+      "overnight": "Gila River Camps / Silver City / Ghost Ranch",
+      "mapNote": "Section 1/5 · New Mexico · Southern terminus Crazy Cook. Gila Cliff Dwellings hot springs. El Malpais lava fields. Most poorly-marked section. 820 miles."
+    },
+    {
+      "day": 2,
+      "route": "Colorado — Cumbres Pass to Wyoming Border",
+      "distanceKm": "1191",
+      "elevGainM": "160000",
+      "elevLossM": "157000",
+      "maxAltM": "4352",
+      "lat": 39.634,
+      "lng": -105.819,
+      "overnight": "Twin Lakes / Breckenridge / Silverton camps",
+      "mapNote": "Section 2/5 · Colorado · The crown — Grays Peak 4352m highest point on CDT. 30+ passes above 3600m. San Juan & Weminuche Wilderness. Maximum lightning exposure. 740 miles."
+    },
+    {
+      "day": 3,
+      "route": "Wyoming — Wyoming Border to Yellowstone North",
+      "distanceKm": "805",
+      "elevGainM": "70000",
+      "elevLossM": "69000",
+      "maxAltM": "3450",
+      "lat": 44.66,
+      "lng": -110.503,
+      "overnight": "Cirque of the Towers / Pinedale / Yellowstone camps",
+      "mapNote": "Section 3/5 · Wyoming · Wind River Range — most spectacular CDT section. Cirque of the Towers. Great Divide Basin waterless crossing. Yellowstone geysers. 500 miles."
+    },
+    {
+      "day": 4,
+      "route": "Idaho/Montana Border — Yellowstone to Lima",
+      "distanceKm": "563",
+      "elevGainM": "60000",
+      "elevLossM": "59000",
+      "maxAltM": "3231",
+      "lat": 44.638,
+      "lng": -112.593,
+      "overnight": "Lemhi Pass Camps / Anaconda / Lima",
+      "mapNote": "Section 4/5 · Bitterroots & Centennials · Lemhi Pass — Lewis and Clark 1805. Centennial Mountains. Trail poorly defined. Remote and self-reliant section. 350 miles."
+    },
+    {
+      "day": 5,
+      "route": "Montana — Lima to Waterton Lake (Northern Terminus)",
+      "distanceKm": "1110",
+      "elevGainM": "77000",
+      "elevLossM": "76000",
+      "maxAltM": "2743",
+      "lat": 48.999,
+      "lng": -113.882,
+      "overnight": "Many Glacier Campground / Waterton Townsite",
+      "mapNote": "Section 5/5 · Montana · Bob Marshall Wilderness — largest roadless area lower 48. Glacier NP. Chief Mountain border crossing. Waterton Lake northern terminus. 690 miles."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Crazy Cook Monument",
+      "lat": 31.334,
+      "lng": -108.21,
+      "type": "landmark",
+      "altM": 1459,
+      "note": "Southern terminus. A lonely monument in the New Mexico desert. The NOBO start of the CDT."
+    },
+    {
+      "name": "Gila Cliff Dwellings",
+      "lat": 33.228,
+      "lng": -108.269,
+      "type": "landmark",
+      "altM": 1768,
+      "note": "13th-century Mogollon cliff dwellings. The only wilderness hot springs on the entire CDT."
+    },
+    {
+      "name": "Grays Peak",
+      "lat": 39.634,
+      "lng": -105.818,
+      "type": "summit",
+      "altM": 4352,
+      "note": "Highest point on the CDT. A 14er. 360° view over the Colorado Rockies."
+    },
+    {
+      "name": "Cirque of the Towers",
+      "lat": 42.737,
+      "lng": -109.223,
+      "type": "viewpoint",
+      "altM": 3313,
+      "note": "Wind River Range granite amphitheatre. One of the great wilderness campsites in North America."
+    },
+    {
+      "name": "Great Divide Basin",
+      "lat": 42.0,
+      "lng": -108.5,
+      "type": "landmark",
+      "altM": 2100,
+      "note": "Hydrological anomaly — water neither flows to Atlantic nor Pacific. 100-mile waterless alternate."
+    },
+    {
+      "name": "Yellowstone Geysers",
+      "lat": 44.46,
+      "lng": -110.828,
+      "type": "landmark",
+      "altM": 2350,
+      "note": "Old Faithful and the thermal fields. The CDT passes through the world's largest supervolcano caldera."
+    },
+    {
+      "name": "Lemhi Pass",
+      "lat": 44.854,
+      "lng": -113.451,
+      "type": "landmark",
+      "altM": 2369,
+      "note": "Lewis and Clark's Continental Divide crossing on 12 August 1805. The CDT follows their exact route."
+    },
+    {
+      "name": "Bob Marshall Wilderness",
+      "lat": 47.6,
+      "lng": -112.9,
+      "type": "landmark",
+      "altM": 2200,
+      "note": "The largest roadless area in the contiguous US. Grizzly bears, wolves, no roads for 100+ miles."
+    },
+    {
+      "name": "Waterton Lake",
+      "lat": 48.999,
+      "lng": -113.882,
+      "type": "landmark",
+      "altM": 1280,
+      "note": "Northern terminus at the US-Canada border. Chief Mountain Customs. Waterton Townsite beyond."
+    }
+  ]
+}

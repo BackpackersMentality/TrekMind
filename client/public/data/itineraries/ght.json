@@ -1,0 +1,232 @@
+{
+  "sheetName": "Great Himalaya Trail",
+  "slug": "ght",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Kanchenjunga Section — Taplejung to Pangpema BC",
+      "distanceKm": "210",
+      "elevGainM": "15500",
+      "elevLossM": "12000",
+      "maxAltM": "5140",
+      "lat": 27.857,
+      "lng": 88.048,
+      "overnight": "Ghunsa village / Pangpema Base Camp",
+      "mapNote": "Section 1/12 · Kanchenjunga · Eastern Nepal start. Terraced farmland to Tibetan-culture villages. Kanchenjunga North BC 5140m — world's 3rd highest."
+    },
+    {
+      "day": 2,
+      "route": "Kanchenjunga South & Yalung — BC Traverse to Dobhan",
+      "distanceKm": "130",
+      "elevGainM": "6000",
+      "elevLossM": "9000",
+      "maxAltM": "4600",
+      "lat": 27.42,
+      "lng": 87.72,
+      "overnight": "Yalung BC / Dobhan",
+      "mapNote": "Section 2/12 · Kanchenjunga South · Sele La Pass 4290m. Yalung Glacier. Kanchenjunga South BC. Dense rhododendron descent."
+    },
+    {
+      "day": 3,
+      "route": "Makalu Section — Num to Makalu Base Camp",
+      "distanceKm": "120",
+      "elevGainM": "10000",
+      "elevLossM": "8000",
+      "maxAltM": "5700",
+      "lat": 27.889,
+      "lng": 87.088,
+      "overnight": "Makalu Base Camp 5700m",
+      "mapNote": "Section 3/12 · Makalu · Barun Valley — Nepal's most pristine wilderness corridor. Makalu 8463m overhead at BC."
+    },
+    {
+      "day": 4,
+      "route": "Khumbu Approach — Salleri to Kongma La",
+      "distanceKm": "180",
+      "elevGainM": "13000",
+      "elevLossM": "10000",
+      "maxAltM": "5535",
+      "lat": 27.902,
+      "lng": 86.826,
+      "overnight": "Chhukung / Kongma La high camp",
+      "mapNote": "Section 4/12 · Khumbu · Kongma La 5535m — highest GHT high-route pass. Imja Glacier. Ama Dablam dominates skyline."
+    },
+    {
+      "day": 5,
+      "route": "Everest Section — Khumbu to Renjo La & Gokyo",
+      "distanceKm": "85",
+      "elevGainM": "7000",
+      "elevLossM": "6500",
+      "maxAltM": "5360",
+      "lat": 28.117,
+      "lng": 86.683,
+      "overnight": "Gokyo Lakes village",
+      "mapNote": "Section 5/12 · Everest · Renjo La 5360m — finest viewpoint in the Himalaya: Everest, Lhotse, Makalu, Cho Oyu simultaneously. Gokyo sacred lakes."
+    },
+    {
+      "day": 6,
+      "route": "Rolwaling — Namche to Tesi Lapcha Pass & Simigaon",
+      "distanceKm": "100",
+      "elevGainM": "9000",
+      "elevLossM": "8500",
+      "maxAltM": "5755",
+      "lat": 27.8,
+      "lng": 86.35,
+      "overnight": "Tsho Rolpa glacier camp / Simigaon",
+      "mapNote": "Section 6/12 · Rolwaling · Tesi Lapcha 5755m — hardest technical pass on GHT. Glacier travel, fixed ropes. Pristine rarely-visited Rolwaling Valley."
+    },
+    {
+      "day": 7,
+      "route": "Manaslu Circuit — Arughat to Larkya La",
+      "distanceKm": "115",
+      "elevGainM": "8500",
+      "elevLossM": "7000",
+      "maxAltM": "5213",
+      "lat": 28.655,
+      "lng": 84.787,
+      "overnight": "Dharmasala / Bhimthang",
+      "mapNote": "Section 7/12 · Manaslu · Larkya La 5213m. Manaslu 8163m directly overhead. Restricted area permit required. Classic circuit in superb condition."
+    },
+    {
+      "day": 8,
+      "route": "Annapurna Circuit — Dharapani to Thorong La",
+      "distanceKm": "120",
+      "elevGainM": "8000",
+      "elevLossM": "7500",
+      "maxAltM": "5416",
+      "lat": 28.799,
+      "lng": 83.97,
+      "overnight": "High Camp 4925m / Muktinath",
+      "mapNote": "Section 8/12 · Annapurna · Thorong La 5416m — world's most-crossed high pass. Annapurna massif. Tilicho Lake 4919m optional detour."
+    },
+    {
+      "day": 9,
+      "route": "Upper Mustang — Muktinath to Lo Manthang",
+      "distanceKm": "140",
+      "elevGainM": "6000",
+      "elevLossM": "5500",
+      "maxAltM": "4200",
+      "lat": 29.178,
+      "lng": 83.958,
+      "overnight": "Lo Manthang walled city",
+      "mapNote": "Section 9/12 · Mustang · The last forbidden kingdom. Tibet-like plateau landscape. Lo Manthang walled city. Sky caves carved into cliffs. Restricted area permit."
+    },
+    {
+      "day": 10,
+      "route": "Dolpo Section — Jomsom to Shey Gompa & Phoksundo Lake",
+      "distanceKm": "160",
+      "elevGainM": "9000",
+      "elevLossM": "8000",
+      "maxAltM": "5360",
+      "lat": 29.2,
+      "lng": 83.0,
+      "overnight": "Shey Gompa / Phoksundo Lake camp",
+      "mapNote": "Section 10/12 · Dolpo · The Snow Leopard country (Peter Matthiessen). Phoksundo Lake 3611m — Nepal's deepest. Highly restricted. One of the GHT's most profound sections."
+    },
+    {
+      "day": 11,
+      "route": "Humla & Api — Dolpo to Simikot",
+      "distanceKm": "200",
+      "elevGainM": "12000",
+      "elevLossM": "11000",
+      "maxAltM": "5100",
+      "lat": 29.96,
+      "lng": 81.82,
+      "overnight": "Remote Humla camps / Simikot",
+      "mapNote": "Section 11/12 · Humla · Api Himal 7132m. The most remote section of the GHT. Almost no infrastructure. Tibetan border culture. Full self-sufficiency required."
+    },
+    {
+      "day": 12,
+      "route": "Western Nepal — Simikot to Hilsa (Tibet Border)",
+      "distanceKm": "100",
+      "elevGainM": "5000",
+      "elevLossM": "6000",
+      "maxAltM": "3780",
+      "lat": 30.098,
+      "lng": 81.336,
+      "overnight": "Hilsa border village",
+      "mapNote": "Section 12/12 · Western terminus · Hilsa at the Tibet border crossing. Karnali River. The end of the GHT high route — one of the world's most remote trail finishes."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Taplejung",
+      "lat": 27.355,
+      "lng": 87.672,
+      "type": "landmark",
+      "altM": 1820,
+      "note": "Eastern terminus of the GHT high route. Gateway to Kanchenjunga."
+    },
+    {
+      "name": "Kanchenjunga North BC",
+      "lat": 27.857,
+      "lng": 88.048,
+      "type": "landmark",
+      "altM": 5140,
+      "note": "Base camp of the world's third highest mountain. Among the most remote spots reachable on foot."
+    },
+    {
+      "name": "Kongma La",
+      "lat": 27.902,
+      "lng": 86.826,
+      "type": "summit",
+      "altM": 5535,
+      "note": "Highest pass on the GHT Khumbu section. Views encompass Makalu, Lhotse, Ama Dablam."
+    },
+    {
+      "name": "Renjo La",
+      "lat": 28.05,
+      "lng": 86.638,
+      "type": "summit",
+      "altM": 5360,
+      "note": "The finest viewpoint in the Himalaya — Everest, Lhotse, Makalu and Cho Oyu simultaneously visible."
+    },
+    {
+      "name": "Tesi Lapcha Pass",
+      "lat": 27.8,
+      "lng": 86.35,
+      "type": "summit",
+      "altM": 5755,
+      "note": "Hardest technical pass on the GHT. Glacier travel, fixed ropes, ice axe required."
+    },
+    {
+      "name": "Larkya La",
+      "lat": 28.655,
+      "lng": 84.787,
+      "type": "summit",
+      "altM": 5213,
+      "note": "Manaslu Circuit's famous high pass with Manaslu 8163m towering directly overhead."
+    },
+    {
+      "name": "Thorong La",
+      "lat": 28.799,
+      "lng": 83.97,
+      "type": "summit",
+      "altM": 5416,
+      "note": "World's most-trekked high-altitude pass. Annapurna Circuit centrepiece."
+    },
+    {
+      "name": "Lo Manthang",
+      "lat": 29.178,
+      "lng": 83.958,
+      "type": "landmark",
+      "altM": 3840,
+      "note": "Walled capital of the former Kingdom of Mustang. Tibetan culture frozen in time."
+    },
+    {
+      "name": "Phoksundo Lake",
+      "lat": 29.2,
+      "lng": 83.0,
+      "type": "viewpoint",
+      "altM": 3611,
+      "note": "Nepal's deepest lake. Otherworldly turquoise blue. The heart of Shey Phoksundo NP."
+    },
+    {
+      "name": "Hilsa",
+      "lat": 30.098,
+      "lng": 81.336,
+      "type": "landmark",
+      "altM": 3641,
+      "note": "Western terminus of the GHT high route at the Tibetan border. End of one of the world's greatest treks."
+    }
+  ]
+}
