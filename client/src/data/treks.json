@@ -34,7 +34,6 @@
     "latitude": 46.02,
     "longitude": 7.74,
     "imageFilename": "haute_route",
-    "terrain": "High alpine",
     "season": "June-September",
     "popularityScore": 10
   },
@@ -1216,7 +1215,7 @@
     "season": "May-September",
     "popularityScore": 5
   },
-    {
+  {
     "id": "timberline",
     "name": "Mount Hood Timberline",
     "tier": 3,
@@ -1272,7 +1271,7 @@
     "imageFilename": "yading_kora",
     "season": "Year-round",
     "popularityScore": 2
-  },  [
+  },
   {
     "id": "teton_crest",
     "name": "Teton Crest Trail",
@@ -1331,26 +1330,26 @@
     "popularityScore": 3
   },
   {
-    "id": "chilkoot",
-    "name": "Chilkoot Trail",
+    "id": "tombstone",
+    "name": "Tombstone Territorial Park",
     "tier": 2,
     "region": "North America",
-    "country": "Canada/USA",
-    "terrain": "Coastal forest, alpine",
+    "country": "Canada",
+    "terrain": "Arctic tundra, alpine",
     "accommodation": "Camping",
-    "keyFeatures": "Klondike Gold Rush history, Chilkoot Pass, Yukon wilderness",
-    "distance": "53 km",
-    "totalDays": "4 days",
-    "maxAltitude": "1067m",
-    "permits": "Required",
-    "latitude": 59.72,
-    "longitude": -135.27,
-    "imageFilename": "chilkoot",
-    "season": "June-September",
+    "keyFeatures": "Patagonia of the North, Divide Lake, autumn colour, grizzly habitat",
+    "distance": "80 km",
+    "totalDays": "5 days",
+    "maxAltitude": "1650m",
+    "permits": "Backcountry permit required",
+    "latitude": 64.45,
+    "longitude": -138.3,
+    "imageFilename": "tombstone",
+    "season": "July-September",
     "popularityScore": 6
   },
   {
-    "id": "skyline_canada",
+    "id": "skyline",
     "name": "Skyline Trail",
     "tier": 2,
     "region": "North America",
@@ -1431,18 +1430,18 @@
     "tier": 2,
     "region": "South America",
     "country": "Venezuela/Brazil/Guyana",
-    "terrain": "Tepui plateau, rainforest",
+    "terrain": "Tepui plateau, savanna, rainforest",
     "accommodation": "Camping",
-    "keyFeatures": "Ancient tepui plateau, Lost World landscape, triple border summit",
+    "keyFeatures": "Ancient tepui plateau, Lost World landscape, triple border summit, endemic species",
     "distance": "70 km",
     "totalDays": "6 days",
     "maxAltitude": "2810m",
-    "permits": "Required",
+    "permits": "Required (guide mandatory)",
     "latitude": 5.14,
     "longitude": -60.76,
     "imageFilename": "roraima",
     "season": "December-April",
-    "popularityScore": 5
+    "popularityScore": 6
   },
   {
     "id": "dientes",
@@ -1711,23 +1710,23 @@
     "popularityScore": 6
   },
   {
-    "id": "bale_mountains",
-    "name": "Bale Mountains Trek",
-    "tier": 3,
-    "region": "Africa",
-    "country": "Ethiopia",
-    "terrain": "Afroalpine, plateau",
-    "accommodation": "Camping",
-    "keyFeatures": "Ethiopian wolves, afroalpine plateau, unique endemic wildlife",
-    "distance": "80 km",
-    "totalDays": "6 days",
-    "maxAltitude": "4377m",
-    "permits": "Required",
-    "latitude": 7.02,
-    "longitude": 39.92,
-    "imageFilename": "bale_mountains",
-    "season": "October-January",
-    "popularityScore": 3
+    "id": "berg_lake",
+    "name": "Berg Lake Trail",
+    "tier": 2,
+    "region": "North America",
+    "country": "Canada",
+    "terrain": "Alpine, glacial",
+    "accommodation": "Camping, backcountry huts",
+    "keyFeatures": "Mount Robson, Berg Glacier, Emperor Falls, highest Canadian Rockies peak",
+    "distance": "42 km",
+    "totalDays": "4 days",
+    "maxAltitude": "1646m",
+    "permits": "Required (reservation system)",
+    "latitude": 53.1,
+    "longitude": -119.16,
+    "imageFilename": "berg_lake",
+    "season": "July-September",
+    "popularityScore": 7
   },
   {
     "id": "kepler",
@@ -1900,5 +1899,4 @@
     "season": "April-October",
     "popularityScore": 7
   }
-]
 ]
