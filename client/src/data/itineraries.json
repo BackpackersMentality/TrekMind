@@ -1273,210 +1273,6 @@
       }
     ]
   },
-  "everest": {
-    "sheetName": "Everest",
-    "slug": "everest",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Fly to Lukla; Trek to Phakding",
-        "distance": "8 km",
-        "elevChange": "+200m / -400m",
-        "maxAltitude": "2,860 m",
-        "lat": 27.7467,
-        "lng": 86.714,
-        "overnight": "Phakding",
-        "mapNote": "First overnight after Lukla flight. Dudh Koshi river. 2610m."
-      },
-      {
-        "day": 2,
-        "route": "Phakding to Namche Bazaar",
-        "distance": "11 km",
-        "elevChange": "1,000m",
-        "maxAltitude": "3,440 m",
-        "lat": 27.8069,
-        "lng": 86.7139,
-        "overnight": "Namche Bazaar",
-        "mapNote": "Sherpa capital. Horseshoe bowl. Market on Saturdays. 3440m."
-      },
-      {
-        "day": 3,
-        "route": "Acclimatization Day (Namche)",
-        "distance": "5 km",
-        "elevChange": "400m",
-        "maxAltitude": "3,880 m",
-        "lat": 27.8069,
-        "lng": 86.7139,
-        "overnight": "Namche Bazaar",
-        "mapNote": "Acclimatisation day. Same teahouses. 3440m."
-      },
-      {
-        "day": 4,
-        "route": "Namche to Tengboche",
-        "distance": "10 km",
-        "elevChange": "+750m / -300m",
-        "maxAltitude": "3,860 m",
-        "lat": 27.836,
-        "lng": 86.764,
-        "overnight": "Tengboche",
-        "mapNote": "Famous monastery on ridge. Ama Dablam views. 3867m."
-      },
-      {
-        "day": 5,
-        "route": "Tengboche to Dingboche",
-        "distance": "11 km",
-        "elevChange": "550m",
-        "maxAltitude": "4,410 m",
-        "lat": 27.8935,
-        "lng": 86.8298,
-        "overnight": "Dingboche",
-        "mapNote": "Imja Khola side valley. Great Lhotse views. 4360m."
-      },
-      {
-        "day": 6,
-        "route": "Acclimatization Day (Dingboche)",
-        "distance": "6 km",
-        "elevChange": "500m",
-        "maxAltitude": "4,900 m",
-        "lat": 27.8935,
-        "lng": 86.8298,
-        "overnight": "Dingboche",
-        "mapNote": "Acclimatisation day. Same teahouses. 4360m."
-      },
-      {
-        "day": 7,
-        "route": "Dingboche to Lobuche",
-        "distance": "9 km",
-        "elevChange": "500m",
-        "maxAltitude": "4,910 m",
-        "lat": 27.9478,
-        "lng": 86.8078,
-        "overnight": "Lobuche",
-        "mapNote": "Moraine camp below Lobuche Peak. 4940m."
-      },
-      {
-        "day": 8,
-        "route": "Lobuche to Gorak Shep → EBC",
-        "distance": "13 km",
-        "elevChange": "450m",
-        "maxAltitude": "5,364 m",
-        "lat": 27.9986,
-        "lng": 86.8578,
-        "overnight": "Gorak Shep / EBC",
-        "mapNote": "Gorak Shep 5140m. EBC 5364m visited same day. Sleep at Gorak Shep."
-      },
-      {
-        "day": 9,
-        "route": "Kala Patthar → Pheriche",
-        "distance": "16 km",
-        "elevChange": "+400m / -1,200m",
-        "maxAltitude": "5,545 m",
-        "lat": 27.8938,
-        "lng": 86.817,
-        "overnight": "Pheriche",
-        "mapNote": "After Kala Patthar 5545m sunrise. HRA clinic here. 4371m."
-      },
-      {
-        "day": 10,
-        "route": "Pheriche to Namche Bazaar",
-        "distance": "20 km",
-        "elevChange": "-800m",
-        "maxAltitude": "4,200 m",
-        "lat": 27.8069,
-        "lng": 86.7139,
-        "overnight": "Namche Bazaar",
-        "mapNote": "Return to Sherpa capital. Last teahouse comforts. 3440m."
-      },
-      {
-        "day": 11,
-        "route": "Namche Bazaar to Lukla",
-        "distance": "19 km",
-        "elevChange": "-600m",
-        "maxAltitude": "3,440 m",
-        "lat": 27.6868,
-        "lng": 86.7314,
-        "overnight": "Lukla",
-        "mapNote": "Final overnight before flight. Celebrate at Hillary Bar. 2840m."
-      },
-      {
-        "day": 12,
-        "route": "Fly Lukla to Kathmandu",
-        "distance": "—",
-        "elevChange": "—",
-        "maxAltitude": "1,400 m",
-        "lat": 27.7172,
-        "lng": 85.324,
-        "overnight": "Kathmandu (Fly Out)",
-        "mapNote": "Tribhuvan Airport. End of trek. 1400m."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Everest Base Camp",
-        "lat": 27.9986,
-        "lng": 86.8578,
-        "type": "base_camp",
-        "altM": 5364,
-        "note": "South Base Camp on Khumbu Glacier. Icefall and expedition tents."
-      },
-      {
-        "name": "Kala Patthar",
-        "lat": 27.9845,
-        "lng": 86.8316,
-        "type": "summit",
-        "altM": 5545,
-        "note": "Best Everest pre-dawn view. Highest point on standard EBC trek."
-      },
-      {
-        "name": "Tengboche Monastery",
-        "lat": 27.836,
-        "lng": 86.764,
-        "type": "landmark",
-        "altM": 3867,
-        "note": "Most famous Khumbu monastery. Ama Dablam backdrop."
-      },
-      {
-        "name": "Ama Dablam",
-        "lat": 27.8615,
-        "lng": 86.8597,
-        "type": "summit",
-        "altM": 6812,
-        "note": "The Matterhorn of the Himalaya. Visible for most of the trek."
-      },
-      {
-        "name": "Hillary Suspension Bridge",
-        "lat": 27.7888,
-        "lng": 86.7238,
-        "type": "landmark",
-        "altM": 2800,
-        "note": "One of world's highest suspension bridges. Dudh Koshi River."
-      },
-      {
-        "name": "Khumbu Glacier",
-        "lat": 27.9688,
-        "lng": 86.8388,
-        "type": "glacier",
-        "altM": 4900,
-        "note": "Enormous glacier flowing from Everest's Western Cwm."
-      },
-      {
-        "name": "Everest Summit",
-        "lat": 27.9881,
-        "lng": 86.925,
-        "type": "summit",
-        "altM": 8849,
-        "note": "World's highest peak. Visible from Kala Patthar on clear days."
-      },
-      {
-        "name": "Namche Bazaar Saturday Market",
-        "lat": 27.8069,
-        "lng": 86.7139,
-        "type": "landmark",
-        "altM": 3440,
-        "note": "Sherpa capital weekly market. Yaks, equipment, food. Don't miss."
-      }
-    ]
-  },
   "laugavegur": {
     "sheetName": "Laugavegur",
     "slug": "laugavegur",
@@ -3490,212 +3286,6 @@
         "type": "viewpoint",
         "altM": 860,
         "note": "Famous Fuji reflection lake. Best photography from north shore."
-      }
-    ]
-  },
-  "mount-kailash": {
-    "sheetName": "Mount Kailash Kora",
-    "slug": "kailash",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Darchen to Drirapuk",
-        "distance": "20 km",
-        "elevGainLoss": "400m",
-        "maxAltitude": "5,080 m",
-        "lat": 31.1038,
-        "lng": 81.2878,
-        "overnight": "Drirapuk Monastery",
-        "mapNote": "North face of Kailash. Closest approach to sacred peak. 5010m."
-      },
-      {
-        "day": 2,
-        "route": "Drirapuk to Zutulpuk (via Pass)",
-        "distance": "18 km",
-        "elevGainLoss": "+600m / -800m",
-        "maxAltitude": "5,630 m",
-        "lat": 30.9888,
-        "lng": 81.2888,
-        "overnight": "Zutulpuk Monastery",
-        "mapNote": "After Dolma La 5630m. Gauri Kund sacred lake. 4790m."
-      },
-      {
-        "day": 3,
-        "route": "Zutulpuk to Darchen",
-        "distance": "14 km",
-        "elevGainLoss": "-200m",
-        "maxAltitude": "4,800 m",
-        "lat": 30.9808,
-        "lng": 81.3138,
-        "overnight": "Darchen (Finish)",
-        "mapNote": "Kora complete. Return to Darchen base. 4560m."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Mount Kailash",
-        "lat": 31.0669,
-        "lng": 81.3119,
-        "type": "summit",
-        "altM": 6638,
-        "note": "Sacred to Hinduism, Buddhism, Jainism, Bon. Never been climbed."
-      },
-      {
-        "name": "Dolma La Pass",
-        "lat": 31.0688,
-        "lng": 81.2888,
-        "type": "pass",
-        "altM": 5630,
-        "note": "Holiest pass in Tibet. Highest point of the Kora. 84 gods said to reside here."
-      },
-      {
-        "name": "Gauri Kund (Lake Mansarovar nearby)",
-        "lat": 30.9988,
-        "lng": 81.2888,
-        "type": "landmark",
-        "altM": 5640,
-        "note": "Sacred emerald lake below Dolma La. Pilgrims bathe here."
-      },
-      {
-        "name": "Darchen Base",
-        "lat": 30.9808,
-        "lng": 81.3138,
-        "type": "landmark",
-        "altM": 4560,
-        "note": "Kora start/end village. Last services. Permit checks."
-      },
-      {
-        "name": "North Face Viewpoint",
-        "lat": 31.1038,
-        "lng": 81.2878,
-        "type": "viewpoint",
-        "altM": 5010,
-        "note": "Clearest view of Kailash north face from Drirapuk area."
-      }
-    ]
-  },
-  "west_coast": {
-    "sheetName": "West Coast Trail",
-    "slug": "west_coast",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Pachena Bay to Michigan Creek",
-        "distance": "12 km",
-        "elevGainLoss": "Flat / Sand",
-        "maxAltitude": "50 m",
-        "lat": 48.7558,
-        "lng": -124.9218,
-        "overnight": "Michigan Creek Camp",
-        "mapNote": "Easy boardwalk start through old-growth. First sea stacks. 0–30m."
-      },
-      {
-        "day": 2,
-        "route": "Michigan Creek to Tsusiat Falls",
-        "distance": "13 km",
-        "elevGainLoss": "Coastal",
-        "maxAltitude": "50 m",
-        "lat": 48.6688,
-        "lng": -124.9848,
-        "overnight": "Tsusiat Falls Camp",
-        "mapNote": "Most popular camp. Waterfall drops straight to beach. 0m."
-      },
-      {
-        "day": 3,
-        "route": "Tsusiat Falls to Cribs Creek",
-        "distance": "17 km",
-        "elevGainLoss": "Coastal / Ladders",
-        "maxAltitude": "100 m",
-        "lat": 48.6028,
-        "lng": -124.8988,
-        "overnight": "Cribs Creek Camp",
-        "mapNote": "Surge channels, ladders, tide-dependent beaches. 0m."
-      },
-      {
-        "day": 4,
-        "route": "Cribs Creek to Carmanah Beach",
-        "distance": "10 km",
-        "elevGainLoss": "Forest / Ladders",
-        "maxAltitude": "150 m",
-        "lat": 48.6248,
-        "lng": -124.7448,
-        "overnight": "Carmanah Beach Camp",
-        "mapNote": "Near Carmanah Lighthouse. Giant Sitka spruce grove. 0m."
-      },
-      {
-        "day": 5,
-        "route": "Carmanah to Camper Bay",
-        "distance": "13 km",
-        "elevGainLoss": "Mud / Ladders",
-        "maxAltitude": "150 m",
-        "lat": 48.5978,
-        "lng": -124.6768,
-        "overnight": "Camper Bay Camp",
-        "mapNote": "Sheltered bay. Sandstone shelves and sea caves. 0m."
-      },
-      {
-        "day": 6,
-        "route": "Camper Bay to Thrasher Cove",
-        "distance": "9 km",
-        "elevGainLoss": "Steep / Mud",
-        "maxAltitude": "200 m",
-        "lat": 48.5568,
-        "lng": -124.5918,
-        "overnight": "Thrasher Cove Camp",
-        "mapNote": "Final beach camp before steep climb inland. 0m."
-      },
-      {
-        "day": 7,
-        "route": "Thrasher Cove to Gordon River",
-        "distance": "6 km",
-        "elevGainLoss": "Very Steep",
-        "maxAltitude": "200 m",
-        "lat": 48.5618,
-        "lng": -124.4428,
-        "overnight": "Gordon River (Finish)",
-        "mapNote": "Ferry across Gordon River. Port Renfrew trailhead. 0m."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Pachena Bay (Start)",
-        "lat": 48.7888,
-        "lng": -125.1188,
-        "type": "landmark",
-        "altM": 0,
-        "note": "Northern trailhead. Pachena Lighthouse. Pacific Rim National Park."
-      },
-      {
-        "name": "Tsusiat Falls",
-        "lat": 48.6688,
-        "lng": -124.9848,
-        "type": "viewpoint",
-        "altM": 20,
-        "note": "Waterfall drops directly onto beach. Most iconic photo on WCT."
-      },
-      {
-        "name": "Carmanah Lighthouse",
-        "lat": 48.6248,
-        "lng": -124.7448,
-        "type": "landmark",
-        "altM": 10,
-        "note": "Active lighthouse on exposed headland. Heritage buildings."
-      },
-      {
-        "name": "Carmanah Giant Sitka",
-        "lat": 48.6388,
-        "lng": -124.7338,
-        "type": "landmark",
-        "altM": 80,
-        "note": "Ancient Sitka spruce grove. Trees over 800 years old, 95m tall."
-      },
-      {
-        "name": "Gordon River (Finish)",
-        "lat": 48.5618,
-        "lng": -124.4428,
-        "type": "landmark",
-        "altM": 0,
-        "note": "Southern trailhead. Ferry crossing. Port Renfrew access."
       }
     ]
   },
@@ -8480,120 +8070,6 @@
       }
     ]
   },
-  "toubkal": {
-    "sheetName": "Toubkal Trek",
-    "slug": "toubkal",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Imlil to Tizi n'Tamatert",
-        "distance": "12 km",
-        "elevGainLoss": "+600m",
-        "maxAltitude": "2,300 m",
-        "lat": 31.1288,
-        "lng": -7.9388,
-        "overnight": "Tizi n'Tamatert area",
-        "mapNote": "Imlil start. Mule path over first pass. 2279m."
-      },
-      {
-        "day": 2,
-        "route": "Tacheddirt to Azib n'Likemt",
-        "distance": "14 km",
-        "elevGainLoss": "+950m",
-        "maxAltitude": "3,550 m",
-        "lat": 31.0488,
-        "lng": -7.9888,
-        "overnight": "Azib n'Likemt Camp",
-        "mapNote": "Tacheddirt village passed. High shepherd pastures. 2900m."
-      },
-      {
-        "day": 3,
-        "route": "Azib n'Likemt to Amsouzert",
-        "distance": "16 km",
-        "elevGainLoss": "+300m / -1,200m",
-        "maxAltitude": "2,400 m",
-        "lat": 31.0088,
-        "lng": -8.0288,
-        "overnight": "Amsouzert Camp",
-        "mapNote": "Remote Agoundis valley. Berber villages. 1800m."
-      },
-      {
-        "day": 4,
-        "route": "Amsouzert to Lac d'Ifni",
-        "distance": "10 km",
-        "elevGainLoss": "+400m",
-        "maxAltitude": "2,300 m",
-        "lat": 31.0188,
-        "lng": -7.9188,
-        "overnight": "Lac d'Ifni Camp",
-        "mapNote": "Highest natural lake in High Atlas. 2313m."
-      },
-      {
-        "day": 5,
-        "route": "Lac d'Ifni to Toubkal Refuge",
-        "distance": "12 km",
-        "elevGainLoss": "+1,200m",
-        "maxAltitude": "3,600 m",
-        "lat": 31.0578,
-        "lng": -7.9157,
-        "overnight": "Toubkal Refuge",
-        "mapNote": "CAF/Club Alpin hut below summit. 3207m."
-      },
-      {
-        "day": 6,
-        "route": "Summit Toubkal & Descent to Imlil",
-        "distance": "18 km",
-        "elevGainLoss": "+567m / -2,400m",
-        "maxAltitude": "4,167 m",
-        "lat": 31.1382,
-        "lng": -7.9162,
-        "overnight": "Imlil (Finish)",
-        "mapNote": "Pre-dawn Toubkal 4167m summit. Descent to Imlil. 1740m."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Jbel Toubkal Summit",
-        "lat": 31.0595,
-        "lng": -7.9148,
-        "type": "summit",
-        "altM": 4167,
-        "note": "Highest peak in North Africa. 7–8hr round trip from refuge."
-      },
-      {
-        "name": "Lac d'Ifni",
-        "lat": 31.0188,
-        "lng": -7.9188,
-        "type": "viewpoint",
-        "altM": 2313,
-        "note": "Highest natural lake in High Atlas. Remote and beautiful."
-      },
-      {
-        "name": "Imlil Village",
-        "lat": 31.1382,
-        "lng": -7.9162,
-        "type": "landmark",
-        "altM": 1740,
-        "note": "Trek gateway. Mule market. Berber guesthouses. Tizi n'Test view."
-      },
-      {
-        "name": "Tizi n'Ouanoums",
-        "lat": 31.0488,
-        "lng": -7.9388,
-        "type": "pass",
-        "altM": 3664,
-        "note": "High pass on approach to Toubkal. Summit plateau edge."
-      },
-      {
-        "name": "Toubkal Refuge (CAF)",
-        "lat": 31.0578,
-        "lng": -7.9157,
-        "type": "landmark",
-        "altM": 3207,
-        "note": "Last hut before summit. Crowded in summer. Stunning position."
-      }
-    ]
-  },
   "rwenzori": {
     "sheetName": "Rwenzori Mountains",
     "slug": "rwenzori",
@@ -9189,76 +8665,6 @@
       }
     ]
   },
-  "yading-kora": {
-    "sheetName": "Yading Kora",
-    "slug": "yading-kora",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Longtong to Milk Lake",
-        "distance": "15 km",
-        "elevGain": "800m",
-        "maxAltitude": "4,600 m",
-        "lat": 28.4388,
-        "lng": 99.9288,
-        "overnight": "Milk Lake (Luorong牧场 camp)",
-        "mapNote": "Longtong Pa start. Milk Lake 4700m. Alpine meadows. 4700m."
-      },
-      {
-        "day": 2,
-        "route": "Five Color Lake to Chonggu",
-        "distance": "12 km",
-        "elevGain": "+200m / -600m",
-        "maxAltitude": "4,700 m",
-        "lat": 28.4888,
-        "lng": 99.9188,
-        "overnight": "Chonggu Meadows (Finish)",
-        "mapNote": "Five Colour Lake. Circuit around three sacred peaks. 3800m."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Chenrezig (Xiannairi)",
-        "lat": 28.5388,
-        "lng": 99.9288,
-        "type": "summit",
-        "altM": 6032,
-        "note": "Sacred peak of compassion. One of three holy Yading peaks."
-      },
-      {
-        "name": "Jambeyang (Yangmaiyong)",
-        "lat": 28.4688,
-        "lng": 100.0088,
-        "type": "summit",
-        "altM": 5958,
-        "note": "Sacred peak of wisdom. Sharpest of the three."
-      },
-      {
-        "name": "Chanadorje (Xianuoduoji)",
-        "lat": 28.4288,
-        "lng": 99.9688,
-        "type": "summit",
-        "altM": 5958,
-        "note": "Sacred peak of strength. Kora circumnavigates all three."
-      },
-      {
-        "name": "Milk Lake (Nailin Hai)",
-        "lat": 28.4388,
-        "lng": 99.9288,
-        "type": "viewpoint",
-        "altM": 4700,
-        "note": "Turquoise glacial lake. Sacred. Best reflection of Chenrezig."
-      },
-      {
-        "name": "Five Colour Lake",
-        "lat": 28.4288,
-        "lng": 99.9188,
-        "type": "viewpoint",
-        "altM": 4600,
-        "note": "Multi-hued glacial lake. Highest point of kora circuit."
-      }
-    ]
-  },
   "fish_river": {
     "sheetName": "Fish River Canyon",
     "slug": "fish_river",
@@ -9726,6 +9132,4960 @@
         "type": "landmark",
         "altM": 1770,
         "note": "Gateway city. Orthodox cathedral, Dungan mosque. Trek base."
+      }
+    ]
+  },
+  "ebc": {
+    "sheetName": "Everest",
+    "slug": "ebc",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Fly to Lukla; Trek to Phakding",
+        "distance": "8 km",
+        "elevChange": "+200m / -400m",
+        "maxAltitude": "2,860 m",
+        "lat": 27.7467,
+        "lng": 86.714,
+        "overnight": "Phakding",
+        "mapNote": "First overnight after Lukla flight. Dudh Koshi river. 2610m."
+      },
+      {
+        "day": 2,
+        "route": "Phakding to Namche Bazaar",
+        "distance": "11 km",
+        "elevChange": "1,000m",
+        "maxAltitude": "3,440 m",
+        "lat": 27.8069,
+        "lng": 86.7139,
+        "overnight": "Namche Bazaar",
+        "mapNote": "Sherpa capital. Horseshoe bowl. Market on Saturdays. 3440m."
+      },
+      {
+        "day": 3,
+        "route": "Acclimatization Day (Namche)",
+        "distance": "5 km",
+        "elevChange": "400m",
+        "maxAltitude": "3,880 m",
+        "lat": 27.8069,
+        "lng": 86.7139,
+        "overnight": "Namche Bazaar",
+        "mapNote": "Acclimatisation day. Same teahouses. 3440m."
+      },
+      {
+        "day": 4,
+        "route": "Namche to Tengboche",
+        "distance": "10 km",
+        "elevChange": "+750m / -300m",
+        "maxAltitude": "3,860 m",
+        "lat": 27.836,
+        "lng": 86.764,
+        "overnight": "Tengboche",
+        "mapNote": "Famous monastery on ridge. Ama Dablam views. 3867m."
+      },
+      {
+        "day": 5,
+        "route": "Tengboche to Dingboche",
+        "distance": "11 km",
+        "elevChange": "550m",
+        "maxAltitude": "4,410 m",
+        "lat": 27.8935,
+        "lng": 86.8298,
+        "overnight": "Dingboche",
+        "mapNote": "Imja Khola side valley. Great Lhotse views. 4360m."
+      },
+      {
+        "day": 6,
+        "route": "Acclimatization Day (Dingboche)",
+        "distance": "6 km",
+        "elevChange": "500m",
+        "maxAltitude": "4,900 m",
+        "lat": 27.8935,
+        "lng": 86.8298,
+        "overnight": "Dingboche",
+        "mapNote": "Acclimatisation day. Same teahouses. 4360m."
+      },
+      {
+        "day": 7,
+        "route": "Dingboche to Lobuche",
+        "distance": "9 km",
+        "elevChange": "500m",
+        "maxAltitude": "4,910 m",
+        "lat": 27.9478,
+        "lng": 86.8078,
+        "overnight": "Lobuche",
+        "mapNote": "Moraine camp below Lobuche Peak. 4940m."
+      },
+      {
+        "day": 8,
+        "route": "Lobuche to Gorak Shep → EBC",
+        "distance": "13 km",
+        "elevChange": "450m",
+        "maxAltitude": "5,364 m",
+        "lat": 27.9986,
+        "lng": 86.8578,
+        "overnight": "Gorak Shep / EBC",
+        "mapNote": "Gorak Shep 5140m. EBC 5364m visited same day. Sleep at Gorak Shep."
+      },
+      {
+        "day": 9,
+        "route": "Kala Patthar → Pheriche",
+        "distance": "16 km",
+        "elevChange": "+400m / -1,200m",
+        "maxAltitude": "5,545 m",
+        "lat": 27.8938,
+        "lng": 86.817,
+        "overnight": "Pheriche",
+        "mapNote": "After Kala Patthar 5545m sunrise. HRA clinic here. 4371m."
+      },
+      {
+        "day": 10,
+        "route": "Pheriche to Namche Bazaar",
+        "distance": "20 km",
+        "elevChange": "-800m",
+        "maxAltitude": "4,200 m",
+        "lat": 27.8069,
+        "lng": 86.7139,
+        "overnight": "Namche Bazaar",
+        "mapNote": "Return to Sherpa capital. Last teahouse comforts. 3440m."
+      },
+      {
+        "day": 11,
+        "route": "Namche Bazaar to Lukla",
+        "distance": "19 km",
+        "elevChange": "-600m",
+        "maxAltitude": "3,440 m",
+        "lat": 27.6868,
+        "lng": 86.7314,
+        "overnight": "Lukla",
+        "mapNote": "Final overnight before flight. Celebrate at Hillary Bar. 2840m."
+      },
+      {
+        "day": 12,
+        "route": "Fly Lukla to Kathmandu",
+        "distance": "—",
+        "elevChange": "—",
+        "maxAltitude": "1,400 m",
+        "lat": 27.7172,
+        "lng": 85.324,
+        "overnight": "Kathmandu (Fly Out)",
+        "mapNote": "Tribhuvan Airport. End of trek. 1400m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Everest Base Camp",
+        "lat": 27.9986,
+        "lng": 86.8578,
+        "type": "base_camp",
+        "altM": 5364,
+        "note": "South Base Camp on Khumbu Glacier. Icefall and expedition tents."
+      },
+      {
+        "name": "Kala Patthar",
+        "lat": 27.9845,
+        "lng": 86.8316,
+        "type": "summit",
+        "altM": 5545,
+        "note": "Best Everest pre-dawn view. Highest point on standard EBC trek."
+      },
+      {
+        "name": "Tengboche Monastery",
+        "lat": 27.836,
+        "lng": 86.764,
+        "type": "landmark",
+        "altM": 3867,
+        "note": "Most famous Khumbu monastery. Ama Dablam backdrop."
+      },
+      {
+        "name": "Ama Dablam",
+        "lat": 27.8615,
+        "lng": 86.8597,
+        "type": "summit",
+        "altM": 6812,
+        "note": "The Matterhorn of the Himalaya. Visible for most of the trek."
+      },
+      {
+        "name": "Hillary Suspension Bridge",
+        "lat": 27.7888,
+        "lng": 86.7238,
+        "type": "landmark",
+        "altM": 2800,
+        "note": "One of world's highest suspension bridges. Dudh Koshi River."
+      },
+      {
+        "name": "Khumbu Glacier",
+        "lat": 27.9688,
+        "lng": 86.8388,
+        "type": "glacier",
+        "altM": 4900,
+        "note": "Enormous glacier flowing from Everest's Western Cwm."
+      },
+      {
+        "name": "Everest Summit",
+        "lat": 27.9881,
+        "lng": 86.925,
+        "type": "summit",
+        "altM": 8849,
+        "note": "World's highest peak. Visible from Kala Patthar on clear days."
+      },
+      {
+        "name": "Namche Bazaar Saturday Market",
+        "lat": 27.8069,
+        "lng": 86.7139,
+        "type": "landmark",
+        "altM": 3440,
+        "note": "Sherpa capital weekly market. Yaks, equipment, food. Don't miss."
+      }
+    ]
+  },
+  "kailash": {
+    "sheetName": "Mount Kailash Kora",
+    "slug": "kailash",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Darchen to Drirapuk",
+        "distance": "20 km",
+        "elevGainLoss": "400m",
+        "maxAltitude": "5,080 m",
+        "lat": 31.1038,
+        "lng": 81.2878,
+        "overnight": "Drirapuk Monastery",
+        "mapNote": "North face of Kailash. Closest approach to sacred peak. 5010m."
+      },
+      {
+        "day": 2,
+        "route": "Drirapuk to Zutulpuk (via Pass)",
+        "distance": "18 km",
+        "elevGainLoss": "+600m / -800m",
+        "maxAltitude": "5,630 m",
+        "lat": 30.9888,
+        "lng": 81.2888,
+        "overnight": "Zutulpuk Monastery",
+        "mapNote": "After Dolma La 5630m. Gauri Kund sacred lake. 4790m."
+      },
+      {
+        "day": 3,
+        "route": "Zutulpuk to Darchen",
+        "distance": "14 km",
+        "elevGainLoss": "-200m",
+        "maxAltitude": "4,800 m",
+        "lat": 30.9808,
+        "lng": 81.3138,
+        "overnight": "Darchen (Finish)",
+        "mapNote": "Kora complete. Return to Darchen base. 4560m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mount Kailash",
+        "lat": 31.0669,
+        "lng": 81.3119,
+        "type": "summit",
+        "altM": 6638,
+        "note": "Sacred to Hinduism, Buddhism, Jainism, Bon. Never been climbed."
+      },
+      {
+        "name": "Dolma La Pass",
+        "lat": 31.0688,
+        "lng": 81.2888,
+        "type": "pass",
+        "altM": 5630,
+        "note": "Holiest pass in Tibet. Highest point of the Kora. 84 gods said to reside here."
+      },
+      {
+        "name": "Gauri Kund (Lake Mansarovar nearby)",
+        "lat": 30.9988,
+        "lng": 81.2888,
+        "type": "landmark",
+        "altM": 5640,
+        "note": "Sacred emerald lake below Dolma La. Pilgrims bathe here."
+      },
+      {
+        "name": "Darchen Base",
+        "lat": 30.9808,
+        "lng": 81.3138,
+        "type": "landmark",
+        "altM": 4560,
+        "note": "Kora start/end village. Last services. Permit checks."
+      },
+      {
+        "name": "North Face Viewpoint",
+        "lat": 31.1038,
+        "lng": 81.2878,
+        "type": "viewpoint",
+        "altM": 5010,
+        "note": "Clearest view of Kailash north face from Drirapuk area."
+      }
+    ]
+  },
+  "west-coast-trail": {
+    "sheetName": "West Coast Trail",
+    "slug": "west-coast-trail",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Pachena Bay to Michigan Creek",
+        "distance": "12 km",
+        "elevGainLoss": "Flat / Sand",
+        "maxAltitude": "50 m",
+        "lat": 48.7558,
+        "lng": -124.9218,
+        "overnight": "Michigan Creek Camp",
+        "mapNote": "Easy boardwalk start through old-growth. First sea stacks. 0–30m."
+      },
+      {
+        "day": 2,
+        "route": "Michigan Creek to Tsusiat Falls",
+        "distance": "13 km",
+        "elevGainLoss": "Coastal",
+        "maxAltitude": "50 m",
+        "lat": 48.6688,
+        "lng": -124.9848,
+        "overnight": "Tsusiat Falls Camp",
+        "mapNote": "Most popular camp. Waterfall drops straight to beach. 0m."
+      },
+      {
+        "day": 3,
+        "route": "Tsusiat Falls to Cribs Creek",
+        "distance": "17 km",
+        "elevGainLoss": "Coastal / Ladders",
+        "maxAltitude": "100 m",
+        "lat": 48.6028,
+        "lng": -124.8988,
+        "overnight": "Cribs Creek Camp",
+        "mapNote": "Surge channels, ladders, tide-dependent beaches. 0m."
+      },
+      {
+        "day": 4,
+        "route": "Cribs Creek to Carmanah Beach",
+        "distance": "10 km",
+        "elevGainLoss": "Forest / Ladders",
+        "maxAltitude": "150 m",
+        "lat": 48.6248,
+        "lng": -124.7448,
+        "overnight": "Carmanah Beach Camp",
+        "mapNote": "Near Carmanah Lighthouse. Giant Sitka spruce grove. 0m."
+      },
+      {
+        "day": 5,
+        "route": "Carmanah to Camper Bay",
+        "distance": "13 km",
+        "elevGainLoss": "Mud / Ladders",
+        "maxAltitude": "150 m",
+        "lat": 48.5978,
+        "lng": -124.6768,
+        "overnight": "Camper Bay Camp",
+        "mapNote": "Sheltered bay. Sandstone shelves and sea caves. 0m."
+      },
+      {
+        "day": 6,
+        "route": "Camper Bay to Thrasher Cove",
+        "distance": "9 km",
+        "elevGainLoss": "Steep / Mud",
+        "maxAltitude": "200 m",
+        "lat": 48.5568,
+        "lng": -124.5918,
+        "overnight": "Thrasher Cove Camp",
+        "mapNote": "Final beach camp before steep climb inland. 0m."
+      },
+      {
+        "day": 7,
+        "route": "Thrasher Cove to Gordon River",
+        "distance": "6 km",
+        "elevGainLoss": "Very Steep",
+        "maxAltitude": "200 m",
+        "lat": 48.5618,
+        "lng": -124.4428,
+        "overnight": "Gordon River (Finish)",
+        "mapNote": "Ferry across Gordon River. Port Renfrew trailhead. 0m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Pachena Bay (Start)",
+        "lat": 48.7888,
+        "lng": -125.1188,
+        "type": "landmark",
+        "altM": 0,
+        "note": "Northern trailhead. Pachena Lighthouse. Pacific Rim National Park."
+      },
+      {
+        "name": "Tsusiat Falls",
+        "lat": 48.6688,
+        "lng": -124.9848,
+        "type": "viewpoint",
+        "altM": 20,
+        "note": "Waterfall drops directly onto beach. Most iconic photo on WCT."
+      },
+      {
+        "name": "Carmanah Lighthouse",
+        "lat": 48.6248,
+        "lng": -124.7448,
+        "type": "landmark",
+        "altM": 10,
+        "note": "Active lighthouse on exposed headland. Heritage buildings."
+      },
+      {
+        "name": "Carmanah Giant Sitka",
+        "lat": 48.6388,
+        "lng": -124.7338,
+        "type": "landmark",
+        "altM": 80,
+        "note": "Ancient Sitka spruce grove. Trees over 800 years old, 95m tall."
+      },
+      {
+        "name": "Gordon River (Finish)",
+        "lat": 48.5618,
+        "lng": -124.4428,
+        "type": "landmark",
+        "altM": 0,
+        "note": "Southern trailhead. Ferry crossing. Port Renfrew access."
+      }
+    ]
+  },
+  "toublak": {
+    "sheetName": "Toubkal Trek",
+    "slug": "toublak",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Imlil to Tizi n'Tamatert",
+        "distance": "12 km",
+        "elevGainLoss": "+600m",
+        "maxAltitude": "2,300 m",
+        "lat": 31.1288,
+        "lng": -7.9388,
+        "overnight": "Tizi n'Tamatert area",
+        "mapNote": "Imlil start. Mule path over first pass. 2279m."
+      },
+      {
+        "day": 2,
+        "route": "Tacheddirt to Azib n'Likemt",
+        "distance": "14 km",
+        "elevGainLoss": "+950m",
+        "maxAltitude": "3,550 m",
+        "lat": 31.0488,
+        "lng": -7.9888,
+        "overnight": "Azib n'Likemt Camp",
+        "mapNote": "Tacheddirt village passed. High shepherd pastures. 2900m."
+      },
+      {
+        "day": 3,
+        "route": "Azib n'Likemt to Amsouzert",
+        "distance": "16 km",
+        "elevGainLoss": "+300m / -1,200m",
+        "maxAltitude": "2,400 m",
+        "lat": 31.0088,
+        "lng": -8.0288,
+        "overnight": "Amsouzert Camp",
+        "mapNote": "Remote Agoundis valley. Berber villages. 1800m."
+      },
+      {
+        "day": 4,
+        "route": "Amsouzert to Lac d'Ifni",
+        "distance": "10 km",
+        "elevGainLoss": "+400m",
+        "maxAltitude": "2,300 m",
+        "lat": 31.0188,
+        "lng": -7.9188,
+        "overnight": "Lac d'Ifni Camp",
+        "mapNote": "Highest natural lake in High Atlas. 2313m."
+      },
+      {
+        "day": 5,
+        "route": "Lac d'Ifni to Toubkal Refuge",
+        "distance": "12 km",
+        "elevGainLoss": "+1,200m",
+        "maxAltitude": "3,600 m",
+        "lat": 31.0578,
+        "lng": -7.9157,
+        "overnight": "Toubkal Refuge",
+        "mapNote": "CAF/Club Alpin hut below summit. 3207m."
+      },
+      {
+        "day": 6,
+        "route": "Summit Toubkal & Descent to Imlil",
+        "distance": "18 km",
+        "elevGainLoss": "+567m / -2,400m",
+        "maxAltitude": "4,167 m",
+        "lat": 31.1382,
+        "lng": -7.9162,
+        "overnight": "Imlil (Finish)",
+        "mapNote": "Pre-dawn Toubkal 4167m summit. Descent to Imlil. 1740m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Jbel Toubkal Summit",
+        "lat": 31.0595,
+        "lng": -7.9148,
+        "type": "summit",
+        "altM": 4167,
+        "note": "Highest peak in North Africa. 7–8hr round trip from refuge."
+      },
+      {
+        "name": "Lac d'Ifni",
+        "lat": 31.0188,
+        "lng": -7.9188,
+        "type": "viewpoint",
+        "altM": 2313,
+        "note": "Highest natural lake in High Atlas. Remote and beautiful."
+      },
+      {
+        "name": "Imlil Village",
+        "lat": 31.1382,
+        "lng": -7.9162,
+        "type": "landmark",
+        "altM": 1740,
+        "note": "Trek gateway. Mule market. Berber guesthouses. Tizi n'Test view."
+      },
+      {
+        "name": "Tizi n'Ouanoums",
+        "lat": 31.0488,
+        "lng": -7.9388,
+        "type": "pass",
+        "altM": 3664,
+        "note": "High pass on approach to Toubkal. Summit plateau edge."
+      },
+      {
+        "name": "Toubkal Refuge (CAF)",
+        "lat": 31.0578,
+        "lng": -7.9157,
+        "type": "landmark",
+        "altM": 3207,
+        "note": "Last hut before summit. Crowded in summer. Stunning position."
+      }
+    ]
+  },
+  "yading_kora": {
+    "sheetName": "Yading Kora",
+    "slug": "yading_kora",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Longtong to Milk Lake",
+        "distance": "15 km",
+        "elevGain": "800m",
+        "maxAltitude": "4,600 m",
+        "lat": 28.4388,
+        "lng": 99.9288,
+        "overnight": "Milk Lake (Luorong牧场 camp)",
+        "mapNote": "Longtong Pa start. Milk Lake 4700m. Alpine meadows. 4700m."
+      },
+      {
+        "day": 2,
+        "route": "Five Color Lake to Chonggu",
+        "distance": "12 km",
+        "elevGain": "+200m / -600m",
+        "maxAltitude": "4,700 m",
+        "lat": 28.4888,
+        "lng": 99.9188,
+        "overnight": "Chonggu Meadows (Finish)",
+        "mapNote": "Five Colour Lake. Circuit around three sacred peaks. 3800m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Chenrezig (Xiannairi)",
+        "lat": 28.5388,
+        "lng": 99.9288,
+        "type": "summit",
+        "altM": 6032,
+        "note": "Sacred peak of compassion. One of three holy Yading peaks."
+      },
+      {
+        "name": "Jambeyang (Yangmaiyong)",
+        "lat": 28.4688,
+        "lng": 100.0088,
+        "type": "summit",
+        "altM": 5958,
+        "note": "Sacred peak of wisdom. Sharpest of the three."
+      },
+      {
+        "name": "Chanadorje (Xianuoduoji)",
+        "lat": 28.4288,
+        "lng": 99.9688,
+        "type": "summit",
+        "altM": 5958,
+        "note": "Sacred peak of strength. Kora circumnavigates all three."
+      },
+      {
+        "name": "Milk Lake (Nailin Hai)",
+        "lat": 28.4388,
+        "lng": 99.9288,
+        "type": "viewpoint",
+        "altM": 4700,
+        "note": "Turquoise glacial lake. Sacred. Best reflection of Chenrezig."
+      },
+      {
+        "name": "Five Colour Lake",
+        "lat": 28.4288,
+        "lng": 99.9188,
+        "type": "viewpoint",
+        "altM": 4600,
+        "note": "Multi-hued glacial lake. Highest point of kora circuit."
+      }
+    ]
+  },
+  "teton_crest": {
+    "sheetName": "Teton Crest Trail",
+    "slug": "teton_crest",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Teton Village to Marion Lake",
+        "distanceKm": "16",
+        "elevGainM": "1050",
+        "elevLossM": "200",
+        "maxAltM": "2747.0",
+        "lat": 43.638,
+        "lng": -110.863,
+        "overnight": "Marion Lake Camp",
+        "mapNote": "Aerial Tramway bypass to valley floor, then climb to stunning Marion Lake. 2747m."
+      },
+      {
+        "day": 2,
+        "route": "Marion Lake to Death Canyon Shelf",
+        "distanceKm": "13",
+        "elevGainM": "610",
+        "elevLossM": "180",
+        "maxAltM": "2865.0",
+        "lat": 43.652,
+        "lng": -110.815,
+        "overnight": "Death Canyon Shelf",
+        "mapNote": "Dramatic shelf camp with sweeping Teton views. Exposed camping. 2865m."
+      },
+      {
+        "day": 3,
+        "route": "Death Canyon Shelf to Alaska Basin",
+        "distanceKm": "14",
+        "elevGainM": "420",
+        "elevLossM": "490",
+        "maxAltM": "3008.0",
+        "lat": 43.698,
+        "lng": -110.803,
+        "overnight": "Alaska Basin",
+        "mapNote": "Wildflower meadows and the extraordinary Alaska Basin basin camps. 3008m."
+      },
+      {
+        "day": 4,
+        "route": "Alaska Basin to South Fork Cascade",
+        "distanceKm": "15",
+        "elevGainM": "850",
+        "elevLossM": "920",
+        "maxAltM": "2987.0",
+        "lat": 43.74,
+        "lng": -110.82,
+        "overnight": "South Fork Cascade",
+        "mapNote": "Cross Hurricane Pass with Grand Teton's full north face revealed. 2987m."
+      },
+      {
+        "day": 5,
+        "route": "South Fork to Leigh Lake Trailhead",
+        "distanceKm": "17",
+        "elevGainM": "180",
+        "elevLossM": "1230",
+        "maxAltM": "2073.0",
+        "lat": 43.82,
+        "lng": -110.65,
+        "overnight": "String Lake / Trailhead",
+        "mapNote": "Final descent through ancient moraines to the valley floor. 2073m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Hurricane Pass",
+        "lat": 43.715,
+        "lng": -110.825,
+        "type": "pass",
+        "altM": 3261,
+        "note": "Highest point on the trail. Grand Teton's north face fills the sky."
+      },
+      {
+        "name": "Grand Teton",
+        "lat": 43.741,
+        "lng": -110.802,
+        "type": "summit",
+        "altM": 4197,
+        "note": "Highest peak in the Teton Range. Dominates every viewpoint on the trail."
+      },
+      {
+        "name": "Alaska Basin",
+        "lat": 43.698,
+        "lng": -110.803,
+        "type": "viewpoint",
+        "altM": 3008,
+        "note": "Wildflower paradise — best alpine meadows in Wyoming."
+      },
+      {
+        "name": "Death Canyon Shelf",
+        "lat": 43.652,
+        "lng": -110.815,
+        "type": "viewpoint",
+        "altM": 2865,
+        "note": "Dramatic shelf with 50km views across the range."
+      }
+    ]
+  },
+  "wind_river": {
+    "sheetName": "Wind River High Route",
+    "slug": "wind_river",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Big Sandy Lodge to Big Sandy Lake",
+        "distanceKm": "10",
+        "elevGainM": "350",
+        "elevLossM": "50",
+        "maxAltM": "2926.0",
+        "lat": 42.703,
+        "lng": -109.228,
+        "overnight": "Big Sandy Lake",
+        "mapNote": "Classic Wyoming trail start. Pine forests to open granite. 2926m."
+      },
+      {
+        "day": 2,
+        "route": "Big Sandy Lake to Cirque of Towers",
+        "distanceKm": "14",
+        "elevGainM": "700",
+        "elevLossM": "200",
+        "maxAltM": "3200.0",
+        "lat": 42.735,
+        "lng": -109.224,
+        "overnight": "Cirque of Towers",
+        "mapNote": "Destination highlight — granite spires surrounding a perfect alpine lake. 3200m."
+      },
+      {
+        "day": 3,
+        "route": "Cirque of Towers to Lonesome Lake",
+        "distanceKm": "13",
+        "elevGainM": "550",
+        "elevLossM": "480",
+        "maxAltM": "3050.0",
+        "lat": 42.778,
+        "lng": -109.27,
+        "overnight": "Lonesome Lake",
+        "mapNote": "Cross Jackass Pass, descend to impossibly blue Lonesome Lake. 3050m."
+      },
+      {
+        "day": 4,
+        "route": "Lonesome Lake to Skull Lake",
+        "distanceKm": "15",
+        "elevGainM": "620",
+        "elevLossM": "390",
+        "maxAltM": "3100.0",
+        "lat": 42.82,
+        "lng": -109.35,
+        "overnight": "Skull Lake",
+        "mapNote": "Off-trail navigation begins in earnest. Granite slabs and boulder fields. 3100m."
+      },
+      {
+        "day": 5,
+        "route": "Skull Lake to Shadow Lake",
+        "distanceKm": "16",
+        "elevGainM": "700",
+        "elevLossM": "650",
+        "maxAltM": "3000.0",
+        "lat": 42.865,
+        "lng": -109.42,
+        "overnight": "Shadow Lake",
+        "mapNote": "Spectacular high route traversing unnamed passes. Route-finding essential. 3000m."
+      },
+      {
+        "day": 6,
+        "route": "Shadow Lake to Elkhart Park",
+        "distanceKm": "18",
+        "elevGainM": "250",
+        "elevLossM": "980",
+        "maxAltM": "2490.0",
+        "lat": 42.905,
+        "lng": -109.6,
+        "overnight": "Elkhart Park TH",
+        "mapNote": "Final descent on good trail. Fremont Lake visible below. 2490m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Cirque of Towers",
+        "lat": 42.735,
+        "lng": -109.224,
+        "type": "viewpoint",
+        "altM": 3200,
+        "note": "One of America's most dramatic alpine cirques. 10 granite spires."
+      },
+      {
+        "name": "Jackass Pass",
+        "lat": 42.754,
+        "lng": -109.224,
+        "type": "pass",
+        "altM": 3323,
+        "note": "Gateway to the Cirque. Views back to Wind River peaks."
+      },
+      {
+        "name": "Gannet Peak",
+        "lat": 43.184,
+        "lng": -109.654,
+        "type": "summit",
+        "altM": 4207,
+        "note": "Wyoming's highest point. Visible from high points on the route."
+      },
+      {
+        "name": "Lonesome Lake",
+        "lat": 42.778,
+        "lng": -109.27,
+        "type": "viewpoint",
+        "altM": 3012,
+        "note": "Electric blue glacial lake below sheer granite walls."
+      }
+    ]
+  },
+  "sierra_high": {
+    "sheetName": "Sierra High Route",
+    "slug": "sierra_high",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Road's End to Grouse Lake",
+        "distanceKm": "13",
+        "elevGainM": "1050",
+        "elevLossM": "200",
+        "maxAltM": "2987.0",
+        "lat": 36.73,
+        "lng": -118.57,
+        "overnight": "Grouse Lake",
+        "mapNote": "Off-trail immediately. Climb through boulder fields to first high lake. 2987m."
+      },
+      {
+        "day": 2,
+        "route": "Grouse Lake to Upper Gardiner Basin",
+        "distanceKm": "15",
+        "elevGainM": "900",
+        "elevLossM": "350",
+        "maxAltM": "3400.0",
+        "lat": 36.8,
+        "lng": -118.58,
+        "overnight": "Upper Gardiner Basin",
+        "mapNote": "Full off-trail day. Cross Window Pass. Vast granite wilderness. 3400m."
+      },
+      {
+        "day": 3,
+        "route": "Gardiner to Bench Lake",
+        "distanceKm": "14",
+        "elevGainM": "550",
+        "elevLossM": "700",
+        "maxAltM": "3200.0",
+        "lat": 36.86,
+        "lng": -118.62,
+        "overnight": "Bench Lake",
+        "mapNote": "JMT briefly joined at Rae Lakes. Leave trail immediately after. 3200m."
+      },
+      {
+        "day": 4,
+        "route": "Bench Lake to Lake Basin",
+        "distanceKm": "16",
+        "elevGainM": "800",
+        "elevLossM": "600",
+        "maxAltM": "3350.0",
+        "lat": 36.93,
+        "lng": -118.66,
+        "overnight": "Lake Basin",
+        "mapNote": "Remote basin rarely visited. Dragon Peak dominates skyline. 3350m."
+      },
+      {
+        "day": 5,
+        "route": "Lake Basin to Muro Blanco",
+        "distanceKm": "15",
+        "elevGainM": "700",
+        "elevLossM": "400",
+        "maxAltM": "3300.0",
+        "lat": 36.99,
+        "lng": -118.72,
+        "overnight": "Muro Blanco",
+        "mapNote": "The White Wall — most dramatic off-trail section of the route. 3300m."
+      },
+      {
+        "day": 6,
+        "route": "Muro Blanco to Second Recess",
+        "distanceKm": "14",
+        "elevGainM": "600",
+        "elevLossM": "850",
+        "maxAltM": "3100.0",
+        "lat": 37.05,
+        "lng": -118.78,
+        "overnight": "Second Recess",
+        "mapNote": "Classic Sierra glacially-carved recess. Perfect granite camping. 3100m."
+      },
+      {
+        "day": 7,
+        "route": "Second Recess to Grinnell Lake",
+        "distanceKm": "16",
+        "elevGainM": "850",
+        "elevLossM": "650",
+        "maxAltM": "3250.0",
+        "lat": 37.11,
+        "lng": -118.84,
+        "overnight": "Grinnell Lake",
+        "mapNote": "High traverse above Mono Creek. Views extend to distant ranges. 3250m."
+      },
+      {
+        "day": 8,
+        "route": "Grinnell to Duck Lake",
+        "distanceKm": "15",
+        "elevGainM": "700",
+        "elevLossM": "800",
+        "maxAltM": "3180.0",
+        "lat": 37.17,
+        "lng": -118.9,
+        "overnight": "Duck Lake",
+        "mapNote": "Pass over Silver Divide. JMT rejoined briefly at Purple Lake. 3180m."
+      },
+      {
+        "day": 9,
+        "route": "Duck Lake to Mammoth Pass TH",
+        "distanceKm": "18",
+        "elevGainM": "200",
+        "elevLossM": "1200",
+        "maxAltM": "2600.0",
+        "lat": 37.6,
+        "lng": -119.03,
+        "overnight": "Mammoth Pass Trailhead",
+        "mapNote": "Descent through lodgepole pines to Mammoth Lakes trailhead. 2600m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Window Peak",
+        "lat": 36.8,
+        "lng": -118.58,
+        "type": "summit",
+        "altM": 3770,
+        "note": "Critical navigation landmark on Day 2. 360° Sierra panorama."
+      },
+      {
+        "name": "Dragon Peak",
+        "lat": 36.905,
+        "lng": -118.66,
+        "type": "summit",
+        "altM": 3823,
+        "note": "Iconic jagged summit visible from Lake Basin."
+      },
+      {
+        "name": "Muro Blanco",
+        "lat": 36.99,
+        "lng": -118.72,
+        "type": "viewpoint",
+        "altM": 3400,
+        "note": "The White Wall — granite swept clean of soil. Most dramatic section."
+      },
+      {
+        "name": "Mount Whitney",
+        "lat": 36.578,
+        "lng": -118.292,
+        "type": "summit",
+        "altM": 4418,
+        "note": "Southern terminus landmark. Highest peak in contiguous USA."
+      }
+    ]
+  },
+  "skyline_canada": {
+    "sheetName": "Skyline Trail",
+    "slug": "skyline_canada",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Maligne Lake TH to Little Shovel Pass",
+        "distanceKm": "17",
+        "elevGainM": "800",
+        "elevLossM": "200",
+        "maxAltM": "2150.0",
+        "lat": 52.82,
+        "lng": -117.85,
+        "overnight": "Little Shovel Camp",
+        "mapNote": "Leave Maligne Lake behind, climb through subalpine to first high camp. 2150m."
+      },
+      {
+        "day": 2,
+        "route": "Little Shovel to Shovel Pass Camp",
+        "distanceKm": "16",
+        "elevGainM": "600",
+        "elevLossM": "450",
+        "maxAltM": "2350.0",
+        "lat": 52.88,
+        "lng": -117.82,
+        "overnight": "Shovel Pass Camp",
+        "mapNote": "The famous ridge traverse. Panoramic views of Jasper's high country. 2350m."
+      },
+      {
+        "day": 3,
+        "route": "Shovel Pass to Signal Mountain TH",
+        "distanceKm": "19",
+        "elevGainM": "200",
+        "elevLossM": "980",
+        "maxAltM": "1670.0",
+        "lat": 52.94,
+        "lng": -117.64,
+        "overnight": "Jasper (Signal Mtn)",
+        "mapNote": "Descend from alpine to valley through old-growth forest. 1670m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Shovel Pass",
+        "lat": 52.86,
+        "lng": -117.83,
+        "type": "pass",
+        "altM": 2560,
+        "note": "Highest point of the trail. Classic Jasper viewpoint. 2560m."
+      },
+      {
+        "name": "Little Shovel Pass",
+        "lat": 52.82,
+        "lng": -117.855,
+        "type": "pass",
+        "altM": 2150,
+        "note": "First high point. Gateway to the main ridge walk."
+      },
+      {
+        "name": "Maligne Lake",
+        "lat": 52.68,
+        "lng": -117.58,
+        "type": "viewpoint",
+        "altM": 1694,
+        "note": "Iconic Canadian Rockies lake. Trail start. Most photographed in Jasper."
+      },
+      {
+        "name": "Curator Lake",
+        "lat": 52.868,
+        "lng": -117.815,
+        "type": "viewpoint",
+        "altM": 2280,
+        "note": "Remote alpine lake below Shovel Pass. Perfect reflection pool."
+      }
+    ]
+  },
+  "rockwall": {
+    "sheetName": "Rockwall Trail",
+    "slug": "rockwall",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Floe Lake TH to Floe Lake",
+        "distanceKm": "10",
+        "elevGainM": "930",
+        "elevLossM": "50",
+        "maxAltM": "2010.0",
+        "lat": 51.214,
+        "lng": -116.005,
+        "overnight": "Floe Lake Campsite",
+        "mapNote": "Iconic Kootenay campsite directly below the Rockwall. 2010m."
+      },
+      {
+        "day": 2,
+        "route": "Floe Lake to Tumbling Creek",
+        "distanceKm": "17",
+        "elevGainM": "680",
+        "elevLossM": "970",
+        "maxAltM": "1900.0",
+        "lat": 51.253,
+        "lng": -116.08,
+        "overnight": "Tumbling Creek Camp",
+        "mapNote": "Cross Numa Pass. First full view of the 30km limestone wall. 1900m."
+      },
+      {
+        "day": 3,
+        "route": "Tumbling Creek to Helmet Falls",
+        "distanceKm": "16",
+        "elevGainM": "750",
+        "elevLossM": "650",
+        "maxAltM": "1950.0",
+        "lat": 51.296,
+        "lng": -116.13,
+        "overnight": "Helmet Falls Camp",
+        "mapNote": "Helmet Falls — one of Canada's tallest waterfalls. 1950m."
+      },
+      {
+        "day": 4,
+        "route": "Helmet Falls to Paint Pots TH",
+        "distanceKm": "16",
+        "elevGainM": "200",
+        "elevLossM": "1100",
+        "maxAltM": "1020.0",
+        "lat": 51.195,
+        "lng": -116.2,
+        "overnight": "Paint Pots Trailhead",
+        "mapNote": "Ochre natural mineral springs at trail end. Kootenay NP exit. 1020m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Rockwall",
+        "lat": 51.25,
+        "lng": -116.08,
+        "type": "viewpoint",
+        "altM": 2350,
+        "note": "30km continuous limestone escarpment — most dramatic wall in Canadian Rockies."
+      },
+      {
+        "name": "Numa Pass",
+        "lat": 51.253,
+        "lng": -116.065,
+        "type": "pass",
+        "altM": 2355,
+        "note": "Highest point on trail. The full Rockwall reveals itself here."
+      },
+      {
+        "name": "Helmet Falls",
+        "lat": 51.296,
+        "lng": -116.125,
+        "type": "viewpoint",
+        "altM": 1800,
+        "note": "330m free-fall waterfall. One of Canada's tallest. Spectacular camp nearby."
+      },
+      {
+        "name": "Floe Lake",
+        "lat": 51.214,
+        "lng": -116.005,
+        "type": "viewpoint",
+        "altM": 2010,
+        "note": "Turquoise glacial lake directly below sheer Rockwall face."
+      }
+    ]
+  },
+  "choquequirao": {
+    "sheetName": "Choquequirao Trek",
+    "slug": "choquequirao",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Cachora to Chiquisca",
+        "distanceKm": "13",
+        "elevGainM": "200",
+        "elevLossM": "1200",
+        "maxAltM": "1550.0",
+        "lat": -13.47,
+        "lng": -72.78,
+        "overnight": "Chiquisca",
+        "mapNote": "Descend dramatically into the Apurímac canyon. Tropical heat. 1550m."
+      },
+      {
+        "day": 2,
+        "route": "Chiquisca to Playa Rosalina",
+        "distanceKm": "10",
+        "elevGainM": "200",
+        "elevLossM": "400",
+        "maxAltM": "1480.0",
+        "lat": -13.488,
+        "lng": -72.814,
+        "overnight": "Playa Rosalina",
+        "mapNote": "Cross the Apurímac River suspension bridge. Remote canyon camp. 1480m."
+      },
+      {
+        "day": 3,
+        "route": "Playa Rosalina to Choquequirao",
+        "distanceKm": "12",
+        "elevGainM": "1600",
+        "elevLossM": "200",
+        "maxAltM": "3085.0",
+        "lat": -13.533,
+        "lng": -72.851,
+        "overnight": "Choquequirao Ruins",
+        "mapNote": "Long steep climb to the ruins. The citadel emerges from the cloud forest. 3085m."
+      },
+      {
+        "day": 4,
+        "route": "Explore ruins + return to Maranpata",
+        "distanceKm": "8",
+        "elevGainM": "400",
+        "elevLossM": "800",
+        "maxAltM": "2850.0",
+        "lat": -13.51,
+        "lng": -72.835,
+        "overnight": "Maranpata",
+        "mapNote": "Full morning exploring 'the other Machu Picchu'. Llama terraces. 2850m."
+      },
+      {
+        "day": 5,
+        "route": "Maranpata to Cachora",
+        "distanceKm": "22",
+        "elevGainM": "200",
+        "elevLossM": "2500",
+        "maxAltM": "2900.0",
+        "lat": -13.47,
+        "lng": -72.78,
+        "overnight": "Cachora",
+        "mapNote": "Long return ascent out of the canyon. Stunning views all the way. 2900m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Choquequirao Citadel",
+        "lat": -13.533,
+        "lng": -72.851,
+        "type": "landmark",
+        "altM": 3085,
+        "note": "Major Inca royal estate. Only 30% excavated. Far fewer crowds than Machu Picchu."
+      },
+      {
+        "name": "Apurímac Canyon",
+        "lat": -13.488,
+        "lng": -72.814,
+        "type": "viewpoint",
+        "altM": 1300,
+        "note": "One of the world's deepest canyons. The Inca called it 'God of speech'."
+      },
+      {
+        "name": "Llama Terraces",
+        "lat": -13.54,
+        "lng": -72.848,
+        "type": "landmark",
+        "altM": 2900,
+        "note": "Unique white llama inlaid in the terracing — only found at Choquequirao."
+      },
+      {
+        "name": "Capuliyoq Pass",
+        "lat": -13.46,
+        "lng": -72.8,
+        "type": "pass",
+        "altM": 2900,
+        "note": "Gateway views into the canyon. Cachora village visible below."
+      }
+    ]
+  },
+  "quilotoa": {
+    "sheetName": "Quilotoa Loop",
+    "slug": "quilotoa",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Sigchos to Isinliví",
+        "distanceKm": "15",
+        "elevGainM": "600",
+        "elevLossM": "400",
+        "maxAltM": "2900.0",
+        "lat": -0.794,
+        "lng": -78.879,
+        "overnight": "Isinliví",
+        "mapNote": "Start in agricultural highlands. Small indigenous Kichwa villages. 2900m."
+      },
+      {
+        "day": 2,
+        "route": "Isinliví to Chugchilán",
+        "distanceKm": "18",
+        "elevGainM": "700",
+        "elevLossM": "900",
+        "maxAltM": "3180.0",
+        "lat": -0.829,
+        "lng": -78.929,
+        "overnight": "Chugchilán",
+        "mapNote": "Cloud forest descent and ascent. Andean condors often visible. 3180m."
+      },
+      {
+        "day": 3,
+        "route": "Chugchilán to Quilotoa",
+        "distanceKm": "22",
+        "elevGainM": "1000",
+        "elevLossM": "500",
+        "maxAltM": "3914.0",
+        "lat": -0.861,
+        "lng": -78.899,
+        "overnight": "Quilotoa Crater Rim",
+        "mapNote": "Climb to the volcanic crater. Turquoise lake fills the caldera. 3914m."
+      },
+      {
+        "day": 4,
+        "route": "Quilotoa to Latacunga (bus exit)",
+        "distanceKm": "6",
+        "elevGainM": "50",
+        "elevLossM": "600",
+        "maxAltM": "3200.0",
+        "lat": -0.929,
+        "lng": -78.616,
+        "overnight": "Latacunga",
+        "mapNote": "Hike down to crater lake, explore. Bus back to Latacunga. 3200m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Quilotoa Crater Lake",
+        "lat": -0.861,
+        "lng": -78.899,
+        "type": "viewpoint",
+        "altM": 3914,
+        "note": "Electric turquoise volcanic crater lake. One of Ecuador's most dramatic sights."
+      },
+      {
+        "name": "Chugchilán",
+        "lat": -0.829,
+        "lng": -78.929,
+        "type": "landmark",
+        "altM": 3180,
+        "note": "Cloud forest village. Famous hostel. Andean condors in surrounding valleys."
+      },
+      {
+        "name": "Isinliví",
+        "lat": -0.794,
+        "lng": -78.879,
+        "type": "landmark",
+        "altM": 2900,
+        "note": "Traditional woodcarving village. Excellent base for Day 1."
+      },
+      {
+        "name": "Toachi Canyon",
+        "lat": -0.82,
+        "lng": -78.94,
+        "type": "viewpoint",
+        "altM": 2200,
+        "note": "Deep canyon visible from trail. Subtropical forest far below."
+      }
+    ]
+  },
+  "dientes": {
+    "sheetName": "Dientes Circuit",
+    "slug": "dientes",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Puerto Williams to Laguna del Salto",
+        "distanceKm": "8",
+        "elevGainM": "600",
+        "elevLossM": "100",
+        "maxAltM": "280.0",
+        "lat": -55.04,
+        "lng": -67.67,
+        "overnight": "Laguna del Salto",
+        "mapNote": "Town exit, immediate subantarctic forest. Wind picks up fast. 280m."
+      },
+      {
+        "day": 2,
+        "route": "Laguna del Salto to Laguna Los Dientes",
+        "distanceKm": "10",
+        "elevGainM": "700",
+        "elevLossM": "300",
+        "maxAltM": "430.0",
+        "lat": -55.06,
+        "lng": -67.71,
+        "overnight": "Laguna Los Dientes",
+        "mapNote": "First views of the Dientes spires. Most dramatic section. 430m."
+      },
+      {
+        "day": 3,
+        "route": "Laguna Los Dientes to Laguna Escondida",
+        "distanceKm": "11",
+        "elevGainM": "400",
+        "elevLossM": "500",
+        "maxAltM": "350.0",
+        "lat": -55.075,
+        "lng": -67.76,
+        "overnight": "Laguna Escondida",
+        "mapNote": "Cross Col sur Paso Virginia. Beech forest camp. 350m."
+      },
+      {
+        "day": 4,
+        "route": "Laguna Escondida to Paso Ventarrón",
+        "distanceKm": "12",
+        "elevGainM": "500",
+        "elevLossM": "400",
+        "maxAltM": "450.0",
+        "lat": -55.055,
+        "lng": -67.81,
+        "overnight": "Near Paso Ventarrón",
+        "mapNote": "Southernmost section. Exposed moorland. Serious wind exposure. 450m."
+      },
+      {
+        "day": 5,
+        "route": "Paso Ventarrón to Puerto Williams",
+        "distanceKm": "12",
+        "elevGainM": "100",
+        "elevLossM": "550",
+        "maxAltM": "50.0",
+        "lat": -55.02,
+        "lng": -67.62,
+        "overnight": "Puerto Williams",
+        "mapNote": "Final descent to world's southernmost city. Circuit complete. 50m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Dientes de Navarino",
+        "lat": -55.06,
+        "lng": -67.7,
+        "type": "summit",
+        "altM": 1329,
+        "note": "The 'Teeth of Navarino'. Southernmost trekking peaks in the world."
+      },
+      {
+        "name": "Paso Virginia",
+        "lat": -55.064,
+        "lng": -67.748,
+        "type": "pass",
+        "altM": 770,
+        "note": "Main col crossing. Exposed to Fuegian winds. Usually snowfield."
+      },
+      {
+        "name": "Beagle Channel View",
+        "lat": -55.04,
+        "lng": -67.66,
+        "type": "viewpoint",
+        "altM": 350,
+        "note": "Views across Beagle Channel to Argentine Tierra del Fuego."
+      },
+      {
+        "name": "Puerto Williams",
+        "lat": -55.02,
+        "lng": -67.62,
+        "type": "landmark",
+        "altM": 50,
+        "note": "World's southernmost city. Population ~2,800. End of the trail."
+      }
+    ]
+  },
+  "cerro_castillo": {
+    "sheetName": "Cerro Castillo Circuit",
+    "slug": "cerro_castillo",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Villa Cerro Castillo to Laguna Desierta",
+        "distanceKm": "16",
+        "elevGainM": "1100",
+        "elevLossM": "200",
+        "maxAltM": "1550.0",
+        "lat": -46.1,
+        "lng": -72.18,
+        "overnight": "Laguna Desierta",
+        "mapNote": "Steep climb from Patagonian steppe to first views of the castle spires. 1550m."
+      },
+      {
+        "day": 2,
+        "route": "Laguna Desierta to Laguna Cerro Castillo",
+        "distanceKm": "13",
+        "elevGainM": "600",
+        "elevLossM": "700",
+        "maxAltM": "1400.0",
+        "lat": -46.062,
+        "lng": -72.23,
+        "overnight": "Lago Cerro Castillo",
+        "mapNote": "Glacier lagoon below the basalt towers. Icebergs calving constantly. 1400m."
+      },
+      {
+        "day": 3,
+        "route": "Laguna Cerro Castillo to Campamento Neozelandes",
+        "distanceKm": "14",
+        "elevGainM": "800",
+        "elevLossM": "500",
+        "maxAltM": "1600.0",
+        "lat": -46.04,
+        "lng": -72.29,
+        "overnight": "Camp Neozelandes",
+        "mapNote": "Cross Paso Cerro Castillo with full tower panorama. 1600m."
+      },
+      {
+        "day": 4,
+        "route": "Campamento Neozelandes to Villa Bahía Murta",
+        "distanceKm": "16",
+        "elevGainM": "200",
+        "elevLossM": "1200",
+        "maxAltM": "200.0",
+        "lat": -46.03,
+        "lng": -72.42,
+        "overnight": "Villa Bahía Murta",
+        "mapNote": "Descend to Carretera Austral and General Carrera Lake. 200m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Cerro Castillo",
+        "lat": -46.062,
+        "lng": -72.23,
+        "type": "summit",
+        "altM": 2675,
+        "note": "The castle — basalt spires hanging over a hanging glacier. Patagonia's hidden gem."
+      },
+      {
+        "name": "Lago Cerro Castillo",
+        "lat": -46.062,
+        "lng": -72.23,
+        "type": "glacier",
+        "altM": 1400,
+        "note": "Turquoise glacial lake with calving ice from Glaciar Cerro Castillo."
+      },
+      {
+        "name": "Paso Cerro Castillo",
+        "lat": -46.04,
+        "lng": -72.27,
+        "type": "pass",
+        "altM": 1700,
+        "note": "Full panoramic view of the castle from above. Best photography point."
+      },
+      {
+        "name": "General Carrera Lake",
+        "lat": -46.6,
+        "lng": -72.7,
+        "type": "viewpoint",
+        "altM": 217,
+        "note": "World's second largest lake in South America. Marble Caves nearby."
+      }
+    ]
+  },
+  "cape_wrath": {
+    "sheetName": "Cape Wrath Trail",
+    "slug": "cape_wrath",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Fort William to Glenfinnan",
+        "distanceKm": "22",
+        "elevGainM": "800",
+        "elevLossM": "400",
+        "maxAltM": "300.0",
+        "lat": 56.876,
+        "lng": -5.442,
+        "overnight": "Glenfinnan",
+        "mapNote": "Leave Ben Nevis behind. Loch Shiel and the famous viaduct. 300m."
+      },
+      {
+        "day": 2,
+        "route": "Glenfinnan to Strathan",
+        "distanceKm": "22",
+        "elevGainM": "600",
+        "elevLossM": "600",
+        "maxAltM": "50.0",
+        "lat": 56.94,
+        "lng": -5.49,
+        "overnight": "Strathan",
+        "mapNote": "Remote glen walking. No waymarks. Navigation essential from here. 50m."
+      },
+      {
+        "day": 3,
+        "route": "Strathan to Sourlies Bothy",
+        "distanceKm": "19",
+        "elevGainM": "700",
+        "elevLossM": "650",
+        "maxAltM": "50.0",
+        "lat": 56.985,
+        "lng": -5.58,
+        "overnight": "Sourlies Bothy",
+        "mapNote": "Famous bothy at the head of Loch Nevis. Only accessible by foot or boat. 50m."
+      },
+      {
+        "day": 4,
+        "route": "Sourlies to Shiel Bridge",
+        "distanceKm": "24",
+        "elevGainM": "900",
+        "elevLossM": "900",
+        "maxAltM": "100.0",
+        "lat": 57.22,
+        "lng": -5.42,
+        "overnight": "Shiel Bridge",
+        "mapNote": "Wild crossing through the Rough Bounds. Scotland's most remote country. 100m."
+      },
+      {
+        "day": 5,
+        "route": "Shiel Bridge to Kinlochewe",
+        "distanceKm": "35",
+        "elevGainM": "1200",
+        "elevLossM": "1200",
+        "maxAltM": "400.0",
+        "lat": 57.57,
+        "lng": -5.31,
+        "overnight": "Kinlochewe",
+        "mapNote": "Through Torridon. Ancient 750-million-year-old Torridonian sandstone. 400m."
+      },
+      {
+        "day": 6,
+        "route": "Kinlochewe to Inchnadamph",
+        "distanceKm": "34",
+        "elevGainM": "1100",
+        "elevLossM": "1100",
+        "maxAltM": "300.0",
+        "lat": 58.11,
+        "lng": -5.0,
+        "overnight": "Inchnadamph",
+        "mapNote": "Cross the remote Fisherfield — Scotland's last great wilderness. 300m."
+      },
+      {
+        "day": 7,
+        "route": "Inchnadamph to Rhiconich",
+        "distanceKm": "32",
+        "elevGainM": "900",
+        "elevLossM": "900",
+        "maxAltM": "200.0",
+        "lat": 58.45,
+        "lng": -5.06,
+        "overnight": "Rhiconich",
+        "mapNote": "Assynt landscape — isolated mountains rising from flat boggy moorland. 200m."
+      },
+      {
+        "day": 8,
+        "route": "Rhiconich to Cape Wrath",
+        "distanceKm": "38",
+        "elevGainM": "600",
+        "elevLossM": "600",
+        "maxAltM": "122.0",
+        "lat": 58.625,
+        "lng": -4.992,
+        "overnight": "Cape Wrath Lighthouse",
+        "mapNote": "The end. Britain's most remote lighthouse. Journey complete. 122m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Cape Wrath Lighthouse",
+        "lat": 58.625,
+        "lng": -4.992,
+        "type": "landmark",
+        "altM": 122,
+        "note": "Britain's most northwesterly point. End of the trail."
+      },
+      {
+        "name": "Fisherfield",
+        "lat": 57.7,
+        "lng": -5.2,
+        "type": "viewpoint",
+        "altM": 600,
+        "note": "Scotland's last great wilderness. No roads. Complete solitude."
+      },
+      {
+        "name": "Sourlies Bothy",
+        "lat": 56.985,
+        "lng": -5.58,
+        "type": "landmark",
+        "altM": 50,
+        "note": "Famous bothie. Only way in is on foot or by boat from Mallaig."
+      },
+      {
+        "name": "Liathach",
+        "lat": 57.592,
+        "lng": -5.386,
+        "type": "summit",
+        "altM": 1055,
+        "note": "Torridon's iconic ridge. 750-million-year-old red sandstone."
+      }
+    ]
+  },
+  "monte_rosa": {
+    "sheetName": "Tour of Monte Rosa",
+    "slug": "monte_rosa",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Zermatt to Riffelalp",
+        "distanceKm": "8",
+        "elevGainM": "850",
+        "elevLossM": "0",
+        "maxAltM": "2222.0",
+        "lat": 45.98,
+        "lng": 7.75,
+        "overnight": "Riffelalp Resort",
+        "mapNote": "Leave Zermatt. First Matterhorn views. Gornergletscher panorama. 2222m."
+      },
+      {
+        "day": 2,
+        "route": "Riffelalp to Rif. Quintino Sella",
+        "distanceKm": "16",
+        "elevGainM": "1200",
+        "elevLossM": "600",
+        "maxAltM": "3585.0",
+        "lat": 45.91,
+        "lng": 7.87,
+        "overnight": "Rif. Quintino Sella",
+        "mapNote": "Cross into Italy via Felik Pass. Highest overnight on the route. 3585m."
+      },
+      {
+        "day": 3,
+        "route": "Quintino Sella to Alagna Valsesia",
+        "distanceKm": "14",
+        "elevGainM": "200",
+        "elevLossM": "2600",
+        "maxAltM": "1191.0",
+        "lat": 45.857,
+        "lng": 7.939,
+        "overnight": "Alagna Valsesia",
+        "mapNote": "Long Italian descent into the Valsesia valley. Culture shift. 1191m."
+      },
+      {
+        "day": 4,
+        "route": "Alagna to Rif. Pastore",
+        "distanceKm": "13",
+        "elevGainM": "1700",
+        "elevLossM": "200",
+        "maxAltM": "2970.0",
+        "lat": 45.83,
+        "lng": 7.89,
+        "overnight": "Rifugio Pastore",
+        "mapNote": "Long climb back to altitude. Italian hut culture. 2970m."
+      },
+      {
+        "day": 5,
+        "route": "Pastore to Macugnaga",
+        "distanceKm": "10",
+        "elevGainM": "200",
+        "elevLossM": "1350",
+        "maxAltM": "1327.0",
+        "lat": 45.96,
+        "lng": 7.97,
+        "overnight": "Macugnaga",
+        "mapNote": "Swiss/Italian mountain village below Monte Rosa's massive East Face. 1327m."
+      },
+      {
+        "day": 6,
+        "route": "Macugnaga to Rif. Città di Novara",
+        "distanceKm": "11",
+        "elevGainM": "1700",
+        "elevLossM": "200",
+        "maxAltM": "3020.0",
+        "lat": 45.956,
+        "lng": 7.981,
+        "overnight": "Rif. Città di Novara",
+        "mapNote": "Climb out of Macugnaga. Views of the East Face grow with every step. 3020m."
+      },
+      {
+        "day": 7,
+        "route": "Novara to Saas Almagell",
+        "distanceKm": "14",
+        "elevGainM": "600",
+        "elevLossM": "1600",
+        "maxAltM": "1672.0",
+        "lat": 46.02,
+        "lng": 7.97,
+        "overnight": "Saas Almagell",
+        "mapNote": "Cross into Switzerland. Mattmark reservoir. 1672m."
+      },
+      {
+        "day": 8,
+        "route": "Saas Almagell to Rif. Ciarforon",
+        "distanceKm": "16",
+        "elevGainM": "1500",
+        "elevLossM": "400",
+        "maxAltM": "3100.0",
+        "lat": 45.942,
+        "lng": 7.831,
+        "overnight": "Rif. Ciarforon",
+        "mapNote": "Traverse high above the Saas Valley. Weissmies and Alphubel. 3100m."
+      },
+      {
+        "day": 9,
+        "route": "Ciarforon to St Niklaus",
+        "distanceKm": "14",
+        "elevGainM": "200",
+        "elevLossM": "1900",
+        "maxAltM": "1127.0",
+        "lat": 46.175,
+        "lng": 7.8,
+        "overnight": "St Niklaus",
+        "mapNote": "Descent to the Matter Valley. Final valley transit. 1127m."
+      },
+      {
+        "day": 10,
+        "route": "St Niklaus to Zermatt",
+        "distanceKm": "12",
+        "elevGainM": "950",
+        "elevLossM": "200",
+        "maxAltM": "1608.0",
+        "lat": 46.02,
+        "lng": 7.749,
+        "overnight": "Zermatt",
+        "mapNote": "Return to Zermatt. Matterhorn welcomes you back. 1608m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Monte Rosa",
+        "lat": 45.937,
+        "lng": 7.867,
+        "type": "summit",
+        "altM": 4634,
+        "note": "Switzerland's highest peak. Dominates the circuit."
+      },
+      {
+        "name": "Matterhorn",
+        "lat": 45.977,
+        "lng": 7.658,
+        "type": "summit",
+        "altM": 4478,
+        "note": "Zermatt's iconic pyramid. Start and finish backdrop."
+      },
+      {
+        "name": "Felik Pass",
+        "lat": 45.906,
+        "lng": 7.87,
+        "type": "pass",
+        "altM": 3820,
+        "note": "Italy-Switzerland border crossing. Magnificent glacier views."
+      },
+      {
+        "name": "Monte Rosa East Face",
+        "lat": 45.96,
+        "lng": 7.97,
+        "type": "viewpoint",
+        "altM": 1350,
+        "note": "One of the Alps' great walls — 2500m vertical drop visible from Macugnaga."
+      }
+    ]
+  },
+  "stubai": {
+    "sheetName": "Stubai High Trail",
+    "slug": "stubai",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Neustift to Starkenburger Hut",
+        "distanceKm": "11",
+        "elevGainM": "1450",
+        "elevLossM": "200",
+        "maxAltM": "2237.0",
+        "lat": 47.057,
+        "lng": 11.118,
+        "overnight": "Starkenburger Hütte",
+        "mapNote": "Climb from Stubaital valley to first hut. Panoramic terrace views. 2237m."
+      },
+      {
+        "day": 2,
+        "route": "Starkenburger to Bremer Hut",
+        "distanceKm": "15",
+        "elevGainM": "950",
+        "elevLossM": "950",
+        "maxAltM": "2413.0",
+        "lat": 47.06,
+        "lng": 11.22,
+        "overnight": "Bremer Hütte",
+        "mapNote": "Traverse the Wilde Grube. Wild high-alpine terrain. 2413m."
+      },
+      {
+        "day": 3,
+        "route": "Bremer to Innsbrucker Hut",
+        "distanceKm": "12",
+        "elevGainM": "950",
+        "elevLossM": "650",
+        "maxAltM": "2369.0",
+        "lat": 47.018,
+        "lng": 11.313,
+        "overnight": "Innsbrucker Hütte",
+        "mapNote": "Highest fixed point on trail. Glacier views in every direction. 2369m."
+      },
+      {
+        "day": 4,
+        "route": "Innsbrucker to Sulzenauhütte",
+        "distanceKm": "14",
+        "elevGainM": "600",
+        "elevLossM": "900",
+        "maxAltM": "1884.0",
+        "lat": 47.021,
+        "lng": 11.151,
+        "overnight": "Sulzenauhütte",
+        "mapNote": "Cross the Feuerstein saddle. Waterfall scenery on descent. 1884m."
+      },
+      {
+        "day": 5,
+        "route": "Sulzenauhütte to Nürnberger Hut",
+        "distanceKm": "12",
+        "elevGainM": "900",
+        "elevLossM": "600",
+        "maxAltM": "2280.0",
+        "lat": 47.005,
+        "lng": 11.082,
+        "overnight": "Nürnberger Hütte",
+        "mapNote": "Below Wilder Freiger glacier. Classic Stubai high camp. 2280m."
+      },
+      {
+        "day": 6,
+        "route": "Nürnberger to Dresdner Hut",
+        "distanceKm": "13",
+        "elevGainM": "800",
+        "elevLossM": "700",
+        "maxAltM": "2302.0",
+        "lat": 47.036,
+        "lng": 11.083,
+        "overnight": "Dresdner Hütte",
+        "mapNote": "Final high traverse. Zugspitze visible in clear conditions. 2302m."
+      },
+      {
+        "day": 7,
+        "route": "Dresdner Hut to Neustift",
+        "distanceKm": "10",
+        "elevGainM": "100",
+        "elevLossM": "1250",
+        "maxAltM": "950.0",
+        "lat": 47.1,
+        "lng": 11.12,
+        "overnight": "Neustift im Stubaital",
+        "mapNote": "Gondola option or walk out. Circuit complete. 950m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Wilder Pfaff",
+        "lat": 47.029,
+        "lng": 11.126,
+        "type": "summit",
+        "altM": 3456,
+        "note": "Stubai's classic summit ascent from Dresdner Hütte."
+      },
+      {
+        "name": "Stubaier Gletscher",
+        "lat": 47.036,
+        "lng": 11.083,
+        "type": "glacier",
+        "altM": 2900,
+        "note": "Austria's largest easily-accessible glacier. Visible from multiple huts."
+      },
+      {
+        "name": "Innsbrucker Hütte",
+        "lat": 47.018,
+        "lng": 11.313,
+        "type": "landmark",
+        "altM": 2369,
+        "note": "Most spectacular hut position on the circuit."
+      },
+      {
+        "name": "Wilder Freiger",
+        "lat": 47.005,
+        "lng": 11.082,
+        "type": "summit",
+        "altM": 3418,
+        "note": "Highest peak in the southern Stubai. Classic glacier tour summit."
+      }
+    ]
+  },
+  "berliner": {
+    "sheetName": "Berliner Höhenweg",
+    "slug": "berliner",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Ginzling to Friesenberghaus",
+        "distanceKm": "11",
+        "elevGainM": "1250",
+        "elevLossM": "200",
+        "maxAltM": "2498.0",
+        "lat": 47.107,
+        "lng": 11.843,
+        "overnight": "Friesenberghaus",
+        "mapNote": "Zillertal valley start. Climb to first hut above the treeline. 2498m."
+      },
+      {
+        "day": 2,
+        "route": "Friesenberghaus to Olpererhütte",
+        "distanceKm": "10",
+        "elevGainM": "650",
+        "elevLossM": "500",
+        "maxAltM": "2388.0",
+        "lat": 47.068,
+        "lng": 11.766,
+        "overnight": "Olpererhütte",
+        "mapNote": "The famous suspended bridge. Schlegeis reservoir views. 2388m."
+      },
+      {
+        "day": 3,
+        "route": "Olpererhütte to Furtschaglhaus",
+        "distanceKm": "13",
+        "elevGainM": "900",
+        "elevLossM": "900",
+        "maxAltM": "2295.0",
+        "lat": 47.028,
+        "lng": 11.747,
+        "overnight": "Furtschaglhaus",
+        "mapNote": "Glacier traverses. Crevasse awareness needed. 2295m."
+      },
+      {
+        "day": 4,
+        "route": "Furtschaglhaus to Greizer Hütte",
+        "distanceKm": "15",
+        "elevGainM": "800",
+        "elevLossM": "700",
+        "maxAltM": "2227.0",
+        "lat": 47.075,
+        "lng": 11.97,
+        "overnight": "Greizer Hütte",
+        "mapNote": "The high route above Floitengrund valley. Most remote section. 2227m."
+      },
+      {
+        "day": 5,
+        "route": "Greizer to Kasseler Hütte",
+        "distanceKm": "12",
+        "elevGainM": "850",
+        "elevLossM": "800",
+        "maxAltM": "2178.0",
+        "lat": 47.108,
+        "lng": 12.01,
+        "overnight": "Kasseler Hütte",
+        "mapNote": "Dramatic Stillupgrund crossing. Hanging valley scenery. 2178m."
+      },
+      {
+        "day": 6,
+        "route": "Kasseler to Edelhütte",
+        "distanceKm": "16",
+        "elevGainM": "1200",
+        "elevLossM": "1100",
+        "maxAltM": "2238.0",
+        "lat": 47.179,
+        "lng": 11.93,
+        "overnight": "Edelhütte",
+        "mapNote": "Cross into the lower Zillertal system. Final hut. 2238m."
+      },
+      {
+        "day": 7,
+        "route": "Edelhütte to Mayrhofen",
+        "distanceKm": "8",
+        "elevGainM": "50",
+        "elevLossM": "1300",
+        "maxAltM": "633.0",
+        "lat": 47.166,
+        "lng": 11.862,
+        "overnight": "Mayrhofen",
+        "mapNote": "Descent to the Zillertal's main valley town. Route complete. 633m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Olperer",
+        "lat": 47.058,
+        "lng": 11.76,
+        "type": "summit",
+        "altM": 3476,
+        "note": "Zillertal's signature peak. Visible from the famous suspension bridge."
+      },
+      {
+        "name": "Olperer Suspension Bridge",
+        "lat": 47.068,
+        "lng": 11.766,
+        "type": "landmark",
+        "altM": 2388,
+        "note": "Instagram's most photographed bridge. 100m above Schlegeis reservoir."
+      },
+      {
+        "name": "Schlegeis Reservoir",
+        "lat": 47.08,
+        "lng": 11.79,
+        "type": "viewpoint",
+        "altM": 1800,
+        "note": "Turquoise high-altitude reservoir. Road accessible but stunning."
+      },
+      {
+        "name": "Großer Möseler",
+        "lat": 47.03,
+        "lng": 11.878,
+        "type": "summit",
+        "altM": 3480,
+        "note": "Second highest Zillertal peak. Summit panorama includes Dolomites."
+      }
+    ]
+  },
+  "hornstrandir": {
+    "sheetName": "Hornstrandir Traverse",
+    "slug": "hornstrandir",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Isafjordur ferry to Hesteyri",
+        "distanceKm": "6",
+        "elevGainM": "200",
+        "elevLossM": "100",
+        "maxAltM": "50.0",
+        "lat": 66.443,
+        "lng": -22.54,
+        "overnight": "Hesteyri",
+        "mapNote": "Arrive by ferry to the abandoned fishing village. Arctic fox immediately visible. 50m."
+      },
+      {
+        "day": 2,
+        "route": "Hesteyri to Hornvík via Hornbjarg",
+        "distanceKm": "16",
+        "elevGainM": "700",
+        "elevLossM": "700",
+        "maxAltM": "200.0",
+        "lat": 66.48,
+        "lng": -22.47,
+        "overnight": "Hornvík Beach Camp",
+        "mapNote": "Cross to Hornvík bay. Pass Hornbjarg cliffs with the seabird colonies. 200m."
+      },
+      {
+        "day": 3,
+        "route": "Hornvík to Hlöðuver",
+        "distanceKm": "14",
+        "elevGainM": "650",
+        "elevLossM": "650",
+        "maxAltM": "300.0",
+        "lat": 66.45,
+        "lng": -22.35,
+        "overnight": "Hlöðuver",
+        "mapNote": "The dramatic high crossing. Views to Greenland on clear days. 300m."
+      },
+      {
+        "day": 4,
+        "route": "Hlöðuver to Veiðileysufjörður",
+        "distanceKm": "12",
+        "elevGainM": "400",
+        "elevLossM": "400",
+        "maxAltM": "100.0",
+        "lat": 66.42,
+        "lng": -22.26,
+        "overnight": "Veiðileysufjörður",
+        "mapNote": "Descend into abandoned farm fjord. Pure solitude. 100m."
+      },
+      {
+        "day": 5,
+        "route": "Veiðileysufjörður to Isafjordur ferry",
+        "distanceKm": "10",
+        "elevGainM": "300",
+        "elevLossM": "300",
+        "maxAltM": "50.0",
+        "lat": 66.4,
+        "lng": -22.37,
+        "overnight": "Ferry pickup point",
+        "mapNote": "Final fjord crossing. Ferry returns to Isafjordur. 50m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Hornbjarg Cliffs",
+        "lat": 66.48,
+        "lng": -22.46,
+        "type": "viewpoint",
+        "altM": 534,
+        "note": "Iceland's most dramatic bird cliffs. Half a million seabirds nest here."
+      },
+      {
+        "name": "Hesteyri",
+        "lat": 66.443,
+        "lng": -22.54,
+        "type": "landmark",
+        "altM": 50,
+        "note": "Abandoned doctor's house. Last inhabited 1952. Arctic fox colony now."
+      },
+      {
+        "name": "Kálfatindar",
+        "lat": 66.465,
+        "lng": -22.38,
+        "type": "summit",
+        "altM": 534,
+        "note": "Highest point of the traverse. Greenland visible in clear conditions."
+      },
+      {
+        "name": "Hornvík",
+        "lat": 66.48,
+        "lng": -22.47,
+        "type": "viewpoint",
+        "altM": 5,
+        "note": "Most dramatic beach in Iceland. Backed by 500m cliffs."
+      }
+    ]
+  },
+  "kanchenjunga": {
+    "sheetName": "Kanchenjunga Base Camp",
+    "slug": "kanchenjunga",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Taplejung to Chirwa",
+        "distanceKm": "15",
+        "elevGainM": "600",
+        "elevLossM": "200",
+        "maxAltM": "1270.0",
+        "lat": 27.632,
+        "lng": 87.914,
+        "overnight": "Chirwa",
+        "mapNote": "Remote East Nepal start. Tamur River valley. Rhododendron forests. 1270m."
+      },
+      {
+        "day": 2,
+        "route": "Chirwa to Sekathum",
+        "distanceKm": "14",
+        "elevGainM": "700",
+        "elevLossM": "100",
+        "maxAltM": "1660.0",
+        "lat": 27.648,
+        "lng": 87.896,
+        "overnight": "Sekathum",
+        "mapNote": "River junction camp. Traditional Limbu villages. 1660m."
+      },
+      {
+        "day": 3,
+        "route": "Sekathum to Amjilosa",
+        "distanceKm": "16",
+        "elevGainM": "800",
+        "elevLossM": "200",
+        "maxAltM": "2490.0",
+        "lat": 27.68,
+        "lng": 87.87,
+        "overnight": "Amjilosa",
+        "mapNote": "Climbing into higher country. Kanchenjunga begins appearing. 2490m."
+      },
+      {
+        "day": 4,
+        "route": "Amjilosa to Gyabla",
+        "distanceKm": "14",
+        "elevGainM": "750",
+        "elevLossM": "200",
+        "maxAltM": "3730.0",
+        "lat": 27.711,
+        "lng": 87.843,
+        "overnight": "Gyabla",
+        "mapNote": "Dramatic cliffs and waterfalls. High alpine zone begins. 3730m."
+      },
+      {
+        "day": 5,
+        "route": "Gyabla to Ghunsa",
+        "distanceKm": "12",
+        "elevGainM": "400",
+        "elevLossM": "200",
+        "maxAltM": "3595.0",
+        "lat": 27.685,
+        "lng": 87.82,
+        "overnight": "Ghunsa",
+        "mapNote": "Main supply village. Sherpa/Tibetan culture. Last teahouses. 3595m."
+      },
+      {
+        "day": 6,
+        "route": "Ghunsa to Khambachen",
+        "distanceKm": "14",
+        "elevGainM": "900",
+        "elevLossM": "200",
+        "maxAltM": "4050.0",
+        "lat": 27.706,
+        "lng": 87.762,
+        "overnight": "Khambachen",
+        "mapNote": "Valley narrows. Kanchenjunga North Face begins to dominate. 4050m."
+      },
+      {
+        "day": 7,
+        "route": "Khambachen to Lhonak",
+        "distanceKm": "13",
+        "elevGainM": "800",
+        "elevLossM": "100",
+        "maxAltM": "4790.0",
+        "lat": 27.771,
+        "lng": 87.714,
+        "overnight": "Lhonak",
+        "mapNote": "High plateau camp. Glacier views. Altitude hits hard. 4790m."
+      },
+      {
+        "day": 8,
+        "route": "Lhonak to North Base Camp + return",
+        "distanceKm": "12",
+        "elevGainM": "350",
+        "elevLossM": "350",
+        "maxAltM": "5143.0",
+        "lat": 27.793,
+        "lng": 87.689,
+        "overnight": "Lhonak",
+        "mapNote": "North Base Camp — the world's third highest peak base. 5143m."
+      },
+      {
+        "day": 9,
+        "route": "Lhonak to Ghunsa",
+        "distanceKm": "26",
+        "elevGainM": "0",
+        "elevLossM": "1200",
+        "maxAltM": "3595.0",
+        "lat": 27.685,
+        "lng": 87.82,
+        "overnight": "Ghunsa",
+        "mapNote": "Long descent day. Body recovering from altitude. 3595m."
+      },
+      {
+        "day": 10,
+        "route": "Ghunsa to Sele La Pass",
+        "distanceKm": "14",
+        "elevGainM": "1300",
+        "elevLossM": "100",
+        "maxAltM": "4290.0",
+        "lat": 27.68,
+        "lng": 87.786,
+        "overnight": "Below Sele La",
+        "mapNote": "Cross-valley route. Dramatic high pass to southern approach. 4290m."
+      },
+      {
+        "day": 11,
+        "route": "Sele La to Tseram",
+        "distanceKm": "15",
+        "elevGainM": "200",
+        "elevLossM": "1050",
+        "maxAltM": "3870.0",
+        "lat": 27.638,
+        "lng": 87.746,
+        "overnight": "Tseram",
+        "mapNote": "Descend to southern valley. Very different vegetation and culture. 3870m."
+      },
+      {
+        "day": 12,
+        "route": "Tseram to South Base Camp + return",
+        "distanceKm": "16",
+        "elevGainM": "700",
+        "elevLossM": "700",
+        "maxAltM": "4580.0",
+        "lat": 27.62,
+        "lng": 87.725,
+        "overnight": "Tseram",
+        "mapNote": "South Base Camp — classic cirque. Yalung Glacier. 4580m."
+      },
+      {
+        "day": 13,
+        "route": "Tseram to Tortong",
+        "distanceKm": "16",
+        "elevGainM": "100",
+        "elevLossM": "1100",
+        "maxAltM": "2995.0",
+        "lat": 27.58,
+        "lng": 87.78,
+        "overnight": "Tortong",
+        "mapNote": "Descend Yalung valley. Bamboo forest. Rhododendron. 2995m."
+      },
+      {
+        "day": 14,
+        "route": "Tortong to Taplejung (+ drive)",
+        "distanceKm": "20",
+        "elevGainM": "100",
+        "elevLossM": "900",
+        "maxAltM": "1820.0",
+        "lat": 27.632,
+        "lng": 87.914,
+        "overnight": "Taplejung",
+        "mapNote": "Final valley walk. Jeep possible for last section. 1820m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Kanchenjunga",
+        "lat": 27.702,
+        "lng": 88.147,
+        "type": "summit",
+        "altM": 8586,
+        "note": "World's third highest peak. Sacred to local Sikkimese and Nepali people."
+      },
+      {
+        "name": "North Base Camp",
+        "lat": 27.793,
+        "lng": 87.689,
+        "type": "base_camp",
+        "altM": 5143,
+        "note": "Kanchenjunga North Base Camp. Remote and rarely visited."
+      },
+      {
+        "name": "South Base Camp",
+        "lat": 27.62,
+        "lng": 87.725,
+        "type": "base_camp",
+        "altM": 4580,
+        "note": "Classic Yalung Glacier cirque. Dramatic south face views."
+      },
+      {
+        "name": "Sele La Pass",
+        "lat": 27.68,
+        "lng": 87.786,
+        "type": "pass",
+        "altM": 4290,
+        "note": "Crossing between north and south approaches. Outstanding panorama."
+      }
+    ]
+  },
+  "upper_mustang": {
+    "sheetName": "Upper Mustang Trek",
+    "slug": "upper_mustang",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Jomsom to Kagbeni",
+        "distanceKm": "9",
+        "elevGainM": "150",
+        "elevLossM": "50",
+        "maxAltM": "2810.0",
+        "lat": 28.982,
+        "lng": 83.776,
+        "overnight": "Kagbeni",
+        "mapNote": "Gateway to Upper Mustang. Ancient walled town on the Kali Gandaki. 2810m."
+      },
+      {
+        "day": 2,
+        "route": "Kagbeni to Chele",
+        "distanceKm": "17",
+        "elevGainM": "850",
+        "elevLossM": "100",
+        "maxAltM": "3050.0",
+        "lat": 29.062,
+        "lng": 83.798,
+        "overnight": "Chele",
+        "mapNote": "Leave Lower Mustang. Wind-carved ochre badlands begin. 3050m."
+      },
+      {
+        "day": 3,
+        "route": "Chele to Syangboche",
+        "distanceKm": "14",
+        "elevGainM": "700",
+        "elevLossM": "300",
+        "maxAltM": "3800.0",
+        "lat": 29.128,
+        "lng": 83.8,
+        "overnight": "Syangboche",
+        "mapNote": "Plateau landscape. Blue sky above terracotta earth. 3800m."
+      },
+      {
+        "day": 4,
+        "route": "Syangboche to Lo Manthang",
+        "distanceKm": "16",
+        "elevGainM": "500",
+        "elevLossM": "200",
+        "maxAltM": "3840.0",
+        "lat": 29.181,
+        "lng": 83.957,
+        "overnight": "Lo Manthang",
+        "mapNote": "The walled capital of the ancient Kingdom of Mustang. 3840m."
+      },
+      {
+        "day": 5,
+        "route": "Lo Manthang exploration",
+        "distanceKm": "8",
+        "elevGainM": "400",
+        "elevLossM": "400",
+        "maxAltM": "3840.0",
+        "lat": 29.181,
+        "lng": 83.957,
+        "overnight": "Lo Manthang",
+        "mapNote": "Explore the royal palace, monasteries, cave cities. 3840m."
+      },
+      {
+        "day": 6,
+        "route": "Lo Manthang to Drakmar",
+        "distanceKm": "18",
+        "elevGainM": "600",
+        "elevLossM": "600",
+        "maxAltM": "3820.0",
+        "lat": 29.1,
+        "lng": 83.938,
+        "overnight": "Drakmar",
+        "mapNote": "Red cliff village. Return route via different valleys. 3820m."
+      },
+      {
+        "day": 7,
+        "route": "Drakmar to Ghami",
+        "distanceKm": "14",
+        "elevGainM": "400",
+        "elevLossM": "500",
+        "maxAltM": "3520.0",
+        "lat": 29.052,
+        "lng": 83.867,
+        "overnight": "Ghami",
+        "mapNote": "Long mani wall — one of the longest in Nepal. 3520m."
+      },
+      {
+        "day": 8,
+        "route": "Ghami to Tsarang",
+        "distanceKm": "12",
+        "elevGainM": "600",
+        "elevLossM": "400",
+        "maxAltM": "3640.0",
+        "lat": 29.075,
+        "lng": 83.9,
+        "overnight": "Tsarang",
+        "mapNote": "Second largest town. 500-year-old dzong fortress. 3640m."
+      },
+      {
+        "day": 9,
+        "route": "Tsarang to Kagbeni",
+        "distanceKm": "22",
+        "elevGainM": "200",
+        "elevLossM": "900",
+        "maxAltM": "2810.0",
+        "lat": 28.982,
+        "lng": 83.776,
+        "overnight": "Kagbeni",
+        "mapNote": "Descend back through the dramatic Mustang plateau. 2810m."
+      },
+      {
+        "day": 10,
+        "route": "Kagbeni to Jomsom (flight or walk)",
+        "distanceKm": "10",
+        "elevGainM": "0",
+        "elevLossM": "150",
+        "maxAltM": "2720.0",
+        "lat": 28.78,
+        "lng": 83.72,
+        "overnight": "Jomsom",
+        "mapNote": "Return to Jomsom. Flight or jeep track to Pokhara. 2720m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Lo Manthang",
+        "lat": 29.181,
+        "lng": 83.957,
+        "type": "landmark",
+        "altM": 3840,
+        "note": "Ancient walled capital of the Kingdom of Mustang. Still partially restricted."
+      },
+      {
+        "name": "Luri Gompa",
+        "lat": 29.21,
+        "lng": 83.94,
+        "type": "landmark",
+        "altM": 4050,
+        "note": "Ancient cave monastery. 800-year-old murals. Hidden valley location."
+      },
+      {
+        "name": "Chungsi Cave",
+        "lat": 29.069,
+        "lng": 83.827,
+        "type": "landmark",
+        "altM": 3350,
+        "note": "Pilgrimage cave monastery. 1,000 years of butter lamp offerings."
+      },
+      {
+        "name": "Kali Gandaki",
+        "lat": 28.982,
+        "lng": 83.776,
+        "type": "viewpoint",
+        "altM": 2810,
+        "note": "World's deepest gorge between Annapurna and Dhaulagiri."
+      }
+    ]
+  },
+  "makalu_bc": {
+    "sheetName": "Makalu Base Camp",
+    "slug": "makalu_bc",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Num to Seduwa",
+        "distanceKm": "8",
+        "elevGainM": "900",
+        "elevLossM": "500",
+        "maxAltM": "1480.0",
+        "lat": 27.372,
+        "lng": 87.207,
+        "overnight": "Seduwa",
+        "mapNote": "Trailhead village. Remote eastern Nepal. Rice paddies give way to forest. 1480m."
+      },
+      {
+        "day": 2,
+        "route": "Seduwa to Tashigaon",
+        "distanceKm": "14",
+        "elevGainM": "1400",
+        "elevLossM": "200",
+        "maxAltM": "2100.0",
+        "lat": 27.432,
+        "lng": 87.186,
+        "overnight": "Tashigaon",
+        "mapNote": "Last permanent settlement. 1400m climb through terraced fields. 2100m."
+      },
+      {
+        "day": 3,
+        "route": "Tashigaon to Khongma Danda",
+        "distanceKm": "12",
+        "elevGainM": "1700",
+        "elevLossM": "200",
+        "maxAltM": "3559.0",
+        "lat": 27.468,
+        "lng": 87.122,
+        "overnight": "Khongma Danda",
+        "mapNote": "Strenuous climb from subtropical to alpine. Stunning views behind. 3559m."
+      },
+      {
+        "day": 4,
+        "route": "Khongma to Dobato",
+        "distanceKm": "13",
+        "elevGainM": "800",
+        "elevLossM": "400",
+        "maxAltM": "3630.0",
+        "lat": 27.499,
+        "lng": 87.06,
+        "overnight": "Dobato",
+        "mapNote": "Enter the Barun Valley. High yak pastures. First Makalu glimpse. 3630m."
+      },
+      {
+        "day": 5,
+        "route": "Dobato to Lower Barun Camp",
+        "distanceKm": "14",
+        "elevGainM": "700",
+        "elevLossM": "300",
+        "maxAltM": "3900.0",
+        "lat": 27.531,
+        "lng": 87.01,
+        "overnight": "Lower Barun Camp",
+        "mapNote": "The Barun Valley opens up. Makalu's south face dominates. 3900m."
+      },
+      {
+        "day": 6,
+        "route": "Lower Barun to Sherson",
+        "distanceKm": "10",
+        "elevGainM": "750",
+        "elevLossM": "200",
+        "maxAltM": "4615.0",
+        "lat": 27.573,
+        "lng": 86.98,
+        "overnight": "Sherson",
+        "mapNote": "Last major camp before base camp. Stunning valley position. 4615m."
+      },
+      {
+        "day": 7,
+        "route": "Sherson to Makalu Base Camp",
+        "distanceKm": "10",
+        "elevGainM": "935",
+        "elevLossM": "0",
+        "maxAltM": "5550.0",
+        "lat": 27.612,
+        "lng": 86.926,
+        "overnight": "Makalu Base Camp",
+        "mapNote": "The fifth highest peak on Earth from below. Complete isolation. 5550m."
+      },
+      {
+        "day": 8,
+        "route": "Base Camp rest/acclimatisation",
+        "distanceKm": "5",
+        "elevGainM": "200",
+        "elevLossM": "200",
+        "maxAltM": "5550.0",
+        "lat": 27.612,
+        "lng": 86.926,
+        "overnight": "Makalu Base Camp",
+        "mapNote": "Explore glacier margins. Incredible views into Tibet. 5550m."
+      },
+      {
+        "day": 9,
+        "route": "Base Camp to Sherson",
+        "distanceKm": "10",
+        "elevGainM": "0",
+        "elevLossM": "935",
+        "maxAltM": "4615.0",
+        "lat": 27.573,
+        "lng": 86.98,
+        "overnight": "Sherson",
+        "mapNote": "Descent begins. Body grateful for dropping altitude. 4615m."
+      },
+      {
+        "day": 10,
+        "route": "Sherson to Dobato",
+        "distanceKm": "16",
+        "elevGainM": "200",
+        "elevLossM": "900",
+        "maxAltM": "3630.0",
+        "lat": 27.499,
+        "lng": 87.06,
+        "overnight": "Dobato",
+        "mapNote": "Long valley descent. Barun River rushing below. 3630m."
+      },
+      {
+        "day": 11,
+        "route": "Dobato to Tashigaon",
+        "distanceKm": "19",
+        "elevGainM": "400",
+        "elevLossM": "1800",
+        "maxAltM": "2100.0",
+        "lat": 27.432,
+        "lng": 87.186,
+        "overnight": "Tashigaon",
+        "mapNote": "Big descent day. Subtropical warmth returns. 2100m."
+      },
+      {
+        "day": 12,
+        "route": "Tashigaon to Num (drive exit)",
+        "distanceKm": "22",
+        "elevGainM": "500",
+        "elevLossM": "1900",
+        "maxAltM": "950.0",
+        "lat": 27.372,
+        "lng": 87.207,
+        "overnight": "Num",
+        "mapNote": "Final walk out. Jeep to Tumlingtar for flight. 950m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Makalu",
+        "lat": 27.889,
+        "lng": 87.088,
+        "type": "summit",
+        "altM": 8485,
+        "note": "World's fifth highest peak. The pyramid-shaped giant of eastern Nepal."
+      },
+      {
+        "name": "Makalu Base Camp",
+        "lat": 27.612,
+        "lng": 86.926,
+        "type": "base_camp",
+        "altM": 5550,
+        "note": "Remote and rarely visited. One of the most spectacular in the Himalaya."
+      },
+      {
+        "name": "Barun Valley",
+        "lat": 27.54,
+        "lng": 87.0,
+        "type": "viewpoint",
+        "altM": 3900,
+        "note": "Protected valley — one of the last pristine Himalayan valleys remaining."
+      },
+      {
+        "name": "Baruntse",
+        "lat": 27.869,
+        "lng": 86.953,
+        "type": "summit",
+        "altM": 7129,
+        "note": "Neighbouring 7000m peak visible from the route. Popular mountaineering objective."
+      }
+    ]
+  },
+  "dhaulagiri": {
+    "sheetName": "Dhaulagiri Circuit",
+    "slug": "dhaulagiri",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Beni to Darbang",
+        "distanceKm": "18",
+        "elevGainM": "600",
+        "elevLossM": "0",
+        "maxAltM": "1180.0",
+        "lat": 28.332,
+        "lng": 83.37,
+        "overnight": "Darbang",
+        "mapNote": "Road walk start. Myagdi River. Teahouses thin quickly. 1180m."
+      },
+      {
+        "day": 2,
+        "route": "Darbang to Muri",
+        "distanceKm": "16",
+        "elevGainM": "700",
+        "elevLossM": "200",
+        "maxAltM": "1840.0",
+        "lat": 28.43,
+        "lng": 83.31,
+        "overnight": "Muri",
+        "mapNote": "River gorge narrows. Suspension bridges. Tropical forest. 1840m."
+      },
+      {
+        "day": 3,
+        "route": "Muri to Boghara",
+        "distanceKm": "14",
+        "elevGainM": "900",
+        "elevLossM": "200",
+        "maxAltM": "2130.0",
+        "lat": 28.512,
+        "lng": 83.269,
+        "overnight": "Boghara",
+        "mapNote": "Last major settlement. Stock up. Route becomes remote. 2130m."
+      },
+      {
+        "day": 4,
+        "route": "Boghara to Dobang",
+        "distanceKm": "12",
+        "elevGainM": "1050",
+        "elevLossM": "200",
+        "maxAltM": "3010.0",
+        "lat": 28.589,
+        "lng": 83.248,
+        "overnight": "Dobang",
+        "mapNote": "Dhaulagiri's south face begins to loom. 3010m."
+      },
+      {
+        "day": 5,
+        "route": "Dobang to Italian Base Camp",
+        "distanceKm": "11",
+        "elevGainM": "1500",
+        "elevLossM": "200",
+        "maxAltM": "3660.0",
+        "lat": 28.66,
+        "lng": 83.234,
+        "overnight": "Italian Base Camp",
+        "mapNote": "Historic base camp of the first Dhaulagiri ascent. 3660m."
+      },
+      {
+        "day": 6,
+        "route": "Italian BC to Dhaulagiri Base Camp",
+        "distanceKm": "11",
+        "elevGainM": "1300",
+        "elevLossM": "300",
+        "maxAltM": "4750.0",
+        "lat": 28.718,
+        "lng": 83.197,
+        "overnight": "Dhaulagiri Base Camp",
+        "mapNote": "The seventh highest mountain from below. Immense scale. 4750m."
+      },
+      {
+        "day": 7,
+        "route": "Base Camp to French Pass",
+        "distanceKm": "10",
+        "elevGainM": "610",
+        "elevLossM": "0",
+        "maxAltM": "5360.0",
+        "lat": 28.7,
+        "lng": 83.171,
+        "overnight": "Camp below French Pass",
+        "mapNote": "The circuit's highest point. Crevassed glacier approach. 5360m."
+      },
+      {
+        "day": 8,
+        "route": "French Pass to Hidden Valley",
+        "distanceKm": "8",
+        "elevGainM": "0",
+        "elevLossM": "500",
+        "maxAltM": "4760.0",
+        "lat": 28.7,
+        "lng": 83.14,
+        "overnight": "Hidden Valley Camp",
+        "mapNote": "Over the pass into the extraordinary hidden plateau. 4760m."
+      },
+      {
+        "day": 9,
+        "route": "Hidden Valley to Marpha",
+        "distanceKm": "18",
+        "elevGainM": "0",
+        "elevLossM": "2700",
+        "maxAltM": "2665.0",
+        "lat": 28.748,
+        "lng": 83.676,
+        "overnight": "Marpha",
+        "mapNote": "Epic descent to the Kali Gandaki. Apple orchards. Civilisation. 2665m."
+      },
+      {
+        "day": 10,
+        "route": "Marpha to Larjung",
+        "distanceKm": "8",
+        "elevGainM": "50",
+        "elevLossM": "100",
+        "maxAltM": "2560.0",
+        "lat": 28.68,
+        "lng": 83.67,
+        "overnight": "Larjung",
+        "mapNote": "Short valley day. Rest after the circuit's hardest section. 2560m."
+      },
+      {
+        "day": 11,
+        "route": "Larjung to Kalopani",
+        "distanceKm": "12",
+        "elevGainM": "50",
+        "elevLossM": "100",
+        "maxAltM": "2530.0",
+        "lat": 28.62,
+        "lng": 83.65,
+        "overnight": "Kalopani",
+        "mapNote": "Annapurna Circuit junction. Trek connects here. 2530m."
+      },
+      {
+        "day": 12,
+        "route": "Kalopani to Tatopani",
+        "distanceKm": "18",
+        "elevGainM": "50",
+        "elevLossM": "800",
+        "maxAltM": "1190.0",
+        "lat": 28.49,
+        "lng": 83.62,
+        "overnight": "Tatopani",
+        "mapNote": "Famous hot springs. Soak tired legs. 1190m."
+      },
+      {
+        "day": 13,
+        "route": "Tatopani to Beni (bus)",
+        "distanceKm": "18",
+        "elevGainM": "50",
+        "elevLossM": "750",
+        "maxAltM": "900.0",
+        "lat": 28.34,
+        "lng": 83.52,
+        "overnight": "Beni",
+        "mapNote": "Trail or bus to Beni. Circuit complete. 900m."
+      },
+      {
+        "day": 14,
+        "route": "Buffer/acclimatisation day",
+        "distanceKm": "0",
+        "elevGainM": "0",
+        "elevLossM": "0",
+        "maxAltM": "1190.0",
+        "lat": 28.49,
+        "lng": 83.62,
+        "overnight": "Tatopani",
+        "mapNote": "Rest day built in for weather or altitude adjustment. 1190m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Dhaulagiri",
+        "lat": 28.698,
+        "lng": 83.49,
+        "type": "summit",
+        "altM": 8167,
+        "note": "World's seventh highest mountain. Meaning 'dazzling white mountain'."
+      },
+      {
+        "name": "French Pass",
+        "lat": 28.7,
+        "lng": 83.171,
+        "type": "pass",
+        "altM": 5360,
+        "note": "Most demanding crossing on the circuit. Crevasse navigation required."
+      },
+      {
+        "name": "Hidden Valley",
+        "lat": 28.7,
+        "lng": 83.14,
+        "type": "viewpoint",
+        "altM": 4760,
+        "note": "High plateau hidden behind Dhaulagiri. Completely isolated from the world."
+      },
+      {
+        "name": "Italian Base Camp",
+        "lat": 28.66,
+        "lng": 83.234,
+        "type": "base_camp",
+        "altM": 3660,
+        "note": "Original 1960 French/Swiss base camp. Historic mountaineering site."
+      }
+    ]
+  },
+  "chadar": {
+    "sheetName": "Chadar Trek",
+    "slug": "chadar",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Leh acclimatisation",
+        "distanceKm": "0",
+        "elevGainM": "0",
+        "elevLossM": "0",
+        "maxAltM": "3500.0",
+        "lat": 34.165,
+        "lng": 77.585,
+        "overnight": "Leh",
+        "mapNote": "Arrive Leh. Mandatory rest day at 3500m before trek begins. 3500m."
+      },
+      {
+        "day": 2,
+        "route": "Chilling to Shingra Koma",
+        "distanceKm": "14",
+        "elevGainM": "200",
+        "elevLossM": "100",
+        "maxAltM": "3280.0",
+        "lat": 33.91,
+        "lng": 77.45,
+        "overnight": "Shingra Koma Camp",
+        "mapNote": "Walk on or alongside the frozen Zanskar River. Ice camping begins. 3280m."
+      },
+      {
+        "day": 3,
+        "route": "Shingra Koma to Tibb Cave",
+        "distanceKm": "14",
+        "elevGainM": "150",
+        "elevLossM": "100",
+        "maxAltM": "3230.0",
+        "lat": 33.87,
+        "lng": 77.41,
+        "overnight": "Tibb Cave Camp",
+        "mapNote": "The famous overhang cave. River ice thickens. Stunning canyon walls. 3230m."
+      },
+      {
+        "day": 4,
+        "route": "Tibb Cave to Nerak",
+        "distanceKm": "13",
+        "elevGainM": "150",
+        "elevLossM": "100",
+        "maxAltM": "3180.0",
+        "lat": 33.83,
+        "lng": 77.38,
+        "overnight": "Nerak Village",
+        "mapNote": "Nerak waterfall — frozen solid, 30m of blue ice. Magical campsite. 3180m."
+      },
+      {
+        "day": 5,
+        "route": "Nerak exploration + rest",
+        "distanceKm": "8",
+        "elevGainM": "300",
+        "elevLossM": "300",
+        "maxAltM": "3200.0",
+        "lat": 33.83,
+        "lng": 77.38,
+        "overnight": "Nerak Village",
+        "mapNote": "Visit Nerak village. Frozen waterfall exploration. Cultural exchange. 3200m."
+      },
+      {
+        "day": 6,
+        "route": "Nerak to Tibb Cave",
+        "distanceKm": "13",
+        "elevGainM": "100",
+        "elevLossM": "150",
+        "maxAltM": "3230.0",
+        "lat": 33.87,
+        "lng": 77.41,
+        "overnight": "Tibb Cave Camp",
+        "mapNote": "Return journey begins. Ice conditions change daily. 3230m."
+      },
+      {
+        "day": 7,
+        "route": "Tibb Cave to Shingra Koma",
+        "distanceKm": "14",
+        "elevGainM": "100",
+        "elevLossM": "150",
+        "maxAltM": "3280.0",
+        "lat": 33.91,
+        "lng": 77.45,
+        "overnight": "Shingra Koma Camp",
+        "mapNote": "River return. Ice sheet walking. Canyon silence. 3280m."
+      },
+      {
+        "day": 8,
+        "route": "Shingra Koma to Chilling + drive",
+        "distanceKm": "15",
+        "elevGainM": "100",
+        "elevLossM": "200",
+        "maxAltM": "3280.0",
+        "lat": 33.91,
+        "lng": 77.45,
+        "overnight": "Chilling / Leh",
+        "mapNote": "Exit trek. Drive back to Leh along Indus Valley. 3280m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Nerak Waterfall",
+        "lat": 33.83,
+        "lng": 77.38,
+        "type": "landmark",
+        "altM": 3180,
+        "note": "30m frozen waterfall. Completely solid in January-February. Iconic image."
+      },
+      {
+        "name": "Zanskar Gorge",
+        "lat": 33.87,
+        "lng": 77.41,
+        "type": "viewpoint",
+        "altM": 3200,
+        "note": "300m vertical walls above frozen river. Most dramatic canyon in Ladakh."
+      },
+      {
+        "name": "Tibb Cave",
+        "lat": 33.87,
+        "lng": 77.41,
+        "type": "landmark",
+        "altM": 3230,
+        "note": "Natural overhang used as campsite. Locals and trekkers share the space."
+      },
+      {
+        "name": "Leh Palace",
+        "lat": 34.165,
+        "lng": 77.585,
+        "type": "landmark",
+        "altM": 3500,
+        "note": "17th century palace overlooking Leh. Acclimatisation day visit."
+      }
+    ]
+  },
+  "maclehose": {
+    "sheetName": "MacLehose Trail",
+    "slug": "maclehose",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Pak Tam Chung to Kei Ling Ha Hoi",
+        "distanceKm": "20",
+        "elevGainM": "500",
+        "elevLossM": "400",
+        "maxAltM": "400.0",
+        "lat": 22.392,
+        "lng": 114.282,
+        "overnight": "Kei Ling Ha Hoi",
+        "mapNote": "Sai Kung coastline. Volcanic hexagonal rock columns. Clear water bays. 400m."
+      },
+      {
+        "day": 2,
+        "route": "Kei Ling Ha to Gilwell Camp",
+        "distanceKm": "20",
+        "elevGainM": "650",
+        "elevLossM": "600",
+        "maxAltM": "350.0",
+        "lat": 22.408,
+        "lng": 114.222,
+        "overnight": "Gilwell Camp",
+        "mapNote": "Cross Sharp Peak and Nam Sheong. Remote Sai Kung interior. 350m."
+      },
+      {
+        "day": 3,
+        "route": "Gilwell Camp to Shui Long Wo",
+        "distanceKm": "18",
+        "elevGainM": "600",
+        "elevLossM": "550",
+        "maxAltM": "400.0",
+        "lat": 22.42,
+        "lng": 114.15,
+        "overnight": "Shui Long Wo",
+        "mapNote": "Traverse Maclehose Ridge. City skyline appears on horizon. 400m."
+      },
+      {
+        "day": 4,
+        "route": "Shui Long Wo to Lead Mine Pass",
+        "distanceKm": "22",
+        "elevGainM": "700",
+        "elevLossM": "700",
+        "maxAltM": "400.0",
+        "lat": 22.438,
+        "lng": 114.08,
+        "overnight": "Lead Mine Pass",
+        "mapNote": "Cross the reservoirs catchment. Lion Rock visible ahead. 400m."
+      },
+      {
+        "day": 5,
+        "route": "Lead Mine Pass to Tuen Mun",
+        "distanceKm": "20",
+        "elevGainM": "400",
+        "elevLossM": "800",
+        "maxAltM": "957.0",
+        "lat": 22.45,
+        "lng": 114.01,
+        "overnight": "Tuen Mun",
+        "mapNote": "Final section past Lead Mine Pass. Highest point at Needle Hill. 957m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Sharp Peak",
+        "lat": 22.379,
+        "lng": 114.3,
+        "type": "summit",
+        "altM": 468,
+        "note": "Sai Kung's dramatic rocky fin. Most iconic summit on the trail."
+      },
+      {
+        "name": "High Island Reservoir",
+        "lat": 22.38,
+        "lng": 114.33,
+        "type": "viewpoint",
+        "altM": 80,
+        "note": "Sea wall reservoir. Hexagonal volcanic columns. Geological wonder."
+      },
+      {
+        "name": "Needle Hill",
+        "lat": 22.439,
+        "lng": 114.062,
+        "type": "summit",
+        "altM": 532,
+        "note": "Highest point on the trail. Views to Shenzhen skyline."
+      },
+      {
+        "name": "Lion Rock",
+        "lat": 22.34,
+        "lng": 114.185,
+        "type": "summit",
+        "altM": 495,
+        "note": "Symbol of Hong Kong. Silhouette visible from downtown."
+      }
+    ]
+  },
+  "mount_meru": {
+    "sheetName": "Mount Meru Trek",
+    "slug": "mount_meru",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Momella Gate to Miriakamba Hut",
+        "distanceKm": "10",
+        "elevGainM": "1200",
+        "elevLossM": "100",
+        "maxAltM": "2514.0",
+        "lat": -3.224,
+        "lng": 36.746,
+        "overnight": "Miriakamba Hut",
+        "mapNote": "Through giraffe and buffalo country in Arusha NP. Forest to heath zone. 2514m."
+      },
+      {
+        "day": 2,
+        "route": "Miriakamba to Saddle Hut",
+        "distanceKm": "10",
+        "elevGainM": "1385",
+        "elevLossM": "100",
+        "maxAltM": "3570.0",
+        "lat": -3.225,
+        "lng": 36.752,
+        "overnight": "Saddle Hut",
+        "mapNote": "Moorland zone. Colobus monkeys. First views of the ash cone crater. 3570m."
+      },
+      {
+        "day": 3,
+        "route": "Saddle Hut to Summit + descent",
+        "distanceKm": "14",
+        "elevGainM": "990",
+        "elevLossM": "990",
+        "maxAltM": "4566.0",
+        "lat": -3.24,
+        "lng": 36.751,
+        "overnight": "Saddle Hut",
+        "mapNote": "Pre-dawn start. Dramatic knife-edge ridge to Socialist Peak summit. 4566m."
+      },
+      {
+        "day": 4,
+        "route": "Saddle Hut to Momella Gate",
+        "distanceKm": "14",
+        "elevGainM": "0",
+        "elevLossM": "2390",
+        "maxAltM": "1524.0",
+        "lat": -3.224,
+        "lng": 36.746,
+        "overnight": "Momella Gate (exit)",
+        "mapNote": "Full descent through all vegetation zones. Wildlife on way out. 1524m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Socialist Peak",
+        "lat": -3.24,
+        "lng": 36.751,
+        "type": "summit",
+        "altM": 4566,
+        "note": "Meru summit. Named by Julius Nyerere. Views of Kilimanjaro at sunrise."
+      },
+      {
+        "name": "Ash Cone",
+        "lat": -3.236,
+        "lng": 36.75,
+        "type": "viewpoint",
+        "altM": 3800,
+        "note": "1910 eruption cone inside the main crater. Eerie volcanic landscape."
+      },
+      {
+        "name": "Momella Lakes",
+        "lat": -3.261,
+        "lng": 36.793,
+        "type": "viewpoint",
+        "altM": 1524,
+        "note": "Alkaline lakes with flamingos. Hippos at dawn."
+      },
+      {
+        "name": "Little Meru",
+        "lat": -3.229,
+        "lng": 36.75,
+        "type": "summit",
+        "altM": 3820,
+        "note": "Secondary summit. Used as acclimatisation point before main ascent."
+      }
+    ]
+  },
+  "kepler": {
+    "sheetName": "Kepler Track",
+    "slug": "kepler",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Te Anau to Luxmore Hut",
+        "distanceKm": "14",
+        "elevGainM": "1000",
+        "elevLossM": "0",
+        "maxAltM": "1472.0",
+        "lat": -45.47,
+        "lng": 167.65,
+        "overnight": "Luxmore Hut",
+        "mapNote": "Lakeshore then steep climb to bush-line. Luxmore Caves. Panoramic ridge. 1472m."
+      },
+      {
+        "day": 2,
+        "route": "Luxmore Hut to Iris Burn Hut",
+        "distanceKm": "14",
+        "elevGainM": "200",
+        "elevLossM": "1700",
+        "maxAltM": "570.0",
+        "lat": -45.52,
+        "lng": 167.6,
+        "overnight": "Iris Burn Hut",
+        "mapNote": "Spectacular alpine ridge walk. Views of Fiordland peaks and lakes. 570m."
+      },
+      {
+        "day": 3,
+        "route": "Iris Burn to Moturau Hut",
+        "distanceKm": "16",
+        "elevGainM": "200",
+        "elevLossM": "400",
+        "maxAltM": "200.0",
+        "lat": -45.59,
+        "lng": 167.71,
+        "overnight": "Moturau Hut",
+        "mapNote": "Manapouri lakeside hut. Beech forest. Remote and tranquil. 200m."
+      },
+      {
+        "day": 4,
+        "route": "Moturau to Te Anau",
+        "distanceKm": "18",
+        "elevGainM": "100",
+        "elevLossM": "200",
+        "maxAltM": "210.0",
+        "lat": -45.446,
+        "lng": 167.719,
+        "overnight": "Te Anau (finish)",
+        "mapNote": "Flat lakeside walk back. Rainbow trout visible in crystal water. 210m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mount Luxmore",
+        "lat": -45.467,
+        "lng": 167.63,
+        "type": "summit",
+        "altM": 1472,
+        "note": "Kepler summit. Alpine meadows and one of NZ's great ridge walks."
+      },
+      {
+        "name": "Luxmore Caves",
+        "lat": -45.477,
+        "lng": 167.646,
+        "type": "landmark",
+        "altM": 1000,
+        "note": "Limestone cave system. Large colony of cave weta inside."
+      },
+      {
+        "name": "Lake Te Anau",
+        "lat": -45.446,
+        "lng": 167.719,
+        "type": "viewpoint",
+        "altM": 210,
+        "note": "NZ's largest South Island lake. Gateway to Fiordland."
+      },
+      {
+        "name": "Fiordland",
+        "lat": -45.58,
+        "lng": 167.6,
+        "type": "viewpoint",
+        "altM": 400,
+        "note": "20,000km² of raw Fiordland wilderness visible from the ridge."
+      }
+    ]
+  },
+  "dusky": {
+    "sheetName": "Dusky Track",
+    "slug": "dusky",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Tuatapere to Lake Hauroko",
+        "distanceKm": "14",
+        "elevGainM": "200",
+        "elevLossM": "100",
+        "maxAltM": "330.0",
+        "lat": -45.897,
+        "lng": 167.342,
+        "overnight": "Lake Hauroko Hut",
+        "mapNote": "Access via jet boat. NZ's deepest lake. Beech forest. Pure wilderness. 330m."
+      },
+      {
+        "day": 2,
+        "route": "Lake Hauroko to Halfway Hut",
+        "distanceKm": "15",
+        "elevGainM": "700",
+        "elevLossM": "600",
+        "maxAltM": "400.0",
+        "lat": -45.87,
+        "lng": 167.24,
+        "overnight": "Halfway Hut",
+        "mapNote": "Muddy Fiordland terrain begins immediately. Track often submerged. 400m."
+      },
+      {
+        "day": 3,
+        "route": "Halfway Hut to Loch Maree Hut",
+        "distanceKm": "13",
+        "elevGainM": "500",
+        "elevLossM": "500",
+        "maxAltM": "400.0",
+        "lat": -45.84,
+        "lng": 167.15,
+        "overnight": "Loch Maree Hut",
+        "mapNote": "Remote loch camp. No shortcuts, no alternatives, no mobile signal. 400m."
+      },
+      {
+        "day": 4,
+        "route": "Loch Maree to Lake Roe Hut",
+        "distanceKm": "12",
+        "elevGainM": "600",
+        "elevLossM": "400",
+        "maxAltM": "600.0",
+        "lat": -45.78,
+        "lng": 167.05,
+        "overnight": "Lake Roe Hut",
+        "mapNote": "Alpine crossing. Views finally. Most dramatic section. 600m."
+      },
+      {
+        "day": 5,
+        "route": "Lake Roe to Centre Pass",
+        "distanceKm": "13",
+        "elevGainM": "400",
+        "elevLossM": "400",
+        "maxAltM": "600.0",
+        "lat": -45.73,
+        "lng": 166.95,
+        "overnight": "Centre Pass Bivouac",
+        "mapNote": "Exposed ridge bivouac. Weather dependent — be prepared to wait. 600m."
+      },
+      {
+        "day": 6,
+        "route": "Centre Pass to Supper Cove",
+        "distanceKm": "12",
+        "elevGainM": "100",
+        "elevLossM": "700",
+        "maxAltM": "0.0",
+        "lat": -45.75,
+        "lng": 166.88,
+        "overnight": "Supper Cove Hut",
+        "mapNote": "Descend to Dusky Sound. Water taxi pre-booked from here. 0m (sea level)."
+      },
+      {
+        "day": 7,
+        "route": "Supper Cove to Manapouri (water taxi)",
+        "distanceKm": "0",
+        "elevGainM": "0",
+        "elevLossM": "0",
+        "maxAltM": "0.0",
+        "lat": -45.57,
+        "lng": 167.55,
+        "overnight": "Manapouri",
+        "mapNote": "Water taxi to Lake Manapouri, then bus to Te Anau. Civilisation. 0m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Lake Hauroko",
+        "lat": -45.897,
+        "lng": 167.342,
+        "type": "viewpoint",
+        "altM": 330,
+        "note": "New Zealand's deepest lake. Jet boat access. Complete wilderness."
+      },
+      {
+        "name": "Dusky Sound",
+        "lat": -45.75,
+        "lng": 166.88,
+        "type": "viewpoint",
+        "altM": 0,
+        "note": "One of Fiordland's most remote fiords. Accessed only by this trail or boat."
+      },
+      {
+        "name": "Loch Maree",
+        "lat": -45.84,
+        "lng": 167.15,
+        "type": "viewpoint",
+        "altM": 400,
+        "note": "Remote loch deep in the Fiordland interior. No road access ever."
+      },
+      {
+        "name": "Mount Seaforth",
+        "lat": -45.7,
+        "lng": 167.0,
+        "type": "summit",
+        "altM": 1280,
+        "note": "Highest point visible from the route. Classic Fiordland dark pyramid."
+      }
+    ]
+  },
+  "appalachian": {
+    "sheetName": "Appalachian Trail",
+    "slug": "appalachian",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Georgia — Springer Mountain to NC Border",
+        "distanceKm": "126",
+        "elevGainM": "20000",
+        "elevLossM": "18000",
+        "maxAltM": "1372",
+        "lat": 34.627,
+        "lng": -84.194,
+        "overnight": "Hawk Mountain Shelter / Standing Indian",
+        "mapNote": "Section 1/8 · Georgia · Southern terminus Springer Mountain. Blood Mountain 1372m — highest GA point. 78 miles."
+      },
+      {
+        "day": 2,
+        "route": "Great Smoky Mountains — Fontana Dam to Davenport Gap",
+        "distanceKm": "177",
+        "elevGainM": "38000",
+        "elevLossM": "36000",
+        "maxAltM": "2025",
+        "lat": 35.558,
+        "lng": -83.498,
+        "overnight": "Mount Collins Shelter / Cosby Knob Shelter",
+        "mapNote": "Section 2/8 · GSMNP · Clingmans Dome 2025m — highest point on entire AT. Shelter reservations required. 110 miles."
+      },
+      {
+        "day": 3,
+        "route": "Roan Highlands — Davenport Gap to Damascus VA",
+        "distanceKm": "290",
+        "elevGainM": "47000",
+        "elevLossM": "46000",
+        "maxAltM": "1916",
+        "lat": 36.268,
+        "lng": -82.108,
+        "overnight": "Roan High Knob Shelter / Damascus hostel",
+        "mapNote": "Section 3/8 · TN/NC border · Roan Mountain balds 1916m. Grassy ridge walks. Damascus — the friendliest trail town. 180 miles."
+      },
+      {
+        "day": 4,
+        "route": "Southern Virginia — Damascus to Pearisburg",
+        "distanceKm": "282",
+        "elevGainM": "54000",
+        "elevLossM": "53000",
+        "maxAltM": "1746",
+        "lat": 36.756,
+        "lng": -81.519,
+        "overnight": "Thomas Knob Shelter / Partnership Shelter",
+        "mapNote": "Section 4/8 · Southern VA · Grayson Highlands wild ponies. Mount Rogers 1746m — highest point in Virginia. 175 miles."
+      },
+      {
+        "day": 5,
+        "route": "Central Virginia — Pearisburg to Waynesboro",
+        "distanceKm": "275",
+        "elevGainM": "56000",
+        "elevLossM": "55000",
+        "maxAltM": "1085",
+        "lat": 37.531,
+        "lng": -80.557,
+        "overnight": "Pickle Branch Shelter / The Home Place area",
+        "mapNote": "Section 5/8 · Central VA · McAfee Knob — most photographed spot on AT. Tinker Cliffs. Dragon's Tooth. The notorious Virginia blues. 170 miles."
+      },
+      {
+        "day": 6,
+        "route": "Shenandoah NP — Waynesboro to Front Royal",
+        "distanceKm": "169",
+        "elevGainM": "24000",
+        "elevLossM": "23000",
+        "maxAltM": "1235",
+        "lat": 38.531,
+        "lng": -78.434,
+        "overnight": "Skyland Resort / Big Meadows Wayside",
+        "mapNote": "Section 6/8 · Shenandoah NP · 105 miles of Skyline Drive ridgeline. Waysides every 20 miles. Deer everywhere. Hawksbill Mountain 1235m."
+      },
+      {
+        "day": 7,
+        "route": "Mid-Atlantic — Front Royal to Connecticut Border",
+        "distanceKm": "692",
+        "elevGainM": "60000",
+        "elevLossM": "59000",
+        "maxAltM": "655",
+        "lat": 41.226,
+        "lng": -73.987,
+        "overnight": "Ed Garvey Shelter / Delaware Water Gap / Graymoor",
+        "mapNote": "Section 7/8 · WV / MD / PA / NJ / NY · Harpers Ferry emotional halfway. Pennsylvania Rocksylvania boulder fields. Bear Mountain NY. 430 miles."
+      },
+      {
+        "day": 8,
+        "route": "New England — CT/MA/VT/NH/ME to Katahdin",
+        "distanceKm": "1016",
+        "elevGainM": "165000",
+        "elevLossM": "163000",
+        "maxAltM": "1917",
+        "lat": 45.904,
+        "lng": -68.921,
+        "overnight": "Lake of the Clouds Hut / Katahdin Stream Campground",
+        "mapNote": "Section 8/8 · New England · Presidential Range — Mount Washington 1917m. NH Whites most brutal terrain. Maine 100-Mile Wilderness. Katahdin finish. 630 miles."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Springer Mountain",
+        "lat": 34.627,
+        "lng": -84.194,
+        "type": "landmark",
+        "altM": 1165,
+        "note": "Southern terminus. The bronze plaque where every NOBO thru-hike begins."
+      },
+      {
+        "name": "Blood Mountain",
+        "lat": 34.742,
+        "lng": -83.934,
+        "type": "summit",
+        "altM": 1372,
+        "note": "Highest point in Georgia on the AT. Rocky exposed summit with stone shelter."
+      },
+      {
+        "name": "Clingmans Dome",
+        "lat": 35.563,
+        "lng": -83.498,
+        "type": "summit",
+        "altM": 2025,
+        "note": "Highest point on the entire Appalachian Trail. Concrete observation tower."
+      },
+      {
+        "name": "Roan Mountain",
+        "lat": 36.101,
+        "lng": -82.107,
+        "type": "summit",
+        "altM": 1916,
+        "note": "Vast grassy balds above treeline. Rhododendron tunnels in June. Roan High Knob shelter at 1915m."
+      },
+      {
+        "name": "Grayson Highlands",
+        "lat": 36.635,
+        "lng": -81.508,
+        "type": "landmark",
+        "altM": 1600,
+        "note": "Wild ponies roam the highland plateau freely. One of the AT's most magical landscapes."
+      },
+      {
+        "name": "McAfee Knob",
+        "lat": 37.392,
+        "lng": -80.038,
+        "type": "viewpoint",
+        "altM": 1085,
+        "note": "The most photographed location on the entire AT. Iconic overhanging rock ledge."
+      },
+      {
+        "name": "Harpers Ferry",
+        "lat": 39.325,
+        "lng": -77.729,
+        "type": "landmark",
+        "altM": 265,
+        "note": "ATC headquarters. Emotional psychological halfway point for NOBO hikers. Historic Civil War town."
+      },
+      {
+        "name": "Mount Washington",
+        "lat": 44.27,
+        "lng": -71.303,
+        "type": "summit",
+        "altM": 1917,
+        "note": "Home of the world's worst recorded weather. Lake of the Clouds AMC hut just below summit."
+      },
+      {
+        "name": "Katahdin — Baxter Peak",
+        "lat": 45.904,
+        "lng": -68.921,
+        "type": "summit",
+        "altM": 1606,
+        "note": "The northern terminus. The wooden sign. The end of 2,190 miles. Baxter State Park."
+      }
+    ]
+  },
+  "pct": {
+    "sheetName": "Pacific Crest Trail",
+    "slug": "pct",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Southern California Desert — Campo to Kennedy Meadows",
+        "distanceKm": "1130",
+        "elevGainM": "110000",
+        "elevLossM": "105000",
+        "maxAltM": "3302",
+        "lat": 35.882,
+        "lng": -118.068,
+        "overnight": "Kennedy Meadows General Store",
+        "mapNote": "Section 1/5 · SoCal Desert · Mexican border at Campo. Mojave heat, 20-mile water carries. San Jacinto 3302m. Vasquez Rocks. 702 miles."
+      },
+      {
+        "day": 2,
+        "route": "High Sierra — Kennedy Meadows to South Lake Tahoe",
+        "distanceKm": "507",
+        "elevGainM": "70000",
+        "elevLossM": "68000",
+        "maxAltM": "4009",
+        "lat": 38.933,
+        "lng": -119.985,
+        "overnight": "Rae Lakes / Tyndall Creek / Muir Trail Ranch",
+        "mapNote": "Section 2/5 · High Sierra · Forester Pass 4009m — highest point on PCT. Full JMT overlap. Muir Hut. Bear canisters mandatory. The crown of the trail. 315 miles."
+      },
+      {
+        "day": 3,
+        "route": "Northern California — South Lake Tahoe to Oregon Border",
+        "distanceKm": "740",
+        "elevGainM": "100000",
+        "elevLossM": "99000",
+        "maxAltM": "2928",
+        "lat": 41.835,
+        "lng": -123.188,
+        "overnight": "Drakesbad Guest Ranch / Burney Falls State Park",
+        "mapNote": "Section 3/5 · NorCal Cascades · Desolation Wilderness. Lassen Volcanic NP. Burney Falls. Long resupply gaps. Active fire risk. 675 miles."
+      },
+      {
+        "day": 4,
+        "route": "Oregon Cascade Crest — Oregon Border to Bridge of the Gods",
+        "distanceKm": "734",
+        "elevGainM": "65000",
+        "elevLossM": "64000",
+        "maxAltM": "2303",
+        "lat": 45.669,
+        "lng": -121.895,
+        "overnight": "Timberline Lodge / Mazama Village / Cascade Locks",
+        "mapNote": "Section 4/5 · Oregon · Crater Lake rim walk. Three Sisters Wilderness. Mount Hood. Timberline Lodge. Oregon's fast, flat miles — the 'Oregon bubble'. 456 miles."
+      },
+      {
+        "day": 5,
+        "route": "Washington North Cascades — Bridge of the Gods to Manning Park",
+        "distanceKm": "814",
+        "elevGainM": "129000",
+        "elevLossM": "127000",
+        "maxAltM": "2534",
+        "lat": 48.728,
+        "lng": -120.687,
+        "overnight": "Stehekin / Glacier Peak camps / Manning Park Lodge",
+        "mapNote": "Section 5/5 · Washington · Goat Rocks knife-edge. Glacier Peak Wilderness. North Cascades. Monument 78 at Canadian border. The hardest and most spectacular state. 506 miles."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Campo Southern Terminus",
+        "lat": 32.596,
+        "lng": -116.468,
+        "type": "landmark",
+        "altM": 762,
+        "note": "Monument 1 at the Mexican border wall. The NOBO start for most PCT hikers."
+      },
+      {
+        "name": "San Jacinto Peak",
+        "lat": 33.815,
+        "lng": -116.679,
+        "type": "summit",
+        "altM": 3302,
+        "note": "Optional aerial-tram-accessed peak above Palm Springs. One of California's finest viewpoints."
+      },
+      {
+        "name": "Kennedy Meadows",
+        "lat": 35.882,
+        "lng": -118.068,
+        "type": "landmark",
+        "altM": 1976,
+        "note": "End of the desert, start of the Sierra. Bear canisters become mandatory. Resupply and rest."
+      },
+      {
+        "name": "Forester Pass",
+        "lat": 36.677,
+        "lng": -118.402,
+        "type": "summit",
+        "altM": 4009,
+        "note": "Highest point on the entire PCT. Steep snow chutes in early season. Notched into a granite wall."
+      },
+      {
+        "name": "Muir Trail Ranch",
+        "lat": 37.175,
+        "lng": -118.736,
+        "type": "landmark",
+        "altM": 2408,
+        "note": "Remote High Sierra resupply. No road access — float buckets pre-sent by hikers."
+      },
+      {
+        "name": "Crater Lake",
+        "lat": 42.946,
+        "lng": -122.099,
+        "type": "viewpoint",
+        "altM": 1883,
+        "note": "The deepest lake in North America. Impossibly blue. Rim walk at 2000m with full crater views."
+      },
+      {
+        "name": "Timberline Lodge",
+        "lat": 45.33,
+        "lng": -121.711,
+        "type": "landmark",
+        "altM": 1829,
+        "note": "Historic Mount Hood lodge. Hot meals, beds, and the famous PCT hiker welcome since 1937."
+      },
+      {
+        "name": "Goat Rocks Wilderness",
+        "lat": 46.503,
+        "lng": -121.502,
+        "type": "viewpoint",
+        "altM": 2163,
+        "note": "The knife-edge ridge above glaciers with Mount Rainier dominating. The finest day in Washington."
+      },
+      {
+        "name": "Monument 78",
+        "lat": 49.0,
+        "lng": -120.688,
+        "type": "landmark",
+        "altM": 1270,
+        "note": "The northern terminus at the Canadian border. Manning Park 13 miles beyond on a dirt road."
+      }
+    ]
+  },
+  "cdt": {
+    "sheetName": "Continental Divide Trail",
+    "slug": "cdt",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "New Mexico — Crazy Cook Monument to Cumbres Pass",
+        "distanceKm": "1320",
+        "elevGainM": "90000",
+        "elevLossM": "88000",
+        "maxAltM": "3445",
+        "lat": 36.973,
+        "lng": -106.453,
+        "overnight": "Gila River Camps / Silver City / Ghost Ranch",
+        "mapNote": "Section 1/5 · New Mexico · Southern terminus Crazy Cook. Gila Cliff Dwellings hot springs. El Malpais lava fields. Most poorly-marked section. 820 miles."
+      },
+      {
+        "day": 2,
+        "route": "Colorado — Cumbres Pass to Wyoming Border",
+        "distanceKm": "1191",
+        "elevGainM": "160000",
+        "elevLossM": "157000",
+        "maxAltM": "4352",
+        "lat": 39.634,
+        "lng": -105.819,
+        "overnight": "Twin Lakes / Breckenridge / Silverton camps",
+        "mapNote": "Section 2/5 · Colorado · The crown — Grays Peak 4352m highest point on CDT. 30+ passes above 3600m. San Juan & Weminuche Wilderness. Maximum lightning exposure. 740 miles."
+      },
+      {
+        "day": 3,
+        "route": "Wyoming — Wyoming Border to Yellowstone North",
+        "distanceKm": "805",
+        "elevGainM": "70000",
+        "elevLossM": "69000",
+        "maxAltM": "3450",
+        "lat": 44.66,
+        "lng": -110.503,
+        "overnight": "Cirque of the Towers / Pinedale / Yellowstone camps",
+        "mapNote": "Section 3/5 · Wyoming · Wind River Range — most spectacular CDT section. Cirque of the Towers. Great Divide Basin waterless crossing. Yellowstone geysers. 500 miles."
+      },
+      {
+        "day": 4,
+        "route": "Idaho/Montana Border — Yellowstone to Lima",
+        "distanceKm": "563",
+        "elevGainM": "60000",
+        "elevLossM": "59000",
+        "maxAltM": "3231",
+        "lat": 44.638,
+        "lng": -112.593,
+        "overnight": "Lemhi Pass Camps / Anaconda / Lima",
+        "mapNote": "Section 4/5 · Bitterroots & Centennials · Lemhi Pass — Lewis and Clark 1805. Centennial Mountains. Trail poorly defined. Remote and self-reliant section. 350 miles."
+      },
+      {
+        "day": 5,
+        "route": "Montana — Lima to Waterton Lake (Northern Terminus)",
+        "distanceKm": "1110",
+        "elevGainM": "77000",
+        "elevLossM": "76000",
+        "maxAltM": "2743",
+        "lat": 48.999,
+        "lng": -113.882,
+        "overnight": "Many Glacier Campground / Waterton Townsite",
+        "mapNote": "Section 5/5 · Montana · Bob Marshall Wilderness — largest roadless area lower 48. Glacier NP. Chief Mountain border crossing. Waterton Lake northern terminus. 690 miles."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Crazy Cook Monument",
+        "lat": 31.334,
+        "lng": -108.21,
+        "type": "landmark",
+        "altM": 1459,
+        "note": "Southern terminus. A lonely monument in the New Mexico desert. The NOBO start of the CDT."
+      },
+      {
+        "name": "Gila Cliff Dwellings",
+        "lat": 33.228,
+        "lng": -108.269,
+        "type": "landmark",
+        "altM": 1768,
+        "note": "13th-century Mogollon cliff dwellings. The only wilderness hot springs on the entire CDT."
+      },
+      {
+        "name": "Grays Peak",
+        "lat": 39.634,
+        "lng": -105.818,
+        "type": "summit",
+        "altM": 4352,
+        "note": "Highest point on the CDT. A 14er. 360° view over the Colorado Rockies."
+      },
+      {
+        "name": "Cirque of the Towers",
+        "lat": 42.737,
+        "lng": -109.223,
+        "type": "viewpoint",
+        "altM": 3313,
+        "note": "Wind River Range granite amphitheatre. One of the great wilderness campsites in North America."
+      },
+      {
+        "name": "Great Divide Basin",
+        "lat": 42.0,
+        "lng": -108.5,
+        "type": "landmark",
+        "altM": 2100,
+        "note": "Hydrological anomaly — water neither flows to Atlantic nor Pacific. 100-mile waterless alternate."
+      },
+      {
+        "name": "Yellowstone Geysers",
+        "lat": 44.46,
+        "lng": -110.828,
+        "type": "landmark",
+        "altM": 2350,
+        "note": "Old Faithful and the thermal fields. The CDT passes through the world's largest supervolcano caldera."
+      },
+      {
+        "name": "Lemhi Pass",
+        "lat": 44.854,
+        "lng": -113.451,
+        "type": "landmark",
+        "altM": 2369,
+        "note": "Lewis and Clark's Continental Divide crossing on 12 August 1805. The CDT follows their exact route."
+      },
+      {
+        "name": "Bob Marshall Wilderness",
+        "lat": 47.6,
+        "lng": -112.9,
+        "type": "landmark",
+        "altM": 2200,
+        "note": "The largest roadless area in the contiguous US. Grizzly bears, wolves, no roads for 100+ miles."
+      },
+      {
+        "name": "Waterton Lake",
+        "lat": 48.999,
+        "lng": -113.882,
+        "type": "landmark",
+        "altM": 1280,
+        "note": "Northern terminus at the US-Canada border. Chief Mountain Customs. Waterton Townsite beyond."
+      }
+    ]
+  },
+  "te_araroa": {
+    "sheetName": "Te Araroa",
+    "slug": "te_araroa",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Northland — Cape Reinga to Mangawhai Heads",
+        "distanceKm": "290",
+        "elevGainM": "12000",
+        "elevLossM": "11000",
+        "maxAltM": "390",
+        "lat": -36.089,
+        "lng": 174.562,
+        "overnight": "Ninety Mile Beach camps / Mangawhai DOC campsite",
+        "mapNote": "Section 1/10 · Northland · Cape Reinga lighthouse — tip of Aotearoa. Te Paki sand dunes. 90-mile beach road walk. Waipoua Kauri forest."
+      },
+      {
+        "day": 2,
+        "route": "Auckland Region — Mangawhai to Mercer via Auckland",
+        "distanceKm": "200",
+        "elevGainM": "8000",
+        "elevLossM": "8000",
+        "maxAltM": "260",
+        "lat": -37.32,
+        "lng": 174.89,
+        "overnight": "Auckland hostels / Mercer campground",
+        "mapNote": "Section 2/10 · Auckland · Urban traverse of NZ's largest city. Volcanic cones — One Tree Hill, Mount Eden. The TA passes through city streets."
+      },
+      {
+        "day": 3,
+        "route": "Waikato & King Country — Mercer to Taumarunui",
+        "distanceKm": "310",
+        "elevGainM": "18000",
+        "elevLossM": "17500",
+        "maxAltM": "959",
+        "lat": -38.88,
+        "lng": 175.255,
+        "overnight": "Timber Trail huts / Taumarunui Top 10",
+        "mapNote": "Section 3/10 · Waikato · Hauraki Rail Trail. Timber Trail on converted railway. Hauhungaroa Range dense bush. Long section through farmland and forest."
+      },
+      {
+        "day": 4,
+        "route": "Whanganui River Journey — Taumarunui to Whanganui city",
+        "distanceKm": "145",
+        "elevGainM": "500",
+        "elevLossM": "500",
+        "maxAltM": "200",
+        "lat": -39.93,
+        "lng": 175.05,
+        "overnight": "River camps / John Coull Hut / Pipiriki Lodge",
+        "mapNote": "Section 4/10 · Whanganui River · 5 days by canoe or kayak down the sacred Whanganui. One of NZ's Great Journeys. Bridge to Nowhere side trip."
+      },
+      {
+        "day": 5,
+        "route": "Central Plateau — Whanganui to Tongariro Crossing",
+        "distanceKm": "120",
+        "elevGainM": "14000",
+        "elevLossM": "13500",
+        "maxAltM": "1967",
+        "lat": -39.203,
+        "lng": 175.587,
+        "overnight": "Whakapapa Village / Tongariro park huts",
+        "mapNote": "Section 5/10 · Tongariro · The Alpine Crossing — most-walked day hike in NZ. Mount Ngauruhoe (Mount Doom). Red Crater 1967m. Emerald Lakes."
+      },
+      {
+        "day": 6,
+        "route": "Tararua Ranges — Palmerston North to Wellington",
+        "distanceKm": "220",
+        "elevGainM": "30000",
+        "elevLossM": "30000",
+        "maxAltM": "1571",
+        "lat": -41.286,
+        "lng": 174.776,
+        "overnight": "Tararua huts / Wellington city / Interislander ferry",
+        "mapNote": "Section 6/10 · Tararua Ranges · Hardest North Island section. Extreme weather. Mitre 1571m. Wellington ferry crossing to South Island."
+      },
+      {
+        "day": 7,
+        "route": "Marlborough & Nelson — Picton to St Arnaud",
+        "distanceKm": "230",
+        "elevGainM": "22000",
+        "elevLossM": "21000",
+        "maxAltM": "1795",
+        "lat": -41.804,
+        "lng": 172.843,
+        "overnight": "Queen Charlotte huts / Richmond Range huts",
+        "mapNote": "Section 7/10 · Marlborough · Queen Charlotte Track along the Sounds. Richmond Ranges exposed ridge walking. Mount Richmond 1760m."
+      },
+      {
+        "day": 8,
+        "route": "Nelson Lakes & St James — St Arnaud to Boyle Village",
+        "distanceKm": "175",
+        "elevGainM": "18000",
+        "elevLossM": "17500",
+        "maxAltM": "1874",
+        "lat": -42.36,
+        "lng": 172.44,
+        "overnight": "St James Walkway huts / Boyle Lodge",
+        "mapNote": "Section 8/10 · Nelson Lakes · Alpine St James high country. Tussock passes. Merino sheep stations. The Canterbury high country character changes the trail."
+      },
+      {
+        "day": 9,
+        "route": "Southern Alps — Arthur's Pass to Queenstown",
+        "distanceKm": "420",
+        "elevGainM": "55000",
+        "elevLossM": "54000",
+        "maxAltM": "2400",
+        "lat": -45.032,
+        "lng": 168.662,
+        "overnight": "Brewster Hut / Haast township / Queenstown",
+        "mapNote": "Section 9/10 · Southern Alps · Avalanche Peak 1833m. Brewster Glacier. Haast Pass. Mount Aspiring NP. Most technical section — river crossings, route-finding essential."
+      },
+      {
+        "day": 10,
+        "route": "Southland — Queenstown to Bluff",
+        "distanceKm": "420",
+        "elevGainM": "35000",
+        "elevLossM": "35000",
+        "maxAltM": "1588",
+        "lat": -46.6,
+        "lng": 168.343,
+        "overnight": "Mavora Lakes camp / Bluff Hill",
+        "mapNote": "Section 10/10 · Southland · Mavora Lakes tussock. The Southland flats. Bluff — the southern terminus. The famous directional signpost. End of 3000km."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Cape Reinga",
+        "lat": -34.429,
+        "lng": 172.68,
+        "type": "landmark",
+        "altM": 165,
+        "note": "The northern terminus — the very tip of New Zealand. Where the Tasman Sea and Pacific Ocean meet."
+      },
+      {
+        "name": "Ninety Mile Beach",
+        "lat": -35.0,
+        "lng": 173.3,
+        "type": "landmark",
+        "altM": 0,
+        "note": "90 miles of hard-sand beach. Tide timing critical. The TA's most monotonous and iconic section."
+      },
+      {
+        "name": "Mount Ngauruhoe",
+        "lat": -39.157,
+        "lng": 175.632,
+        "type": "summit",
+        "altM": 2291,
+        "note": "The perfect volcanic cone. Mount Doom from Lord of the Rings. Side trip off the main TA route."
+      },
+      {
+        "name": "Red Crater",
+        "lat": -39.13,
+        "lng": 175.658,
+        "type": "summit",
+        "altM": 1967,
+        "note": "Highest point on the Tongariro Alpine Crossing. Vivid red-ochre volcanic landscape."
+      },
+      {
+        "name": "Whanganui River",
+        "lat": -39.5,
+        "lng": 175.05,
+        "type": "landmark",
+        "altM": 60,
+        "note": "Sacred Māori river — the first river in the world granted legal personhood. Canoe section of the TA."
+      },
+      {
+        "name": "Brewster Glacier",
+        "lat": -44.08,
+        "lng": 169.42,
+        "type": "viewpoint",
+        "altM": 1650,
+        "note": "One of the most accessible Southern Alps glaciers. Views down the Haast River valley."
+      },
+      {
+        "name": "Bluff",
+        "lat": -46.6,
+        "lng": 168.343,
+        "type": "landmark",
+        "altM": 10,
+        "note": "The southern terminus. The famous signpost with distances to everywhere. 3000km from Cape Reinga."
+      }
+    ]
+  },
+  "ght": {
+    "sheetName": "Great Himalaya Trail",
+    "slug": "ght",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Kanchenjunga Section — Taplejung to Pangpema BC",
+        "distanceKm": "210",
+        "elevGainM": "15500",
+        "elevLossM": "12000",
+        "maxAltM": "5140",
+        "lat": 27.857,
+        "lng": 88.048,
+        "overnight": "Ghunsa village / Pangpema Base Camp",
+        "mapNote": "Section 1/12 · Kanchenjunga · Eastern Nepal start. Terraced farmland to Tibetan-culture villages. Kanchenjunga North BC 5140m — world's 3rd highest."
+      },
+      {
+        "day": 2,
+        "route": "Kanchenjunga South & Yalung — BC Traverse to Dobhan",
+        "distanceKm": "130",
+        "elevGainM": "6000",
+        "elevLossM": "9000",
+        "maxAltM": "4600",
+        "lat": 27.42,
+        "lng": 87.72,
+        "overnight": "Yalung BC / Dobhan",
+        "mapNote": "Section 2/12 · Kanchenjunga South · Sele La Pass 4290m. Yalung Glacier. Kanchenjunga South BC. Dense rhododendron descent."
+      },
+      {
+        "day": 3,
+        "route": "Makalu Section — Num to Makalu Base Camp",
+        "distanceKm": "120",
+        "elevGainM": "10000",
+        "elevLossM": "8000",
+        "maxAltM": "5700",
+        "lat": 27.889,
+        "lng": 87.088,
+        "overnight": "Makalu Base Camp 5700m",
+        "mapNote": "Section 3/12 · Makalu · Barun Valley — Nepal's most pristine wilderness corridor. Makalu 8463m overhead at BC."
+      },
+      {
+        "day": 4,
+        "route": "Khumbu Approach — Salleri to Kongma La",
+        "distanceKm": "180",
+        "elevGainM": "13000",
+        "elevLossM": "10000",
+        "maxAltM": "5535",
+        "lat": 27.902,
+        "lng": 86.826,
+        "overnight": "Chhukung / Kongma La high camp",
+        "mapNote": "Section 4/12 · Khumbu · Kongma La 5535m — highest GHT high-route pass. Imja Glacier. Ama Dablam dominates skyline."
+      },
+      {
+        "day": 5,
+        "route": "Everest Section — Khumbu to Renjo La & Gokyo",
+        "distanceKm": "85",
+        "elevGainM": "7000",
+        "elevLossM": "6500",
+        "maxAltM": "5360",
+        "lat": 28.117,
+        "lng": 86.683,
+        "overnight": "Gokyo Lakes village",
+        "mapNote": "Section 5/12 · Everest · Renjo La 5360m — finest viewpoint in the Himalaya: Everest, Lhotse, Makalu, Cho Oyu simultaneously. Gokyo sacred lakes."
+      },
+      {
+        "day": 6,
+        "route": "Rolwaling — Namche to Tesi Lapcha Pass & Simigaon",
+        "distanceKm": "100",
+        "elevGainM": "9000",
+        "elevLossM": "8500",
+        "maxAltM": "5755",
+        "lat": 27.8,
+        "lng": 86.35,
+        "overnight": "Tsho Rolpa glacier camp / Simigaon",
+        "mapNote": "Section 6/12 · Rolwaling · Tesi Lapcha 5755m — hardest technical pass on GHT. Glacier travel, fixed ropes. Pristine rarely-visited Rolwaling Valley."
+      },
+      {
+        "day": 7,
+        "route": "Manaslu Circuit — Arughat to Larkya La",
+        "distanceKm": "115",
+        "elevGainM": "8500",
+        "elevLossM": "7000",
+        "maxAltM": "5213",
+        "lat": 28.655,
+        "lng": 84.787,
+        "overnight": "Dharmasala / Bhimthang",
+        "mapNote": "Section 7/12 · Manaslu · Larkya La 5213m. Manaslu 8163m directly overhead. Restricted area permit required. Classic circuit in superb condition."
+      },
+      {
+        "day": 8,
+        "route": "Annapurna Circuit — Dharapani to Thorong La",
+        "distanceKm": "120",
+        "elevGainM": "8000",
+        "elevLossM": "7500",
+        "maxAltM": "5416",
+        "lat": 28.799,
+        "lng": 83.97,
+        "overnight": "High Camp 4925m / Muktinath",
+        "mapNote": "Section 8/12 · Annapurna · Thorong La 5416m — world's most-crossed high pass. Annapurna massif. Tilicho Lake 4919m optional detour."
+      },
+      {
+        "day": 9,
+        "route": "Upper Mustang — Muktinath to Lo Manthang",
+        "distanceKm": "140",
+        "elevGainM": "6000",
+        "elevLossM": "5500",
+        "maxAltM": "4200",
+        "lat": 29.178,
+        "lng": 83.958,
+        "overnight": "Lo Manthang walled city",
+        "mapNote": "Section 9/12 · Mustang · The last forbidden kingdom. Tibet-like plateau landscape. Lo Manthang walled city. Sky caves carved into cliffs. Restricted area permit."
+      },
+      {
+        "day": 10,
+        "route": "Dolpo Section — Jomsom to Shey Gompa & Phoksundo Lake",
+        "distanceKm": "160",
+        "elevGainM": "9000",
+        "elevLossM": "8000",
+        "maxAltM": "5360",
+        "lat": 29.2,
+        "lng": 83.0,
+        "overnight": "Shey Gompa / Phoksundo Lake camp",
+        "mapNote": "Section 10/12 · Dolpo · The Snow Leopard country (Peter Matthiessen). Phoksundo Lake 3611m — Nepal's deepest. Highly restricted. One of the GHT's most profound sections."
+      },
+      {
+        "day": 11,
+        "route": "Humla & Api — Dolpo to Simikot",
+        "distanceKm": "200",
+        "elevGainM": "12000",
+        "elevLossM": "11000",
+        "maxAltM": "5100",
+        "lat": 29.96,
+        "lng": 81.82,
+        "overnight": "Remote Humla camps / Simikot",
+        "mapNote": "Section 11/12 · Humla · Api Himal 7132m. The most remote section of the GHT. Almost no infrastructure. Tibetan border culture. Full self-sufficiency required."
+      },
+      {
+        "day": 12,
+        "route": "Western Nepal — Simikot to Hilsa (Tibet Border)",
+        "distanceKm": "100",
+        "elevGainM": "5000",
+        "elevLossM": "6000",
+        "maxAltM": "3780",
+        "lat": 30.098,
+        "lng": 81.336,
+        "overnight": "Hilsa border village",
+        "mapNote": "Section 12/12 · Western terminus · Hilsa at the Tibet border crossing. Karnali River. The end of the GHT high route — one of the world's most remote trail finishes."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Taplejung",
+        "lat": 27.355,
+        "lng": 87.672,
+        "type": "landmark",
+        "altM": 1820,
+        "note": "Eastern terminus of the GHT high route. Gateway to Kanchenjunga."
+      },
+      {
+        "name": "Kanchenjunga North BC",
+        "lat": 27.857,
+        "lng": 88.048,
+        "type": "landmark",
+        "altM": 5140,
+        "note": "Base camp of the world's third highest mountain. Among the most remote spots reachable on foot."
+      },
+      {
+        "name": "Kongma La",
+        "lat": 27.902,
+        "lng": 86.826,
+        "type": "summit",
+        "altM": 5535,
+        "note": "Highest pass on the GHT Khumbu section. Views encompass Makalu, Lhotse, Ama Dablam."
+      },
+      {
+        "name": "Renjo La",
+        "lat": 28.05,
+        "lng": 86.638,
+        "type": "summit",
+        "altM": 5360,
+        "note": "The finest viewpoint in the Himalaya — Everest, Lhotse, Makalu and Cho Oyu simultaneously visible."
+      },
+      {
+        "name": "Tesi Lapcha Pass",
+        "lat": 27.8,
+        "lng": 86.35,
+        "type": "summit",
+        "altM": 5755,
+        "note": "Hardest technical pass on the GHT. Glacier travel, fixed ropes, ice axe required."
+      },
+      {
+        "name": "Larkya La",
+        "lat": 28.655,
+        "lng": 84.787,
+        "type": "summit",
+        "altM": 5213,
+        "note": "Manaslu Circuit's famous high pass with Manaslu 8163m towering directly overhead."
+      },
+      {
+        "name": "Thorong La",
+        "lat": 28.799,
+        "lng": 83.97,
+        "type": "summit",
+        "altM": 5416,
+        "note": "World's most-trekked high-altitude pass. Annapurna Circuit centrepiece."
+      },
+      {
+        "name": "Lo Manthang",
+        "lat": 29.178,
+        "lng": 83.958,
+        "type": "landmark",
+        "altM": 3840,
+        "note": "Walled capital of the former Kingdom of Mustang. Tibetan culture frozen in time."
+      },
+      {
+        "name": "Phoksundo Lake",
+        "lat": 29.2,
+        "lng": 83.0,
+        "type": "viewpoint",
+        "altM": 3611,
+        "note": "Nepal's deepest lake. Otherworldly turquoise blue. The heart of Shey Phoksundo NP."
+      },
+      {
+        "name": "Hilsa",
+        "lat": 30.098,
+        "lng": 81.336,
+        "type": "landmark",
+        "altM": 3641,
+        "note": "Western terminus of the GHT high route at the Tibetan border. End of one of the world's greatest treks."
+      }
+    ]
+  },
+  "israel_trail": {
+    "sheetName": "Israel National Trail",
+    "slug": "israel_trail",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Eilat (Southern terminus)",
+        "distanceKm": "20",
+        "elevGainM": "500",
+        "elevLossM": "100",
+        "maxAltM": "300.0",
+        "lat": 29.558,
+        "lng": 34.952,
+        "overnight": "Timna Area",
+        "mapNote": "Red Sea and Eilat Mountains. Desert from the first step. 300m."
+      },
+      {
+        "day": 2,
+        "route": "Timna to Yehoram Spring",
+        "distanceKm": "22",
+        "elevGainM": "600",
+        "elevLossM": "500",
+        "maxAltM": "580.0",
+        "lat": 30.1,
+        "lng": 35.02,
+        "overnight": "Yehoram Spring camp",
+        "mapNote": "Ramon Crater approaches. Negev desert. Ancient copper mines. 580m."
+      },
+      {
+        "day": 3,
+        "route": "Makhtesh Ramon Circuit",
+        "distanceKm": "18",
+        "elevGainM": "400",
+        "elevLossM": "400",
+        "maxAltM": "1035.0",
+        "lat": 30.58,
+        "lng": 34.795,
+        "overnight": "Mitzpe Ramon",
+        "mapNote": "The Grand Canyon of Israel. Volcanic rocks and fossils. 1035m."
+      },
+      {
+        "day": 4,
+        "route": "Mitzpe Ramon to Sde Boker",
+        "distanceKm": "22",
+        "elevGainM": "300",
+        "elevLossM": "400",
+        "maxAltM": "450.0",
+        "lat": 30.87,
+        "lng": 34.79,
+        "overnight": "Sde Boker",
+        "mapNote": "Ben Gurion's desert kibbutz. His grave and legacy. 450m."
+      },
+      {
+        "day": 5,
+        "route": "Negev Highlands to Beer Sheva",
+        "distanceKm": "25",
+        "elevGainM": "200",
+        "elevLossM": "400",
+        "maxAltM": "300.0",
+        "lat": 31.24,
+        "lng": 34.79,
+        "overnight": "Beer Sheva",
+        "mapNote": "Ancient biblical city. Abraham's wells. Transition to lowlands. 300m."
+      },
+      {
+        "day": 6,
+        "route": "Judean Lowlands",
+        "distanceKm": "22",
+        "elevGainM": "300",
+        "elevLossM": "200",
+        "maxAltM": "200.0",
+        "lat": 31.6,
+        "lng": 34.85,
+        "overnight": "Kiryat Gat area",
+        "mapNote": "Footsteps of Samson and Delilah country. Rolling agricultural land. 200m."
+      },
+      {
+        "day": 7,
+        "route": "Jerusalem approach via Judean Hills",
+        "distanceKm": "20",
+        "elevGainM": "700",
+        "elevLossM": "500",
+        "maxAltM": "800.0",
+        "lat": 31.77,
+        "lng": 35.22,
+        "overnight": "Jerusalem",
+        "mapNote": "Approach to Jerusalem through biblical landscape. 800m."
+      },
+      {
+        "day": 8,
+        "route": "Northern crossing to Jezreel Valley",
+        "distanceKm": "22",
+        "elevGainM": "400",
+        "elevLossM": "500",
+        "maxAltM": "100.0",
+        "lat": 32.6,
+        "lng": 35.2,
+        "overnight": "Afula area",
+        "mapNote": "Armageddon plain. Carmel ridge ahead. 100m."
+      },
+      {
+        "day": 9,
+        "route": "Haifa to Western Galilee",
+        "distanceKm": "22",
+        "elevGainM": "600",
+        "elevLossM": "500",
+        "maxAltM": "547.0",
+        "lat": 32.82,
+        "lng": 35.0,
+        "overnight": "Nahariya",
+        "mapNote": "Carmel coast. Baha'i Gardens. Western Galilee coastal plain. 547m."
+      },
+      {
+        "day": 10,
+        "route": "Upper Galilee to Dan (Northern end)",
+        "distanceKm": "20",
+        "elevGainM": "700",
+        "elevLossM": "400",
+        "maxAltM": "700.0",
+        "lat": 33.22,
+        "lng": 35.65,
+        "overnight": "Dan (Northern Terminus)",
+        "mapNote": "Mount Hermon views. Tel Dan archaeological site. Trail complete. 700m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Makhtesh Ramon",
+        "lat": 30.58,
+        "lng": 34.795,
+        "type": "viewpoint",
+        "altM": 1035,
+        "note": "Largest erosion crater in the world. 40km long, 400m deep."
+      },
+      {
+        "name": "Jerusalem",
+        "lat": 31.77,
+        "lng": 35.22,
+        "type": "landmark",
+        "altM": 800,
+        "note": "The trail passes through or near Jerusalem's ancient walls."
+      },
+      {
+        "name": "Sea of Galilee",
+        "lat": 32.83,
+        "lng": 35.58,
+        "type": "viewpoint",
+        "altM": -213,
+        "note": "Lowest freshwater lake on earth. Jesus walked these shores."
+      },
+      {
+        "name": "Mount Hermon",
+        "lat": 33.415,
+        "lng": 35.857,
+        "type": "summit",
+        "altM": 2814,
+        "note": "Highest point in Israel. Snow-capped most of the year."
+      }
+    ]
+  },
+  "camino_primitivo": {
+    "sheetName": "Camino Primitivo",
+    "slug": "camino_primitivo",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Oviedo to Grado",
+        "distanceKm": "24",
+        "elevGainM": "400",
+        "elevLossM": "500",
+        "maxAltM": "300.0",
+        "lat": 43.362,
+        "lng": -5.849,
+        "overnight": "Grado",
+        "mapNote": "Leave Oviedo cathedral. The Original Way begins in the ancient Asturian capital. 300m."
+      },
+      {
+        "day": 2,
+        "route": "Grado to Salas",
+        "distanceKm": "22",
+        "elevGainM": "600",
+        "elevLossM": "600",
+        "maxAltM": "400.0",
+        "lat": 43.35,
+        "lng": -6.25,
+        "overnight": "Salas",
+        "mapNote": "Rolling Asturian countryside. Green hills and village churches. 400m."
+      },
+      {
+        "day": 3,
+        "route": "Salas to Tineo",
+        "distanceKm": "18",
+        "elevGainM": "700",
+        "elevLossM": "700",
+        "maxAltM": "600.0",
+        "lat": 43.34,
+        "lng": -6.42,
+        "overnight": "Tineo",
+        "mapNote": "Altitude increases. Atlantic Spain shifting toward mountain Spain. 600m."
+      },
+      {
+        "day": 4,
+        "route": "Tineo to Pola de Allande",
+        "distanceKm": "22",
+        "elevGainM": "800",
+        "elevLossM": "800",
+        "maxAltM": "700.0",
+        "lat": 43.243,
+        "lng": -6.62,
+        "overnight": "Pola de Allande",
+        "mapNote": "Deep Asturian valleys. Ancient Roman road sections. 700m."
+      },
+      {
+        "day": 5,
+        "route": "Pola de Allande to La Mesa",
+        "distanceKm": "22",
+        "elevGainM": "1200",
+        "elevLossM": "700",
+        "maxAltM": "1000.0",
+        "lat": 43.221,
+        "lng": -6.78,
+        "overnight": "La Mesa",
+        "mapNote": "Into the high Cantabrian range. The toughest section begins. 1000m."
+      },
+      {
+        "day": 6,
+        "route": "La Mesa to A Fonsagrada",
+        "distanceKm": "20",
+        "elevGainM": "500",
+        "elevLossM": "900",
+        "maxAltM": "900.0",
+        "lat": 43.12,
+        "lng": -7.06,
+        "overnight": "A Fonsagrada",
+        "mapNote": "Cross into Galicia. Language changes, cuisine changes. 900m."
+      },
+      {
+        "day": 7,
+        "route": "A Fonsagrada to Lugo",
+        "distanceKm": "30",
+        "elevGainM": "400",
+        "elevLossM": "700",
+        "maxAltM": "600.0",
+        "lat": 43.01,
+        "lng": -7.56,
+        "overnight": "Lugo",
+        "mapNote": "Descent to Roman Lugo — complete Roman walls intact. 600m."
+      },
+      {
+        "day": 8,
+        "route": "Lugo to Melide",
+        "distanceKm": "32",
+        "elevGainM": "400",
+        "elevLossM": "400",
+        "maxAltM": "450.0",
+        "lat": 42.92,
+        "lng": -8.01,
+        "overnight": "Melide",
+        "mapNote": "Junction with the Camino Francés. Pulpo a la gallega capital. 450m."
+      },
+      {
+        "day": 9,
+        "route": "Melide to Monte do Gozo",
+        "distanceKm": "22",
+        "elevGainM": "300",
+        "elevLossM": "300",
+        "maxAltM": "350.0",
+        "lat": 42.875,
+        "lng": -8.44,
+        "overnight": "Monte do Gozo",
+        "mapNote": "Final hill before Santiago. First cathedral glimpse. 350m."
+      },
+      {
+        "day": 10,
+        "route": "Monte do Gozo to Santiago de Compostela",
+        "distanceKm": "5",
+        "elevGainM": "50",
+        "elevLossM": "150",
+        "maxAltM": "260.0",
+        "lat": 42.88,
+        "lng": -8.545,
+        "overnight": "Santiago de Compostela",
+        "mapNote": "Arrive at the Cathedral. Pilgrim Mass. Abrazo of Saint James. 260m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Oviedo Cathedral",
+        "lat": 43.362,
+        "lng": -5.849,
+        "type": "landmark",
+        "altM": 300,
+        "note": "The original starting point. King Alfonso II first walked this in 830 AD."
+      },
+      {
+        "name": "Cruz de los Caminos",
+        "lat": 43.221,
+        "lng": -6.78,
+        "type": "pass",
+        "altM": 1000,
+        "note": "Highest point on the Primitivo. Ancient Celtic cross at the summit."
+      },
+      {
+        "name": "Lugo Roman Walls",
+        "lat": 43.01,
+        "lng": -7.56,
+        "type": "landmark",
+        "altM": 600,
+        "note": "UNESCO World Heritage Roman walls. Only complete Roman circuit in the world."
+      },
+      {
+        "name": "Santiago Cathedral",
+        "lat": 42.88,
+        "lng": -8.545,
+        "type": "landmark",
+        "altM": 260,
+        "note": "The final destination. Gold baroque facade. Botafumeiro incense ceremony."
+      }
+    ]
+  },
+  "tombstone": {
+    "sheetName": "Tombstone Territorial Park",
+    "slug": "tombstone",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Dempster Highway TH to Grizzly Lake",
+        "distanceKm": "14",
+        "elevGainM": "520",
+        "elevLossM": "80",
+        "maxAltM": "1420.0",
+        "lat": 64.38,
+        "lng": -138.45,
+        "overnight": "Grizzly Lake Camp",
+        "mapNote": "First tundra views open up immediately. Grizzly Lake sits below the Ogilvie ridgeline. 1420m."
+      },
+      {
+        "day": 2,
+        "route": "Grizzly Lake to Divide Lake via Grizzly Col",
+        "distanceKm": "18",
+        "elevGainM": "710",
+        "elevLossM": "640",
+        "maxAltM": "1650.0",
+        "lat": 64.45,
+        "lng": -138.28,
+        "overnight": "Divide Lake Camp",
+        "mapNote": "Grizzly Col at 1650m — the route's high point. Divide Lake below is the classic Tombstone image. 1650m."
+      },
+      {
+        "day": 3,
+        "route": "Divide Lake to Talus Lake",
+        "distanceKm": "12",
+        "elevGainM": "180",
+        "elevLossM": "390",
+        "maxAltM": "1540.0",
+        "lat": 64.52,
+        "lng": -138.18,
+        "overnight": "Talus Lake Camp",
+        "mapNote": "Off-trail descent to Talus Lake beneath Tombstone Mountain's jagged face. 1540m."
+      },
+      {
+        "day": 4,
+        "route": "Talus Lake to Goldensides Loop and return to TH",
+        "distanceKm": "22",
+        "elevGainM": "430",
+        "elevLossM": "610",
+        "maxAltM": "1580.0",
+        "lat": 64.47,
+        "lng": -138.38,
+        "overnight": "Return to Dawson City or Whitehorse",
+        "mapNote": "Goldensides viewpoint — full Tombstone panorama. Autumn tundra colour at its peak in late August. 1580m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Tombstone Mountain",
+        "lat": 64.49,
+        "lng": -138.22,
+        "type": "summit",
+        "altM": 2193,
+        "note": "The jagged summit that defines the park — not a trekking summit but always visible."
+      },
+      {
+        "name": "Grizzly Col",
+        "lat": 64.43,
+        "lng": -138.35,
+        "type": "pass",
+        "altM": 1650,
+        "note": "High point of the backpacking circuit. Sweeping tundra panoramas in all directions."
+      },
+      {
+        "name": "Divide Lake",
+        "lat": 64.45,
+        "lng": -138.28,
+        "type": "viewpoint",
+        "altM": 1420,
+        "note": "The most photographed spot in Tombstone — turquoise lake below jagged peaks."
+      },
+      {
+        "name": "Talus Lake",
+        "lat": 64.52,
+        "lng": -138.18,
+        "type": "viewpoint",
+        "altM": 1310,
+        "note": "Remote high lake beneath boulder fields and the north face of the Ogilvie Mountains."
+      },
+      {
+        "name": "Goldensides",
+        "lat": 64.47,
+        "lng": -138.42,
+        "type": "viewpoint",
+        "altM": 1580,
+        "note": "Named for autumn tundra colour — a viewpoint above the Dempster Highway with full park panorama."
+      }
+    ]
+  },
+  "berg_lake": {
+    "sheetName": "Berg Lake Trail",
+    "slug": "berg_lake",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Berg Lake TH to Kinney Lake",
+        "distanceKm": "10",
+        "elevGainM": "190",
+        "elevLossM": "30",
+        "maxAltM": "1050.0",
+        "lat": 53.05,
+        "lng": -119.1,
+        "overnight": "Kinney Lake Camp",
+        "mapNote": "Flat valley walk beside the Robson River. Kinney Lake turquoise water backed by Mount Robson's lower walls. 1050m."
+      },
+      {
+        "day": 2,
+        "route": "Kinney Lake to Berg Lake via Valley of a Thousand Falls",
+        "distanceKm": "12",
+        "elevGainM": "780",
+        "elevLossM": "60",
+        "maxAltM": "1646.0",
+        "lat": 53.1,
+        "lng": -119.08,
+        "overnight": "Berg Lake Camp",
+        "mapNote": "Emperor Falls at 67m, Robson Falls, and Whitehorn Falls — three major cascades in quick succession. Berg Lake arrival. 1646m."
+      },
+      {
+        "day": 3,
+        "route": "Berg Lake day exploration — Hargreaves Glacier Meadows",
+        "distanceKm": "14",
+        "elevGainM": "480",
+        "elevLossM": "480",
+        "maxAltM": "2100.0",
+        "lat": 53.12,
+        "lng": -119.05,
+        "overnight": "Berg Lake Camp",
+        "mapNote": "Hargreaves Meadows above the lake — full view of Mount Robson and the Berg Glacier calving into the lake. 2100m."
+      },
+      {
+        "day": 4,
+        "route": "Berg Lake to Trailhead — full return",
+        "distanceKm": "22",
+        "elevGainM": "80",
+        "elevLossM": "970",
+        "maxAltM": "1646.0",
+        "lat": 52.97,
+        "lng": -119.22,
+        "overnight": "Return to Valemount",
+        "mapNote": "Descent past all falls again in reverse. Mount Robson's summit often revealed on morning return. 856m TH."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mount Robson Summit",
+        "lat": 53.12,
+        "lng": -119.15,
+        "type": "summit",
+        "altM": 3954,
+        "note": "Highest peak in the Canadian Rockies — often cloud-capped. A clear sighting is rare and celebrated."
+      },
+      {
+        "name": "Emperor Falls",
+        "lat": 53.07,
+        "lng": -119.1,
+        "type": "viewpoint",
+        "altM": 1280,
+        "note": "67-metre waterfall — the trail passes directly beside the cascade on a narrow ledge trail."
+      },
+      {
+        "name": "Berg Lake",
+        "lat": 53.1,
+        "lng": -119.08,
+        "type": "viewpoint",
+        "altM": 1646,
+        "note": "Turquoise glacial lake with icebergs calved from the Berg Glacier. Mount Robson rises directly above."
+      },
+      {
+        "name": "Berg Glacier",
+        "lat": 53.11,
+        "lng": -119.09,
+        "type": "glacier",
+        "altM": 1800,
+        "note": "Active glacier calving directly into Berg Lake — watch for iceberg falls from the camp or meadows."
+      },
+      {
+        "name": "Hargreaves Glacier Meadows",
+        "lat": 53.13,
+        "lng": -119.05,
+        "type": "viewpoint",
+        "altM": 2100,
+        "note": "The finest viewpoint on the trail — Mount Robson, Berg Glacier, and the lake all visible simultaneously."
+      },
+      {
+        "name": "Kinney Lake",
+        "lat": 53.05,
+        "lng": -119.1,
+        "type": "viewpoint",
+        "altM": 1050,
+        "note": "Turquoise lake at the foot of Mount Robson's approach walls — striking on arrival and departure."
+      }
+    ]
+  },
+  "roraima": {
+    "sheetName": "Mount Roraima Trek",
+    "slug": "roraima",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Paraitepui village to Rio Kukenan camp",
+        "distanceKm": "14",
+        "elevGainM": "180",
+        "elevLossM": "60",
+        "maxAltM": "1300.0",
+        "lat": 5.2,
+        "lng": -60.82,
+        "overnight": "Rio Kukenan Camp",
+        "mapNote": "Flat savanna approach across the Gran Sabana. Kukenan tepui visible ahead. 1300m."
+      },
+      {
+        "day": 2,
+        "route": "Rio Kukenan to base of Roraima — La Rampa foot",
+        "distanceKm": "14",
+        "elevGainM": "320",
+        "elevLossM": "80",
+        "maxAltM": "1600.0",
+        "lat": 5.16,
+        "lng": -60.78,
+        "overnight": "La Rampa Base Camp",
+        "mapNote": "Roraima's walls grow from horizon to sky. Camp at the foot of the only natural ascent route. 1600m."
+      },
+      {
+        "day": 3,
+        "route": "La Rampa ascent to summit plateau",
+        "distanceKm": "8",
+        "elevGainM": "1200",
+        "elevLossM": "0",
+        "maxAltM": "2810.0",
+        "lat": 5.14,
+        "lng": -60.76,
+        "overnight": "Summit Plateau Camp (The Hotel)",
+        "mapNote": "La Rampa — the 45-degree forested ramp, the only non-technical route to the top. Summit plateau at 2810m."
+      },
+      {
+        "day": 4,
+        "route": "Summit plateau exploration — El Foso, Triple Point, Crystal Valley",
+        "distanceKm": "10",
+        "elevGainM": "150",
+        "elevLossM": "150",
+        "maxAltM": "2810.0",
+        "lat": 5.13,
+        "lng": -60.74,
+        "overnight": "Summit Plateau Camp",
+        "mapNote": "El Foso circular canyon, Triple Point border marker, black rock labyrinths and quartzite fields. 2810m."
+      },
+      {
+        "day": 5,
+        "route": "Descent La Rampa to savanna camp",
+        "distanceKm": "16",
+        "elevGainM": "0",
+        "elevLossM": "1300",
+        "maxAltM": "2810.0",
+        "lat": 5.18,
+        "lng": -60.8,
+        "overnight": "Savanna Camp",
+        "mapNote": "Full descent of La Rampa. Views back to the tepui walls from the savanna floor. 1400m."
+      },
+      {
+        "day": 6,
+        "route": "Savanna camp to Paraitepui return",
+        "distanceKm": "14",
+        "elevGainM": "60",
+        "elevLossM": "180",
+        "maxAltM": "1400.0",
+        "lat": 5.22,
+        "lng": -60.85,
+        "overnight": "Return to Santa Elena de Uairén",
+        "mapNote": "Return across the Gran Sabana. Final views of Roraima and Kukenan from the trail. 1050m."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "La Rampa",
+        "lat": 5.15,
+        "lng": -60.77,
+        "type": "landmark",
+        "altM": 2200,
+        "note": "The only natural non-technical ascent — a forested ramp on the tepui's southwest face."
+      },
+      {
+        "name": "El Foso",
+        "lat": 5.13,
+        "lng": -60.75,
+        "type": "viewpoint",
+        "altM": 2780,
+        "note": "A deep circular canyon cut into the summit plateau — one of Roraima's most dramatic geological features."
+      },
+      {
+        "name": "Triple Point",
+        "lat": 5.12,
+        "lng": -60.73,
+        "type": "landmark",
+        "altM": 2800,
+        "note": "The convergence point of Venezuela, Brazil, and Guyana — stand in three countries simultaneously."
+      },
+      {
+        "name": "Crystal Valley",
+        "lat": 5.135,
+        "lng": -60.755,
+        "type": "viewpoint",
+        "altM": 2790,
+        "note": "Quartz crystal fields on the summit plateau — the source of the Lost World mythology."
+      },
+      {
+        "name": "Kukenan Tepui",
+        "lat": 5.18,
+        "lng": -60.8,
+        "type": "viewpoint",
+        "altM": 2680,
+        "note": "Roraima's near-twin tepui, visible throughout the approach across the Gran Sabana."
+      },
+      {
+        "name": "Roraima Summit Plateau",
+        "lat": 5.14,
+        "lng": -60.76,
+        "type": "summit",
+        "altM": 2810,
+        "note": "An alien world of black rock formations, carnivorous plants, and endemic species found nowhere else on Earth."
       }
     ]
   }
