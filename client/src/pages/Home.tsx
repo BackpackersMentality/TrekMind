@@ -45,23 +45,37 @@ export default function Home() {
         <meta name="twitter:image"       content="https://trekmind.pages.dev/og-image.jpg" />
       </Helmet>
       {/* Top Banner */}
-      <header className="bg-foreground text-background py-4 md:py-6 px-4 relative overflow-hidden shrink-0 z-10">
+      <header className="bg-foreground text-background py-2.5 md:py-3 px-4 relative overflow-hidden shrink-0 z-10">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
-        <div className="max-w-7xl mx-auto relative z-10 text-center">
-          <h1 className="text-xl md:text-3xl font-display font-bold mb-1 tracking-tight text-white drop-shadow-lg">
-            TrekMind
-          </h1>
-          <p className="text-xs md:text-sm text-white/85 max-w-xl mx-auto font-light leading-relaxed">
-            The Global Trekking Discovery App: find the world's most breathtaking trekking routes.
-          </p>
-          <div className="mt-2">
-            <Link href="/top-100">
-              <button className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-500/90 hover:bg-amber-400 text-white text-[11px] font-bold rounded-full shadow-lg transition-all uppercase tracking-wider backdrop-blur-sm border border-amber-300/30">
-                <Trophy className="w-3 h-3" />
-                Top 100 Treks
-              </button>
-            </Link>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="flex items-center justify-between gap-3">
+            {/* Title + tagline — left-aligned on mobile, centred feel via flex */}
+            <div className="flex-1 min-w-0">
+              <h1 className="text-lg md:text-2xl font-display font-bold tracking-tight text-white drop-shadow-lg leading-tight">
+                TrekMind
+              </h1>
+              <p className="text-[11px] md:text-xs text-white/80 font-light leading-snug mt-0.5 hidden sm:block">
+                Discover the world's most breathtaking trekking routes.
+              </p>
+            </div>
+
+            {/* Action buttons — always inline, never wrap to new row */}
+            <div className="flex items-center gap-1.5 shrink-0">
+              <Link href="/top-100">
+                <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-amber-500/90 hover:bg-amber-400 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-amber-300/20 whitespace-nowrap">
+                  <Trophy className="w-3 h-3 shrink-0" />
+                  <span className="hidden xs:inline">Top 100</span>
+                  <span className="xs:hidden">100</span>
+                </button>
+              </Link>
+              <Link href="/about">
+                <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap">
+                  <Info className="w-3 h-3 shrink-0" />
+                  <span>About</span>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
