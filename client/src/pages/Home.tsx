@@ -2,19 +2,19 @@ import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
-import { Map, LayoutGrid, Info, Sparkles, Trophy } from "lucide-react";
+import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterTreks } from "@/lib/filterTreks";
 import { GlobeIntegration } from "@/components/GlobeIntegration";
 import { Helmet } from "react-helmet-async";
+import { useTrekList } from "@/hooks/useTrekList";
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
   const [viewMode, setViewMode] = useState<"globe" | "cards">("globe");
+  const { counts } = useTrekList();
 
   const { tier, region, duration, accommodation, terrain, popularity } = useFilterStore();
-
-// ② REPLACE the filters useMemo:
 
   const filters = useMemo(
     () => ({ tier, region, duration, accommodation, terrain, popularity }),
@@ -32,35 +32,40 @@ export default function Home() {
         <meta name="description" content="Explore the world's most breathtaking trekking routes on an interactive 3D globe. Filter by region, terrain, duration and difficulty. Find your next great adventure." />
         <meta name="keywords" content="trekking routes, hiking trails, best treks, adventure travel, trekking guide, hiking app" />
         <link rel="canonical" href="https://trekmind.pages.dev/" />
-        {/* OpenGraph */}
         <meta property="og:type"        content="website" />
         <meta property="og:url"         content="https://trekmind.pages.dev/" />
         <meta property="og:title"       content="TrekMind — Discover the World's Best Trekking Routes" />
         <meta property="og:description" content="Explore the world's most breathtaking trekking routes on an interactive 3D globe. Filter by region, terrain, duration and difficulty." />
         <meta property="og:image"       content="https://trekmind.pages.dev/og-image.jpg" />
-        {/* Twitter */}
         <meta name="twitter:card"        content="summary_large_image" />
         <meta name="twitter:title"       content="TrekMind — Discover the World's Best Trekking Routes" />
         <meta name="twitter:description" content="Explore the world's most breathtaking trekking routes on an interactive 3D globe." />
         <meta name="twitter:image"       content="https://trekmind.pages.dev/og-image.jpg" />
       </Helmet>
-      {/* Top Banner */}
+
+      {/* ── Header ──────────────────────────────────────────────────────────── */}
       <header className="bg-foreground text-background py-2.5 md:py-3 px-4 relative overflow-hidden shrink-0 z-10">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-between gap-3">
-            {/* Title + tagline — left-aligned on mobile, centred feel via flex */}
+            {/* Title + slogan + tagline */}
             <div className="flex-1 min-w-0">
+              {/* Brand name */}
               <h1 className="text-lg md:text-2xl font-display font-bold tracking-tight text-white drop-shadow-lg leading-tight">
                 TrekMind
               </h1>
-              <p className="text-[11px] md:text-xs text-white/80 font-light leading-snug mt-0.5 hidden sm:block">
-                Discover the world's most breathtaking trekking routes.
+              {/* Slogan — visible from sm up */}
+              <p className="text-[11px] md:text-sm text-amber-300/90 font-semibold leading-snug mt-0.5 tracking-wide hidden sm:block drop-shadow">
+                The Atlas of the World's Best Treks
+              </p>
+              {/* Micro tagline — visible from md up */}
+              <p className="text-[10px] md:text-[11px] text-white/55 font-light leading-snug mt-0.5 hidden md:block">
+                Discover iconic trails, remote adventures, and unforgettable journeys.
               </p>
             </div>
 
-            {/* Action buttons — always inline, never wrap to new row */}
+            {/* Action buttons */}
             <div className="flex items-center gap-1.5 shrink-0">
               <Link href="/top-100">
                 <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-amber-500/90 hover:bg-amber-400 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-amber-300/20 whitespace-nowrap">
@@ -69,6 +74,21 @@ export default function Home() {
                   <span className="xs:hidden">100</span>
                 </button>
               </Link>
+
+              {/* My Treks — shows count badge when treks are saved */}
+              <Link href="/my-treks">
+                <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap relative">
+                  <BookmarkCheck className="w-3 h-3 shrink-0" />
+                  <span className="hidden sm:inline">My Treks</span>
+                  {/* Badge showing completed count */}
+                  {counts.completed > 0 && (
+                    <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center leading-none">
+                      {counts.completed > 9 ? "9+" : counts.completed}
+                    </span>
+                  )}
+                </button>
+              </Link>
+
               <Link href="/about">
                 <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap">
                   <Info className="w-3 h-3 shrink-0" />
@@ -80,11 +100,10 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Main Container - Takes ALL remaining space between header and footer */}
+      {/* ── Main ────────────────────────────────────────────────────────────── */}
       <main className="flex-1 relative overflow-hidden min-h-0">
         {viewMode === "globe" && (
           <>
-            {/* Button row — stacks tightly on mobile, never overlaps */}
             <div className="absolute top-3 left-3 z-30 flex gap-2">
               <button
                 onClick={() => setViewMode("cards")}
@@ -101,7 +120,6 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            {/* FIX #1: height="100%" fills the full flex-1 main area */}
             <GlobeIntegration height="100%" className="animate-in fade-in duration-500" />
           </>
         )}
@@ -145,7 +163,7 @@ export default function Home() {
         )}
       </main>
 
-      {/* FIX #1: Footer shrunk to minimum — py-1 instead of py-6 */}
+      {/* ── Footer ──────────────────────────────────────────────────────────── */}
       <footer className="border-t border-border bg-card py-1 shrink-0 relative z-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="font-display font-bold text-[10px] text-foreground">TrekMind</p>
