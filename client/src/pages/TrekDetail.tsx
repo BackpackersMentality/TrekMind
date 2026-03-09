@@ -21,6 +21,8 @@ import { useState, useMemo, useEffect, useRef, Suspense, lazy } from "react";
 import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from "@/lib/images";
 import { Helmet } from "react-helmet-async";
+import { useTrekList } from "@/hooks/useTrekList";
+import TrekStatusButtons from "@/components/TrekStatusButtons";
 
 const RouteMap = lazy(() => import("@/components/RouteMap"));
 
@@ -330,6 +332,10 @@ export default function TrekDetail() {
             <div className="flex items-center text-white/90 text-lg font-light gap-2">
               <MapPin className="w-5 h-5" />
               {trek.region}, {trek.country}
+            </div>
+            {/* Trek status buttons — track completed/in-progress/wishlist */}
+            <div className="mt-4">
+              <TrekStatusButtons trekId={trek.id} trekName={trek.name} />
             </div>
           </div>
         </div>
