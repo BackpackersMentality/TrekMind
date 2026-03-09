@@ -12,7 +12,7 @@ import { useRoute, Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  ChevronLeft, MapPin, Calendar, Mountain,
+  ChevronLeft, MapPin, Calendar, Mountain, Bookmark,
   Clock, Activity, TrendingUp, Info, Sparkles, CheckCircle2,
   Bed, Tent, Home, Building2, AlertTriangle
 } from "lucide-react";
@@ -22,7 +22,6 @@ import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from "@/lib/images";
 import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
-import TrekStatusButtons from "@/components/TrekStatusButtons";
 
 const RouteMap = lazy(() => import("@/components/RouteMap"));
 
@@ -256,6 +255,10 @@ export default function TrekDetail() {
   const pageUrl         = `https://trekmind.pages.dev/trek/${trekId}`;
   const pageImage       = getTrekImageUrl(trek.imageFilename);
 
+  const { getStatus, toggle } = useTrekList();
+  const trekStatus = trek ? getStatus(trek.id) : null;
+  const [bookmarkOpen, setBookmarkOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-background pb-20">
       <Helmet>
@@ -310,12 +313,65 @@ export default function TrekDetail() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-black/40 to-transparent" />
 
+        {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
           <Link href="/">
             <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
               <ChevronLeft className="w-6 h-6" />
             </Button>
           </Link>
+        </div>
+
+        {/* Bookmark button — top right */}
+        <div className="absolute top-4 right-4 z-50">
+          <button
+            onClick={() => setBookmarkOpen(o => !o)}
+            className={cn(
+              "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 border backdrop-blur-sm",
+              trekStatus
+                ? "bg-amber-500/80 border-amber-400/60 text-white shadow-lg shadow-amber-500/30"
+                : "bg-black/40 border-white/20 text-white/70 hover:bg-black/60 hover:text-white"
+            )}
+            aria-label="Save trek"
+          >
+            <Bookmark className={cn("w-4 h-4 transition-all", trekStatus ? "fill-white" : "")} />
+          </button>
+
+          {/* Status popover */}
+          {bookmarkOpen && (
+            <div className="absolute top-12 right-0 bg-gray-900/95 backdrop-blur-md border border-white/10 rounded-2xl p-3 shadow-2xl min-w-[180px] z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+              <p className="text-[10px] text-white/30 uppercase tracking-widest font-semibold px-1 mb-2">Save as</p>
+              {[
+                { status: "completed",  icon: "✓", label: "Completed",   cls: "hover:bg-amber-500/20 hover:text-amber-300",  activeCls: "bg-amber-500/25 text-amber-300 border-amber-500/40"  },
+                { status: "inProgress", icon: "⟳", label: "In Progress", cls: "hover:bg-sky-500/20 hover:text-sky-300",      activeCls: "bg-sky-500/25 text-sky-300 border-sky-500/40"        },
+                { status: "wishlist",   icon: "◇", label: "Bucket List", cls: "hover:bg-violet-500/20 hover:text-violet-300", activeCls: "bg-violet-500/25 text-violet-300 border-violet-500/40" },
+              ].map(({ status, icon, label, cls, activeCls }) => {
+                const isActive = trekStatus === status;
+                return (
+                  <button
+                    key={status}
+                    onClick={() => { toggle(trek.id, status as any); setBookmarkOpen(false); }}
+                    className={cn(
+                      "w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 border text-left",
+                      isActive ? activeCls + " border-opacity-100" : "border-transparent text-white/50 " + cls
+                    )}
+                  >
+                    <span className="text-base w-4 text-center">{icon}</span>
+                    <span>{label}</span>
+                    {isActive && <span className="ml-auto text-xs opacity-60">✓</span>}
+                  </button>
+                );
+              })}
+              {trekStatus && (
+                <button
+                  onClick={() => { toggle(trek.id, trekStatus as any); setBookmarkOpen(false); }}
+                  className="w-full mt-1 pt-2 border-t border-white/[0.06] text-[11px] text-white/25 hover:text-white/40 transition-colors text-center"
+                >
+                  Remove from list
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 max-w-5xl mx-auto">
@@ -332,10 +388,6 @@ export default function TrekDetail() {
             <div className="flex items-center text-white/90 text-lg font-light gap-2">
               <MapPin className="w-5 h-5" />
               {trek.region}, {trek.country}
-            </div>
-            {/* Trek status buttons — track completed/in-progress/wishlist */}
-            <div className="mt-4">
-              <TrekStatusButtons trekId={trek.id} trekName={trek.name} />
             </div>
           </div>
         </div>
