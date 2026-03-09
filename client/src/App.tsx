@@ -12,6 +12,7 @@ const TrekDetail = lazy(() => import("@/pages/TrekDetail"));
 const TrekFinder = lazy(() => import("@/pages/TrekFinder"));
 const Top100     = lazy(() => import("@/pages/Top100"));
 const About      = lazy(() => import("@/pages/About"));
+const MyTreks    = lazy(() => import("@/pages/MyTreks"));
 const NotFound   = lazy(() => import("@/pages/not-found"));
 
 function PageSkeleton() {
@@ -35,6 +36,7 @@ function Router() {
       <Route path="/trek-finder" component={TrekFinder} />
       <Route path="/top-100"     component={Top100} />
       <Route path="/about"       component={About} />
+      <Route path="/my-treks"    component={MyTreks} />
       <Route                   component={NotFound} />
     </Switch>
   );
@@ -42,7 +44,6 @@ function Router() {
 
 export default function App() {
   return (
-    // HelmetProvider wraps everything so any page can set <head> tags via <Helmet>
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
