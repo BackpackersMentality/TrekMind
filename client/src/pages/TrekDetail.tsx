@@ -12,7 +12,7 @@ import { useRoute, Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  ChevronLeft, MapPin, Calendar, Mountain, Bookmark,
+  ChevronLeft, MapPin, Calendar, Mountain, Bookmark, BookOpen, ExternalLink,
   Clock, Activity, TrendingUp, Info, Sparkles, CheckCircle2,
   Bed, Tent, Home, Building2, AlertTriangle
 } from "lucide-react";
@@ -204,6 +204,60 @@ function ElevationProfile({ itinerary }: { itinerary: any[] }) {
       <p className="text-xs text-muted-foreground">
         Altitude data is approximate — based on overnight stop elevations per day, not continuous GPS track.
       </p>
+    </div>
+  );
+}
+
+
+// ── Backpacker's Mentality trek guide links ────────────────────────────────────
+// Only renders for the three treks that have matching full guides on BM.
+const BM_GUIDES: Record<string, { url: string; title: string; description: string }> = {
+  torres: {
+    url: "https://backpackersmentality.com/ultimate-guide-to-the-torres-del-paine-o-circuit/",
+    title: "Ultimate Guide to the Torres del Paine O Circuit",
+    description: "Everything you need: permits, campsites, daily stages, weather, and what to pack for Patagonia.",
+  },
+  av4: {
+    url: "https://backpackersmentality.com/alta-via-4-complete-7-day-high-altitude-trail-guide/",
+    title: "Alta Via 4 — Complete 7-Day High Altitude Trail Guide",
+    description: "Day-by-day stages, via ferrata sections, rifugio booking tips, and the best viewpoints on the route.",
+  },
+  annapurna: {
+    url: "https://backpackersmentality.com/annapurna-circuit-trek-everything-you-need-for-an-epic-adventure/",
+    title: "Annapurna Circuit — Everything You Need for an Epic Adventure",
+    description: "Permits, teahouse costs, acclimatisation strategy, Thorong La crossing, and gear tested on the trail.",
+  },
+};
+
+function PrepareSection({ trekId }: { trekId: string }) {
+  const guide = BM_GUIDES[trekId];
+  if (!guide) return null;
+
+  return (
+    <div className="pt-8 border-t">
+      <div className="flex items-center gap-2 mb-4">
+        <BookOpen className="w-5 h-5 text-primary" />
+        <h3 className="text-xl font-bold">Prepare for This Trek</h3>
+      </div>
+      <a
+        href={guide.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-start gap-4 bg-primary/5 hover:bg-primary/10 border border-primary/20 hover:border-primary/40 rounded-xl p-4 transition-all duration-200"
+      >
+        <div className="flex-1 min-w-0">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-primary/60 mb-1">
+            Full Trek Guide · Backpacker's Mentality
+          </p>
+          <p className="font-bold text-foreground text-sm leading-snug group-hover:text-primary transition-colors">
+            {guide.title}
+          </p>
+          <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
+            {guide.description}
+          </p>
+        </div>
+        <ExternalLink className="w-4 h-4 text-primary/40 group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
+      </a>
     </div>
   );
 }
@@ -532,6 +586,9 @@ export default function TrekDetail() {
             campingRequired={trek.accommodation === "Camping"}
           />
         </div>
+
+        {/* Prepare for This Trek — only renders for the 3 BM-guided treks */}
+        {trekId && <PrepareSection trekId={trekId} />}
 
         {/* Disclaimer */}
         <div className="pt-8 border-t">
