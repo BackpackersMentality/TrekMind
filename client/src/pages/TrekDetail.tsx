@@ -365,7 +365,7 @@ export default function TrekDetail() {
           onError={() => setImgError(true)}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-black/10 to-transparent" />
 
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
@@ -535,7 +535,9 @@ export default function TrekDetail() {
         </div>
 
         {/* Elevation Profile — shown once itinerary data is loaded */}
-        {itinerary && itinerary.length > 0 && (
+        {itinerary && itinerary.length > 0 && itinerary.some((d: any) =>
+            d.maxAltM ?? d.maxAlt ?? d.elevation
+          ) && (
           <div className="pt-8 border-t">
             <h2 className="text-2xl font-bold mb-1 flex items-center gap-2">
               <TrendingUp className="w-6 h-6 text-primary" />
@@ -627,6 +629,18 @@ function StatItem({ icon: Icon, label, value, highlight = false }: { icon: any; 
   );
 }
 
+
+// Strip any embedded unit suffix and re-add the correct one
+// Prevents "12kmkm", "1200mm", "12 km km" from data inconsistencies
+function stripUnit(val: string | number, unit: string): string {
+  const cleaned = String(val).replace(/\s*(km|m|KM|M)$/i, "").trim();
+  const num = parseFloat(cleaned);
+  if (isNaN(num)) return String(val); // fallback: return raw if unparseable
+  return `${num % 1 === 0 ? num : num.toFixed(1)}${unit}`;
+}
+const fmtKm = (v: string | number) => stripUnit(v, "km");
+const fmtM  = (v: string | number) => stripUnit(v, "m");
+
 function ItineraryItem({ day }: { day: any }) {
   const isHardDay =
     parseFloat(day.maxAltM || day.maxAlt || day.elevation || "0") > 4500 ||
@@ -658,10 +672,10 @@ function ItineraryItem({ day }: { day: any }) {
               )}
             </div>
             <div className="flex items-center gap-3 text-[11px] text-muted-foreground flex-wrap">
-              {(day.distanceKm || day.distance) && <span>Distance: {day.distanceKm || day.distance}km</span>}
-              {(day.elevGainM || day.elevGain) && <span>· ↑ {day.elevGainM || day.elevGain}m</span>}
-              {(day.elevLossM || day.elevLoss) && <span>· ↓ {day.elevLossM || day.elevLoss}m</span>}
-              {(day.maxAltM || day.maxAlt || day.elevation) && <span>· Alt: {day.maxAltM || day.maxAlt || day.elevation}m</span>}
+              {(day.distanceKm || day.distance) && <span>Distance: {fmtKm(day.distanceKm || day.distance)}</span>}
+              {(day.elevGainM || day.elevGain) && <span>· ↑ {fmtM(day.elevGainM || day.elevGain)}</span>}
+              {(day.elevLossM || day.elevLoss) && <span>· ↓ {fmtM(day.elevLossM || day.elevLoss)}</span>}
+              {(day.maxAltM || day.maxAlt || day.elevation) && <span>· Alt: {fmtM(day.maxAltM || day.maxAlt || day.elevation)}</span>}
             </div>
           </div>
         </div>
