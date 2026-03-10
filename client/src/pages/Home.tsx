@@ -53,19 +53,13 @@ export default function Home() {
             {/* Title + slogan + tagline */}
             <div className="flex items-center gap-2.5 flex-1 min-w-0">
               {/* Logo mark */}
-              <svg
-                  width="34" height="34"
-                  viewBox="0 0 500 500"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  className="shrink-0 drop-shadow"
-                >
-                  <path d="M 393 321 A 202 202 0 1 0 393 179" stroke="white" strokeWidth="40" strokeLinecap="round"/>
-                  <path d="M 115 355 L 215 195 L 264 258 L 310 178 L 390 355" stroke="white" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M 258 355 C 278 390 238 415 230 445" stroke="white" strokeWidth="20" strokeLinecap="round" opacity="0.55"/>
-                  <polygon points="215,115 249,149 215,183 181,149" fill="#f59e0b"/>
-                </svg>
+              <img
+                src="/apple-touch-icon.png"
+                alt="TrekMind logo"
+                width={36}
+                height={36}
+                className="shrink-0 rounded-lg shadow-md"
+              />
               {/* Brand text */}
               <div className="min-w-0">
                 <h1 className="text-lg md:text-2xl font-display font-bold tracking-tight text-white drop-shadow-lg leading-tight">
