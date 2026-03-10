@@ -8,6 +8,7 @@ import { filterTreks } from "@/lib/filterTreks";
 import { GlobeIntegration } from "@/components/GlobeIntegration";
 import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
+import { IntroOverlay } from "@/components/IntroOverlay";
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
@@ -26,7 +27,7 @@ export default function Home() {
   }, [treks, filters]);
 
   return (
-    <div className="h-screen bg-background relative flex flex-col overflow-hidden">
+    <div className="bg-background relative flex flex-col overflow-hidden" style={{ height: "100dvh" }}>
       <Helmet>
         <title>TrekMind — Discover the World's Best Trekking Routes</title>
         <meta name="description" content="Explore the world's most breathtaking trekking routes on an interactive 3D globe. Filter by region, terrain, duration and difficulty. Find your next great adventure." />
@@ -162,6 +163,9 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* First-visit intro overlay */}
+      <IntroOverlay />
 
       {/* ── Footer ──────────────────────────────────────────────────────────── */}
       <footer className="border-t border-border bg-card py-1 shrink-0 relative z-10">
