@@ -51,19 +51,35 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-between gap-3">
             {/* Title + slogan + tagline */}
-            <div className="flex-1 min-w-0">
-              {/* Brand name */}
-              <h1 className="text-lg md:text-2xl font-display font-bold tracking-tight text-white drop-shadow-lg leading-tight">
-                TrekMind
-              </h1>
-              {/* Slogan — visible from sm up */}
-              <p className="text-[11px] md:text-sm text-amber-300/90 font-semibold leading-snug mt-0.5 tracking-wide hidden sm:block drop-shadow">
-                The Atlas of the World's Best Treks
-              </p>
-              {/* Micro tagline — visible from md up */}
-              <p className="text-[10px] md:text-[11px] text-white/55 font-light leading-snug mt-0.5 hidden md:block">
-                Discover iconic trails, remote adventures, and unforgettable journeys.
-              </p>
+            <div className="flex items-center gap-2.5 flex-1 min-w-0">
+              {/* Logo mark */}
+              <svg
+                  width="34" height="34"
+                  viewBox="0 0 500 500"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  className="shrink-0 drop-shadow"
+                >
+                  <path d="M 393 321 A 202 202 0 1 0 393 179" stroke="white" strokeWidth="40" strokeLinecap="round"/>
+                  <path d="M 115 355 L 215 195 L 264 258 L 310 178 L 390 355" stroke="white" strokeWidth="36" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M 258 355 C 278 390 238 415 230 445" stroke="white" strokeWidth="20" strokeLinecap="round" opacity="0.55"/>
+                  <polygon points="215,115 249,149 215,183 181,149" fill="#f59e0b"/>
+                </svg>
+              {/* Brand text */}
+              <div className="min-w-0">
+                <h1 className="text-lg md:text-2xl font-display font-bold tracking-tight text-white drop-shadow-lg leading-tight">
+                  TrekMind
+                </h1>
+                {/* Slogan — visible from sm up */}
+                <p className="text-[11px] md:text-sm text-amber-300/90 font-semibold leading-snug mt-0.5 tracking-wide hidden sm:block drop-shadow">
+                  The Atlas of the World's Best Treks
+                </p>
+                {/* Micro tagline — visible from md up */}
+                <p className="text-[10px] md:text-[11px] text-white/55 font-light leading-snug mt-0.5 hidden md:block">
+                  Discover iconic trails, remote adventures, and unforgettable journeys.
+                </p>
+              </div>
             </div>
 
             {/* Action buttons */}
