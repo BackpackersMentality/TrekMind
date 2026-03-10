@@ -174,7 +174,11 @@ function TrekRow({ trek, rank }: { trek: any; rank: number }) {
           </div>
           {/* Popularity bar */}
           <div className="mt-1.5 flex items-center gap-1.5">
-            <div className="flex-1 h-1 bg-muted rounded-full overflow-hidden max-w-[80px]">
+            <span className="text-[9px] text-muted-foreground/60 shrink-0">Pop.</span>
+            <div
+              className="flex-1 h-1 bg-muted rounded-full overflow-hidden max-w-[80px]"
+              title={`Popularity score: ${trek.popularityScore ?? 5}/10 — how well-known and accessible this trek is`}
+            >
               <div
                 className="h-full bg-primary rounded-full"
                 style={{ width: `${((trek.popularityScore ?? 5) / 10) * 100}%` }}
