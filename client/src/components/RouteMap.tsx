@@ -162,11 +162,11 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
       style: 'mapbox://styles/mapbox/satellite-streets-v12',
       center: [trek.longitude, trek.latitude],
       zoom: hasRoute ? 10 : 9,
-      pitch: 55,
-      bearing: 15,
+      pitch: 0,
+      bearing: 0,
     });
 
-    map.current.addControl(new mapboxgl.NavigationControl({ visualizePitch: true }), 'top-right');
+    map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
     // ✅ FIX 1: Use a single 'load' event — satellite-streets fires 'load' only
     // after all sprite/glyph/tile resources are ready. Using 'style.load' +
@@ -326,8 +326,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
         map.current.fitBounds(bounds, {
           padding: { top: 80, bottom: 100, left: 60, right: 80 },
           maxZoom: 12,
-          pitch: 55,
-          bearing: 15,
+
         });
 
       } else {
@@ -343,7 +342,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             </div>`
           ))
           .addTo(map.current!);
-        map.current.flyTo({ center: [trek.longitude, trek.latitude], zoom: 9, pitch: 55, essential: true });
+        map.current.flyTo({ center: [trek.longitude, trek.latitude], zoom: 9, essential: true });
       }
     });
 
