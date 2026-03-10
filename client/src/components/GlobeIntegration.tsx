@@ -154,12 +154,12 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
       </div>
 
       {/* Search button — bottom-left */}
-      <div className="absolute bottom-20 md:bottom-6 left-4 z-20">
+      <div className="absolute bottom-14 md:bottom-10 left-4 z-20">
         <SearchButton onClick={() => setIsSearchOpen(true)} />
       </div>
 
       {/* Zoom controls — bottom-right */}
-      <div className="absolute bottom-20 md:bottom-6 right-4 z-20">
+      <div className="absolute bottom-14 md:bottom-10 right-4 z-20">
         <div className="flex flex-col bg-background border border-border rounded-lg shadow-lg overflow-hidden">
           <button onClick={handleZoomIn}  className="p-3 hover:bg-muted transition-colors border-b border-border" aria-label="Zoom in"><Plus  className="w-5 h-5" /></button>
           <button onClick={handleZoomOut} className="p-3 hover:bg-muted transition-colors" aria-label="Zoom out"><Minus className="w-5 h-5" /></button>
