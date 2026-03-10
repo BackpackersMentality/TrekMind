@@ -2,13 +2,15 @@
 // Route: /about
 // Purpose: SEO-rich explainer covering tier system, curation philosophy, how to use the app
 
+import React from "react";
 import { Link } from "wouter";
 import { Helmet } from "react-helmet-async";
 import {
   ArrowLeft, Globe2, Mountain, Zap, Compass, Star,
   Map, Filter, Sparkles, Trophy, ChevronRight, Info,
-  BookOpen, Shield, Users, Clock
+  BookOpen, Shield, Users, Clock, Timer, TrendingUp
 } from "lucide-react";
+import { getAllTreks } from "../lib/treks";
 
 // ── Tier definition data ──────────────────────────────────────────────────────
 
@@ -126,6 +128,96 @@ const FAQS = [
     a: "TrekMind is a discovery and planning inspiration tool — it helps you find and understand the world's greatest routes. For full trip planning you'll need specialist operators, current permit information, gear lists, and ideally local guide services. Our itineraries and editorial content give you the foundation to start that planning."
   }
 ];
+
+
+// ── Tier page: mini trek card ─────────────────────────────────────────────────
+
+function TierTrekCard({ trek, tier }: { trek: any; tier: typeof TIERS[0] }) {
+  return (
+    <Link href={`/trek/${trek.id}`}>
+      <div className={`group rounded-xl border ${tier.border} bg-white hover:${tier.bg} transition-all cursor-pointer overflow-hidden flex gap-3 p-2.5 items-center`}>
+        {/* Thumbnail */}
+        <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-muted">
+          {trek.imageUrl ? (
+            <img
+              src={trek.imageUrl}
+              alt={trek.name}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              loading="lazy"
+            />
+          ) : (
+            <div className={`w-full h-full flex items-center justify-center ${tier.bg}`}>
+              <Mountain className={`w-4 h-4 ${tier.text}`} />
+            </div>
+          )}
+        </div>
+        {/* Info */}
+        <div className="flex-1 min-w-0">
+          <p className="font-bold text-xs text-foreground truncate leading-tight">{trek.name}</p>
+          <p className="text-[10px] text-muted-foreground truncate mt-0.5">{trek.country}</p>
+          <div className={`flex items-center gap-2 mt-1 text-[9px] font-semibold ${tier.text}`}>
+            {trek.totalDays && <span className="flex items-center gap-0.5"><Timer className="w-2.5 h-2.5" />{trek.totalDays}</span>}
+            {(trek.maxAltitude || trek.maxAltitudeM) && (
+              <span className="flex items-center gap-0.5"><TrendingUp className="w-2.5 h-2.5" />{trek.maxAltitude || trek.maxAltitudeM}</span>
+            )}
+          </div>
+        </div>
+        <ChevronRight className={`w-3.5 h-3.5 shrink-0 ${tier.text} opacity-0 group-hover:opacity-100 transition-opacity`} />
+      </div>
+    </Link>
+  );
+}
+
+
+// ── Tier browser component ────────────────────────────────────────────────────
+
+function TierBrowser() {
+  const [openTier, setOpenTier] = React.useState<number | null>(1);
+  const allTreks = React.useMemo(() => getAllTreks(), []);
+
+  return (
+    <div className="space-y-3">
+      {TIERS.map(tier => {
+        const tierTreks = allTreks.filter((t: any) => t.tier === tier.number);
+        const isOpen = openTier === tier.number;
+        return (
+          <div key={tier.number} className={`rounded-2xl border ${tier.border} overflow-hidden transition-all`}>
+            {/* Tier header — tap to expand */}
+            <button
+              className={`w-full flex items-center gap-3 px-4 py-3.5 text-left transition-colors ${isOpen ? tier.bg : "bg-white hover:" + tier.bg}`}
+              onClick={() => setOpenTier(isOpen ? null : tier.number)}
+            >
+              <div className={`w-9 h-9 rounded-full ${tier.dot} flex items-center justify-center shadow-sm shrink-0`}>
+                <span className="text-white font-black text-sm">{tier.number}</span>
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className={`font-black text-sm ${tier.text}`}>Tier {tier.number} — {tier.name}</span>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${tier.badge}`}>
+                    {tierTreks.length} treks
+                  </span>
+                </div>
+                <p className="text-xs text-muted-foreground mt-0.5 truncate">{tier.stats.avgDays} · {tier.stats.difficulty}</p>
+              </div>
+              <ChevronRight className={`w-4 h-4 ${tier.text} transition-transform duration-200 shrink-0 ${isOpen ? "rotate-90" : ""}`} />
+            </button>
+
+            {/* Trek grid */}
+            {isOpen && (
+              <div className={`${tier.bg} border-t ${tier.border} px-3 py-3`}>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                  {tierTreks.map((trek: any) => (
+                    <TierTrekCard key={trek.id} trek={trek} tier={tier} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 // ── Section header ────────────────────────────────────────────────────────────
 
@@ -258,6 +350,16 @@ export default function About() {
 
       {/* ── Content ──────────────────────────────────────────────────────── */}
       <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-8 pb-20 space-y-14">
+
+        {/* Tier browser — jump to any tier's treks */}
+        <section id="tiers">
+          <SectionHeader
+            label="Browse by Tier"
+            title="The Four Tiers"
+            sub="Every trek ranked and categorised. Tap any route to read the full guide."
+          />
+          <TierBrowser />
+        </section>
 
         {/* What is TrekMind */}
         <section>
