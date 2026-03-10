@@ -1,15 +1,18 @@
 // components/FilterPopup.tsx — multi-select, no emojis, clean professional look
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
 import { FilterGroup } from './FilterGroup';
+import { filterTreks } from '../lib/filterTreks';
+import { getAllTreks } from '../lib/treks';
 import { FilterState, EMPTY_FILTERS, countActiveFilters } from '../types/filters';
 
 interface FilterPopupProps {
-  isOpen:         boolean;
-  onClose:        () => void;
-  currentFilters: FilterState;
-  onApply:        (filters: FilterState) => void;
+  isOpen:            boolean;
+  onClose:           () => void;
+  currentFilters:    FilterState;
+  onApply:           (filters: FilterState) => void;
+  matchingTrekCount?: number;
 }
 
 const FILTER_OPTIONS = {
@@ -56,8 +59,13 @@ const FILTER_OPTIONS = {
   ],
 };
 
-export function FilterPopup({ isOpen, onClose, currentFilters, onApply }: FilterPopupProps) {
+export function FilterPopup({ isOpen, onClose, currentFilters, onApply, matchingTrekCount }: FilterPopupProps) {
   const [draft, setDraft] = useState<FilterState>(currentFilters);
+  const allTreks = useMemo(() => getAllTreks(), []);
+  const draftMatchCount = useMemo(
+    () => filterTreks(allTreks as any[], draft as any).length,
+    [allTreks, draft]
+  );
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => { if (isOpen) setDraft(currentFilters); }, [isOpen, currentFilters]);
@@ -145,7 +153,9 @@ export function FilterPopup({ isOpen, onClose, currentFilters, onApply }: Filter
             onClick={() => onApply(draft)}
             className="flex-1 py-2.5 bg-slate-900 text-white rounded-lg text-sm font-semibold hover:bg-black transition-colors shadow-sm"
           >
-            {activeCount > 0 ? `Show results · ${activeCount} active` : 'Apply'}
+            {activeCount > 0
+              ? `Show ${draftMatchCount} trek${draftMatchCount !== 1 ? 's' : ''}`
+              : 'Apply filters'}
           </button>
         </div>
       </div>
