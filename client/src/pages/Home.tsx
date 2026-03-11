@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { Link } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
@@ -9,22 +9,43 @@ import { GlobeIntegration } from "@/components/GlobeIntegration";
 import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
 import { IntroOverlay } from "@/components/IntroOverlay";
+import { FilterButton } from "@/components/FilterButton";
+import { FilterPopup } from "@/components/FilterPopup";
+import { SearchButton } from "@/components/SearchButton";
+import { SearchPopup } from "@/components/SearchPopup";
+import { type FilterState, countActiveFilters } from "../types/filters";
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
   const [viewMode, setViewMode] = useState<"globe" | "cards">("globe");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { counts } = useTrekList();
 
-  const { tier, region, duration, accommodation, terrain, popularity } = useFilterStore();
+  const { tier, region, duration, accommodation, terrain, popularity,
+          setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity
+        } = useFilterStore();
 
   const filters = useMemo(
     () => ({ tier, region, duration, accommodation, terrain, popularity }),
     [tier, region, duration, accommodation, terrain, popularity]
   );
 
+  const activeFilterCount = useMemo(() => countActiveFilters(filters as FilterState), [filters]);
+
   const filteredTreks = useMemo(() => {
     return filterTreks(treks as any[], filters as any);
   }, [treks, filters]);
+
+  const handleApplyFilters = useCallback((newFilters: FilterState) => {
+    setTier(newFilters.tier);
+    setRegion(newFilters.region);
+    setAccommodation(newFilters.accommodation);
+    setTerrain(newFilters.terrain);
+    setDuration(newFilters.duration);
+    setPopularity(newFilters.popularity);
+    setIsFilterOpen(false);
+  }, [setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity]);
 
   return (
     <div className="bg-background relative flex flex-col overflow-hidden" style={{ height: "100dvh" }}>
@@ -138,13 +159,26 @@ export default function Home() {
         {viewMode === "cards" && (
           <div className="h-full overflow-y-auto">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <button
-                onClick={() => setViewMode("globe")}
-                className="mb-6 px-4 py-2 bg-gray-900 text-white rounded-full shadow-lg hover:bg-black hover:shadow-xl transition-all flex items-center gap-2 font-semibold"
-              >
-                <Map className="w-4 h-4" />
-                Back to Globe
-              </button>
+
+              {/* Cards view header row */}
+              <div className="flex items-center justify-between mb-6">
+                <button
+                  onClick={() => setViewMode("globe")}
+                  className="px-4 py-2 bg-gray-900 text-white rounded-full shadow-lg hover:bg-black hover:shadow-xl transition-all flex items-center gap-2 font-semibold"
+                >
+                  <Map className="w-4 h-4" />
+                  Back to Globe
+                </button>
+
+                {/* Right side: result count + search + filter */}
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-muted-foreground font-medium hidden sm:inline">
+                    {filteredTreks.length} trek{filteredTreks.length !== 1 ? "s" : ""}
+                  </span>
+                  <SearchButton onClick={() => setIsSearchOpen(true)} />
+                  <FilterButton activeCount={activeFilterCount} onClick={() => setIsFilterOpen(true)} />
+                </div>
+              </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
                 {filteredTreks.map((trek: any, index: number) => (
@@ -173,6 +207,24 @@ export default function Home() {
           </div>
         )}
       </main>
+
+      {/* Filter + Search popups — shared between globe and cards views */}
+      <FilterPopup
+        isOpen={isFilterOpen}
+        onClose={() => setIsFilterOpen(false)}
+        currentFilters={filters as FilterState}
+        onApply={handleApplyFilters}
+        matchingTrekCount={filteredTreks.length}
+      />
+      <SearchPopup
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+        onTrekSelect={(id) => {
+          setIsSearchOpen(false);
+          // Navigate to trek detail directly from cards view
+          window.location.href = `/trek/${id}`;
+        }}
+      />
 
       {/* First-visit intro overlay */}
       <IntroOverlay />
