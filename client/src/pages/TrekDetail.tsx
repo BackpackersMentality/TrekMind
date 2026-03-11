@@ -365,7 +365,7 @@ export default function TrekDetail() {
           onError={() => setImgError(true)}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-black/50 to-black/10" />
 
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
@@ -439,7 +439,7 @@ export default function TrekDetail() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-2 leading-tight drop-shadow-lg">
               {trek.name}
             </h1>
-            <div className="flex items-center text-white/90 text-lg font-light gap-2">
+            <div className="flex items-center text-white text-lg font-light gap-2">
               <MapPin className="w-5 h-5" />
               {trek.region}, {trek.country}
             </div>
