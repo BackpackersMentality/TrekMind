@@ -351,16 +351,6 @@ export default function About() {
       {/* ── Content ──────────────────────────────────────────────────────── */}
       <main className="flex-1 max-w-3xl mx-auto w-full px-4 py-8 pb-20 space-y-14">
 
-        {/* Tier browser — jump to any tier's treks */}
-        <section id="tiers">
-          <SectionHeader
-            label="Browse by Tier"
-            title="The Four Tiers"
-            sub="Every trek ranked and categorised. Tap any route to read the full guide."
-          />
-          <TierBrowser />
-        </section>
-
         {/* What is TrekMind */}
         <section>
           <SectionHeader
@@ -381,7 +371,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Tier system */}
+        {/* Tier system — definition cards first */}
         <section>
           <SectionHeader
             label="Understanding Difficulty"
@@ -399,6 +389,16 @@ export default function About() {
               </p>
             </div>
           </div>
+        </section>
+
+        {/* Tier browser — browse treks by tier, now after the tier definitions */}
+        <section id="tiers">
+          <SectionHeader
+            label="Browse by Tier"
+            title="The Four Tiers"
+            sub="Every trek ranked and categorised. Tap any route to read the full guide."
+          />
+          <TierBrowser />
         </section>
 
         {/* Features */}
