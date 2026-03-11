@@ -77,8 +77,8 @@ export default function Home() {
               <img
                 src="/apple-touch-icon.png"
                 alt="TrekMind logo"
-                width={36}
-                height={36}
+                width={54}
+                height={54}
                 className="shrink-0 rounded-lg shadow-md"
               />
               {/* Brand text */}
