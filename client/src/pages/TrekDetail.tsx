@@ -371,11 +371,14 @@ export default function TrekDetail() {
 
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
-          <Link href="/">
-            <Button variant="ghost" size="icon" className="text-white hover:bg-white/20">
-              <ChevronLeft className="w-6 h-6" />
-            </Button>
-          </Link>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-white hover:bg-white/20"
+            onClick={() => window.history.back()}
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </Button>
         </div>
 
         {/* Bookmark button — top right */}
