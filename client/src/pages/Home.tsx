@@ -17,9 +17,14 @@ import { type FilterState, countActiveFilters } from "../types/filters";
 // Lazy-load GlobeIntegration into its own chunk — breaks the circular
 // import chain between Home → GlobeIntegration → FilterButton/SearchButton
 // → filter types that caused the TDZ ReferenceError on bundle initialisation.
-const GlobeIntegration = lazy(() =>
+const GlobeIntegrationLazy = lazy(() =>
   import("@/components/GlobeIntegration").then(m => ({ default: m.GlobeIntegration }))
 );
+
+// Kick off the GlobeIntegration chunk download immediately at module evaluation
+// time — so by the time the user navigates back from TrekDetail, the chunk is
+// already cached and React never has to suspend (no blank screen on back nav).
+import("@/components/GlobeIntegration").catch(() => {});
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
@@ -140,7 +145,7 @@ export default function Home() {
       </header>
 
       {/* ── Main ────────────────────────────────────────────────────────────── */}
-      <main className="flex-1 relative overflow-hidden min-h-0">
+      <main className="flex-1 relative overflow-hidden min-h-0" style={{ minHeight: 0, height: "100%" }}>
         {viewMode === "globe" && (
           <>
             <div className="absolute top-3 left-3 z-30 flex gap-2">
@@ -160,11 +165,11 @@ export default function Home() {
               </Link>
             </div>
             <Suspense fallback={
-              <div className="w-full h-full bg-muted flex items-center justify-center">
+              <div className="absolute inset-0 bg-muted flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
               </div>
             }>
-              <GlobeIntegration height="100%" className="animate-in fade-in duration-500" />
+              <GlobeIntegrationLazy height="100%" className="animate-in fade-in duration-500" />
             </Suspense>
           </>
         )}
