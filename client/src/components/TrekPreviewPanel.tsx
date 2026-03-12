@@ -152,8 +152,12 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
 
             <button
               onClick={() => {
+                // Close the panel first, then navigate on the next tick.
+                // Calling onClose() + setLocation() synchronously causes React
+                // error #300 — two state updates collide across component boundaries
+                // mid-render. The timeout lets the close state settle first.
                 onClose();
-                setLocation(`/trek/${currentTrek.id}`);
+                setTimeout(() => setLocation(`/trek/${currentTrek.id}`), 0);
               }}
               className="w-full py-2.5 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 group"
             >
