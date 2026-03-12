@@ -30,11 +30,7 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   const iframeRef    = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isReadyRef   = useRef(false);
-  const filtersRef   = useRef(currentFilters); // always holds latest filters without deps
   const [, setLocation] = useLocation();
-
-  // Keep filtersRef current on every render — no re-subscription needed
-  filtersRef.current = currentFilters;
 
   const allTreks = useMemo(() => getAllTreks(), []);
 
@@ -45,6 +41,11 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   const currentFilters: FilterState = useMemo(() => ({
     tier, region, accommodation, terrain, duration, popularity,
   }), [tier, region, accommodation, terrain, duration, popularity]);
+
+  // filtersRef must be declared AFTER currentFilters to avoid a TDZ error
+  // in the minified bundle (our earlier fix placed it before currentFilters).
+  const filtersRef = useRef(currentFilters);
+  filtersRef.current = currentFilters;
 
   const activeFilterCount = useMemo(
     () => countActiveFilters(currentFilters),
