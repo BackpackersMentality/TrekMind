@@ -16,7 +16,6 @@ const MyTreks    = lazy(() => import("@/pages/MyTreks"));
 const NotFound   = lazy(() => import("@/pages/not-found"));
 
 // ── Skeleton shown while a page chunk downloads ───────────────────────────────
-// Kept minimal — a very brief flash is fine; a white blank screen is not.
 function PageSkeleton() {
   return (
     <div className="min-h-screen bg-background animate-pulse">
@@ -30,31 +29,33 @@ function PageSkeleton() {
   );
 }
 
-// ── Wrap every lazy component in its own Suspense boundary ────────────────────
-// A single top-level Suspense unmounts the ENTIRE tree on any navigation,
-// producing a white screen while the next chunk loads. Per-route boundaries
-// keep each page isolated — only that page shows a skeleton, not the whole app.
-function withSuspense(Component: React.ComponentType) {
-  return function SuspendedPage(props: any) {
-    return (
-      <Suspense fallback={<PageSkeleton />}>
-        <Component {...props} />
-      </Suspense>
-    );
-  };
+// ── Per-route Suspense wrappers — defined at module level so React sees a
+//    stable component identity on every render (avoids error #300).
+//    Each is an explicit named component wrapping its own lazy import directly,
+//    which also sidesteps the temporal dead zone issue that occurs when a helper
+//    function like withSuspense() is called before lazy() vars are initialised
+//    in the minified bundle.
+function SuspendedHome(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><Home {...props} /></Suspense>;
 }
-
-// ── Stable wrapped components — created ONCE at module level ─────────────────
-// withSuspense() must NOT be called inside Router() because every call returns
-// a new function reference, making React think the component type changed and
-// causing it to fully unmount + remount the tree (React error #300).
-const SuspendedHome       = withSuspense(Home);
-const SuspendedTrekDetail = withSuspense(TrekDetail);
-const SuspendedTrekFinder = withSuspense(TrekFinder);
-const SuspendedTop100     = withSuspense(Top100);
-const SuspendedAbout      = withSuspense(About);
-const SuspendedMyTreks    = withSuspense(MyTreks);
-const SuspendedNotFound   = withSuspense(NotFound);
+function SuspendedTrekDetail(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><TrekDetail {...props} /></Suspense>;
+}
+function SuspendedTrekFinder(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><TrekFinder {...props} /></Suspense>;
+}
+function SuspendedTop100(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><Top100 {...props} /></Suspense>;
+}
+function SuspendedAbout(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><About {...props} /></Suspense>;
+}
+function SuspendedMyTreks(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><MyTreks {...props} /></Suspense>;
+}
+function SuspendedNotFound(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><NotFound {...props} /></Suspense>;
+}
 
 function Router() {
   return (
