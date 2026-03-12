@@ -44,16 +44,28 @@ function withSuspense(Component: React.ComponentType) {
   };
 }
 
+// ── Stable wrapped components — created ONCE at module level ─────────────────
+// withSuspense() must NOT be called inside Router() because every call returns
+// a new function reference, making React think the component type changed and
+// causing it to fully unmount + remount the tree (React error #300).
+const SuspendedHome       = withSuspense(Home);
+const SuspendedTrekDetail = withSuspense(TrekDetail);
+const SuspendedTrekFinder = withSuspense(TrekFinder);
+const SuspendedTop100     = withSuspense(Top100);
+const SuspendedAbout      = withSuspense(About);
+const SuspendedMyTreks    = withSuspense(MyTreks);
+const SuspendedNotFound   = withSuspense(NotFound);
+
 function Router() {
   return (
     <Switch>
-      <Route path="/"            component={withSuspense(Home)} />
-      <Route path="/trek/:id"    component={withSuspense(TrekDetail)} />
-      <Route path="/trek-finder" component={withSuspense(TrekFinder)} />
-      <Route path="/top-100"     component={withSuspense(Top100)} />
-      <Route path="/about"       component={withSuspense(About)} />
-      <Route path="/my-treks"    component={withSuspense(MyTreks)} />
-      <Route                     component={withSuspense(NotFound)} />
+      <Route path="/"            component={SuspendedHome} />
+      <Route path="/trek/:id"    component={SuspendedTrekDetail} />
+      <Route path="/trek-finder" component={SuspendedTrekFinder} />
+      <Route path="/top-100"     component={SuspendedTop100} />
+      <Route path="/about"       component={SuspendedAbout} />
+      <Route path="/my-treks"    component={SuspendedMyTreks} />
+      <Route                     component={SuspendedNotFound} />
     </Switch>
   );
 }
