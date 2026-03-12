@@ -29,6 +29,7 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
 
   const iframeRef    = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const isReadyRef   = useRef(false); // true only after iframe onLoad fires
   const [, setLocation] = useLocation();
 
   const allTreks = useMemo(() => getAllTreks(), []);
@@ -63,6 +64,7 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   }, [setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity]);
 
   const sendToGlobe = useCallback((msg: object) => {
+    if (!isReadyRef.current) return;
     iframeRef.current?.contentWindow?.postMessage(msg, GLOBE_ORIGIN);
   }, []);
 
@@ -113,6 +115,7 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   }, [currentFilters, sendToGlobe]);
 
   const handleLoad = useCallback(() => {
+    isReadyRef.current = true;
     setIsLoading(false);
     sendToGlobe({ type: "TREKMIND_FILTER_UPDATE", payload: currentFilters });
   }, [currentFilters, sendToGlobe]);
