@@ -1,11 +1,10 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, lazy, Suspense } from "react";
 import { Link, useLocation } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
 import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterTreks } from "@/lib/filterTreks";
-import { GlobeIntegration } from "@/components/GlobeIntegration";
 import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
 import { IntroOverlay } from "@/components/IntroOverlay";
@@ -14,6 +13,13 @@ import { FilterPopup } from "@/components/FilterPopup";
 import { SearchButton } from "@/components/SearchButton";
 import { SearchPopup } from "@/components/SearchPopup";
 import { type FilterState, countActiveFilters } from "../types/filters";
+
+// Lazy-load GlobeIntegration into its own chunk — breaks the circular
+// import chain between Home → GlobeIntegration → FilterButton/SearchButton
+// → filter types that caused the TDZ ReferenceError on bundle initialisation.
+const GlobeIntegration = lazy(() =>
+  import("@/components/GlobeIntegration").then(m => ({ default: m.GlobeIntegration }))
+);
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
@@ -153,7 +159,13 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            <GlobeIntegration height="100%" className="animate-in fade-in duration-500" />
+            <Suspense fallback={
+              <div className="w-full h-full bg-muted flex items-center justify-center">
+                <div className="w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
+              </div>
+            }>
+              <GlobeIntegration height="100%" className="animate-in fade-in duration-500" />
+            </Suspense>
           </>
         )}
 
