@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
 import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck } from "lucide-react";
@@ -20,6 +20,7 @@ export default function Home() {
   const [viewMode, setViewMode] = useState<"globe" | "cards">("globe");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [, setLocation] = useLocation();
   const { counts } = useTrekList();
 
   const { tier, region, duration, accommodation, terrain, popularity,
@@ -221,8 +222,7 @@ export default function Home() {
         onClose={() => setIsSearchOpen(false)}
         onTrekSelect={(id) => {
           setIsSearchOpen(false);
-          // Navigate to trek detail directly from cards view
-          window.location.href = `/trek/${id}`;
+          setLocation(`/trek/${id}`);
         }}
       />
 
