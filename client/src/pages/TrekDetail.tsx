@@ -365,7 +365,9 @@ export default function TrekDetail() {
           onError={() => setImgError(true)}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-black/50 to-black/10" />
+        {/* Subtle dark scrim so white text stays readable without fading the image */}
+        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/70 to-transparent" />
 
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
