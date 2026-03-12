@@ -29,8 +29,12 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
 
   const iframeRef    = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const isReadyRef   = useRef(false); // true only after iframe onLoad fires
+  const isReadyRef   = useRef(false);
+  const filtersRef   = useRef(currentFilters); // always holds latest filters without deps
   const [, setLocation] = useLocation();
+
+  // Keep filtersRef current on every render — no re-subscription needed
+  filtersRef.current = currentFilters;
 
   const allTreks = useMemo(() => getAllTreks(), []);
 
@@ -117,8 +121,10 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   const handleLoad = useCallback(() => {
     isReadyRef.current = true;
     setIsLoading(false);
-    sendToGlobe({ type: "TREKMIND_FILTER_UPDATE", payload: currentFilters });
-  }, [currentFilters, sendToGlobe]);
+    // Read latest filters from ref — avoids adding currentFilters to deps
+    // which would recreate handleLoad on every filter change and re-trigger onLoad
+    sendToGlobe({ type: "TREKMIND_FILTER_UPDATE", payload: filtersRef.current });
+  }, [sendToGlobe]); // stable — sendToGlobe itself never changes
 
   return (
     <div
