@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, MapPin, Clock, Mountain, Calendar, ChevronRight, ChevronLeft } from 'lucide-react';
 import { useLocation } from 'wouter';
@@ -15,6 +15,14 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [imgError, setImgError] = useState(false);
+  const navTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Cancel any pending navigation timer when the component unmounts
+  useEffect(() => {
+    return () => {
+      if (navTimerRef.current) clearTimeout(navTimerRef.current);
+    };
+  }, []);
 
   // Unify everything into an array
   const treksArray = Array.isArray(trek) ? trek : (trek ? [trek] : []);
@@ -152,12 +160,9 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
 
             <button
               onClick={() => {
-                // Close the panel first, then navigate on the next tick.
-                // Calling onClose() + setLocation() synchronously causes React
-                // error #300 — two state updates collide across component boundaries
-                // mid-render. The timeout lets the close state settle first.
                 onClose();
-                setTimeout(() => setLocation(`/trek/${currentTrek.id}`), 0);
+                if (navTimerRef.current) clearTimeout(navTimerRef.current);
+                navTimerRef.current = setTimeout(() => setLocation(`/trek/${currentTrek.id}`), 0);
               }}
               className="w-full py-2.5 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 group"
             >
