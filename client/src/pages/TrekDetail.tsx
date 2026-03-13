@@ -300,6 +300,17 @@ export default function TrekDetail() {
 
   const trek = useMemo(() => trekId ? getTrekById(trekId) : null, [trekId]);
 
+  // ── All remaining hooks MUST come before any early return (Rules of Hooks) ─
+  const { getStatus, toggle } = useTrekList();
+  const trekStatus = trek ? getStatus(trek.id) : null;
+  const [bookmarkOpen, setBookmarkOpen] = useState(false);
+
+  // ── SEO meta ───────────────────────────────────────────────────────────────
+  const pageTitle       = trek ? `${trek.name} Trek Guide — ${trek.country} | TrekMind` : "Trek not found | TrekMind";
+  const pageDescription = trek ? `Plan your ${trek.name} trek in ${trek.country}. ${trek.totalDays}, ${trek.distance}, max altitude ${trek.maxAltitude || "N/A"}. ${trek.terrain} terrain in ${trek.region}.` : "";
+  const pageUrl         = `https://trekmind.pages.dev/trek/${trekId}`;
+  const pageImage       = trek ? getTrekImageUrl(trek.imageFilename) : "";
+
   if (!trek) {
     return (
       <div className="flex flex-col items-center justify-center h-[50vh]">
@@ -308,16 +319,6 @@ export default function TrekDetail() {
       </div>
     );
   }
-
-  // ── SEO meta — unique per trek page ───────────────────────────────────────
-  const pageTitle       = `${trek.name} Trek Guide — ${trek.country} | TrekMind`;
-  const pageDescription = `Plan your ${trek.name} trek in ${trek.country}. ${trek.totalDays}, ${trek.distance}, max altitude ${trek.maxAltitude || "N/A"}. ${trek.terrain} terrain in ${trek.region}.`;
-  const pageUrl         = `https://trekmind.pages.dev/trek/${trekId}`;
-  const pageImage       = getTrekImageUrl(trek.imageFilename);
-
-  const { getStatus, toggle } = useTrekList();
-  const trekStatus = trek ? getStatus(trek.id) : null;
-  const [bookmarkOpen, setBookmarkOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background pb-20">
