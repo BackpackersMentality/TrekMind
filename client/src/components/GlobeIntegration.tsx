@@ -1,7 +1,6 @@
 // GlobeIntegration.tsx
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useFilterStore } from '../store/useFilterStore';
-import { useLocation } from 'wouter';
 import { Loader2, AlertCircle, Plus, Minus } from 'lucide-react';
 import { FilterButton } from './FilterButton';
 import { FilterPopup } from './FilterPopup';
@@ -30,7 +29,6 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   const iframeRef    = useRef<HTMLIFrameElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isReadyRef   = useRef(false);
-  const [, setLocation] = useLocation();
 
   const allTreks = useMemo(() => getAllTreks(), []);
 
