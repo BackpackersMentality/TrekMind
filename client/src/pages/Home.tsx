@@ -24,7 +24,12 @@ const GlobeIntegrationLazy = lazy(() =>
 // Kick off the GlobeIntegration chunk download immediately at module evaluation
 // time — so by the time the user navigates back from TrekDetail, the chunk is
 // already cached and React never has to suspend (no blank screen on back nav).
-import("@/components/GlobeIntegration").catch(() => {});
+// NOTE: we use a module-level variable so this only fires once, not on re-renders.
+let _globePreloaded = false;
+if (!_globePreloaded) {
+  _globePreloaded = true;
+  import("@/components/GlobeIntegration").catch(() => {});
+}
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
