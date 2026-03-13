@@ -275,9 +275,12 @@ export default function TrekDetail() {
   useEffect(() => { window.scrollTo(0, 0); }, [trekId]);
 
   // ── Fetch itinerary + editorial on demand ─────────────────────────────────
-  // This replaces the 212KB synchronous import with a 1-9KB per-trek fetch.
+  // isMounted ref prevents setState calls on an unmounted component when the
+  // user navigates back before the async fetch resolves (React error #300).
   useEffect(() => {
     if (!trekId) return;
+    let isMounted = true;
+
     setItinerary(null);
     setEditorial(null);
     setDataLoading(true);
@@ -286,10 +289,13 @@ export default function TrekDetail() {
       getItineraryAsync(trekId),
       getEditorialContentAsync(trekId),
     ]).then(([itin, ed]) => {
+      if (!isMounted) return; // component unmounted — discard stale update
       setItinerary(itin);
       setEditorial(ed);
       setDataLoading(false);
     });
+
+    return () => { isMounted = false; };
   }, [trekId]);
 
   const trek = useMemo(() => trekId ? getTrekById(trekId) : null, [trekId]);
