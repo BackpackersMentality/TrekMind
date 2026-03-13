@@ -36,6 +36,19 @@ function parseLocationName(raw: string): string {
   return raw.replace(/\s*\(.*?\)/g, '').trim();
 }
 
+// ─── Extract the "from" location from a Day 1 route string ───────────────────
+// "Kathmandu to Syange (Drive)" → "Kathmandu"
+// "Les Houches - Contamines"    → "Les Houches"
+// "Happy Isles to Little Yosemite Valley" → "Happy Isles"
+function parseStartName(route: string): string {
+  if (!route) return '';
+  const toMatch = route.match(/^(.+?)\s+to\s+/i);
+  if (toMatch) return toMatch[1].replace(/\s*\(.*?\)/g, '').trim();
+  const dashMatch = route.match(/^(.+?)\s*[-–—>]\s*/);
+  if (dashMatch) return dashMatch[1].replace(/\s*\(.*?\)/g, '').trim();
+  return '';
+}
+
 // ─── Vague names that can't be reliably geocoded ───────────────────────────────
 const VAGUE = [/^camp\s*\d*$/i, /^high\s+camp$/i, /^base\s+camp$/i, /^abc$/i, /^pass$/i, /^summit$/i, /^col\s/i, /^checkpoint/i, /^rest\s+day$/i];
 const isVague = (n: string) => VAGUE.some(p => p.test(n.trim()));
@@ -94,6 +107,10 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
   const [geo, setGeo] = useState<GeoState>({ stops: [], ready: false, geocoding: false });
 
   // ── Step 1: Geocode stops ────────────────────────────────────────────────────
+  // Each day's lat/lng is the OVERNIGHT stop (end of day).
+  // We synthesise a Day 0 "Start" entry by geocoding the "from" location
+  // of Day 1's route string (e.g. "Kathmandu to Syange" → geocode "Kathmandu").
+  // The last day's overnight is already the Finish point.
   useEffect(() => {
     if (!trek) return;
 
@@ -104,16 +121,48 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
       return;
     }
 
-    // ✅ Already have coords from our hardcoded JSON — skip geocoding entirely
+    // ✅ Already have coords — derive start from Day 1 route field
     const allHaveCoords = stops.every(s =>
       (typeof (s.lat ?? s.latitude) === 'number') && (typeof (s.lng ?? s.longitude) === 'number')
     );
+
     if (allHaveCoords) {
-      setGeo({
-        stops: stops.map(s => ({ ...s, lat: s.lat ?? s.latitude, lng: s.lng ?? s.longitude })),
-        ready: true,
-        geocoding: false,
-      });
+      const normStops = stops.map(s => ({ ...s, lat: s.lat ?? s.latitude, lng: s.lng ?? s.longitude }));
+
+      // Try to geocode the start location from Day 1's route string
+      const day1Route = stops[0]?.route || stops[0]?.sectionRoute || stops[0]?.routePaths || '';
+      const startName = parseStartName(day1Route);
+
+      if (startName && !isVague(startName) && MAPBOX_TOKEN) {
+        setGeo(prev => ({ ...prev, geocoding: true }));
+        geocode(startName, trek.country || '', trek.longitude, trek.latitude, MAPBOX_TOKEN)
+          .then(coords => {
+            const startStop = {
+              day: 0,
+              _isStart: true,
+              overnight: startName,
+              mapNote: `Trek start: ${startName}`,
+              lat: coords ? coords[1] : trek.latitude,
+              lng: coords ? coords[0] : trek.longitude,
+              _geocodedName: startName,
+              _anchored: !coords,
+            };
+            console.log(`[RouteMap] Start: "${startName}" → ${coords ? `${coords[1].toFixed(3)},${coords[0].toFixed(3)}` : 'anchored to trek centre'}`);
+            setGeo({ stops: [startStop, ...normStops], ready: true, geocoding: false });
+          });
+      } else {
+        // No parseable start — anchor to trek centre as start
+        const startStop = {
+          day: 0,
+          _isStart: true,
+          overnight: trek.name,
+          mapNote: 'Trek start (approximate)',
+          lat: trek.latitude,
+          lng: trek.longitude,
+          _anchored: true,
+        };
+        setGeo({ stops: [startStop, ...normStops], ready: true, geocoding: false });
+      }
       return;
     }
 
@@ -168,6 +217,10 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
 
     map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
+    // ✅ FIX 1: Use a single 'load' event — satellite-streets fires 'load' only
+    // after all sprite/glyph/tile resources are ready. Using 'style.load' +
+    // 'load' separately caused a race where terrain was added before the DEM
+    // source was accepted, leaving tiles black. One handler covers both.
     map.current.on('load', () => {
       if (!map.current) return;
 
@@ -195,7 +248,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
         'space-color': 'rgb(11,11,25)',
       });
 
-      // ── Route line (Start → Overnights → Finish only, not waypoints) ─────
+      // ── Route line ────────────────────────────────────────────────────────
       if (hasRoute) {
         const coords = geo.stops.map(s => [s.lng, s.lat]);
         const bounds = new mapboxgl.LngLatBounds();
@@ -220,11 +273,9 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
         });
 
         // ── Overnight stop markers ────────────────────────────────────────
-        // FIX: Use togglePopup() on click so popup follows the marker's
-        // rendered position (which shifts with 3D terrain exaggeration).
-        // Pure DOM onclick on the marker element fires at the flat-map
-        // hitbox position, which drifts away from the visual dot on steep
-        // terrain — togglePopup() lets Mapbox recalculate the correct anchor.
+        // FIX: Use marker.togglePopup() on click — with 3D terrain exaggeration
+        // the visual marker position shifts from the flat-map hitbox. togglePopup()
+        // recalculates the anchor at render-time, so the popup appears correctly.
         geo.stops.forEach((stop, i) => {
           if (!map.current) return;
           const isFirst = i === 0;
@@ -255,12 +306,11 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
           const elev = stop.maxAltM || stop.maxAlt || '';
           const dist = stop.distanceKm || stop.distance || '';
           const note = stop.mapNote || '';
+          const dayLabel = stop.day === 0 ? 'Start' : isLast ? `Day ${stop.day} · Finish` : `Day ${stop.day} · Overnight`;
 
           const popupHtml = `
             <div style="padding:8px 10px;font-family:system-ui,sans-serif;font-size:13px;color:#111;min-width:140px;max-width:200px;">
-              <div style="font-weight:700;font-size:14px;margin-bottom:4px;">
-                Day ${stop.day}${isFirst ? ' · Start' : isLast ? ' · Finish' : ' · Overnight'}
-              </div>
+              <div style="font-weight:700;font-size:14px;margin-bottom:4px;">${dayLabel}</div>
               <div style="color:#333;font-size:13px;margin-bottom:4px;">${label}</div>
               ${note ? `<div style="color:#555;font-size:11px;margin-bottom:3px;font-style:italic;">${note}</div>` : ''}
               ${elev ? `<div style="color:#777;font-size:11px;">⛰ ${elev}m</div>` : ''}
@@ -275,20 +325,14 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             .setPopup(popup)
             .addTo(map.current!);
 
-          // Click opens/closes popup at the correct terrain-adjusted position
-          el.addEventListener('click', (e) => {
-            e.stopPropagation();
-            marker.togglePopup();
-          });
-          // Hover scale — keep rotation neutral for round markers
+          el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
           el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.6)'; });
           el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)'; });
 
           bounds.extend([stop.lng, stop.lat]);
         });
 
-        // ── Waypoint markers (passes, summits, etc.) — all blue diamonds ──
-        // Waypoints are reference points only, not part of the route line.
+        // ── Waypoint markers — all blue diamonds, reference only ─────────
         waypoints.forEach(wp => {
           if (!map.current || typeof wp.lat !== 'number' || typeof wp.lng !== 'number') return;
 
@@ -324,10 +368,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             .setPopup(popup)
             .addTo(map.current!);
 
-          el.addEventListener('click', (e) => {
-            e.stopPropagation();
-            marker.togglePopup();
-          });
+          el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
           el.addEventListener('mouseenter', () => { el.style.transform = 'rotate(45deg) scale(1.8)'; });
           el.addEventListener('mouseleave', () => { el.style.transform = 'rotate(45deg) scale(1)'; });
 
@@ -337,23 +378,22 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
         map.current.fitBounds(bounds, {
           padding: { top: 80, bottom: 100, left: 60, right: 80 },
           maxZoom: 12,
+
         });
 
       } else {
         // Fallback single marker
         const el = document.createElement('div');
-        el.style.cssText = 'width:20px;height:20px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.6);cursor:pointer;';
-        const popup = new mapboxgl.Popup({ offset: 15 }).setHTML(
-          `<div style="padding:6px 8px;font-family:sans-serif;font-size:13px;color:#111;">
-            <strong>${trek.name}</strong>
-            <div style="color:#555;margin-top:2px;">${trek.region}, ${trek.country}</div>
-          </div>`
-        );
-        const marker = new mapboxgl.Marker(el)
+        el.style.cssText = 'width:20px;height:20px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.6);';
+        new mapboxgl.Marker(el)
           .setLngLat([trek.longitude, trek.latitude])
-          .setPopup(popup)
+          .setPopup(new mapboxgl.Popup({ offset: 15 }).setHTML(
+            `<div style="padding:6px 8px;font-family:sans-serif;font-size:13px;color:#111;">
+              <strong>${trek.name}</strong>
+              <div style="color:#555;margin-top:2px;">${trek.region}, ${trek.country}</div>
+            </div>`
+          ))
           .addTo(map.current!);
-        el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
         map.current.flyTo({ center: [trek.longitude, trek.latitude], zoom: 9, essential: true });
       }
     });
