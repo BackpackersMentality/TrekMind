@@ -11,6 +11,7 @@ import { getTrekById, getItineraryAsync, getEditorialContentAsync } from "@/lib/
 import { useRoute, Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { RiskTag, getRiskTags } from "@/components/RiskTag";
 import {
   ChevronLeft, MapPin, Calendar, Mountain, Bookmark, BookOpen, ExternalLink,
   Clock, Activity, TrendingUp, Info, Sparkles, CheckCircle2,
@@ -300,17 +301,6 @@ export default function TrekDetail() {
 
   const trek = useMemo(() => trekId ? getTrekById(trekId) : null, [trekId]);
 
-  // ── All remaining hooks MUST come before any early return (Rules of Hooks) ─
-  const { getStatus, toggle } = useTrekList();
-  const trekStatus = trek ? getStatus(trek.id) : null;
-  const [bookmarkOpen, setBookmarkOpen] = useState(false);
-
-  // ── SEO meta ───────────────────────────────────────────────────────────────
-  const pageTitle       = trek ? `${trek.name} Trek Guide — ${trek.country} | TrekMind` : "Trek not found | TrekMind";
-  const pageDescription = trek ? `Plan your ${trek.name} trek in ${trek.country}. ${trek.totalDays}, ${trek.distance}, max altitude ${trek.maxAltitude || "N/A"}. ${trek.terrain} terrain in ${trek.region}.` : "";
-  const pageUrl         = `https://trekmind.pages.dev/trek/${trekId}`;
-  const pageImage       = trek ? getTrekImageUrl(trek.imageFilename) : "";
-
   if (!trek) {
     return (
       <div className="flex flex-col items-center justify-center h-[50vh]">
@@ -319,6 +309,16 @@ export default function TrekDetail() {
       </div>
     );
   }
+
+  // ── SEO meta — unique per trek page ───────────────────────────────────────
+  const pageTitle       = `${trek.name} Trek Guide — ${trek.country} | TrekMind`;
+  const pageDescription = `Plan your ${trek.name} trek in ${trek.country}. ${trek.totalDays}, ${trek.distance}, max altitude ${trek.maxAltitude || "N/A"}. ${trek.terrain} terrain in ${trek.region}.`;
+  const pageUrl         = `https://trekmind.pages.dev/trek/${trekId}`;
+  const pageImage       = getTrekImageUrl(trek.imageFilename);
+
+  const { getStatus, toggle } = useTrekList();
+  const trekStatus = trek ? getStatus(trek.id) : null;
+  const [bookmarkOpen, setBookmarkOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -378,14 +378,13 @@ export default function TrekDetail() {
 
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="text-white hover:bg-white/20"
+          <button
             onClick={() => window.history.back()}
+            className="w-12 h-12 rounded-full bg-black/40 hover:bg-black/65 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center transition-all shadow-lg"
+            aria-label="Go back"
           >
-            <ChevronLeft className="w-6 h-6" />
-          </Button>
+            <ChevronLeft className="w-7 h-7" />
+          </button>
         </div>
 
         {/* Bookmark button — top right */}
@@ -393,14 +392,14 @@ export default function TrekDetail() {
           <button
             onClick={() => setBookmarkOpen(o => !o)}
             className={cn(
-              "w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 border backdrop-blur-sm",
+              "w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 border backdrop-blur-sm shadow-lg",
               trekStatus
                 ? "bg-amber-500/80 border-amber-400/60 text-white shadow-lg shadow-amber-500/30"
                 : "bg-black/40 border-white/20 text-white/70 hover:bg-black/60 hover:text-white"
             )}
             aria-label="Save trek"
           >
-            <Bookmark className={cn("w-4 h-4 transition-all", trekStatus ? "fill-white" : "")} />
+            <Bookmark className={cn("w-5 h-5 transition-all", trekStatus ? "fill-white" : "")} />
           </button>
 
           {/* Status popover */}
@@ -490,9 +489,13 @@ export default function TrekDetail() {
             <h3 className="text-xl font-bold flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-primary" /> Risk Factors
             </h3>
-            <div className="flex flex-wrap gap-3 pt-1">
-              {(trek.maxAltitude || trek.maxAltitudeM || 0) > 3000 && <Badge variant="destructive">Altitude Risk</Badge>}
-              {(trek.permits === "Required" || trek.permits === "Restricted") && <Badge variant="secondary">Permit Required</Badge>}
+            <div className="flex flex-wrap gap-2 pt-1">
+              {getRiskTags(trek).map(type => (
+                <RiskTag key={type} type={type} />
+              ))}
+              {getRiskTags(trek).length === 0 && (
+                <p className="text-sm text-muted-foreground">No significant risk factors identified.</p>
+              )}
             </div>
           </div>
         </div>
