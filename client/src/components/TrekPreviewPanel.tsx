@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, MapPin, Clock, Mountain, Calendar, ChevronRight, ChevronLeft } from 'lucide-react';
 import { useLocation } from 'wouter';
@@ -15,14 +15,6 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [imgError, setImgError] = useState(false);
-  const navTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  // Cancel any pending navigation timer when the component unmounts
-  useEffect(() => {
-    return () => {
-      if (navTimerRef.current) clearTimeout(navTimerRef.current);
-    };
-  }, []);
 
   // Unify everything into an array
   const treksArray = Array.isArray(trek) ? trek : (trek ? [trek] : []);
@@ -159,11 +151,7 @@ export function TrekPreviewPanel({ trek, onClose }: TrekPreviewPanelProps) {
             )}
 
             <button
-              onClick={() => {
-                onClose();
-                if (navTimerRef.current) clearTimeout(navTimerRef.current);
-                navTimerRef.current = setTimeout(() => setLocation(`/trek/${currentTrek.id}`), 0);
-              }}
+              onClick={() => setLocation(`/trek/${currentTrek.id}`)}
               className="w-full py-2.5 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-all flex items-center justify-center gap-2 group"
             >
               View Full Guide
