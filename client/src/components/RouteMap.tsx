@@ -168,10 +168,6 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
 
     map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
-    // ✅ FIX 1: Use a single 'load' event — satellite-streets fires 'load' only
-    // after all sprite/glyph/tile resources are ready. Using 'style.load' +
-    // 'load' separately caused a race where terrain was added before the DEM
-    // source was accepted, leaving tiles black. One handler covers both.
     map.current.on('load', () => {
       if (!map.current) return;
 
@@ -199,7 +195,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
         'space-color': 'rgb(11,11,25)',
       });
 
-      // ── Route line ────────────────────────────────────────────────────────
+      // ── Route line (Start → Overnights → Finish only, not waypoints) ─────
       if (hasRoute) {
         const coords = geo.stops.map(s => [s.lng, s.lat]);
         const bounds = new mapboxgl.LngLatBounds();
@@ -224,6 +220,11 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
         });
 
         // ── Overnight stop markers ────────────────────────────────────────
+        // FIX: Use togglePopup() on click so popup follows the marker's
+        // rendered position (which shifts with 3D terrain exaggeration).
+        // Pure DOM onclick on the marker element fires at the flat-map
+        // hitbox position, which drifts away from the visual dot on steep
+        // terrain — togglePopup() lets Mapbox recalculate the correct anchor.
         geo.stops.forEach((stop, i) => {
           if (!map.current) return;
           const isFirst = i === 0;
@@ -242,11 +243,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             cursor:pointer;
             transition:transform 0.15s;
           `;
-          el.onmouseenter = () => (el.style.transform = 'scale(1.6)');
-          el.onmouseleave = () => (el.style.transform = 'scale(1)');
 
-          // ✅ FIX 2: Derive a display label from all possible field names,
-          // including our new 'overnight' field from itineraries_COMPLETE.json
           const label =
             stop.overnight ||
             stop._geocodedName ||
@@ -262,7 +259,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
           const popupHtml = `
             <div style="padding:8px 10px;font-family:system-ui,sans-serif;font-size:13px;color:#111;min-width:140px;max-width:200px;">
               <div style="font-weight:700;font-size:14px;margin-bottom:4px;">
-                Day ${stop.day}${isFirst ? ' · Start' : isLast ? ' · Finish' : ''}
+                Day ${stop.day}${isFirst ? ' · Start' : isLast ? ' · Finish' : ' · Overnight'}
               </div>
               <div style="color:#333;font-size:13px;margin-bottom:4px;">${label}</div>
               ${note ? `<div style="color:#555;font-size:11px;margin-bottom:3px;font-style:italic;">${note}</div>` : ''}
@@ -272,35 +269,41 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             </div>
           `;
 
-          new mapboxgl.Marker(el)
+          const popup = new mapboxgl.Popup({ offset: 14, closeButton: true, maxWidth: '220px' }).setHTML(popupHtml);
+          const marker = new mapboxgl.Marker(el)
             .setLngLat([stop.lng, stop.lat])
-            .setPopup(new mapboxgl.Popup({ offset: 14, closeButton: false, maxWidth: '220px' }).setHTML(popupHtml))
+            .setPopup(popup)
             .addTo(map.current!);
+
+          // Click opens/closes popup at the correct terrain-adjusted position
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            marker.togglePopup();
+          });
+          // Hover scale — keep rotation neutral for round markers
+          el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.6)'; });
+          el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)'; });
 
           bounds.extend([stop.lng, stop.lat]);
         });
 
-        // ── Waypoint markers (passes, summits, etc.) ──────────────────────
+        // ── Waypoint markers (passes, summits, etc.) — all blue diamonds ──
+        // Waypoints are reference points only, not part of the route line.
         waypoints.forEach(wp => {
           if (!map.current || typeof wp.lat !== 'number' || typeof wp.lng !== 'number') return;
 
-          const type = wp.type || 'landmark';
-          const colour = WP_COLOURS[type] || '#f97316';
-
-          // Diamond shape for waypoints to distinguish from round stop markers
           const el = document.createElement('div');
           el.style.cssText = `
             width:10px;height:10px;
-            background:${colour};
+            background:#3b82f6;
             border:1.5px solid white;
             box-shadow:0 2px 5px rgba(0,0,0,0.6);
             transform:rotate(45deg);
             cursor:pointer;
             transition:transform 0.15s;
           `;
-          el.onmouseenter = () => (el.style.transform = 'rotate(45deg) scale(1.8)');
-          el.onmouseleave = () => (el.style.transform = 'rotate(45deg) scale(1)');
 
+          const type = wp.type || 'landmark';
           const typeLabel: Record<string, string> = {
             pass: '🏔 Pass', summit: '▲ Summit', base_camp: '⛺ Base Camp',
             viewpoint: '👁 Viewpoint', landmark: '★ Landmark', glacier: '🧊 Glacier', hot_spring: '♨ Hot Spring',
@@ -309,16 +312,24 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
           const wpHtml = `
             <div style="padding:8px 10px;font-family:system-ui,sans-serif;font-size:13px;color:#111;min-width:140px;max-width:210px;">
               <div style="font-weight:700;font-size:13px;margin-bottom:3px;">${wp.name}</div>
-              <div style="color:${colour};font-size:11px;font-weight:600;margin-bottom:4px;">${typeLabel[type] || type}</div>
+              <div style="color:#3b82f6;font-size:11px;font-weight:600;margin-bottom:4px;">${typeLabel[type] || type}</div>
               ${wp.altM ? `<div style="color:#777;font-size:11px;">⛰ ${wp.altM.toLocaleString()}m</div>` : ''}
               ${wp.note ? `<div style="color:#555;font-size:11px;margin-top:3px;font-style:italic;">${wp.note}</div>` : ''}
             </div>
           `;
 
-          new mapboxgl.Marker(el)
+          const popup = new mapboxgl.Popup({ offset: 12, closeButton: true, maxWidth: '220px' }).setHTML(wpHtml);
+          const marker = new mapboxgl.Marker(el)
             .setLngLat([wp.lng, wp.lat])
-            .setPopup(new mapboxgl.Popup({ offset: 12, closeButton: false, maxWidth: '220px' }).setHTML(wpHtml))
+            .setPopup(popup)
             .addTo(map.current!);
+
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            marker.togglePopup();
+          });
+          el.addEventListener('mouseenter', () => { el.style.transform = 'rotate(45deg) scale(1.8)'; });
+          el.addEventListener('mouseleave', () => { el.style.transform = 'rotate(45deg) scale(1)'; });
 
           bounds.extend([wp.lng, wp.lat]);
         });
@@ -326,22 +337,23 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
         map.current.fitBounds(bounds, {
           padding: { top: 80, bottom: 100, left: 60, right: 80 },
           maxZoom: 12,
-
         });
 
       } else {
         // Fallback single marker
         const el = document.createElement('div');
-        el.style.cssText = 'width:20px;height:20px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.6);';
-        new mapboxgl.Marker(el)
+        el.style.cssText = 'width:20px;height:20px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.6);cursor:pointer;';
+        const popup = new mapboxgl.Popup({ offset: 15 }).setHTML(
+          `<div style="padding:6px 8px;font-family:sans-serif;font-size:13px;color:#111;">
+            <strong>${trek.name}</strong>
+            <div style="color:#555;margin-top:2px;">${trek.region}, ${trek.country}</div>
+          </div>`
+        );
+        const marker = new mapboxgl.Marker(el)
           .setLngLat([trek.longitude, trek.latitude])
-          .setPopup(new mapboxgl.Popup({ offset: 15 }).setHTML(
-            `<div style="padding:6px 8px;font-family:sans-serif;font-size:13px;color:#111;">
-              <strong>${trek.name}</strong>
-              <div style="color:#555;margin-top:2px;">${trek.region}, ${trek.country}</div>
-            </div>`
-          ))
+          .setPopup(popup)
           .addTo(map.current!);
+        el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
         map.current.flyTo({ center: [trek.longitude, trek.latitude], zoom: 9, essential: true });
       }
     });
@@ -390,20 +402,9 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             <span className="w-3 h-3 rounded-full bg-red-500 border border-white inline-block" />Finish
           </span>
           {(trek.waypoints?.length ?? 0) > 0 && (
-            <>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 inline-block rotate-45 bg-red-500 border border-white" style={{flexShrink:0}} />Summit
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 inline-block rotate-45 bg-blue-400 border border-white" style={{flexShrink:0}} />Pass
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 inline-block rotate-45 bg-green-500 border border-white" style={{flexShrink:0}} />Viewpoint
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 inline-block rotate-45 bg-orange-500 border border-white" style={{flexShrink:0}} />Landmark
-              </span>
-            </>
+            <span className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 inline-block rotate-45 bg-blue-500 border border-white" style={{flexShrink:0}} />Waypoint
+            </span>
           )}
           {geo.stops.some(s => s._interpolated) && (
             <span className="flex items-center gap-1.5">
