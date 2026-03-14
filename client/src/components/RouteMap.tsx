@@ -129,40 +129,38 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
     if (allHaveCoords) {
       const normStops = stops.map(s => ({ ...s, lat: s.lat ?? s.latitude, lng: s.lng ?? s.longitude }));
 
-      // Try to geocode the start location from Day 1's route string
+      // Derive start point from Day 1's route string name, but DON'T geocode it —
+      // remote trailhead names (e.g. "Cuartelwain", "Km 82") are unknown to Mapbox
+      // and return wrong results hundreds of km away.
+      // Instead: place the Start marker at a small offset behind Day 1's coords,
+      // interpolated back from the Day 1 → Day 2 vector. This keeps it geographically
+      // accurate and on the correct side of the route without any geocoding risk.
       const day1Route = stops[0]?.route || stops[0]?.sectionRoute || stops[0]?.routePaths || '';
-      const startName = parseStartName(day1Route);
+      const startName = parseStartName(day1Route) || trek.name;
 
-      if (startName && !isVague(startName) && MAPBOX_TOKEN) {
-        setGeo(prev => ({ ...prev, geocoding: true }));
-        geocode(startName, trek.country || '', trek.longitude, trek.latitude, MAPBOX_TOKEN)
-          .then(coords => {
-            const startStop = {
-              day: 0,
-              _isStart: true,
-              overnight: startName,
-              mapNote: `Trek start: ${startName}`,
-              lat: coords ? coords[1] : trek.latitude,
-              lng: coords ? coords[0] : trek.longitude,
-              _geocodedName: startName,
-              _anchored: !coords,
-            };
-            console.log(`[RouteMap] Start: "${startName}" → ${coords ? `${coords[1].toFixed(3)},${coords[0].toFixed(3)}` : 'anchored to trek centre'}`);
-            setGeo({ stops: [startStop, ...normStops], ready: true, geocoding: false });
-          });
-      } else {
-        // No parseable start — anchor to trek centre as start
-        const startStop = {
-          day: 0,
-          _isStart: true,
-          overnight: trek.name,
-          mapNote: 'Trek start (approximate)',
-          lat: trek.latitude,
-          lng: trek.longitude,
-          _anchored: true,
-        };
-        setGeo({ stops: [startStop, ...normStops], ready: true, geocoding: false });
+      const d1 = normStops[0];
+      const d2 = normStops.length > 1 ? normStops[1] : null;
+
+      // Offset start slightly "behind" Day 1 along the Day1→Day2 vector (or use Day 1 directly)
+      let startLat = d1.lat;
+      let startLng = d1.lng;
+      if (d2) {
+        // Step back 20% of the Day1→Day2 vector to place start before first camp
+        startLat = d1.lat - (d2.lat - d1.lat) * 0.2;
+        startLng = d1.lng - (d2.lng - d1.lng) * 0.2;
       }
+
+      const startStop = {
+        day: 0,
+        _isStart: true,
+        overnight: startName,
+        mapNote: `Trek start: ${startName}`,
+        lat: startLat,
+        lng: startLng,
+        _anchored: true,
+      };
+      console.log(`[RouteMap] Start: "${startName}" → interpolated at ${startLat.toFixed(3)},${startLng.toFixed(3)}`);
+      setGeo({ stops: [startStop, ...normStops], ready: true, geocoding: false });
       return;
     }
 
