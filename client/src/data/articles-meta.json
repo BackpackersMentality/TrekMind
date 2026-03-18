@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "50-best-treks-in-the-world",
+    "title": "50 Best Treks in the World: The Ultimate Trekking Bucket List",
+    "description": "A definitive ranked list of the 50 greatest multi-day trekking routes on earth — from the Annapurna Circuit to Torres del Paine, with distances, durations, and insider tips.",
+    "category": "Lists",
+    "readTime": "12 min",
+    "publishedAt": "2025-03-01",
+    "featured": true,
+    "relatedTreks": ["annapurna", "torres", "tmb", "ebc", "av1", "jmt", "huayhuash", "camino", "haute_route", "milford"]
+  },
+  {
+    "slug": "what-is-a-trek",
+    "title": "What Is a Trek? Trek vs Hike vs Backpacking vs Thru-Hiking",
+    "description": "A clear explainer on what defines a trek, how it differs from hiking, backpacking, and thru-hiking — with examples of famous routes and advice for beginners.",
+    "category": "Guides",
+    "readTime": "7 min",
+    "publishedAt": "2025-03-01",
+    "featured": false,
+    "relatedTreks": ["annapurna", "tmb", "camino", "pct", "appalachian"]
+  },
+  {
+    "slug": "best-multi-day-treks-for-beginners",
+    "title": "10 Best Multi-Day Treks for Beginners",
+    "description": "The ten best introductory multi-day trekking routes worldwide — accessible, well-supported, and spectacular. Everything a first-time trekker needs to know.",
+    "category": "Lists",
+    "readTime": "9 min",
+    "publishedAt": "2025-03-01",
+    "featured": true,
+    "relatedTreks": ["tmb", "laugavegur", "milford", "av1", "salkantay", "routeburn", "whw", "kungsleden", "tongariro"]
+  },
+  {
+    "slug": "best-treks-in-patagonia",
+    "title": "Best Treks in Patagonia: The Complete Guide",
+    "description": "Everything you need to know about trekking in Patagonia — Torres del Paine, Fitz Roy, Huemul Circuit, Dientes de Navarino — with planning tips and seasonal advice.",
+    "category": "Destinations",
+    "readTime": "8 min",
+    "publishedAt": "2025-03-01",
+    "featured": true,
+    "relatedTreks": ["torres", "huemel", "fitz_roy", "dientes", "cerro_castillo"]
+  },
+  {
+    "slug": "best-himalayan-treks",
+    "title": "The Best Treks in the Himalayas",
+    "description": "The definitive guide to Himalayan trekking — Everest Base Camp, Annapurna Circuit, Manaslu, Gokyo Lakes, the Snowman Trek — with altitude advice and cultural context.",
+    "category": "Destinations",
+    "readTime": "11 min",
+    "publishedAt": "2025-03-01",
+    "featured": true,
+    "relatedTreks": ["ebc", "annapurna", "manaslu", "markha", "gokyo", "snowman", "kanchenjunga", "makalu_bc"]
+  },
+  {
+    "slug": "best-hut-to-hut-treks-europe",
+    "title": "Best Hut-to-Hut Treks in Europe",
+    "description": "A complete guide to alpine hut trekking in Europe — Tour du Mont Blanc, Alta Via 1, Walker's Haute Route, GR20, Julian Alps — with booking tips and gear advice.",
+    "category": "Destinations",
+    "readTime": "9 min",
+    "publishedAt": "2025-03-01",
+    "featured": false,
+    "relatedTreks": ["tmb", "av1", "haute_route", "av2", "gr20", "berliner", "monte_rosa"]
+  },
+  {
+    "slug": "how-to-plan-a-multi-day-trek",
+    "title": "How to Plan a Multi-Day Trek: The Complete Planning Guide",
+    "description": "A practical step-by-step guide to planning your first or next multi-day trek — route selection, fitness prep, gear, permits, weather, safety, and logistics.",
+    "category": "Guides",
+    "readTime": "10 min",
+    "publishedAt": "2025-03-01",
+    "featured": false,
+    "relatedTreks": ["tmb", "ebc", "milford", "inca", "salkantay"]
+  },
+  {
+    "slug": "best-treks-in-south-america",
+    "title": "The Best Treks in South America",
+    "description": "The top multi-day trekking routes across Peru, Chile, Argentina, Bolivia and Ecuador — from the Inca Trail to Huayhuash, Torres del Paine to the Ausangate Circuit.",
+    "category": "Destinations",
+    "readTime": "10 min",
+    "publishedAt": "2025-03-01",
+    "featured": false,
+    "relatedTreks": ["inca", "huayhuash", "torres", "salkantay", "huemel", "santa_cruz", "ausangate", "quilotoa", "cordillera"]
+  },
+  {
+    "slug": "best-treks-in-canada",
+    "title": "Best Treks in Canada: Wilderness Routes from Coast to Coast",
+    "description": "Canada's greatest multi-day trekking routes — West Coast Trail, Rockwall Trail, Skyline Trail, Tombstone Territorial Park, and Berg Lake — with wilderness trekking advice.",
+    "category": "Destinations",
+    "readTime": "9 min",
+    "publishedAt": "2025-03-01",
+    "featured": false,
+    "relatedTreks": ["west-coast-trail", "rockwall", "skyline", "tombstone", "berg_lake"]
+  },
+  {
+    "slug": "ultimate-trekking-bucket-list",
+    "title": "The Ultimate Trekking Bucket List: 100 Greatest Treks on Earth",
+    "description": "The complete trekker's bucket list — 100 of the world's greatest multi-day routes across six continents, from beginner circuits to extreme wilderness expeditions.",
+    "category": "Lists",
+    "readTime": "13 min",
+    "publishedAt": "2025-03-01",
+    "featured": true,
+    "relatedTreks": ["ebc", "annapurna", "torres", "tmb", "jmt", "huayhuash", "milford", "gr20", "camino", "pct"]
+  }
+]
