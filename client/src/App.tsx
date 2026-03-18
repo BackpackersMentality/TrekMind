@@ -7,13 +7,20 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
 
 // ── Route-level code splitting ─────────────────────────────────────────────────
-const Home       = lazy(() => import("@/pages/Home"));
-const TrekDetail = lazy(() => import("@/pages/TrekDetail"));
-const TrekFinder = lazy(() => import("@/pages/TrekFinder"));
-const Top100     = lazy(() => import("@/pages/Top100"));
-const About      = lazy(() => import("@/pages/About"));
-const MyTreks    = lazy(() => import("@/pages/MyTreks"));
-const NotFound   = lazy(() => import("@/pages/not-found"));
+const Home          = lazy(() => import("@/pages/Home"));
+const TrekDetail    = lazy(() => import("@/pages/TrekDetail"));
+const TrekFinder    = lazy(() => import("@/pages/TrekFinder"));
+const Top100        = lazy(() => import("@/pages/Top100"));
+const About         = lazy(() => import("@/pages/About"));
+const MyTreks       = lazy(() => import("@/pages/MyTreks"));
+const Articles      = lazy(() => import("@/pages/Articles"));
+const ArticleDetail = lazy(() => import("@/pages/ArticleDetail"));
+const RegionPage    = lazy(() => import("@/pages/RegionPage"));
+const CountryPage   = lazy(() => import("@/pages/CountryPage"));
+const ContinentPage = lazy(() => import("@/pages/ContinentPage"));
+const DurationPage  = lazy(() => import("@/pages/DurationPage"));
+const TierPage      = lazy(() => import("@/pages/TierPage"));
+const NotFound      = lazy(() => import("@/pages/not-found"));
 
 // ── Skeleton shown while a page chunk downloads ───────────────────────────────
 function PageSkeleton() {
@@ -56,17 +63,47 @@ function SuspendedMyTreks(props: any) {
 function SuspendedNotFound(props: any) {
   return <Suspense fallback={<PageSkeleton />}><NotFound {...props} /></Suspense>;
 }
+function SuspendedArticles(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><Articles {...props} /></Suspense>;
+}
+function SuspendedArticleDetail(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><ArticleDetail {...props} /></Suspense>;
+}
+function SuspendedRegionPage(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><RegionPage {...props} /></Suspense>;
+}
+function SuspendedCountryPage(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><CountryPage {...props} /></Suspense>;
+}
+function SuspendedContinentPage(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><ContinentPage {...props} /></Suspense>;
+}
+function SuspendedDurationPage(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><DurationPage {...props} /></Suspense>;
+}
+function SuspendedTierPage(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><TierPage {...props} /></Suspense>;
+}
 
 function Router() {
   return (
     <Switch>
-      <Route path="/"            component={SuspendedHome} />
-      <Route path="/trek/:id"    component={SuspendedTrekDetail} />
-      <Route path="/trek-finder" component={SuspendedTrekFinder} />
-      <Route path="/top-100"     component={SuspendedTop100} />
-      <Route path="/about"       component={SuspendedAbout} />
-      <Route path="/my-treks"    component={SuspendedMyTreks} />
-      <Route                     component={SuspendedNotFound} />
+      <Route path="/"                       component={SuspendedHome} />
+      <Route path="/trek/:id"               component={SuspendedTrekDetail} />
+      <Route path="/trek-finder"            component={SuspendedTrekFinder} />
+      <Route path="/top-100"                component={SuspendedTop100} />
+      <Route path="/about"                  component={SuspendedAbout} />
+      <Route path="/my-treks"               component={SuspendedMyTreks} />
+      {/* Articles */}
+      <Route path="/articles"              component={SuspendedArticles} />
+      <Route path="/articles/:slug"        component={SuspendedArticleDetail} />
+      {/* Programmatic SEO pages */}
+      <Route path="/treks/region/:slug"    component={SuspendedRegionPage} />
+      <Route path="/treks/country/:slug"   component={SuspendedCountryPage} />
+      <Route path="/treks/continent/:slug" component={SuspendedContinentPage} />
+      <Route path="/treks/duration/:slug"  component={SuspendedDurationPage} />
+      <Route path="/treks/tier/:slug"      component={SuspendedTierPage} />
+      <Route                               component={SuspendedNotFound} />
     </Switch>
   );
 }
