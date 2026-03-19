@@ -36,6 +36,7 @@ export function getArticlesByCategory(category: string): ArticleMeta[] {
 // Map of slug → numeric prefix used in the repo filenames
 // Tries prefixed filename first, then bare slug as fallback
 const SLUG_PREFIX: Record<string, string> = {
+  // Batch 1
   '50-best-treks-in-the-world':         '01-',
   'what-is-a-trek':                     '02-',
   'best-multi-day-treks-for-beginners': '03-',
@@ -46,6 +47,7 @@ const SLUG_PREFIX: Record<string, string> = {
   'best-treks-in-south-america':        '08-',
   'best-treks-in-canada':               '09-',
   'ultimate-trekking-bucket-list':      '10-',
+  // Batch 2 — no numeric prefix (deployed as slug.md directly)
 };
 
 export async function loadArticleContent(slug: string): Promise<string | null> {
