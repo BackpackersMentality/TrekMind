@@ -13,12 +13,13 @@ function TrekCard({ trekId }: { trekId: string }) {
 
   return (
     <Link href={`/trek/${trekId}`}>
-      <div className="group flex items-center gap-3 p-3 bg-card border border-border rounded-xl hover:border-primary/40 hover:shadow-sm transition-all">
+      <div className="group flex items-center gap-3 p-3 bg-card border border-border rounded-xl hover:border-primary/40 hover:shadow-sm transition-all cursor-pointer">
         <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-muted">
           <img
             src={getTrekImageUrl(trek.imageFilename)}
             alt={trek.name}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
           />
         </div>
         <div className="min-w-0 flex-1">
@@ -65,7 +66,7 @@ export default function ArticleDetail() {
     );
   }
 
-  const pageUrl = `https://trekmind.pages.dev/articles/${slug}`;
+  const pageUrl = `https://trekmind.app/articles/${slug}`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -77,7 +78,7 @@ export default function ArticleDetail() {
         <meta property="og:url"         content={pageUrl} />
         <meta property="og:title"       content={meta.title} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:image"       content="https://trekmind.pages.dev/og-image.jpg" />
+        <meta property="og:image"       content="https://trekmind.app/og-image.jpg" />
         <meta name="twitter:card"        content="summary_large_image" />
         <meta name="twitter:title"       content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
@@ -91,14 +92,14 @@ export default function ArticleDetail() {
           "publisher": {
             "@type": "Organization",
             "name": "TrekMind",
-            "url": "https://trekmind.pages.dev"
+            "url": "https://trekmind.app"
           }
         })}</script>
       </Helmet>
 
       {/* Sticky nav bar */}
       <div className="sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border px-4 py-3">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/articles">
             <button className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <ArrowLeft className="w-4 h-4" />
@@ -112,12 +113,12 @@ export default function ArticleDetail() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12">
+      {/* Main layout: prose + sidebar */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 overflow-x-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-8 lg:gap-12">
 
-          {/* Main article content */}
-          <main>
-            {/* Category tag */}
+          {/* Article content */}
+          <main className="min-w-0 overflow-x-hidden">
             <div className="flex items-center gap-2 mb-4">
               <BookOpen className="w-4 h-4 text-primary" />
               <span className="text-sm font-semibold text-primary uppercase tracking-wide">{meta.category}</span>
@@ -129,30 +130,33 @@ export default function ArticleDetail() {
                 <div className="h-4 bg-muted/30 rounded w-full" />
                 <div className="h-4 bg-muted/30 rounded w-5/6" />
                 <div className="h-4 bg-muted/30 rounded w-4/5" />
+                <div className="h-4 bg-muted/30 rounded w-full" />
+                <div className="h-4 bg-muted/30 rounded w-3/4" />
               </div>
             )}
 
             {!loading && content && (
               <div
-                className="prose-trekmind"
+                className="article-prose break-words"
+                style={{ overflowWrap: 'break-word', wordBreak: 'break-word' }}
                 dangerouslySetInnerHTML={{ __html: markdownToHtml(content) }}
               />
             )}
 
             {!loading && !content && (
               <div className="py-12 text-center text-muted-foreground">
-                <p>Article content unavailable. Please try again later.</p>
+                <BookOpen className="w-10 h-10 mx-auto mb-3 opacity-30" />
+                <p className="font-medium">Article content unavailable</p>
+                <p className="text-sm mt-1">Please check back shortly or explore the globe.</p>
               </div>
             )}
           </main>
 
           {/* Sidebar */}
-          <aside className="space-y-8">
-
-            {/* Related treks */}
+          <aside className="space-y-6 min-w-0">
             {meta.relatedTreks.length > 0 && (
-              <div className="sticky top-20">
-                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">
+              <div className="lg:sticky lg:top-20">
+                <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-3">
                   Treks in this article
                 </h3>
                 <div className="space-y-2">
@@ -160,22 +164,21 @@ export default function ArticleDetail() {
                     <TrekCard key={id} trekId={id} />
                   ))}
                 </div>
-
-                <div className="mt-6 pt-6 border-t border-border">
+                <div className="mt-5 pt-5 border-t border-border">
                   <Link href="/">
-                    <button className="w-full py-3 bg-primary text-primary-foreground text-sm font-semibold rounded-xl hover:bg-primary/90 transition-colors">
+                    <button className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-xl hover:bg-primary/90 transition-colors">
                       Explore All Treks on Globe →
                     </button>
                   </Link>
                 </div>
               </div>
             )}
-
           </aside>
+
         </div>
 
         {/* Bottom nav */}
-        <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-14 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link href="/articles">
             <button className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
               <ArrowLeft className="w-4 h-4" />
