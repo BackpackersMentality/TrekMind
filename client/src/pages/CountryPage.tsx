@@ -1,7 +1,7 @@
 // pages/CountryPage.tsx
 import { useRoute } from 'wouter';
 import { getCountryPageData } from '@/lib/seo-pages';
-import SEOPage from '@/components/SEOPage';
+import SEOPage from '@/pages/SEOPage';
 
 export default function CountryPage() {
   const [, params] = useRoute('/treks/country/:slug');
