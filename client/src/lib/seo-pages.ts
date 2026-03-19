@@ -1,168 +1,289 @@
-// SEOPage.tsx
-// Universal page component for all programmatic SEO pages:
-// region, country, continent, duration bracket, and tier pages.
-// Accepts SEOPageData and renders consistently with full SEO meta.
+// lib/seo-pages.ts
+// Derives all programmatic SEO page data from treks.json at runtime.
+// No manual maintenance required — adding a trek to treks.json
+// automatically creates new region/country/category pages.
 
-import { Link } from 'wouter';
-import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Mountain, ArrowRight, ChevronRight } from 'lucide-react';
-import { type SEOPageData } from '@/lib/seo-pages';
-import { getTrekImageUrl } from '@/lib/images';
+import { getAllTreks } from './treks';
 
-function TrekListCard({ trek }: { trek: any }) {
-  const tierColour = {
-    1: 'bg-amber-400',
-    2: 'bg-blue-400',
-    3: 'bg-slate-400',
-    4: 'bg-violet-400',
-  }[trek.tier as 1|2|3|4] ?? 'bg-blue-400';
+// ── Continent mapping ─────────────────────────────────────────────────────────
+const COUNTRY_TO_CONTINENT: Record<string, string> = {
+  // Asia
+  Nepal: 'Asia', India: 'Asia', Bhutan: 'Asia', Pakistan: 'Asia',
+  China: 'Asia', Japan: 'Asia', Kyrgyzstan: 'Asia', Georgia: 'Asia',
+  Russia: 'Asia', 'Hong Kong': 'Asia',
+  // Middle East
+  Jordan: 'Middle East', Turkey: 'Middle East', Israel: 'Middle East',
+  // Europe
+  France: 'Europe', Italy: 'Europe', Switzerland: 'Europe', Spain: 'Europe',
+  Austria: 'Europe', Slovenia: 'Europe', Scotland: 'Europe', Portugal: 'Europe',
+  Sweden: 'Europe', Norway: 'Europe', Iceland: 'Europe', Albania: 'Europe',
+  Montenegro: 'Europe', Corsica: 'Europe', UK: 'Europe',
+  // South America
+  Peru: 'South America', Chile: 'South America', Argentina: 'South America',
+  Bolivia: 'South America', Colombia: 'South America', Ecuador: 'South America',
+  Venezuela: 'South America', Brazil: 'South America',
+  // North America
+  USA: 'North America', Canada: 'North America', Mexico: 'North America',
+  // Africa
+  Tanzania: 'Africa', Kenya: 'Africa', Ethiopia: 'Africa',
+  'South Africa': 'Africa', Namibia: 'Africa', Uganda: 'Africa', Morocco: 'Africa',
+  // Oceania
+  'New Zealand': 'Oceania', Australia: 'Oceania',
+};
 
-  const tierLabel = {
-    1: 'Iconic', 2: 'Legendary', 3: 'Remote', 4: 'Thru-Hike',
-  }[trek.tier as 1|2|3|4] ?? 'Trek';
-
-  return (
-    <Link href={`/trek/${trek.id}`}>
-      <article className="group flex gap-4 p-4 bg-card border border-border rounded-xl hover:border-primary/40 hover:shadow-md transition-all duration-200">
-        {/* Image */}
-        <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0 bg-muted">
-          <img
-            src={getTrekImageUrl(trek.imageFilename)}
-            alt={trek.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            loading="lazy"
-          />
-        </div>
-
-        {/* Info */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <span className={`w-2 h-2 rounded-full ${tierColour} shrink-0`} />
-            <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{tierLabel}</span>
-          </div>
-          <h3 className="font-bold text-foreground group-hover:text-primary transition-colors truncate">
-            {trek.name}
-          </h3>
-          <div className="flex items-center gap-3 text-xs text-muted-foreground mt-1 flex-wrap">
-            <span className="flex items-center gap-1">
-              <MapPin className="w-3 h-3" />{trek.region}, {trek.country}
-            </span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-3 h-3" />{trek.totalDays}
-            </span>
-            {trek.maxAltitude && (
-              <span className="flex items-center gap-1">
-                <Mountain className="w-3 h-3" />{trek.maxAltitude}
-              </span>
-            )}
-          </div>
-          {trek.keyFeatures && (
-            <p className="text-xs text-muted-foreground mt-1.5 line-clamp-1">{trek.keyFeatures}</p>
-          )}
-        </div>
-
-        <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 self-center transition-colors" />
-      </article>
-    </Link>
-  );
+// ── Slug helpers ──────────────────────────────────────────────────────────────
+export function toSlug(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/['']/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 }
 
-interface SEOPageProps {
-  data: SEOPageData;
-  pageUrl: string;
+export function fromSlug(slug: string): string {
+  return slug
+    .split('-')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ');
 }
 
-export default function SEOPage({ data, pageUrl }: SEOPageProps) {
-  return (
-    <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{data.title}</title>
-        <meta name="description" content={data.description} />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type"        content="website" />
-        <meta property="og:url"         content={pageUrl} />
-        <meta property="og:title"       content={data.title} />
-        <meta property="og:description" content={data.description} />
-        <meta property="og:image"       content="https://trekmind.pages.dev/og-image.jpg" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          "name": data.h1,
-          "description": data.description,
-          "url": pageUrl,
-        })}</script>
-      </Helmet>
+// ── Duration brackets ─────────────────────────────────────────────────────────
+export interface DurationBracket {
+  slug: string;
+  label: string;
+  min: number;
+  max: number;
+  searchLabel: string;
+}
 
-      {/* Header */}
-      <div className="bg-foreground text-background relative overflow-hidden py-10 px-4">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20" />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-5xl mx-auto relative z-10">
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-1 text-white/50 text-xs mb-4 flex-wrap">
-            {data.breadcrumb.map((crumb, i) => (
-              <span key={crumb.href} className="flex items-center gap-1">
-                {i > 0 && <ChevronRight className="w-3 h-3" />}
-                {i < data.breadcrumb.length - 1 ? (
-                  <Link href={crumb.href}>
-                    <span className="hover:text-white/80 transition-colors cursor-pointer">{crumb.label}</span>
-                  </Link>
-                ) : (
-                  <span className="text-white/80">{crumb.label}</span>
-                )}
-              </span>
-            ))}
-          </nav>
+export const DURATION_BRACKETS: DurationBracket[] = [
+  { slug: '1-3-day-treks',  label: '1–3 Day Treks',  min: 1,  max: 3,   searchLabel: 'weekend treks' },
+  { slug: '4-5-day-treks',  label: '4–5 Day Treks',  min: 4,  max: 5,   searchLabel: '4 day trekking routes' },
+  { slug: '6-7-day-treks',  label: '6–7 Day Treks',  min: 6,  max: 7,   searchLabel: 'week-long treks' },
+  { slug: '8-10-day-treks', label: '8–10 Day Treks', min: 8,  max: 10,  searchLabel: '10 day trekking routes' },
+  { slug: '11-14-day-treks',label: '11–14 Day Treks',min: 11, max: 14,  searchLabel: '2 week treks' },
+  { slug: '15-plus-day-treks', label: '15+ Day Treks', min: 15, max: 999, searchLabel: 'long distance treks' },
+];
 
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{data.h1}</h1>
-          <p className="text-white/70 max-w-2xl">{data.intro}</p>
-          <p className="text-white/40 text-sm mt-2">{data.treks.length} routes</p>
-        </div>
-      </div>
+function getTrekDays(trek: any): number {
+  const raw = trek.totalDays ?? trek.durationDays ?? '';
+  const match = String(raw).match(/\d+/);
+  return match ? parseInt(match[0]) : 0;
+}
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-10">
+// ── Page data types ───────────────────────────────────────────────────────────
+export interface SEOPageData {
+  slug: string;
+  title: string;
+  description: string;
+  h1: string;
+  intro: string;
+  treks: any[];
+  breadcrumb: { label: string; href: string }[];
+  relatedPages: { label: string; href: string }[];
+}
 
-          {/* Trek list */}
-          <div className="space-y-3">
-            {data.treks.map(trek => (
-              <TrekListCard key={trek.id} trek={trek} />
-            ))}
-          </div>
+// ── Region pages ──────────────────────────────────────────────────────────────
+export function getAllRegions(): { slug: string; name: string; count: number }[] {
+  const treks = getAllTreks();
+  const map: Record<string, number> = {};
+  for (const t of treks) {
+    const r = t.region?.trim();
+    if (r) map[r] = (map[r] || 0) + 1;
+  }
+  return Object.entries(map)
+    .map(([name, count]) => ({ slug: toSlug(name), name, count }))
+    .sort((a, b) => b.count - a.count);
+}
 
-          {/* Sidebar: related pages */}
-          <aside className="space-y-6">
-            <div className="sticky top-6">
-              {data.relatedPages.length > 0 && (
-                <div className="bg-card border border-border rounded-xl p-5">
-                  <h3 className="text-sm font-bold text-foreground uppercase tracking-wider mb-4">
-                    Related
-                  </h3>
-                  <div className="space-y-2">
-                    {data.relatedPages.map(page => (
-                      <Link key={page.href} href={page.href}>
-                        <div className="flex items-center justify-between py-2 px-3 rounded-lg hover:bg-muted transition-colors text-sm text-muted-foreground hover:text-foreground">
-                          {page.label}
-                          <ChevronRight className="w-3.5 h-3.5 shrink-0" />
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+export function getRegionPageData(slug: string): SEOPageData | null {
+  const treks = getAllTreks();
+  const regionTreks = treks.filter(t => toSlug(t.region ?? '') === slug);
+  if (regionTreks.length === 0) return null;
 
-              <div className="mt-4 bg-primary/5 border border-primary/20 rounded-xl p-4 text-center">
-                <p className="text-sm text-muted-foreground mb-3">Explore all treks on the interactive globe</p>
-                <Link href="/">
-                  <button className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary/90 transition-colors">
-                    Open Globe →
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </div>
-  );
+  const name = regionTreks[0].region;
+  const continent = COUNTRY_TO_CONTINENT[regionTreks[0].country] ?? 'the World';
+
+  return {
+    slug,
+    title: `Best Treks in ${name} | TrekMind`,
+    description: `Explore the ${regionTreks.length} best multi-day trekking routes in ${name}. Detailed itineraries, interactive maps, and gear guides for every trek.`,
+    h1: `Best Treks in ${name}`,
+    intro: `${name} is home to ${regionTreks.length} of the world's greatest multi-day trekking routes. From iconic classics to remote wilderness circuits, here is the complete guide to trekking in ${name}.`,
+    treks: regionTreks,
+    breadcrumb: [
+      { label: 'Home', href: '/' },
+      { label: continent, href: `/treks/continent/${toSlug(continent)}` },
+      { label: name, href: `/treks/region/${slug}` },
+    ],
+    relatedPages: getAllRegions()
+      .filter(r => r.slug !== slug)
+      .slice(0, 6)
+      .map(r => ({ label: r.name, href: `/treks/region/${r.slug}` })),
+  };
+}
+
+// ── Country pages ─────────────────────────────────────────────────────────────
+export function getAllCountries(): { slug: string; name: string; count: number }[] {
+  const treks = getAllTreks();
+  const map: Record<string, number> = {};
+  for (const t of treks) {
+    const c = t.country?.trim();
+    if (c) map[c] = (map[c] || 0) + 1;
+  }
+  return Object.entries(map)
+    .map(([name, count]) => ({ slug: toSlug(name), name, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getCountryPageData(slug: string): SEOPageData | null {
+  const treks = getAllTreks();
+  const countryTreks = treks.filter(t => toSlug(t.country ?? '') === slug);
+  if (countryTreks.length === 0) return null;
+
+  const name = countryTreks[0].country;
+  const continent = COUNTRY_TO_CONTINENT[name] ?? 'the World';
+
+  return {
+    slug,
+    title: `Best Treks in ${name} | TrekMind`,
+    description: `The ${countryTreks.length} greatest multi-day trekking routes in ${name}. Complete itineraries, route maps, and planning guides for every trek.`,
+    h1: `Best Treks in ${name}`,
+    intro: `${name} is one of the world's premier trekking destinations. These are the ${countryTreks.length} routes that define multi-day walking in ${name} — ranked, mapped, and ready to plan.`,
+    treks: countryTreks,
+    breadcrumb: [
+      { label: 'Home', href: '/' },
+      { label: continent, href: `/treks/continent/${toSlug(continent)}` },
+      { label: name, href: `/treks/country/${slug}` },
+    ],
+    relatedPages: getAllCountries()
+      .filter(c => c.slug !== slug)
+      .slice(0, 6)
+      .map(c => ({ label: c.name, href: `/treks/country/${c.slug}` })),
+  };
+}
+
+// ── Continent pages ───────────────────────────────────────────────────────────
+export function getAllContinents(): { slug: string; name: string; count: number }[] {
+  const treks = getAllTreks();
+  const map: Record<string, number> = {};
+  for (const t of treks) {
+    const cont = COUNTRY_TO_CONTINENT[t.country?.trim() ?? ''];
+    if (cont) map[cont] = (map[cont] || 0) + 1;
+  }
+  return Object.entries(map)
+    .map(([name, count]) => ({ slug: toSlug(name), name, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getContinentPageData(slug: string): SEOPageData | null {
+  const treks = getAllTreks();
+  const contTreks = treks.filter(t => {
+    const cont = COUNTRY_TO_CONTINENT[t.country?.trim() ?? ''];
+    return toSlug(cont ?? '') === slug;
+  });
+  if (contTreks.length === 0) return null;
+
+  const name = fromSlug(slug);
+  const countries = [...new Set(contTreks.map(t => t.country))];
+
+  return {
+    slug,
+    title: `Best Treks in ${name} | TrekMind`,
+    description: `The ${contTreks.length} greatest multi-day trekking routes across ${name} — spanning ${countries.length} countries. Full itineraries, maps, and planning guides.`,
+    h1: `Best Treks in ${name}`,
+    intro: `${name} contains some of the world's most celebrated and remote multi-day trekking routes, spanning ${countries.length} countries. These are the ${contTreks.length} routes that define great trekking across the continent.`,
+    treks: contTreks,
+    breadcrumb: [
+      { label: 'Home', href: '/' },
+      { label: name, href: `/treks/continent/${slug}` },
+    ],
+    relatedPages: getAllContinents()
+      .filter(c => c.slug !== slug)
+      .map(c => ({ label: c.name, href: `/treks/continent/${c.slug}` })),
+  };
+}
+
+// ── Duration pages ────────────────────────────────────────────────────────────
+export function getDurationPageData(slug: string): SEOPageData | null {
+  const bracket = DURATION_BRACKETS.find(b => b.slug === slug);
+  if (!bracket) return null;
+
+  const treks = getAllTreks().filter(t => {
+    const d = getTrekDays(t);
+    return d >= bracket.min && d <= bracket.max;
+  });
+
+  return {
+    slug,
+    title: `${bracket.label} | TrekMind`,
+    description: `${treks.length} of the world's best ${bracket.label.toLowerCase()} — ${bracket.searchLabel} with full itineraries, route maps, and planning guides.`,
+    h1: bracket.label,
+    intro: `Looking for ${bracket.searchLabel}? These ${treks.length} routes fit your timeframe — each with complete day-by-day itineraries, interactive route maps, and difficulty ratings.`,
+    treks,
+    breadcrumb: [
+      { label: 'Home', href: '/' },
+      { label: 'Treks by Duration', href: '/treks/duration' },
+      { label: bracket.label, href: `/treks/duration/${slug}` },
+    ],
+    relatedPages: DURATION_BRACKETS
+      .filter(b => b.slug !== slug)
+      .map(b => ({ label: b.label, href: `/treks/duration/${b.slug}` })),
+  };
+}
+
+// ── Tier/difficulty pages ─────────────────────────────────────────────────────
+export interface TierInfo {
+  tier: number;
+  slug: string;
+  label: string;
+  description: string;
+  searchLabel: string;
+}
+
+export const TIER_INFO: TierInfo[] = [
+  {
+    tier: 1, slug: 'iconic', label: 'Tier 1 — Iconic Treks',
+    description: 'The most celebrated multi-day trekking routes in the world — globally recognised classics with excellent infrastructure.',
+    searchLabel: 'iconic trekking routes'
+  },
+  {
+    tier: 2, slug: 'legendary', label: 'Tier 2 — Legendary Treks',
+    description: 'Demanding, remote, or technically challenging routes known to serious trekkers worldwide.',
+    searchLabel: 'legendary trekking routes'
+  },
+  {
+    tier: 3, slug: 'remote', label: 'Tier 3 — Remote & Specialist Treks',
+    description: 'Expedition-level routes requiring serious experience, self-sufficiency, and remote wilderness skills.',
+    searchLabel: 'remote wilderness treks'
+  },
+  {
+    tier: 4, slug: 'thru-hikes', label: 'Tier 4 — Thru-Hikes',
+    description: 'Long-distance routes designed for continuous thru-hiking — weeks to months of sustained walking.',
+    searchLabel: 'thru-hiking trails'
+  },
+];
+
+export function getTierPageData(slug: string): SEOPageData | null {
+  const tierInfo = TIER_INFO.find(t => t.slug === slug);
+  if (!tierInfo) return null;
+
+  const treks = getAllTreks().filter(t => t.tier === tierInfo.tier);
+
+  return {
+    slug,
+    title: `${tierInfo.label} | TrekMind`,
+    description: `${treks.length} ${tierInfo.searchLabel} with complete itineraries, route maps, and gear guides. ${tierInfo.description}`,
+    h1: tierInfo.label,
+    intro: tierInfo.description,
+    treks,
+    breadcrumb: [
+      { label: 'Home', href: '/' },
+      { label: 'Treks by Tier', href: '/treks/tier' },
+      { label: tierInfo.label, href: `/treks/tier/${slug}` },
+    ],
+    relatedPages: TIER_INFO
+      .filter(t => t.slug !== slug)
+      .map(t => ({ label: t.label, href: `/treks/tier/${t.slug}` })),
+  };
 }
