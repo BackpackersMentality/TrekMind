@@ -1,6 +1,6 @@
 import { useRoute } from 'wouter';
 import { getContinentPageData } from '@/lib/seo-pages';
-import SEOPage from '@/components/SEOPage';
+import SEOPage from '@/pages/SEOPage';
 
 export default function ContinentPage() {
   const [, params] = useRoute('/treks/continent/:slug');
