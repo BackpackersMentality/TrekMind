@@ -1,7 +1,7 @@
 // pages/RegionPage.tsx
 import { useRoute } from 'wouter';
 import { getRegionPageData } from '@/lib/seo-pages';
-import SEOPage from '@/components/SEOPage';
+import SEOPage from '@/pages/SEOPage';
 
 export default function RegionPage() {
   const [, params] = useRoute('/treks/region/:slug');
