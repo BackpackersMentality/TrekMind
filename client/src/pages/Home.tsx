@@ -2,7 +2,7 @@ import { useState, useMemo, useCallback, lazy, Suspense } from "react";
 import { Link, useLocation } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
-import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck, BookOpen } from "lucide-react";
+import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterTreks } from "@/lib/filterTreks";
 import { Helmet } from "react-helmet-async";
@@ -84,7 +84,16 @@ export default function Home() {
 
       {/* ── Header ──────────────────────────────────────────────────────────── */}
       <header className="bg-foreground text-background py-2.5 md:py-3 px-4 relative overflow-hidden shrink-0 z-10">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        {/* LCP fix: <img> instead of CSS background — browser preloads this immediately */}
+        <img
+          src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=75"
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex items-center justify-between gap-3">
@@ -138,12 +147,6 @@ export default function Home() {
                 </button>
               </Link>
 
-              <Link href="/articles">
-                <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap">
-                  <BookOpen className="w-3 h-3 shrink-0" />
-                  <span className="hidden sm:inline">Articles</span>
-                </button>
-              </Link>
               <Link href="/about">
                 <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap">
                   <Info className="w-3 h-3 shrink-0" />
