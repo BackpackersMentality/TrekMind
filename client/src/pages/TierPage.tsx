@@ -1,6 +1,6 @@
 import { useRoute } from 'wouter';
 import { getTierPageData } from '@/lib/seo-pages';
-import SEOPage from '@/components/SEOPage';
+import SEOPage from '@/pages/SEOPage';
 
 export default function TierPage() {
   const [, params] = useRoute('/treks/tier/:slug');
