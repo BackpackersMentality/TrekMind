@@ -2,7 +2,7 @@ import { useState, useMemo, useCallback, lazy, Suspense } from "react";
 import { Link, useLocation } from "wouter";
 import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
-import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck } from "lucide-react";
+import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck, BookOpen } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
 import { filterTreks } from "@/lib/filterTreks";
 import { Helmet } from "react-helmet-async";
@@ -123,22 +123,28 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Action buttons */}
+            {/* Action buttons — compact on mobile, labelled on desktop */}
             <div className="flex items-center gap-1.5 shrink-0">
+
+              {/* Top 100 — amber pill, always visible */}
               <Link href="/top-100">
-                <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-amber-500/90 hover:bg-amber-400 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-amber-300/20 whitespace-nowrap">
+                <button
+                  className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-amber-500/90 hover:bg-amber-400 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-amber-300/20 whitespace-nowrap"
+                  aria-label="Top 100 Treks"
+                >
                   <Trophy className="w-3 h-3 shrink-0" />
-                  <span className="hidden xs:inline">Top 100</span>
-                  <span className="xs:hidden">100</span>
+                  <span className="hidden sm:inline">Top 100</span>
                 </button>
               </Link>
 
-              {/* My Treks — shows count badge when treks are saved */}
+              {/* My Treks — icon only on mobile, label on sm+ */}
               <Link href="/my-treks">
-                <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap relative">
+                <button
+                  className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap relative"
+                  aria-label="My Treks"
+                >
                   <BookmarkCheck className="w-3 h-3 shrink-0" />
                   <span className="hidden sm:inline">My Treks</span>
-                  {/* Badge showing completed count */}
                   {counts.completed > 0 && (
                     <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-amber-500 text-white text-[9px] font-bold flex items-center justify-center leading-none">
                       {counts.completed > 9 ? "9+" : counts.completed}
@@ -147,12 +153,28 @@ export default function Home() {
                 </button>
               </Link>
 
-              <Link href="/about">
-                <button className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap">
-                  <Info className="w-3 h-3 shrink-0" />
-                  <span>About</span>
+              {/* Articles — book icon only on mobile, label on md+ */}
+              <Link href="/articles">
+                <button
+                  className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap"
+                  aria-label="Articles"
+                >
+                  <BookOpen className="w-3.5 h-3.5 shrink-0" />
+                  <span className="hidden md:inline">Articles</span>
                 </button>
               </Link>
+
+              {/* About — ℹ icon only on mobile, label on md+ */}
+              <Link href="/about">
+                <button
+                  className="inline-flex items-center gap-1 px-2.5 py-1.5 bg-white/15 hover:bg-white/25 text-white text-[10px] md:text-[11px] font-bold rounded-full shadow-md transition-all uppercase tracking-wide backdrop-blur-sm border border-white/20 whitespace-nowrap"
+                  aria-label="About TrekMind"
+                >
+                  <Info className="w-3.5 h-3.5 shrink-0" />
+                  <span className="hidden md:inline">About</span>
+                </button>
+              </Link>
+
             </div>
           </div>
         </div>
