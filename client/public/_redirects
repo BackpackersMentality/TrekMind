@@ -1,2 +1,5 @@
+# Static data files — served directly, never rewritten to index.html
+/data/*  /data/:splat  200
 
-/* /index.html 200
+# SPA fallback — all other routes handled by React router
+/*  /index.html  200
