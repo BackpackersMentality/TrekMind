@@ -1,6 +1,6 @@
 import { useRoute } from 'wouter';
 import { getDurationPageData } from '@/lib/seo-pages';
-import SEOPage from '@/components/SEOPage';
+import SEOPage from '@/pages/SEOPage';
 
 export default function DurationPage() {
   const [, params] = useRoute('/treks/duration/:slug');
