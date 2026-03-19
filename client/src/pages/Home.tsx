@@ -287,7 +287,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="font-display font-bold text-[10px] text-foreground">TrekMind</p>
           <p className="text-[7px] text-muted-foreground">
-            © 2024 TrekMind. Adventure responsibly. AI features are for guidance and can make mistakes. Please check routes and recommendations thoroughly.
+            © 2025 TrekMind. Adventure responsibly. AI features are for guidance and can make mistakes. Please check routes and recommendations thoroughly.
           </p>
         </div>
       </footer>
