@@ -317,13 +317,20 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             </div>
           `;
 
-          const popup = new mapboxgl.Popup({ offset: 14, closeButton: true, maxWidth: '220px' }).setHTML(popupHtml);
+          const popup = new mapboxgl.Popup({
+            offset: 14,
+            closeButton: true,
+            maxWidth: '220px',
+            anchor: 'top',        // prefer opening upward so popup stays in view
+            focusAfterOpen: false // prevents scroll-jump on mobile
+          }).setHTML(popupHtml);
           const marker = new mapboxgl.Marker(el)
             .setLngLat([stop.lng, stop.lat])
             .setPopup(popup)
             .addTo(map.current!);
 
           el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
+          el.addEventListener('touchstart', (e) => { e.stopPropagation(); marker.togglePopup(); }, { passive: true });
           el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.6)'; });
           el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)'; });
 
@@ -342,6 +349,7 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             box-shadow:0 2px 5px rgba(0,0,0,0.6);
             transform:rotate(45deg);
             cursor:pointer;
+            pointer-events:all;
             transition:transform 0.15s;
           `;
 
@@ -360,13 +368,20 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             </div>
           `;
 
-          const popup = new mapboxgl.Popup({ offset: 12, closeButton: true, maxWidth: '220px' }).setHTML(wpHtml);
+          const popup = new mapboxgl.Popup({
+            offset: 12,
+            closeButton: true,
+            maxWidth: '220px',
+            anchor: 'top',
+            focusAfterOpen: false
+          }).setHTML(wpHtml);
           const marker = new mapboxgl.Marker(el)
             .setLngLat([wp.lng, wp.lat])
             .setPopup(popup)
             .addTo(map.current!);
 
           el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
+          el.addEventListener('touchstart', (e) => { e.stopPropagation(); marker.togglePopup(); }, { passive: true });
           el.addEventListener('mouseenter', () => { el.style.transform = 'rotate(45deg) scale(1.8)'; });
           el.addEventListener('mouseleave', () => { el.style.transform = 'rotate(45deg) scale(1)'; });
 
