@@ -33,7 +33,14 @@ if (!_globePreloaded) {
 
 export default function Home() {
   const treks = useMemo(() => getAllTreks(), []);
-  const [viewMode, setViewMode] = useState<"globe" | "cards">("globe");
+  const [viewMode, setViewMode] = useState<"globe" | "cards">(() => {
+    // Restore cards view when user navigates back from TrekDetail (?view=cards)
+    if (typeof window !== 'undefined' &&
+        new URLSearchParams(window.location.search).get('view') === 'cards') {
+      return 'cards';
+    }
+    return 'globe';
+  });
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [, setLocation] = useLocation();
@@ -241,7 +248,7 @@ export default function Home() {
                     className="animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-backwards"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <TrekCard trek={trek} />
+                    <TrekCard trek={trek} fromCards={true} />
                   </div>
                 ))}
 
@@ -275,7 +282,7 @@ export default function Home() {
         onClose={() => setIsSearchOpen(false)}
         onTrekSelect={(id) => {
           setIsSearchOpen(false);
-          setLocation(`/trek/${id}`);
+          setLocation(`/trek/${id}${viewMode === 'cards' ? '?from=cards' : ''}`)
         }}
       />
 
