@@ -1,4 +1,11 @@
-
+import { useState, useMemo, useCallback, lazy, Suspense } from "react";
+import { Link, useLocation } from "wouter";
+import { getAllTreks } from "../lib/treks";
+import { TrekCard } from "@/components/TrekCard";
+import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck, BookOpen } from "lucide-react";
+import { useFilterStore } from "@/store/useFilterStore";
+import { filterTreks } from "@/lib/filterTreks";
+import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
 import { IntroOverlay } from "@/components/IntroOverlay";
 import { FilterButton } from "@/components/FilterButton";
@@ -103,9 +110,10 @@ export default function Home() {
               <img
                 src="/apple-touch-icon.png"
                 alt="TrekMind logo"
-                width={54}
-                height={54}
+                width={48}
+                height={48}
                 className="shrink-0 rounded-lg shadow-md"
+                style={{ imageRendering: '-webkit-optimize-contrast' }}
               />
               {/* Brand text */}
               <div className="min-w-0">
