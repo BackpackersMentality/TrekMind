@@ -33,43 +33,21 @@ export function getArticlesByCategory(category: string): ArticleMeta[] {
 
 // Async markdown loader — articles are served as static files from /data/articles/
 // Vite/Cloudflare Pages will serve these as text from the public folder.
-// Map of slug → numeric prefix used in the repo filenames
-// Tries prefixed filename first, then bare slug as fallback
-const SLUG_PREFIX: Record<string, string> = {
-  // Batch 1
-  '50-best-treks-in-the-world':         '01-',
-  'what-is-a-trek':                     '02-',
-  'best-multi-day-treks-for-beginners': '03-',
-  'best-treks-in-patagonia':            '04-',
-  'best-himalayan-treks':               '05-',
-  'best-hut-to-hut-treks-europe':       '06-',
-  'how-to-plan-a-multi-day-trek':       '07-',
-  'best-treks-in-south-america':        '08-',
-  'best-treks-in-canada':               '09-',
-  'ultimate-trekking-bucket-list':      '10-',
-  // Batch 2 — no numeric prefix (deployed as slug.md directly)
-};
-
 export async function loadArticleContent(slug: string): Promise<string | null> {
-  // Try prefixed filename first (e.g. 01-50-best-treks-in-the-world.md)
-  const prefix = SLUG_PREFIX[slug];
-  const candidates = prefix
-    ? [`/data/articles/${prefix}${slug}.md`, `/data/articles/${slug}.md`]
-    : [`/data/articles/${slug}.md`];
-
-  for (const url of candidates) {
-    try {
-      const res = await fetch(url);
-      if (!res.ok) continue;
-      const text = await res.text();
-      // Guard: Cloudflare Pages returns index.html on 404 — detect and skip
-      if (text.trimStart().startsWith('<!DOCTYPE') || text.trimStart().startsWith('<html')) continue;
-      return text;
-    } catch {
-      continue;
-    }
+  // Articles live in client/public/data/articles/{slug}.md
+  // served as static files by Cloudflare Pages.
+  // NOTE: files must be named exactly {slug}.md — no numeric prefixes.
+  try {
+    const res = await fetch(`/data/articles/${slug}.md`);
+    if (!res.ok) return null;
+    const text = await res.text();
+    // Guard: Cloudflare Pages returns index.html (SPA fallback) on 404.
+    // Detect that and return null rather than rendering HTML as markdown.
+    if (text.trimStart().startsWith('<!DOCTYPE') || text.trimStart().startsWith('<html')) return null;
+    return text;
+  } catch {
+    return null;
   }
-  return null;
 }
 
 // Simple markdown to HTML converter for rendering articles.
