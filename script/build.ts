@@ -1,6 +1,6 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile } from "fs/promises";
+import { rm, readFile, cp } from "fs/promises";
 
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
@@ -37,6 +37,12 @@ async function buildAll() {
 
   console.log("building client...");
   await viteBuild();
+
+  // Explicitly copy client/public/data → dist/public/data
+  // Ensures static .md and .json files are in the Cloudflare Pages output dir.
+  console.log("copying static data files...");
+  await cp("client/public/data", "dist/public/data", { recursive: true, force: true });
+  console.log("static data files copied ✓");
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
