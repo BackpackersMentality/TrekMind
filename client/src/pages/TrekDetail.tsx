@@ -8,7 +8,7 @@
 // 5. useEffect deps tightened
 
 import { getTrekById, getItineraryAsync, getEditorialContentAsync } from "@/lib/treks";
-import { useRoute, Link } from "wouter";
+import { useRoute, Link, useSearch, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { RiskTag, getRiskTags } from "@/components/RiskTag";
@@ -271,8 +271,10 @@ export default function TrekDetail() {
   const [imgError, setImgError] = useState(false);
 
   // Detect if user came from cards view — used by back button
-  const fromCards = typeof window !== 'undefined' &&
-    new URLSearchParams(window.location.search).get('from') === 'cards';
+  // useSearch() reads wouter's query string reliably in SPA context
+  const search = useSearch();
+  const fromCards = new URLSearchParams(search).get('from') === 'cards';
+  const [, setLocation] = useLocation();
 
   // ── Async data state ──────────────────────────────────────────────────────
   const [itinerary, setItinerary]   = useState<any[] | null>(null);
@@ -386,7 +388,7 @@ export default function TrekDetail() {
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
           <button
-            onClick={() => fromCards ? window.location.href = '/?view=cards' : window.history.back()}
+            onClick={() => { if (fromCards) { setLocation('/?view=cards'); } else { window.history.back(); } }}
             className="w-12 h-12 rounded-full bg-black/40 hover:bg-black/65 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center transition-all shadow-lg"
             aria-label="Go back"
           >
