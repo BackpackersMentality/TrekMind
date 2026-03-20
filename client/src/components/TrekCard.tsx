@@ -5,11 +5,11 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Ruler, Mountain, Calendar, ArrowRight, X } from "lucide-react";
 import { getTrekImageUrl } from '@/lib/images';
 
-export function TrekCard({ trek, onClose }: { trek: any; onClose?: () => void }) {
+export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: () => void; fromCards?: boolean }) {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <Link href={`/trek/${trek.id}`} className="group block h-full">
+    <Link href={`/trek/${trek.id}${fromCards ? '?from=cards' : ''}`} className="group block h-full">
       <Card className="overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col relative">
         {/* Close button - only show if onClose prop provided */}
         {onClose && (
