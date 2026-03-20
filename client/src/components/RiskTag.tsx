@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import {
   CloudRain, TriangleAlert, Compass, FileText,
-  Droplets, Route, WifiOff, Mountain,
+  Droplets, Route, WifiOff, Mountain, Pickaxe,
 } from "lucide-react";
 
 // ── Risk type definitions ─────────────────────────────────────────────────────
@@ -13,7 +13,8 @@ export type RiskType =
   | "water"
   | "thru_hike"
   | "no_infrastructure"
-  | "technical";
+  | "technical"
+  | "specialized_gear";
 
 interface RiskConfig {
   label: string;
@@ -61,6 +62,11 @@ const RISK_CONFIG: Record<RiskType, RiskConfig> = {
     label: "Technical Terrain",
     icon: Mountain,
     styles: "bg-orange-100 text-orange-800 border-orange-200 dark:bg-orange-900/30 dark:text-orange-300 dark:border-orange-800",
+  },
+  specialized_gear: {
+    label: "Specialist Gear",
+    icon: Pickaxe,
+    styles: "bg-yellow-100 text-yellow-800 border-yellow-200 dark:bg-yellow-900/30 dark:text-yellow-300 dark:border-yellow-800",
   },
 };
 
@@ -135,6 +141,18 @@ export function getRiskTags(trek: any): RiskType[] {
   ];
   if (technicalTriggers.some(t => terrain.includes(t) || features.includes(t))) {
     tags.push("technical");
+  }
+
+  // ── Specialized gear (via ferrata harness, crampons, ice axe, climbing kit) ─
+  // Triggers when technical is present AND specific gear types are mentioned,
+  // or when trek is known to require via ferrata equipment specifically
+  const specializedGearKeywords = [
+    "via ferrata", "ferrata", "crampon", "ice axe", "harness",
+    "climbing gear", "fixed rope", "glacier crossing",
+  ];
+  const allTrekText = [terrain, features, trek.description ?? '', (trek.highlights ?? '')].join(' ').toLowerCase();
+  if (specializedGearKeywords.some(k => allTrekText.includes(k))) {
+    tags.push("specialized_gear");
   }
 
   // De-duplicate (shouldn't be needed but safe)
