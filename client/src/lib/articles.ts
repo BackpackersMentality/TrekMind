@@ -35,15 +35,6 @@ export function getArticlesByCategory(category: string): ArticleMeta[] {
 // Vite/Cloudflare Pages will serve these as text from the public folder.
 // Article content is bundled at build time to avoid Cloudflare Pages
 // static file serving issues. Import the pre-built content map.
-import ARTICLE_CONTENT from '@/data/articleContent';
-
-export async function loadArticleContent(slug: string): Promise<string | null> {
-  const content = ARTICLE_CONTENT[slug] ?? null;
-  if (!content) {
-    console.warn(`[TrekMind] Article not found in bundle: "${slug}"`);
-  }
-  return content;
-}
 
 // Simple markdown to HTML converter for rendering articles.
 // Handles: headings, bold, italic, links, horizontal rules, paragraphs, tables.
