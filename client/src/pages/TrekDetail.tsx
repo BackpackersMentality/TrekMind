@@ -48,9 +48,20 @@ function ElevationProfile({ itinerary }: { itinerary: any[] }) {
   const altData = useMemo(() => {
     return itinerary
       .map(day => {
-        const raw = day.maxAltM ?? day.maxAlt ?? day.elevation ??
-          day.maxElevation ?? day.elevationM ?? day.altM ?? day.alt ??
-          day.altitude ?? day.highPoint ?? null;
+        // Try all known elevation field names across all itinerary formats
+        const rawVal =
+          day.maxAltM ?? day.maxAlt ?? day.elevation ?? day.maxElevation ??
+          day.elevationM ?? day.altM ?? day.alt ?? day.altitude ??
+          day.maxAltitude ?? day.highPoint ?? null;
+
+        // For string fields like "825 m (2,700 ft)" or "3,282m" or "400 m"
+        // extract the first numeric value
+        let raw: string | number | null = rawVal;
+        if (raw === null && day.mapNote) {
+          // Last resort: parse altitude from mapNote e.g. "...Col de Balme. 2191m."
+          const noteMatch = String(day.mapNote).match(/(\d[\d,]*\.?\d*)\s*m[^a-z]/i);
+          if (noteMatch) raw = noteMatch[1];
+        }
         return raw !== null ? parseFloat(String(raw).replace(/[^\d.]/g, "")) : null;
       })
       .filter((v): v is number => v !== null && !isNaN(v));
@@ -561,7 +572,8 @@ export default function TrekDetail() {
         {/* Elevation Profile — shown once itinerary data is loaded */}
         {itinerary && itinerary.length > 0 && itinerary.some((d: any) =>
             d.maxAltM ?? d.maxAlt ?? d.elevation ?? d.maxElevation ??
-            d.elevationM ?? d.altM ?? d.alt ?? d.altitude ?? d.highPoint
+            d.elevationM ?? d.altM ?? d.alt ?? d.altitude ??
+            d.maxAltitude ?? d.highPoint ?? d.mapNote
           ) && (
           <div className="pt-8 border-t">
             <h2 className="text-2xl font-bold mb-1 flex items-center gap-2">
