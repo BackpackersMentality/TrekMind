@@ -45,10 +45,10 @@
     "highlights": [
       "Torres del Paine granite towers",
       "Grey Glacier and ice field views",
-      "Valle del Franc\u00e9s with hanging glaciers",
-      "Lago Nordenskj\u00f6ld and Lago Peho\u00e9",
+      "Valle del Francés with hanging glaciers",
+      "Lago Nordenskjöld and Lago Pehoé",
       "Guanaco herds on open steppe",
-      "Lenga and \u00f1irre forest ecosystems"
+      "Lenga and ñirre forest ecosystems"
     ]
   },
   "pct-high-sierra": {
@@ -85,7 +85,7 @@
       "Landmannalaugar's rhyolite peaks and hot springs",
       "Hrafntinnusker obsidian plateau",
       "Emstrur glacial river crossings",
-      "\u00de\u00f3rsm\u00f6rk valley beneath Eyjafjallaj\u00f6kull",
+      "Þórsmörk valley beneath Eyjafjallajökull",
       "Volcanic black sand and ash fields",
       "Steaming fumaroles and geothermal areas"
     ]
@@ -93,7 +93,7 @@
   "routeburn-track": {
     "name": "Routeburn Track",
     "tier": 1,
-    "whySpecial": "The Routeburn Track traverses New Zealand's Southern Alps through beech forests, alpine valleys, and mountain passes that connect two national parks. The route follows ancient M\u0101ori greenstone trading paths through terrain carved by glaciers and sculpted by heavy rainfall. Waterfalls, tarns, and snow-capped peaks define this passage through temperate rainforest and subalpine environments.",
+    "whySpecial": "The Routeburn Track traverses New Zealand's Southern Alps through beech forests, alpine valleys, and mountain passes that connect two national parks. The route follows ancient Māori greenstone trading paths through terrain carved by glaciers and sculpted by heavy rainfall. Waterfalls, tarns, and snow-capped peaks define this passage through temperate rainforest and subalpine environments.",
     "highlights": [
       "Harris Saddle and Conical Hill viewpoint",
       "Routeburn Falls and alpine meadows",
@@ -277,7 +277,7 @@
     "tier": 2,
     "whySpecial": "The Huayhuash Circuit encircles one of Peru's most dramatic mountain ranges through high passes and remote valleys beneath glaciated peaks. The route traverses terrain where traditional herding communities maintain seasonal camps. This trek offers sustained high-altitude travel through landscapes of exceptional verticality and glacial presence.",
     "highlights": [
-      "Siula Grande and Yerupaj\u00e1 peaks",
+      "Siula Grande and Yerupajá peaks",
       "Multiple high passes with glacier views",
       "Turquoise glacial lakes",
       "Alpaca and llama herding camps",
@@ -843,7 +843,7 @@
       "Tien Shan mountain views",
       "Wildflower meadows and forests"
     ]
-    },
+  },
   "teton_crest": {
     "name": "Teton Crest Trail",
     "tier": 2,
@@ -1261,27 +1261,27 @@
     ]
   },
   "inca": {
-    "whySpecial": "The Inca Trail is the only trek on earth where the destination is an archaeological wonder of the ancient world — and where the journey to reach it passes through dozens of Inca ruins, cloud forest ecosystems, and high mountain passes that the Inca themselves engineered. Walking the original stonework footpath to arrive at Machu Picchu through the Sun Gate at dawn, ahead of the day-trippers, is one of the defining moments available to any trekker anywhere.",
+    "whySpecial": "The Inca Trail is the only trek where the destination is an ancient wonder and the path to reach it is itself a UNESCO heritage site. Walking original Inca stonework through cloud forest and mountain passes to arrive at Machu Picchu through the Sun Gate at dawn — before the day-trippers — is one of the defining moments in world trekking.",
     "highlights": [
-      "Dead Woman's Pass (Abra de Warmihuañusca) at 4,215m — the highest and most demanding of the three passes, where the effort of the climb is paid back immediately by the panorama of snow-capped peaks",
-      "Wiñay Wayna ruins — a terraced Inca site discovered only in 1941, perched dramatically above cloud forest with few visitors and an atmosphere entirely unlike Machu Picchu",
-      "The Sun Gate (Inti Punku) arrival at dawn — emerging from the final tunnel to see Machu Picchu below in morning light, before the crowds, is one of the great trekking arrivals on earth",
-      "Cloud forest biodiversity — the descent from the second pass passes through one of the richest cloud forest zones in Peru, with over 200 orchid species and an astonishing density of hummingbirds",
-      "30+ Inca sites along the 43km route — the trail itself is a UNESCO World Heritage Site, and the ruins encountered along it range from agricultural terraces to ceremonial platforms still functioning as intended",
-      "The quality of the Inca stonework underfoot — walking on 500-year-old stone steps, precisely fitted without mortar, through terrain that challenged even modern engineering, provides a physical connection to the Inca civilisation that no other experience can replicate"
+      "Dead Woman's Pass (4,215m) — highest of the three passes, panoramic snow-peak views",
+      "Wiñay Wayna ruins — terraced Inca site above cloud forest, discovered 1941",
+      "Sun Gate arrival at dawn — Machu Picchu below in morning light, before the crowds",
+      "Cloud forest descent — over 200 orchid species and dense hummingbird populations",
+      "30+ Inca sites along the 43km route — terraces, platforms, and watchtowers",
+      "Original Inca stonework — 500-year-old stone steps fitted without mortar throughout"
     ]
   },
   "jmt": {
-    "whySpecial": "The John Muir Trail traverses the High Sierra of California — the range John Muir called 'the Range of Light' — for 340km from Yosemite Valley to the summit of Mount Whitney, the highest peak in the contiguous United States. It is arguably the finest sustained mountain wilderness in North America: granite cathedrals, high-altitude lakes of extraordinary clarity, and a concentration of alpine beauty across eleven mountain passes that makes the entire route feel like an extended highlight reel.",
+    "whySpecial": "The John Muir Trail traverses California's High Sierra for 340km from Yosemite Valley to the summit of Mount Whitney — the highest peak in the contiguous US. Granite cathedrals, crystalline alpine lakes, and eleven mountain passes make this arguably the finest sustained mountain wilderness in North America.",
     "highlights": [
-      "Yosemite Valley departure — leaving the valley floor beneath El Capitan and Half Dome, climbing through giant sequoia groves and into the High Sierra's first wilderness, establishes the scale of what follows over 21 days",
-      "Evolution Basin — a remote high-altitude cirque at 3,400m surrounded by peaks named after Darwin, Huxley, and Spencer, considered by many JMT veterans the single most beautiful section of the entire trail",
-      "Forester Pass at 4,009m — the highest point on the JMT and the Pacific Crest Trail, crossing the Kings-Kern Divide on a ledge-cut trail with exposure that makes the arrival a genuine achievement",
-      "Guitar Lake camp below Mount Whitney — the final camp at 4,100m, with the massive south face of Whitney rising directly above and the High Sierra spread behind, is one of the finest overnight sites in American backcountry",
-      "Mount Whitney summit at 4,421m — the optional predawn summit push on the final day rewards with 360-degree views extending across Nevada to the east and the full length of the Sierra to the north and south",
-      "The Muir Pass memorial hut — a stone refuge at 3,658m, one of the few structures on the entire route, built in 1930 and barely changed since, sitting above the Helen Lake basin in a landscape of windswept granite that feels genuinely otherworldly"
+      "Yosemite Valley departure beneath El Capitan and Half Dome",
+      "Evolution Basin (3,400m) — remote cirque below Darwin and Huxley peaks",
+      "Forester Pass (4,009m) — highest point on both JMT and PCT",
+      "Guitar Lake camp (4,100m) — final overnight directly below Mount Whitney",
+      "Mount Whitney summit (4,421m) — 360° views across Nevada and the Sierra",
+      "Muir Pass hut (3,658m) — stone refuge built 1930, above Helen Lake"
     ]
-   },
+  },
   "roraima": {
     "name": "Mount Roraima Trek",
     "tier": 2,
@@ -1294,5 +1294,5 @@
       "Endemic carnivorous plants and species found nowhere else on Earth",
       "Gran Sabana savanna approach with Kukenan tepui rising alongside"
     ]
- }
+  }
 }
