@@ -48,7 +48,9 @@ function ElevationProfile({ itinerary }: { itinerary: any[] }) {
   const altData = useMemo(() => {
     return itinerary
       .map(day => {
-        const raw = day.maxAltM ?? day.maxAlt ?? day.elevation ?? null;
+        const raw = day.maxAltM ?? day.maxAlt ?? day.elevation ??
+          day.maxElevation ?? day.elevationM ?? day.altM ?? day.alt ??
+          day.altitude ?? day.highPoint ?? null;
         return raw !== null ? parseFloat(String(raw).replace(/[^\d.]/g, "")) : null;
       })
       .filter((v): v is number => v !== null && !isNaN(v));
@@ -268,6 +270,10 @@ export default function TrekDetail() {
   const trekId = params?.id;
   const [imgError, setImgError] = useState(false);
 
+  // Detect if user came from cards view — used by back button
+  const fromCards = typeof window !== 'undefined' &&
+    new URLSearchParams(window.location.search).get('from') === 'cards';
+
   // ── Async data state ──────────────────────────────────────────────────────
   const [itinerary, setItinerary]   = useState<any[] | null>(null);
   const [editorial, setEditorial]   = useState<any | null>(null);
@@ -380,7 +386,7 @@ export default function TrekDetail() {
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
           <button
-            onClick={() => window.history.back()}
+            onClick={() => fromCards ? window.location.href = '/?view=cards' : window.history.back()}
             className="w-12 h-12 rounded-full bg-black/40 hover:bg-black/65 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center transition-all shadow-lg"
             aria-label="Go back"
           >
@@ -552,7 +558,8 @@ export default function TrekDetail() {
 
         {/* Elevation Profile — shown once itinerary data is loaded */}
         {itinerary && itinerary.length > 0 && itinerary.some((d: any) =>
-            d.maxAltM ?? d.maxAlt ?? d.elevation
+            d.maxAltM ?? d.maxAlt ?? d.elevation ?? d.maxElevation ??
+            d.elevationM ?? d.altM ?? d.alt ?? d.altitude ?? d.highPoint
           ) && (
           <div className="pt-8 border-t">
             <h2 className="text-2xl font-bold mb-1 flex items-center gap-2">
