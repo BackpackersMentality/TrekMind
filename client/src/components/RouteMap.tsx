@@ -317,20 +317,30 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             </div>
           `;
 
+          // Popup anchored by LngLat — unaffected by 3D terrain visual shift.
+          // NO touchstart: mobile fires touchstart then a synthetic click, which
+          // would call the handler twice (open→close = flash). Click-only is correct.
           const popup = new mapboxgl.Popup({
-            offset: 14,
+            offset: [0, -6],
             closeButton: true,
+            closeOnClick: false,
             maxWidth: '220px',
-            anchor: 'top',        // prefer opening upward so popup stays in view
-            focusAfterOpen: false // prevents scroll-jump on mobile
+            focusAfterOpen: false,
           }).setHTML(popupHtml);
+
           const marker = new mapboxgl.Marker(el)
             .setLngLat([stop.lng, stop.lat])
-            .setPopup(popup)
             .addTo(map.current!);
 
-          el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
-          el.addEventListener('touchstart', (e) => { e.stopPropagation(); marker.togglePopup(); }, { passive: true });
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            if (popup.isOpen()) {
+              popup.remove();
+            } else {
+              popup.setLngLat([stop.lng, stop.lat]).addTo(map.current!);
+            }
+          });
           el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.6)'; });
           el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)'; });
 
@@ -349,7 +359,6 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
             box-shadow:0 2px 5px rgba(0,0,0,0.6);
             transform:rotate(45deg);
             cursor:pointer;
-            pointer-events:all;
             transition:transform 0.15s;
           `;
 
@@ -369,19 +378,26 @@ export default function RouteMap({ stops, trek }: RouteMapProps) {
           `;
 
           const popup = new mapboxgl.Popup({
-            offset: 12,
+            offset: [0, -4],
             closeButton: true,
+            closeOnClick: false,
             maxWidth: '220px',
-            anchor: 'top',
-            focusAfterOpen: false
+            focusAfterOpen: false,
           }).setHTML(wpHtml);
+
           const marker = new mapboxgl.Marker(el)
             .setLngLat([wp.lng, wp.lat])
-            .setPopup(popup)
             .addTo(map.current!);
 
-          el.addEventListener('click', (e) => { e.stopPropagation(); marker.togglePopup(); });
-          el.addEventListener('touchstart', (e) => { e.stopPropagation(); marker.togglePopup(); }, { passive: true });
+          el.addEventListener('click', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            if (popup.isOpen()) {
+              popup.remove();
+            } else {
+              popup.setLngLat([wp.lng, wp.lat]).addTo(map.current!);
+            }
+          });
           el.addEventListener('mouseenter', () => { el.style.transform = 'rotate(45deg) scale(1.8)'; });
           el.addEventListener('mouseleave', () => { el.style.transform = 'rotate(45deg) scale(1)'; });
 
