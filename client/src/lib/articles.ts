@@ -33,34 +33,16 @@ export function getArticlesByCategory(category: string): ArticleMeta[] {
 
 // Async markdown loader — articles are served as static files from /data/articles/
 // Vite/Cloudflare Pages will serve these as text from the public folder.
+// Article content is bundled at build time to avoid Cloudflare Pages
+// static file serving issues. Import the pre-built content map.
+import ARTICLE_CONTENT from '@/data/articleContent';
+
 export async function loadArticleContent(slug: string): Promise<string | null> {
-  const url = `/data/articles/${slug}.md`;
-  console.log(`[TrekMind] Fetching article: ${url}`);
-  try {
-    const res = await fetch(url);
-    console.log(`[TrekMind] Response status: ${res.status} ${res.statusText}`);
-    console.log(`[TrekMind] Content-Type: ${res.headers.get('content-type')}`);
-    if (!res.ok) {
-      console.error(`[TrekMind] Fetch failed: HTTP ${res.status} for ${url}`);
-      return null;
-    }
-    const text = await res.text();
-    console.log(`[TrekMind] Response length: ${text.length} chars`);
-    console.log(`[TrekMind] First 120 chars: ${JSON.stringify(text.slice(0, 120))}`);
-    if (text.trimStart().startsWith('<!DOCTYPE') || text.trimStart().startsWith('<html')) {
-      console.error('[TrekMind] Got HTML response (SPA fallback) — file not found on server');
-      return null;
-    }
-    if (text.trim().length === 0) {
-      console.error('[TrekMind] Empty response — file exists but is empty');
-      return null;
-    }
-    console.log('[TrekMind] Article loaded successfully ✓');
-    return text;
-  } catch (err) {
-    console.error(`[TrekMind] Fetch threw exception:`, err);
-    return null;
+  const content = ARTICLE_CONTENT[slug] ?? null;
+  if (!content) {
+    console.warn(`[TrekMind] Article not found in bundle: "${slug}"`);
   }
+  return content;
 }
 
 // Simple markdown to HTML converter for rendering articles.
