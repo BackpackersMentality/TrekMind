@@ -33,7 +33,7 @@ export function getArticlesByCategory(category: string): ArticleMeta[] {
 
 // Article content bundled at build time — no runtime fetch needed.
 // Avoids Cloudflare Pages static file serving issues entirely.
-import ARTICLE_CONTENT from '../data/articleContent';
+import ARTICLE_CONTENT from '@/data/articleContent';
 
 export async function loadArticleContent(slug: string): Promise<string | null> {
   return ARTICLE_CONTENT[slug] ?? null;
