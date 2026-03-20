@@ -31,10 +31,20 @@ export function getArticlesByCategory(category: string): ArticleMeta[] {
   return articlesMeta.filter(a => a.category === category);
 }
 
-// Async markdown loader — articles are served as static files from /data/articles/
-// Vite/Cloudflare Pages will serve these as text from the public folder.
-// Article content is bundled at build time to avoid Cloudflare Pages
-// static file serving issues. Import the pre-built content map.
+// Async markdown loader — fetches .md files from /data/articles/{slug}.md
+// Static files in client/public/data/articles/, copied to dist/public by build.ts
+export async function loadArticleContent(slug: string): Promise<string | null> {
+  try {
+    const res = await fetch(`/data/articles/${slug}.md`);
+    if (!res.ok) return null;
+    const text = await res.text();
+    // Guard: Cloudflare Pages _redirects returns index.html on 404
+    if (text.trimStart().startsWith('<!DOCTYPE') || text.trimStart().startsWith('<html')) return null;
+    return text;
+  } catch {
+    return null;
+  }
+}
 
 // Simple markdown to HTML converter for rendering articles.
 // Handles: headings, bold, italic, links, horizontal rules, paragraphs, tables.
