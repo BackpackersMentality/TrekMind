@@ -47,7 +47,9 @@ export default function ArticleDetail() {
     window.scrollTo(0, 0);
     setLoading(true);
     setContent(null);
+    console.log(`[TrekMind] ArticleDetail slug: "${slug}", meta found: ${!!getArticleBySlug(slug)}`);
     loadArticleContent(slug).then(md => {
+      console.log(`[TrekMind] loadArticleContent returned: ${md === null ? 'null' : `${md.length} chars`}`);
       setContent(md);
       setLoading(false);
     });
