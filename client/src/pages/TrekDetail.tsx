@@ -48,21 +48,36 @@ function ElevationProfile({ itinerary }: { itinerary: any[] }) {
   const altData = useMemo(() => {
     return itinerary
       .map(day => {
-        // Try all known elevation field names across all itinerary formats
-        const rawVal =
+        // ── Definitive altitude extraction ─────────────────────────────────
+        // Data uses 9+ different field names. Some are clean numbers (maxAltM: 4700.0),
+        // others are strings like "2,860 m", "Col de Balme (2,191m)", "825 m (2,700 ft)".
+        // CRITICAL: simple /[^\d.]/g removal concatenates numbers: "825 m (2,700 ft)" → 8252700
+        // FIX: find ALL numbers in the string, return first one in plausible altitude range (10–9000m).
+        const rawVal: any =
           day.maxAltM ?? day.maxAlt ?? day.elevation ?? day.maxElevation ??
           day.elevationM ?? day.altM ?? day.alt ?? day.altitude ??
           day.maxAltitude ?? day.highPoint ?? null;
 
-        // For string fields like "825 m (2,700 ft)" or "3,282m" or "400 m"
-        // extract the first numeric value
-        let raw: string | number | null = rawVal;
-        if (raw === null && day.mapNote) {
-          // Last resort: parse altitude from mapNote e.g. "...Col de Balme. 2191m."
-          const noteMatch = String(day.mapNote).match(/(\d[\d,]*\.?\d*)\s*m[^a-z]/i);
-          if (noteMatch) raw = noteMatch[1];
+        const parseAlt = (s: any): number | null => {
+          if (s === null || s === undefined || s === '—') return null;
+          const str = String(s);
+          // Extract all comma-formatted numbers from string
+          const nums = [...str.matchAll(/[\d,]+(?:\.\d+)?/g)]
+            .map(m => parseFloat(m[0].replace(/,/g, '')))
+            .filter(n => !isNaN(n) && n >= 10 && n <= 9000);
+          return nums.length > 0 ? nums[0] : null;
+        };
+
+        // Try named fields first, then fall back to mapNote
+        let alt = parseAlt(rawVal);
+        if (alt === null && day.mapNote) {
+          // mapNote often ends with the overnight altitude e.g. "...1164m."
+          const noteNums = [...String(day.mapNote).matchAll(/[\d,]+(?:\.\d+)?\s*m/gi)]
+            .map(m => parseFloat(m[0].replace(/[^\d.]/g, '')))
+            .filter(n => !isNaN(n) && n >= 10 && n <= 9000);
+          if (noteNums.length > 0) alt = noteNums[noteNums.length - 1]; // last = overnight alt
         }
-        return raw !== null ? parseFloat(String(raw).replace(/[^\d.]/g, "")) : null;
+        return alt;
       })
       .filter((v): v is number => v !== null && !isNaN(v));
   }, [itinerary]);
