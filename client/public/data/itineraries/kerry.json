@@ -1,0 +1,55 @@
+{
+  "sheetName": "Kerry Way",
+  "slug": "kerry",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Killarney to Glencar",
+      "distanceKm": "55",
+      "elevGainM": "1200",
+      "elevLossM": "1100",
+      "maxAltM": "385",
+      "lat": 52.0599,
+      "lng": -9.507,
+      "overnight": "Glencar B&Bs / Hostels",
+      "mapNote": "Glencar B&Bs / Hostels. 385m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Glencar to Waterville",
+      "distanceKm": "45",
+      "elevGainM": "900",
+      "elevLossM": "950",
+      "maxAltM": "300",
+      "lat": 52.0,
+      "lng": -9.8333,
+      "overnight": "Waterville Village",
+      "mapNote": "Waterville Village. 300m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Waterville to Sneem",
+      "distanceKm": "50",
+      "elevGainM": "1100",
+      "elevLossM": "1100",
+      "maxAltM": "350",
+      "lat": 51.831,
+      "lng": -10.173,
+      "overnight": "Sneem Village",
+      "mapNote": "Sneem Village. 350m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Sneem to Killarney",
+      "distanceKm": "64",
+      "elevGainM": "1300",
+      "elevLossM": "1300",
+      "maxAltM": "385",
+      "lat": 51.76,
+      "lng": -9.897,
+      "overnight": "Killarney City",
+      "mapNote": "Killarney City. 385m."
+    }
+  ],
+  "waypoints": []
+}

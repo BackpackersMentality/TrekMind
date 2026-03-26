@@ -1,0 +1,67 @@
+{
+  "sheetName": "Otter Trail",
+  "slug": "otter",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Storms River Mouth → Ngubu Hut",
+      "distanceKm": "5.0",
+      "elevGainM": "150",
+      "elevLossM": "150",
+      "maxAltM": "100",
+      "lat": -34.0219,
+      "lng": 23.8817,
+      "overnight": "Ngubu Hut",
+      "mapNote": "Ngubu Hut. 100m."
+    },
+    {
+      "day": 2,
+      "route": "Ngubu Hut → Scott Hut",
+      "distanceKm": "8.0",
+      "elevGainM": "300",
+      "elevLossM": "300",
+      "maxAltM": "120",
+      "lat": -34.015,
+      "lng": 23.84,
+      "overnight": "Scott Hut",
+      "mapNote": "Scott Hut. 120m."
+    },
+    {
+      "day": 3,
+      "route": "Scott Hut → Oakhurst Hut",
+      "distanceKm": "8.0",
+      "elevGainM": "250",
+      "elevLossM": "250",
+      "maxAltM": "150",
+      "lat": -33.99,
+      "lng": 23.77,
+      "overnight": "Oakhurst Hut",
+      "mapNote": "Oakhurst Hut. 150m."
+    },
+    {
+      "day": 4,
+      "route": "Oakhurst Hut → Andre Hut",
+      "distanceKm": "14.0",
+      "elevGainM": "400",
+      "elevLossM": "400",
+      "maxAltM": "150",
+      "lat": -33.98,
+      "lng": 23.65,
+      "overnight": "Andre Hut",
+      "mapNote": "Andre Hut. 150m."
+    },
+    {
+      "day": 5,
+      "route": "Andre Hut → Nature's Valley",
+      "distanceKm": "11.0",
+      "elevGainM": "200",
+      "elevLossM": "200",
+      "maxAltM": "100",
+      "lat": -33.98,
+      "lng": 23.56,
+      "overnight": "Nature's Valley (Finish)",
+      "mapNote": "Nature's Valley (Finish). 100m."
+    }
+  ],
+  "waypoints": []
+}

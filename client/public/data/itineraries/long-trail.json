@@ -1,0 +1,67 @@
+{
+  "sheetName": "Long Trail (USA)",
+  "slug": "long-trail",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Vermont Border to Manchester",
+      "distanceKm": "85",
+      "elevGainM": "3200",
+      "elevLossM": "3000",
+      "maxAltM": "1150",
+      "lat": 42.7302,
+      "lng": -73.1118,
+      "overnight": "LT Shelters",
+      "mapNote": "LT Shelters. 1150m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Manchester to Rutland",
+      "distanceKm": "80",
+      "elevGainM": "3500",
+      "elevLossM": "3400",
+      "maxAltM": "1200",
+      "lat": 43.167,
+      "lng": -72.965,
+      "overnight": "LT Shelters",
+      "mapNote": "LT Shelters. 1200m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Rutland to Appalachian Gap",
+      "distanceKm": "105",
+      "elevGainM": "4800",
+      "elevLossM": "4900",
+      "maxAltM": "1240",
+      "lat": 43.662,
+      "lng": -72.835,
+      "overnight": "LT Shelters",
+      "mapNote": "LT Shelters. 1240m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Appalachian Gap to Lamoille River",
+      "distanceKm": "88",
+      "elevGainM": "4100",
+      "elevLossM": "4600",
+      "maxAltM": "1339",
+      "lat": 44.21,
+      "lng": -72.93,
+      "overnight": "LT Shelters",
+      "mapNote": "LT Shelters. 1339m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Lamoille River to Canadian Border",
+      "distanceKm": "80",
+      "elevGainM": "3100",
+      "elevLossM": "3000",
+      "maxAltM": "1176",
+      "lat": 44.64,
+      "lng": -72.76,
+      "overnight": "Journey's End Camp",
+      "mapNote": "Journey's End Camp. 1176m."
+    }
+  ],
+  "waypoints": []
+}

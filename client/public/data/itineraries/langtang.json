@@ -1,0 +1,79 @@
+{
+  "sheetName": "Langtang Valley",
+  "slug": "langtang",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Syabrubesi → Lama Hotel",
+      "distanceKm": "11.0",
+      "elevGainM": "1050",
+      "elevLossM": "150",
+      "maxAltM": "2470",
+      "lat": 28.1633,
+      "lng": 85.3967,
+      "overnight": "Lama Hotel Teahouses",
+      "mapNote": "Lama Hotel Teahouses. 2470m."
+    },
+    {
+      "day": 2,
+      "route": "Lama Hotel → Langtang Village",
+      "distanceKm": "15.0",
+      "elevGainM": "950",
+      "elevLossM": "100",
+      "maxAltM": "3430",
+      "lat": 28.2167,
+      "lng": 85.5186,
+      "overnight": "Langtang Teahouses",
+      "mapNote": "Langtang Teahouses. 3430m."
+    },
+    {
+      "day": 3,
+      "route": "Langtang Village → Kyanjin Gompa",
+      "distanceKm": "7.0",
+      "elevGainM": "450",
+      "elevLossM": "50",
+      "maxAltM": "3870",
+      "lat": 28.2111,
+      "lng": 85.5667,
+      "overnight": "Kyanjin Teahouses",
+      "mapNote": "Kyanjin Teahouses. 3870m."
+    },
+    {
+      "day": 4,
+      "route": "Kyanjin Gompa → Kyanjin Ri / Tserko Ri",
+      "distanceKm": "8.0",
+      "elevGainM": "1100",
+      "elevLossM": "1100",
+      "maxAltM": "4984",
+      "lat": 28.2111,
+      "lng": 85.5667,
+      "overnight": "Kyanjin Teahouses",
+      "mapNote": "Kyanjin Teahouses. 4984m."
+    },
+    {
+      "day": 5,
+      "route": "Kyanjin Gompa → Lama Hotel",
+      "distanceKm": "22.0",
+      "elevGainM": "150",
+      "elevLossM": "1400",
+      "maxAltM": "3870",
+      "lat": 28.1633,
+      "lng": 85.3967,
+      "overnight": "Lama Hotel Teahouses",
+      "mapNote": "Lama Hotel Teahouses. 3870m."
+    },
+    {
+      "day": 6,
+      "route": "Lama Hotel → Syabrubesi",
+      "distanceKm": "11.0",
+      "elevGainM": "150",
+      "elevLossM": "1050",
+      "maxAltM": "2470",
+      "lat": 28.1633,
+      "lng": 85.3323,
+      "overnight": "Syabrubesi Guesthouses",
+      "mapNote": "Syabrubesi Guesthouses. 2470m."
+    }
+  ],
+  "waypoints": []
+}

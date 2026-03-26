@@ -1,0 +1,43 @@
+{
+  "sheetName": "Lofoten Traverse",
+  "slug": "lofoten",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Moskenes to Nusfjord",
+      "distanceKm": "45",
+      "elevGainM": "3200",
+      "elevLossM": "3200",
+      "maxAltM": "800",
+      "lat": 67.9,
+      "lng": 13.045,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 800m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Nusfjord to Leknes",
+      "distanceKm": "35",
+      "elevGainM": "2500",
+      "elevLossM": "2500",
+      "maxAltM": "750",
+      "lat": 68.033,
+      "lng": 13.348,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 750m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Leknes to Svolvær",
+      "distanceKm": "80",
+      "elevGainM": "4800",
+      "elevLossM": "4800",
+      "maxAltM": "1000",
+      "lat": 68.147,
+      "lng": 13.612,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 1000m."
+    }
+  ],
+  "waypoints": []
+}

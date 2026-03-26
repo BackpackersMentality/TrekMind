@@ -1,0 +1,43 @@
+{
+  "sheetName": "Mount Semeru",
+  "slug": "mount-semeru",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Ranu Pani → Ranu Kumbolo",
+      "distanceKm": "10.0",
+      "elevGainM": "400",
+      "elevLossM": "100",
+      "maxAltM": "2400",
+      "lat": -8.0142,
+      "lng": 112.9515,
+      "overnight": "Lake Camp",
+      "mapNote": "Lake Camp. 2400m."
+    },
+    {
+      "day": 2,
+      "route": "Ranu Kumbolo → Kalimati Camp",
+      "distanceKm": "5.0",
+      "elevGainM": "300",
+      "elevLossM": "50",
+      "maxAltM": "2700",
+      "lat": -8.064,
+      "lng": 112.931,
+      "overnight": "Kalimati Camp",
+      "mapNote": "Kalimati Camp. 2700m."
+    },
+    {
+      "day": 3,
+      "route": "Kalimati Camp → Mahameru Summit -> Ranu Pani",
+      "distanceKm": "19.0",
+      "elevGainM": "976",
+      "elevLossM": "1576",
+      "maxAltM": "3676",
+      "lat": -8.107,
+      "lng": 112.922,
+      "overnight": "Ranu Pani Village",
+      "mapNote": "Ranu Pani Village. 3676m."
+    }
+  ],
+  "waypoints": []
+}

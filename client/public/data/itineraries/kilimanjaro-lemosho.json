@@ -1,0 +1,103 @@
+{
+  "sheetName": "Kilimanjaro Lemosho",
+  "slug": "kilimanjaro-lemosho",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Lemosho Gate → Mti Mkubwa",
+      "distanceKm": "6.0",
+      "elevGainM": "500",
+      "elevLossM": "—",
+      "maxAltM": "2650",
+      "lat": -3.0767,
+      "lng": 37.1147,
+      "overnight": "Mti Mkubwa Camp",
+      "mapNote": "Mti Mkubwa Camp. 2650m."
+    },
+    {
+      "day": 2,
+      "route": "Mti Mkubwa → Shira 1 Camp",
+      "distanceKm": "8.0",
+      "elevGainM": "850",
+      "elevLossM": "—",
+      "maxAltM": "3500",
+      "lat": -3.05,
+      "lng": 37.15,
+      "overnight": "Shira 1 Camp",
+      "mapNote": "Shira 1 Camp. 3500m."
+    },
+    {
+      "day": 3,
+      "route": "Shira 1 Camp → Shira 2 Camp",
+      "distanceKm": "8.0",
+      "elevGainM": "350",
+      "elevLossM": "—",
+      "maxAltM": "3850",
+      "lat": -3.06,
+      "lng": 37.2,
+      "overnight": "Shira 2 Camp",
+      "mapNote": "Shira 2 Camp. 3850m."
+    },
+    {
+      "day": 4,
+      "route": "Shira 2 Camp → Barranco Camp (via Lava Tower)",
+      "distanceKm": "10.0",
+      "elevGainM": "750",
+      "elevLossM": "650",
+      "maxAltM": "4600",
+      "lat": -3.08,
+      "lng": 37.26,
+      "overnight": "Barranco Camp",
+      "mapNote": "Barranco Camp. 4600m."
+    },
+    {
+      "day": 5,
+      "route": "Barranco Camp → Karanga Camp",
+      "distanceKm": "5.0",
+      "elevGainM": "300",
+      "elevLossM": "300",
+      "maxAltM": "4200",
+      "lat": -3.1,
+      "lng": 37.28,
+      "overnight": "Karanga Camp",
+      "mapNote": "Karanga Camp. 4200m."
+    },
+    {
+      "day": 6,
+      "route": "Karanga Camp → Barafu Camp",
+      "distanceKm": "4.0",
+      "elevGainM": "600",
+      "elevLossM": "—",
+      "maxAltM": "4680",
+      "lat": -3.08,
+      "lng": 37.31,
+      "overnight": "Barafu Camp",
+      "mapNote": "Barafu Camp. 4680m."
+    },
+    {
+      "day": 7,
+      "route": "Barafu Camp → Summit -> Mweka Camp",
+      "distanceKm": "17.0",
+      "elevGainM": "1215",
+      "elevLossM": "2795",
+      "maxAltM": "5895",
+      "lat": -3.15,
+      "lng": 37.33,
+      "overnight": "Mweka Camp",
+      "mapNote": "Mweka Camp. 5895m."
+    },
+    {
+      "day": 8,
+      "route": "Mweka Camp → Mweka Gate",
+      "distanceKm": "10.0",
+      "elevGainM": "—",
+      "elevLossM": "1400",
+      "maxAltM": "3100",
+      "lat": -3.2,
+      "lng": 37.35,
+      "overnight": "Moshi/Arusha (Off-trail)",
+      "mapNote": "Moshi/Arusha (Off-trail). 3100m."
+    }
+  ],
+  "waypoints": []
+}

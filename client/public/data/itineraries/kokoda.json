@@ -1,0 +1,55 @@
+{
+  "sheetName": "Kokoda Track",
+  "slug": "kokoda",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Owers' Corner to Nauro",
+      "distanceKm": "30",
+      "elevGainM": "1500",
+      "elevLossM": "1200",
+      "maxAltM": "1400",
+      "lat": -9.3622,
+      "lng": 147.4878,
+      "overnight": "Nauro Village Guesthouse",
+      "mapNote": "Nauro Village Guesthouse. 1400m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Nauro to Menari",
+      "distanceKm": "20",
+      "elevGainM": "1200",
+      "elevLossM": "1000",
+      "maxAltM": "1600",
+      "lat": -9.25,
+      "lng": 147.6,
+      "overnight": "Menari Village Guesthouse",
+      "mapNote": "Menari Village Guesthouse. 1600m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Menari to Templeton's Crossing",
+      "distanceKm": "26",
+      "elevGainM": "2000",
+      "elevLossM": "1500",
+      "maxAltM": "2190",
+      "lat": -9.1,
+      "lng": 147.7,
+      "overnight": "Jungle Camp",
+      "mapNote": "Jungle Camp. 2190m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Templeton's Crossing to Kokoda Village",
+      "distanceKm": "20",
+      "elevGainM": "500",
+      "elevLossM": "1500",
+      "maxAltM": "2000",
+      "lat": -8.8833,
+      "lng": 147.7333,
+      "overnight": "Kokoda Village",
+      "mapNote": "Kokoda Village. 2000m."
+    }
+  ],
+  "waypoints": []
+}

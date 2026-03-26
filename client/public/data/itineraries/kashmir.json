@@ -1,0 +1,43 @@
+{
+  "sheetName": "Kashmir Lakes",
+  "slug": "kashmir",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Sonamarg → Nichnai Camp",
+      "distanceKm": "11.0",
+      "elevGainM": "1100",
+      "elevLossM": "100",
+      "maxAltM": "3500",
+      "lat": 34.3023,
+      "lng": 75.2973,
+      "overnight": "Nichnai Camp",
+      "mapNote": "Nichnai Camp. 3500m."
+    },
+    {
+      "day": 3,
+      "route": "Nichnai Camp → Vishansar / Gadsar",
+      "distanceKm": "28.0",
+      "elevGainM": "1300",
+      "elevLossM": "1000",
+      "maxAltM": "4200",
+      "lat": 34.38,
+      "lng": 75.05,
+      "overnight": "Gadsar Camp",
+      "mapNote": "Gadsar Camp. 4200m."
+    },
+    {
+      "day": 5,
+      "route": "Gadsar → Naranag",
+      "distanceKm": "33.0",
+      "elevGainM": "900",
+      "elevLossM": "2200",
+      "maxAltM": "4000",
+      "lat": 34.41,
+      "lng": 74.98,
+      "overnight": "Naranag Village",
+      "mapNote": "Naranag Village. 4000m."
+    }
+  ],
+  "waypoints": []
+}

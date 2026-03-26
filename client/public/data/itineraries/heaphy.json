@@ -1,0 +1,55 @@
+{
+  "sheetName": "Heaphy Track",
+  "slug": "heaphy",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Brown Hut → Perry Saddle Hut",
+      "distanceKm": "18.0",
+      "elevGainM": "800",
+      "elevLossM": "100",
+      "maxAltM": "915",
+      "lat": -40.8351,
+      "lng": 172.4347,
+      "overnight": "Perry Saddle Hut",
+      "mapNote": "Perry Saddle Hut. 915m."
+    },
+    {
+      "day": 2,
+      "route": "Perry Saddle Hut → James Mackay Hut",
+      "distanceKm": "24.0",
+      "elevGainM": "200",
+      "elevLossM": "350",
+      "maxAltM": "915",
+      "lat": -40.883,
+      "lng": 172.233,
+      "overnight": "James Mackay Hut",
+      "mapNote": "James Mackay Hut. 915m."
+    },
+    {
+      "day": 3,
+      "route": "James Mackay Hut → Heaphy Hut",
+      "distanceKm": "21.0",
+      "elevGainM": "100",
+      "elevLossM": "800",
+      "maxAltM": "750",
+      "lat": -40.983,
+      "lng": 172.1,
+      "overnight": "Heaphy Hut",
+      "mapNote": "Heaphy Hut. 750m."
+    },
+    {
+      "day": 4,
+      "route": "Heaphy Hut → Kohaihai",
+      "distanceKm": "16.0",
+      "elevGainM": "150",
+      "elevLossM": "150",
+      "maxAltM": "100",
+      "lat": -41.116,
+      "lng": 172.116,
+      "overnight": "Kohaihai Campsite",
+      "mapNote": "Kohaihai Campsite. 100m."
+    }
+  ],
+  "waypoints": []
+}

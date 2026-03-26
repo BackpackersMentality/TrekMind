@@ -1,0 +1,31 @@
+{
+  "sheetName": "Mount Kinabalu",
+  "slug": "mount-kinabalu",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Timpohon Gate → Panalaban",
+      "distanceKm": "6.0",
+      "elevGainM": "1400",
+      "elevLossM": "—",
+      "maxAltM": "3272",
+      "lat": 6.0028,
+      "lng": 116.5441,
+      "overnight": "Laban Rata Resthouse",
+      "mapNote": "Laban Rata Resthouse. 3272m."
+    },
+    {
+      "day": 2,
+      "route": "Panalaban → Low's Peak Summit -> Timpohon",
+      "distanceKm": "11.0",
+      "elevGainM": "823",
+      "elevLossM": "2223",
+      "maxAltM": "4095",
+      "lat": 6.0533,
+      "lng": 116.5583,
+      "overnight": "Kota Kinabalu (Off-trail)",
+      "mapNote": "Kota Kinabalu (Off-trail). 4095m."
+    }
+  ],
+  "waypoints": []
+}
