@@ -1294,5 +1294,460 @@
       "Endemic carnivorous plants and species found nowhere else on Earth",
       "Gran Sabana savanna approach with Kukenan tepui rising alongside"
     ]
+  },
+  "w_trek": {
+    "name": "Torres del Paine W Trek",
+    "tier": 1,
+    "whySpecial": "The W Trek is the most photographed route in Patagonia — a 5-day traverse connecting all three iconic viewpoints of Torres del Paine National Park. The W shape links the granite tower amphitheatre, Valle del Francés hanging glaciers, and Grey Glacier in a format accessible to any fit trekker with full refugio support throughout.",
+    "highlights": [
+      "Mirador Base Las Torres at dawn — three granite towers reflected in a glacial tarn",
+      "Valle del Francés — avalanche-carved walls, hanging glaciers, Andean condors overhead",
+      "Grey Glacier — blue ice calving into Grey Lake, largest glacier in Patagonia outside Antarctica",
+      "Los Cuernos traverse above turquoise Lago Nordenskjöld",
+      "Refugio system — full meals and beds throughout, no camping gear required",
+      "Catamaran exit across Lago Pehoé with final views of the massif"
+    ]
+  },
+  "via-alpina": {
+    "name": "Via Alpina (Red Trail)",
+    "tier": 4,
+    "whySpecial": "The Via Alpina Red Trail is the grandest walking route in Europe — 2,500km crossing eight countries from Trieste to Monaco along the spine of the Alps. It traverses the Julian, Carnic, Tyrolean, Swiss, and Maritime Alps in sequence, passing through more distinct mountain cultures and landscapes than any other long-distance route on the continent.",
+    "highlights": [
+      "Triglav National Park — Slovenia's highest peak and most dramatic karst scenery",
+      "Tyrolean Alps — hut-to-hut traverse through Austria's finest alpine terrain",
+      "Swiss Alpine passes — crossing the Engadin and Bernina massifs at altitude",
+      "Mont Blanc region — the route passes through Chamonix and the heart of the Western Alps",
+      "8 countries in sequence — architecture, language, cuisine, and mountain culture shifting daily",
+      "Ligurian Alps finale — Mediterranean light and the Côte d'Azur arrival at Monaco"
+    ]
+  },
+  "gr11": {
+    "name": "GR11 (Ruta Transpirenaica)",
+    "tier": 2,
+    "whySpecial": "The GR11 traverses the Spanish Pyrenees from the Atlantic to the Mediterranean entirely on the Spanish side of the border — wilder, more remote, and less frequented than its French counterpart. Passing through the Basque Country, the Aragonese high peaks, Andorra, and Catalan Pyrenees, it offers 820km of mountain terrain with a genuine sense of wilderness.",
+    "highlights": [
+      "Ordesa y Monte Perdido — Spain's greatest Pyrenean canyon, sheer limestone walls",
+      "Posets-Maladeta — highest terrain on the GR11, crossing below the Aneto glacier",
+      "Andorra highland section — remote ridge walking above the duty-free valleys",
+      "Basque Pyrenees — green hills and farmhouses on the Atlantic approach",
+      "Aigüestortes i Estany de Sant Maurici — glacial lakes and granite of the Catalan Pyrenees",
+      "Cap de Creus finish — arrival at the Mediterranean's easternmost point of mainland Spain"
+    ]
+  },
+  "gr10": {
+    "name": "GR10",
+    "tier": 2,
+    "whySpecial": "The GR10 traverses the French Pyrenees from Hendaye on the Atlantic to Banyuls-sur-Mer on the Mediterranean — 866km through some of the most dramatic and varied mountain terrain in Europe. Unlike the GR11, it passes through French mountain villages, gîtes d'étape, and the distinctive culture of each Pyrenean valley.",
+    "highlights": [
+      "Basque Pyrenees — rolling green hills transitioning to high mountain terrain",
+      "Cirque de Gavarnie — France's most spectacular mountain amphitheatre, a UNESCO site",
+      "Vignemale and Balaïtous — the highest and most dramatic peaks of the central French Pyrenees",
+      "Ariège and Carlit massif — remote high plateau sections with glacial lakes",
+      "Cathar country — medieval castles and ancient villages in the eastern approaches",
+      "Banyuls-sur-Mer finish — descent to the Mediterranean through Roussillon vineyards"
+    ]
+  },
+  "wicklow": {
+    "name": "Wicklow Way",
+    "tier": 3,
+    "whySpecial": "The Wicklow Way was Ireland's first long-distance route — a 131km walk from the suburbs of Dublin into the largest upland wilderness in the country. It passes through the glacially carved Glendalough valley, across the heather moorlands of the Wicklow Mountains, and finishes in the rolling farmland of County Carlow.",
+    "highlights": [
+      "Glendalough — sixth-century monastic settlement in a glacial valley, one of Ireland's great historic sites",
+      "Wicklow Mountains moorland — vast heather expanses and bog cotton above 600m",
+      "Luggala and Lough Dan — dramatic glacial scenery on the northern section",
+      "Djouce Mountain — sweeping views from Dublin Bay to the Wicklow coast",
+      "Glenmalure — Ireland's longest glacial valley, remote and wild",
+      "Dublin departure — beginning a wilderness route from Ireland's capital city"
+    ]
+  },
+  "pennine": {
+    "name": "Pennine Way",
+    "tier": 2,
+    "whySpecial": "The Pennine Way is England's oldest and most demanding long-distance path — 429km along the backbone of northern England from the Peak District to the Scottish Borders. Created in 1965, it remains the benchmark for British hillwalking, crossing remote peat bogs, limestone dales, and the wild moorland of Northumberland.",
+    "highlights": [
+      "Kinder Scout — the contested moorland plateau where the 1932 mass trespass changed British walking rights",
+      "Malham Cove and Gordale Scar — spectacular limestone formations in the Yorkshire Dales",
+      "High Cup Nick — one of England's most dramatic geological features, a sudden glacial chasm",
+      "Cross Fell — highest point on the Pennines at 893m, notorious for the Helm Wind",
+      "Hadrian's Wall section — walking the Roman frontier for several miles",
+      "Kirk Yetholm finish — the famous Border Hotel pint tradition after the final miles"
+    ]
+  },
+  "adlerweg": {
+    "name": "Adlerweg (Eagle Walk)",
+    "tier": 2,
+    "whySpecial": "The Adlerweg — Eagle Walk — traverses the Austrian Tirol from St. Johann in the east to St. Anton am Arlberg in the west, following the ridge systems and high passes used by golden eagles. The 413km route combines technical alpine terrain with some of the finest hut infrastructure in Europe.",
+    "highlights": [
+      "Kaiser Mountains — dramatic limestone towers above the Inn Valley on the eastern approach",
+      "Achensee — Tirol's largest and deepest lake, approached from the ridge above",
+      "Karwendel range — vast protected wilderness of limestone ridges above Innsbruck",
+      "Ötztal Alps crossing — highest terrain on the route with glacier views",
+      "Arlberg massif finale — legendary ski terrain traversed in summer solitude",
+      "Austrian hut culture — consistently excellent mountain huts with hot food and local character throughout"
+    ]
+  },
+  "via-dinarica": {
+    "name": "Via Dinarica (White Trail)",
+    "tier": 3,
+    "whySpecial": "The Via Dinarica traverses the Dinaric Alps from Slovenia to Albania — 1,260km through six countries that are rarely visited and poorly mapped, crossing landscapes ranging from Slovenian karst to the Albanian Accursed Mountains. It is one of the last great undiscovered long-distance routes in Europe.",
+    "highlights": [
+      "Velebit Range (Croatia) — remote limestone ridgeline above the Adriatic, barely touched by tourism",
+      "Prenj and Čvrsnica (Bosnia) — brutally steep karst massifs with wartime history",
+      "Durmitor National Park (Montenegro) — glacial lakes and 2,500m peaks in a UNESCO landscape",
+      "Prokletije / Accursed Mountains (Albania) — the wildest and most remote section of the entire route",
+      "Cultural immersion — crossing post-Yugoslav cultures with hospitality unchanged for generations",
+      "True wilderness — long sections without infrastructure, requiring self-sufficiency and navigation"
+    ]
+  },
+  "abel-tasman": {
+    "name": "Abel Tasman Coast Track",
+    "tier": 1,
+    "whySpecial": "The Abel Tasman Coast Track is New Zealand's most-walked Great Walk — a 5-day traverse of golden-sand beaches, granite headlands, and native bush at the northern tip of the South Island. What makes it unique is the water taxi system that allows flexible access, and the combination of swimming, tidal crossings, and wildlife that sets it apart from any other Great Walk.",
+    "highlights": [
+      "Anchorage Beach — one of New Zealand's finest beaches, reached after the first day's walk",
+      "Bark Bay tidal crossing — a sandspit crossing that changes with the tide",
+      "Awaroa Inlet — the most remote beach on the track, with its famous lodge and tidal estuary",
+      "Fur seal colonies — basking on granite rocks throughout the northern section",
+      "Crystalline water — Abel Tasman's turquoise bays are among the clearest in New Zealand",
+      "Whariwharangi Bay — the old farmhouse hut in an isolated bay, the track's quietest finish"
+    ]
+  },
+  "great-ocean-walk": {
+    "name": "Great Ocean Walk",
+    "tier": 2,
+    "whySpecial": "The Great Ocean Walk follows 104km of Victoria's shipwreck coast from Apollo Bay to the Twelve Apostles — arguably Australia's most dramatic coastline. The route alternates between clifftop walking with panoramic Southern Ocean views and secluded beach camps accessible only on foot.",
+    "highlights": [
+      "Twelve Apostles — limestone stacks rising from the Southern Ocean, the walk's iconic finale",
+      "Cape Otway Lighthouse — Australia's oldest surviving mainland lighthouse on a wild headland",
+      "Wreck Beach — the remnants of 19th-century sailing ships visible at low tide",
+      "Johanna Beach — a wild surf beach with no road access, camped exclusively by walkers",
+      "Coastal heathland — banksias, hakeas, and kangaroos in the heath above the cliffs",
+      "Southern Ocean light — the quality of coastal light in this corner of Australia is extraordinary"
+    ]
+  },
+  "langtang": {
+    "name": "Langtang Valley Trek",
+    "tier": 2,
+    "whySpecial": "Langtang is the closest major Himalayan trekking region to Kathmandu — just 65km away — yet it feels entirely remote. The valley was devastated by the 2015 earthquake but has been rebuilt by the local Tamang community, and the trek now carries extra meaning as both a wilderness journey and an act of solidarity.",
+    "highlights": [
+      "Kyanjin Gompa — ancient Buddhist monastery below Langtang Lirung (7,227m)",
+      "Kyanjin Ri — viewpoint at 4,773m above the teahouse village, reached as a day hike",
+      "Tserko Ri — alternative summit day at 4,984m with sweeping views across the Nepal/Tibet border",
+      "Langtang village — rebuilt after the 2015 avalanche destroyed the original settlement",
+      "Tamang culture — a distinct Tibetan-influenced culture with its own language and traditions",
+      "Rhododendron forests — the lower valley is spectacular in March–April bloom"
+    ]
+  },
+  "three-passes-trek": {
+    "name": "Three Passes Trek",
+    "tier": 2,
+    "whySpecial": "The Three Passes Trek is the premium Khumbu experience — crossing Kongma La (5,535m), Cho La (5,420m), and Renjo La (5,360m) while also visiting Everest Base Camp and the Gokyo Lakes. It is the most complete circuit in the Everest region and the standard by which all other Nepal high-altitude treks are measured.",
+    "highlights": [
+      "Kongma La (5,535m) — highest of the three passes, with the Khumbu Glacier below",
+      "Everest Base Camp — the route passes through the classic EBC approach",
+      "Gokyo Ri — viewpoint above the Gokyo Lakes considered by many to surpass Kala Patthar for views",
+      "Cho La (5,420m) — technical glacier crossing requiring crampons in some conditions",
+      "Renjo La (5,360m) — the most scenic pass, with the Gokyo Lakes visible below",
+      "Gokyo Lakes — a chain of six glacial lakes at over 4,700m, sacred and luminously turquoise"
+    ]
+  },
+  "bibbulmun": {
+    "name": "Bibbulmun Track",
+    "tier": 4,
+    "whySpecial": "The Bibbulmun Track walks 1,000km from the hills east of Perth to Albany on the Southern Ocean — through the world's largest wildflower region. The track is a showcase of endemic southwest Australian flora found nowhere else on earth, with jarrah and karri forest transitions, coastal heath, and the deserted beaches of the southern coast.",
+    "highlights": [
+      "Southwest Australian Floristic Region — one of the world's 35 biodiversity hotspots, walked end to end",
+      "Karri forest — towering eucalyptus giants up to 90m in the Pemberton section",
+      "Walpole Wilderness — wild coastal heathland with Ancient Empire tree walks",
+      "Albany — the dramatic granite coastline arrival at the journey's end",
+      "Purpose-built three-sided shelters (waugals) every 20–30km throughout",
+      "Spring wildflowers (Aug–Oct) — the route is at its most spectacular in wildflower season"
+    ]
+  },
+  "fann": {
+    "name": "Fann Mountains Traverse",
+    "tier": 3,
+    "whySpecial": "The Fann Mountains in Tajikistan contain some of the most strikingly coloured alpine lakes in Central Asia — turquoise, jade, and cobalt waters in glacially carved valleys between 3,000m and 5,000m peaks. A Soviet-era mountaineering tradition left a system of base camps now used by trekkers, adding a distinctive atmosphere to an already extraordinary landscape.",
+    "highlights": [
+      "Kulikalon Lakes — a cluster of turquoise glacial lakes in the upper Artuch valley",
+      "Alaudin Pass (3,860m) — the dramatic crossing between the Artuch and Alaudin lake systems",
+      "Alaudin Lakes — jade-green waters below granite walls, one of Central Asia's finest alpine sites",
+      "Chimtarga Pass (4,750m) — the traverse's high point with panoramic views into Tajikistan and beyond",
+      "Iskanderkul — the largest lake in the Fanns, named for Alexander the Great",
+      "Soviet mountaineering atmosphere — base camp infrastructure and a trekking culture unlike anywhere else"
+    ]
+  },
+  "long-trail": {
+    "name": "Long Trail",
+    "tier": 3,
+    "whySpecial": "The Long Trail is America's oldest long-distance hiking path — completed in 1930 along the spine of the Green Mountains of Vermont from the Massachusetts border to Canada. It is the prototype for the Appalachian Trail and remains a wilder, muddier, and more honest version of the same idea.",
+    "highlights": [
+      "Mount Mansfield (1,339m) — Vermont's highest peak, traversed on the Long Trail",
+      "Camel's Hump — one of the most recognisable summits in New England",
+      "Appalachian Trail overlap — the Long Trail shares its southern third with the AT",
+      "Vermont mud season — the notorious spring trail conditions that define the experience",
+      "Long Trail huts and shelters — a network of rustic cabins maintained by the Green Mountain Club",
+      "Canadian border finish — the remote northern terminus in the Northeast Kingdom"
+    ]
+  },
+  "colorado": {
+    "name": "Colorado Trail",
+    "tier": 3,
+    "whySpecial": "The Colorado Trail runs 782km from Denver to Durango entirely above 3,000m for much of its length — making it the highest long-distance trail in the United States. It crosses eight mountain ranges, six wilderness areas, and the Continental Divide twice, with sustained alpine terrain unmatched on any other American thru-hike.",
+    "highlights": [
+      "Collegiate Peaks Wilderness — the most concentrated collection of 14,000ft peaks in the US",
+      "San Juan Mountains — the trail's most dramatic section through volcanic high country near Silverton",
+      "Coney Summit (4,093m) — one of the highest trail points, with views across the Colorado plateau",
+      "Segments 22–28 — the remote and high Weminuche Wilderness, the longest roadless section",
+      "Continental Divide crossings — the trail crosses the divide twice in iconic above-treeline terrain",
+      "Durango arrival — the Victorian railroad town finish after 30–40 days of high Colorado wilderness"
+    ]
+  },
+  "mount-kinabalu": {
+    "name": "Mount Kinabalu",
+    "tier": 1,
+    "whySpecial": "Mount Kinabalu is Southeast Asia's highest peak (4,095m) and one of the most biodiverse places on earth — a UNESCO World Heritage Site where the summit granite emerging from equatorial jungle creates one of trekking's most dramatic overnight ascents. The pre-dawn summit push rewards with a sunrise above the clouds visible across Borneo.",
+    "highlights": [
+      "Low's Peak summit (4,095m) — highest point between the Himalayas and New Guinea",
+      "Laban Rata resthouse — the mountain's overnight refuge at 3,272m above the jungle",
+      "Pre-dawn summit ascent — climbing rope-assisted granite slabs in darkness toward the summit",
+      "Kinabalu Park biodiversity — 5,000+ plant species in the surrounding national park",
+      "Low's Gully — one of the world's deepest tropical gorges dropping from the summit plateau",
+      "Borneo sunrise — the view from Low's Peak at dawn across the forests of Malaysian Borneo"
+    ]
+  },
+  "mount-semeru": {
+    "name": "Mount Semeru",
+    "tier": 2,
+    "whySpecial": "Mount Semeru is Java's highest peak and an active volcano that erupts several times per day — making the summit approach a genuine mountain experience rather than a tourist trail. The route passes through the caldera of Tengger, across a lunar ash plain, and up the steep scree cone of the summit.",
+    "highlights": [
+      "Ranu Kumbolo lake camp — a crater lake at 2,390m, one of Java's most beautiful camping spots",
+      "Tengger caldera — the vast volcanic caldera crossed on the approach to the summit cone",
+      "Mahameru summit (3,676m) — Java's highest point and the sacred peak of Javanese Hindu cosmology",
+      "Active eruptions — the volcano erupts approximately 3–5 times per day from the summit crater",
+      "Sunrise summit push — the standard 2am departure reaches the summit at dawn",
+      "Bromo views — the approach offers sweeping views of the iconic Bromo crater below"
+    ]
+  },
+  "zion-traverse": {
+    "name": "Zion Traverse",
+    "tier": 2,
+    "whySpecial": "The Zion Traverse is a technical desert crossing of Zion National Park's wild backcountry — linking the La Verkin Creek canyon system with the West Rim and East Rim above the Virgin River Narrows. It accesses landscapes that 95% of Zion's millions of annual visitors never see.",
+    "highlights": [
+      "La Verkin Creek — a shaded desert canyon with cottonwood pools, entirely away from crowds",
+      "Kolob Arch — one of the world's largest natural arches, reached via backcountry only",
+      "West Rim trail — the high plateau above the main canyon with panoramic views across Utah",
+      "Hop Valley — a hidden red-rock mesa valley with sandstone formations and hoodoos",
+      "Angel's Landing views from above — seeing the famous landmark from above the crowds",
+      "Desert night skies — backcountry Zion offers some of the darkest skies in the American Southwest"
+    ]
+  },
+  "gdt": {
+    "name": "Great Divide Trail",
+    "tier": 4,
+    "whySpecial": "The Great Divide Trail is Canada's most remote and demanding long-distance route — 1,123km from Waterton Lakes to Kakwa Provincial Park along the Continental Divide. Unlike the PCT or AT, large sections are entirely trail-less, requiring navigation by map and compass through genuine wilderness that sees fewer than 200 thru-hikers per year.",
+    "highlights": [
+      "Waterton Lakes — the stunning starting point where the prairie meets the Rockies",
+      "Kananaskis Country — classic Canadian Rockies wilderness on the southern sections",
+      "Banff and Yoho backcountry — the route passes through the heart of the mountain parks",
+      "Jasper's remote northern wilderness — increasingly wild and roadless north of Jasper",
+      "Kakwa Lake finish — the remote northern terminus accessible only by bush plane or foot",
+      "True navigation challenge — the trail requires compass work and route-finding unlike any marked trail"
+    ]
+  },
+  "tre_cime": {
+    "name": "Tre Cime di Lavaredo",
+    "tier": 1,
+    "whySpecial": "Tre Cime di Lavaredo — Three Peaks of Lavaredo — is the most photographed mountain scene in the Dolomites and arguably in all of Europe. The three vertical limestone monoliths rising from the high plateau have been an obsession for photographers, climbers, and trekkers for 150 years. The circuit can be walked in a day but deserves an overnight to experience the light changing across the towers.",
+    "highlights": [
+      "North face view from Rifugio Locatelli — the definitive Tre Cime panorama, at its best at dawn and dusk",
+      "Forcella Lavaredo — the saddle between the Three Peaks and the southern viewpoint",
+      "Dolomite geology — vertical limestone towers formed from ancient coral reefs on the seafloor",
+      "Rifugio Auronzo start — the highest road access point in the Dolomites with immediate views",
+      "Alpenglow at sunset — the pink and orange colouring of the dolomite limestone at dusk",
+      "World War I history — the high Dolomite plateau was a front line and traces remain throughout"
+    ]
+  },
+  "st-olavs": {
+    "name": "St. Olavs Way",
+    "tier": 3,
+    "whySpecial": "St. Olavs Way is Norway's primary pilgrimage route — 643km from Oslo to the Nidaros Cathedral in Trondheim, walked since the 11th century in honour of King Olav Haraldsson. It crosses the entire width of southern Norway through a landscape of farms, forests, and the high Dovrefjell plateau, arriving at one of Scandinavia's great Gothic cathedrals.",
+    "highlights": [
+      "Nidaros Cathedral, Trondheim — the journey's end, Scandinavia's finest medieval cathedral",
+      "Dovrefjell crossing — the wild high plateau with reindeer and musk oxen",
+      "Gudbrandsdalen valley — the great farming valley that has carried pilgrims north for 1,000 years",
+      "Stiklestad — the battlefield where King Olav was killed in 1030, the route's most sacred point",
+      "Norwegian farm culture — staying in working farms along the route as pilgrims have done for centuries",
+      "Oslo departure — beginning a wilderness pilgrimage from the Norwegian capital"
+    ]
+  },
+  "lofoten": {
+    "name": "Lofoten Traverse",
+    "tier": 3,
+    "whySpecial": "The Lofoten Islands offer the most dramatic coastal mountain scenery in Europe — steep peaks rising directly from the sea, Norse fishing villages clinging to the shore, and a quality of Arctic light that photographers come from around the world to experience. The traverse crosses the islands end to end through some of the world's most photogenic terrain.",
+    "highlights": [
+      "Reinebringen — the classic Lofoten summit with the fishing village of Reine far below",
+      "Nusfjord — one of Norway's best-preserved fishing villages, reached mid-traverse",
+      "Arctic light — the distinctive quality of high-latitude light on the islands, legendary among photographers",
+      "Midnight sun (Jul–Aug) — 24-hour daylight transforms the trekking experience entirely",
+      "Moskenesøya ridgelines — technical ridge walking above the Norwegian Sea",
+      "Rorbu fishing huts — traditional red fisherman's cabins available for overnight accommodation"
+    ]
+  },
+  "akshayuk": {
+    "name": "Akshayuk Pass",
+    "tier": 3,
+    "whySpecial": "Akshayuk Pass on Baffin Island is North America's most remote and dramatic trekking route — a 97km Arctic wilderness crossing surrounded by the highest vertical rock walls on the continent and overlooked by Thor Peak, which has the greatest uninterrupted vertical drop on earth. Polar bears are a genuine consideration.",
+    "highlights": [
+      "Thor Peak — the world's greatest vertical drop (1,675m) of uninterrupted cliff face",
+      "Mount Asgard — twin cylindrical granite towers rising from the Arctic tundra, an iconic climbing objective",
+      "Arctic tundra — the pass traverses genuine High Arctic terrain above the tree line",
+      "Polar bear country — Parks Canada requires bear safety equipment, adding genuine expedition character",
+      "Glacial rivers — multiple crossings of braided Arctic rivers requiring careful route-finding",
+      "Midnight sun or aurora — depending on season, the pass offers extraordinary light conditions"
+    ]
+  },
+  "kashmir": {
+    "name": "Kashmir Great Lakes",
+    "tier": 2,
+    "whySpecial": "The Kashmir Great Lakes trek crosses seven alpine lakes in the high meadows above the Kashmir Valley — an 8-day circuit through a landscape of extraordinary beauty that remains relatively little-known outside India. The combination of Himalayan scale, Gujjar shepherd culture, and emerald meadows makes this one of Asia's great undiscovered treks.",
+    "highlights": [
+      "Vishansar Lake — the first major lake crossing, brilliant blue at 3,770m",
+      "Krishnasar — twin lake to Vishansar, linked by a high meadow with views to the Himalayan crest",
+      "Gadsar Pass (4,200m) — the highest point on the trek with views across the Kashmir Valley",
+      "Gadsar Lake — a remote glacial lake with no permanent settlement, deepest wilderness on the route",
+      "Gangabal Lake — the sacred lake at the trek's end below the twin summits of Harmukh",
+      "Gujjar and Bakarwal culture — nomadic shepherds who bring their flocks to these meadows each summer"
+    ]
+  },
+  "kerry": {
+    "name": "Kerry Way",
+    "tier": 3,
+    "whySpecial": "The Kerry Way is Ireland's longest waymarked trail — a 214km circuit of the Iveragh Peninsula through the most spectacular mountain and coastal scenery in the country. It circles the MacGillycuddy's Reeks (Ireland's highest mountains), passes through Killarney National Park, and traverses the Ring of Kerry landscape that draws millions of tourists by car.",
+    "highlights": [
+      "MacGillycuddy's Reeks — Ireland's highest mountain range viewed from the ancient drove roads below",
+      "Killarney National Park — the only remaining native oak forest in Ireland, walked on the first day",
+      "Kenmare — the elegant Georgian market town at the southern turning point",
+      "Iveragh Peninsula coastline — wild Atlantic views across Kenmare Bay and the Skellig islands",
+      "Caherdaniel and Derrynane — archaeological sites and remote beaches on the coastal section",
+      "Carrauntoohil context — Ireland's highest mountain dominates the inland views throughout"
+    ]
+  },
+  "shikoku": {
+    "name": "Shikoku Pilgrimage",
+    "tier": 4,
+    "whySpecial": "The Shikoku Pilgrimage is Japan's most important Buddhist pilgrimage — 1,200km and 88 temples associated with the monk Kōbō Daishi (Kūkai) on the island of Shikoku. Pilgrims (henro) have walked the circuit for over 1,000 years, and the tradition of osettai — locals giving food and accommodation to walkers — creates a uniquely hospitable long-distance walking culture.",
+    "highlights": [
+      "Kōbō Daishi presence — tradition holds the monk walks alongside every pilgrim; spiritual atmosphere is pervasive",
+      "Temple 12 (Shosanji) — the most demanding temple approach, a mountain ascent earning the 'temple of suffering'",
+      "Cape Muroto — the exposed Pacific headland where Kūkai is said to have achieved enlightenment",
+      "Osettai tradition — strangers offering food, money, and hospitality to walkers throughout the island",
+      "White henro uniform — the distinctive walking costume of sedge hat, white jacket, and staff",
+      "Temple 88 (Ōkubo-ji) — the completion temple, though tradition says the pilgrimage ends back at Temple 1"
+    ]
+  },
+  "kokoda": {
+    "name": "Kokoda Track",
+    "tier": 2,
+    "whySpecial": "The Kokoda Track is the most historically significant trekking route in the Pacific — the jungle trail where Australian forces halted the Japanese advance toward Port Moresby in 1942. The combination of extreme terrain, WWII history encountered at every camp, and genuine Papua New Guinean village culture makes it an experience entirely unlike any other multi-day walk.",
+    "highlights": [
+      "Isurava Memorial — the most moving WWII site on the track, dedicated to the 39th Battalion's stand",
+      "Owen Stanley Range crossing — the watershed crossing at Kokoda Gap between the two sides of Papua",
+      "Templeton's Crossing — the most brutally steep and muddy section of the entire track",
+      "Village hospitality — Kokoda track villages provide guesthouses and guides as community income",
+      "Jungle warfare history — every camp along the track was fought over in 1942; history is palpable",
+      "Port Moresby context — the track was protecting Australia's nearest large city from invasion"
+    ]
+  },
+  "otter": {
+    "name": "Otter Trail",
+    "tier": 2,
+    "whySpecial": "The Otter Trail is South Africa's oldest and most celebrated hiking route — a 45km coastal trail through the Tsitsikamma National Park that requires a permit six months in advance due to demand. It follows a wild stretch of Garden Route coast between forest, cliff, and sea, with the Bloukrans river crossing — thigh-deep at high tide — as its defining moment.",
+    "highlights": [
+      "Bloukrans River crossing — the notorious tidal crossing requiring walkers to swim or wait",
+      "Tsitsikamma forest — ancient yellowwood and ironwood trees, some over 800 years old",
+      "Rocky coastline — dramatic wave-battered cliffs with spray reaching the trail",
+      "Ngubu Hut — the first night's accommodation in a forest clearing above the sea",
+      "Nature's Valley finish — arrival at one of South Africa's most beautiful beach lagoons",
+      "Southern right whale sightings — common in season from the clifftop sections"
+    ]
+  },
+  "druk": {
+    "name": "Druk Path",
+    "tier": 2,
+    "whySpecial": "The Druk Path is Bhutan's most popular trekking route — a 6-day high-altitude walk from Paro to Thimphu through pristine alpine forest, glacial lakes, and isolated dzongs (fortresses) that connects Bhutan's two most significant cities through terrain unchanged for centuries. The combination of Himalayan scenery and Bhutanese culture makes it unique.",
+    "highlights": [
+      "Jele Dzong — a 17th-century fortress monastery perched above the Paro Valley",
+      "High altitude lakes — a series of glacial lakes above 4,000m including Jimilang Tsho and Simkota Tsho",
+      "Phajoding monastery complex — the highest monastery on the route with panoramic views",
+      "Views to Tibet — on clear days the route offers views of Himalayan peaks along the Tibetan border",
+      "Blue sheep and Himalayan wildlife — the high section regularly encounters blue sheep herds",
+      "Thimphu arrival — descending into the Bhutanese capital through monastery-dotted forest"
+    ]
+  },
+  "great-glen": {
+    "name": "Great Glen Way",
+    "tier": 3,
+    "whySpecial": "The Great Glen Way follows Scotland's greatest geological feature — the Great Glen fault — from Fort William on the west coast to Inverness on the east. The 117km route passes along the Caledonian Canal and the shores of Loch Ness through landscapes that defined the Scottish Highland aesthetic.",
+    "highlights": [
+      "Ben Nevis views — Britain's highest mountain frames the Fort William departure",
+      "Caledonian Canal — one of Scotland's great engineering achievements, walked alongside for miles",
+      "Loch Ness — the route follows the full length of Britain's largest body of water by volume",
+      "Drumnadrochit and Urquhart Castle — the famous ruined castle above Loch Ness",
+      "Invermoriston gorge — a dramatic waterfall and ancient bridge on the loch shore",
+      "Inverness finish — arrival in the capital of the Scottish Highlands"
+    ]
+  },
+  "tahoe-rim": {
+    "name": "Tahoe Rim Trail",
+    "tier": 2,
+    "whySpecial": "The Tahoe Rim Trail makes a complete 265km circuit of Lake Tahoe — the largest alpine lake in North America — staying above 2,400m for almost its entire length. The trail straddles the Sierra Nevada and Great Basin, combining the granite and pine of the Sierra with the volcanic landscape of the Basin on the Nevada side.",
+    "highlights": [
+      "Lake Tahoe views — every high point on the circuit offers views down to the impossibly blue lake",
+      "Mount Rose (3,151m) — the highest point on the trail with views from the Sierra to Nevada",
+      "Desolation Wilderness — granite wilderness south of the lake, shared with the Pacific Crest Trail",
+      "Nevada desert transition — the eastern sections shift dramatically from Sierra forest to Great Basin sage",
+      "Fallen Leaf Lake — a glacial lake immediately south of Tahoe, glimpsed from the ridge",
+      "Tahoe basin ecology — the trail traverses the unique transition zone between two great mountain ecosystems"
+    ]
+  },
+  "kilimanjaro-lemosho": {
+    "name": "Kilimanjaro (Lemosho)",
+    "tier": 1,
+    "whySpecial": "The Lemosho Route is the finest way to climb Kilimanjaro — approaching from the remote western side across the Shira Plateau for superior acclimatisation, scenery, and summit success rates. The 8-day route through all five climate zones from equatorial rainforest to the arctic summit glacier is simply the most complete summit journey on any African mountain.",
+    "highlights": [
+      "Shira Plateau (3,840m) — a vast ancient caldera, one of Africa's great high-altitude landscapes",
+      "Lava Tower acclimatisation detour (4,600m) — the critical altitude gain that drives Lemosho's high success rate",
+      "Barranco Wall — the scrambling ascent of the 300m headwall is the route's most dramatic moment",
+      "Uhuru Peak (5,895m) — Africa's highest point and the summit of the roof of Africa",
+      "Glaciers of Kilimanjaro — the remaining ice fields on the summit plateau, rapidly diminishing",
+      "Five ecological zones — walking through rainforest, heather, moorland, alpine desert, and arctic in sequence"
+    ]
+  },
+  "australian-alps": {
+    "name": "Australian Alps Walking Track",
+    "tier": 4,
+    "whySpecial": "The Australian Alps Walking Track is 655km of true remote wilderness from Walhalla in Victoria to the suburbs of Canberra — traversing the highest terrain in Australia through snowfields, snow gum forests, and granite high country that most Australians never experience. It is one of the world's most genuinely remote long-distance routes in a country seen as benign.",
+    "highlights": [
+      "Mount Kosciuszko (2,228m) — Australia's highest peak, traversed on the Thredbo section",
+      "Bogong High Plains — vast alpine plateau with historic cattlemen's huts",
+      "Walhalla ghost town — the remarkable starting point, a former gold rush town in the mountains",
+      "Alpine ash and snow gum forest — the distinctive eucalyptus woodland unique to the Australian Alps",
+      "Wild brumby country — feral horses in the remote high country add a distinctive character",
+      "Namadgi National Park finale — the ACT wilderness section approaching Canberra"
+    ]
+  },
+  "heaphy": {
+    "name": "Heaphy Track",
+    "tier": 2,
+    "whySpecial": "The Heaphy Track crosses Kahurangi National Park — New Zealand's second-largest national park — from the Golden Bay coast over the Gouland Downs tussock plateau to the wild nikau palm coast of the Tasman Sea. The ecological diversity compressed into 78km, from tussock highland to subtropical palm-lined beach, is unmatched on any other New Zealand Great Walk.",
+    "highlights": [
+      "Gouland Downs — the high tussock plateau and ancient limestone karst, one of NZ's great open landscapes",
+      "Nikau palms on the Heaphy coast — the world's southernmost palm forest lines the final coastal section",
+      "Perry Saddle — the overnight point with views across the Tasman to the South Island ranges",
+      "James Mackay Hut — the descent point into the coastal section, with the Tasman Sea appearing below",
+      "Kohaihai River mouth — the wild beach finish on New Zealand's most remote stretch of coastline",
+      "Giant pūriri and tōtara forest — ancient podocarp trees on the descent to the coast"
+    ]
   }
 }
