@@ -1,0 +1,79 @@
+{
+  "sheetName": "Great Glen Way",
+  "slug": "great-glen",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Fort William → Gairlochy",
+      "distanceKm": "17.0",
+      "elevGainM": "150",
+      "elevLossM": "100",
+      "maxAltM": "50",
+      "lat": 56.8198,
+      "lng": -5.1111,
+      "overnight": "Gairlochy Wild/B&Bs",
+      "mapNote": "Gairlochy Wild/B&Bs. 50m."
+    },
+    {
+      "day": 2,
+      "route": "Gairlochy → Laggan Locks",
+      "distanceKm": "22.0",
+      "elevGainM": "200",
+      "elevLossM": "200",
+      "maxAltM": "80",
+      "lat": 57.0167,
+      "lng": -4.8167,
+      "overnight": "Laggan Locks Wild/B&Bs",
+      "mapNote": "Laggan Locks Wild/B&Bs. 80m."
+    },
+    {
+      "day": 3,
+      "route": "Laggan Locks → Fort Augustus",
+      "distanceKm": "17.0",
+      "elevGainM": "150",
+      "elevLossM": "150",
+      "maxAltM": "60",
+      "lat": 57.15,
+      "lng": -4.6833,
+      "overnight": "Fort Augustus Hostels",
+      "mapNote": "Fort Augustus Hostels. 60m."
+    },
+    {
+      "day": 4,
+      "route": "Fort Augustus → Invermoriston",
+      "distanceKm": "12.0",
+      "elevGainM": "400",
+      "elevLossM": "400",
+      "maxAltM": "370",
+      "lat": 57.2167,
+      "lng": -4.6167,
+      "overnight": "Invermoriston B&Bs",
+      "mapNote": "Invermoriston B&Bs. 370m."
+    },
+    {
+      "day": 5,
+      "route": "Invermoriston → Drumnadrochit",
+      "distanceKm": "22.0",
+      "elevGainM": "500",
+      "elevLossM": "500",
+      "maxAltM": "350",
+      "lat": 57.3333,
+      "lng": -4.4833,
+      "overnight": "Drumnadrochit Hostels",
+      "mapNote": "Drumnadrochit Hostels. 350m."
+    },
+    {
+      "day": 6,
+      "route": "Drumnadrochit → Inverness",
+      "distanceKm": "29.0",
+      "elevGainM": "450",
+      "elevLossM": "450",
+      "maxAltM": "300",
+      "lat": 57.4778,
+      "lng": -4.2247,
+      "overnight": "Inverness City",
+      "mapNote": "Inverness City. 300m."
+    }
+  ],
+  "waypoints": []
+}

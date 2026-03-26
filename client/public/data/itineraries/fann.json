@@ -1,0 +1,55 @@
+{
+  "sheetName": "Fann Mountains",
+  "slug": "fann",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Artuch Alp Camp → Kulikalon Lakes",
+      "distanceKm": "16.0",
+      "elevGainM": "1200",
+      "elevLossM": "300",
+      "maxAltM": "2900",
+      "lat": 39.29,
+      "lng": 68.14,
+      "overnight": "Kulikalon Camp",
+      "mapNote": "Kulikalon Camp. 2900m."
+    },
+    {
+      "day": 3,
+      "route": "Kulikalon Lakes → Alaudin Lakes (via Alauddin Pass)",
+      "distanceKm": "14.0",
+      "elevGainM": "900",
+      "elevLossM": "1100",
+      "maxAltM": "3860",
+      "lat": 39.24,
+      "lng": 68.19,
+      "overnight": "Alaudin Camp",
+      "mapNote": "Alaudin Camp. 3860m."
+    },
+    {
+      "day": 5,
+      "route": "Alaudin Lakes → Mutnyi Lake",
+      "distanceKm": "10.0",
+      "elevGainM": "800",
+      "elevLossM": "100",
+      "maxAltM": "3520",
+      "lat": 39.22,
+      "lng": 68.21,
+      "overnight": "Mutnyi Camp",
+      "mapNote": "Mutnyi Camp. 3520m."
+    },
+    {
+      "day": 7,
+      "route": "Mutnyi Lake → Iskanderkul (via Chimtarga Pass)",
+      "distanceKm": "40.0",
+      "elevGainM": "1300",
+      "elevLossM": "2600",
+      "maxAltM": "4750",
+      "lat": 39.07,
+      "lng": 68.36,
+      "overnight": "Iskanderkul Shore",
+      "mapNote": "Iskanderkul Shore. 4750m."
+    }
+  ],
+  "waypoints": []
+}

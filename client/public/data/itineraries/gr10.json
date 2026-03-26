@@ -1,0 +1,67 @@
+{
+  "sheetName": "GR10 (France)",
+  "slug": "gr10",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Hendaye to Saint-Jean-Pied-de-Port (Basque)",
+      "distanceKm": "160",
+      "elevGainM": "6000",
+      "elevLossM": "5800",
+      "maxAltM": "1000",
+      "lat": 43.1636,
+      "lng": -1.2372,
+      "overnight": "Saint-Jean Hostels",
+      "mapNote": "Saint-Jean Hostels. 1000m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Saint-Jean to Gourette (Béarn)",
+      "distanceKm": "135",
+      "elevGainM": "7500",
+      "elevLossM": "6500",
+      "maxAltM": "2200",
+      "lat": 42.9583,
+      "lng": -0.3392,
+      "overnight": "Gourette Village",
+      "mapNote": "Gourette Village. 2200m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Gourette to Bagnères-de-Luchon (Haute-Pyrénées)",
+      "distanceKm": "180",
+      "elevGainM": "9000",
+      "elevLossM": "9200",
+      "maxAltM": "2500",
+      "lat": 42.7906,
+      "lng": 0.5939,
+      "overnight": "Luchon Town",
+      "mapNote": "Luchon Town. 2500m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Luchon to Mérens-les-Vals (Ariège)",
+      "distanceKm": "170",
+      "elevGainM": "8500",
+      "elevLossM": "8000",
+      "maxAltM": "2734",
+      "lat": 42.6611,
+      "lng": 1.8417,
+      "overnight": "Mérens Gîtes",
+      "mapNote": "Mérens Gîtes. 2734m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Mérens to Banyuls-sur-Mer (Roussillon)",
+      "distanceKm": "220",
+      "elevGainM": "7000",
+      "elevLossM": "8500",
+      "maxAltM": "2400",
+      "lat": 42.4819,
+      "lng": 3.1283,
+      "overnight": "Banyuls Coast",
+      "mapNote": "Banyuls Coast. 2400m."
+    }
+  ],
+  "waypoints": []
+}

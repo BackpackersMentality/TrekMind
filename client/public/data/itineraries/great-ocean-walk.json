@@ -1,0 +1,91 @@
+{
+  "sheetName": "Great Ocean Walk",
+  "slug": "great-ocean-walk",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Apollo Bay → Blanket Bay",
+      "distanceKm": "22.0",
+      "elevGainM": "450",
+      "elevLossM": "450",
+      "maxAltM": "150",
+      "lat": -38.8258,
+      "lng": 143.5858,
+      "overnight": "Blanket Bay Camp",
+      "mapNote": "Blanket Bay Camp. 150m."
+    },
+    {
+      "day": 2,
+      "route": "Blanket Bay → Cape Otway",
+      "distanceKm": "11.0",
+      "elevGainM": "250",
+      "elevLossM": "200",
+      "maxAltM": "100",
+      "lat": -38.8558,
+      "lng": 143.5119,
+      "overnight": "Cape Otway Camp",
+      "mapNote": "Cape Otway Camp. 100m."
+    },
+    {
+      "day": 3,
+      "route": "Cape Otway → Aire River",
+      "distanceKm": "10.0",
+      "elevGainM": "150",
+      "elevLossM": "250",
+      "maxAltM": "80",
+      "lat": -38.8,
+      "lng": 143.48,
+      "overnight": "Aire River Camp",
+      "mapNote": "Aire River Camp. 80m."
+    },
+    {
+      "day": 4,
+      "route": "Aire River → Johanna Beach",
+      "distanceKm": "14.0",
+      "elevGainM": "350",
+      "elevLossM": "350",
+      "maxAltM": "180",
+      "lat": -38.7611,
+      "lng": 143.3778,
+      "overnight": "Johanna Beach Camp",
+      "mapNote": "Johanna Beach Camp. 180m."
+    },
+    {
+      "day": 5,
+      "route": "Johanna Beach → Ryan's Den",
+      "distanceKm": "14.0",
+      "elevGainM": "500",
+      "elevLossM": "450",
+      "maxAltM": "250",
+      "lat": -38.745,
+      "lng": 143.2661,
+      "overnight": "Ryan's Den Camp",
+      "mapNote": "Ryan's Den Camp. 250m."
+    },
+    {
+      "day": 6,
+      "route": "Ryan's Den → Devil's Kitchen",
+      "distanceKm": "13.0",
+      "elevGainM": "450",
+      "elevLossM": "400",
+      "maxAltM": "220",
+      "lat": -38.7189,
+      "lng": 143.1611,
+      "overnight": "Devil's Kitchen Camp",
+      "mapNote": "Devil's Kitchen Camp. 220m."
+    },
+    {
+      "day": 7,
+      "route": "Devil's Kitchen → Twelve Apostles",
+      "distanceKm": "16.0",
+      "elevGainM": "200",
+      "elevLossM": "250",
+      "maxAltM": "120",
+      "lat": -38.6653,
+      "lng": 143.1031,
+      "overnight": "Port Campbell (Off-trail)",
+      "mapNote": "Port Campbell (Off-trail). 120m."
+    }
+  ],
+  "waypoints": []
+}

@@ -1,0 +1,67 @@
+{
+  "sheetName": "Abel Tasman Coast",
+  "slug": "abel-tasman",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Marahau → Anchorage",
+      "distanceKm": "12.0",
+      "elevGainM": "250",
+      "elevLossM": "250",
+      "maxAltM": "100",
+      "lat": -40.9589,
+      "lng": 173.0561,
+      "overnight": "Anchorage Hut/Camp",
+      "mapNote": "Anchorage Hut/Camp. 100m."
+    },
+    {
+      "day": 2,
+      "route": "Anchorage → Bark Bay",
+      "distanceKm": "11.0",
+      "elevGainM": "350",
+      "elevLossM": "350",
+      "maxAltM": "120",
+      "lat": -40.9167,
+      "lng": 173.0519,
+      "overnight": "Bark Bay Hut/Camp",
+      "mapNote": "Bark Bay Hut/Camp. 120m."
+    },
+    {
+      "day": 3,
+      "route": "Bark Bay → Awaroa",
+      "distanceKm": "13.0",
+      "elevGainM": "400",
+      "elevLossM": "400",
+      "maxAltM": "150",
+      "lat": -40.865,
+      "lng": 173.0033,
+      "overnight": "Awaroa Lodge/Camp",
+      "mapNote": "Awaroa Lodge/Camp. 150m."
+    },
+    {
+      "day": 4,
+      "route": "Awaroa → Whariwharangi",
+      "distanceKm": "17.0",
+      "elevGainM": "450",
+      "elevLossM": "450",
+      "maxAltM": "200",
+      "lat": -40.8122,
+      "lng": 172.9694,
+      "overnight": "Whariwharangi Hut",
+      "mapNote": "Whariwharangi Hut. 200m."
+    },
+    {
+      "day": 5,
+      "route": "Whariwharangi → Wainui Bay",
+      "distanceKm": "6.0",
+      "elevGainM": "150",
+      "elevLossM": "200",
+      "maxAltM": "150",
+      "lat": -40.8156,
+      "lng": 172.9367,
+      "overnight": "Wainui Bay (Finish)",
+      "mapNote": "Wainui Bay (Finish). 150m."
+    }
+  ],
+  "waypoints": []
+}

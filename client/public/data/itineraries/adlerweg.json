@@ -1,0 +1,67 @@
+{
+  "sheetName": "Adlerweg (Austria)",
+  "slug": "adlerweg",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "St. Johann in Tirol to Kufstein",
+      "distanceKm": "75",
+      "elevGainM": "4500",
+      "elevLossM": "4800",
+      "maxAltM": "2100",
+      "lat": 47.5833,
+      "lng": 12.1697,
+      "overnight": "Kufstein Alpine Inns",
+      "mapNote": "Kufstein Alpine Inns. 2100m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Kufstein to Maurach (Achensee)",
+      "distanceKm": "85",
+      "elevGainM": "5200",
+      "elevLossM": "4900",
+      "maxAltM": "2250",
+      "lat": 47.4258,
+      "lng": 11.7589,
+      "overnight": "Maurach Village",
+      "mapNote": "Maurach Village. 2250m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Maurach to Innsbruck",
+      "distanceKm": "70",
+      "elevGainM": "4800",
+      "elevLossM": "5600",
+      "maxAltM": "2500",
+      "lat": 47.2692,
+      "lng": 11.3928,
+      "overnight": "Innsbruck City/Huts",
+      "mapNote": "Innsbruck City/Huts. 2500m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Innsbruck to Imst",
+      "distanceKm": "95",
+      "elevGainM": "5800",
+      "elevLossM": "5900",
+      "maxAltM": "2600",
+      "lat": 47.2386,
+      "lng": 10.7428,
+      "overnight": "Imst Valley",
+      "mapNote": "Imst Valley. 2600m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Imst to St. Anton am Arlberg",
+      "distanceKm": "88",
+      "elevGainM": "5500",
+      "elevLossM": "5200",
+      "maxAltM": "2749",
+      "lat": 47.1306,
+      "lng": 10.2667,
+      "overnight": "St. Anton Resort",
+      "mapNote": "St. Anton Resort. 2749m."
+    }
+  ],
+  "waypoints": []
+}

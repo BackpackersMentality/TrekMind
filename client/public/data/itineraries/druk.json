@@ -1,0 +1,79 @@
+{
+  "sheetName": "Druk Path",
+  "slug": "druk",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Paro → Jele Dzong",
+      "distanceKm": "10.0",
+      "elevGainM": "1000",
+      "elevLossM": "50",
+      "maxAltM": "3490",
+      "lat": 27.4258,
+      "lng": 89.4261,
+      "overnight": "Jele Dzong Camp",
+      "mapNote": "Jele Dzong Camp. 3490m."
+    },
+    {
+      "day": 2,
+      "route": "Jele Dzong → Jangchulakha",
+      "distanceKm": "10.0",
+      "elevGainM": "400",
+      "elevLossM": "100",
+      "maxAltM": "3780",
+      "lat": 27.45,
+      "lng": 89.45,
+      "overnight": "Jangchulakha Camp",
+      "mapNote": "Jangchulakha Camp. 3780m."
+    },
+    {
+      "day": 3,
+      "route": "Jangchulakha → Jimilang Tsho",
+      "distanceKm": "11.0",
+      "elevGainM": "300",
+      "elevLossM": "200",
+      "maxAltM": "3880",
+      "lat": 27.46,
+      "lng": 89.48,
+      "overnight": "Jimilang Tsho Camp",
+      "mapNote": "Jimilang Tsho Camp. 3880m."
+    },
+    {
+      "day": 4,
+      "route": "Jimilang Tsho → Simkota Tsho",
+      "distanceKm": "11.0",
+      "elevGainM": "350",
+      "elevLossM": "100",
+      "maxAltM": "4110",
+      "lat": 27.47,
+      "lng": 89.51,
+      "overnight": "Simkota Tsho Camp",
+      "mapNote": "Simkota Tsho Camp. 4110m."
+    },
+    {
+      "day": 5,
+      "route": "Simkota Tsho → Phajoding",
+      "distanceKm": "10.0",
+      "elevGainM": "150",
+      "elevLossM": "800",
+      "maxAltM": "4210",
+      "lat": 27.48,
+      "lng": 89.55,
+      "overnight": "Phajoding Camp/Monastery",
+      "mapNote": "Phajoding Camp/Monastery. 4210m."
+    },
+    {
+      "day": 6,
+      "route": "Phajoding → Thimphu",
+      "distanceKm": "5.0",
+      "elevGainM": "—",
+      "elevLossM": "1100",
+      "maxAltM": "3800",
+      "lat": 27.4728,
+      "lng": 89.639,
+      "overnight": "Thimphu Hotels",
+      "mapNote": "Thimphu Hotels. 3800m."
+    }
+  ],
+  "waypoints": []
+}

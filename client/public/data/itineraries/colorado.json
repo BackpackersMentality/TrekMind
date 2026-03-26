@@ -1,0 +1,67 @@
+{
+  "sheetName": "Colorado Trail",
+  "slug": "colorado",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Denver (Waterton) to Kenosha Pass",
+      "distanceKm": "115",
+      "elevGainM": "3800",
+      "elevLossM": "2100",
+      "maxAltM": "3100",
+      "lat": 39.4913,
+      "lng": -105.0932,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 3100m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Kenosha Pass to Twin Lakes (Leadville)",
+      "distanceKm": "130",
+      "elevGainM": "4100",
+      "elevLossM": "3900",
+      "maxAltM": "3600",
+      "lat": 39.412,
+      "lng": -105.755,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 3600m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Twin Lakes to Monarch Pass",
+      "distanceKm": "125",
+      "elevGainM": "4500",
+      "elevLossM": "3800",
+      "maxAltM": "4045",
+      "lat": 39.082,
+      "lng": -106.315,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 4045m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Monarch Pass to San Luis Pass",
+      "distanceKm": "160",
+      "elevGainM": "5000",
+      "elevLossM": "5200",
+      "maxAltM": "4000",
+      "lat": 38.496,
+      "lng": -106.326,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 4000m."
+    },
+    {
+      "day": "Section 5",
+      "route": "San Luis Pass to Durango",
+      "distanceKm": "252",
+      "elevGainM": "7000",
+      "elevLossM": "8500",
+      "maxAltM": "3950",
+      "lat": 37.95,
+      "lng": -106.91,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 3950m."
+    }
+  ],
+  "waypoints": []
+}

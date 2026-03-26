@@ -1,0 +1,67 @@
+{
+  "sheetName": "Bibbulmun Track",
+  "slug": "bibbulmun",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Kalamunda to Dwellingup",
+      "distanceKm": "202",
+      "elevGainM": "3500",
+      "elevLossM": "3400",
+      "maxAltM": "580",
+      "lat": -31.9744,
+      "lng": 116.0583,
+      "overnight": "Track Shelters",
+      "mapNote": "Track Shelters. 580m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Dwellingup to Balingup",
+      "distanceKm": "130",
+      "elevGainM": "2200",
+      "elevLossM": "2300",
+      "maxAltM": "450",
+      "lat": -32.713,
+      "lng": 116.062,
+      "overnight": "Track Shelters",
+      "mapNote": "Track Shelters. 450m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Balingup to Pemberton",
+      "distanceKm": "131",
+      "elevGainM": "1800",
+      "elevLossM": "1900",
+      "maxAltM": "380",
+      "lat": -33.785,
+      "lng": 115.986,
+      "overnight": "Track Shelters",
+      "mapNote": "Track Shelters. 380m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Pemberton to Walpole",
+      "distanceKm": "212",
+      "elevGainM": "2600",
+      "elevLossM": "2800",
+      "maxAltM": "300",
+      "lat": -34.443,
+      "lng": 116.039,
+      "overnight": "Track Shelters",
+      "mapNote": "Track Shelters. 300m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Walpole to Albany",
+      "distanceKm": "325",
+      "elevGainM": "4000",
+      "elevLossM": "4000",
+      "maxAltM": "250",
+      "lat": -34.977,
+      "lng": 116.732,
+      "overnight": "Track Shelters / Towns",
+      "mapNote": "Track Shelters / Towns. 250m."
+    }
+  ],
+  "waypoints": []
+}

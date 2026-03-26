@@ -1,0 +1,55 @@
+{
+  "sheetName": "Australian Alps",
+  "slug": "australian-alps",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Walhalla to Mount Hotham",
+      "distanceKm": "220",
+      "elevGainM": "8000",
+      "elevLossM": "6000",
+      "maxAltM": "1860",
+      "lat": -37.942,
+      "lng": 146.452,
+      "overnight": "Huts / Wild Camping",
+      "mapNote": "Huts / Wild Camping. 1860m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Mount Hotham to Thredbo",
+      "distanceKm": "160",
+      "elevGainM": "5000",
+      "elevLossM": "5500",
+      "maxAltM": "1900",
+      "lat": -36.983,
+      "lng": 147.133,
+      "overnight": "Huts / Wild Camping",
+      "mapNote": "Huts / Wild Camping. 1900m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Thredbo to Kiandra",
+      "distanceKm": "110",
+      "elevGainM": "3500",
+      "elevLossM": "3000",
+      "maxAltM": "2228",
+      "lat": -36.5,
+      "lng": 148.3,
+      "overnight": "Huts / Wild Camping",
+      "mapNote": "Huts / Wild Camping. 2228m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Kiandra to Tharwa (Canberra)",
+      "distanceKm": "165",
+      "elevGainM": "4000",
+      "elevLossM": "4500",
+      "maxAltM": "1800",
+      "lat": -35.866,
+      "lng": 148.483,
+      "overnight": "Huts / Wild Camping",
+      "mapNote": "Huts / Wild Camping. 1800m."
+    }
+  ],
+  "waypoints": []
+}

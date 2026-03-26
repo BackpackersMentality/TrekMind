@@ -1,0 +1,31 @@
+{
+  "sheetName": "Akshayuk Pass",
+  "slug": "akshayuk",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Overlord Camp → Summit Lake",
+      "distanceKm": "45.0",
+      "elevGainM": "500",
+      "elevLossM": "100",
+      "maxAltM": "500",
+      "lat": 66.55,
+      "lng": -65.98,
+      "overnight": "Emergency Huts / Wild",
+      "mapNote": "Emergency Huts / Wild. 500m."
+    },
+    {
+      "day": 2,
+      "route": "Summit Lake → North Pangnirtung Fiord",
+      "distanceKm": "52.0",
+      "elevGainM": "100",
+      "elevLossM": "500",
+      "maxAltM": "500",
+      "lat": 66.88,
+      "lng": -65.23,
+      "overnight": "Emergency Huts / Wild",
+      "mapNote": "Emergency Huts / Wild. 500m."
+    }
+  ],
+  "waypoints": []
+}

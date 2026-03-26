@@ -1,0 +1,67 @@
+{
+  "sheetName": "Great Divide Trail",
+  "slug": "gdt",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Waterton Lakes to Coleman (Alberta)",
+      "distanceKm": "150",
+      "elevGainM": "5500",
+      "elevLossM": "5800",
+      "maxAltM": "2590",
+      "lat": 49.05,
+      "lng": -113.91,
+      "overnight": "Wild / Huts",
+      "mapNote": "Wild / Huts. 2590m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Coleman to Peter Lougheed Park",
+      "distanceKm": "185",
+      "elevGainM": "6200",
+      "elevLossM": "6000",
+      "maxAltM": "2500",
+      "lat": 49.63,
+      "lng": -114.5,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 2500m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Peter Lougheed to Lake Louise / Field",
+      "distanceKm": "160",
+      "elevGainM": "5800",
+      "elevLossM": "6100",
+      "maxAltM": "2450",
+      "lat": 50.62,
+      "lng": -115.12,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 2450m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Lake Louise to Jasper",
+      "distanceKm": "315",
+      "elevGainM": "9500",
+      "elevLossM": "9800",
+      "maxAltM": "2550",
+      "lat": 51.39,
+      "lng": -116.48,
+      "overnight": "Wild / Resupply",
+      "mapNote": "Wild / Resupply. 2550m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Jasper to Kakwa Lake",
+      "distanceKm": "313",
+      "elevGainM": "8500",
+      "elevLossM": "8000",
+      "maxAltM": "2300",
+      "lat": 52.87,
+      "lng": -118.08,
+      "overnight": "Wild Camping",
+      "mapNote": "Wild Camping. 2300m."
+    }
+  ],
+  "waypoints": []
+}
