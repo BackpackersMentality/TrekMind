@@ -1,0 +1,43 @@
+{
+  "sheetName": "Tre Cime (3 Day)",
+  "slug": "tre_cime",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Rifugio Auronzo → Rifugio Lavaredo",
+      "distanceKm": "2.0",
+      "elevGainM": "100",
+      "elevLossM": "50",
+      "maxAltM": "2344",
+      "lat": 46.6133,
+      "lng": 12.2989,
+      "overnight": "Rifugio Lavaredo",
+      "mapNote": "Rifugio Lavaredo. 2344m."
+    },
+    {
+      "day": 2,
+      "route": "Rifugio Lavaredo → Rifugio Locatelli",
+      "distanceKm": "4.0",
+      "elevGainM": "250",
+      "elevLossM": "150",
+      "maxAltM": "2405",
+      "lat": 46.618,
+      "lng": 12.308,
+      "overnight": "Rifugio Locatelli",
+      "mapNote": "Rifugio Locatelli. 2405m."
+    },
+    {
+      "day": 3,
+      "route": "Rifugio Locatelli → Rifugio Auronzo",
+      "distanceKm": "6.0",
+      "elevGainM": "150",
+      "elevLossM": "300",
+      "maxAltM": "2450",
+      "lat": 46.635,
+      "lng": 12.316,
+      "overnight": "Cortina (Off-trail)",
+      "mapNote": "Cortina (Off-trail). 2450m."
+    }
+  ],
+  "waypoints": []
+}

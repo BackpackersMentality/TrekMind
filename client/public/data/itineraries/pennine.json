@@ -1,0 +1,67 @@
+{
+  "sheetName": "Pennine Way",
+  "slug": "pennine",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Edale to Hebden Bridge (Peak District)",
+      "distanceKm": "75",
+      "elevGainM": "2200",
+      "elevLossM": "2100",
+      "maxAltM": "636",
+      "lat": 53.7419,
+      "lng": -2.0125,
+      "overnight": "Hebden Bridge Pubs",
+      "mapNote": "Hebden Bridge Pubs. 636m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Hebden Bridge to Hawes (Yorkshire Dales)",
+      "distanceKm": "90",
+      "elevGainM": "2500",
+      "elevLossM": "2300",
+      "maxAltM": "694",
+      "lat": 54.3031,
+      "lng": -2.1969,
+      "overnight": "Hawes Village",
+      "mapNote": "Hawes Village. 694m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Hawes to Middleton-in-Teesdale (Teesdale)",
+      "distanceKm": "65",
+      "elevGainM": "1800",
+      "elevLossM": "2000",
+      "maxAltM": "893",
+      "lat": 54.6233,
+      "lng": -2.0833,
+      "overnight": "Middleton B&Bs",
+      "mapNote": "Middleton B&Bs. 893m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Middleton to Bellingham (Northumberland)",
+      "distanceKm": "110",
+      "elevGainM": "2800",
+      "elevLossM": "2900",
+      "maxAltM": "743",
+      "lat": 55.1433,
+      "lng": -2.2533,
+      "overnight": "Bellingham Town",
+      "mapNote": "Bellingham Town. 743m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Bellingham to Kirk Yetholm (Borders)",
+      "distanceKm": "68",
+      "elevGainM": "2000",
+      "elevLossM": "2100",
+      "maxAltM": "715",
+      "lat": 55.5533,
+      "lng": -2.2817,
+      "overnight": "Kirk Yetholm Village",
+      "mapNote": "Kirk Yetholm Village. 715m."
+    }
+  ],
+  "waypoints": []
+}

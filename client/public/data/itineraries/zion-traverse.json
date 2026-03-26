@@ -1,0 +1,55 @@
+{
+  "sheetName": "Zion Traverse",
+  "slug": "zion-traverse",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Lee Pass Trailhead → La Verkin Creek",
+      "distanceKm": "11.0",
+      "elevGainM": "100",
+      "elevLossM": "300",
+      "maxAltM": "1850",
+      "lat": 37.4526,
+      "lng": -113.1931,
+      "overnight": "Designated Campsite",
+      "mapNote": "Designated Campsite. 1850m."
+    },
+    {
+      "day": 2,
+      "route": "La Verkin Creek → Hop Valley",
+      "distanceKm": "14.0",
+      "elevGainM": "350",
+      "elevLossM": "150",
+      "maxAltM": "2000",
+      "lat": 37.408,
+      "lng": -113.136,
+      "overnight": "Designated Campsite",
+      "mapNote": "Designated Campsite. 2000m."
+    },
+    {
+      "day": 3,
+      "route": "Hop Valley → West Rim (Upper)",
+      "distanceKm": "22.0",
+      "elevGainM": "600",
+      "elevLossM": "200",
+      "maxAltM": "2300",
+      "lat": 37.345,
+      "lng": -113.064,
+      "overnight": "Designated Campsite",
+      "mapNote": "Designated Campsite. 2300m."
+    },
+    {
+      "day": 4,
+      "route": "West Rim → East Rim Trailhead",
+      "distanceKm": "28.0",
+      "elevGainM": "500",
+      "elevLossM": "1100",
+      "maxAltM": "2250",
+      "lat": 37.276,
+      "lng": -112.955,
+      "overnight": "Springdale (Off-trail)",
+      "mapNote": "Springdale (Off-trail). 2250m."
+    }
+  ],
+  "waypoints": []
+}

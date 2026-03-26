@@ -1,0 +1,79 @@
+{
+  "sheetName": "Tahoe Rim Trail",
+  "slug": "tahoe-rim",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Tahoe City to Brockway Summit",
+      "distanceKm": "32",
+      "elevGainM": "1100",
+      "elevLossM": "800",
+      "maxAltM": "2400",
+      "lat": 39.1678,
+      "lng": -120.1417,
+      "overnight": "Wild Camping / Sites",
+      "mapNote": "Wild Camping / Sites. 2400m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Brockway to Mount Rose Summit",
+      "distanceKm": "32",
+      "elevGainM": "1200",
+      "elevLossM": "600",
+      "maxAltM": "3151",
+      "lat": 39.313,
+      "lng": -119.897,
+      "overnight": "Wild Camping / Sites",
+      "mapNote": "Wild Camping / Sites. 3151m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Mount Rose to Spooner Summit",
+      "distanceKm": "53",
+      "elevGainM": "1500",
+      "elevLossM": "1800",
+      "maxAltM": "2800",
+      "lat": 39.1,
+      "lng": -119.9,
+      "overnight": "Wild Camping / Sites",
+      "mapNote": "Wild Camping / Sites. 2800m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Spooner to Kingsbury Grade",
+      "distanceKm": "20",
+      "elevGainM": "600",
+      "elevLossM": "500",
+      "maxAltM": "2600",
+      "lat": 38.966,
+      "lng": -119.883,
+      "overnight": "Wild Camping / Sites",
+      "mapNote": "Wild Camping / Sites. 2600m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Kingsbury to Echo Lake",
+      "distanceKm": "53",
+      "elevGainM": "1600",
+      "elevLossM": "1400",
+      "maxAltM": "2900",
+      "lat": 38.833,
+      "lng": -120.033,
+      "overnight": "Wild Camping / Sites",
+      "mapNote": "Wild Camping / Sites. 2900m."
+    },
+    {
+      "day": "Section 6",
+      "route": "Echo Lake to Tahoe City",
+      "distanceKm": "53",
+      "elevGainM": "1400",
+      "elevLossM": "1600",
+      "maxAltM": "2600",
+      "lat": 39.1678,
+      "lng": -120.1417,
+      "overnight": "Wild Camping / Sites",
+      "mapNote": "Wild Camping / Sites. 2600m."
+    }
+  ],
+  "waypoints": []
+}

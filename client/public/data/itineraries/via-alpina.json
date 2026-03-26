@@ -1,0 +1,67 @@
+{
+  "sheetName": "Via Alpina (Red)",
+  "slug": "via-alpina",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Trieste to Julian Alps (Slovenia)",
+      "distanceKm": "250",
+      "elevGainM": "12000",
+      "elevLossM": "11500",
+      "maxAltM": "2864",
+      "lat": 46.38,
+      "lng": 13.834,
+      "overnight": "Julian Alps Huts",
+      "mapNote": "Julian Alps Huts. 2864m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Julian Alps to Innsbruck (Austria)",
+      "distanceKm": "550",
+      "elevGainM": "25000",
+      "elevLossM": "24000",
+      "maxAltM": "2896",
+      "lat": 47.2692,
+      "lng": 11.3928,
+      "overnight": "Carnic/Tyrolean Huts",
+      "mapNote": "Carnic/Tyrolean Huts. 2896m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Innsbruck to Chur (Switzerland)",
+      "distanceKm": "400",
+      "elevGainM": "18000",
+      "elevLossM": "18500",
+      "maxAltM": "2775",
+      "lat": 46.8509,
+      "lng": 9.5329,
+      "overnight": "Swiss Alpine Huts",
+      "mapNote": "Swiss Alpine Huts. 2775m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Chur to Chamonix (France)",
+      "distanceKm": "450",
+      "elevGainM": "22000",
+      "elevLossM": "21000",
+      "maxAltM": "2665",
+      "lat": 45.9237,
+      "lng": 6.8694,
+      "overnight": "Mont Blanc Refuges",
+      "mapNote": "Mont Blanc Refuges. 2665m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Chamonix to Monaco",
+      "distanceKm": "400",
+      "elevGainM": "15000",
+      "elevLossM": "18000",
+      "maxAltM": "2500",
+      "lat": 43.7384,
+      "lng": 7.4246,
+      "overnight": "Mediterranean Coast",
+      "mapNote": "Mediterranean Coast. 2500m."
+    }
+  ],
+  "waypoints": []
+}

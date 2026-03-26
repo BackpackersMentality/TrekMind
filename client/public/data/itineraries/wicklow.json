@@ -1,0 +1,91 @@
+{
+  "sheetName": "Wicklow Way",
+  "slug": "wicklow",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Marlay Park → Knockree",
+      "distanceKm": "21.0",
+      "elevGainM": "600",
+      "elevLossM": "500",
+      "maxAltM": "500",
+      "lat": 53.1667,
+      "lng": -6.2167,
+      "overnight": "Knockree Hostel",
+      "mapNote": "Knockree Hostel. 500m."
+    },
+    {
+      "day": 2,
+      "route": "Knockree → Roundwood",
+      "distanceKm": "18.0",
+      "elevGainM": "500",
+      "elevLossM": "450",
+      "maxAltM": "630",
+      "lat": 53.0644,
+      "lng": -6.2239,
+      "overnight": "Roundwood B&Bs",
+      "mapNote": "Roundwood B&Bs. 630m."
+    },
+    {
+      "day": 3,
+      "route": "Roundwood → Glendalough",
+      "distanceKm": "12.0",
+      "elevGainM": "250",
+      "elevLossM": "400",
+      "maxAltM": "400",
+      "lat": 53.0119,
+      "lng": -6.3298,
+      "overnight": "Glendalough Valley",
+      "mapNote": "Glendalough Valley. 400m."
+    },
+    {
+      "day": 4,
+      "route": "Glendalough → Glenmalure",
+      "distanceKm": "14.0",
+      "elevGainM": "450",
+      "elevLossM": "400",
+      "maxAltM": "450",
+      "lat": 52.9567,
+      "lng": -6.3533,
+      "overnight": "Glenmalure Lodge",
+      "mapNote": "Glenmalure Lodge. 450m."
+    },
+    {
+      "day": 5,
+      "route": "Glenmalure → Moyne",
+      "distanceKm": "21.0",
+      "elevGainM": "550",
+      "elevLossM": "600",
+      "maxAltM": "500",
+      "lat": 52.8711,
+      "lng": -6.445,
+      "overnight": "Moyne Farm/Camping",
+      "mapNote": "Moyne Farm/Camping. 500m."
+    },
+    {
+      "day": 6,
+      "route": "Moyne → Shillelagh",
+      "distanceKm": "21.0",
+      "elevGainM": "400",
+      "elevLossM": "500",
+      "maxAltM": "400",
+      "lat": 52.7533,
+      "lng": -6.535,
+      "overnight": "Shillelagh Town",
+      "mapNote": "Shillelagh Town. 400m."
+    },
+    {
+      "day": 7,
+      "route": "Shillelagh → Clonegal",
+      "distanceKm": "19.0",
+      "elevGainM": "300",
+      "elevLossM": "400",
+      "maxAltM": "300",
+      "lat": 52.6917,
+      "lng": -6.6483,
+      "overnight": "Clonegal Village",
+      "mapNote": "Clonegal Village. 300m."
+    }
+  ],
+  "waypoints": []
+}

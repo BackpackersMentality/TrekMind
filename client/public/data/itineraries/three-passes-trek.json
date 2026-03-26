@@ -1,0 +1,79 @@
+{
+  "sheetName": "Three Passes (Nepal)",
+  "slug": "three-passes-trek",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Lukla to Namche Bazaar",
+      "distanceKm": "18",
+      "elevGainM": "1200",
+      "elevLossM": "300",
+      "maxAltM": "3440",
+      "lat": 27.8067,
+      "lng": 86.7144,
+      "overnight": "Namche Teahouses",
+      "mapNote": "Namche Teahouses. 3440m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Namche Bazaar to Dingboche",
+      "distanceKm": "19",
+      "elevGainM": "1300",
+      "elevLossM": "400",
+      "maxAltM": "4410",
+      "lat": 27.8931,
+      "lng": 86.8317,
+      "overnight": "Dingboche Teahouses",
+      "mapNote": "Dingboche Teahouses. 4410m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Dingboche to Lobuche (via Kongma La 5,535m)",
+      "distanceKm": "15",
+      "elevGainM": "1200",
+      "elevLossM": "700",
+      "maxAltM": "5535",
+      "lat": 27.9483,
+      "lng": 86.8106,
+      "overnight": "Lobuche Teahouses",
+      "mapNote": "Lobuche Teahouses. 5535m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Lobuche to Gokyo (via Cho La 5,420m)",
+      "distanceKm": "24",
+      "elevGainM": "1400",
+      "elevLossM": "1600",
+      "maxAltM": "5420",
+      "lat": 27.9544,
+      "lng": 86.6961,
+      "overnight": "Gokyo Teahouses",
+      "mapNote": "Gokyo Teahouses. 5420m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Gokyo to Thame (via Renjo La 5,360m)",
+      "distanceKm": "21",
+      "elevGainM": "1000",
+      "elevLossM": "1900",
+      "maxAltM": "5360",
+      "lat": 27.8286,
+      "lng": 86.6492,
+      "overnight": "Thame Teahouses",
+      "mapNote": "Thame Teahouses. 5360m."
+    },
+    {
+      "day": "Section 6",
+      "route": "Thame to Lukla",
+      "distanceKm": "22",
+      "elevGainM": "600",
+      "elevLossM": "1500",
+      "maxAltM": "3800",
+      "lat": 27.6865,
+      "lng": 86.7296,
+      "overnight": "Lukla Teahouses",
+      "mapNote": "Lukla Teahouses. 3800m."
+    }
+  ],
+  "waypoints": []
+}

@@ -1,0 +1,67 @@
+{
+  "sheetName": "Torres del Paine W Trek",
+  "slug": "w_trek",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Hotel Las Torres → Mirador Las Torres",
+      "distanceKm": "14.0",
+      "elevGainM": "800",
+      "elevLossM": "800",
+      "maxAltM": "886",
+      "lat": -50.9452,
+      "lng": -72.9481,
+      "overnight": "Refugio Chileno",
+      "mapNote": "Refugio Chileno. 886m."
+    },
+    {
+      "day": 2,
+      "route": "Refugio Chileno → Refugio Los Cuernos",
+      "distanceKm": "11.0",
+      "elevGainM": "350",
+      "elevLossM": "450",
+      "maxAltM": "400",
+      "lat": -51.0456,
+      "lng": -72.9861,
+      "overnight": "Refugio Los Cuernos",
+      "mapNote": "Refugio Los Cuernos. 400m."
+    },
+    {
+      "day": 3,
+      "route": "Refugio Los Cuernos → Valle del Francés",
+      "distanceKm": "25.0",
+      "elevGainM": "800",
+      "elevLossM": "800",
+      "maxAltM": "850",
+      "lat": -51.0667,
+      "lng": -73.0917,
+      "overnight": "Refugio Paine Grande",
+      "mapNote": "Refugio Paine Grande. 850m."
+    },
+    {
+      "day": 4,
+      "route": "Refugio Paine Grande → Refugio Grey",
+      "distanceKm": "11.0",
+      "elevGainM": "300",
+      "elevLossM": "250",
+      "maxAltM": "300",
+      "lat": -51.0083,
+      "lng": -73.1367,
+      "overnight": "Refugio Grey",
+      "mapNote": "Refugio Grey. 300m."
+    },
+    {
+      "day": 5,
+      "route": "Refugio Grey → Paine Grande (Catamaran)",
+      "distanceKm": "11.0",
+      "elevGainM": "250",
+      "elevLossM": "300",
+      "maxAltM": "300",
+      "lat": -51.7269,
+      "lng": -72.505,
+      "overnight": "Puerto Natales (Off-trail)",
+      "mapNote": "Puerto Natales (Off-trail). 300m."
+    }
+  ],
+  "waypoints": []
+}

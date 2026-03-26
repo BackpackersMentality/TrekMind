@@ -1,0 +1,55 @@
+{
+  "sheetName": "St. Olavs Way",
+  "slug": "st-olavs",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Oslo to Hamar",
+      "distanceKm": "130",
+      "elevGainM": "2100",
+      "elevLossM": "2000",
+      "maxAltM": "400",
+      "lat": 59.9139,
+      "lng": 10.7522,
+      "overnight": "Hostels / Farms",
+      "mapNote": "Hostels / Farms. 400m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Hamar to Lillehammer",
+      "distanceKm": "65",
+      "elevGainM": "1100",
+      "elevLossM": "1000",
+      "maxAltM": "350",
+      "lat": 60.794,
+      "lng": 11.067,
+      "overnight": "Hostels / Farms",
+      "mapNote": "Hostels / Farms. 350m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Lillehammer to Hjerkinn (Dovrefjell)",
+      "distanceKm": "170",
+      "elevGainM": "3500",
+      "elevLossM": "2200",
+      "maxAltM": "1000",
+      "lat": 61.115,
+      "lng": 10.466,
+      "overnight": "Hostels / Mountain Huts",
+      "mapNote": "Hostels / Mountain Huts. 1000m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Hjerkinn to Trondheim",
+      "distanceKm": "278",
+      "elevGainM": "4200",
+      "elevLossM": "5200",
+      "maxAltM": "1000",
+      "lat": 62.222,
+      "lng": 9.544,
+      "overnight": "Trondheim City",
+      "mapNote": "Trondheim City. 1000m."
+    }
+  ],
+  "waypoints": []
+}

@@ -1,0 +1,67 @@
+{
+  "sheetName": "Via Dinarica (White)",
+  "slug": "via-dinarica",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Postojna (Slovenia) to Rijeka (Croatia)",
+      "distanceKm": "180",
+      "elevGainM": "6000",
+      "elevLossM": "6500",
+      "maxAltM": "1796",
+      "lat": 45.3271,
+      "lng": 14.4422,
+      "overnight": "Gorski Kotar Huts",
+      "mapNote": "Gorski Kotar Huts. 1796m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Rijeka to Knin (Velebit Range)",
+      "distanceKm": "320",
+      "elevGainM": "11000",
+      "elevLossM": "11500",
+      "maxAltM": "1757",
+      "lat": 44.0408,
+      "lng": 16.1967,
+      "overnight": "Velebit Shelters",
+      "mapNote": "Velebit Shelters. 1757m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Knin to Mostar (Bosnia)",
+      "distanceKm": "290",
+      "elevGainM": "14500",
+      "elevLossM": "14000",
+      "maxAltM": "2228",
+      "lat": 43.3438,
+      "lng": 17.8078,
+      "overnight": "Blidinje / Prenj Huts",
+      "mapNote": "Blidinje / Prenj Huts. 2228m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Mostar to Žabljak (Montenegro)",
+      "distanceKm": "250",
+      "elevGainM": "12500",
+      "elevLossM": "11000",
+      "maxAltM": "2386",
+      "lat": 43.1553,
+      "lng": 19.1228,
+      "overnight": "Durmitor Camps",
+      "mapNote": "Durmitor Camps. 2386m."
+    },
+    {
+      "day": "Section 5",
+      "route": "Žabljak to Valbona (Albania)",
+      "distanceKm": "220",
+      "elevGainM": "13000",
+      "elevLossM": "14500",
+      "maxAltM": "2694",
+      "lat": 42.4411,
+      "lng": 19.8925,
+      "overnight": "Valbona Guesthouses",
+      "mapNote": "Valbona Guesthouses. 2694m."
+    }
+  ],
+  "waypoints": []
+}

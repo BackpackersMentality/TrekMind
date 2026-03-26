@@ -1,0 +1,55 @@
+{
+  "sheetName": "Shikoku Pilgrimage",
+  "slug": "shikoku",
+  "itinerary": [
+    {
+      "day": "Section 1",
+      "route": "Tokushima Prefecture (Temples 1–23)",
+      "distanceKm": "250",
+      "elevGainM": "4000",
+      "elevLossM": "4000",
+      "maxAltM": "900",
+      "lat": 34.1594,
+      "lng": 134.5028,
+      "overnight": "Temple Lodging (Shukubo)",
+      "mapNote": "Temple Lodging (Shukubo). 900m."
+    },
+    {
+      "day": "Section 2",
+      "route": "Kochi Prefecture (Temples 24–39)",
+      "distanceKm": "350",
+      "elevGainM": "6000",
+      "elevLossM": "6000",
+      "maxAltM": "800",
+      "lat": 33.5583,
+      "lng": 133.5311,
+      "overnight": "Temple Lodging / Ryokans",
+      "mapNote": "Temple Lodging / Ryokans. 800m."
+    },
+    {
+      "day": "Section 3",
+      "route": "Ehime Prefecture (Temples 40–65)",
+      "distanceKm": "350",
+      "elevGainM": "7000",
+      "elevLossM": "7000",
+      "maxAltM": "900",
+      "lat": 33.8392,
+      "lng": 132.7661,
+      "overnight": "Temple Lodging / Ryokans",
+      "mapNote": "Temple Lodging / Ryokans. 900m."
+    },
+    {
+      "day": "Section 4",
+      "route": "Kagawa Prefecture (Temples 66–88)",
+      "distanceKm": "250",
+      "elevGainM": "4500",
+      "elevLossM": "4500",
+      "maxAltM": "900",
+      "lat": 34.3403,
+      "lng": 134.0433,
+      "overnight": "Temple Lodging / Ryokans",
+      "mapNote": "Temple Lodging / Ryokans. 900m."
+    }
+  ],
+  "waypoints": []
+}
