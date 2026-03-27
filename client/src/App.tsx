@@ -21,6 +21,8 @@ const ContinentPage = lazy(() => import("@/pages/ContinentPage"));
 const DurationPage  = lazy(() => import("@/pages/DurationPage"));
 const TierPage      = lazy(() => import("@/pages/TierPage"));
 const NotFound      = lazy(() => import("@/pages/not-found"));
+const Privacy       = lazy(() => import("@/pages/Privacy"));
+const Terms         = lazy(() => import("@/pages/Terms"));
 
 // ── Skeleton shown while a page chunk downloads ───────────────────────────────
 function PageSkeleton() {
@@ -84,6 +86,12 @@ function SuspendedDurationPage(props: any) {
 function SuspendedTierPage(props: any) {
   return <Suspense fallback={<PageSkeleton />}><TierPage {...props} /></Suspense>;
 }
+function SuspendedPrivacy(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><Privacy {...props} /></Suspense>;
+}
+function SuspendedTerms(props: any) {
+  return <Suspense fallback={<PageSkeleton />}><Terms {...props} /></Suspense>;
+}
 
 function Router() {
   return (
@@ -103,6 +111,8 @@ function Router() {
       <Route path="/treks/continent/:slug" component={SuspendedContinentPage} />
       <Route path="/treks/duration/:slug"  component={SuspendedDurationPage} />
       <Route path="/treks/tier/:slug"      component={SuspendedTierPage} />
+      <Route path="/privacy"               component={SuspendedPrivacy} />
+      <Route path="/terms"                 component={SuspendedTerms} />
       <Route                               component={SuspendedNotFound} />
     </Switch>
   );
