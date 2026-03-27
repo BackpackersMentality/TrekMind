@@ -1,129 +1,138 @@
-// useTrekList.ts
-// localStorage-based trek tracking — no auth required
-// Three lists: completed, wishlist, inProgress
-// Usage: const { status, toggle, counts } = useTrekList()
+// client/src/hooks/useTrekList.ts
+// Saves trek status (completed / inProgress / wishlist).
+//
+// Strategy:
+//   • Anonymous  → localStorage only (existing behaviour, unchanged)
+//   • Logged in  → Supabase DB (source of truth)
+//   • On login   → merge localStorage → Supabase, clear localStorage
 
 import { useState, useEffect, useCallback } from 'react'
+import { supabase, type TrekStatus } from '@/lib/supabaseClient'
+import { useAuth } from '@/hooks/useAuth'
 
-export type TrekStatus = 'completed' | 'wishlist' | 'inProgress' | null
+// ── LocalStorage key ───────────────────────────────────────────────────────
+const LS_KEY = 'trekmind_trek_list'
 
-interface TrekLists {
-  completed: Set<string>
-  wishlist: Set<string>
-  inProgress: Set<string>
-}
+type TrekMap = Record<string, TrekStatus>
 
-interface TrekListCounts {
-  completed: number
-  wishlist: number
-  inProgress: number
-}
-
-const STORAGE_KEY = 'trekmind_lists'
-
-function loadFromStorage(): TrekLists {
+function readLS(): TrekMap {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return { completed: new Set(), wishlist: new Set(), inProgress: new Set() }
-    const parsed = JSON.parse(raw)
-    return {
-      completed:  new Set<string>(parsed.completed  || []),
-      wishlist:   new Set<string>(parsed.wishlist   || []),
-      inProgress: new Set<string>(parsed.inProgress || []),
-    }
+    return JSON.parse(localStorage.getItem(LS_KEY) ?? '{}')
   } catch {
-    return { completed: new Set(), wishlist: new Set(), inProgress: new Set() }
+    return {}
   }
 }
 
-function saveToStorage(lists: TrekLists) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      completed:  Array.from(lists.completed),
-      wishlist:   Array.from(lists.wishlist),
-      inProgress: Array.from(lists.inProgress),
-    }))
-  } catch {
-    // localStorage unavailable (private browsing etc.) — fail silently
-  }
+function writeLS(map: TrekMap) {
+  localStorage.setItem(LS_KEY, JSON.stringify(map))
 }
 
+// ── Hook ───────────────────────────────────────────────────────────────────
 export function useTrekList() {
-  const [lists, setLists] = useState<TrekLists>(() => loadFromStorage())
+  const { user, isLoggedIn } = useAuth()
+  const [trekMap, setTrekMap] = useState<TrekMap>({})
+  const [syncing, setSyncing] = useState(false)
 
-  // Sync to localStorage on every change
+  // ── Load data ────────────────────────────────────────────────────────────
   useEffect(() => {
-    saveToStorage(lists)
-  }, [lists])
+    if (!isLoggedIn || !user) {
+      // Anonymous: read from localStorage
+      setTrekMap(readLS())
+      return
+    }
 
-  // Get current status of a trek
-  const getStatus = useCallback((trekId: string): TrekStatus => {
-    if (lists.completed.has(trekId))  return 'completed'
-    if (lists.inProgress.has(trekId)) return 'inProgress'
-    if (lists.wishlist.has(trekId))   return 'wishlist'
-    return null
-  }, [lists])
+    // Logged in: fetch from Supabase and merge any pending localStorage items
+    const load = async () => {
+      setSyncing(true)
 
-  // Toggle: if already in this status → remove, else → set (and remove from others)
-  const toggle = useCallback((trekId: string, status: Exclude<TrekStatus, null>) => {
-    setLists(prev => {
-      const next: TrekLists = {
-        completed:  new Set(prev.completed),
-        wishlist:   new Set(prev.wishlist),
-        inProgress: new Set(prev.inProgress),
-      }
-      const currentStatus = next.completed.has(trekId)  ? 'completed'
-                          : next.inProgress.has(trekId) ? 'inProgress'
-                          : next.wishlist.has(trekId)   ? 'wishlist'
-                          : null
+      const { data, error } = await supabase
+        .from('saved_treks')
+        .select('trek_id, status')
+        .eq('user_id', user.id)
 
-      // Remove from all lists first
-      next.completed.delete(trekId)
-      next.wishlist.delete(trekId)
-      next.inProgress.delete(trekId)
-
-      // If clicking the same status again → deselect (already removed above)
-      if (currentStatus !== status) {
-        next[status].add(trekId)
+      if (error) {
+        console.error('[useTrekList] fetch error:', error)
+        setSyncing(false)
+        return
       }
 
-      return next
+      // Build DB map
+      const dbMap: TrekMap = {}
+      for (const row of data ?? []) {
+        dbMap[row.trek_id] = row.status as TrekStatus
+      }
+
+      // Merge pending localStorage items → Supabase (on first login)
+      const pending = readLS()
+      const toUpsert = Object.entries(pending).map(([trek_id, status]) => ({
+        user_id: user.id,
+        trek_id,
+        status,
+      }))
+
+      if (toUpsert.length > 0) {
+        await supabase
+          .from('saved_treks')
+          .upsert(toUpsert, { onConflict: 'user_id,trek_id' })
+        writeLS({}) // clear after sync
+        // Re-merge
+        for (const { trek_id, status } of toUpsert) {
+          dbMap[trek_id] = status
+        }
+      }
+
+      setTrekMap(dbMap)
+      setSyncing(false)
+    }
+
+    load()
+  }, [isLoggedIn, user])
+
+  // ── Toggle status ────────────────────────────────────────────────────────
+  const toggle = useCallback(async (trekId: string, status: TrekStatus) => {
+    const current = trekMap[trekId]
+    const next = current === status ? null : status // tap same = remove
+
+    // Optimistic local update
+    setTrekMap(prev => {
+      const updated = { ...prev }
+      if (next === null) delete updated[trekId]
+      else updated[trekId] = next
+      return updated
     })
-  }, [])
 
-  const counts: TrekListCounts = {
-    completed:  lists.completed.size,
-    wishlist:   lists.wishlist.size,
-    inProgress: lists.inProgress.size,
+    if (!isLoggedIn || !user) {
+      // Anonymous: persist to localStorage
+      const ls = readLS()
+      if (next === null) delete ls[trekId]
+      else ls[trekId] = next
+      writeLS(ls)
+      return
+    }
+
+    // Logged in: sync to Supabase
+    if (next === null) {
+      await supabase
+        .from('saved_treks')
+        .delete()
+        .match({ user_id: user.id, trek_id: trekId })
+    } else {
+      await supabase
+        .from('saved_treks')
+        .upsert({ user_id: user.id, trek_id: trekId, status: next },
+                 { onConflict: 'user_id,trek_id' })
+    }
+  }, [trekMap, isLoggedIn, user])
+
+  // ── Getters ──────────────────────────────────────────────────────────────
+  const getStatus = (trekId: string): TrekStatus | null =>
+    trekMap[trekId] ?? null
+
+  const counts = {
+    completed:  Object.values(trekMap).filter(s => s === 'completed').length,
+    inProgress: Object.values(trekMap).filter(s => s === 'inProgress').length,
+    wishlist:   Object.values(trekMap).filter(s => s === 'wishlist').length,
   }
 
-  // All trek IDs across all lists (for globe rendering)
-  const allTracked = useCallback((): Record<string, TrekStatus> => {
-    const result: Record<string, TrekStatus> = {}
-    lists.completed.forEach(id  => { result[id] = 'completed'  })
-    lists.inProgress.forEach(id => { result[id] = 'inProgress' })
-    lists.wishlist.forEach(id   => { result[id] = 'wishlist'   })
-    return result
-  }, [lists])
-
-  return { getStatus, toggle, counts, allTracked, lists }
-}
-
-// ── Standalone helpers for non-hook contexts (e.g. globe renderer) ────────────
-
-export function getStoredStatus(trekId: string): TrekStatus {
-  const lists = loadFromStorage()
-  if (lists.completed.has(trekId))  return 'completed'
-  if (lists.inProgress.has(trekId)) return 'inProgress'
-  if (lists.wishlist.has(trekId))   return 'wishlist'
-  return null
-}
-
-export function getAllStoredStatuses(): Record<string, TrekStatus> {
-  const lists = loadFromStorage()
-  const result: Record<string, TrekStatus> = {}
-  lists.completed.forEach(id  => { result[id] = 'completed'  })
-  lists.inProgress.forEach(id => { result[id] = 'inProgress' })
-  lists.wishlist.forEach(id   => { result[id] = 'wishlist'   })
-  return result
+  return { trekMap, getStatus, toggle, counts, syncing }
 }
