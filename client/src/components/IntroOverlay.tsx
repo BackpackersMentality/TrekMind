@@ -3,9 +3,9 @@
 // Shows once per device, stored in localStorage. Dismiss on tap/click anywhere.
 
 import { useState, useEffect } from "react";
+import { useIntroSeen } from "@/hooks/useIntroSeen";
 import { Globe, Trophy, Bookmark, Sparkles, SlidersHorizontal } from "lucide-react";
 
-const STORAGE_KEY = "trekmind_intro_seen";
 
 // ── Tier grid for welcome slide ───────────────────────────────────────────────
 const TIER_GRID = [
@@ -97,22 +97,24 @@ const STEPS = [
 const TOTAL_SLIDES = 1 + STEPS.length; // welcome + 5 feature slides
 
 export function IntroOverlay() {
+  const { hasSeen, markSeen } = useIntroSeen();
   const [visible, setVisible] = useState(false);
   const [slide, setSlide] = useState(0); // 0 = welcome, 1–5 = feature steps
   const [exiting, setExiting] = useState(false);
 
+  // Show overlay once hasSeen is confirmed false (null = still loading)
   useEffect(() => {
-    try {
-      if (!localStorage.getItem(STORAGE_KEY)) {
-        const t = setTimeout(() => setVisible(true), 900);
-        return () => clearTimeout(t);
-      }
-    } catch { /* localStorage unavailable */ }
-  }, []);
+    if (hasSeen === false) {
+      const t = setTimeout(() => setVisible(true), 900);
+      return () => clearTimeout(t);
+    }
+    // If hasSeen becomes true (e.g. user logs in), hide the overlay
+    if (hasSeen === true) setVisible(false);
+  }, [hasSeen]);
 
   const dismiss = () => {
     setExiting(true);
-    try { localStorage.setItem(STORAGE_KEY, "1"); } catch {}
+    markSeen(); // persists to Supabase (if logged in) or localStorage (anonymous)
     setTimeout(() => setVisible(false), 300);
   };
 
