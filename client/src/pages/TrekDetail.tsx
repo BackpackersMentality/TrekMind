@@ -23,6 +23,8 @@ import { GearAssistant } from "@/components/GearAssistant";
 import { getTrekImageUrl } from "@/lib/images";
 import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
+import { useAuth } from "@/hooks/useAuth";
+import { AuthModal } from "@/components/AuthModal";
 
 const RouteMap = lazy(() => import("@/components/RouteMap"));
 
@@ -336,9 +338,11 @@ export default function TrekDetail() {
   const trek = useMemo(() => trekId ? getTrekById(trekId) : null, [trekId]);
 
   // ── ALL hooks must be called before any early return (Rules of Hooks) ──────
+  const { isLoggedIn } = useAuth();
   const { getStatus, toggle } = useTrekList();
   const trekStatus = trek ? getStatus(trek.id) : null;
   const [bookmarkOpen, setBookmarkOpen] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
 
   // ── SEO meta (safe to compute with null-guards) ────────────────────────────
   const pageTitle       = trek ? `${trek.name} Trek Guide — ${trek.country} | TrekMind` : "Trek not found | TrekMind";
@@ -425,7 +429,10 @@ export default function TrekDetail() {
         {/* Bookmark button — top right */}
         <div className="absolute top-4 right-4 z-50">
           <button
-            onClick={() => setBookmarkOpen(o => !o)}
+            onClick={() => {
+              if (!isLoggedIn) { setBookmarkOpen(false); setAuthOpen(true); return; }
+              setBookmarkOpen(o => !o);
+            }}
             className={cn(
               "w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 border backdrop-blur-sm shadow-lg",
               trekStatus
@@ -473,6 +480,13 @@ export default function TrekDetail() {
             </div>
           )}
         </div>
+
+        {/* Auth modal — shown when anonymous user taps bookmark */}
+        <AuthModal
+          isOpen={authOpen}
+          onClose={() => setAuthOpen(false)}
+          prompt="Create a free account to save treks to your bucket list"
+        />
 
         <div className="absolute bottom-16 left-0 right-0 p-6 md:p-8 max-w-5xl mx-auto">
           <div className="animate-in slide-in-from-bottom-8 duration-700 fade-in">
