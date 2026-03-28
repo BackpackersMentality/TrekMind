@@ -4,28 +4,161 @@
   "itinerary": [
     {
       "day": 1,
-      "route": "Overlord Camp → Summit Lake",
-      "distanceKm": "45.0",
-      "elevGainM": "500",
-      "elevLossM": "100",
-      "maxAltM": "500",
-      "lat": 66.55,
-      "lng": -65.98,
-      "overnight": "Emergency Huts / Wild",
-      "mapNote": "Emergency Huts / Wild. 500m."
+      "route": "Overlord Camp to km 15 (Weasel Valley)",
+      "distanceKm": "15",
+      "elevGainM": "50",
+      "elevLossM": "20",
+      "maxAltM": "80",
+      "lat": 66.04,
+      "lng": -65.62,
+      "overnight": "Wild camp – Weasel Valley lower flats",
+      "mapNote": "Start at Overlord Camp park gate (south entry). Hike north through the flat outwash plain of Weasel Valley beside the Weasel River. First glacier views. River crossings begin — poles essential."
     },
     {
       "day": 2,
-      "route": "Summit Lake → North Pangnirtung Fiord",
-      "distanceKm": "52.0",
-      "elevGainM": "100",
-      "elevLossM": "500",
-      "maxAltM": "500",
-      "lat": 66.88,
-      "lng": -65.23,
-      "overnight": "Emergency Huts / Wild",
-      "mapNote": "Emergency Huts / Wild. 500m."
+      "route": "Weasel Valley to Thor Camp (km 30)",
+      "distanceKm": "15",
+      "elevGainM": "80",
+      "elevLossM": "30",
+      "maxAltM": "150",
+      "lat": 66.12,
+      "lng": -65.67,
+      "overnight": "Wild camp – base of Thor Peak",
+      "mapNote": "Continue up valley. Thor Peak dominates the skyline — its 1,250m vertical cliff is the tallest in North America. Optional half-day side trip toward the peak base. Multiple braided river crossings; ford at thigh depth possible mid-July."
+    },
+    {
+      "day": 3,
+      "route": "Thor Camp to Turner Glacier Camp (km 42)",
+      "distanceKm": "12",
+      "elevGainM": "150",
+      "elevLossM": "40",
+      "maxAltM": "260",
+      "lat": 66.18,
+      "lng": -65.72,
+      "overnight": "Wild camp – Turner Glacier moraine",
+      "mapNote": "Valley narrows as you approach the base of the pass. Moraine travel begins. Views of Turner Glacier on your left. Terrain becomes rocky and uneven — expect slower progress. Emergency shelter (Windy Lake Hut) nearby."
+    },
+    {
+      "day": 4,
+      "route": "Turner Glacier Camp to Summit Lake (Akshayuk Pass, km 53)",
+      "distanceKm": "11",
+      "elevGainM": "240",
+      "elevLossM": "10",
+      "maxAltM": "480",
+      "lat": 66.23,
+      "lng": -65.81,
+      "overnight": "Wild camp – Summit Lake, pass high point",
+      "mapNote": "The crux day — steep rocky ascent to the pass at ~480m. Summit Lake sits in the col between Baffin Island's interior peaks. Weather changes rapidly. The pass is the watershed: south drains to Pangnirtung Fiord, north to North Pangnirtung Fiord. Emergency hut at pass."
+    },
+    {
+      "day": 5,
+      "route": "Summit Lake to Caribou Flats (km 65)",
+      "distanceKm": "12",
+      "elevGainM": "20",
+      "elevLossM": "220",
+      "maxAltM": "350",
+      "lat": 66.32,
+      "lng": -65.70,
+      "overnight": "Wild camp – Caribou Flats, Highway Glacier outwash",
+      "mapNote": "Descend into the north valley. Views open dramatically onto the arctic tundra and Highway Glacier. Caribou herds frequently seen on the flats. River crossings resume on north side; water temperature is glacial (1–4°C)."
+    },
+    {
+      "day": 6,
+      "route": "Caribou Flats to Glacier Lake Camp (km 76)",
+      "distanceKm": "11",
+      "elevGainM": "30",
+      "elevLossM": "120",
+      "maxAltM": "200",
+      "lat": 66.42,
+      "lng": -65.55,
+      "overnight": "Wild camp – Glacier Lake shore",
+      "mapNote": "The valley widens. Boulder fields alternate with soft tundra. Glacier Lake provides stunning reflections of the surrounding peaks. Polar bear awareness essential — make noise, carry deterrent. Emergency hut at Glacier Lake."
+    },
+    {
+      "day": 7,
+      "route": "Glacier Lake to Overlord North (km 85)",
+      "distanceKm": "9",
+      "elevGainM": "10",
+      "elevLossM": "100",
+      "maxAltM": "100",
+      "lat": 66.52,
+      "lng": -65.41,
+      "overnight": "Wild camp – lower Owl River valley",
+      "mapNote": "Terrain flattens as you enter the outwash plains above the fiord. The Owl River is the final major river crossing — potentially waist-deep in peak melt (late July). Magnificent views north toward North Pangnirtung Fiord and Baffin Bay."
+    },
+    {
+      "day": 8,
+      "route": "Owl River Valley to North Pangnirtung Fiord shore (km 93)",
+      "distanceKm": "8",
+      "elevGainM": "0",
+      "elevLossM": "80",
+      "maxAltM": "30",
+      "lat": 66.60,
+      "lng": -65.25,
+      "overnight": "Wild camp or emergency hut – fiord edge",
+      "mapNote": "Final descent to the Arctic fiord. Tides visible in the distance. Coast is raw and exposed — arctic tern colonies defend nesting sites. Register at the park warden post if staffed. Boat pick-up to Qikiqtarjuaq arranged from here."
+    },
+    {
+      "day": 9,
+      "route": "North Pangnirtung Fiord – boat to Qikiqtarjuaq (exit)",
+      "distanceKm": "4",
+      "elevGainM": "0",
+      "elevLossM": "0",
+      "maxAltM": "5",
+      "lat": 66.75,
+      "lng": -64.03,
+      "overnight": "Qikiqtarjuaq (Broughton Island) — guesthouse / community lodge",
+      "mapNote": "Pre-booked boat taxi across North Pangnirtung Fiord (~4–5 hours depending on sea conditions and ice). Arrive at Qikiqtarjuaq, an Inuit hamlet on Broughton Island. Flight south via Air Inuit or Canadian North. Allow 1–2 buffer days for weather delays."
     }
   ],
-  "waypoints": []
+  "waypoints": [
+    {
+      "name": "Thor Peak",
+      "type": "summit",
+      "lat": 66.135,
+      "lng": -65.714,
+      "altM": 1675,
+      "note": "1,250m vertical cliff — tallest in North America. Visible from valley floor."
+    },
+    {
+      "name": "Akshayuk Pass (Summit Lake)",
+      "type": "pass",
+      "lat": 66.228,
+      "lng": -65.813,
+      "altM": 480,
+      "note": "High point of the route. Emergency shelter here. Arctic watershed."
+    },
+    {
+      "name": "Turner Glacier",
+      "type": "glacier",
+      "lat": 66.192,
+      "lng": -65.745,
+      "altM": 380,
+      "note": "Large valley glacier visible from the approach. Calves into Glacier Lake."
+    },
+    {
+      "name": "Highway Glacier",
+      "type": "glacier",
+      "lat": 66.310,
+      "lng": -65.720,
+      "altM": 300,
+      "note": "Major glacier on the north descent. Named for its wide flat appearance."
+    },
+    {
+      "name": "Glacier Lake Emergency Hut",
+      "type": "base_camp",
+      "lat": 66.415,
+      "lng": -65.548,
+      "altM": 180,
+      "note": "Parks Canada emergency shelter. Not for routine overnight use — emergency only."
+    },
+    {
+      "name": "Owl River Crossing",
+      "type": "landmark",
+      "lat": 66.505,
+      "lng": -65.398,
+      "altM": 60,
+      "note": "Major ford. Can be thigh- to waist-deep in peak melt. Cross in morning when glacial melt is lowest."
+    }
+  ]
 }
