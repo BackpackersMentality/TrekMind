@@ -280,8 +280,8 @@ export default function Top100() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>World's Top 100 Treks — TrekMind</title>
-        <meta name="description" content="The definitive ranked list of the world's 100 greatest trekking routes. Filter by iconic classics, dramatic altitude, hidden gems, and more." />
+        <title>World's Best Treks Ranked — TrekMind</title>
+        <meta name="description" content={`The definitive ranked list of the world's ${allTreks.length} greatest trekking routes. Filter by iconic classics, dramatic altitude, hidden gems, and more.`} />
         <link rel="canonical" href="https://trekmind.pages.dev/top-100" />
       </Helmet>
 
@@ -309,14 +309,14 @@ export default function Top100() {
                 </span>
               </div>
               <h1 className="text-2xl md:text-3xl font-black text-white leading-tight tracking-tight">
-                World's Top 100 Treks
+                World's Top Treks
               </h1>
               <p className="text-white/60 text-xs mt-1 font-light">
                 Ranked by popularity, drama, terrain & experience
               </p>
             </div>
             <div className="text-right shrink-0">
-              <div className="text-3xl font-black text-white/10 leading-none select-none">100</div>
+              <div className="text-3xl font-black text-white/10 leading-none select-none">{allTreks.length}</div>
             </div>
           </div>
         </div>
@@ -418,7 +418,7 @@ export default function Top100() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <p className="font-bold text-[10px] text-foreground">TrekMind</p>
           <p className="text-[7px] text-muted-foreground">
-            © 2024 TrekMind. Rankings are editorial — based on popularity, altitude, terrain & experience. Adventure responsibly.
+            © 2025 TrekMind. Rankings are editorial — based on popularity, altitude, terrain & experience. Adventure responsibly.
           </p>
         </div>
       </footer>
