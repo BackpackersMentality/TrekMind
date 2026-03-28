@@ -95,7 +95,7 @@ const FEATURES = [
   {
     icon: <Trophy className="w-5 h-5" />,
     title: "Top 100 Ranking",
-    desc: "A composite-scored definitive ranking of all 100 routes. Sort by overall ranking, iconic status, altitude drama, short adventures, or hidden gems."
+    desc: "A composite-scored definitive ranking of the top 100 routes. Sort by overall ranking, iconic status, altitude drama, short adventures, or hidden gems."
   },
   {
     icon: <BookOpen className="w-5 h-5" />,
@@ -108,7 +108,7 @@ const FEATURES = [
 
 const FAQS = [
   {
-    q: "How were the 100 treks chosen?",
+    q: "How were the 135 treks chosen?",
     a: "We evaluated hundreds of routes against four criteria: landscape quality, cultural significance, trekking infrastructure, and global recognition within the adventure travel community. The list deliberately spans all continents and all difficulty levels — from a 2-day coastal walk to a 165-day thru-hike."
   },
   {
@@ -296,7 +296,7 @@ export default function About() {
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
         <title>About TrekMind — World's Top 100 Trekking Routes Explained</title>
-        <meta name="description" content="Discover how TrekMind curates and ranks the world's 100 greatest trekking routes. Learn about our tier system — from Iconic classics to remote wilderness and epic thru-hikes." />
+        <meta name="description" content="Discover how TrekMind curates and ranks the world's greatest trekking routes. Learn about our tier system — from Iconic classics to remote wilderness and epic thru-hikes." />
         <meta name="keywords" content="best trekking routes world, tier 1 treks, thru hiking explained, iconic hikes, trekking difficulty ratings, adventure travel guide" />
         <link rel="canonical" href="https://trekmind.pages.dev/about" />
         <meta property="og:title" content="About TrekMind — The World's Top 100 Treks Explained" />
@@ -363,7 +363,7 @@ export default function About() {
               TrekMind exists because finding the right trekking route is genuinely hard. Dozens of guidebooks, thousands of travel blogs, and contradictory forum posts make it difficult to understand the landscape of what's actually possible — and to match your experience level, timeframe, and ambition to a route that will be meaningful rather than overwhelming.
             </p>
             <p>
-              We curated 100 routes from every continent, spanning the full spectrum of difficulty and duration, then built tools to help you discover, compare, and plan them. The 3D globe puts them in geographical context. The tier system helps you understand what you're signing up for. The AI Trek Finder matches your profile to routes you might not have considered.
+              We curated 135 routes from every continent, spanning the full spectrum of difficulty and duration, then built tools to help you discover, compare, and plan them. The 3D globe puts them in geographical context. The tier system helps you understand what you're signing up for. The AI Trek Finder matches your profile to routes you might not have considered.
             </p>
             <p>
               The goal is simple: to be the starting point for anyone who wants to explore the world on foot at a serious level.
@@ -426,7 +426,7 @@ export default function About() {
         <section>
           <SectionHeader
             label="Curation"
-            title="How We Choose the 100"
+            title="How We Choose the Treks"
             sub="Not every famous trail is world-class. Not every world-class trail is famous."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
