@@ -295,12 +295,12 @@ export default function About() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>About TrekMind — World's Top 100 Trekking Routes Explained</title>
+        <title>About TrekMind — World's Top Trekking Routes Explained</title>
         <meta name="description" content="Discover how TrekMind curates and ranks the world's greatest trekking routes. Learn about our tier system — from Iconic classics to remote wilderness and epic thru-hikes." />
         <meta name="keywords" content="best trekking routes world, tier 1 treks, thru hiking explained, iconic hikes, trekking difficulty ratings, adventure travel guide" />
         <link rel="canonical" href="https://trekmind.pages.dev/about" />
         <meta property="og:title" content="About TrekMind — The World's Top 100 Treks Explained" />
-        <meta property="og:description" content="How we rank and categorise the world's greatest trekking routes — from day hikes to 165-day thru-hikes." />
+        <meta property="og:description" content="How we rank and categorise the world's greatest trekking routes — from multi-day hikes to 165-day thru-hikes." />
         <meta property="og:url" content="https://trekmind.pages.dev/about" />
       </Helmet>
 
@@ -326,7 +326,7 @@ export default function About() {
                 About TrekMind
               </h1>
               <p className="text-white/65 text-sm mt-2 leading-relaxed max-w-xl">
-                How we discovered, ranked, and documented the 100 greatest trekking routes on Earth — from a two-day coastal walk to a five-month wilderness crossing.
+                How we discovered, ranked, and documented the greatest trekking routes on Earth — from a two-day coastal walk to a five-month wilderness crossing.
               </p>
             </div>
           </div>
@@ -334,7 +334,7 @@ export default function About() {
           {/* Quick stat pills */}
           <div className="flex flex-wrap gap-2 mt-5">
             {[
-              { icon: <Mountain className="w-3 h-3" />, label: "100 World-Class Routes" },
+              { icon: <Mountain className="w-3 h-3" />, label: "135 World-Class Routes" },
               { icon: <Globe2 className="w-3 h-3" />, label: "6 Continents" },
               { icon: <Clock className="w-3 h-3" />, label: "2 Days to 165 Days" },
               { icon: <Shield className="w-3 h-3" />, label: "4 Difficulty Tiers" },
