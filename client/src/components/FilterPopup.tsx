@@ -1,4 +1,5 @@
 // components/FilterPopup.tsx — multi-select, no emojis, clean professional look
+// Updated: Tier 4 (Thru-Hike) + Tier 5 (Trekking Peak) added, Month filter added
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { X } from 'lucide-react';
@@ -17,9 +18,11 @@ interface FilterPopupProps {
 
 const FILTER_OPTIONS = {
   tier: [
-    { value: "1", label: "Tier 1 — Legendary" },
-    { value: "2", label: "Tier 2 — Classic"   },
-    { value: "3", label: "Tier 3 — Hidden"    },
+    { value: "1", label: "Tier 1 — Iconic"        },
+    { value: "2", label: "Tier 2 — Classic"        },
+    { value: "3", label: "Tier 3 — Remote"         },
+    { value: "4", label: "Tier 4 — Thru-Hike"      },
+    { value: "5", label: "Tier 5 — Trekking Peak"  },
   ],
   region: [
     { value: "Europe",          label: "Europe"          },
@@ -32,10 +35,11 @@ const FILTER_OPTIONS = {
     { value: "Oceania",         label: "Oceania"         },
   ],
   duration: [
-    { value: "Short",  label: "Short (1–5 days)"  },
-    { value: "Medium", label: "Medium (6–10 days)" },
-    { value: "Long",   label: "Long (11–16 days)"  },
-    { value: "Epic",   label: "Epic (17+ days)"    },
+    { value: "Short",  label: "Short (1–5 days)"    },
+    { value: "Medium", label: "Medium (6–10 days)"  },
+    { value: "Long",   label: "Long (11–16 days)"   },
+    { value: "Epic",   label: "Epic (17+ days)"     },
+    { value: "Thru",   label: "Thru-Hike (months)"  },
   ],
   terrain: [
     { value: "Alpine",         label: "Alpine"         },
@@ -47,15 +51,30 @@ const FILTER_OPTIONS = {
     { value: "Jungle/Forest",  label: "Jungle/Forest"  },
   ],
   accommodation: [
-    { value: "Camping",      label: "Camping"       },
-    { value: "Huts/Refuges", label: "Huts & Refuges"},
-    { value: "Guesthouses",  label: "Guesthouses"   },
-    { value: "Teahouses",    label: "Teahouses"     },
+    { value: "Camping",      label: "Camping"        },
+    { value: "Huts/Refuges", label: "Huts & Refuges" },
+    { value: "Guesthouses",  label: "Guesthouses"    },
+    { value: "Teahouses",    label: "Teahouses"      },
   ],
   popularity: [
-    { value: "Iconic",      label: "Iconic (8–10)"   },
-    { value: "Popular",     label: "Popular (5–7)"   },
-    { value: "Hidden Gem",  label: "Hidden Gem (1–4)" },
+    { value: "Iconic",     label: "Iconic (8–10)"    },
+    { value: "Popular",    label: "Popular (5–7)"    },
+    { value: "Hidden Gem", label: "Hidden Gem (1–4)" },
+  ],
+  // Month filter — value is "1"–"12" matching parseSeasonMonths() in filterTreks
+  month: [
+    { value: "1",  label: "Jan" },
+    { value: "2",  label: "Feb" },
+    { value: "3",  label: "Mar" },
+    { value: "4",  label: "Apr" },
+    { value: "5",  label: "May" },
+    { value: "6",  label: "Jun" },
+    { value: "7",  label: "Jul" },
+    { value: "8",  label: "Aug" },
+    { value: "9",  label: "Sep" },
+    { value: "10", label: "Oct" },
+    { value: "11", label: "Nov" },
+    { value: "12", label: "Dec" },
   ],
 };
 
@@ -133,12 +152,80 @@ export function FilterPopup({ isOpen, onClose, currentFilters, onApply, matching
 
         {/* Filter groups */}
         <div className="px-6 py-5 space-y-1">
-          <FilterGroup label="Tier"          name="tier"          options={FILTER_OPTIONS.tier}          selected={draft.tier}          onChange={v => toggle('tier', v)} />
-          <FilterGroup label="Region"        name="region"        options={FILTER_OPTIONS.region}        selected={draft.region}        onChange={v => toggle('region', v)} />
-          <FilterGroup label="Duration"      name="duration"      options={FILTER_OPTIONS.duration}      selected={draft.duration}      onChange={v => toggle('duration', v)} />
-          <FilterGroup label="Terrain"       name="terrain"       options={FILTER_OPTIONS.terrain}       selected={draft.terrain}       onChange={v => toggle('terrain', v)} />
-          <FilterGroup label="Accommodation" name="accommodation" options={FILTER_OPTIONS.accommodation} selected={draft.accommodation} onChange={v => toggle('accommodation', v)} />
-          <FilterGroup label="Popularity"    name="popularity"    options={FILTER_OPTIONS.popularity}    selected={draft.popularity}    onChange={v => toggle('popularity', v)} />
+
+          {/* Tier — now includes Tier 4 Thru-Hike and Tier 5 Trekking Peak */}
+          <FilterGroup
+            label="Tier"
+            name="tier"
+            options={FILTER_OPTIONS.tier}
+            selected={draft.tier}
+            onChange={v => toggle('tier', v)}
+          />
+
+          {/* When to Trek — month picker */}
+          <div className="mb-5">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2.5">
+              When to Trek
+            </p>
+            {/* Month pills in a 6-col compact grid */}
+            <div className="grid grid-cols-6 gap-1.5">
+              {FILTER_OPTIONS.month.map(opt => {
+                const isActive = draft.month?.includes(opt.value) ?? false;
+                return (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    onClick={() => toggle('month' as keyof FilterState, opt.value)}
+                    className={`
+                      py-1.5 rounded-md text-xs font-semibold transition-all duration-150 border text-center
+                      ${isActive
+                        ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
+                        : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400 hover:text-slate-900'}
+                    `}
+                    aria-pressed={isActive}
+                  >
+                    {opt.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <FilterGroup
+            label="Region"
+            name="region"
+            options={FILTER_OPTIONS.region}
+            selected={draft.region}
+            onChange={v => toggle('region', v)}
+          />
+          <FilterGroup
+            label="Duration"
+            name="duration"
+            options={FILTER_OPTIONS.duration}
+            selected={draft.duration}
+            onChange={v => toggle('duration', v)}
+          />
+          <FilterGroup
+            label="Terrain"
+            name="terrain"
+            options={FILTER_OPTIONS.terrain}
+            selected={draft.terrain}
+            onChange={v => toggle('terrain', v)}
+          />
+          <FilterGroup
+            label="Accommodation"
+            name="accommodation"
+            options={FILTER_OPTIONS.accommodation}
+            selected={draft.accommodation}
+            onChange={v => toggle('accommodation', v)}
+          />
+          <FilterGroup
+            label="Popularity"
+            name="popularity"
+            options={FILTER_OPTIONS.popularity}
+            selected={draft.popularity}
+            onChange={v => toggle('popularity', v)}
+          />
         </div>
 
         {/* Sticky footer */}
