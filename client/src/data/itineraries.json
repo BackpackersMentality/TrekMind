@@ -16313,5 +16313,1282 @@
       }
     ],
     "waypoints": []
+  },
+  {
+  "mera_peak": {
+    "sheetName": "Mera Peak",
+    "slug": "mera_peak",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Lukla to Khare (via Zatrwa La)",
+        "distanceKm": "38",
+        "elevGainM": "3200",
+        "elevLossM": "1800",
+        "maxAltM": "4900",
+        "lat": 27.756,
+        "lng": 86.782,
+        "overnight": "Khare Teahouses",
+        "mapNote": "Multi-day approach crossing Zatrwa La pass and descending into the Hinku valley. Remote and wild terrain."
+      },
+      {
+        "section": 2,
+        "route": "Khare to Mera High Camp",
+        "distanceKm": "6",
+        "elevGainM": "900",
+        "elevLossM": "0",
+        "maxAltM": "5800",
+        "lat": 27.721,
+        "lng": 86.866,
+        "overnight": "High Camp Tents",
+        "mapNote": "Steep glacier ascent to high camp. Spectacular ridge position with Everest, Cho Oyu, Kangchenjunga visible."
+      },
+      {
+        "section": 3,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Khare",
+        "distanceKm": "10",
+        "elevGainM": "676",
+        "elevLossM": "1576",
+        "maxAltM": "6476",
+        "lat": 27.756,
+        "lng": 86.782,
+        "overnight": "Khare Teahouses",
+        "mapNote": "Alpine start. Broad snow summit with unobstructed 360\u00b0 Himalayan panorama. Descend on glacier to Khare."
+      },
+      {
+        "section": 4,
+        "route": "Khare to Lukla",
+        "distanceKm": "38",
+        "elevGainM": "1800",
+        "elevLossM": "3200",
+        "maxAltM": "4900",
+        "lat": 27.6865,
+        "lng": 86.7296,
+        "overnight": "Lukla Teahouses",
+        "mapNote": "Retrace via Zatrwa La back to Lukla. Dramatic exit from the remote Hinku valley."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mera Peak Summit",
+        "lat": 27.721,
+        "lng": 86.866,
+        "type": "summit",
+        "altM": 6476,
+        "note": "Highest trekking peak in Nepal. On clear days: Everest, Lhotse, Cho Oyu, Makalu, and Kangchenjunga all visible."
+      },
+      {
+        "name": "Zatrwa La Pass",
+        "lat": 27.78,
+        "lng": 86.75,
+        "type": "pass",
+        "altM": 4600,
+        "note": "Key pass linking Lukla to the Hinku valley. First challenge of the route."
+      },
+      {
+        "name": "Mera La",
+        "lat": 27.71,
+        "lng": 86.88,
+        "type": "pass",
+        "altM": 5415,
+        "note": "Glacier col. Stunning camp position with evening alpenglow on surrounding 8000m peaks."
+      }
+    ]
+  },
+  "island_peak": {
+    "sheetName": "Island Peak",
+    "slug": "island_peak",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Lukla to Dingboche",
+        "distanceKm": "29",
+        "elevGainM": "2400",
+        "elevLossM": "800",
+        "maxAltM": "4410",
+        "lat": 27.8931,
+        "lng": 86.8317,
+        "overnight": "Dingboche Teahouses",
+        "mapNote": "Multi-day approach via Namche Bazaar, Tengboche, Dingboche. Khumbu valley classic teahouse trail."
+      },
+      {
+        "section": 2,
+        "route": "Dingboche to Chhukung",
+        "distanceKm": "5",
+        "elevGainM": "350",
+        "elevLossM": "50",
+        "maxAltM": "4730",
+        "lat": 27.904,
+        "lng": 86.873,
+        "overnight": "Chhukung Teahouses",
+        "mapNote": "Short acclimatisation stage up the Imja Khola valley. Chhukung Ri optional acclimatisation hike."
+      },
+      {
+        "section": 3,
+        "route": "Chhukung to Island Peak Base Camp",
+        "distanceKm": "6",
+        "elevGainM": "400",
+        "elevLossM": "50",
+        "maxAltM": "5100",
+        "lat": 27.896,
+        "lng": 86.935,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Transition to tent camping. Glacier views begin. Equipment check and crampon fitting at camp."
+      },
+      {
+        "section": 4,
+        "route": "Summit Bid: Base Camp \u2192 Summit \u2192 Chhukung",
+        "distanceKm": "11",
+        "elevGainM": "1089",
+        "elevLossM": "1489",
+        "maxAltM": "6189",
+        "lat": 27.904,
+        "lng": 86.873,
+        "overnight": "Chhukung Teahouses",
+        "mapNote": "Alpine start ~2am. Fixed rope on summit headwall. 360\u00b0 views of Lhotse, Nuptse, Makalu. Descend to Chhukung."
+      },
+      {
+        "section": 5,
+        "route": "Chhukung to Lukla",
+        "distanceKm": "34",
+        "elevGainM": "600",
+        "elevLossM": "2500",
+        "maxAltM": "4730",
+        "lat": 27.6865,
+        "lng": 86.7296,
+        "overnight": "Lukla Teahouses",
+        "mapNote": "Return through Khumbu valley. Celebration dinner in Namche or Lukla."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Island Peak Summit",
+        "lat": 27.896,
+        "lng": 86.935,
+        "type": "summit",
+        "altM": 6189,
+        "note": "Himalayan summit above Chhukung. Fixed ropes on headwall. Lhotse-Nuptse wall dominates the horizon."
+      },
+      {
+        "name": "Chhukung Ri",
+        "lat": 27.92,
+        "lng": 86.88,
+        "type": "viewpoint",
+        "altM": 5550,
+        "note": "Classic acclimatisation peak. Outstanding view of Island Peak, Lhotse, and Ama Dablam."
+      },
+      {
+        "name": "Imja Tse Glacier",
+        "lat": 27.9,
+        "lng": 86.91,
+        "type": "glacier",
+        "altM": 5400,
+        "note": "Glacier approach to base camp. Crampons required from here."
+      },
+      {
+        "name": "Namche Bazaar",
+        "lat": 27.8053,
+        "lng": 86.7147,
+        "type": "landmark",
+        "altM": 3440,
+        "note": "Gateway to the Khumbu. Rest day recommended. Trekking permits checked."
+      }
+    ]
+  },
+  "stok_kangri": {
+    "sheetName": "Stok Kangri",
+    "slug": "stok_kangri",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Leh to Stok Village (Drive) + Acclimatisation",
+        "distanceKm": "\u2014",
+        "elevGainM": "\u2014",
+        "elevLossM": "\u2014",
+        "maxAltM": "3500",
+        "lat": 33.98,
+        "lng": 77.62,
+        "overnight": "Stok Guesthouse",
+        "mapNote": "Transfer from Leh (3500m). Acclimatisation day essential after arrival. Visit Stok Palace. Gear check."
+      },
+      {
+        "day": 2,
+        "route": "Stok Village to Base Camp",
+        "distanceKm": "12",
+        "elevGainM": "1200",
+        "elevLossM": "100",
+        "maxAltM": "4900",
+        "lat": 33.94,
+        "lng": 77.645,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Trek through Stok Valley past Changma meadows. Dramatic entry into the high Ladakhi landscape. Camp established."
+      },
+      {
+        "day": 3,
+        "route": "Base Camp Acclimatisation Hike",
+        "distanceKm": "6",
+        "elevGainM": "500",
+        "elevLossM": "500",
+        "maxAltM": "5400",
+        "lat": 33.92,
+        "lng": 77.65,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Climb high and sleep low. Acclimatisation walk toward high camp direction. Crampon practice on snow patches."
+      },
+      {
+        "day": 4,
+        "route": "Base Camp to High Camp",
+        "distanceKm": "5",
+        "elevGainM": "700",
+        "elevLossM": "0",
+        "maxAltM": "5600",
+        "lat": 33.915,
+        "lng": 77.653,
+        "overnight": "High Camp Tents",
+        "mapNote": "Carry summit packs to high camp at 5600m. Afternoon rest for alpine start. Snow and scree terrain."
+      },
+      {
+        "day": 5,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Base Camp",
+        "distanceKm": "10",
+        "elevGainM": "553",
+        "elevLossM": "1253",
+        "maxAltM": "6153",
+        "lat": 33.9142,
+        "lng": 77.6558,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Alpine start 1\u20132am. Crampons on snow slopes to summit at 6153m. Karakoram and Zanskar panorama. Descend fully to base camp."
+      },
+      {
+        "day": 6,
+        "route": "Base Camp to Stok Village (Descent)",
+        "distanceKm": "12",
+        "elevGainM": "100",
+        "elevLossM": "1200",
+        "maxAltM": "4900",
+        "lat": 33.98,
+        "lng": 77.62,
+        "overnight": "Stok Guesthouse",
+        "mapNote": "Full descent through Stok Valley to village. Return to Leh for celebration."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Stok Kangri Summit",
+        "lat": 33.9142,
+        "lng": 77.6558,
+        "type": "summit",
+        "altM": 6153,
+        "note": "India's most popular 6000m summit. Snow plateau to triangular peak. Karakoram, Zanskar, Tibetan plateau in view."
+      },
+      {
+        "name": "Stok Base Camp",
+        "lat": 33.94,
+        "lng": 77.645,
+        "type": "camp",
+        "altM": 4900,
+        "note": "Main camp for all Stok Kangri attempts. Well-equipped guiding camps in peak season."
+      },
+      {
+        "name": "Stok Palace",
+        "lat": 33.982,
+        "lng": 77.625,
+        "type": "landmark",
+        "altM": 3500,
+        "note": "Royal Ladakhi palace museum. Worth visiting on acclimatisation day."
+      },
+      {
+        "name": "High Camp",
+        "lat": 33.915,
+        "lng": 77.653,
+        "type": "camp",
+        "altM": 5600,
+        "note": "Exposed camp in a col. Cold nights. Alpine start position for summit."
+      }
+    ]
+  },
+  "lobuche_east": {
+    "sheetName": "Lobuche East",
+    "slug": "lobuche_east",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Lukla to Dingboche",
+        "distanceKm": "29",
+        "elevGainM": "2400",
+        "elevLossM": "800",
+        "maxAltM": "4410",
+        "lat": 27.8931,
+        "lng": 86.8317,
+        "overnight": "Dingboche Teahouses",
+        "mapNote": "Classic Khumbu approach through Namche Bazaar, Tengboche monastery, and Dingboche. Strong acclimatisation required."
+      },
+      {
+        "section": 2,
+        "route": "Dingboche to Lobuche Base Camp",
+        "distanceKm": "9",
+        "elevGainM": "500",
+        "elevLossM": "100",
+        "maxAltM": "4950",
+        "lat": 27.954,
+        "lng": 86.804,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Pass through Lobuche village. Cross the Khumbu glacier moraines. Base camp below the rocky east ridge."
+      },
+      {
+        "section": 3,
+        "route": "Base Camp to Lobuche High Camp",
+        "distanceKm": "3",
+        "elevGainM": "450",
+        "elevLossM": "0",
+        "maxAltM": "5400",
+        "lat": 27.95,
+        "lng": 86.812,
+        "overnight": "High Camp Tents",
+        "mapNote": "Technical approach up rock and mixed ground to high camp. Fix ropes on steeper sections. Pump Ri visible across valley."
+      },
+      {
+        "section": 4,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Base Camp",
+        "distanceKm": "5",
+        "elevGainM": "719",
+        "elevLossM": "1169",
+        "maxAltM": "6119",
+        "lat": 27.954,
+        "lng": 86.804,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Technical ridge with fixed ropes and near-vertical rocky sections near summit. Cho Oyu, Everest, and Pumori panorama."
+      },
+      {
+        "section": 5,
+        "route": "Base Camp to Lukla",
+        "distanceKm": "35",
+        "elevGainM": "800",
+        "elevLossM": "2900",
+        "maxAltM": "4950",
+        "lat": 27.6865,
+        "lng": 86.7296,
+        "overnight": "Lukla Teahouses",
+        "mapNote": "Return via Lobuche, Pheriche, Namche Bazaar, Phakding to Lukla. Final teahouse celebration."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Lobuche East Summit",
+        "lat": 27.95,
+        "lng": 86.812,
+        "type": "summit",
+        "altM": 6119,
+        "note": "Technical summit with exposed rocky ridge. One of the most demanding Khumbu trekking peaks. Everest, Lhotse, Nuptse and Cho Oyu views."
+      },
+      {
+        "name": "Thukla Pass Memorial",
+        "lat": 27.92,
+        "lng": 86.79,
+        "type": "landmark",
+        "altM": 4830,
+        "note": "Memorial cairns for lost climbers. Sobering and moving hilltop above Pheriche."
+      },
+      {
+        "name": "Khumbu Glacier",
+        "lat": 27.98,
+        "lng": 86.83,
+        "type": "glacier",
+        "altM": 5000,
+        "note": "World's highest glacier flows from Everest. Lobuche base camp sits on its eastern moraine."
+      }
+    ]
+  },
+  "pisang_peak": {
+    "sheetName": "Pisang Peak",
+    "slug": "pisang_peak",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Kathmandu to Besisahar / Bhulbhule (Drive)",
+        "distanceKm": "\u2014",
+        "elevGainM": "\u2014",
+        "elevLossM": "\u2014",
+        "maxAltM": "840",
+        "lat": 28.308,
+        "lng": 84.409,
+        "overnight": "Bhulbhule Guesthouse",
+        "mapNote": "Drive from Kathmandu to Besisahar then Bhulbhule (840m). Start of Annapurna Circuit. Marsyangdi River valley."
+      },
+      {
+        "day": 2,
+        "route": "Bhulbhule to Chamje",
+        "distanceKm": "14",
+        "elevGainM": "820",
+        "elevLossM": "200",
+        "maxAltM": "1430",
+        "lat": 28.43,
+        "lng": 84.356,
+        "overnight": "Chamje Teahouse",
+        "mapNote": "Classic Annapurna Circuit teahouse approach. Subtropical forest. River crossings and suspension bridges."
+      },
+      {
+        "day": 3,
+        "route": "Chamje to Chame",
+        "distanceKm": "18",
+        "elevGainM": "1200",
+        "elevLossM": "300",
+        "maxAltM": "2650",
+        "lat": 28.549,
+        "lng": 84.241,
+        "overnight": "Chame Teahouse",
+        "mapNote": "District headquarters. Apple orchards. Annapurna II first visible. Manang Valley transition begins."
+      },
+      {
+        "day": 4,
+        "route": "Chame to Upper Pisang",
+        "distanceKm": "15",
+        "elevGainM": "650",
+        "elevLossM": "100",
+        "maxAltM": "3300",
+        "lat": 28.5728,
+        "lng": 84.1388,
+        "overnight": "Pisang Teahouse",
+        "mapNote": "Upper Pisang base for the peak. Ancient monastery. Annapurna II, III and Pisang Peak dramatically framed."
+      },
+      {
+        "day": 5,
+        "route": "Upper Pisang to Pisang Peak Base Camp",
+        "distanceKm": "5",
+        "elevGainM": "800",
+        "elevLossM": "0",
+        "maxAltM": "4100",
+        "lat": 28.585,
+        "lng": 84.15,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Transition to tent camping above Upper Pisang. Glacier views. Equipment check and crampon fitting at camp."
+      },
+      {
+        "day": 6,
+        "route": "Base Camp to High Camp",
+        "distanceKm": "4",
+        "elevGainM": "900",
+        "elevLossM": "0",
+        "maxAltM": "5000",
+        "lat": 28.59,
+        "lng": 84.142,
+        "overnight": "High Camp Tents",
+        "mapNote": "Steep approach on snow and rock to high camp at 5000m. Fixed ropes on steeper sections. Night preparation."
+      },
+      {
+        "day": 7,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Upper Pisang",
+        "distanceKm": "9",
+        "elevGainM": "1091",
+        "elevLossM": "1791",
+        "maxAltM": "6091",
+        "lat": 28.5728,
+        "lng": 84.1388,
+        "overnight": "Pisang Teahouse",
+        "mapNote": "Alpine start 2am. South ridge to summit at 6091m. Annapurna II face fills the horizon. Descend to Upper Pisang."
+      },
+      {
+        "day": 8,
+        "route": "Upper Pisang to Manang (Circuit continues)",
+        "distanceKm": "16",
+        "elevGainM": "500",
+        "elevLossM": "300",
+        "maxAltM": "3519",
+        "lat": 28.6665,
+        "lng": 84.022,
+        "overnight": "Manang Teahouse",
+        "mapNote": "Rejoin Annapurna Circuit to Manang. Rest day option or continue circuit to Thorong La."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Pisang Peak Summit",
+        "lat": 28.5728,
+        "lng": 84.1388,
+        "type": "summit",
+        "altM": 6091,
+        "note": "6091m on the Annapurna Circuit. Annapurna II (7937m) directly adjacent. Two route options: south ridge (standard) and north ridge (technical)."
+      },
+      {
+        "name": "Upper Pisang",
+        "lat": 28.5728,
+        "lng": 84.1388,
+        "type": "landmark",
+        "altM": 3300,
+        "note": "Ancient Tibetan-influenced village. Monastery with centuries of history. Best viewpoint for Pisang Peak profile."
+      },
+      {
+        "name": "Pisang Glacier",
+        "lat": 28.585,
+        "lng": 84.15,
+        "type": "glacier",
+        "altM": 4500,
+        "note": "Northeast-facing glacier on the peak's flank. Crampons from here to summit."
+      },
+      {
+        "name": "Annapurna II",
+        "lat": 28.5338,
+        "lng": 84.1238,
+        "type": "summit",
+        "altM": 7937,
+        "note": "Visible directly from Pisang Peak summit and approach. 7th highest in Nepal."
+      }
+    ]
+  },
+  "huayna_potosi": {
+    "sheetName": "Huayna Potos\u00ed",
+    "slug": "huayna_potosi",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "La Paz to Base Camp (Zongo Pass)",
+        "distanceKm": "4",
+        "elevGainM": "150",
+        "elevLossM": "50",
+        "maxAltM": "4700",
+        "lat": -16.275,
+        "lng": -68.127,
+        "overnight": "Refugio / Tents",
+        "mapNote": "Transfer from La Paz (~4000m) to Zongo Pass area. Equipment check, crampon and axe fitting. Short acclimatisation hike."
+      },
+      {
+        "day": 2,
+        "route": "Base Camp to High Camp (Campamento Argentino)",
+        "distanceKm": "3",
+        "elevGainM": "500",
+        "elevLossM": "0",
+        "maxAltM": "5200",
+        "lat": -16.265,
+        "lng": -68.14,
+        "overnight": "Refugio / Tents",
+        "mapNote": "Carry packs to high camp on the glacier. Practice crampon technique on moderate snow slopes. Afternoon rest for summit push."
+      },
+      {
+        "day": 3,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 La Paz",
+        "distanceKm": "8",
+        "elevGainM": "888",
+        "elevLossM": "1388",
+        "maxAltM": "6088",
+        "lat": -16.262,
+        "lng": -68.15,
+        "overnight": "La Paz (Off-trail)",
+        "mapNote": "Midnight start. Classic triangular snow face to summit at 6088m. Views over Lake Titicaca and altiplano. Descend and return to La Paz."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Huayna Potos\u00ed Summit",
+        "lat": -16.262,
+        "lng": -68.15,
+        "type": "summit",
+        "altM": 6088,
+        "note": "Iconic triangular peak above La Paz. Panoramic altiplano and Cordillera Real views."
+      },
+      {
+        "name": "Campamento Argentino",
+        "lat": -16.265,
+        "lng": -68.14,
+        "type": "camp",
+        "altM": 5200,
+        "note": "High camp on glacier. Classic red sunset views over La Paz and Illimani."
+      },
+      {
+        "name": "Zongo Pass",
+        "lat": -16.275,
+        "lng": -68.127,
+        "type": "landmark",
+        "altM": 4700,
+        "note": "Base camp area. Good altitude for early acclimatisation from La Paz."
+      }
+    ]
+  },
+  "cotopaxi": {
+    "sheetName": "Cotopaxi",
+    "slug": "cotopaxi",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Quito to Refugio Jos\u00e9 Rivas",
+        "distanceKm": "2",
+        "elevGainM": "300",
+        "elevLossM": "0",
+        "maxAltM": "4864",
+        "lat": -0.665,
+        "lng": -78.438,
+        "overnight": "Refugio Jos\u00e9 Rivas",
+        "mapNote": "Drive from Quito or Latacunga to Cotopaxi National Park. Short hike from parking lot to Refugio at 4864m. Acclimatisation afternoon."
+      },
+      {
+        "day": 2,
+        "route": "Summit Bid: Refugio \u2192 Summit \u2192 Parking Lot",
+        "distanceKm": "5",
+        "elevGainM": "1033",
+        "elevLossM": "1333",
+        "maxAltM": "5897",
+        "lat": -0.68,
+        "lng": -78.436,
+        "overnight": "Quito (Off-trail)",
+        "mapNote": "Midnight start from Refugio at 11pm. Steep glaciated flanks to crater rim. One of world's highest active volcanoes. Descend to parking lot and return to Quito."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Cotopaxi Summit (Crater Rim)",
+        "lat": -0.68,
+        "lng": -78.436,
+        "type": "summit",
+        "altM": 5897,
+        "note": "Active volcano crater rim. Steam vents visible on clear days. Chimborazo and Antisana in view."
+      },
+      {
+        "name": "Refugio Jos\u00e9 Rivas",
+        "lat": -0.665,
+        "lng": -78.438,
+        "type": "hut",
+        "altM": 4864,
+        "note": "Highest mountain hut in Ecuador. Essential overnight before summit attempt."
+      },
+      {
+        "name": "Cotopaxi National Park Entrance",
+        "lat": -0.7,
+        "lng": -78.39,
+        "type": "landmark",
+        "altM": 3600,
+        "note": "Entry gate. Park fees collected here. Laguna Limpiopungo nearby for acclimatisation."
+      }
+    ]
+  },
+  "nevado_pisco": {
+    "sheetName": "Nevado Pisco",
+    "slug": "nevado_pisco",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Huaraz to Peru Hut (Refugio Per\u00fa)",
+        "distanceKm": "4",
+        "elevGainM": "750",
+        "elevLossM": "0",
+        "maxAltM": "4665",
+        "lat": -9.012,
+        "lng": -77.625,
+        "overnight": "Peru Hut / Tents",
+        "mapNote": "Drive from Huaraz to Llanganuco Lakes trailhead (3850m). Hike to Refugio Per\u00fa at 4665m through the Huascar\u00e1n National Park. Llamas and condors common."
+      },
+      {
+        "day": 2,
+        "route": "Peru Hut to Moraine Camp",
+        "distanceKm": "3",
+        "elevGainM": "250",
+        "elevLossM": "50",
+        "maxAltM": "4900",
+        "lat": -9.008,
+        "lng": -77.618,
+        "overnight": "Moraine Camp Tents",
+        "mapNote": "Short carry to high moraine camp at 4900m. Crampon and axe practice on lower glacier. Spectacular cirque with Huascar\u00e1n Norte towering above."
+      },
+      {
+        "day": 3,
+        "route": "Summit Bid: Moraine Camp \u2192 Summit \u2192 Huaraz",
+        "distanceKm": "9",
+        "elevGainM": "852",
+        "elevLossM": "1852",
+        "maxAltM": "5752",
+        "lat": -9.015,
+        "lng": -77.63,
+        "overnight": "Huaraz (Off-trail)",
+        "mapNote": "Alpine start at 3am. Glaciated slopes to summit at 5752m. Views of Huascar\u00e1n, Chopicalqui, and Chopiraju. Descend to trailhead and return to Huaraz."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Nevado Pisco Summit",
+        "lat": -9.015,
+        "lng": -77.63,
+        "type": "summit",
+        "altM": 5752,
+        "note": "Ideal introductory glacier peak in Cordillera Blanca. Huascar\u00e1n Norte and Sur dominate the view."
+      },
+      {
+        "name": "Llanganuco Lakes",
+        "lat": -9.06,
+        "lng": -77.64,
+        "type": "viewpoint",
+        "altM": 3850,
+        "note": "Stunning turquoise glacial lakes at the trailhead. Chinancocha and Orconcocha."
+      },
+      {
+        "name": "Refugio Per\u00fa",
+        "lat": -9.012,
+        "lng": -77.625,
+        "type": "hut",
+        "altM": 4665,
+        "note": "Basic hut with gear rental and guiding services available. Good base for Pisco acclimatisation."
+      }
+    ]
+  },
+  "tent_peak": {
+    "sheetName": "Tent Peak",
+    "slug": "tent_peak",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Nayapul to Annapurna Base Camp (ABC)",
+        "distanceKm": "35",
+        "elevGainM": "3500",
+        "elevLossM": "1200",
+        "maxAltM": "4130",
+        "lat": 28.53,
+        "lng": 83.878,
+        "overnight": "ABC Teahouses",
+        "mapNote": "Classic Annapurna Sanctuary approach via Ghandruk, Chhomrong, Bamboo, Deurali. Annapurna South and Machhapuchhre (Fishtail) dominate the skyline."
+      },
+      {
+        "section": 2,
+        "route": "ABC to Tent Peak Base Camp",
+        "distanceKm": "5",
+        "elevGainM": "400",
+        "elevLossM": "100",
+        "maxAltM": "4450",
+        "lat": 28.545,
+        "lng": 83.882,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Transition to tent camping above ABC. Tent Peak's north ridge visible. Equipment check and crampon fitting."
+      },
+      {
+        "section": 3,
+        "route": "Base Camp to High Camp",
+        "distanceKm": "3",
+        "elevGainM": "550",
+        "elevLossM": "0",
+        "maxAltM": "5000",
+        "lat": 28.555,
+        "lng": 83.89,
+        "overnight": "High Camp Tents",
+        "mapNote": "Steep snow and rock to high camp at 5000m. Exposed position with dramatic Annapurna South face views."
+      },
+      {
+        "section": 4,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 ABC",
+        "distanceKm": "8",
+        "elevGainM": "663",
+        "elevLossM": "1533",
+        "maxAltM": "5663",
+        "lat": 28.53,
+        "lng": 83.878,
+        "overnight": "ABC Teahouses",
+        "mapNote": "Pre-dawn start. Exposed snow ridge to summit. Annapurna I, II, III, IV and South in close proximity. Descend to ABC for celebration."
+      },
+      {
+        "section": 5,
+        "route": "ABC to Nayapul",
+        "distanceKm": "35",
+        "elevGainM": "1200",
+        "elevLossM": "3500",
+        "maxAltM": "4130",
+        "lat": 28.298,
+        "lng": 83.766,
+        "overnight": "Pokhara (Off-trail)",
+        "mapNote": "Full descent through the Modi Khola valley. Rhododendron forests in bloom during spring. Return to Pokhara."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Tent Peak Summit",
+        "lat": 28.555,
+        "lng": 83.89,
+        "type": "summit",
+        "altM": 5663,
+        "note": "Climbing peak above the Annapurna Sanctuary. Surrounded by eight-thousanders."
+      },
+      {
+        "name": "Annapurna Base Camp",
+        "lat": 28.53,
+        "lng": 83.878,
+        "type": "landmark",
+        "altM": 4130,
+        "note": "High glacial amphitheatre ringed by Annapurna I\u2013IV, Hiunchuli, and Machhapuchhre."
+      },
+      {
+        "name": "Machhapuchhre Base Camp",
+        "lat": 28.49,
+        "lng": 83.87,
+        "type": "landmark",
+        "altM": 3700,
+        "note": "Fishtail peak viewpoint. Often used as acclimatisation stop before ABC."
+      }
+    ]
+  },
+  "mount_elbrus": {
+    "sheetName": "Mount Elbrus",
+    "slug": "mount_elbrus",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Terskol to Barrels Huts (Garabashi)",
+        "distanceKm": "4",
+        "elevGainM": "1500",
+        "elevLossM": "0",
+        "maxAltM": "3800",
+        "lat": 43.298,
+        "lng": 42.458,
+        "overnight": "Barrels Huts",
+        "mapNote": "Gondola from Azau to Mir station (3500m), then snowcat or hike to the distinctive orange Barrels Huts at 3800m. Initial acclimatisation walks."
+      },
+      {
+        "section": 2,
+        "route": "Acclimatisation: Barrels Huts to Pastukhov Rocks",
+        "distanceKm": "6",
+        "elevGainM": "900",
+        "elevLossM": "900",
+        "maxAltM": "4700",
+        "lat": 43.298,
+        "lng": 42.458,
+        "overnight": "Barrels Huts",
+        "mapNote": "Climb and descend to Pastukhov Rocks at 4700m. Critical acclimatisation. Saddle between East and West peaks visible."
+      },
+      {
+        "section": 3,
+        "route": "Summit Bid: Barrels Huts \u2192 Summit \u2192 Terskol",
+        "distanceKm": "16",
+        "elevGainM": "1842",
+        "elevLossM": "3342",
+        "maxAltM": "5642",
+        "lat": 43.349,
+        "lng": 42.439,
+        "overnight": "Terskol (Off-trail)",
+        "mapNote": "Alpine start at 2am. Snowcat to 4700m, then summit push across broad volcanic snowfield. West Summit at 5642m. Descend fully to Terskol valley."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Elbrus West Summit",
+        "lat": 43.349,
+        "lng": 42.439,
+        "type": "summit",
+        "altM": 5642,
+        "note": "Highest peak in Europe and one of the Seven Summits. Vast volcanic snowfield. Caucasus range stretches east and west."
+      },
+      {
+        "name": "Pastukhov Rocks",
+        "lat": 43.31,
+        "lng": 42.45,
+        "type": "landmark",
+        "altM": 4700,
+        "note": "Key acclimatisation waypoint. Snowcat support often available to this point on summit day."
+      },
+      {
+        "name": "Barrels Huts (Garabashi)",
+        "lat": 43.298,
+        "lng": 42.458,
+        "type": "hut",
+        "altM": 3800,
+        "note": "Iconic orange cylinder huts. Base for all summit attempts on the standard south route."
+      },
+      {
+        "name": "Elbrus Saddle",
+        "lat": 43.33,
+        "lng": 42.445,
+        "type": "landmark",
+        "altM": 5300,
+        "note": "Col between East and West summits. Critical navigation point in poor weather."
+      }
+    ]
+  },
+  "pico_orizaba": {
+    "sheetName": "Pico de Orizaba",
+    "slug": "pico_orizaba",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Mexico City / Puebla to Tlachichuca (Drive) + Piedra Grande Hut",
+        "distanceKm": "\u2014",
+        "elevGainM": "700",
+        "elevLossM": "0",
+        "maxAltM": "4260",
+        "lat": 19.047,
+        "lng": -97.278,
+        "overnight": "Piedra Grande Hut",
+        "mapNote": "4WD truck transfer from Tlachichuca village (2600m) to Piedra Grande Hut at 4260m. 2hr bumpy 4WD road through pine forest and lava fields. Gear check and early sleep."
+      },
+      {
+        "day": 2,
+        "route": "Acclimatisation Hike above Piedra Grande",
+        "distanceKm": "6",
+        "elevGainM": "500",
+        "elevLossM": "500",
+        "maxAltM": "4760",
+        "lat": 19.04,
+        "lng": -97.272,
+        "overnight": "Piedra Grande Hut",
+        "mapNote": "Acclimatisation hike on lava and snow above the hut. Crampon practice. The vast volcanic cone above comes into scale. Early dinner and sleep by 7pm."
+      },
+      {
+        "day": 3,
+        "route": "Summit Bid: Piedra Grande \u2192 Summit \u2192 Tlachichuca",
+        "distanceKm": "14",
+        "elevGainM": "1376",
+        "elevLossM": "2076",
+        "maxAltM": "5636",
+        "lat": 19.03,
+        "lng": -97.269,
+        "overnight": "Tlachichuca / Puebla",
+        "mapNote": "Midnight start. Crampons from hut. Jamapa Glacier: 1400m of sustained snow climbing to crater rim at 5636m. Popocat\u00e9petl, Iztacc\u00edhuatl, Gulf of Mexico visible. Full descent by 4WD to Tlachichuca."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Pico de Orizaba Summit (Crater Rim)",
+        "lat": 19.03,
+        "lng": -97.269,
+        "type": "summit",
+        "altM": 5636,
+        "note": "Third highest peak in North America. Citlalt\u00e9petl \u2014 Aztec Star Mountain. Crater with fumaroles. Popocat\u00e9petl to the west."
+      },
+      {
+        "name": "Piedra Grande Hut",
+        "lat": 19.047,
+        "lng": -97.278,
+        "type": "hut",
+        "altM": 4260,
+        "note": "Stone shelter at 4260m. Basic facilities. Starting point for all Jamapa Glacier attempts. Crucial overnight acclimatisation stop."
+      },
+      {
+        "name": "Jamapa Glacier",
+        "lat": 19.038,
+        "lng": -97.272,
+        "type": "glacier",
+        "altM": 4800,
+        "note": "Main ascent route. Sustained 40\u00b0 snow/ice slopes. Crampons and ice axe essential throughout. Begins at ~4800m."
+      },
+      {
+        "name": "Tlachichuca",
+        "lat": 18.958,
+        "lng": -97.326,
+        "type": "landmark",
+        "altM": 2600,
+        "note": "Base village. Servimont agency provides 4WD transfers and basic equipment. Start and end point."
+      }
+    ]
+  },
+  "yala_peak": {
+    "sheetName": "Yala Peak",
+    "slug": "yala_peak",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Syabrubesi to Kyanjin Gompa",
+        "distanceKm": "25",
+        "elevGainM": "2500",
+        "elevLossM": "200",
+        "maxAltM": "3870",
+        "lat": 28.2111,
+        "lng": 85.5667,
+        "overnight": "Kyanjin Teahouses",
+        "mapNote": "Multi-day trek up the Langtang valley from Syabrubesi. Langtang Lirung (7227m) dominates the upper valley. Kyanjin Gompa is a sacred Buddhist monastery."
+      },
+      {
+        "section": 2,
+        "route": "Kyanjin Gompa to Yala Base Camp",
+        "distanceKm": "6",
+        "elevGainM": "730",
+        "elevLossM": "50",
+        "maxAltM": "4600",
+        "lat": 28.235,
+        "lng": 85.58,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Short approach through high-altitude meadows and moraine. Base camp with views of Yala Peak's rocky south face."
+      },
+      {
+        "section": 3,
+        "route": "Summit Bid: Base Camp \u2192 Summit \u2192 Kyanjin Gompa",
+        "distanceKm": "10",
+        "elevGainM": "900",
+        "elevLossM": "1630",
+        "maxAltM": "5500",
+        "lat": 28.2111,
+        "lng": 85.5667,
+        "overnight": "Kyanjin Teahouses",
+        "mapNote": "Early morning start. Rocky and glaciated terrain to summit at 5500m. Outstanding views of Langtang Lirung, Shishapangma, and Ganesh Himal. Descend to Kyanjin Gompa."
+      },
+      {
+        "section": 4,
+        "route": "Kyanjin Gompa to Syabrubesi",
+        "distanceKm": "25",
+        "elevGainM": "200",
+        "elevLossM": "2500",
+        "maxAltM": "3870",
+        "lat": 28.1633,
+        "lng": 85.3323,
+        "overnight": "Syabrubesi (Off-trail)",
+        "mapNote": "Full descent of the Langtang valley. Bamboo forest and waterfalls below Lama Hotel. Return to Syabrubesi for bus back to Kathmandu."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Yala Peak Summit",
+        "lat": 28.235,
+        "lng": 85.58,
+        "type": "summit",
+        "altM": 5500,
+        "note": "Ideal first technical Himalayan peak. Rocky summit with fixed ropes. Shishapangma visible across the Tibetan border."
+      },
+      {
+        "name": "Kyanjin Gompa",
+        "lat": 28.2111,
+        "lng": 85.5667,
+        "type": "landmark",
+        "altM": 3870,
+        "note": "Ancient Buddhist monastery at the heart of the Langtang valley. Local yak cheese produced here."
+      },
+      {
+        "name": "Tserko Ri",
+        "lat": 28.23,
+        "lng": 85.56,
+        "type": "viewpoint",
+        "altM": 4984,
+        "note": "Classic acclimatisation hike from Kyanjin. 360\u00b0 views of Langtang Lirung, Langtang II, and the Tibetan plateau."
+      }
+    ]
+  },
+  "friendship_peak": {
+    "sheetName": "Friendship Peak",
+    "slug": "friendship_peak",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Manali to Solang Valley / Base of Approach",
+        "distanceKm": "14",
+        "elevGainM": "400",
+        "elevLossM": "0",
+        "maxAltM": "2480",
+        "lat": 32.32,
+        "lng": 77.14,
+        "overnight": "Solang / Dhundi Camp",
+        "mapNote": "Drive from Manali to Dhundi (2480m). Short walk to camp. Gear organisation and team briefing. Beas River valley above Manali."
+      },
+      {
+        "day": 2,
+        "route": "Dhundi to Beas Kund Base Camp",
+        "distanceKm": "11",
+        "elevGainM": "1300",
+        "elevLossM": "200",
+        "maxAltM": "3700",
+        "lat": 32.305,
+        "lng": 77.11,
+        "overnight": "Beas Kund Base Camp",
+        "mapNote": "Trek through high meadows and moraines to Beas Kund glacial basin (3700m). Friendship Peak visible above. Camp setup."
+      },
+      {
+        "day": 3,
+        "route": "Base Camp Acclimatisation + High Camp Carry",
+        "distanceKm": "5",
+        "elevGainM": "500",
+        "elevLossM": "500",
+        "maxAltM": "4200",
+        "lat": 32.295,
+        "lng": 77.115,
+        "overnight": "Beas Kund Base Camp",
+        "mapNote": "Acclimatisation hike toward the glacier. Crampon fitting and ice axe technique practice. Rest afternoon."
+      },
+      {
+        "day": 4,
+        "route": "Base Camp to High Camp (Glacier)",
+        "distanceKm": "5",
+        "elevGainM": "1089",
+        "elevLossM": "0",
+        "maxAltM": "4800",
+        "lat": 32.2833,
+        "lng": 77.1167,
+        "overnight": "High Camp Tents",
+        "mapNote": "Cross the glacier to high camp at ~4800m. Crampons required from base of glacier. Early night for alpine start."
+      },
+      {
+        "day": 5,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Base Camp",
+        "distanceKm": "9",
+        "elevGainM": "489",
+        "elevLossM": "1589",
+        "maxAltM": "5289",
+        "lat": 32.305,
+        "lng": 77.11,
+        "overnight": "Beas Kund Base Camp",
+        "mapNote": "Alpine start 4am. Snow slopes to summit at 5289m. Kullu valley and Himalayan giants in view. Descend to base camp."
+      },
+      {
+        "day": 6,
+        "route": "Base Camp to Manali (Descent)",
+        "distanceKm": "11",
+        "elevGainM": "0",
+        "elevLossM": "1200",
+        "maxAltM": "3700",
+        "lat": 32.244,
+        "lng": 77.1892,
+        "overnight": "Manali (Off-trail)",
+        "mapNote": "Full descent through Beas Kund basin and Solang Valley back to Manali. Celebration in Old Manali."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Friendship Peak Summit",
+        "lat": 32.2833,
+        "lng": 77.1167,
+        "type": "summit",
+        "altM": 5289,
+        "note": "India's most accessible glacier summit. Kullu valley panorama. Deo Tibba and Indrasan visible to the east."
+      },
+      {
+        "name": "Beas Kund",
+        "lat": 32.305,
+        "lng": 77.11,
+        "type": "landmark",
+        "altM": 3700,
+        "note": "Sacred glacial lake \u2014 source of the Beas River. Beautiful camping spot with Friendship Peak above."
+      },
+      {
+        "name": "Friendship Glacier",
+        "lat": 32.295,
+        "lng": 77.115,
+        "type": "glacier",
+        "altM": 4200,
+        "note": "Main glacier approach to high camp. Crampons required. Moderate gradient ideal for first glacier travel."
+      }
+    ]
+  },
+  "mount_kazbek": {
+    "sheetName": "Mount Kazbek",
+    "slug": "mount_kazbek",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Stepantsminda to Meteo Station (Bethlemi Hut)",
+        "distanceKm": "10",
+        "elevGainM": "1900",
+        "elevLossM": "100",
+        "maxAltM": "3650",
+        "lat": 42.678,
+        "lng": 44.53,
+        "overnight": "Bethlemi Hut",
+        "mapNote": "Hike from Stepantsminda past Gergeti Trinity Church (2170m) and up steep ridges to the Bethlemi Hut at 3650m. Kazbek glacier visible above."
+      },
+      {
+        "day": 2,
+        "route": "Meteo Station Acclimatisation Hike",
+        "distanceKm": "4",
+        "elevGainM": "400",
+        "elevLossM": "400",
+        "maxAltM": "4050",
+        "lat": 42.678,
+        "lng": 44.53,
+        "overnight": "Bethlemi Hut",
+        "mapNote": "Acclimatisation hike up the Kazbek glacier to ~4050m and return. Equipment check and rope team practice. Rest afternoon."
+      },
+      {
+        "day": 3,
+        "route": "Summit Bid: Meteo Station \u2192 Summit \u2192 Meteo Station",
+        "distanceKm": "12",
+        "elevGainM": "1403",
+        "elevLossM": "1403",
+        "maxAltM": "5053",
+        "lat": 42.678,
+        "lng": 44.53,
+        "overnight": "Bethlemi Hut",
+        "mapNote": "Alpine start ~1am. Glacier and steep snowfield to summit at 5053m. Russia\u2013Georgia border runs through the summit. Return to hut."
+      },
+      {
+        "day": 4,
+        "route": "Meteo Station to Stepantsminda",
+        "distanceKm": "10",
+        "elevGainM": "100",
+        "elevLossM": "1900",
+        "maxAltM": "3650",
+        "lat": 42.656,
+        "lng": 44.643,
+        "overnight": "Stepantsminda (Off-trail)",
+        "mapNote": "Full descent to Stepantsminda. Pass the iconic Gergeti Trinity Church again. Celebration dinner in town."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mount Kazbek Summit",
+        "lat": 42.697,
+        "lng": 44.518,
+        "type": "summit",
+        "altM": 5053,
+        "note": "Dormant volcano. One of the highest peaks in the Caucasus. Russia-Georgia border summit. In Greek mythology, where Prometheus was chained."
+      },
+      {
+        "name": "Gergeti Trinity Church",
+        "lat": 42.659,
+        "lng": 44.638,
+        "type": "landmark",
+        "altM": 2170,
+        "note": "14th-century Georgian Orthodox church perched on a hilltop. Iconic Kazbek backdrop. Visible from Stepantsminda."
+      },
+      {
+        "name": "Bethlemi Hut (Meteo Station)",
+        "lat": 42.678,
+        "lng": 44.53,
+        "type": "hut",
+        "altM": 3650,
+        "note": "Soviet-era meteorological station converted to climbers' hut. Crowded in peak season. Spectacular glacier views."
+      }
+    ]
+  },
+  "gran_paradiso": {
+    "sheetName": "Gran Paradiso",
+    "slug": "gran_paradiso",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Pont (Valsavarenche) to Rifugio Vittorio Emanuele II",
+        "distanceKm": "5",
+        "elevGainM": "800",
+        "elevLossM": "0",
+        "maxAltM": "2732",
+        "lat": 45.516,
+        "lng": 7.234,
+        "overnight": "Rifugio Vittorio Emanuele II",
+        "mapNote": "Easy approach hike from Pont through alpine meadows and ibex territory. Historic rifugio with excellent Italian cuisine."
+      },
+      {
+        "day": 2,
+        "route": "Rifugio \u2192 Summit \u2192 Pont",
+        "distanceKm": "13",
+        "elevGainM": "1329",
+        "elevLossM": "2129",
+        "maxAltM": "4061",
+        "lat": 45.519,
+        "lng": 7.266,
+        "overnight": "Pont (Off-trail)",
+        "mapNote": "Pre-dawn start. Glacier traverse, rocky ridge to Virgin Mary statue on summit. Highest point entirely on Italian soil. Descend full return to Pont."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Gran Paradiso Summit",
+        "lat": 45.519,
+        "lng": 7.266,
+        "type": "summit",
+        "altM": 4061,
+        "note": "Only 4000m peak entirely in Italy. Bronze Virgin Mary statue on summit. Views across Graian Alps."
+      },
+      {
+        "name": "Rifugio Vittorio Emanuele II",
+        "lat": 45.516,
+        "lng": 7.234,
+        "type": "hut",
+        "altM": 2732,
+        "note": "Classic alpine hut with long mountaineering history. Named after the Italian king who hunted here."
+      },
+      {
+        "name": "Gran Paradiso Glacier",
+        "lat": 45.518,
+        "lng": 7.25,
+        "type": "glacier",
+        "altM": 3500,
+        "note": "Moderate glacier with crevasses. Rope travel standard. Ibex frequently spotted on moraines below."
+      }
+    ]
   }
 }
