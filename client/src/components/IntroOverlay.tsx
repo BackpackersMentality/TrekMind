@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from "react";
 import { useIntroSeen } from "@/hooks/useIntroSeen";
-import { Globe, Trophy, Bookmark, Sparkles, SlidersHorizontal } from "lucide-react";
+import { Globe, Trophy, Bookmark, Sparkles, SlidersHorizontal, Pickaxe } from "lucide-react";
 
 
 // ── Tier grid for welcome slide ───────────────────────────────────────────────
@@ -12,7 +12,7 @@ const TIER_GRID = [
   {
     number: 1,
     name: "Iconic",
-    count: 25,
+    count: 30,
     pinBg: "bg-amber-400",
     cardBg: "bg-amber-500/15",
     border: "border-amber-500/30",
@@ -23,7 +23,7 @@ const TIER_GRID = [
   {
     number: 2,
     name: "Classic",
-    count: 43,
+    count: 59,
     pinBg: "bg-blue-400",
     cardBg: "bg-blue-500/15",
     border: "border-blue-500/30",
@@ -34,7 +34,7 @@ const TIER_GRID = [
   {
     number: 3,
     name: "Remote",
-    count: 25,
+    count: 34,
     pinBg: "bg-slate-400",
     cardBg: "bg-slate-500/15",
     border: "border-slate-500/30",
@@ -45,13 +45,24 @@ const TIER_GRID = [
   {
     number: 4,
     name: "Thru-Hike",
-    count: 7,
+    count: 12,
     pinBg: "bg-violet-400",
     cardBg: "bg-violet-500/15",
     border: "border-violet-500/30",
     text: "text-violet-300",
     sub: "text-violet-200/60",
     example: "PCT, Te Araroa, AT",
+  },
+  {
+    number: 5,
+    name: "Trekking Peak",
+    count: 15,
+    pinBg: "bg-rose-500",
+    cardBg: "bg-rose-500/15",
+    border: "border-rose-500/30",
+    text: "text-rose-300",
+    sub: "text-rose-200/60",
+    example: "Mera Peak, Elbrus",
   },
 ];
 
@@ -62,21 +73,21 @@ const STEPS = [
     color: "text-sky-400",
     bg: "bg-sky-500/15 border-sky-500/30",
     title: "Spin the Globe",
-    body: "Drag to explore 100 of the world's greatest trekking routes. Tap any pin to preview the trek.",
+    body: "Drag to explore 150 of the world's greatest trekking routes and peaks. Tap any pin to preview the trek.",
   },
   {
     icon: SlidersHorizontal,
     color: "text-violet-400",
     bg: "bg-violet-500/15 border-violet-500/30",
     title: "Filter & Discover",
-    body: "Use the filter button to narrow by region, terrain, duration, and accommodation type.",
+    body: "Use the filter button to narrow by region, terrain, duration, accommodation type, and even when to trek by month.",
   },
   {
     icon: Trophy,
     color: "text-amber-400",
     bg: "bg-amber-500/15 border-amber-500/30",
     title: "Top 100 Ranked",
-    body: "Every trek is ranked across four tiers — from iconic classics to remote hidden gems.",
+    body: "Every trek is ranked across five tiers — from iconic classics to remote hidden gems and beginner mountaineering peaks.",
   },
   {
     icon: Bookmark,
@@ -160,10 +171,10 @@ export function IntroOverlay() {
                   Trek<span className="text-sky-400">Mind</span>
                 </h1>
                 <p className="text-amber-300/90 text-xs font-semibold tracking-wide mt-1">
-                  The Atlas of the World's Best Treks
+                  The Atlas of the World's Best Treks & Peaks
                 </p>
                 <p className="text-white/40 text-[11px] mt-0.5 leading-snug">
-                  Discover iconic trails, remote adventures, and unforgettable journeys.
+                  Discover iconic trails, remote adventures, and first summits.
                 </p>
               </div>
 
