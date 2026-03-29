@@ -45,10 +45,10 @@
     "highlights": [
       "Torres del Paine granite towers",
       "Grey Glacier and ice field views",
-      "Valle del Francés with hanging glaciers",
-      "Lago Nordenskjöld and Lago Pehoé",
+      "Valle del Franc\u00e9s with hanging glaciers",
+      "Lago Nordenskj\u00f6ld and Lago Peho\u00e9",
       "Guanaco herds on open steppe",
-      "Lenga and ñirre forest ecosystems"
+      "Lenga and \u00f1irre forest ecosystems"
     ]
   },
   "pct-high-sierra": {
@@ -85,7 +85,7 @@
       "Landmannalaugar's rhyolite peaks and hot springs",
       "Hrafntinnusker obsidian plateau",
       "Emstrur glacial river crossings",
-      "Þórsmörk valley beneath Eyjafjallajökull",
+      "\u00de\u00f3rsm\u00f6rk valley beneath Eyjafjallaj\u00f6kull",
       "Volcanic black sand and ash fields",
       "Steaming fumaroles and geothermal areas"
     ]
@@ -93,7 +93,7 @@
   "routeburn-track": {
     "name": "Routeburn Track",
     "tier": 1,
-    "whySpecial": "The Routeburn Track traverses New Zealand's Southern Alps through beech forests, alpine valleys, and mountain passes that connect two national parks. The route follows ancient Māori greenstone trading paths through terrain carved by glaciers and sculpted by heavy rainfall. Waterfalls, tarns, and snow-capped peaks define this passage through temperate rainforest and subalpine environments.",
+    "whySpecial": "The Routeburn Track traverses New Zealand's Southern Alps through beech forests, alpine valleys, and mountain passes that connect two national parks. The route follows ancient M\u0101ori greenstone trading paths through terrain carved by glaciers and sculpted by heavy rainfall. Waterfalls, tarns, and snow-capped peaks define this passage through temperate rainforest and subalpine environments.",
     "highlights": [
       "Harris Saddle and Conical Hill viewpoint",
       "Routeburn Falls and alpine meadows",
@@ -277,7 +277,7 @@
     "tier": 2,
     "whySpecial": "The Huayhuash Circuit encircles one of Peru's most dramatic mountain ranges through high passes and remote valleys beneath glaciated peaks. The route traverses terrain where traditional herding communities maintain seasonal camps. This trek offers sustained high-altitude travel through landscapes of exceptional verticality and glacial presence.",
     "highlights": [
-      "Siula Grande and Yerupajá peaks",
+      "Siula Grande and Yerupaj\u00e1 peaks",
       "Multiple high passes with glacier views",
       "Turquoise glacial lakes",
       "Alpaca and llama herding camps",
@@ -862,7 +862,7 @@
     "tier": 3,
     "whySpecial": "The Wind River High Route is one of the most sustained off-trail wilderness traverses in the United States, crossing the granite heart of Wyoming through terrain that sees very few visitors. Navigation is entirely by map and compass across unmarked passes, boulder fields, and snowfields, requiring genuine backcountry competence. The Cirque of Towers, an amphitheatre of ten granite spires surrounding a glacial lake, stands as one of the most dramatic alpine settings anywhere in the American West.",
     "highlights": [
-      "Cirque of Towers — ten granite spires over a glacial lake",
+      "Cirque of Towers \u2014 ten granite spires over a glacial lake",
       "Full off-trail navigation across unmarked terrain",
       "Jackass Pass and remote Wyoming wilderness",
       "Lonesome Lake below sheer granite walls",
@@ -875,7 +875,7 @@
     "tier": 3,
     "whySpecial": "Steve Roper's Sierra High Route traverses the length of the Sierra Nevada almost entirely off-trail, crossing unnamed passes and navigating glacially polished granite slabs through terrain that the John Muir Trail never touches. The route demands full wilderness self-sufficiency and fluent cross-country navigation, moving through an unbroken sequence of basins, ridges, and remote lakes. Muro Blanco, the White Wall, is a signature section where the granite is swept clean of soil and vegetation, creating a surreal high-altitude landscape unlike anywhere else.",
     "highlights": [
-      "Muro Blanco — the White Wall, swept granite at altitude",
+      "Muro Blanco \u2014 the White Wall, swept granite at altitude",
       "Continuous off-trail navigation across nine days",
       "Window Peak, Dragon Peak, and the Silver Divide",
       "Remote lake basins rarely visited by other hikers",
@@ -888,9 +888,9 @@
     "tier": 2,
     "whySpecial": "Jasper National Park's Skyline Trail earns its name by spending almost its entire length above the treeline, traversing an exposed alpine ridge system with unobstructed views across the Athabasca and Maligne valleys. The route is considered one of Canada's finest backcountry trails for good reason: the combination of sustained high altitude, dramatic ridge topography, and the scale of the Jasper landscape is exceptional. Shovel Pass at the midpoint delivers a panorama that takes in dozens of named peaks and the full breadth of Canada's largest national park.",
     "highlights": [
-      "Shovel Pass — sustained 360° panorama of Jasper's high country",
+      "Shovel Pass \u2014 sustained 360\u00b0 panorama of Jasper's high country",
       "Nearly the entire route above treeline",
-      "Maligne Lake — iconic Rockies lake at the trailhead",
+      "Maligne Lake \u2014 iconic Rockies lake at the trailhead",
       "Curator Lake reflection pool below the ridge",
       "Jasper National Park's most celebrated backcountry trail",
       "Elk, caribou, and grizzly bear habitat throughout"
@@ -899,11 +899,11 @@
   "rockwall": {
     "name": "Rockwall Trail",
     "tier": 2,
-    "whySpecial": "Kootenay National Park's Rockwall Trail traces the base of a 30-kilometre continuous limestone escarpment that rises sheer from the valley floor — one of the most visually distinctive geological features in the Canadian Rockies. The route moves through four connected valleys separated by high passes, with Floe Lake's turquoise water directly beneath the escarpment's face providing the trail's most photographed moment. Helmet Falls, a 330-metre free-fall waterfall near the trail's midpoint, is among the tallest in Canada.",
+    "whySpecial": "Kootenay National Park's Rockwall Trail traces the base of a 30-kilometre continuous limestone escarpment that rises sheer from the valley floor \u2014 one of the most visually distinctive geological features in the Canadian Rockies. The route moves through four connected valleys separated by high passes, with Floe Lake's turquoise water directly beneath the escarpment's face providing the trail's most photographed moment. Helmet Falls, a 330-metre free-fall waterfall near the trail's midpoint, is among the tallest in Canada.",
     "highlights": [
-      "The Rockwall — 30km continuous limestone escarpment",
+      "The Rockwall \u2014 30km continuous limestone escarpment",
       "Floe Lake directly below the sheer rock face",
-      "Helmet Falls — one of Canada's tallest waterfalls",
+      "Helmet Falls \u2014 one of Canada's tallest waterfalls",
       "Numa Pass and the full escarpment reveal",
       "Four valley crossings through Kootenay wilderness",
       "Ochre mineral springs at the Paint Pots trail end"
@@ -912,10 +912,10 @@
   "choquequirao": {
     "name": "Choquequirao Trek",
     "tier": 2,
-    "whySpecial": "Choquequirao is one of the largest and least-visited Inca sites in Peru, a royal estate set on a saddle ridge above the Apurímac canyon that requires a multi-day trek to reach in any direction. The approach involves a brutal descent into one of South America's deepest gorges followed by a long climb through cloud forest, creating a physical barrier that has kept visitor numbers at a fraction of Machu Picchu's. Only around 30 percent of the site has been excavated, including its distinctive white llama-inlaid terraces, found nowhere else in the Inca world.",
+    "whySpecial": "Choquequirao is one of the largest and least-visited Inca sites in Peru, a royal estate set on a saddle ridge above the Apur\u00edmac canyon that requires a multi-day trek to reach in any direction. The approach involves a brutal descent into one of South America's deepest gorges followed by a long climb through cloud forest, creating a physical barrier that has kept visitor numbers at a fraction of Machu Picchu's. Only around 30 percent of the site has been excavated, including its distinctive white llama-inlaid terraces, found nowhere else in the Inca world.",
     "highlights": [
-      "Choquequirao citadel — the other Machu Picchu, without the crowds",
-      "Apurímac canyon descent — one of the world's deepest gorges",
+      "Choquequirao citadel \u2014 the other Machu Picchu, without the crowds",
+      "Apur\u00edmac canyon descent \u2014 one of the world's deepest gorges",
       "White llama inlaid terracing unique to this site",
       "Cloud forest ascent through subtropical vegetation",
       "Inca engineering at extraordinary scale and isolation",
@@ -931,7 +931,7 @@
       "Traditional Kichwa village markets and weaving culture",
       "Andean condors above the Toachi Canyon",
       "Cloud forest descents and Andean highland scenery",
-      "Isinliví traditional woodcarving community",
+      "Isinliv\u00ed traditional woodcarving community",
       "Authentic local guesthouse culture throughout"
     ]
   },
@@ -942,34 +942,34 @@
     "highlights": [
       "World's southernmost trekking circuit",
       "Dientes de Navarino spires above the Beagle Channel",
-      "Paso Virginia — exposed ridge crossing on the main col",
+      "Paso Virginia \u2014 exposed ridge crossing on the main col",
       "Subantarctic bog, lenga beech, and glacial terrain",
       "Views to Argentine Tierra del Fuego across the Beagle Channel",
-      "Puerto Williams — world's southernmost city as base"
+      "Puerto Williams \u2014 world's southernmost city as base"
     ]
   },
   "cerro_castillo": {
     "name": "Cerro Castillo Circuit",
     "tier": 2,
-    "whySpecial": "Cerro Castillo is Patagonia's finest trekking route outside Torres del Paine, a basalt castle of jagged spires above a calving turquoise glacier lagoon in Chile's Aysén region. The circuit crosses a high pass directly below the castle walls, offering sustained close-range views of an extraordinary volcanic formation that most international visitors have never heard of. The combination of near-empty trails, striking geology, and classic Patagonian weather makes this the choice of trekkers who have already done the Patagonian classics and want something rawer.",
+    "whySpecial": "Cerro Castillo is Patagonia's finest trekking route outside Torres del Paine, a basalt castle of jagged spires above a calving turquoise glacier lagoon in Chile's Ays\u00e9n region. The circuit crosses a high pass directly below the castle walls, offering sustained close-range views of an extraordinary volcanic formation that most international visitors have never heard of. The combination of near-empty trails, striking geology, and classic Patagonian weather makes this the choice of trekkers who have already done the Patagonian classics and want something rawer.",
     "highlights": [
-      "Cerro Castillo — basalt spires above a hanging glacier",
+      "Cerro Castillo \u2014 basalt spires above a hanging glacier",
       "Glacial lagoon with calving ice directly below the towers",
-      "Paso Cerro Castillo — highest point with full tower panorama",
+      "Paso Cerro Castillo \u2014 highest point with full tower panorama",
       "Far fewer trekkers than Torres del Paine",
-      "General Carrera Lake — South America's second largest lake nearby",
+      "General Carrera Lake \u2014 South America's second largest lake nearby",
       "Classic Patagonian volcanic and glacial landscape"
     ]
   },
   "cape_wrath": {
     "name": "Cape Wrath Trail",
     "tier": 3,
-    "whySpecial": "The Cape Wrath Trail is Britain's most demanding long-distance route, traversing 370 kilometres of the Scottish Highlands from Fort William to Cape Wrath entirely without official trail markers or maintained paths. The route passes through the Rough Bounds of Knoydart, the Torridon mountains, the Fisherfield Forest, and the peat bogs of Assynt — four of the most remote and trackless landscapes in the British Isles. Cape Wrath lighthouse, the most northwesterly point on mainland Britain, is accessible only on foot or by ferry, making it one of the few European trail termini that genuinely cannot be reached by road.",
+    "whySpecial": "The Cape Wrath Trail is Britain's most demanding long-distance route, traversing 370 kilometres of the Scottish Highlands from Fort William to Cape Wrath entirely without official trail markers or maintained paths. The route passes through the Rough Bounds of Knoydart, the Torridon mountains, the Fisherfield Forest, and the peat bogs of Assynt \u2014 four of the most remote and trackless landscapes in the British Isles. Cape Wrath lighthouse, the most northwesterly point on mainland Britain, is accessible only on foot or by ferry, making it one of the few European trail termini that genuinely cannot be reached by road.",
     "highlights": [
-      "Sourlies Bothy — accessible only by foot or boat from the sea",
-      "Torridon mountains — 750-million-year-old red sandstone",
-      "Fisherfield — Scotland's last great roadless wilderness",
-      "Cape Wrath lighthouse — mainland Britain's most northwesterly point",
+      "Sourlies Bothy \u2014 accessible only by foot or boat from the sea",
+      "Torridon mountains \u2014 750-million-year-old red sandstone",
+      "Fisherfield \u2014 Scotland's last great roadless wilderness",
+      "Cape Wrath lighthouse \u2014 mainland Britain's most northwesterly point",
       "No waymarks or maintained trail for the entire route",
       "Assynt's isolated quartzite peaks rising from flat moorland"
     ]
@@ -977,14 +977,14 @@
   "monte_rosa": {
     "name": "Tour of Monte Rosa",
     "tier": 2,
-    "whySpecial": "The Tour of Monte Rosa circles Switzerland's highest peak through three countries and three distinct mountain cultures, traversing the full altitude spectrum from Zermatt's valley floor to high-altitude huts above 3,500 metres. The route passes beneath the extraordinary 2,500-metre east face of Monte Rosa visible from Macugnaga — one of the great walls of the Alps — before returning through the Saas Valley to the shadow of the Matterhorn. The combination of remote Italian valleys, Swiss alpine precision, and the constant presence of 4,000-metre peaks makes this the Haute Route's less-crowded equal.",
+    "whySpecial": "The Tour of Monte Rosa circles Switzerland's highest peak through three countries and three distinct mountain cultures, traversing the full altitude spectrum from Zermatt's valley floor to high-altitude huts above 3,500 metres. The route passes beneath the extraordinary 2,500-metre east face of Monte Rosa visible from Macugnaga \u2014 one of the great walls of the Alps \u2014 before returning through the Saas Valley to the shadow of the Matterhorn. The combination of remote Italian valleys, Swiss alpine precision, and the constant presence of 4,000-metre peaks makes this the Haute Route's less-crowded equal.",
     "highlights": [
       "Monte Rosa's 2,500m east face visible from Macugnaga village",
-      "Three countries: Switzerland, Italy — and views to France",
+      "Three countries: Switzerland, Italy \u2014 and views to France",
       "Felik Pass high-altitude border crossing with glacier views",
       "Zermatt and the Matterhorn as start and finish backdrop",
-      "Italian Alpine valley culture — distinct from Swiss side",
-      "Rifugio Quintino Sella — highest overnight on the circuit at 3,585m"
+      "Italian Alpine valley culture \u2014 distinct from Swiss side",
+      "Rifugio Quintino Sella \u2014 highest overnight on the circuit at 3,585m"
     ]
   },
   "stubai": {
@@ -995,19 +995,19 @@
       "Wilder Freiger and Stubai glaciers visible from multiple stages",
       "Seven hut-to-hut stages with full meals and accommodation",
       "Feuerstein saddle crossing with waterfall descent",
-      "Innsbrucker Hütte — most spectacular hut position on the circuit",
+      "Innsbrucker H\u00fctte \u2014 most spectacular hut position on the circuit",
       "Sustained high altitude above 2,000 metres throughout",
       "Eastern Alps hut culture at its finest"
     ]
   },
   "berliner": {
-    "name": "Berliner Höhenweg",
+    "name": "Berliner H\u00f6henweg",
     "tier": 2,
-    "whySpecial": "The Berliner Höhenweg is the premier hut-to-hut route of the Zillertal Alps, traversing glaciated terrain and crossing high passes with the Olperer suspension bridge — one of the most photographed mountain structures in the Alps — at its centrepiece. The route involves brief glacier travel with crevasse awareness required, distinguishing it from purely trail-based circuits and adding a genuine mountaineering character to what is otherwise a hut-walking route. The Olperer at 3,476 metres dominates the circuit, its pyramid profile visible from the bridge that carries his name.",
+    "whySpecial": "The Berliner H\u00f6henweg is the premier hut-to-hut route of the Zillertal Alps, traversing glaciated terrain and crossing high passes with the Olperer suspension bridge \u2014 one of the most photographed mountain structures in the Alps \u2014 at its centrepiece. The route involves brief glacier travel with crevasse awareness required, distinguishing it from purely trail-based circuits and adding a genuine mountaineering character to what is otherwise a hut-walking route. The Olperer at 3,476 metres dominates the circuit, its pyramid profile visible from the bridge that carries his name.",
     "highlights": [
-      "Olperer suspension bridge — suspended above the Schlegeis reservoir",
+      "Olperer suspension bridge \u2014 suspended above the Schlegeis reservoir",
       "Glacier travel with crevasse awareness on the Furtschaglhaus section",
-      "Olperer peak — Zillertal's signature summit",
+      "Olperer peak \u2014 Zillertal's signature summit",
       "Seven hut stages through the full Zillertal arc",
       "Schlegeis turquoise high-altitude reservoir",
       "Zillertal alpine infrastructure at its most impressive"
@@ -1018,21 +1018,21 @@
     "tier": 3,
     "whySpecial": "The Hornstrandir peninsula in Iceland's Westfjords is one of the last truly roadless regions in Western Europe, accessible only by ferry and completely devoid of permanent inhabitants since 1952. The traverse crosses the peninsula's high arctic tundra between the abandoned fishing village of Hesteyri and the towering seabird cliffs of Hornbjarg, where half a million birds nest on basalt columns above the Denmark Strait. Arctic foxes, completely unafraid of humans in this protected reserve, approach trekkers at close range throughout.",
     "highlights": [
-      "Hornbjarg cliffs — half a million seabirds nesting on basalt columns",
-      "Arctic fox colony — completely habituated to human presence",
+      "Hornbjarg cliffs \u2014 half a million seabirds nesting on basalt columns",
+      "Arctic fox colony \u2014 completely habituated to human presence",
       "Hesteyri abandoned fishing village, last inhabited 1952",
-      "Kálfatindar high point with Greenland visible on clear days",
-      "Complete roadlessness — ferry access only",
-      "Hornvík beach backed by 500m cliffs, most dramatic in Iceland"
+      "K\u00e1lfatindar high point with Greenland visible on clear days",
+      "Complete roadlessness \u2014 ferry access only",
+      "Hornv\u00edk beach backed by 500m cliffs, most dramatic in Iceland"
     ]
   },
   "kanchenjunga": {
     "name": "Kanchenjunga Base Camp",
     "tier": 3,
-    "whySpecial": "The Kanchenjunga Base Camp trek is the most remote major Himalayan circuit in Nepal, requiring a lengthy overland journey just to reach the trailhead before a two-week approach through Limbu and Sherpa villages to the flanks of the world's third highest peak. The unique double base camp structure — both North and South BC accessible from a single circuit via the high Sele La pass — means trekkers experience Kanchenjunga from both its glacial approaches within a single journey. The mountain is sacred to the Sikkimese and Nepali people, and the surrounding Kangchenjunga Conservation Area has protected the extraordinary biodiversity of this corner of eastern Nepal.",
+    "whySpecial": "The Kanchenjunga Base Camp trek is the most remote major Himalayan circuit in Nepal, requiring a lengthy overland journey just to reach the trailhead before a two-week approach through Limbu and Sherpa villages to the flanks of the world's third highest peak. The unique double base camp structure \u2014 both North and South BC accessible from a single circuit via the high Sele La pass \u2014 means trekkers experience Kanchenjunga from both its glacial approaches within a single journey. The mountain is sacred to the Sikkimese and Nepali people, and the surrounding Kangchenjunga Conservation Area has protected the extraordinary biodiversity of this corner of eastern Nepal.",
     "highlights": [
       "North and South Base Camps on a single circuit via Sele La",
-      "Kanchenjunga — world's third highest peak from below",
+      "Kanchenjunga \u2014 world's third highest peak from below",
       "Remote Limbu villages of eastern Nepal",
       "Kangchenjunga Conservation Area pristine wilderness",
       "Sele La high pass connecting the two approaches",
@@ -1044,11 +1044,11 @@
     "tier": 2,
     "whySpecial": "Upper Mustang was closed to foreign trekkers until 1992 and remains a restricted area requiring a special permit, preserving a Tibetan Buddhist kingdom that has maintained its culture almost unchanged since the 15th century. The walled capital Lo Manthang, with its royal palace and three major monasteries, sits at 3,840 metres in a landscape of ochre badlands and wind-carved cliffs that belongs geographically and culturally to the Tibetan plateau. The Mustang plateau's rain shadow location means it receives barely 250mm of annual rainfall, creating a high desert environment strikingly unlike the rest of Nepal.",
     "highlights": [
-      "Lo Manthang — ancient walled capital of the Kingdom of Mustang",
-      "Restricted area permit — cultural integrity preserved",
+      "Lo Manthang \u2014 ancient walled capital of the Kingdom of Mustang",
+      "Restricted area permit \u2014 cultural integrity preserved",
       "Tibetan plateau landscape of ochre cliffs and wind-carved formations",
-      "Luri Gompa — 800-year-old cave monastery with original murals",
-      "Kali Gandaki gorge — world's deepest canyon at the valley floor",
+      "Luri Gompa \u2014 800-year-old cave monastery with original murals",
+      "Kali Gandaki gorge \u2014 world's deepest canyon at the valley floor",
       "Living Tibetan Buddhist culture unchanged for centuries"
     ]
   },
@@ -1057,12 +1057,12 @@
     "tier": 3,
     "whySpecial": "The Makalu Base Camp trek approaches the world's fifth highest peak through the Barun Valley, a protected wilderness corridor that scientists consider one of the last relatively intact Himalayan valleys. The route requires no permits beyond the national park fee but demands full camping self-sufficiency as infrastructure beyond Tashigaon is minimal. The base camp at 5,550 metres sits in an extraordinary cirque directly below Makalu's pyramid summit, with views into the adjacent Tibetan plateau that few trekkers ever see.",
     "highlights": [
-      "Makalu — world's fifth highest peak from base camp at 5,550m",
-      "Barun Valley — one of the Himalaya's last pristine wilderness corridors",
+      "Makalu \u2014 world's fifth highest peak from base camp at 5,550m",
+      "Barun Valley \u2014 one of the Himalaya's last pristine wilderness corridors",
       "Complete self-sufficiency required above Tashigaon",
       "Views into Tibet from the upper valley",
       "Baruntse's 7,129m outline visible from approach",
-      "Eastern Nepal — far from the standard Himalayan trekking circuits"
+      "Eastern Nepal \u2014 far from the standard Himalayan trekking circuits"
     ]
   },
   "dhaulagiri": {
@@ -1070,22 +1070,22 @@
     "tier": 3,
     "whySpecial": "The Dhaulagiri Circuit is Nepal's most challenging major trekking route, crossing French Pass at 5,360 metres and traversing the hidden plateau behind the world's seventh highest mountain before descending the full depth of the Kali Gandaki gorge to civilisation. The crossing demands glacier travel, crevasse awareness, and full camping independence in terrain where rescue would take days. The Hidden Valley, a high plateau completely enclosed by 7,000-metre peaks, is one of the most extraordinary and inaccessible landscapes in the Himalaya.",
     "highlights": [
-      "French Pass at 5,360m — glacier travel and crevasse navigation required",
-      "Hidden Valley — a plateau surrounded by 7,000m peaks",
-      "Dhaulagiri — world's seventh highest mountain from base camp",
+      "French Pass at 5,360m \u2014 glacier travel and crevasse navigation required",
+      "Hidden Valley \u2014 a plateau surrounded by 7,000m peaks",
+      "Dhaulagiri \u2014 world's seventh highest mountain from base camp",
       "Italian Base Camp of the 1960 first ascent",
       "Full descent to Kali Gandaki gorge and apple orchard country",
-      "Marpha village — the Himalayan apple capital at the circuit's end"
+      "Marpha village \u2014 the Himalayan apple capital at the circuit's end"
     ]
   },
   "chadar": {
     "name": "Chadar Trek",
     "tier": 2,
-    "whySpecial": "The Chadar Trek follows the frozen surface of the Zanskar River through one of Ladakh's most spectacular gorges, a route only possible in January and February when temperatures drop low enough to solidify the river into a walkable ice sheet. The canyon walls rise 300 metres above the river in places, and the ice takes on extraordinary formations — blue ridges, pressure cracks, and frozen waterfalls — that change daily with temperature. The Nerak waterfall, completely frozen into a 30-metre column of blue ice, is the visual culmination of the route.",
+    "whySpecial": "The Chadar Trek follows the frozen surface of the Zanskar River through one of Ladakh's most spectacular gorges, a route only possible in January and February when temperatures drop low enough to solidify the river into a walkable ice sheet. The canyon walls rise 300 metres above the river in places, and the ice takes on extraordinary formations \u2014 blue ridges, pressure cracks, and frozen waterfalls \u2014 that change daily with temperature. The Nerak waterfall, completely frozen into a 30-metre column of blue ice, is the visual culmination of the route.",
     "highlights": [
-      "Walking on the frozen Zanskar River — January and February only",
-      "Nerak frozen waterfall — 30 metres of solid blue ice",
-      "Zanskar Gorge — 300m canyon walls above the river",
+      "Walking on the frozen Zanskar River \u2014 January and February only",
+      "Nerak frozen waterfall \u2014 30 metres of solid blue ice",
+      "Zanskar Gorge \u2014 300m canyon walls above the river",
       "Tibb Cave natural overhang campsite",
       "Ladakhi winter culture and river-dependent communities",
       "Ice that changes daily in form, colour, and stability"
@@ -1094,12 +1094,12 @@
   "maclehose": {
     "name": "MacLehose Trail",
     "tier": 2,
-    "whySpecial": "The MacLehose Trail is a 100-kilometre route across the New Territories of Hong Kong, traversing ten stages from the volcanic sea stacks and clear water bays of Sai Kung in the east to the hills above Tuen Mun in the west. The trail demonstrates that Hong Kong contains wilderness of genuine quality: 40 percent of the territory is designated country park, and the Sai Kung peninsula section passes through coastal geology — hexagonal volcanic columns formed 140 million years ago — found only in a handful of places worldwide. The contrast between dramatic natural landscapes and one of the world's most urbanised skylines defines the MacLehose experience.",
+    "whySpecial": "The MacLehose Trail is a 100-kilometre route across the New Territories of Hong Kong, traversing ten stages from the volcanic sea stacks and clear water bays of Sai Kung in the east to the hills above Tuen Mun in the west. The trail demonstrates that Hong Kong contains wilderness of genuine quality: 40 percent of the territory is designated country park, and the Sai Kung peninsula section passes through coastal geology \u2014 hexagonal volcanic columns formed 140 million years ago \u2014 found only in a handful of places worldwide. The contrast between dramatic natural landscapes and one of the world's most urbanised skylines defines the MacLehose experience.",
     "highlights": [
-      "High Island hexagonal volcanic columns — 140 million year old geology",
+      "High Island hexagonal volcanic columns \u2014 140 million year old geology",
       "Sai Kung peninsula clear water bays and coastal views",
-      "Sharp Peak — Sai Kung's dramatic rocky summit",
-      "Lion Rock — Hong Kong's silhouette symbol from above",
+      "Sharp Peak \u2014 Sai Kung's dramatic rocky summit",
+      "Lion Rock \u2014 Hong Kong's silhouette symbol from above",
       "40% of Hong Kong designated country park",
       "Urban skyline visible from the trail's high points"
     ]
@@ -1109,8 +1109,8 @@
     "tier": 2,
     "whySpecial": "Mount Meru is Tanzania's second highest peak and the most visually dramatic crater volcano on the continent, its horseshoe caldera breached on the east side to create a sheer 3,000-metre inner cliff directly above the active ash cone. The route climbs through four distinct vegetation zones from savanna to moorland to alpine desert, with the summit approach a knife-edge ridge above the crater floor requiring a headtorch pre-dawn start. Mount Meru is also the finest acclimatisation route for Kilimanjaro, providing three days above 3,000 metres before the main event.",
     "highlights": [
-      "Socialist Peak summit — views of Kilimanjaro at sunrise",
-      "Ash cone crater — 1910 eruption visible from the route",
+      "Socialist Peak summit \u2014 views of Kilimanjaro at sunrise",
+      "Ash cone crater \u2014 1910 eruption visible from the route",
       "Knife-edge summit ridge above the inner crater wall",
       "Colobus monkeys in the forest zone",
       "Momella alkaline lakes with flamingos at the trailhead",
@@ -1120,10 +1120,10 @@
   "kepler": {
     "name": "Kepler Track",
     "tier": 1,
-    "whySpecial": "The Kepler Track is New Zealand's most satisfying Great Walk in terms of terrain variety, climbing steeply from Te Anau's lakeside to the alpine ridgeline of Mount Luxmore, then traversing exposed subalpine terrain with panoramic Fiordland views before descending through cathedral beech forest to Lake Manapouri. The Luxmore Caves, a limestone system below the bush-line, offer a genuine side attraction before the high ridge is reached. The Fiordland wilderness visible from the ridge — 20,000 square kilometres of raw, roadless terrain — provides the context that elevates the Kepler above New Zealand's other Great Walks.",
+    "whySpecial": "The Kepler Track is New Zealand's most satisfying Great Walk in terms of terrain variety, climbing steeply from Te Anau's lakeside to the alpine ridgeline of Mount Luxmore, then traversing exposed subalpine terrain with panoramic Fiordland views before descending through cathedral beech forest to Lake Manapouri. The Luxmore Caves, a limestone system below the bush-line, offer a genuine side attraction before the high ridge is reached. The Fiordland wilderness visible from the ridge \u2014 20,000 square kilometres of raw, roadless terrain \u2014 provides the context that elevates the Kepler above New Zealand's other Great Walks.",
     "highlights": [
-      "Mount Luxmore alpine ridgeline — sustained subalpine walking",
-      "Fiordland panorama from the ridge — 20,000km² of wilderness",
+      "Mount Luxmore alpine ridgeline \u2014 sustained subalpine walking",
+      "Fiordland panorama from the ridge \u2014 20,000km\u00b2 of wilderness",
       "Luxmore Caves limestone system below the bush-line",
       "Lake Te Anau and Lake Manapouri as bookends",
       "Beech forest to alpine to lakeside in four days",
@@ -1133,25 +1133,25 @@
   "dusky": {
     "name": "Dusky Track",
     "tier": 3,
-    "whySpecial": "The Dusky Track is New Zealand's most challenging Great Walk — a route through Fiordland's interior that receives over five metres of annual rainfall, where the track is often submerged and mud is a constant companion across seven days of genuine wilderness. The route accesses Dusky Sound, one of Fiordland's most remote fiords, via a combination of jet boat, hut-to-hut walking, and a final water taxi that is the only way out. There are no shortcuts, no mobile signal, and no alternatives: the Dusky demands full self-sufficiency and is recommended only for experienced alpine trampers.",
+    "whySpecial": "The Dusky Track is New Zealand's most challenging Great Walk \u2014 a route through Fiordland's interior that receives over five metres of annual rainfall, where the track is often submerged and mud is a constant companion across seven days of genuine wilderness. The route accesses Dusky Sound, one of Fiordland's most remote fiords, via a combination of jet boat, hut-to-hut walking, and a final water taxi that is the only way out. There are no shortcuts, no mobile signal, and no alternatives: the Dusky demands full self-sufficiency and is recommended only for experienced alpine trampers.",
     "highlights": [
-      "Dusky Sound — one of Fiordland's most remote fiords",
-      "Lake Hauroko — New Zealand's deepest lake",
-      "Five metres of annual rainfall — mud and flooded tracks are normal",
-      "No road access in or out — jet boat and water taxi only",
-      "Loch Maree — a remote inland loch deep in the interior",
+      "Dusky Sound \u2014 one of Fiordland's most remote fiords",
+      "Lake Hauroko \u2014 New Zealand's deepest lake",
+      "Five metres of annual rainfall \u2014 mud and flooded tracks are normal",
+      "No road access in or out \u2014 jet boat and water taxi only",
+      "Loch Maree \u2014 a remote inland loch deep in the interior",
       "True Fiordland wilderness without the infrastructure of easier tracks"
     ]
   },
   "appalachian": {
     "name": "Appalachian Trail",
     "tier": 4,
-    "whySpecial": "The Appalachian Trail is the world's most celebrated long-distance hiking route, extending 3,500 kilometres along the Appalachian mountain spine from Georgia to Maine through fourteen states and two national parks. The trail is section-hikeable at hundreds of points, with Georgia, the Smokies, Virginia's Shenandoah, and Maine's 100-Mile Wilderness among the most popular segments for multi-day trips. The culture of the AT — trail angels, the Hiker Trash community, the white blaze tradition — is unique in long-distance walking and makes it as much a social as a physical experience.",
+    "whySpecial": "The Appalachian Trail is the world's most celebrated long-distance hiking route, extending 3,500 kilometres along the Appalachian mountain spine from Georgia to Maine through fourteen states and two national parks. The trail is section-hikeable at hundreds of points, with Georgia, the Smokies, Virginia's Shenandoah, and Maine's 100-Mile Wilderness among the most popular segments for multi-day trips. The culture of the AT \u2014 trail angels, the Hiker Trash community, the white blaze tradition \u2014 is unique in long-distance walking and makes it as much a social as a physical experience.",
     "highlights": [
-      "Springer Mountain southern terminus — the white blaze tradition begins",
+      "Springer Mountain southern terminus \u2014 the white blaze tradition begins",
       "Great Smoky Mountains National Park section",
-      "McAfee Knob, Virginia — most photographed spot on the trail",
-      "Katahdin, Maine — the northern terminus and final climb",
+      "McAfee Knob, Virginia \u2014 most photographed spot on the trail",
+      "Katahdin, Maine \u2014 the northern terminus and final climb",
       "Trail angel culture and AT hiker community",
       "14 states and the full length of the Appalachian mountains"
     ]
@@ -1159,14 +1159,14 @@
   "pct": {
     "name": "Pacific Crest Trail",
     "tier": 4,
-    "whySpecial": "The Pacific Crest Trail runs 4,265 kilometres from the Mexican border in California to the Canadian border in British Columbia, traversing three American west coast states and three distinct mountain ranges — the Sierra Nevada, the Cascades, and the Coast ranges. Cheryl Strayed's memoir Wild brought the trail to a global audience, but the PCT had a dedicated thru-hiking community for decades before. For section hikers, the Sierra Nevada's Forester Pass section and the Oregon Cascades' crater lake circuit provide the route's most accessible and spectacular individual segments.",
+    "whySpecial": "The Pacific Crest Trail runs 4,265 kilometres from the Mexican border in California to the Canadian border in British Columbia, traversing three American west coast states and three distinct mountain ranges \u2014 the Sierra Nevada, the Cascades, and the Coast ranges. Cheryl Strayed's memoir Wild brought the trail to a global audience, but the PCT had a dedicated thru-hiking community for decades before. For section hikers, the Sierra Nevada's Forester Pass section and the Oregon Cascades' crater lake circuit provide the route's most accessible and spectacular individual segments.",
     "highlights": [
-      "Forester Pass — PCT's highest point in the Sierra Nevada at 4,009m",
-      "Crater Lake, Oregon — the trail circles the caldera rim",
-      "Campo southern terminus to Manning Park, BC — three countries",
+      "Forester Pass \u2014 PCT's highest point in the Sierra Nevada at 4,009m",
+      "Crater Lake, Oregon \u2014 the trail circles the caldera rim",
+      "Campo southern terminus to Manning Park, BC \u2014 three countries",
       "The Sierra Nevada high route through Kings Canyon and Sequoia",
-      "John Muir Trail overlap in the Sierra — world-class mountain scenery",
-      "Wild — Cheryl Strayed's section from the Mojave north"
+      "John Muir Trail overlap in the Sierra \u2014 world-class mountain scenery",
+      "Wild \u2014 Cheryl Strayed's section from the Mojave north"
     ]
   },
   "cdt": {
@@ -1174,8 +1174,8 @@
     "tier": 4,
     "whySpecial": "The Continental Divide Trail is the most remote and demanding of the American Triple Crown trails, following the Rocky Mountain spine for 5,000 kilometres from the Mexican border in New Mexico to the Canadian border at Glacier National Park. Unlike the AT or PCT, large sections of the CDT lack defined trail and require off-trail navigation through some of the most isolated wilderness in the lower 48 states. Glacier National Park's Crown of the Continent section and Wyoming's Wind River section are considered among the most spectacular high-altitude walking in North America.",
     "highlights": [
-      "Glacier National Park — Crown of the Continent section",
-      "Wind River Range, Wyoming — 100+ miles of isolation",
+      "Glacier National Park \u2014 Crown of the Continent section",
+      "Wind River Range, Wyoming \u2014 100+ miles of isolation",
       "Off-trail navigation required through multiple sections",
       "Gila River Canyon alternate route in New Mexico",
       "America's most remote long-distance trail",
@@ -1185,13 +1185,13 @@
   "te_araroa": {
     "name": "Te Araroa",
     "tier": 4,
-    "whySpecial": "Te Araroa — The Long Pathway — runs 3,000 kilometres from Cape Reinga at the northern tip of New Zealand's North Island to Bluff at the southern tip of the South Island, encompassing beaches, active volcanoes, the Tongariro Alpine Crossing, 90 kilometres of river canoeing, and the high country of the South Island's Southern Alps. The route was formalised in 2011 and rapidly became one of the world's most celebrated thru-hikes, combining New Zealand's extraordinary landscape range with a trail culture that grew from zero over little more than a decade. The five-day Whanganui River canoe section makes it unique among long-distance walking trails.",
+    "whySpecial": "Te Araroa \u2014 The Long Pathway \u2014 runs 3,000 kilometres from Cape Reinga at the northern tip of New Zealand's North Island to Bluff at the southern tip of the South Island, encompassing beaches, active volcanoes, the Tongariro Alpine Crossing, 90 kilometres of river canoeing, and the high country of the South Island's Southern Alps. The route was formalised in 2011 and rapidly became one of the world's most celebrated thru-hikes, combining New Zealand's extraordinary landscape range with a trail culture that grew from zero over little more than a decade. The five-day Whanganui River canoe section makes it unique among long-distance walking trails.",
     "highlights": [
-      "Cape Reinga lighthouse — the meeting of two oceans at the start",
-      "Tongariro Alpine Crossing — world's most famous day walk as trail section",
+      "Cape Reinga lighthouse \u2014 the meeting of two oceans at the start",
+      "Tongariro Alpine Crossing \u2014 world's most famous day walk as trail section",
       "Whanganui River five-day canoe section",
       "Southern Alps high country and the Richmond Ranges",
-      "Bluff signpost — New Zealand's most celebrated finish",
+      "Bluff signpost \u2014 New Zealand's most celebrated finish",
       "Two islands, one continuous trail, every New Zealand landscape type"
     ]
   },
@@ -1201,566 +1201,98 @@
     "whySpecial": "The Great Himalaya Trail High Route traverses the full length of Nepal, linking all its major mountain conservation areas from Kanchenjunga in the east to the far western Himalaya, crossing passes above 5,000 metres and passing within sight of eight of the world's fourteen 8,000-metre peaks. The complete route takes around 150 days, but sections through Khumbu, Kanchenjunga, Manaslu, Mustang, and Dolpo each function as exceptional standalone treks. The GHT passes through landscapes ranging from the most intensively trekked terrain on earth to valleys visited by fewer than a dozen foreigners per year.",
     "highlights": [
       "Eight 8,000m peaks visible from the route",
-      "Kanchenjunga, Makalu, Everest, Manaslu, Annapurna, Dhaulagiri — all connected",
-      "Shey Gompa, Dolpo — Crystal Mountain and snow leopard territory",
+      "Kanchenjunga, Makalu, Everest, Manaslu, Annapurna, Dhaulagiri \u2014 all connected",
+      "Shey Gompa, Dolpo \u2014 Crystal Mountain and snow leopard territory",
       "Mustang High Route through the ancient kingdom",
-      "Passes above 5,000m throughout — Thorong La, Larkya La, Kongma La",
+      "Passes above 5,000m throughout \u2014 Thorong La, Larkya La, Kongma La",
       "Nepal's full landscape range from subtropical east to arid west"
     ]
   },
   "israel_trail": {
     "name": "Israel National Trail",
     "tier": 2,
-    "whySpecial": "The Israel National Trail runs 1,100 kilometres from Eilat on the Red Sea to Tel Dan on the Lebanese border, traversing the full geographic and cultural range of the country through Negev desert, Judean highlands, the Galilee, and the Mediterranean coast. The trail passes through or near Jerusalem, crosses the Makhtesh Ramon erosion crater — the largest in the world — and descends to the Sea of Galilee, the lowest freshwater lake on Earth at 213 metres below sea level. The combination of extraordinary geological diversity, deep historical layering, and the ability to complete sections independently in a small country makes this one of the most intellectually rich long-distance routes in the world.",
+    "whySpecial": "The Israel National Trail runs 1,100 kilometres from Eilat on the Red Sea to Tel Dan on the Lebanese border, traversing the full geographic and cultural range of the country through Negev desert, Judean highlands, the Galilee, and the Mediterranean coast. The trail passes through or near Jerusalem, crosses the Makhtesh Ramon erosion crater \u2014 the largest in the world \u2014 and descends to the Sea of Galilee, the lowest freshwater lake on Earth at 213 metres below sea level. The combination of extraordinary geological diversity, deep historical layering, and the ability to complete sections independently in a small country makes this one of the most intellectually rich long-distance routes in the world.",
     "highlights": [
-      "Makhtesh Ramon — world's largest erosion crater at 40km long",
-      "Jerusalem — the trail passes through or near the ancient city",
+      "Makhtesh Ramon \u2014 world's largest erosion crater at 40km long",
+      "Jerusalem \u2014 the trail passes through or near the ancient city",
       "Sea of Galilee at 213m below sea level",
       "Negev desert from Eilat through ancient copper mines",
       "4,000 years of layered civilisations visible from the path",
-      "Mount Hermon — snow-capped northern terminus viewpoint"
+      "Mount Hermon \u2014 snow-capped northern terminus viewpoint"
     ]
   },
   "camino_primitivo": {
     "name": "Camino Primitivo",
     "tier": 2,
-    "whySpecial": "The Camino Primitivo — the Original Way — is the oldest Camino de Santiago pilgrimage route, walked by King Alfonso II of Asturias in 830 AD when he first made the journey from Oviedo to venerate the newly discovered tomb of Saint James. The route traverses the Cantabrian mountains through deeply rural Asturian and Galician landscapes, with ancient Roman road sections, pre-Romanesque churches, and medieval hilltop villages encountered throughout. Its combination of physical challenge, genuine historical depth, and far fewer pilgrims than the Camino Francés makes it the choice of those seeking the original spirit of the Camino rather than its modern popularity.",
+    "whySpecial": "The Camino Primitivo \u2014 the Original Way \u2014 is the oldest Camino de Santiago pilgrimage route, walked by King Alfonso II of Asturias in 830 AD when he first made the journey from Oviedo to venerate the newly discovered tomb of Saint James. The route traverses the Cantabrian mountains through deeply rural Asturian and Galician landscapes, with ancient Roman road sections, pre-Romanesque churches, and medieval hilltop villages encountered throughout. Its combination of physical challenge, genuine historical depth, and far fewer pilgrims than the Camino Franc\u00e9s makes it the choice of those seeking the original spirit of the Camino rather than its modern popularity.",
     "highlights": [
-      "Oviedo Cathedral — the original starting point since 830 AD",
-      "Cruz de los Caminos — ancient Celtic cross at the Cantabrian high point",
-      "Lugo Roman walls — the only complete Roman circuit in the world (UNESCO)",
+      "Oviedo Cathedral \u2014 the original starting point since 830 AD",
+      "Cruz de los Caminos \u2014 ancient Celtic cross at the Cantabrian high point",
+      "Lugo Roman walls \u2014 the only complete Roman circuit in the world (UNESCO)",
       "Asturian and Galician rural culture throughout",
-      "Far fewer pilgrims than the Camino Francés",
+      "Far fewer pilgrims than the Camino Franc\u00e9s",
       "Santiago de Compostela Cathedral arrival and Botafumeiro ceremony"
     ]
   },
   "tombstone": {
     "name": "Tombstone Territorial Park",
     "tier": 2,
-    "whySpecial": "Tombstone Territorial Park in Yukon is known as the Patagonia of the North, a landscape of jagged granite peaks, permafrost tundra, and the deep cobalt of Divide Lake that stops visitors in their tracks. The park sits along the Dempster Highway — North America only all-season highway to the Arctic — giving it a dramatic sense of being at the edge of the known world. In late August, the tundra transforms into a mosaic of crimson, amber, and gold that is among the most vivid autumn displays anywhere in North America.",
+    "whySpecial": "Tombstone Territorial Park in Yukon is known as the Patagonia of the North, a landscape of jagged granite peaks, permafrost tundra, and the deep cobalt of Divide Lake that stops visitors in their tracks. The park sits along the Dempster Highway \u2014 North America only all-season highway to the Arctic \u2014 giving it a dramatic sense of being at the edge of the known world. In late August, the tundra transforms into a mosaic of crimson, amber, and gold that is among the most vivid autumn displays anywhere in North America.",
     "highlights": [
-      "Divide Lake — turquoise lake below jagged granite peaks",
-      "Grizzly Col high point at 1,650m with 360° tundra panorama",
+      "Divide Lake \u2014 turquoise lake below jagged granite peaks",
+      "Grizzly Col high point at 1,650m with 360\u00b0 tundra panorama",
       "Talus Lake beneath the Ogilvie Mountain north face",
-      "Late August tundra colour — one of North America finest autumn displays",
+      "Late August tundra colour \u2014 one of North America finest autumn displays",
       "Grizzly bears, Dall sheep, and wolverine in undisturbed habitat",
-      "Dempster Highway trailhead — the road to the Arctic Circle as context"
+      "Dempster Highway trailhead \u2014 the road to the Arctic Circle as context"
     ]
   },
   "berg_lake": {
     "name": "Berg Lake Trail",
     "tier": 2,
-    "whySpecial": "The Berg Lake Trail is Canada most spectacular mountain route, approaching the highest peak in the Canadian Rockies through a valley that delivers three major waterfalls before opening onto a turquoise glacial lake with active icebergs calving from the Berg Glacier overhead. Mount Robson at 3,954 metres is one of the most formidable mountains in North America — it generates its own weather, is cloud-capped on four out of five days, and carries near-mythical status among Canadian climbers and trekkers. The Hargreaves Glacier Meadows viewpoint above Berg Lake, where the full face of Robson and the glacier are simultaneously visible, is one of the great mountain panoramas on the continent.",
+    "whySpecial": "The Berg Lake Trail is Canada most spectacular mountain route, approaching the highest peak in the Canadian Rockies through a valley that delivers three major waterfalls before opening onto a turquoise glacial lake with active icebergs calving from the Berg Glacier overhead. Mount Robson at 3,954 metres is one of the most formidable mountains in North America \u2014 it generates its own weather, is cloud-capped on four out of five days, and carries near-mythical status among Canadian climbers and trekkers. The Hargreaves Glacier Meadows viewpoint above Berg Lake, where the full face of Robson and the glacier are simultaneously visible, is one of the great mountain panoramas on the continent.",
     "highlights": [
-      "Berg Lake — turquoise glacial lake with active icebergs calving from above",
-      "Mount Robson — highest peak in the Canadian Rockies at 3,954m",
-      "Emperor Falls — 67m cascade passed on a narrow ledge trail",
-      "Hargreaves Glacier Meadows — the continent finest view of Robson",
-      "Valley of a Thousand Falls — three major cascades in rapid succession",
+      "Berg Lake \u2014 turquoise glacial lake with active icebergs calving from above",
+      "Mount Robson \u2014 highest peak in the Canadian Rockies at 3,954m",
+      "Emperor Falls \u2014 67m cascade passed on a narrow ledge trail",
+      "Hargreaves Glacier Meadows \u2014 the continent finest view of Robson",
+      "Valley of a Thousand Falls \u2014 three major cascades in rapid succession",
       "Kinney Lake turquoise water at the valley entrance"
     ]
   },
   "inca": {
-    "whySpecial": "The Inca Trail is the only trek where the destination is an ancient wonder and the path to reach it is itself a UNESCO heritage site. Walking original Inca stonework through cloud forest and mountain passes to arrive at Machu Picchu through the Sun Gate at dawn — before the day-trippers — is one of the defining moments in world trekking.",
+    "whySpecial": "The Inca Trail is the only trek where the destination is an ancient wonder and the path to reach it is itself a UNESCO heritage site. Walking original Inca stonework through cloud forest and mountain passes to arrive at Machu Picchu through the Sun Gate at dawn \u2014 before the day-trippers \u2014 is one of the defining moments in world trekking.",
     "highlights": [
-      "Dead Woman's Pass (4,215m) — highest of the three passes, panoramic snow-peak views",
-      "Wiñay Wayna ruins — terraced Inca site above cloud forest, discovered 1941",
-      "Sun Gate arrival at dawn — Machu Picchu below in morning light, before the crowds",
-      "Cloud forest descent — over 200 orchid species and dense hummingbird populations",
-      "30+ Inca sites along the 43km route — terraces, platforms, and watchtowers",
-      "Original Inca stonework — 500-year-old stone steps fitted without mortar throughout"
+      "Dead Woman's Pass (4,215m) \u2014 highest of the three passes, panoramic snow-peak views",
+      "Wi\u00f1ay Wayna ruins \u2014 terraced Inca site above cloud forest, discovered 1941",
+      "Sun Gate arrival at dawn \u2014 Machu Picchu below in morning light, before the crowds",
+      "Cloud forest descent \u2014 over 200 orchid species and dense hummingbird populations",
+      "30+ Inca sites along the 43km route \u2014 terraces, platforms, and watchtowers",
+      "Original Inca stonework \u2014 500-year-old stone steps fitted without mortar throughout"
     ]
   },
   "jmt": {
-    "whySpecial": "The John Muir Trail traverses California's High Sierra for 340km from Yosemite Valley to the summit of Mount Whitney — the highest peak in the contiguous US. Granite cathedrals, crystalline alpine lakes, and eleven mountain passes make this arguably the finest sustained mountain wilderness in North America.",
+    "whySpecial": "The John Muir Trail traverses California's High Sierra for 340km from Yosemite Valley to the summit of Mount Whitney \u2014 the highest peak in the contiguous US. Granite cathedrals, crystalline alpine lakes, and eleven mountain passes make this arguably the finest sustained mountain wilderness in North America.",
     "highlights": [
       "Yosemite Valley departure beneath El Capitan and Half Dome",
-      "Evolution Basin (3,400m) — remote cirque below Darwin and Huxley peaks",
-      "Forester Pass (4,009m) — highest point on both JMT and PCT",
-      "Guitar Lake camp (4,100m) — final overnight directly below Mount Whitney",
-      "Mount Whitney summit (4,421m) — 360° views across Nevada and the Sierra",
-      "Muir Pass hut (3,658m) — stone refuge built 1930, above Helen Lake"
+      "Evolution Basin (3,400m) \u2014 remote cirque below Darwin and Huxley peaks",
+      "Forester Pass (4,009m) \u2014 highest point on both JMT and PCT",
+      "Guitar Lake camp (4,100m) \u2014 final overnight directly below Mount Whitney",
+      "Mount Whitney summit (4,421m) \u2014 360\u00b0 views across Nevada and the Sierra",
+      "Muir Pass hut (3,658m) \u2014 stone refuge built 1930, above Helen Lake"
     ]
   },
   "roraima": {
     "name": "Mount Roraima Trek",
     "tier": 2,
-    "whySpecial": "Mount Roraima is a tepui — a table-mountain isolated by two billion years of erosion — rising 2,810 metres above the Gran Sabana savanna on the convergence of Venezuela, Brazil, and Guyana. The summit plateau is a genuinely alien environment: black rock labyrinths, crystal quartzite fields, carnivorous plants, and endemic species found absolutely nowhere else on Earth, all existing above a permanent cloud layer that shrouds the walls from below. Arthur Conan Doyle's The Lost World was inspired by the tepuis, and Roraima's summit maintains an atmosphere that fully justifies the comparison — it is one of the most primordial landscapes a trekker can reach on foot.",
+    "whySpecial": "Mount Roraima is a tepui \u2014 a table-mountain isolated by two billion years of erosion \u2014 rising 2,810 metres above the Gran Sabana savanna on the convergence of Venezuela, Brazil, and Guyana. The summit plateau is a genuinely alien environment: black rock labyrinths, crystal quartzite fields, carnivorous plants, and endemic species found absolutely nowhere else on Earth, all existing above a permanent cloud layer that shrouds the walls from below. Arthur Conan Doyle's The Lost World was inspired by the tepuis, and Roraima's summit maintains an atmosphere that fully justifies the comparison \u2014 it is one of the most primordial landscapes a trekker can reach on foot.",
     "highlights": [
-      "Summit plateau — a 2-billion-year-old world of black rock and crystal fields",
-      "El Foso — a deep circular canyon cut into the tepui summit",
-      "Triple Point — stand in Venezuela, Brazil, and Guyana simultaneously",
-      "La Rampa — the only natural non-technical ascent on the tepui's southwest face",
+      "Summit plateau \u2014 a 2-billion-year-old world of black rock and crystal fields",
+      "El Foso \u2014 a deep circular canyon cut into the tepui summit",
+      "Triple Point \u2014 stand in Venezuela, Brazil, and Guyana simultaneously",
+      "La Rampa \u2014 the only natural non-technical ascent on the tepui's southwest face",
       "Endemic carnivorous plants and species found nowhere else on Earth",
       "Gran Sabana savanna approach with Kukenan tepui rising alongside"
-    ]
-  },
-  "w_trek": {
-    "name": "Torres del Paine W Trek",
-    "tier": 1,
-    "whySpecial": "The W Trek is the most photographed route in Patagonia — a 5-day traverse connecting all three iconic viewpoints of Torres del Paine National Park. The W shape links the granite tower amphitheatre, Valle del Francés hanging glaciers, and Grey Glacier in a format accessible to any fit trekker with full refugio support throughout.",
-    "highlights": [
-      "Mirador Base Las Torres at dawn — three granite towers reflected in a glacial tarn",
-      "Valle del Francés — avalanche-carved walls, hanging glaciers, Andean condors overhead",
-      "Grey Glacier — blue ice calving into Grey Lake, largest glacier in Patagonia outside Antarctica",
-      "Los Cuernos traverse above turquoise Lago Nordenskjöld",
-      "Refugio system — full meals and beds throughout, no camping gear required",
-      "Catamaran exit across Lago Pehoé with final views of the massif"
-    ]
-  },
-  "via-alpina": {
-    "name": "Via Alpina (Red Trail)",
-    "tier": 4,
-    "whySpecial": "The Via Alpina Red Trail is the grandest walking route in Europe — 2,500km crossing eight countries from Trieste to Monaco along the spine of the Alps. It traverses the Julian, Carnic, Tyrolean, Swiss, and Maritime Alps in sequence, passing through more distinct mountain cultures and landscapes than any other long-distance route on the continent.",
-    "highlights": [
-      "Triglav National Park — Slovenia's highest peak and most dramatic karst scenery",
-      "Tyrolean Alps — hut-to-hut traverse through Austria's finest alpine terrain",
-      "Swiss Alpine passes — crossing the Engadin and Bernina massifs at altitude",
-      "Mont Blanc region — the route passes through Chamonix and the heart of the Western Alps",
-      "8 countries in sequence — architecture, language, cuisine, and mountain culture shifting daily",
-      "Ligurian Alps finale — Mediterranean light and the Côte d'Azur arrival at Monaco"
-    ]
-  },
-  "gr11": {
-    "name": "GR11 (Ruta Transpirenaica)",
-    "tier": 2,
-    "whySpecial": "The GR11 traverses the Spanish Pyrenees from the Atlantic to the Mediterranean entirely on the Spanish side of the border — wilder, more remote, and less frequented than its French counterpart. Passing through the Basque Country, the Aragonese high peaks, Andorra, and Catalan Pyrenees, it offers 820km of mountain terrain with a genuine sense of wilderness.",
-    "highlights": [
-      "Ordesa y Monte Perdido — Spain's greatest Pyrenean canyon, sheer limestone walls",
-      "Posets-Maladeta — highest terrain on the GR11, crossing below the Aneto glacier",
-      "Andorra highland section — remote ridge walking above the duty-free valleys",
-      "Basque Pyrenees — green hills and farmhouses on the Atlantic approach",
-      "Aigüestortes i Estany de Sant Maurici — glacial lakes and granite of the Catalan Pyrenees",
-      "Cap de Creus finish — arrival at the Mediterranean's easternmost point of mainland Spain"
-    ]
-  },
-  "gr10": {
-    "name": "GR10",
-    "tier": 2,
-    "whySpecial": "The GR10 traverses the French Pyrenees from Hendaye on the Atlantic to Banyuls-sur-Mer on the Mediterranean — 866km through some of the most dramatic and varied mountain terrain in Europe. Unlike the GR11, it passes through French mountain villages, gîtes d'étape, and the distinctive culture of each Pyrenean valley.",
-    "highlights": [
-      "Basque Pyrenees — rolling green hills transitioning to high mountain terrain",
-      "Cirque de Gavarnie — France's most spectacular mountain amphitheatre, a UNESCO site",
-      "Vignemale and Balaïtous — the highest and most dramatic peaks of the central French Pyrenees",
-      "Ariège and Carlit massif — remote high plateau sections with glacial lakes",
-      "Cathar country — medieval castles and ancient villages in the eastern approaches",
-      "Banyuls-sur-Mer finish — descent to the Mediterranean through Roussillon vineyards"
-    ]
-  },
-  "wicklow": {
-    "name": "Wicklow Way",
-    "tier": 3,
-    "whySpecial": "The Wicklow Way was Ireland's first long-distance route — a 131km walk from the suburbs of Dublin into the largest upland wilderness in the country. It passes through the glacially carved Glendalough valley, across the heather moorlands of the Wicklow Mountains, and finishes in the rolling farmland of County Carlow.",
-    "highlights": [
-      "Glendalough — sixth-century monastic settlement in a glacial valley, one of Ireland's great historic sites",
-      "Wicklow Mountains moorland — vast heather expanses and bog cotton above 600m",
-      "Luggala and Lough Dan — dramatic glacial scenery on the northern section",
-      "Djouce Mountain — sweeping views from Dublin Bay to the Wicklow coast",
-      "Glenmalure — Ireland's longest glacial valley, remote and wild",
-      "Dublin departure — beginning a wilderness route from Ireland's capital city"
-    ]
-  },
-  "pennine": {
-    "name": "Pennine Way",
-    "tier": 2,
-    "whySpecial": "The Pennine Way is England's oldest and most demanding long-distance path — 429km along the backbone of northern England from the Peak District to the Scottish Borders. Created in 1965, it remains the benchmark for British hillwalking, crossing remote peat bogs, limestone dales, and the wild moorland of Northumberland.",
-    "highlights": [
-      "Kinder Scout — the contested moorland plateau where the 1932 mass trespass changed British walking rights",
-      "Malham Cove and Gordale Scar — spectacular limestone formations in the Yorkshire Dales",
-      "High Cup Nick — one of England's most dramatic geological features, a sudden glacial chasm",
-      "Cross Fell — highest point on the Pennines at 893m, notorious for the Helm Wind",
-      "Hadrian's Wall section — walking the Roman frontier for several miles",
-      "Kirk Yetholm finish — the famous Border Hotel pint tradition after the final miles"
-    ]
-  },
-  "adlerweg": {
-    "name": "Adlerweg (Eagle Walk)",
-    "tier": 2,
-    "whySpecial": "The Adlerweg — Eagle Walk — traverses the Austrian Tirol from St. Johann in the east to St. Anton am Arlberg in the west, following the ridge systems and high passes used by golden eagles. The 413km route combines technical alpine terrain with some of the finest hut infrastructure in Europe.",
-    "highlights": [
-      "Kaiser Mountains — dramatic limestone towers above the Inn Valley on the eastern approach",
-      "Achensee — Tirol's largest and deepest lake, approached from the ridge above",
-      "Karwendel range — vast protected wilderness of limestone ridges above Innsbruck",
-      "Ötztal Alps crossing — highest terrain on the route with glacier views",
-      "Arlberg massif finale — legendary ski terrain traversed in summer solitude",
-      "Austrian hut culture — consistently excellent mountain huts with hot food and local character throughout"
-    ]
-  },
-  "via-dinarica": {
-    "name": "Via Dinarica (White Trail)",
-    "tier": 3,
-    "whySpecial": "The Via Dinarica traverses the Dinaric Alps from Slovenia to Albania — 1,260km through six countries that are rarely visited and poorly mapped, crossing landscapes ranging from Slovenian karst to the Albanian Accursed Mountains. It is one of the last great undiscovered long-distance routes in Europe.",
-    "highlights": [
-      "Velebit Range (Croatia) — remote limestone ridgeline above the Adriatic, barely touched by tourism",
-      "Prenj and Čvrsnica (Bosnia) — brutally steep karst massifs with wartime history",
-      "Durmitor National Park (Montenegro) — glacial lakes and 2,500m peaks in a UNESCO landscape",
-      "Prokletije / Accursed Mountains (Albania) — the wildest and most remote section of the entire route",
-      "Cultural immersion — crossing post-Yugoslav cultures with hospitality unchanged for generations",
-      "True wilderness — long sections without infrastructure, requiring self-sufficiency and navigation"
-    ]
-  },
-  "abel-tasman": {
-    "name": "Abel Tasman Coast Track",
-    "tier": 1,
-    "whySpecial": "The Abel Tasman Coast Track is New Zealand's most-walked Great Walk — a 5-day traverse of golden-sand beaches, granite headlands, and native bush at the northern tip of the South Island. What makes it unique is the water taxi system that allows flexible access, and the combination of swimming, tidal crossings, and wildlife that sets it apart from any other Great Walk.",
-    "highlights": [
-      "Anchorage Beach — one of New Zealand's finest beaches, reached after the first day's walk",
-      "Bark Bay tidal crossing — a sandspit crossing that changes with the tide",
-      "Awaroa Inlet — the most remote beach on the track, with its famous lodge and tidal estuary",
-      "Fur seal colonies — basking on granite rocks throughout the northern section",
-      "Crystalline water — Abel Tasman's turquoise bays are among the clearest in New Zealand",
-      "Whariwharangi Bay — the old farmhouse hut in an isolated bay, the track's quietest finish"
-    ]
-  },
-  "great-ocean-walk": {
-    "name": "Great Ocean Walk",
-    "tier": 2,
-    "whySpecial": "The Great Ocean Walk follows 104km of Victoria's shipwreck coast from Apollo Bay to the Twelve Apostles — arguably Australia's most dramatic coastline. The route alternates between clifftop walking with panoramic Southern Ocean views and secluded beach camps accessible only on foot.",
-    "highlights": [
-      "Twelve Apostles — limestone stacks rising from the Southern Ocean, the walk's iconic finale",
-      "Cape Otway Lighthouse — Australia's oldest surviving mainland lighthouse on a wild headland",
-      "Wreck Beach — the remnants of 19th-century sailing ships visible at low tide",
-      "Johanna Beach — a wild surf beach with no road access, camped exclusively by walkers",
-      "Coastal heathland — banksias, hakeas, and kangaroos in the heath above the cliffs",
-      "Southern Ocean light — the quality of coastal light in this corner of Australia is extraordinary"
-    ]
-  },
-  "langtang": {
-    "name": "Langtang Valley Trek",
-    "tier": 2,
-    "whySpecial": "Langtang is the closest major Himalayan trekking region to Kathmandu — just 65km away — yet it feels entirely remote. The valley was devastated by the 2015 earthquake but has been rebuilt by the local Tamang community, and the trek now carries extra meaning as both a wilderness journey and an act of solidarity.",
-    "highlights": [
-      "Kyanjin Gompa — ancient Buddhist monastery below Langtang Lirung (7,227m)",
-      "Kyanjin Ri — viewpoint at 4,773m above the teahouse village, reached as a day hike",
-      "Tserko Ri — alternative summit day at 4,984m with sweeping views across the Nepal/Tibet border",
-      "Langtang village — rebuilt after the 2015 avalanche destroyed the original settlement",
-      "Tamang culture — a distinct Tibetan-influenced culture with its own language and traditions",
-      "Rhododendron forests — the lower valley is spectacular in March–April bloom"
-    ]
-  },
-  "three-passes-trek": {
-    "name": "Three Passes Trek",
-    "tier": 2,
-    "whySpecial": "The Three Passes Trek is the premium Khumbu experience — crossing Kongma La (5,535m), Cho La (5,420m), and Renjo La (5,360m) while also visiting Everest Base Camp and the Gokyo Lakes. It is the most complete circuit in the Everest region and the standard by which all other Nepal high-altitude treks are measured.",
-    "highlights": [
-      "Kongma La (5,535m) — highest of the three passes, with the Khumbu Glacier below",
-      "Everest Base Camp — the route passes through the classic EBC approach",
-      "Gokyo Ri — viewpoint above the Gokyo Lakes considered by many to surpass Kala Patthar for views",
-      "Cho La (5,420m) — technical glacier crossing requiring crampons in some conditions",
-      "Renjo La (5,360m) — the most scenic pass, with the Gokyo Lakes visible below",
-      "Gokyo Lakes — a chain of six glacial lakes at over 4,700m, sacred and luminously turquoise"
-    ]
-  },
-  "bibbulmun": {
-    "name": "Bibbulmun Track",
-    "tier": 4,
-    "whySpecial": "The Bibbulmun Track walks 1,000km from the hills east of Perth to Albany on the Southern Ocean — through the world's largest wildflower region. The track is a showcase of endemic southwest Australian flora found nowhere else on earth, with jarrah and karri forest transitions, coastal heath, and the deserted beaches of the southern coast.",
-    "highlights": [
-      "Southwest Australian Floristic Region — one of the world's 35 biodiversity hotspots, walked end to end",
-      "Karri forest — towering eucalyptus giants up to 90m in the Pemberton section",
-      "Walpole Wilderness — wild coastal heathland with Ancient Empire tree walks",
-      "Albany — the dramatic granite coastline arrival at the journey's end",
-      "Purpose-built three-sided shelters (waugals) every 20–30km throughout",
-      "Spring wildflowers (Aug–Oct) — the route is at its most spectacular in wildflower season"
-    ]
-  },
-  "fann": {
-    "name": "Fann Mountains Traverse",
-    "tier": 3,
-    "whySpecial": "The Fann Mountains in Tajikistan contain some of the most strikingly coloured alpine lakes in Central Asia — turquoise, jade, and cobalt waters in glacially carved valleys between 3,000m and 5,000m peaks. A Soviet-era mountaineering tradition left a system of base camps now used by trekkers, adding a distinctive atmosphere to an already extraordinary landscape.",
-    "highlights": [
-      "Kulikalon Lakes — a cluster of turquoise glacial lakes in the upper Artuch valley",
-      "Alaudin Pass (3,860m) — the dramatic crossing between the Artuch and Alaudin lake systems",
-      "Alaudin Lakes — jade-green waters below granite walls, one of Central Asia's finest alpine sites",
-      "Chimtarga Pass (4,750m) — the traverse's high point with panoramic views into Tajikistan and beyond",
-      "Iskanderkul — the largest lake in the Fanns, named for Alexander the Great",
-      "Soviet mountaineering atmosphere — base camp infrastructure and a trekking culture unlike anywhere else"
-    ]
-  },
-  "long-trail": {
-    "name": "Long Trail",
-    "tier": 3,
-    "whySpecial": "The Long Trail is America's oldest long-distance hiking path — completed in 1930 along the spine of the Green Mountains of Vermont from the Massachusetts border to Canada. It is the prototype for the Appalachian Trail and remains a wilder, muddier, and more honest version of the same idea.",
-    "highlights": [
-      "Mount Mansfield (1,339m) — Vermont's highest peak, traversed on the Long Trail",
-      "Camel's Hump — one of the most recognisable summits in New England",
-      "Appalachian Trail overlap — the Long Trail shares its southern third with the AT",
-      "Vermont mud season — the notorious spring trail conditions that define the experience",
-      "Long Trail huts and shelters — a network of rustic cabins maintained by the Green Mountain Club",
-      "Canadian border finish — the remote northern terminus in the Northeast Kingdom"
-    ]
-  },
-  "colorado": {
-    "name": "Colorado Trail",
-    "tier": 3,
-    "whySpecial": "The Colorado Trail runs 782km from Denver to Durango entirely above 3,000m for much of its length — making it the highest long-distance trail in the United States. It crosses eight mountain ranges, six wilderness areas, and the Continental Divide twice, with sustained alpine terrain unmatched on any other American thru-hike.",
-    "highlights": [
-      "Collegiate Peaks Wilderness — the most concentrated collection of 14,000ft peaks in the US",
-      "San Juan Mountains — the trail's most dramatic section through volcanic high country near Silverton",
-      "Coney Summit (4,093m) — one of the highest trail points, with views across the Colorado plateau",
-      "Segments 22–28 — the remote and high Weminuche Wilderness, the longest roadless section",
-      "Continental Divide crossings — the trail crosses the divide twice in iconic above-treeline terrain",
-      "Durango arrival — the Victorian railroad town finish after 30–40 days of high Colorado wilderness"
-    ]
-  },
-  "mount-kinabalu": {
-    "name": "Mount Kinabalu",
-    "tier": 1,
-    "whySpecial": "Mount Kinabalu is Southeast Asia's highest peak (4,095m) and one of the most biodiverse places on earth — a UNESCO World Heritage Site where the summit granite emerging from equatorial jungle creates one of trekking's most dramatic overnight ascents. The pre-dawn summit push rewards with a sunrise above the clouds visible across Borneo.",
-    "highlights": [
-      "Low's Peak summit (4,095m) — highest point between the Himalayas and New Guinea",
-      "Laban Rata resthouse — the mountain's overnight refuge at 3,272m above the jungle",
-      "Pre-dawn summit ascent — climbing rope-assisted granite slabs in darkness toward the summit",
-      "Kinabalu Park biodiversity — 5,000+ plant species in the surrounding national park",
-      "Low's Gully — one of the world's deepest tropical gorges dropping from the summit plateau",
-      "Borneo sunrise — the view from Low's Peak at dawn across the forests of Malaysian Borneo"
-    ]
-  },
-  "mount-semeru": {
-    "name": "Mount Semeru",
-    "tier": 2,
-    "whySpecial": "Mount Semeru is Java's highest peak and an active volcano that erupts several times per day — making the summit approach a genuine mountain experience rather than a tourist trail. The route passes through the caldera of Tengger, across a lunar ash plain, and up the steep scree cone of the summit.",
-    "highlights": [
-      "Ranu Kumbolo lake camp — a crater lake at 2,390m, one of Java's most beautiful camping spots",
-      "Tengger caldera — the vast volcanic caldera crossed on the approach to the summit cone",
-      "Mahameru summit (3,676m) — Java's highest point and the sacred peak of Javanese Hindu cosmology",
-      "Active eruptions — the volcano erupts approximately 3–5 times per day from the summit crater",
-      "Sunrise summit push — the standard 2am departure reaches the summit at dawn",
-      "Bromo views — the approach offers sweeping views of the iconic Bromo crater below"
-    ]
-  },
-  "zion-traverse": {
-    "name": "Zion Traverse",
-    "tier": 2,
-    "whySpecial": "The Zion Traverse is a technical desert crossing of Zion National Park's wild backcountry — linking the La Verkin Creek canyon system with the West Rim and East Rim above the Virgin River Narrows. It accesses landscapes that 95% of Zion's millions of annual visitors never see.",
-    "highlights": [
-      "La Verkin Creek — a shaded desert canyon with cottonwood pools, entirely away from crowds",
-      "Kolob Arch — one of the world's largest natural arches, reached via backcountry only",
-      "West Rim trail — the high plateau above the main canyon with panoramic views across Utah",
-      "Hop Valley — a hidden red-rock mesa valley with sandstone formations and hoodoos",
-      "Angel's Landing views from above — seeing the famous landmark from above the crowds",
-      "Desert night skies — backcountry Zion offers some of the darkest skies in the American Southwest"
-    ]
-  },
-  "gdt": {
-    "name": "Great Divide Trail",
-    "tier": 4,
-    "whySpecial": "The Great Divide Trail is Canada's most remote and demanding long-distance route — 1,123km from Waterton Lakes to Kakwa Provincial Park along the Continental Divide. Unlike the PCT or AT, large sections are entirely trail-less, requiring navigation by map and compass through genuine wilderness that sees fewer than 200 thru-hikers per year.",
-    "highlights": [
-      "Waterton Lakes — the stunning starting point where the prairie meets the Rockies",
-      "Kananaskis Country — classic Canadian Rockies wilderness on the southern sections",
-      "Banff and Yoho backcountry — the route passes through the heart of the mountain parks",
-      "Jasper's remote northern wilderness — increasingly wild and roadless north of Jasper",
-      "Kakwa Lake finish — the remote northern terminus accessible only by bush plane or foot",
-      "True navigation challenge — the trail requires compass work and route-finding unlike any marked trail"
-    ]
-  },
-  "tre_cime": {
-    "name": "Tre Cime di Lavaredo",
-    "tier": 1,
-    "whySpecial": "Tre Cime di Lavaredo — Three Peaks of Lavaredo — is the most photographed mountain scene in the Dolomites and arguably in all of Europe. The three vertical limestone monoliths rising from the high plateau have been an obsession for photographers, climbers, and trekkers for 150 years. The circuit can be walked in a day but deserves an overnight to experience the light changing across the towers.",
-    "highlights": [
-      "North face view from Rifugio Locatelli — the definitive Tre Cime panorama, at its best at dawn and dusk",
-      "Forcella Lavaredo — the saddle between the Three Peaks and the southern viewpoint",
-      "Dolomite geology — vertical limestone towers formed from ancient coral reefs on the seafloor",
-      "Rifugio Auronzo start — the highest road access point in the Dolomites with immediate views",
-      "Alpenglow at sunset — the pink and orange colouring of the dolomite limestone at dusk",
-      "World War I history — the high Dolomite plateau was a front line and traces remain throughout"
-    ]
-  },
-  "st-olavs": {
-    "name": "St. Olavs Way",
-    "tier": 3,
-    "whySpecial": "St. Olavs Way is Norway's primary pilgrimage route — 643km from Oslo to the Nidaros Cathedral in Trondheim, walked since the 11th century in honour of King Olav Haraldsson. It crosses the entire width of southern Norway through a landscape of farms, forests, and the high Dovrefjell plateau, arriving at one of Scandinavia's great Gothic cathedrals.",
-    "highlights": [
-      "Nidaros Cathedral, Trondheim — the journey's end, Scandinavia's finest medieval cathedral",
-      "Dovrefjell crossing — the wild high plateau with reindeer and musk oxen",
-      "Gudbrandsdalen valley — the great farming valley that has carried pilgrims north for 1,000 years",
-      "Stiklestad — the battlefield where King Olav was killed in 1030, the route's most sacred point",
-      "Norwegian farm culture — staying in working farms along the route as pilgrims have done for centuries",
-      "Oslo departure — beginning a wilderness pilgrimage from the Norwegian capital"
-    ]
-  },
-  "lofoten": {
-    "name": "Lofoten Traverse",
-    "tier": 3,
-    "whySpecial": "The Lofoten Islands offer the most dramatic coastal mountain scenery in Europe — steep peaks rising directly from the sea, Norse fishing villages clinging to the shore, and a quality of Arctic light that photographers come from around the world to experience. The traverse crosses the islands end to end through some of the world's most photogenic terrain.",
-    "highlights": [
-      "Reinebringen — the classic Lofoten summit with the fishing village of Reine far below",
-      "Nusfjord — one of Norway's best-preserved fishing villages, reached mid-traverse",
-      "Arctic light — the distinctive quality of high-latitude light on the islands, legendary among photographers",
-      "Midnight sun (Jul–Aug) — 24-hour daylight transforms the trekking experience entirely",
-      "Moskenesøya ridgelines — technical ridge walking above the Norwegian Sea",
-      "Rorbu fishing huts — traditional red fisherman's cabins available for overnight accommodation"
-    ]
-  },
-  "akshayuk": {
-    "name": "Akshayuk Pass",
-    "tier": 3,
-    "whySpecial": "Akshayuk Pass on Baffin Island is North America's most remote and dramatic trekking route — a 97km Arctic wilderness crossing surrounded by the highest vertical rock walls on the continent and overlooked by Thor Peak, which has the greatest uninterrupted vertical drop on earth. Polar bears are a genuine consideration.",
-    "highlights": [
-      "Thor Peak — the world's greatest vertical drop (1,675m) of uninterrupted cliff face",
-      "Mount Asgard — twin cylindrical granite towers rising from the Arctic tundra, an iconic climbing objective",
-      "Arctic tundra — the pass traverses genuine High Arctic terrain above the tree line",
-      "Polar bear country — Parks Canada requires bear safety equipment, adding genuine expedition character",
-      "Glacial rivers — multiple crossings of braided Arctic rivers requiring careful route-finding",
-      "Midnight sun or aurora — depending on season, the pass offers extraordinary light conditions"
-    ]
-  },
-  "kashmir": {
-    "name": "Kashmir Great Lakes",
-    "tier": 2,
-    "whySpecial": "The Kashmir Great Lakes trek crosses seven alpine lakes in the high meadows above the Kashmir Valley — an 8-day circuit through a landscape of extraordinary beauty that remains relatively little-known outside India. The combination of Himalayan scale, Gujjar shepherd culture, and emerald meadows makes this one of Asia's great undiscovered treks.",
-    "highlights": [
-      "Vishansar Lake — the first major lake crossing, brilliant blue at 3,770m",
-      "Krishnasar — twin lake to Vishansar, linked by a high meadow with views to the Himalayan crest",
-      "Gadsar Pass (4,200m) — the highest point on the trek with views across the Kashmir Valley",
-      "Gadsar Lake — a remote glacial lake with no permanent settlement, deepest wilderness on the route",
-      "Gangabal Lake — the sacred lake at the trek's end below the twin summits of Harmukh",
-      "Gujjar and Bakarwal culture — nomadic shepherds who bring their flocks to these meadows each summer"
-    ]
-  },
-  "kerry": {
-    "name": "Kerry Way",
-    "tier": 3,
-    "whySpecial": "The Kerry Way is Ireland's longest waymarked trail — a 214km circuit of the Iveragh Peninsula through the most spectacular mountain and coastal scenery in the country. It circles the MacGillycuddy's Reeks (Ireland's highest mountains), passes through Killarney National Park, and traverses the Ring of Kerry landscape that draws millions of tourists by car.",
-    "highlights": [
-      "MacGillycuddy's Reeks — Ireland's highest mountain range viewed from the ancient drove roads below",
-      "Killarney National Park — the only remaining native oak forest in Ireland, walked on the first day",
-      "Kenmare — the elegant Georgian market town at the southern turning point",
-      "Iveragh Peninsula coastline — wild Atlantic views across Kenmare Bay and the Skellig islands",
-      "Caherdaniel and Derrynane — archaeological sites and remote beaches on the coastal section",
-      "Carrauntoohil context — Ireland's highest mountain dominates the inland views throughout"
-    ]
-  },
-  "shikoku": {
-    "name": "Shikoku Pilgrimage",
-    "tier": 4,
-    "whySpecial": "The Shikoku Pilgrimage is Japan's most important Buddhist pilgrimage — 1,200km and 88 temples associated with the monk Kōbō Daishi (Kūkai) on the island of Shikoku. Pilgrims (henro) have walked the circuit for over 1,000 years, and the tradition of osettai — locals giving food and accommodation to walkers — creates a uniquely hospitable long-distance walking culture.",
-    "highlights": [
-      "Kōbō Daishi presence — tradition holds the monk walks alongside every pilgrim; spiritual atmosphere is pervasive",
-      "Temple 12 (Shosanji) — the most demanding temple approach, a mountain ascent earning the 'temple of suffering'",
-      "Cape Muroto — the exposed Pacific headland where Kūkai is said to have achieved enlightenment",
-      "Osettai tradition — strangers offering food, money, and hospitality to walkers throughout the island",
-      "White henro uniform — the distinctive walking costume of sedge hat, white jacket, and staff",
-      "Temple 88 (Ōkubo-ji) — the completion temple, though tradition says the pilgrimage ends back at Temple 1"
-    ]
-  },
-  "kokoda": {
-    "name": "Kokoda Track",
-    "tier": 2,
-    "whySpecial": "The Kokoda Track is the most historically significant trekking route in the Pacific — the jungle trail where Australian forces halted the Japanese advance toward Port Moresby in 1942. The combination of extreme terrain, WWII history encountered at every camp, and genuine Papua New Guinean village culture makes it an experience entirely unlike any other multi-day walk.",
-    "highlights": [
-      "Isurava Memorial — the most moving WWII site on the track, dedicated to the 39th Battalion's stand",
-      "Owen Stanley Range crossing — the watershed crossing at Kokoda Gap between the two sides of Papua",
-      "Templeton's Crossing — the most brutally steep and muddy section of the entire track",
-      "Village hospitality — Kokoda track villages provide guesthouses and guides as community income",
-      "Jungle warfare history — every camp along the track was fought over in 1942; history is palpable",
-      "Port Moresby context — the track was protecting Australia's nearest large city from invasion"
-    ]
-  },
-  "otter": {
-    "name": "Otter Trail",
-    "tier": 2,
-    "whySpecial": "The Otter Trail is South Africa's oldest and most celebrated hiking route — a 45km coastal trail through the Tsitsikamma National Park that requires a permit six months in advance due to demand. It follows a wild stretch of Garden Route coast between forest, cliff, and sea, with the Bloukrans river crossing — thigh-deep at high tide — as its defining moment.",
-    "highlights": [
-      "Bloukrans River crossing — the notorious tidal crossing requiring walkers to swim or wait",
-      "Tsitsikamma forest — ancient yellowwood and ironwood trees, some over 800 years old",
-      "Rocky coastline — dramatic wave-battered cliffs with spray reaching the trail",
-      "Ngubu Hut — the first night's accommodation in a forest clearing above the sea",
-      "Nature's Valley finish — arrival at one of South Africa's most beautiful beach lagoons",
-      "Southern right whale sightings — common in season from the clifftop sections"
-    ]
-  },
-  "druk": {
-    "name": "Druk Path",
-    "tier": 2,
-    "whySpecial": "The Druk Path is Bhutan's most popular trekking route — a 6-day high-altitude walk from Paro to Thimphu through pristine alpine forest, glacial lakes, and isolated dzongs (fortresses) that connects Bhutan's two most significant cities through terrain unchanged for centuries. The combination of Himalayan scenery and Bhutanese culture makes it unique.",
-    "highlights": [
-      "Jele Dzong — a 17th-century fortress monastery perched above the Paro Valley",
-      "High altitude lakes — a series of glacial lakes above 4,000m including Jimilang Tsho and Simkota Tsho",
-      "Phajoding monastery complex — the highest monastery on the route with panoramic views",
-      "Views to Tibet — on clear days the route offers views of Himalayan peaks along the Tibetan border",
-      "Blue sheep and Himalayan wildlife — the high section regularly encounters blue sheep herds",
-      "Thimphu arrival — descending into the Bhutanese capital through monastery-dotted forest"
-    ]
-  },
-  "great-glen": {
-    "name": "Great Glen Way",
-    "tier": 3,
-    "whySpecial": "The Great Glen Way follows Scotland's greatest geological feature — the Great Glen fault — from Fort William on the west coast to Inverness on the east. The 117km route passes along the Caledonian Canal and the shores of Loch Ness through landscapes that defined the Scottish Highland aesthetic.",
-    "highlights": [
-      "Ben Nevis views — Britain's highest mountain frames the Fort William departure",
-      "Caledonian Canal — one of Scotland's great engineering achievements, walked alongside for miles",
-      "Loch Ness — the route follows the full length of Britain's largest body of water by volume",
-      "Drumnadrochit and Urquhart Castle — the famous ruined castle above Loch Ness",
-      "Invermoriston gorge — a dramatic waterfall and ancient bridge on the loch shore",
-      "Inverness finish — arrival in the capital of the Scottish Highlands"
-    ]
-  },
-  "tahoe-rim": {
-    "name": "Tahoe Rim Trail",
-    "tier": 2,
-    "whySpecial": "The Tahoe Rim Trail makes a complete 265km circuit of Lake Tahoe — the largest alpine lake in North America — staying above 2,400m for almost its entire length. The trail straddles the Sierra Nevada and Great Basin, combining the granite and pine of the Sierra with the volcanic landscape of the Basin on the Nevada side.",
-    "highlights": [
-      "Lake Tahoe views — every high point on the circuit offers views down to the impossibly blue lake",
-      "Mount Rose (3,151m) — the highest point on the trail with views from the Sierra to Nevada",
-      "Desolation Wilderness — granite wilderness south of the lake, shared with the Pacific Crest Trail",
-      "Nevada desert transition — the eastern sections shift dramatically from Sierra forest to Great Basin sage",
-      "Fallen Leaf Lake — a glacial lake immediately south of Tahoe, glimpsed from the ridge",
-      "Tahoe basin ecology — the trail traverses the unique transition zone between two great mountain ecosystems"
-    ]
-  },
-  "kilimanjaro-lemosho": {
-    "name": "Kilimanjaro (Lemosho)",
-    "tier": 1,
-    "whySpecial": "The Lemosho Route is the finest way to climb Kilimanjaro — approaching from the remote western side across the Shira Plateau for superior acclimatisation, scenery, and summit success rates. The 8-day route through all five climate zones from equatorial rainforest to the arctic summit glacier is simply the most complete summit journey on any African mountain.",
-    "highlights": [
-      "Shira Plateau (3,840m) — a vast ancient caldera, one of Africa's great high-altitude landscapes",
-      "Lava Tower acclimatisation detour (4,600m) — the critical altitude gain that drives Lemosho's high success rate",
-      "Barranco Wall — the scrambling ascent of the 300m headwall is the route's most dramatic moment",
-      "Uhuru Peak (5,895m) — Africa's highest point and the summit of the roof of Africa",
-      "Glaciers of Kilimanjaro — the remaining ice fields on the summit plateau, rapidly diminishing",
-      "Five ecological zones — walking through rainforest, heather, moorland, alpine desert, and arctic in sequence"
-    ]
-  },
-  "australian-alps": {
-    "name": "Australian Alps Walking Track",
-    "tier": 4,
-    "whySpecial": "The Australian Alps Walking Track is 655km of true remote wilderness from Walhalla in Victoria to the suburbs of Canberra — traversing the highest terrain in Australia through snowfields, snow gum forests, and granite high country that most Australians never experience. It is one of the world's most genuinely remote long-distance routes in a country seen as benign.",
-    "highlights": [
-      "Mount Kosciuszko (2,228m) — Australia's highest peak, traversed on the Thredbo section",
-      "Bogong High Plains — vast alpine plateau with historic cattlemen's huts",
-      "Walhalla ghost town — the remarkable starting point, a former gold rush town in the mountains",
-      "Alpine ash and snow gum forest — the distinctive eucalyptus woodland unique to the Australian Alps",
-      "Wild brumby country — feral horses in the remote high country add a distinctive character",
-      "Namadgi National Park finale — the ACT wilderness section approaching Canberra"
-    ]
-  },
-  "heaphy": {
-    "name": "Heaphy Track",
-    "tier": 2,
-    "whySpecial": "The Heaphy Track crosses Kahurangi National Park — New Zealand's second-largest national park — from the Golden Bay coast over the Gouland Downs tussock plateau to the wild nikau palm coast of the Tasman Sea. The ecological diversity compressed into 78km, from tussock highland to subtropical palm-lined beach, is unmatched on any other New Zealand Great Walk.",
-    "highlights": [
-      "Gouland Downs — the high tussock plateau and ancient limestone karst, one of NZ's great open landscapes",
-      "Nikau palms on the Heaphy coast — the world's southernmost palm forest lines the final coastal section",
-      "Perry Saddle — the overnight point with views across the Tasman to the South Island ranges",
-      "James Mackay Hut — the descent point into the coastal section, with the Tasman Sea appearing below",
-      "Kohaihai River mouth — the wild beach finish on New Zealand's most remote stretch of coastline",
-      "Giant pūriri and tōtara forest — ancient podocarp trees on the descent to the coast"
-    ]
-  {,
-  "mera_peak": {
-    "name": "Mera Peak",
-    "tier": 1,
-    "whySpecial": "Mera Peak is Nepal's highest officially designated trekking peak, yet the approach sets it apart as much as the summit. The route crosses the wild Zatrwa La pass and drops into the remote Hinku valley \u2014 a landscape almost entirely free of the teahouse crowds that characterise other Khumbu approaches. The summit itself is a broad snow plateau at 6476m that delivers one of the most breathtaking panoramas on earth: five of the world's six highest mountains visible simultaneously. Everest, Lhotse, Cho Oyu, Makalu and Kangchenjunga arranged in a single horizon. It is a summit that rewards endurance with revelation.",
-    "highlights": [
-      "Nepal's highest trekking peak at 6476m",
-      "Five of the world's six highest peaks visible from the summit",
-      "Remote Hinku valley approach \u2014 one of Nepal's least-trodden corridors",
-      "Zatrwa La crossing through dramatically wild terrain",
-      "Straightforward high-altitude glacier \u2014 technically accessible to fit beginners",
-      "Expedition-grade acclimatisation for high-altitude aspirations"
     ]
   },
   "island_peak": {
@@ -1776,43 +1308,17 @@
       "Gateway peak for aspirants dreaming of higher Himalayan objectives"
     ]
   },
-  "stok_kangri": {
-    "name": "Stok Kangri",
-    "tier": 5,
-    "whySpecial": "Stok Kangri is India's most celebrated 6000m summit and the peak that has introduced thousands of trekkers to high-altitude mountaineering in Ladakh. At 6153m, it rises above the Stok Valley behind Leh with an immediacy that makes it feel both accessible and genuinely demanding. The approach traverses landscapes of extraordinary aridity \u2014 barren ridgelines above the Indus Valley, prayer flags against cobalt sky, the plateau stretching toward Tibet. The summit requires crampons and ice axe on the upper snow slopes, and rewards climbers with one of the great Himalayan panoramas: the Karakoram to the north, Zanskar to the south, and the high-altitude desert of Ladakh spread below like a topographic painting.",
+  "mera_peak": {
+    "name": "Mera Peak",
+    "tier": 1,
+    "whySpecial": "Mera Peak is Nepal's highest officially designated trekking peak, yet the approach sets it apart as much as the summit. The route crosses the wild Zatrwa La pass and drops into the remote Hinku valley \u2014 a landscape almost entirely free of the teahouse crowds that characterise other Khumbu approaches. The summit itself is a broad snow plateau at 6476m that delivers one of the most breathtaking panoramas on earth: five of the world's six highest mountains visible simultaneously. Everest, Lhotse, Cho Oyu, Makalu and Kangchenjunga arranged in a single horizon. It is a summit that rewards endurance with revelation.",
     "highlights": [
-      "India's most accessible 6000m summit at 6153m above Leh",
-      "Ladakh high-desert approach with Indus Valley and Karakoram backdrop",
-      "Natural acclimatisation from Leh (3500m) before the mountain",
-      "Crampons and ice axe required on upper snow slopes \u2014 genuine alpinism",
-      "360\u00b0 panorama: Karakoram, Zanskar, and the Tibetan plateau",
-      "Established guiding infrastructure \u2014 ideal first high-altitude summit for Indian climbers"
-    ]
-  },
-  "lobuche_east": {
-    "name": "Lobuche East",
-    "tier": 2,
-    "whySpecial": "Lobuche East is one of the Khumbu's most demanding trekking peaks, its summit ridge a narrow, exposed knife-edge of rock and ice at 6119m that demands confident technical movement. Unlike the broader snow summits of Island Peak or Mera, Lobuche requires genuine mixed terrain competence \u2014 crampon footwork on rocky sections, fixed rope confidence, and the ability to move precisely in a place where imprecision is not an option. The reward is a position among the most dramatic in the Himalaya: Cho Oyu, Pumori, the Khumbu Glacier below and Everest's south face directly ahead. This is where the step from trekking to technical climbing becomes real.",
-    "highlights": [
-      "Technical 6119m summit with exposed rocky ridge and fixed rope sections",
-      "Everest, Lhotse, Nuptse and Pumori panorama from the summit ridge",
-      "Mixed terrain ascent \u2014 rock, ice and crampon footwork required",
-      "The Khumbu Glacier visible directly below \u2014 raw glacial geology at scale",
-      "Step-change in technical difficulty above Island Peak standard",
-      "Thukla Pass memorial cairns \u2014 a moving tribute on the approach"
-    ]
-  },
-  "pisang_peak": {
-    "name": "Pisang Peak",
-    "tier": 5,
-    "whySpecial": "Pisang Peak occupies one of the most dramatic positions in the trekking peak world \u2014 rising directly above the village of Upper Pisang on the Annapurna Circuit, with Annapurna II's enormous south face as its permanent backdrop. At 6091m, it offers two distinct routes (north and south ridge) of different technical character, making it equally accessible to guided beginners and rewarding to those seeking a more committing line. The approach follows one of Nepal's most celebrated trekking corridors, meaning the mountain days blend seamlessly with the cultural and scenic richness of the circuit. Pisang Peak is a summit that proves the Annapurna region has more to offer than its base camp.",
-    "highlights": [
-      "6091m summit on the Annapurna Circuit \u2014 the iconic Nepal trek plus a peak",
-      "Annapurna II (7937m) directly above \u2014 one of Nepal's most dramatic backdrops",
-      "Two routes: accessible south ridge and more technical north ridge",
-      "Glacier travel on the upper mountain with crampons and fixed ropes",
-      "Upper Pisang village base \u2014 Tibetan-influenced culture and monastery",
-      "Natural extension of the circuit with minimal extra logistics"
+      "Nepal's highest trekking peak at 6476m",
+      "Five of the world's six highest peaks visible from the summit",
+      "Remote Hinku valley approach \u2014 one of Nepal's least-trodden corridors",
+      "Zatrwa La crossing through dramatically wild terrain",
+      "Straightforward high-altitude glacier \u2014 technically accessible to fit beginners",
+      "Expedition-grade acclimatisation for high-altitude aspirations"
     ]
   },
   "huayna_potosi": {
@@ -1839,6 +1345,45 @@
       "Night ascent on steep glaciated flanks with headtorch and crampons",
       "Cotopaxi National Park approach with wild llama and Andean condor",
       "Rapid access from Quito \u2014 ideal within an Ecuador highland itinerary"
+    ]
+  },
+  "breithorn": {
+    "name": "Breithorn",
+    "tier": 1,
+    "whySpecial": "The Breithorn is the world's most accessible 4000m summit and one of its most magnificent. The Matterhorn Glacier Paradise cable car delivers you to 3883m, leaving just 300 vertical metres of glaciated plateau between you and the highest point in the Alps accessible to non-technical climbers. What the Breithorn lacks in difficulty it more than compensates with position \u2014 the Matterhorn stands in perfect triangular profile to the north, Monte Rosa and Lyskamm spread to the east, and on clear days the view extends across the entire Alpine chain. It is the summit that proves that altitude, snow underfoot, and a world-class view need not require years of technical progression.",
+    "highlights": [
+      "Easiest 4000m Alpine summit \u2014 minimal technical experience required",
+      "Cable car access to 3883m removes the long glacier approach",
+      "The Matterhorn in full profile \u2014 one of the Alps' great panoramas",
+      "Monte Rosa and Lyskamm visible from the summit plateau",
+      "Gateway climb for aspiring alpinists building toward harder objectives",
+      "Zermatt base \u2014 one of the world's great mountain towns"
+    ]
+  },
+  "gran_paradiso": {
+    "name": "Gran Paradiso",
+    "tier": 1,
+    "whySpecial": "Gran Paradiso is Italy's only 4000m peak that lies entirely within its borders, and its setting within the Gran Paradiso National Park \u2014 Italy's oldest \u2014 gives it a wildness that the busier Zermatt peaks cannot match. Ibex roam the moraines below the glacier, chamois pick across the rocky ridges, and the rifugio bears the name of the Italian king who once hunted this landscape. The summit carries a small bronze Virgin Mary statue, and the view from beside it sweeps across the Graian Alps into France. It is a summit where history, ecology, and alpine challenge converge.",
+    "highlights": [
+      "Highest peak entirely within Italy at 4061m",
+      "Gran Paradiso National Park \u2014 Italy's oldest, rich in ibex and chamois",
+      "Historic Rifugio Vittorio Emanuele II with exceptional alpine atmosphere",
+      "Bronze Virgin Mary statue on summit \u2014 a classic Italian mountaineering landmark",
+      "Moderate glacier with accessible cramponing \u2014 ideal for first alpine glaciers",
+      "Remote and uncrowded compared to the busy Zermatt 4000m circuit"
+    ]
+  },
+  "lobuche_east": {
+    "name": "Lobuche East",
+    "tier": 2,
+    "whySpecial": "Lobuche East is one of the Khumbu's most demanding trekking peaks, its summit ridge a narrow, exposed knife-edge of rock and ice at 6119m that demands confident technical movement. Unlike the broader snow summits of Island Peak or Mera, Lobuche requires genuine mixed terrain competence \u2014 crampon footwork on rocky sections, fixed rope confidence, and the ability to move precisely in a place where imprecision is not an option. The reward is a position among the most dramatic in the Himalaya: Cho Oyu, Pumori, the Khumbu Glacier below and Everest's south face directly ahead. This is where the step from trekking to technical climbing becomes real.",
+    "highlights": [
+      "Technical 6119m summit with exposed rocky ridge and fixed rope sections",
+      "Everest, Lhotse, Nuptse and Pumori panorama from the summit ridge",
+      "Mixed terrain ascent \u2014 rock, ice and crampon footwork required",
+      "The Khumbu Glacier visible directly below \u2014 raw glacial geology at scale",
+      "Step-change in technical difficulty above Island Peak standard",
+      "Thukla Pass memorial cairns \u2014 a moving tribute on the approach"
     ]
   },
   "nevado_pisco": {
@@ -1880,43 +1425,17 @@
       "Structured acclimatisation on Pastukhov Rocks before summit push"
     ]
   },
-  "pico_orizaba": {
-    "name": "Pico de Orizaba (Citlalt\u00e9petl)",
-    "tier": 5,
-    "whySpecial": "Pico de Orizaba is the highest peak in Mexico, the third highest in North America, and one of the finest introductory glacier climbs in the Western Hemisphere. Known to the Aztecs as Citlalt\u00e9petl \u2014 Star Mountain \u2014 the volcano rises to 5636m above the Veracruz lowlands in an almost perfectly symmetrical cone, its Jamapa Glacier gleaming at altitude against a deep blue Mexican sky. The standard route from the Piedra Grande Hut (4260m) involves a 1400-vertical-metre glacier ascent requiring crampons, ice axe, and rope technique in a sustained, high-altitude environment. There is nothing quite like standing on a glaciated summit above the tropics, looking south toward Popocat\u00e9petl, north toward the Gulf of Mexico, and understanding for the first time what the mountains truly demand.",
+  "weissmies": {
+    "name": "Weissmies",
+    "tier": 2,
+    "whySpecial": "The Weissmies is among the Alps' most rewarding 4000m peaks for climbers ready to progress beyond the Breithorn. The approach via the Almageller Hut is a classic SAC hut experience \u2014 larch forest, meadow, and the steady reveal of the north face above. The ascent combines glacier travel with a steeper rocky upper ridge that demands real crampon confidence, and the summit view across the Monte Rosa massif, Mischabel chain, and the distant Matterhorn is a composition that rivals anything in the Alps. The optional cable car descent from Hohsaas adds a rare convenience to an otherwise fully alpine day.",
     "highlights": [
-      "Third highest peak in North America at 5636m \u2014 Mexico's highest summit",
-      "Jamapa Glacier: a sustained 1400m glaciated ascent requiring full alpine kit",
-      "Piedra Grande Hut overnight at 4260m \u2014 genuine high mountain base experience",
-      "Aztec sacred mountain Citlalt\u00e9petl \u2014 extraordinary cultural and historical resonance",
-      "Popocat\u00e9petl and Gulf of Mexico visible from the crater rim on clear days",
-      "November\u2013March season \u2014 unique experience of high-altitude glaciers in the tropics"
-    ]
-  },
-  "yala_peak": {
-    "name": "Yala Peak",
-    "tier": 3,
-    "whySpecial": "Yala Peak is the ideal first technical Himalayan summit for those who have trekked to altitude but not yet climbed. At 5500m it sits above the Langtang valley \u2014 one of Nepal's most beautiful and culturally rich corridors \u2014 accessible without the crowds of the Khumbu and Annapurna circuits. The approach through Langtang National Park passes ancient yak pastures and the sacred Kyanjin Gompa monastery, and the upper route delivers close views of Langtang Lirung and across the Tibetan border to Shishapangma. It is a summit that teaches the fundamentals of Himalayan climbing without overwhelming the student.",
-    "highlights": [
-      "Perfect introductory Himalayan technical peak at 5500m",
-      "Langtang valley \u2014 Nepal's most underrated and culturally rich trek corridor",
-      "Close views of Langtang Lirung (7227m) and across the Tibetan border",
-      "Kyanjin Gompa monastery \u2014 sacred Buddhist site at the heart of the valley",
-      "Accessible glacier and rocky terrain \u2014 ideal for first crampon experience",
-      "Significantly less crowded than Khumbu and Annapurna equivalents"
-    ]
-  },
-  "friendship_peak": {
-    "name": "Friendship Peak",
-    "tier": 5,
-    "whySpecial": "Friendship Peak is the gateway to glaciated Himalayan mountaineering for climbers approaching from Manali \u2014 a 5289m summit above the Beas Kund glacial basin that requires crampons, ice axe, and rope travel without demanding the expedition logistics of its higher neighbours. The name reflects its character: welcoming, achievable with commitment, and rewarding of effort. The approach through the Solang Valley and Beas Kund basin passes through a landscape of waterfalls, glacial moraines, and high meadows that transition from Kullu's lushness into the austere beauty of the high range. It is the peak that tells climbers \u2014 for the first time and definitively \u2014 that they belong in the mountains.",
-    "highlights": [
-      "5289m glaciated summit above Manali \u2014 India's most accessible glacier peak",
-      "Beas Kund glacier approach through Solang Valley and high alpine meadows",
-      "Crampons and rope required \u2014 genuine glacier travel without expedition logistics",
-      "Kullu valley panorama and Himalayan giants from the summit",
-      "Ideal first glacier summit for trekkers based in northern India",
-      "Compact 6-day itinerary from Manali \u2014 efficient and fully achievable"
+      "Elegant 4000m Valais summit with genuine mixed glacier and rock terrain",
+      "Almageller Hut approach \u2014 quintessential SAC alpine hut experience",
+      "Summit panorama across Monte Rosa, Mischabel, and the Matterhorn",
+      "Rocky upper ridge requiring precise crampon technique",
+      "Cable car descent option from Hohsaas \u2014 rare alpine convenience",
+      "Logical step up from Breithorn for climbers building alpine repertoire"
     ]
   },
   "mount_kazbek": {
@@ -1932,17 +1451,95 @@
       "Less crowded than Elbrus \u2014 a genuine Caucasus mountaineering experience"
     ]
   },
-  "gran_paradiso": {
-    "name": "Gran Paradiso",
-    "tier": 1,
-    "whySpecial": "Gran Paradiso is Italy's only 4000m peak that lies entirely within its borders, and its setting within the Gran Paradiso National Park \u2014 Italy's oldest \u2014 gives it a wildness that the busier Zermatt peaks cannot match. Ibex roam the moraines below the glacier, chamois pick across the rocky ridges, and the rifugio bears the name of the Italian king who once hunted this landscape. The summit carries a small bronze Virgin Mary statue, and the view from beside it sweeps across the Graian Alps into France. It is a summit where history, ecology, and alpine challenge converge.",
+  "yala_peak": {
+    "name": "Yala Peak",
+    "tier": 3,
+    "whySpecial": "Yala Peak is the ideal first technical Himalayan summit for those who have trekked to altitude but not yet climbed. At 5500m it sits above the Langtang valley \u2014 one of Nepal's most beautiful and culturally rich corridors \u2014 accessible without the crowds of the Khumbu and Annapurna circuits. The approach through Langtang National Park passes ancient yak pastures and the sacred Kyanjin Gompa monastery, and the upper route delivers close views of Langtang Lirung and across the Tibetan border to Shishapangma. It is a summit that teaches the fundamentals of Himalayan climbing without overwhelming the student.",
     "highlights": [
-      "Highest peak entirely within Italy at 4061m",
-      "Gran Paradiso National Park \u2014 Italy's oldest, rich in ibex and chamois",
-      "Historic Rifugio Vittorio Emanuele II with exceptional alpine atmosphere",
-      "Bronze Virgin Mary statue on summit \u2014 a classic Italian mountaineering landmark",
-      "Moderate glacier with accessible cramponing \u2014 ideal for first alpine glaciers",
-      "Remote and uncrowded compared to the busy Zermatt 4000m circuit"
+      "Perfect introductory Himalayan technical peak at 5500m",
+      "Langtang valley \u2014 Nepal's most underrated and culturally rich trek corridor",
+      "Close views of Langtang Lirung (7227m) and across the Tibetan border",
+      "Kyanjin Gompa monastery \u2014 sacred Buddhist site at the heart of the valley",
+      "Accessible glacier and rocky terrain \u2014 ideal for first crampon experience",
+      "Significantly less crowded than Khumbu and Annapurna equivalents"
+    ]
+  },
+  "volcan_chachani": {
+    "name": "Volc\u00e1n Chachani",
+    "tier": 3,
+    "whySpecial": "Chachani is Arequipa's quiet giant \u2014 6057m of volcanic terrain looming above the colonial white city, yet far less known internationally than its neighbour El Misti. The ascent is non-technical: no glacier, no fixed ropes, no crampon requirement in dry season \u2014 but the altitude is unforgiving, and reaching 6000m above sea level on foot and under your own power remains a genuine accomplishment that few people in the world can claim. The summit view takes in El Misti, Ubinas, Ampato and the high southern Andean plateau stretching toward Chile. For climbers acclimatised in Arequipa, this is the peak that says you belong at altitude.",
+    "highlights": [
+      "Non-technical 6000m ascent \u2014 scree and snow without glacier or fixed ropes",
+      "Best high-altitude acclimatisation peak in southern Peru",
+      "El Misti, Ubinas and Ampato in view from the summit plateau",
+      "Rapid access from Arequipa \u2014 ideal day-before-departure objective",
+      "Peru's most accessible six-thousander, often underestimated",
+      "Spectacular high Andean plateau stretching toward the Chilean border"
+    ]
+  },
+  "illiniza_norte": {
+    "name": "Illiniza Norte",
+    "tier": 3,
+    "whySpecial": "Illiniza Norte is Ecuador's most accessible high summit for hikers transitioning into mountaineering. At 5126m it presents a dramatic rocky scramble \u2014 exposed in places, technically engaging, but free of the glacier that guards its southern twin Illiniza Sur. The approach from El Chaupi traverses open p\u00e1ramo, a high-altitude ecosystem unique to the Andes and one of the most biodiverse landscapes on earth. From the summit, the entire spine of Ecuador's volcanic avenue is visible: Cotopaxi, Cayambe, Chimborazo, and Pichincha arranged across the horizon in a geological display of extraordinary scale.",
+    "highlights": [
+      "Non-glaciated 5126m summit \u2014 accessible rocky scramble, no crampons required",
+      "Entry point to Ecuadorian mountaineering \u2014 natural bridge to Cotopaxi and Illiniza Sur",
+      "P\u00e1ramo ecosystem approach \u2014 one of the Andes' most distinctive high-altitude landscapes",
+      "Ecuador's volcanic avenue panorama: Cotopaxi, Chimborazo, Cayambe all visible",
+      "Sister peak to glaciated Illiniza Sur \u2014 classic two-peak objective from the same hut",
+      "Compact 2-day itinerary from Quito \u2014 efficient within an Ecuador volcano circuit"
+    ]
+  },
+  "stok_kangri": {
+    "name": "Stok Kangri",
+    "tier": 5,
+    "whySpecial": "Stok Kangri is India's most celebrated 6000m summit and the peak that has introduced thousands of trekkers to high-altitude mountaineering in Ladakh. At 6153m, it rises above the Stok Valley behind Leh with an immediacy that makes it feel both accessible and genuinely demanding. The approach traverses landscapes of extraordinary aridity \u2014 barren ridgelines above the Indus Valley, prayer flags against cobalt sky, the plateau stretching toward Tibet. The summit requires crampons and ice axe on the upper snow slopes, and rewards climbers with one of the great Himalayan panoramas: the Karakoram to the north, Zanskar to the south, and the high-altitude desert of Ladakh spread below like a topographic painting.",
+    "highlights": [
+      "India's most accessible 6000m summit at 6153m above Leh",
+      "Ladakh high-desert approach with Indus Valley and Karakoram backdrop",
+      "Natural acclimatisation from Leh (3500m) before the mountain",
+      "Crampons and ice axe required on upper snow slopes \u2014 genuine alpinism",
+      "360\u00b0 panorama: Karakoram, Zanskar, and the Tibetan plateau",
+      "Established guiding infrastructure \u2014 ideal first high-altitude summit for Indian climbers"
+    ]
+  },
+  "pisang_peak": {
+    "name": "Pisang Peak",
+    "tier": 5,
+    "whySpecial": "Pisang Peak occupies one of the most dramatic positions in the trekking peak world \u2014 rising directly above the village of Upper Pisang on the Annapurna Circuit, with Annapurna II's enormous south face as its permanent backdrop. At 6091m, it offers two distinct routes (north and south ridge) of different technical character, making it equally accessible to guided beginners and rewarding to those seeking a more committing line. The approach follows one of Nepal's most celebrated trekking corridors, meaning the mountain days blend seamlessly with the cultural and scenic richness of the circuit. Pisang Peak is a summit that proves the Annapurna region has more to offer than its base camp.",
+    "highlights": [
+      "6091m summit on the Annapurna Circuit \u2014 the iconic Nepal trek plus a peak",
+      "Annapurna II (7937m) directly above \u2014 one of Nepal's most dramatic backdrops",
+      "Two routes: accessible south ridge and more technical north ridge",
+      "Glacier travel on the upper mountain with crampons and fixed ropes",
+      "Upper Pisang village base \u2014 Tibetan-influenced culture and monastery",
+      "Natural extension of the circuit with minimal extra logistics"
+    ]
+  },
+  "pico_orizaba": {
+    "name": "Pico de Orizaba (Citlalt\u00e9petl)",
+    "tier": 5,
+    "whySpecial": "Pico de Orizaba is the highest peak in Mexico, the third highest in North America, and one of the finest introductory glacier climbs in the Western Hemisphere. Known to the Aztecs as Citlalt\u00e9petl \u2014 Star Mountain \u2014 the volcano rises to 5636m above the Veracruz lowlands in an almost perfectly symmetrical cone, its Jamapa Glacier gleaming at altitude against a deep blue Mexican sky. The standard route from the Piedra Grande Hut (4260m) involves a 1400-vertical-metre glacier ascent requiring crampons, ice axe, and rope technique in a sustained, high-altitude environment. There is nothing quite like standing on a glaciated summit above the tropics, looking south toward Popocat\u00e9petl, north toward the Gulf of Mexico, and understanding for the first time what the mountains truly demand.",
+    "highlights": [
+      "Third highest peak in North America at 5636m \u2014 Mexico's highest summit",
+      "Jamapa Glacier: a sustained 1400m glaciated ascent requiring full alpine kit",
+      "Piedra Grande Hut overnight at 4260m \u2014 genuine high mountain base experience",
+      "Aztec sacred mountain Citlalt\u00e9petl \u2014 extraordinary cultural and historical resonance",
+      "Popocat\u00e9petl and Gulf of Mexico visible from the crater rim on clear days",
+      "November\u2013March season \u2014 unique experience of high-altitude glaciers in the tropics"
+    ]
+  },
+  "friendship_peak": {
+    "name": "Friendship Peak",
+    "tier": 5,
+    "whySpecial": "Friendship Peak is the gateway to glaciated Himalayan mountaineering for climbers approaching from Manali \u2014 a 5289m summit above the Beas Kund glacial basin that requires crampons, ice axe, and rope travel without demanding the expedition logistics of its higher neighbours. The name reflects its character: welcoming, achievable with commitment, and rewarding of effort. The approach through the Solang Valley and Beas Kund basin passes through a landscape of waterfalls, glacial moraines, and high meadows that transition from Kullu's lushness into the austere beauty of the high range. It is the peak that tells climbers \u2014 for the first time and definitively \u2014 that they belong in the mountains.",
+    "highlights": [
+      "5289m glaciated summit above Manali \u2014 India's most accessible glacier peak",
+      "Beas Kund glacier approach through Solang Valley and high alpine meadows",
+      "Crampons and rope required \u2014 genuine glacier travel without expedition logistics",
+      "Kullu valley panorama and Himalayan giants from the summit",
+      "Ideal first glacier summit for trekkers based in northern India",
+      "Compact 6-day itinerary from Manali \u2014 efficient and fully achievable"
     ]
   }
 }
