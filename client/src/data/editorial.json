@@ -1749,5 +1749,200 @@
       "Kohaihai River mouth — the wild beach finish on New Zealand's most remote stretch of coastline",
       "Giant pūriri and tōtara forest — ancient podocarp trees on the descent to the coast"
     ]
+  {,
+  "mera_peak": {
+    "name": "Mera Peak",
+    "tier": 1,
+    "whySpecial": "Mera Peak is Nepal's highest officially designated trekking peak, yet the approach sets it apart as much as the summit. The route crosses the wild Zatrwa La pass and drops into the remote Hinku valley \u2014 a landscape almost entirely free of the teahouse crowds that characterise other Khumbu approaches. The summit itself is a broad snow plateau at 6476m that delivers one of the most breathtaking panoramas on earth: five of the world's six highest mountains visible simultaneously. Everest, Lhotse, Cho Oyu, Makalu and Kangchenjunga arranged in a single horizon. It is a summit that rewards endurance with revelation.",
+    "highlights": [
+      "Nepal's highest trekking peak at 6476m",
+      "Five of the world's six highest peaks visible from the summit",
+      "Remote Hinku valley approach \u2014 one of Nepal's least-trodden corridors",
+      "Zatrwa La crossing through dramatically wild terrain",
+      "Straightforward high-altitude glacier \u2014 technically accessible to fit beginners",
+      "Expedition-grade acclimatisation for high-altitude aspirations"
+    ]
+  },
+  "island_peak": {
+    "name": "Island Peak",
+    "tier": 1,
+    "whySpecial": "Island Peak rises like a citadel from the glacial basin above Chhukung, its name derived from early Everest expedition members who saw it as an island in a sea of ice. At 6189m it sits within arm's reach of some of the world's tallest mountains \u2014 Lhotse's south face fills the horizon and Nuptse's ridgeline closes the valley to the west. The approach through the Khumbu is Himalayan trekking at its finest, and the summit headwall \u2014 a steep, fixed-rope pitch that delivers you onto a shattered snow crest \u2014 provides a genuine mountaineering challenge. This is the peak that turns trekkers into climbers.",
+    "highlights": [
+      "Summit at 6189m with Lhotse, Nuptse and Makalu dominating the skyline",
+      "Fixed-rope summit headwall \u2014 genuine Himalayan climbing challenge",
+      "Full Khumbu valley approach through Namche Bazaar and Tengboche",
+      "Chhukung Ri acclimatisation hike with sweeping glacier views",
+      "Alpine start crossing the Imja Tse glacier by headtorch",
+      "Gateway peak for aspirants dreaming of higher Himalayan objectives"
+    ]
+  },
+  "stok_kangri": {
+    "name": "Stok Kangri",
+    "tier": 5,
+    "whySpecial": "Stok Kangri is India's most celebrated 6000m summit and the peak that has introduced thousands of trekkers to high-altitude mountaineering in Ladakh. At 6153m, it rises above the Stok Valley behind Leh with an immediacy that makes it feel both accessible and genuinely demanding. The approach traverses landscapes of extraordinary aridity \u2014 barren ridgelines above the Indus Valley, prayer flags against cobalt sky, the plateau stretching toward Tibet. The summit requires crampons and ice axe on the upper snow slopes, and rewards climbers with one of the great Himalayan panoramas: the Karakoram to the north, Zanskar to the south, and the high-altitude desert of Ladakh spread below like a topographic painting.",
+    "highlights": [
+      "India's most accessible 6000m summit at 6153m above Leh",
+      "Ladakh high-desert approach with Indus Valley and Karakoram backdrop",
+      "Natural acclimatisation from Leh (3500m) before the mountain",
+      "Crampons and ice axe required on upper snow slopes \u2014 genuine alpinism",
+      "360\u00b0 panorama: Karakoram, Zanskar, and the Tibetan plateau",
+      "Established guiding infrastructure \u2014 ideal first high-altitude summit for Indian climbers"
+    ]
+  },
+  "lobuche_east": {
+    "name": "Lobuche East",
+    "tier": 2,
+    "whySpecial": "Lobuche East is one of the Khumbu's most demanding trekking peaks, its summit ridge a narrow, exposed knife-edge of rock and ice at 6119m that demands confident technical movement. Unlike the broader snow summits of Island Peak or Mera, Lobuche requires genuine mixed terrain competence \u2014 crampon footwork on rocky sections, fixed rope confidence, and the ability to move precisely in a place where imprecision is not an option. The reward is a position among the most dramatic in the Himalaya: Cho Oyu, Pumori, the Khumbu Glacier below and Everest's south face directly ahead. This is where the step from trekking to technical climbing becomes real.",
+    "highlights": [
+      "Technical 6119m summit with exposed rocky ridge and fixed rope sections",
+      "Everest, Lhotse, Nuptse and Pumori panorama from the summit ridge",
+      "Mixed terrain ascent \u2014 rock, ice and crampon footwork required",
+      "The Khumbu Glacier visible directly below \u2014 raw glacial geology at scale",
+      "Step-change in technical difficulty above Island Peak standard",
+      "Thukla Pass memorial cairns \u2014 a moving tribute on the approach"
+    ]
+  },
+  "pisang_peak": {
+    "name": "Pisang Peak",
+    "tier": 5,
+    "whySpecial": "Pisang Peak occupies one of the most dramatic positions in the trekking peak world \u2014 rising directly above the village of Upper Pisang on the Annapurna Circuit, with Annapurna II's enormous south face as its permanent backdrop. At 6091m, it offers two distinct routes (north and south ridge) of different technical character, making it equally accessible to guided beginners and rewarding to those seeking a more committing line. The approach follows one of Nepal's most celebrated trekking corridors, meaning the mountain days blend seamlessly with the cultural and scenic richness of the circuit. Pisang Peak is a summit that proves the Annapurna region has more to offer than its base camp.",
+    "highlights": [
+      "6091m summit on the Annapurna Circuit \u2014 the iconic Nepal trek plus a peak",
+      "Annapurna II (7937m) directly above \u2014 one of Nepal's most dramatic backdrops",
+      "Two routes: accessible south ridge and more technical north ridge",
+      "Glacier travel on the upper mountain with crampons and fixed ropes",
+      "Upper Pisang village base \u2014 Tibetan-influenced culture and monastery",
+      "Natural extension of the circuit with minimal extra logistics"
+    ]
+  },
+  "huayna_potosi": {
+    "name": "Huayna Potos\u00ed",
+    "tier": 1,
+    "whySpecial": "Huayna Potos\u00ed is one of the most remarkable introductions to technical mountaineering anywhere in the world \u2014 a glaciated 6088m peak that can be ascended in three days from La Paz, one of the world's highest capital cities. The proximity to La Paz at 3600m means acclimatisation is built into daily life before the climb even begins. The classic north face route offers genuine glacier travel, crampon technique, and ice axe work in a concentrated and spectacular setting. The altiplano and Lake Titicaca spread out below the summit like a topographic map. For first-time 6000m climbers, this is the benchmark.",
+    "highlights": [
+      "Easiest 6000m peak in the world \u2014 accessible to fit, motivated beginners",
+      "Three-day ascent from the world's highest capital city, La Paz",
+      "Glaciated north face with real crampon and ice axe technique",
+      "Panoramic views over Lake Titicaca and the Bolivian altiplano",
+      "Classic triangular summit silhouette \u2014 one of the Andes' most photogenic peaks",
+      "Efficient objective that pairs with Bolivian cultural itineraries"
+    ]
+  },
+  "cotopaxi": {
+    "name": "Cotopaxi",
+    "tier": 1,
+    "whySpecial": "Cotopaxi is one of the world's highest active volcanoes and one of its most perfectly formed \u2014 a glaciated symmetrical cone that dominates the Ecuadorian highlands with theatrical authority. At 5897m the summit sits above a live volcanic crater emitting steam on clear mornings. The ascent is a night climb up steep glaciated flanks, crampons biting into ancient ice above the cloud layer, the valleys of Ecuador spread far below at first light. Few mountains offer this combination of technical accessibility and raw geological drama. The fact that it sits within an hour of Quito makes it almost impossibly convenient.",
+    "highlights": [
+      "One of the world's highest active volcanoes at 5897m",
+      "Perfectly symmetrical glaciated cone \u2014 an icon of Andean geography",
+      "Live crater with steam vents visible on clear summit mornings",
+      "Night ascent on steep glaciated flanks with headtorch and crampons",
+      "Cotopaxi National Park approach with wild llama and Andean condor",
+      "Rapid access from Quito \u2014 ideal within an Ecuador highland itinerary"
+    ]
+  },
+  "nevado_pisco": {
+    "name": "Nevado Pisco",
+    "tier": 2,
+    "whySpecial": "Nevado Pisco occupies one of the most spectacular cirques in the Cordillera Blanca, cradled between the twin summits of Huascar\u00e1n \u2014 the highest mountain in Peru \u2014 and the serrated ridgeline of Chopicalqui. At 5752m the summit provides a front-row seat to the finest mountain scenery in South America. The Llanganuco Lakes gleam turquoise far below the trailhead, condors drift on thermals along the valley walls, and the Refugio Per\u00fa offers a warm base before the glaciated push to the top. For climbers ready to progress beyond Huayna Potos\u00ed, Pisco is the logical and glorious next step.",
+    "highlights": [
+      "Glaciated 5752m summit in a world-class Andean cirque",
+      "Huascar\u00e1n Norte and Sur towering above the approach \u2014 Peru's highest peak",
+      "Llanganuco turquoise lakes at the trailhead \u2014 among Peru's most beautiful",
+      "Andean condors frequently spotted along the valley approach",
+      "Moderate glaciated slopes ideal for building crevasse navigation confidence",
+      "Logical progression from Huayna Potos\u00ed \u2014 the Cordillera Blanca next level"
+    ]
+  },
+  "tent_peak": {
+    "name": "Tent Peak (Tharpu Chuli)",
+    "tier": 2,
+    "whySpecial": "Tent Peak rises directly above the Annapurna Sanctuary, which means its summit is surrounded by an almost unimaginable concentration of high peaks: Annapurna I, II, III, and IV, Hiunchuli, Gangapurna, and Machhapuchhre all visible within a single sweep of the horizon. The approach through the Modi Khola gorge \u2014 past terraced villages, rhododendron forests and the increasingly dramatic walls of the Annapurna massif \u2014 is one of the most celebrated treks in Nepal. The climbing above base camp adds technical dimension to a journey that begins as a cultural and scenic immersion and ends as a legitimate mountaineering objective.",
+    "highlights": [
+      "Summit above the Annapurna Sanctuary \u2014 surrounded by eight-thousanders",
+      "Annapurna I, II, III, IV, Hiunchuli and Machhapuchhre in a single panorama",
+      "Modi Khola gorge approach through one of Nepal's most scenic valleys",
+      "Exposed snow ridge to summit \u2014 technical cramponing above 5000m",
+      "Annapurna Base Camp at 4130m \u2014 iconic glacial amphitheatre",
+      "Paired naturally with the Annapurna Sanctuary trek \u2014 minimal additional days"
+    ]
+  },
+  "mount_elbrus": {
+    "name": "Mount Elbrus",
+    "tier": 2,
+    "whySpecial": "Mount Elbrus is Europe's highest peak and one of the coveted Seven Summits \u2014 the highest point on each continent. At 5642m above the Caucasus range, it is a dormant twin-summited volcano whose vast snowfields offer one of the most achievable Seven Summits objectives on the list. The infrastructure of cable cars, snowcats, and the famous orange Barrels Huts at 3800m makes the logistics straightforward, but the summit day demands genuine high-altitude endurance across a broad and crevasse-free plateau. The Caucasus stretches in both directions, and on clear days the Black Sea is visible to the southwest \u2014 a view that spans two continents.",
+    "highlights": [
+      "Highest peak in Europe and one of the Seven Summits at 5642m",
+      "Broad volcanic snowfield \u2014 no technical glacier navigation required",
+      "Gondola and snowcat support reduces the approach \u2014 focus on the summit",
+      "Iconic orange Barrels Huts at 3800m \u2014 one of mountaineering's great base camps",
+      "Caucasus range panorama with Black Sea visible on clear days",
+      "Structured acclimatisation on Pastukhov Rocks before summit push"
+    ]
+  },
+  "pico_orizaba": {
+    "name": "Pico de Orizaba (Citlalt\u00e9petl)",
+    "tier": 5,
+    "whySpecial": "Pico de Orizaba is the highest peak in Mexico, the third highest in North America, and one of the finest introductory glacier climbs in the Western Hemisphere. Known to the Aztecs as Citlalt\u00e9petl \u2014 Star Mountain \u2014 the volcano rises to 5636m above the Veracruz lowlands in an almost perfectly symmetrical cone, its Jamapa Glacier gleaming at altitude against a deep blue Mexican sky. The standard route from the Piedra Grande Hut (4260m) involves a 1400-vertical-metre glacier ascent requiring crampons, ice axe, and rope technique in a sustained, high-altitude environment. There is nothing quite like standing on a glaciated summit above the tropics, looking south toward Popocat\u00e9petl, north toward the Gulf of Mexico, and understanding for the first time what the mountains truly demand.",
+    "highlights": [
+      "Third highest peak in North America at 5636m \u2014 Mexico's highest summit",
+      "Jamapa Glacier: a sustained 1400m glaciated ascent requiring full alpine kit",
+      "Piedra Grande Hut overnight at 4260m \u2014 genuine high mountain base experience",
+      "Aztec sacred mountain Citlalt\u00e9petl \u2014 extraordinary cultural and historical resonance",
+      "Popocat\u00e9petl and Gulf of Mexico visible from the crater rim on clear days",
+      "November\u2013March season \u2014 unique experience of high-altitude glaciers in the tropics"
+    ]
+  },
+  "yala_peak": {
+    "name": "Yala Peak",
+    "tier": 3,
+    "whySpecial": "Yala Peak is the ideal first technical Himalayan summit for those who have trekked to altitude but not yet climbed. At 5500m it sits above the Langtang valley \u2014 one of Nepal's most beautiful and culturally rich corridors \u2014 accessible without the crowds of the Khumbu and Annapurna circuits. The approach through Langtang National Park passes ancient yak pastures and the sacred Kyanjin Gompa monastery, and the upper route delivers close views of Langtang Lirung and across the Tibetan border to Shishapangma. It is a summit that teaches the fundamentals of Himalayan climbing without overwhelming the student.",
+    "highlights": [
+      "Perfect introductory Himalayan technical peak at 5500m",
+      "Langtang valley \u2014 Nepal's most underrated and culturally rich trek corridor",
+      "Close views of Langtang Lirung (7227m) and across the Tibetan border",
+      "Kyanjin Gompa monastery \u2014 sacred Buddhist site at the heart of the valley",
+      "Accessible glacier and rocky terrain \u2014 ideal for first crampon experience",
+      "Significantly less crowded than Khumbu and Annapurna equivalents"
+    ]
+  },
+  "friendship_peak": {
+    "name": "Friendship Peak",
+    "tier": 5,
+    "whySpecial": "Friendship Peak is the gateway to glaciated Himalayan mountaineering for climbers approaching from Manali \u2014 a 5289m summit above the Beas Kund glacial basin that requires crampons, ice axe, and rope travel without demanding the expedition logistics of its higher neighbours. The name reflects its character: welcoming, achievable with commitment, and rewarding of effort. The approach through the Solang Valley and Beas Kund basin passes through a landscape of waterfalls, glacial moraines, and high meadows that transition from Kullu's lushness into the austere beauty of the high range. It is the peak that tells climbers \u2014 for the first time and definitively \u2014 that they belong in the mountains.",
+    "highlights": [
+      "5289m glaciated summit above Manali \u2014 India's most accessible glacier peak",
+      "Beas Kund glacier approach through Solang Valley and high alpine meadows",
+      "Crampons and rope required \u2014 genuine glacier travel without expedition logistics",
+      "Kullu valley panorama and Himalayan giants from the summit",
+      "Ideal first glacier summit for trekkers based in northern India",
+      "Compact 6-day itinerary from Manali \u2014 efficient and fully achievable"
+    ]
+  },
+  "mount_kazbek": {
+    "name": "Mount Kazbek",
+    "tier": 2,
+    "whySpecial": "Kazbek is a mountain wrapped in mythology. In Greek legend, this is where Prometheus was chained to a rock and punished for stealing fire from the gods. In Georgian tradition, the chains of the rebel angel Amirani are said to rattle from somewhere within its volcanic flanks. The approach from Stepantsminda passes the 14th-century Gergeti Trinity Church perched against a backdrop that stops the breath \u2014 the glacier and summit above, the deep Terek gorge below. At 5053m the summit sits on the Russia-Georgia border and the vast Caucasus stretches in every direction. Few climbs combine this density of legend, culture, and mountain drama.",
+    "highlights": [
+      "5053m Caucasus peak with mythological resonance \u2014 the summit of Prometheus",
+      "Gergeti Trinity Church backdrop \u2014 one of the world's most photographed mountain scenes",
+      "Russia-Georgia border summit on a dormant volcanic massif",
+      "Bethlemi Hut approach through dramatic glacial terrain",
+      "Deep cultural immersion in Georgian mountain hospitality below",
+      "Less crowded than Elbrus \u2014 a genuine Caucasus mountaineering experience"
+    ]
+  },
+  "gran_paradiso": {
+    "name": "Gran Paradiso",
+    "tier": 1,
+    "whySpecial": "Gran Paradiso is Italy's only 4000m peak that lies entirely within its borders, and its setting within the Gran Paradiso National Park \u2014 Italy's oldest \u2014 gives it a wildness that the busier Zermatt peaks cannot match. Ibex roam the moraines below the glacier, chamois pick across the rocky ridges, and the rifugio bears the name of the Italian king who once hunted this landscape. The summit carries a small bronze Virgin Mary statue, and the view from beside it sweeps across the Graian Alps into France. It is a summit where history, ecology, and alpine challenge converge.",
+    "highlights": [
+      "Highest peak entirely within Italy at 4061m",
+      "Gran Paradiso National Park \u2014 Italy's oldest, rich in ibex and chamois",
+      "Historic Rifugio Vittorio Emanuele II with exceptional alpine atmosphere",
+      "Bronze Virgin Mary statue on summit \u2014 a classic Italian mountaineering landmark",
+      "Moderate glacier with accessible cramponing \u2014 ideal for first alpine glaciers",
+      "Remote and uncrowded compared to the busy Zermatt 4000m circuit"
+    ]
   }
 }
