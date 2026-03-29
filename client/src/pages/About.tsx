@@ -393,39 +393,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Tier 5 spotlight */}
-        <section className={`rounded-2xl border border-rose-200 bg-rose-50 p-6`}>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full bg-rose-500 flex items-center justify-center shadow-md shrink-0">
-              <span className="text-white font-black text-sm">5</span>
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h3 className="font-black text-base text-rose-800">New: Tier 5 — Trekking Peaks</h3>
-                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-rose-100 text-rose-800">
-                  15 peaks
-                </span>
-              </div>
-              <p className="text-xs text-muted-foreground mt-0.5">The gateway between trekking and technical mountaineering</p>
-            </div>
-          </div>
-          <p className="text-sm text-foreground/80 leading-relaxed mb-4">
-            Trekking peaks bridge the gap between hiking and serious alpinism. Most sit between 5000m and 6500m and require crampons, ice axes, and basic rope technique — but not advanced rock climbing skills. Every peak in Tier 5 has a genuine multi-day approach with at least one overnight stay, making them full expeditions rather than guided day climbs.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              { label: "Altitude range", value: "4164m – 6476m" },
-              { label: "Skills needed", value: "Crampons, ice axe, rope" },
-              { label: "Trip length", value: "2 – 16 days" },
-            ].map(s => (
-              <div key={s.label} className="bg-white/60 rounded-xl p-3 border border-rose-100">
-                <p className="text-[10px] font-bold uppercase tracking-widest text-rose-600 mb-0.5">{s.label}</p>
-                <p className="text-sm font-bold text-rose-900">{s.value}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Tier system — definition cards first */}
         <section>
           <SectionHeader
