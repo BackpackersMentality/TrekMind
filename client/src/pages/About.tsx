@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 import {
   ArrowLeft, Globe2, Mountain, Zap, Compass, Star,
   Map, Filter, Sparkles, Trophy, ChevronRight, Info,
-  BookOpen, Shield, Users, Clock, Timer, TrendingUp
+  BookOpen, Shield, Users, Clock, Timer, TrendingUp, Pickaxe
 } from "lucide-react";
 import { getAllTreks } from "../lib/treks";
 
@@ -26,7 +26,7 @@ const TIERS = [
     badge: "bg-amber-100 text-amber-800",
     description: "The world's most celebrated trekking routes — routes that define what adventure travel means. Everest Base Camp, Tour du Mont Blanc, the Inca Trail. Every serious trekker has these on their list. Well-maintained infrastructure, clear trails, and extraordinary landscapes that have earned their global reputations.",
     examples: ["Everest Base Camp", "Tour du Mont Blanc", "Inca Trail", "Kilimanjaro", "Milford Track"],
-    stats: { count: 25, avgDays: "7–14 days", difficulty: "Moderate to Challenging" }
+    stats: { count: 30, avgDays: "7–14 days", difficulty: "Moderate to Challenging" }
   },
   {
     number: 2,
@@ -39,7 +39,7 @@ const TIERS = [
     badge: "bg-blue-100 text-blue-800",
     description: "Exceptional routes known deeply within the trekking community — the trails serious hikers graduate to after completing the icons. Less crowded than Tier 1 but no less spectacular. Kanchenjunga Base Camp, Cerro Castillo, the Dolomites Alta Via routes. Often harder to access and logistically more demanding.",
     examples: ["Kanchenjunga BC", "Cerro Castillo", "Alta Via 1", "Teton Crest", "Roraima"],
-    stats: { count: 43, avgDays: "5–12 days", difficulty: "Moderate to Hard" }
+    stats: { count: 59, avgDays: "5–12 days", difficulty: "Moderate to Hard" }
   },
   {
     number: 3,
@@ -52,7 +52,7 @@ const TIERS = [
     badge: "bg-slate-100 text-slate-700",
     description: "Wilderness routes for experienced trekkers who want genuine remoteness — minimal infrastructure, limited waymarking, and landscapes that feel genuinely untouched. These demand navigation skills, self-sufficiency, and strong fitness. The payoff is solitude in some of the most extraordinary terrain on Earth.",
     examples: ["Dusky Track", "Wind River High Route", "Huemul Circuit", "Tusheti", "Dhaulagiri Circuit"],
-    stats: { count: 25, avgDays: "7–21 days", difficulty: "Hard to Very Hard" }
+    stats: { count: 34, avgDays: "7–21 days", difficulty: "Hard to Very Hard" }
   },
   {
     number: 4,
@@ -65,7 +65,20 @@ const TIERS = [
     badge: "bg-violet-100 text-violet-800",
     description: "The great long trails — routes measured in months rather than days. The Appalachian Trail, Pacific Crest Trail, Te Araroa, the Great Himalaya Trail. Completing a thru-hike is a life-defining undertaking that requires months of planning, significant logistical support, and unwavering commitment. Most are completed as sections over multiple years.",
     examples: ["Appalachian Trail", "Pacific Crest Trail", "Te Araroa", "Great Himalaya Trail", "CDT"],
-    stats: { count: 7, avgDays: "30–165 days", difficulty: "Extreme (multi-month)" }
+    stats: { count: 12, avgDays: "30–165 days", difficulty: "Extreme (multi-month)" }
+  },
+  {
+    number: 5,
+    name: "Trekking Peak",
+    colour: "rose",
+    dot: "bg-rose-500",
+    border: "border-rose-200",
+    bg: "bg-rose-50",
+    text: "text-rose-800",
+    badge: "bg-rose-100 text-rose-800",
+    description: "The gateway to the summit. Trekking peaks are high-altitude mountains — mostly between 5000m and 6500m — that bridge the gap between hiking and technical mountaineering. Crampons, ice axes, and rope travel are required, but advanced rock climbing or aid techniques are not. These are multi-day expeditions with proper approach treks, base camps, and summit pushes. Think Island Peak, Mera Peak, Huayna Potosí, Breithorn. They are the proving ground for anyone who wants to understand what the mountains really demand.",
+    examples: ["Island Peak", "Mera Peak", "Huayna Potosí", "Cotopaxi", "Mount Elbrus"],
+    stats: { count: 15, avgDays: "2–16 days", difficulty: "Challenging to Technical" }
   }
 ];
 
@@ -80,7 +93,7 @@ const FEATURES = [
   {
     icon: <Filter className="w-5 h-5" />,
     title: "Smart Filtering",
-    desc: "Filter by region, terrain type, duration, accommodation style, and difficulty tier. Find exactly the right trek for your timeframe and experience level."
+    desc: "Filter by region, terrain type, duration, accommodation style, difficulty tier, and when to trek by month. Find exactly the right route for your timeframe and experience level."
   },
   {
     icon: <Sparkles className="w-5 h-5" />,
@@ -90,7 +103,7 @@ const FEATURES = [
   {
     icon: <Map className="w-5 h-5" />,
     title: "Detailed Itineraries",
-    desc: "Day-by-day route breakdowns with elevation data, overnight stops, and key highlights for all 100 treks — including full section maps for the thru-hikes."
+    desc: "Day-by-day route breakdowns with elevation data, overnight stops, and key highlights for all 150 treks — including full section maps and summit approach details."
   },
   {
     icon: <Trophy className="w-5 h-5" />,
@@ -108,8 +121,16 @@ const FEATURES = [
 
 const FAQS = [
   {
-    q: "How were the 135 treks chosen?",
-    a: "We evaluated hundreds of routes against four criteria: landscape quality, cultural significance, trekking infrastructure, and global recognition within the adventure travel community. The list deliberately spans all continents and all difficulty levels — from a 2-day coastal walk to a 165-day thru-hike."
+    q: "How were the 150 treks chosen?",
+    a: "We evaluated hundreds of routes against four criteria: landscape quality, cultural significance, trekking infrastructure, and global recognition within the adventure travel community. The list deliberately spans all continents and all difficulty levels — from a 2-day coastal walk to a 165-day thru-hike, and now includes 15 trekking peaks for those stepping into technical alpinism."
+  },
+  {
+    q: "What exactly is a Tier 5 Trekking Peak?",
+    a: "Trekking peaks are mountains — mostly between 5000m and 6500m — that require basic mountaineering skills: crampons, ice axe, rope travel, and glacier awareness. They are not technical rock climbs or full expeditions, but they demand more than trekking fitness alone. All 15 Tier 5 peaks on TrekMind have multi-day approaches with proper base camps and overnight stays — they are not day-trip scrambles. Classic examples include Mera Peak (Nepal), Huayna Potosí (Bolivia), Cotopaxi (Ecuador), and the Breithorn (Switzerland)."
+  },
+  {
+    q: "Do I need mountaineering experience for a Tier 5 peak?",
+    a: "Most Tier 5 peaks are achievable with no prior technical climbing experience, provided you are very fit, have prior high-altitude trekking above 4000m, and climb with a qualified guide. You will be taught crampon and ice axe technique on the approach or at base camp. Peaks like the Breithorn and Huayna Potosí are specifically marketed as first alpinism objectives. Lobuche East and Pisang Peak demand more technical confidence. Always climb with a licensed mountain guide."
   },
   {
     q: "What's the difference between a multi-day trek and a thru-hike?",
@@ -251,7 +272,7 @@ function TierCard({ tier }: { tier: typeof TIERS[0] }) {
               {tier.name}
             </span>
           </div>
-          <p className="text-xs text-muted-foreground mt-0.5">{tier.stats.count} treks · {tier.stats.avgDays} · {tier.stats.difficulty}</p>
+          <p className="text-xs text-muted-foreground mt-0.5">{tier.stats.count} routes · {tier.stats.avgDays} · {tier.stats.difficulty}</p>
         </div>
       </div>
 
@@ -295,12 +316,12 @@ export default function About() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
-        <title>About TrekMind — World's Top Trekking Routes Explained</title>
-        <meta name="description" content="Discover how TrekMind curates and ranks the world's greatest trekking routes. Learn about our tier system — from Iconic classics to remote wilderness and epic thru-hikes." />
-        <meta name="keywords" content="best trekking routes world, tier 1 treks, thru hiking explained, iconic hikes, trekking difficulty ratings, adventure travel guide" />
+        <title>About TrekMind — World's Top Trekking Routes & Peaks Explained</title>
+        <meta name="description" content="Discover how TrekMind curates and ranks the world's greatest trekking routes and trekking peaks. Learn about our five-tier system — from Iconic classics to remote wilderness, epic thru-hikes, and beginner alpinism peaks." />
+        <meta name="keywords" content="best trekking routes world, trekking peaks, beginner alpinism, tier 1 treks, thru hiking explained, iconic hikes, trekking difficulty ratings, adventure travel guide, Island Peak, Mera Peak, Huayna Potosi" />
         <link rel="canonical" href="https://trekmind.pages.dev/about" />
-        <meta property="og:title" content="About TrekMind — The World's Top 100 Treks Explained" />
-        <meta property="og:description" content="How we rank and categorise the world's greatest trekking routes — from multi-day hikes to 165-day thru-hikes." />
+        <meta property="og:title" content="About TrekMind — The World's Top 150 Treks & Peaks Explained" />
+        <meta property="og:description" content="How we rank and categorise the world's greatest trekking routes — from multi-day hikes to 165-day thru-hikes and beginner mountaineering peaks." />
         <meta property="og:url" content="https://trekmind.pages.dev/about" />
       </Helmet>
 
@@ -326,7 +347,7 @@ export default function About() {
                 About TrekMind
               </h1>
               <p className="text-white/65 text-sm mt-2 leading-relaxed max-w-xl">
-                How we discovered, ranked, and documented the greatest trekking routes on Earth — from a two-day coastal walk to a five-month wilderness crossing.
+                How we discovered, ranked, and documented the greatest trekking routes on Earth — from a two-day coastal walk to a five-month wilderness crossing, and now into the summits themselves.
               </p>
             </div>
           </div>
@@ -334,10 +355,11 @@ export default function About() {
           {/* Quick stat pills */}
           <div className="flex flex-wrap gap-2 mt-5">
             {[
-              { icon: <Mountain className="w-3 h-3" />, label: "135 World-Class Routes" },
+              { icon: <Mountain className="w-3 h-3" />, label: "150 World-Class Routes" },
               { icon: <Globe2 className="w-3 h-3" />, label: "6 Continents" },
               { icon: <Clock className="w-3 h-3" />, label: "2 Days to 165 Days" },
-              { icon: <Shield className="w-3 h-3" />, label: "4 Difficulty Tiers" },
+              { icon: <Shield className="w-3 h-3" />, label: "5 Difficulty Tiers" },
+              { icon: <Pickaxe className="w-3 h-3" />, label: "15 Trekking Peaks" },
             ].map(({ icon, label }) => (
               <div key={label} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-3 py-1">
                 <span className="text-amber-400">{icon}</span>
@@ -356,18 +378,51 @@ export default function About() {
           <SectionHeader
             label="Our Mission"
             title="What is TrekMind?"
-            sub="A curated discovery platform for the world's greatest trekking routes — built for everyone from first-time multi-day hikers to veteran thru-hikers."
+            sub="A curated discovery platform for the world's greatest trekking routes and trekking peaks — built for everyone from first-time multi-day hikers to those taking their first steps into alpinism."
           />
           <div className="prose prose-sm max-w-none text-foreground/80 leading-relaxed space-y-3">
             <p>
               TrekMind exists because finding the right trekking route is genuinely hard. Dozens of guidebooks, thousands of travel blogs, and contradictory forum posts make it difficult to understand the landscape of what's actually possible — and to match your experience level, timeframe, and ambition to a route that will be meaningful rather than overwhelming.
             </p>
             <p>
-              We curated 135 routes from every continent, spanning the full spectrum of difficulty and duration, then built tools to help you discover, compare, and plan them. The 3D globe puts them in geographical context. The tier system helps you understand what you're signing up for. The AI Trek Finder matches your profile to routes you might not have considered.
+              We curated 150 routes from every continent, spanning the full spectrum of difficulty and duration, then built tools to help you discover, compare, and plan them. The 3D globe puts them in geographical context. The five-tier system helps you understand what you're signing up for. The AI Trek Finder matches your profile to routes you might not have considered.
             </p>
             <p>
-              The goal is simple: to be the starting point for anyone who wants to explore the world on foot at a serious level.
+              With the addition of Tier 5 — Trekking Peaks — TrekMind now covers the full progression from first hike to first summit. The goal is simple: to be the starting point for anyone who wants to explore the world on foot at a serious level.
             </p>
+          </div>
+        </section>
+
+        {/* Tier 5 spotlight */}
+        <section className={`rounded-2xl border border-rose-200 bg-rose-50 p-6`}>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-full bg-rose-500 flex items-center justify-center shadow-md shrink-0">
+              <span className="text-white font-black text-sm">5</span>
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h3 className="font-black text-base text-rose-800">New: Tier 5 — Trekking Peaks</h3>
+                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-rose-100 text-rose-800">
+                  15 peaks
+                </span>
+              </div>
+              <p className="text-xs text-muted-foreground mt-0.5">The gateway between trekking and technical mountaineering</p>
+            </div>
+          </div>
+          <p className="text-sm text-foreground/80 leading-relaxed mb-4">
+            Trekking peaks bridge the gap between hiking and serious alpinism. Most sit between 5000m and 6500m and require crampons, ice axes, and basic rope technique — but not advanced rock climbing skills. Every peak in Tier 5 has a genuine multi-day approach with at least one overnight stay, making them full expeditions rather than guided day climbs.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { label: "Altitude range", value: "4164m – 6476m" },
+              { label: "Skills needed", value: "Crampons, ice axe, rope" },
+              { label: "Trip length", value: "2 – 16 days" },
+            ].map(s => (
+              <div key={s.label} className="bg-white/60 rounded-xl p-3 border border-rose-100">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-rose-600 mb-0.5">{s.label}</p>
+                <p className="text-sm font-bold text-rose-900">{s.value}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -375,8 +430,8 @@ export default function About() {
         <section>
           <SectionHeader
             label="Understanding Difficulty"
-            title="The Four-Tier System"
-            sub="Every trek in TrekMind is classified into one of four tiers based on infrastructure, remoteness, elevation, and the experience level typically required."
+            title="The Five-Tier System"
+            sub="Every route in TrekMind is classified into one of five tiers based on infrastructure, remoteness, elevation, and the experience level typically required."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {TIERS.map(tier => <TierCard key={tier.number} tier={tier} />)}
@@ -385,18 +440,18 @@ export default function About() {
             <div className="flex gap-2">
               <Info className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
               <p className="text-xs text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Important:</strong> Tier ratings are TrekMind's editorial classifications, not official gradings. Trail conditions, seasonal weather, and individual fitness levels significantly affect the experience. Always research current conditions, obtain required permits, and consider a licensed local guide for Tier 3 and Tier 4 routes.
+                <strong className="text-foreground">Important:</strong> Tier ratings are TrekMind's editorial classifications, not official gradings. Trail conditions, seasonal weather, and individual fitness levels significantly affect the experience. Always research current conditions, obtain required permits, and consider a licensed local guide — especially for Tier 3, Tier 4, and all Tier 5 Trekking Peaks.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Tier browser — browse treks by tier, now after the tier definitions */}
+        {/* Tier browser — browse treks by tier */}
         <section id="tiers">
           <SectionHeader
             label="Browse by Tier"
-            title="The Four Tiers"
-            sub="Every trek ranked and categorised. Tap any route to read the full guide."
+            title="All Five Tiers"
+            sub="Every trek and trekking peak ranked and categorised. Tap any route to read the full guide."
           />
           <TierBrowser />
         </section>
@@ -426,15 +481,15 @@ export default function About() {
         <section>
           <SectionHeader
             label="Curation"
-            title="How We Choose the Treks"
-            sub="Not every famous trail is world-class. Not every world-class trail is famous."
+            title="How We Choose the Routes"
+            sub="Not every famous trail is world-class. Not every world-class trail is famous. Not every summit is achievable."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { icon: <Mountain className="w-4 h-4" />, title: "Landscape Quality", desc: "The route must pass through genuinely exceptional terrain — not just accessible or popular, but visually and experientially outstanding." },
               { icon: <Users className="w-4 h-4" />, title: "Community Standing", desc: "We weight routes that experienced trekkers across the world's hiking communities consistently identify as bucket-list calibre." },
               { icon: <Compass className="w-4 h-4" />, title: "Geographic Spread", desc: "The list must represent global trekking culture — we deliberately include routes from underrepresented regions alongside the well-known classics." },
-              { icon: <Zap className="w-4 h-4" />, title: "Range of Experience", desc: "From a 2-day track to a 165-day thru-hike, the list spans the full spectrum so every trekker finds something appropriate and aspirational." },
+              { icon: <Zap className="w-4 h-4" />, title: "Range of Experience", desc: "From a 2-day coastal walk to a 165-day thru-hike and a 6476m summit, the list spans the full spectrum so every adventurer finds something appropriate and aspirational." },
             ].map(c => (
               <div key={c.title} className="flex gap-3 p-4 rounded-xl border border-border/50 bg-card">
                 <div className="w-8 h-8 rounded-lg bg-foreground/5 text-foreground/60 flex items-center justify-center shrink-0">
@@ -466,7 +521,7 @@ export default function About() {
           <div className="absolute inset-0 bg-black/65" />
           <div className="relative z-10 px-6 py-8 text-center">
             <h3 className="text-xl font-black text-white mb-2">Ready to find your route?</h3>
-            <p className="text-white/65 text-sm mb-5">Explore all 100 treks on the globe, or let the AI Trek Finder match you to your perfect adventure.</p>
+            <p className="text-white/65 text-sm mb-5">Explore all 150 treks and peaks on the globe, or let the AI Trek Finder match you to your perfect adventure.</p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/">
                 <button className="inline-flex items-center gap-2 px-4 py-2.5 bg-white text-black text-sm font-bold rounded-full shadow-lg hover:bg-white/90 transition-all">
@@ -498,7 +553,7 @@ export default function About() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <p className="font-bold text-[10px] text-foreground">TrekMind</p>
           <p className="text-[7px] text-muted-foreground">
-            © 2024 TrekMind. Information is for discovery purposes. Always verify current conditions, permits, and safety requirements with official sources before trekking. Adventure responsibly.
+            © 2024 TrekMind. Information is for discovery purposes. Always verify current conditions, permits, and safety requirements with official sources before trekking or climbing. Adventure responsibly.
           </p>
         </div>
       </footer>
