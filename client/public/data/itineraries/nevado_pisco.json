@@ -1,67 +1,68 @@
-"sheetName": "Nevado Pisco",
-    "slug": "nevado_pisco",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Huaraz to Peru Hut (Refugio Per\u00fa)",
-        "distanceKm": "4",
-        "elevGainM": "750",
-        "elevLossM": "0",
-        "maxAltM": "4665",
-        "lat": -9.012,
-        "lng": -77.625,
-        "overnight": "Peru Hut / Tents",
-        "mapNote": "Drive from Huaraz to Llanganuco Lakes trailhead (3850m). Hike to Refugio Per\u00fa at 4665m through the Huascar\u00e1n National Park. Llamas and condors common."
-      },
-      {
-        "day": 2,
-        "route": "Peru Hut to Moraine Camp",
-        "distanceKm": "3",
-        "elevGainM": "250",
-        "elevLossM": "50",
-        "maxAltM": "4900",
-        "lat": -9.008,
-        "lng": -77.618,
-        "overnight": "Moraine Camp Tents",
-        "mapNote": "Short carry to high moraine camp at 4900m. Crampon and axe practice on lower glacier. Spectacular cirque with Huascar\u00e1n Norte towering above."
-      },
-      {
-        "day": 3,
-        "route": "Summit Bid: Moraine Camp \u2192 Summit \u2192 Huaraz",
-        "distanceKm": "9",
-        "elevGainM": "852",
-        "elevLossM": "1852",
-        "maxAltM": "5752",
-        "lat": -9.015,
-        "lng": -77.63,
-        "overnight": "Huaraz (Off-trail)",
-        "mapNote": "Alpine start at 3am. Glaciated slopes to summit at 5752m. Views of Huascar\u00e1n, Chopicalqui, and Chopiraju. Descend to trailhead and return to Huaraz."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Nevado Pisco Summit",
-        "lat": -9.015,
-        "lng": -77.63,
-        "type": "summit",
-        "altM": 5752,
-        "note": "Ideal introductory glacier peak in Cordillera Blanca. Huascar\u00e1n Norte and Sur dominate the view."
-      },
-      {
-        "name": "Llanganuco Lakes",
-        "lat": -9.06,
-        "lng": -77.64,
-        "type": "viewpoint",
-        "altM": 3850,
-        "note": "Stunning turquoise glacial lakes at the trailhead. Chinancocha and Orconcocha."
-      },
-      {
-        "name": "Refugio Per\u00fa",
-        "lat": -9.012,
-        "lng": -77.625,
-        "type": "hut",
-        "altM": 4665,
-        "note": "Basic hut with gear rental and guiding services available. Good base for Pisco acclimatisation."
-      }
-    ]
-  }
+{
+  "slug": "nevado_pisco",
+  "sheetName": "Nevado Pisco",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Huaraz to Peru Hut (Refugio Per\u00fa)",
+      "distanceKm": "4",
+      "elevGainM": "750",
+      "elevLossM": "0",
+      "maxAltM": "4665",
+      "lat": -9.012,
+      "lng": -77.625,
+      "overnight": "Peru Hut / Tents",
+      "mapNote": "Drive from Huaraz to Llanganuco Lakes trailhead (3850m). Hike to Refugio Per\u00fa at 4665m through the Huascar\u00e1n National Park. Llamas and condors common."
+    },
+    {
+      "day": 2,
+      "route": "Peru Hut to Moraine Camp",
+      "distanceKm": "3",
+      "elevGainM": "250",
+      "elevLossM": "50",
+      "maxAltM": "4900",
+      "lat": -9.008,
+      "lng": -77.618,
+      "overnight": "Moraine Camp Tents",
+      "mapNote": "Short carry to high moraine camp at 4900m. Crampon and axe practice on lower glacier. Spectacular cirque with Huascar\u00e1n Norte towering above."
+    },
+    {
+      "day": 3,
+      "route": "Summit Bid: Moraine Camp \u2192 Summit \u2192 Huaraz",
+      "distanceKm": "9",
+      "elevGainM": "852",
+      "elevLossM": "1852",
+      "maxAltM": "5752",
+      "lat": -9.015,
+      "lng": -77.63,
+      "overnight": "Huaraz (Off-trail)",
+      "mapNote": "Alpine start at 3am. Glaciated slopes to summit at 5752m. Views of Huascar\u00e1n, Chopicalqui, and Chopiraju. Descend to trailhead and return to Huaraz."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Nevado Pisco Summit",
+      "lat": -9.015,
+      "lng": -77.63,
+      "type": "summit",
+      "altM": 5752,
+      "note": "Ideal introductory glacier peak in Cordillera Blanca. Huascar\u00e1n Norte and Sur dominate the view."
+    },
+    {
+      "name": "Llanganuco Lakes",
+      "lat": -9.06,
+      "lng": -77.64,
+      "type": "viewpoint",
+      "altM": 3850,
+      "note": "Stunning turquoise glacial lakes at the trailhead. Chinancocha and Orconcocha."
+    },
+    {
+      "name": "Refugio Per\u00fa",
+      "lat": -9.012,
+      "lng": -77.625,
+      "type": "hut",
+      "altM": 4665,
+      "note": "Basic hut with gear rental and guiding services available. Good base for Pisco acclimatisation."
+    }
+  ]
+}
