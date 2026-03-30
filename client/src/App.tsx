@@ -125,10 +125,10 @@ export default function App() {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-         <AuthProvider>
-          <Router />
-          <Toaster />
-         <AuthProvider>
+          <AuthProvider>
+            <Router />
+            <Toaster />
+          </AuthProvider> {/* ✅ THIS WAS MISSING! */}
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>
