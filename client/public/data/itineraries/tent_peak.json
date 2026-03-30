@@ -1,91 +1,92 @@
-"sheetName": "Tent Peak",
-    "slug": "tent_peak",
-    "itinerary": [
-      {
-        "section": 1,
-        "route": "Nayapul to Annapurna Base Camp (ABC)",
-        "distanceKm": "35",
-        "elevGainM": "3500",
-        "elevLossM": "1200",
-        "maxAltM": "4130",
-        "lat": 28.53,
-        "lng": 83.878,
-        "overnight": "ABC Teahouses",
-        "mapNote": "Classic Annapurna Sanctuary approach via Ghandruk, Chhomrong, Bamboo, Deurali. Annapurna South and Machhapuchhre (Fishtail) dominate the skyline."
-      },
-      {
-        "section": 2,
-        "route": "ABC to Tent Peak Base Camp",
-        "distanceKm": "5",
-        "elevGainM": "400",
-        "elevLossM": "100",
-        "maxAltM": "4450",
-        "lat": 28.545,
-        "lng": 83.882,
-        "overnight": "Base Camp Tents",
-        "mapNote": "Transition to tent camping above ABC. Tent Peak's north ridge visible. Equipment check and crampon fitting."
-      },
-      {
-        "section": 3,
-        "route": "Base Camp to High Camp",
-        "distanceKm": "3",
-        "elevGainM": "550",
-        "elevLossM": "0",
-        "maxAltM": "5000",
-        "lat": 28.555,
-        "lng": 83.89,
-        "overnight": "High Camp Tents",
-        "mapNote": "Steep snow and rock to high camp at 5000m. Exposed position with dramatic Annapurna South face views."
-      },
-      {
-        "section": 4,
-        "route": "Summit Bid: High Camp \u2192 Summit \u2192 ABC",
-        "distanceKm": "8",
-        "elevGainM": "663",
-        "elevLossM": "1533",
-        "maxAltM": "5663",
-        "lat": 28.53,
-        "lng": 83.878,
-        "overnight": "ABC Teahouses",
-        "mapNote": "Pre-dawn start. Exposed snow ridge to summit. Annapurna I, II, III, IV and South in close proximity. Descend to ABC for celebration."
-      },
-      {
-        "section": 5,
-        "route": "ABC to Nayapul",
-        "distanceKm": "35",
-        "elevGainM": "1200",
-        "elevLossM": "3500",
-        "maxAltM": "4130",
-        "lat": 28.298,
-        "lng": 83.766,
-        "overnight": "Pokhara (Off-trail)",
-        "mapNote": "Full descent through the Modi Khola valley. Rhododendron forests in bloom during spring. Return to Pokhara."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Tent Peak Summit",
-        "lat": 28.555,
-        "lng": 83.89,
-        "type": "summit",
-        "altM": 5663,
-        "note": "Climbing peak above the Annapurna Sanctuary. Surrounded by eight-thousanders."
-      },
-      {
-        "name": "Annapurna Base Camp",
-        "lat": 28.53,
-        "lng": 83.878,
-        "type": "landmark",
-        "altM": 4130,
-        "note": "High glacial amphitheatre ringed by Annapurna I\u2013IV, Hiunchuli, and Machhapuchhre."
-      },
-      {
-        "name": "Machhapuchhre Base Camp",
-        "lat": 28.49,
-        "lng": 83.87,
-        "type": "landmark",
-        "altM": 3700,
-        "note": "Fishtail peak viewpoint. Often used as acclimatisation stop before ABC."
-      }
-    ]
-  }
+{
+  "slug": "tent_peak",
+  "sheetName": "Tent Peak",
+  "itinerary": [
+    {
+      "route": "Nayapul to Annapurna Base Camp (ABC)",
+      "distanceKm": "35",
+      "elevGainM": "3500",
+      "elevLossM": "1200",
+      "maxAltM": "4130",
+      "lat": 28.53,
+      "lng": 83.878,
+      "overnight": "ABC Teahouses",
+      "mapNote": "Classic Annapurna Sanctuary approach via Ghandruk, Chhomrong, Bamboo, Deurali. Annapurna South and Machhapuchhre (Fishtail) dominate the skyline.",
+      "day": 1
+    },
+    {
+      "route": "ABC to Tent Peak Base Camp",
+      "distanceKm": "5",
+      "elevGainM": "400",
+      "elevLossM": "100",
+      "maxAltM": "4450",
+      "lat": 28.545,
+      "lng": 83.882,
+      "overnight": "Base Camp Tents",
+      "mapNote": "Transition to tent camping above ABC. Tent Peak's north ridge visible. Equipment check and crampon fitting.",
+      "day": 2
+    },
+    {
+      "route": "Base Camp to High Camp",
+      "distanceKm": "3",
+      "elevGainM": "550",
+      "elevLossM": "0",
+      "maxAltM": "5000",
+      "lat": 28.555,
+      "lng": 83.89,
+      "overnight": "High Camp Tents",
+      "mapNote": "Steep snow and rock to high camp at 5000m. Exposed position with dramatic Annapurna South face views.",
+      "day": 3
+    },
+    {
+      "route": "Summit Bid: High Camp \u2192 Summit \u2192 ABC",
+      "distanceKm": "8",
+      "elevGainM": "663",
+      "elevLossM": "1533",
+      "maxAltM": "5663",
+      "lat": 28.53,
+      "lng": 83.878,
+      "overnight": "ABC Teahouses",
+      "mapNote": "Pre-dawn start. Exposed snow ridge to summit. Annapurna I, II, III, IV and South in close proximity. Descend to ABC for celebration.",
+      "day": 4
+    },
+    {
+      "route": "ABC to Nayapul",
+      "distanceKm": "35",
+      "elevGainM": "1200",
+      "elevLossM": "3500",
+      "maxAltM": "4130",
+      "lat": 28.298,
+      "lng": 83.766,
+      "overnight": "Pokhara (Off-trail)",
+      "mapNote": "Full descent through the Modi Khola valley. Rhododendron forests in bloom during spring. Return to Pokhara.",
+      "day": 5
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Tent Peak Summit",
+      "lat": 28.555,
+      "lng": 83.89,
+      "type": "summit",
+      "altM": 5663,
+      "note": "Climbing peak above the Annapurna Sanctuary. Surrounded by eight-thousanders."
+    },
+    {
+      "name": "Annapurna Base Camp",
+      "lat": 28.53,
+      "lng": 83.878,
+      "type": "landmark",
+      "altM": 4130,
+      "note": "High glacial amphitheatre ringed by Annapurna I\u2013IV, Hiunchuli, and Machhapuchhre."
+    },
+    {
+      "name": "Machhapuchhre Base Camp",
+      "lat": 28.49,
+      "lng": 83.87,
+      "type": "landmark",
+      "altM": 3700,
+      "note": "Fishtail peak viewpoint. Often used as acclimatisation stop before ABC."
+    }
+  ]
+}
