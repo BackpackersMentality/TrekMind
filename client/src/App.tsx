@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
 // ✅ ADD THIS IMPORT (Adjust the path if your provider is exported from somewhere else)
-import { AuthProvider } from "@/hooks/useAuth"; 
+import { AuthProvider } from "@/hooks/useAuth.tsx"; 
 
 // ── Route-level code splitting ─────────────────────────────────────────────────
 const Home          = lazy(() => import("@/pages/Home"));
