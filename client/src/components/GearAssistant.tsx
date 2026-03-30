@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { 
   ShieldCheck, Footprints, Tent, Layers, Sun, Backpack, Flame, 
-  Droplet, Activity, Link, BedDouble, ExternalLink
+  Droplet, Activity, Link, BedDouble, ExternalLink, Mountain, Anchor
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +12,7 @@ interface GearAssistantProps {
   durationDays: number;
   accommodationType: string;
   campingRequired: boolean;
+  tier?: number; // Pass trek tier so Tier 5 peaks get full alpinism kit
 }
 
 type Budget = "low" | "mid" | "high";
@@ -22,8 +23,8 @@ interface GearItem {
   recommendation: string;
   description: string;
   reason: string;
-  reviewUrl?: string;   // BM review link — only set when a real review exists
-  reviewLabel?: string; // Short label e.g. "Osprey Atmos Review"
+  reviewUrl?: string;
+  reviewLabel?: string;
 }
 
 const BM = "https://backpackersmentality.com";
@@ -34,18 +35,20 @@ export function GearAssistant({
   maxAltitude, 
   durationDays, 
   accommodationType, 
-  campingRequired 
+  campingRequired,
+  tier,
 }: GearAssistantProps) {
   const [budget, setBudget] = useState<Budget>("mid");
 
   const getGearRecommendations = (budget: Budget): GearItem[] => {
-    const isCamping = campingRequired || accommodationType.toLowerCase().includes("camping");
-    const isViaFerrata = trekName.toLowerCase().includes("alta via") || difficulty.toLowerCase().includes("ferrata");
-    
+    const isCamping      = campingRequired || accommodationType.toLowerCase().includes("camping");
+    const isViaFerrata   = trekName.toLowerCase().includes("alta via") || difficulty.toLowerCase().includes("ferrata");
+    // Tier 5 trekking peaks require full alpinism kit (crampons, ice axe, harness, helmet)
+    const isTrekkingPeak = tier === 5 || maxAltitude >= 5000;
+
     const items: GearItem[] = [];
 
     // --- 1. BACKPACK ---
-    // Mid: swapped from Osprey Exos 58 → Osprey Atmos AG 50 / Aura AG 50 (BM reviewed, 8.5/10)
     items.push({
       category: "Backpack",
       icon: Backpack,
@@ -67,8 +70,6 @@ export function GearAssistant({
     });
 
     // --- 2. FOOTWEAR ---
-    // Via Ferrata High: La Sportiva TX4 GTX — BM reviewed 9.0/10 ✅ keep
-    // Standard Mid: swapped to Scarpa Terra GTX where relevant (BM reviewed 8.4)
     items.push({
       category: "Footwear",
       icon: Footprints,
@@ -78,21 +79,35 @@ export function GearAssistant({
             : budget === "mid" 
               ? "Scarpa Mescalito Planet / Terra GTX" 
               : "Merrell Moab 3 Mid")
-        : (budget === "high" 
-            ? "Arc'teryx Aerios FL 2 Mid GTX" 
-            : budget === "mid" 
-              ? "Salomon X Ultra 4 Mid GTX" 
-              : "Merrell Moab 3 Mid"),
+        : isTrekkingPeak
+          ? (budget === "high"
+              ? "La Sportiva Nepal Cube GTX (mountaineering boot)"
+              : budget === "mid"
+                ? "Scarpa Mont Blanc GTX / Zamberlan Vioz GTX"
+                : "Salomon Quest 4 GTX (stiff, crampon-compatible)")
+          : (budget === "high" 
+              ? "Arc'teryx Aerios FL 2 Mid GTX" 
+              : budget === "mid" 
+                ? "Salomon X Ultra 4 Mid GTX" 
+                : "Merrell Moab 3 Mid"),
       description: isViaFerrata 
         ? "Stiff sole for rock scrambling and via ferrata rungs." 
-        : "Comfortable, waterproof ankle support.",
-      reason: isViaFerrata && budget === "high" 
-        ? "Unmatched grip on Dolomites limestone; stiff enough for Via Ferrata rungs — 9.0/10 in our full test." 
-        : isViaFerrata && budget === "mid"
-          ? "Two brilliant options: Mescalito (scored 9.0) for pure approach work, Terra GTX (8.4) for longer trail days."
-          : budget === "mid" 
-            ? "Excellent ankle support for long days; versatile enough for rock and mud." 
-            : "Famous out-of-the-box comfort; affordable and incredibly durable.",
+        : isTrekkingPeak
+          ? "Crampon-compatible mountaineering boot for glacier and high-altitude terrain."
+          : "Comfortable, waterproof ankle support.",
+      reason: isTrekkingPeak && budget === "high"
+        ? "B3-rated mountaineering boot — the only choice for crampons on serious glacier terrain above 5000m."
+        : isTrekkingPeak && budget === "mid"
+          ? "Semi-stiff C2 crampon-compatible boots. Proven on Himalayan and Andean trekking peaks without full expedition cost."
+          : isTrekkingPeak
+            ? "Stiff enough for C1/C2 crampons. A hard toe rand and waterproof lining are non-negotiable on glaciated terrain."
+            : isViaFerrata && budget === "high" 
+              ? "Unmatched grip on Dolomites limestone; stiff enough for Via Ferrata rungs — 9.0/10 in our full test." 
+              : isViaFerrata && budget === "mid"
+                ? "Two brilliant options: Mescalito (scored 9.0) for pure approach work, Terra GTX (8.4) for longer trail days."
+                : budget === "mid" 
+                  ? "Excellent ankle support for long days; versatile enough for rock and mud." 
+                  : "Famous out-of-the-box comfort; affordable and incredibly durable.",
       ...(isViaFerrata && budget === "high" && {
         reviewUrl: `${BM}/la-sportiva-tx4-gtx-review-the-best-engineered-shoes/`,
         reviewLabel: "La Sportiva TX4 GTX Review",
@@ -104,9 +119,6 @@ export function GearAssistant({
     });
 
     // --- 3. CLOTHING (SHELL) ---
-    // High: Arc'teryx Beta AR — BM reviewed 8.0/10 ✅ keep
-    // Mid: swapped Patagonia Torrentshell → Montane Minimus Lite (BM reviewed 8.1/10)
-    // Note: Patagonia Torrentshell NOT swapped at Low — no BM review at that tier
     items.push({
       category: "Clothing (Shell)",
       icon: Layers,
@@ -115,7 +127,9 @@ export function GearAssistant({
         : budget === "mid" 
           ? "Montane Minimus Lite Jacket" 
           : "Marmot PreCip Eco / Frogg Toggs",
-      description: "Hard shell for unpredictable mountain rain and wind.",
+      description: isTrekkingPeak 
+        ? "Hard shell essential for high-altitude wind, spindrift, and summit conditions." 
+        : "Hard shell for unpredictable mountain rain and wind.",
       reason: budget === "high" 
         ? "Gore-Tex Pro offers the best breathability and storm protection at altitude — 8.0/10 in our full test." 
         : budget === "mid" 
@@ -132,9 +146,6 @@ export function GearAssistant({
     });
 
     // --- 4. CLOTHING (INSULATION) ---
-    // High: Arc'teryx Proton LT — BM reviewed 8.4/10
-    // Mid: swapped Patagonia Nano Puff → Rab Microlight Alpine (BM reviewed 8.7/10 — higher score)
-    // Low: Decathlon — no BM review, keep as-is
     items.push({
       category: "Clothing (Insulation)",
       icon: Sun,
@@ -144,7 +155,7 @@ export function GearAssistant({
           ? "Rab Microlight Alpine Down Jacket" 
           : "Decathlon Forclaz MT100 Down",
       description: maxAltitude > 3000 
-        ? "Crucial for freezing evening temperatures at high altitude." 
+        ? "Crucial for freezing temperatures at high altitude — summit nights can drop to −20°C." 
         : "Lightweight warmth for rest stops and evenings.",
       reason: budget === "high" 
         ? "Coreloft Compact synthetic insulation works wet or dry; perfect active layer under a shell at altitude — 8.4/10 in our test." 
@@ -161,22 +172,108 @@ export function GearAssistant({
       }),
     });
 
-    // --- 5. VIA FERRATA (Conditional) ---
+    // --- 5. TREKKING PEAK ALPINISM KIT (Tier 5 / altitude ≥ 5000m) ---
+    if (isTrekkingPeak) {
+      // 5a. Crampons
+      items.push({
+        category: "Crampons",
+        icon: Mountain,
+        recommendation: budget === "high"
+          ? "Grivel G12 New-Matic (12-point, C2 step-in)"
+          : budget === "mid"
+            ? "Black Diamond Serac Clip (10-point, strap/hybrid)"
+            : "Camp XLC 390 / Hillsound Trail Crampon Pro",
+        description: "Essential for glacier travel, snow slopes, and icy summit terrain.",
+        reason: budget === "high"
+          ? "12-point step-in crampon — bomber on steep ice and packed snow. Compatible with B3 mountaineering boots."
+          : budget === "mid"
+            ? "Reliable 10-point crampon that works on most semi-stiff boots. Proven on Island Peak and standard Himalayan trekking peaks."
+            : "Budget option that fits a range of boot stiffnesses. Adequate for moderate snow slopes on introductory peaks.",
+      });
+
+      // 5b. Ice Axe
+      items.push({
+        category: "Ice Axe",
+        icon: Anchor,
+        recommendation: budget === "high"
+          ? "Black Diamond Raven Pro (60–65cm)"
+          : budget === "mid"
+            ? "Petzl Summit (60cm) / Grivel Nepal Classic"
+            : "Camp Corsa Nanotech (60cm) / Simond Ice Axe",
+        description: "Walking axe for self-arrest, balance on steep snow, and fixed-rope sections.",
+        reason: budget === "high"
+          ? "The benchmark walking axe. Chromoly steel spike, machined adze — preferred by Himalayan guides for its reliability."
+          : budget === "mid"
+            ? "Excellent weight-to-strength balance. The Petzl Summit is a favourite for trekking peak first-timers — intuitive and confidence-inspiring."
+            : "Functional basic axe for non-technical snow slopes. Heavier but robust and well within budget.",
+      });
+
+      // 5c. Climbing Helmet
+      items.push({
+        category: "Climbing Helmet",
+        icon: ShieldCheck,
+        recommendation: budget === "high"
+          ? "Petzl Sirocco (ultralight, foam)"
+          : budget === "mid"
+            ? "Black Diamond Half Dome / Petzl Boreo"
+            : "Mammut Skywalker 3 / Camp Armour",
+        description: "Mandatory on glaciated terrain — rockfall, ice fall, and fixed rope sections.",
+        reason: budget === "high"
+          ? "At 160g the Sirocco is the lightest UIAA-certified helmet. No compromise on protection, huge gain on weight."
+          : budget === "mid"
+            ? "The Half Dome has been the industry workhorse for a decade. Comfortable for all-day wear at altitude and CE/UIAA certified."
+            : "Fully certified, highly adjustable to fit over balaclava and beanie. Heavier but perfectly safe and extremely affordable.",
+      });
+
+      // 5d. Harness
+      items.push({
+        category: "Climbing Harness",
+        icon: Activity,
+        recommendation: budget === "high"
+          ? "Petzl Hirundos / Arc'teryx AR-395a"
+          : budget === "mid"
+            ? "Black Diamond Momentum / Petzl Corax"
+            : "Petzl Corax / Singing Rock Sit Worker",
+        description: "Required for glacier travel with a guide and fixed rope sections on summit day.",
+        reason: budget === "high"
+          ? "Ultralight harness with Wireframe buckles — barely noticed on the approach, secure when you need it most."
+          : budget === "mid"
+            ? "The Momentum is the go-to guide-recommended harness for trekking peaks — simple, bomber, fits over insulation layers."
+            : "Highly adjustable waistbelt and leg loops — essential when wearing multiple base layers at altitude. Very affordable.",
+      });
+    }
+
+    // --- 6. VIA FERRATA KIT (Conditional) ---
     if (isViaFerrata) {
       items.push({
-        category: "Via Ferrata Kit",
+        category: "Via Ferrata Lanyard",
         icon: Link,
         recommendation: budget === "high" 
-          ? "Petzl Scorpio Eashook & Meteor Helmet" 
+          ? "Petzl Scorpio Eashook" 
           : budget === "mid" 
-            ? "Black Diamond Iron Cruiser & Half Dome" 
-            : "Camp Kinetic Rewind & Camp Armour Helmet",
-        description: "Energy-absorbing lanyard and climbing helmet.",
+            ? "Black Diamond Iron Cruiser" 
+            : "Camp Kinetic Rewind",
+        description: "Energy-absorbing Y-shaped lanyard — not optional on via ferrata.",
         reason: budget === "high" 
-          ? "Premium carabiners prevent hand fatigue; helmet is ultralight and ventilated." 
+          ? "Premium carabiners with smooth EasyLock gates prevent hand fatigue on long sections." 
           : budget === "mid" 
-            ? "Rugged, easy-to-use sliding carabiners and an absolute workhorse of a helmet." 
-            : "Affordable, fully certified safety gear; slightly heavier but perfectly safe.",
+            ? "Rugged, easy-to-use sliding carabiners. The industry workhorse for Alta Via routes." 
+            : "Affordable, fully certified energy-absorbing lanyard; slightly heavier but perfectly safe.",
+      });
+      items.push({
+        category: "Via Ferrata Helmet",
+        icon: ShieldCheck,
+        recommendation: budget === "high"
+          ? "Petzl Meteor"
+          : budget === "mid"
+            ? "Black Diamond Half Dome"
+            : "Camp Armour Helmet",
+        description: "Climbing helmet for rockfall and cable impact protection.",
+        reason: budget === "high"
+          ? "Ultralight foam construction — 240g, ventilated, and UIAA certified. Barely noticeable on the head."
+          : budget === "mid"
+            ? "The standard all-rounder; comfortable enough for a full Alta Via day in summer heat."
+            : "Affordable, CE/UIAA certified, and adjustable to fit over a thin beanie in cooler conditions.",
       });
       items.push({
         category: "Harness",
@@ -186,18 +283,17 @@ export function GearAssistant({
           : budget === "mid" 
             ? "Black Diamond Momentum" 
             : "Petzl Corax",
-        description: "Climbing harness for clipping into cables.",
+        description: "Climbing harness for clipping into via ferrata cables.",
         reason: budget === "high" 
-          ? "Extremely comfortable for long hanging belays but packs completely flat." 
+          ? "Extremely comfortable for long sections; packs completely flat into a daypack." 
           : budget === "mid" 
-            ? "The standard all-rounder harness; comfortable enough for the Alta Via." 
+            ? "The standard all-rounder; comfortable enough for the Alta Via." 
             : "Highly adjustable (fits over bulky layers) and very affordable.",
       });
     }
 
-    // --- 6. CAMPING (Conditional) ---
+    // --- 7. CAMPING (Conditional) ---
     if (isCamping) {
-      // Mid: Big Agnes Copper Spur HV UL2 — BM reviewed 8.0/10 ✅ keep
       items.push({
         category: "Tent",
         icon: Tent,
@@ -206,7 +302,9 @@ export function GearAssistant({
           : budget === "mid" 
             ? "Big Agnes Copper Spur HV UL2" 
             : "Naturehike Cloud-Up 2",
-        description: "Lightweight shelter for backcountry sleeping.",
+        description: isTrekkingPeak
+          ? "4-season or 3+ season tent able to handle high-altitude wind and sub-zero nights."
+          : "Lightweight shelter for backcountry sleeping.",
         reason: budget === "high" 
           ? "The holy grail of ultralight trekking tents; uses trekking poles to pitch, weighing under 600g." 
           : budget === "mid" 
@@ -226,22 +324,22 @@ export function GearAssistant({
           : budget === "mid" 
             ? "Mountain Hardwear Bishop Pass 15°F" 
             : "Kelty Cosmic Down 20",
-        description: maxAltitude > 3000 
-          ? "Rated for freezing mountain temperatures." 
-          : "3-season warmth rating.",
+        description: isTrekkingPeak
+          ? "Rated to at least −10°C / 14°F — base camp temperatures on high peaks can be brutal."
+          : maxAltitude > 3000 
+            ? "Rated for freezing mountain temperatures." 
+            : "3-season warmth rating.",
         reason: budget === "high" 
           ? "4-season performance that handles serious alpine temperatures. Proven on the Annapurna Circuit and high-altitude camps." 
           : budget === "mid" 
             ? "Exceptional value for RDS-certified down; a perfect 3-season mountain bag." 
             : "The best entry-level down bag on the market. Bulkier, but keeps you warm to -6°C.",
-        // Rab Alpine 800 is used personally — link to kit list as supporting context
         ...(budget === "high" && {
           reviewUrl: `${BM}/ultimate-trekking-kit-list-whats-in-the-pack/`,
           reviewLabel: "In our Trekking Kit List",
         }),
       });
 
-      // Mid: swapped NEMO Tensor → Sea to Summit Ultralight Insulated (BM reviewed 8.3/10)
       items.push({
         category: "Sleeping Pad",
         icon: Layers,
@@ -250,7 +348,7 @@ export function GearAssistant({
           : budget === "mid" 
             ? "Sea to Summit Ultralight Insulated Sleeping Pad" 
             : "Klymit Static V Insulated",
-        description: "Insulation from the cold ground.",
+        description: "Insulation from cold ground — critical at altitude.",
         reason: budget === "high" 
           ? "The best warmth-to-weight ratio for sleeping on frozen or rocky alpine ground." 
           : budget === "mid" 
@@ -279,7 +377,7 @@ export function GearAssistant({
       });
     }
 
-    // --- 7. WATER & EMERGENCY ---
+    // --- 8. WATER & EMERGENCY ---
     items.push({
       category: "Water Filter",
       icon: Droplet,
@@ -288,7 +386,7 @@ export function GearAssistant({
         : budget === "mid" 
           ? "Sawyer Squeeze" 
           : "Sawyer Mini / Aquamira Drops",
-      description: "Essential for drinking from streams and lakes safely.",
+      description: "Essential for drinking from streams and glacial melt safely.",
       reason: budget === "high" 
         ? "Fastest flow rate on the market; soft flask rolls up into your pocket when empty." 
         : budget === "mid" 
@@ -304,18 +402,22 @@ export function GearAssistant({
         : budget === "mid" 
           ? "Adventure Medical Kits UL + Bivy" 
           : "DIY Pharmacy Kit + Mylar Blanket",
-      description: "Survival gear for worst-case scenarios.",
+      description: isTrekkingPeak
+        ? "Satellite communication is non-negotiable above 5000m. Altitude sickness protocol included."
+        : "Survival gear for worst-case scenarios.",
       reason: budget === "high" 
-        ? "Satellite SOS and messaging is non-negotiable for remote, high-altitude treks." 
+        ? "Satellite SOS and messaging is non-negotiable for remote, high-altitude treks — especially above 5000m." 
         : budget === "mid" 
           ? "Pre-packaged, waterproof medical kit paired with a lightweight emergency space bivy." 
-          : "Ziploc bag with ibuprofen, leukotape, bandages, and a basic Mylar blanket.",
+          : "Ziploc bag with ibuprofen, leukotape, bandages, Diamox, and a basic Mylar blanket.",
     });
 
     return items;
   };
 
   const recommendations = getGearRecommendations(budget);
+  const isTrekkingPeak  = tier === 5 || maxAltitude >= 5000;
+  const isViaFerrata    = trekName.toLowerCase().includes("alta via") || difficulty.toLowerCase().includes("ferrata");
 
   return (
     <div className="flex flex-col gap-6">
@@ -324,7 +426,11 @@ export function GearAssistant({
         <div>
           <h3 className="font-bold text-lg text-foreground">Gear Recommendations</h3>
           <p className="text-sm text-muted-foreground">
-            Tailored for this trek's altitude and terrain.{" "}
+            {isTrekkingPeak
+              ? "Full alpinism kit for this trekking peak — crampons, ice axe, harness and helmet included."
+              : isViaFerrata
+                ? "Tailored for via ferrata — approach shoes, lanyard and helmet included."
+                : "Tailored for this trek's altitude and terrain."}{" "}
             <a
               href="https://backpackersmentality.com/ultimate-trekking-kit-list-whats-in-the-pack/"
               target="_blank"
@@ -354,6 +460,20 @@ export function GearAssistant({
         </div>
       </div>
 
+      {/* Gear type badge */}
+      {isTrekkingPeak && (
+        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#2E86C1]/10 border border-[#2E86C1]/25 text-[#2E86C1] text-xs font-semibold">
+          <Mountain className="w-3.5 h-3.5 shrink-0" />
+          Tier 5 Trekking Peak — alpinism kit (crampons, ice axe, harness, helmet) included below
+        </div>
+      )}
+      {isViaFerrata && !isTrekkingPeak && (
+        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/25 text-amber-700 text-xs font-semibold">
+          <Link className="w-3.5 h-3.5 shrink-0" />
+          Via Ferrata route — lanyard, helmet and harness kit included below
+        </div>
+      )}
+
       {/* Gear cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {recommendations.map((item, index) => (
@@ -380,7 +500,6 @@ export function GearAssistant({
               </div>
             </div>
 
-            {/* BM review link — only renders when a real review exists */}
             {item.reviewUrl && (
               <a
                 href={item.reviewUrl}
@@ -397,7 +516,7 @@ export function GearAssistant({
         ))}
       </div>
 
-      {/* Footer — link to full kit room */}
+      {/* Footer */}
       <div className="flex items-center justify-between px-1 text-xs text-muted-foreground">
         <span>Items marked with ↗ are independently reviewed on Backpacker's Mentality.</span>
         <a
