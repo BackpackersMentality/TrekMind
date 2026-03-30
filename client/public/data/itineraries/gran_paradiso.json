@@ -1,55 +1,56 @@
-"sheetName": "Gran Paradiso",
-    "slug": "gran_paradiso",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Pont (Valsavarenche) to Rifugio Vittorio Emanuele II",
-        "distanceKm": "5",
-        "elevGainM": "800",
-        "elevLossM": "0",
-        "maxAltM": "2732",
-        "lat": 45.516,
-        "lng": 7.234,
-        "overnight": "Rifugio Vittorio Emanuele II",
-        "mapNote": "Easy approach hike from Pont through alpine meadows and ibex territory. Historic rifugio with excellent Italian cuisine."
-      },
-      {
-        "day": 2,
-        "route": "Rifugio \u2192 Summit \u2192 Pont",
-        "distanceKm": "13",
-        "elevGainM": "1329",
-        "elevLossM": "2129",
-        "maxAltM": "4061",
-        "lat": 45.519,
-        "lng": 7.266,
-        "overnight": "Pont (Off-trail)",
-        "mapNote": "Pre-dawn start. Glacier traverse, rocky ridge to Virgin Mary statue on summit. Highest point entirely on Italian soil. Descend full return to Pont."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Gran Paradiso Summit",
-        "lat": 45.519,
-        "lng": 7.266,
-        "type": "summit",
-        "altM": 4061,
-        "note": "Only 4000m peak entirely in Italy. Bronze Virgin Mary statue on summit. Views across Graian Alps."
-      },
-      {
-        "name": "Rifugio Vittorio Emanuele II",
-        "lat": 45.516,
-        "lng": 7.234,
-        "type": "hut",
-        "altM": 2732,
-        "note": "Classic alpine hut with long mountaineering history. Named after the Italian king who hunted here."
-      },
-      {
-        "name": "Gran Paradiso Glacier",
-        "lat": 45.518,
-        "lng": 7.25,
-        "type": "glacier",
-        "altM": 3500,
-        "note": "Moderate glacier with crevasses. Rope travel standard. Ibex frequently spotted on moraines below."
-      }
-    ]
-  }
+{
+  "slug": "gran_paradiso",
+  "sheetName": "Gran Paradiso",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Pont (Valsavarenche) to Rifugio Vittorio Emanuele II",
+      "distanceKm": "5",
+      "elevGainM": "800",
+      "elevLossM": "0",
+      "maxAltM": "2732",
+      "lat": 45.516,
+      "lng": 7.234,
+      "overnight": "Rifugio Vittorio Emanuele II",
+      "mapNote": "Easy approach hike from Pont through alpine meadows and ibex territory. Historic rifugio with excellent Italian cuisine."
+    },
+    {
+      "day": 2,
+      "route": "Rifugio \u2192 Summit \u2192 Pont",
+      "distanceKm": "13",
+      "elevGainM": "1329",
+      "elevLossM": "2129",
+      "maxAltM": "4061",
+      "lat": 45.519,
+      "lng": 7.266,
+      "overnight": "Pont (Off-trail)",
+      "mapNote": "Pre-dawn start. Glacier traverse, rocky ridge to Virgin Mary statue on summit. Highest point entirely on Italian soil. Descend full return to Pont."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Gran Paradiso Summit",
+      "lat": 45.519,
+      "lng": 7.266,
+      "type": "summit",
+      "altM": 4061,
+      "note": "Only 4000m peak entirely in Italy. Bronze Virgin Mary statue on summit. Views across Graian Alps."
+    },
+    {
+      "name": "Rifugio Vittorio Emanuele II",
+      "lat": 45.516,
+      "lng": 7.234,
+      "type": "hut",
+      "altM": 2732,
+      "note": "Classic alpine hut with long mountaineering history. Named after the Italian king who hunted here."
+    },
+    {
+      "name": "Gran Paradiso Glacier",
+      "lat": 45.518,
+      "lng": 7.25,
+      "type": "glacier",
+      "altM": 3500,
+      "note": "Moderate glacier with crevasses. Rope travel standard. Ibex frequently spotted on moraines below."
+    }
+  ]
+}
