@@ -1,31 +1,40 @@
-// types/filters.ts — multi-select: each filter is an array of selected values
+// types/filters.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// FIX: Added month: string[] to FilterState and EMPTY_FILTERS.
+// This resolves the blank-screen crash when the month filter is used.
+// ─────────────────────────────────────────────────────────────────────────────
 
 export interface FilterState {
-  tier:          string[];   // e.g. ["1","2"] or [] for all
+  tier:          string[];
   region:        string[];
-  accommodation: string[];
-  terrain:       string[];
   duration:      string[];
+  terrain:       string[];
+  accommodation: string[];
   popularity:    string[];
+  month:         string[]; // ← ADDED: numeric strings "1"–"12"
 }
 
 export const EMPTY_FILTERS: FilterState = {
-  tier: [], region: [], accommodation: [],
-  terrain: [], duration: [], popularity: [],
+  tier:          [],
+  region:        [],
+  duration:      [],
+  terrain:       [],
+  accommodation: [],
+  popularity:    [],
+  month:         [], // ← ADDED: must be [] not undefined
 };
 
-export function isFilterEmpty(filters: FilterState): boolean {
-  return Object.values(filters).every(arr => arr.length === 0);
+export function countActiveFilters(f: FilterState): number {
+  // Null-safe: guard each field with ?? []
+  return (
+    (f.tier          ?? []).length +
+    (f.region        ?? []).length +
+    (f.duration      ?? []).length +
+    (f.terrain       ?? []).length +
+    (f.accommodation ?? []).length +
+    (f.popularity    ?? []).length +
+    (f.month         ?? []).length  // ← ADDED
+  );
 }
 
-export function countActiveFilters(filters: FilterState): number {
-  return Object.values(filters).reduce((sum, arr) => sum + arr.length, 0);
-}
-
-export interface FilterGroupProps {
-  label:    string;
-  name:     string;
-  options:  { value: string; label: string }[];
-  selected: string[];
-  onChange: (value: string) => void;  // toggles individual item
-}
+export type FilterKey = keyof FilterState;
