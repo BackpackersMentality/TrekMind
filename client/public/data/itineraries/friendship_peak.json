@@ -1,0 +1,103 @@
+"sheetName": "Friendship Peak",
+    "slug": "friendship_peak",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Manali to Solang Valley / Base of Approach",
+        "distanceKm": "14",
+        "elevGainM": "400",
+        "elevLossM": "0",
+        "maxAltM": "2480",
+        "lat": 32.32,
+        "lng": 77.14,
+        "overnight": "Solang / Dhundi Camp",
+        "mapNote": "Drive from Manali to Dhundi (2480m). Short walk to camp. Gear organisation and team briefing. Beas River valley above Manali."
+      },
+      {
+        "day": 2,
+        "route": "Dhundi to Beas Kund Base Camp",
+        "distanceKm": "11",
+        "elevGainM": "1300",
+        "elevLossM": "200",
+        "maxAltM": "3700",
+        "lat": 32.305,
+        "lng": 77.11,
+        "overnight": "Beas Kund Base Camp",
+        "mapNote": "Trek through high meadows and moraines to Beas Kund glacial basin (3700m). Friendship Peak visible above. Camp setup."
+      },
+      {
+        "day": 3,
+        "route": "Base Camp Acclimatisation + High Camp Carry",
+        "distanceKm": "5",
+        "elevGainM": "500",
+        "elevLossM": "500",
+        "maxAltM": "4200",
+        "lat": 32.295,
+        "lng": 77.115,
+        "overnight": "Beas Kund Base Camp",
+        "mapNote": "Acclimatisation hike toward the glacier. Crampon fitting and ice axe technique practice. Rest afternoon."
+      },
+      {
+        "day": 4,
+        "route": "Base Camp to High Camp (Glacier)",
+        "distanceKm": "5",
+        "elevGainM": "1089",
+        "elevLossM": "0",
+        "maxAltM": "4800",
+        "lat": 32.2833,
+        "lng": 77.1167,
+        "overnight": "High Camp Tents",
+        "mapNote": "Cross the glacier to high camp at ~4800m. Crampons required from base of glacier. Early night for alpine start."
+      },
+      {
+        "day": 5,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Base Camp",
+        "distanceKm": "9",
+        "elevGainM": "489",
+        "elevLossM": "1589",
+        "maxAltM": "5289",
+        "lat": 32.305,
+        "lng": 77.11,
+        "overnight": "Beas Kund Base Camp",
+        "mapNote": "Alpine start 4am. Snow slopes to summit at 5289m. Kullu valley and Himalayan giants in view. Descend to base camp."
+      },
+      {
+        "day": 6,
+        "route": "Base Camp to Manali (Descent)",
+        "distanceKm": "11",
+        "elevGainM": "0",
+        "elevLossM": "1200",
+        "maxAltM": "3700",
+        "lat": 32.244,
+        "lng": 77.1892,
+        "overnight": "Manali (Off-trail)",
+        "mapNote": "Full descent through Beas Kund basin and Solang Valley back to Manali. Celebration in Old Manali."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Friendship Peak Summit",
+        "lat": 32.2833,
+        "lng": 77.1167,
+        "type": "summit",
+        "altM": 5289,
+        "note": "India's most accessible glacier summit. Kullu valley panorama. Deo Tibba and Indrasan visible to the east."
+      },
+      {
+        "name": "Beas Kund",
+        "lat": 32.305,
+        "lng": 77.11,
+        "type": "landmark",
+        "altM": 3700,
+        "note": "Sacred glacial lake \u2014 source of the Beas River. Beautiful camping spot with Friendship Peak above."
+      },
+      {
+        "name": "Friendship Glacier",
+        "lat": 32.295,
+        "lng": 77.115,
+        "type": "glacier",
+        "altM": 4200,
+        "note": "Main glacier approach to high camp. Crampons required. Moderate gradient ideal for first glacier travel."
+      }
+    ]
+  }

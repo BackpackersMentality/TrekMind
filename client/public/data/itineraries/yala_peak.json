@@ -1,0 +1,79 @@
+"sheetName": "Yala Peak",
+    "slug": "yala_peak",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Syabrubesi to Kyanjin Gompa",
+        "distanceKm": "25",
+        "elevGainM": "2500",
+        "elevLossM": "200",
+        "maxAltM": "3870",
+        "lat": 28.2111,
+        "lng": 85.5667,
+        "overnight": "Kyanjin Teahouses",
+        "mapNote": "Multi-day trek up the Langtang valley from Syabrubesi. Langtang Lirung (7227m) dominates the upper valley. Kyanjin Gompa is a sacred Buddhist monastery."
+      },
+      {
+        "section": 2,
+        "route": "Kyanjin Gompa to Yala Base Camp",
+        "distanceKm": "6",
+        "elevGainM": "730",
+        "elevLossM": "50",
+        "maxAltM": "4600",
+        "lat": 28.235,
+        "lng": 85.58,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Short approach through high-altitude meadows and moraine. Base camp with views of Yala Peak's rocky south face."
+      },
+      {
+        "section": 3,
+        "route": "Summit Bid: Base Camp \u2192 Summit \u2192 Kyanjin Gompa",
+        "distanceKm": "10",
+        "elevGainM": "900",
+        "elevLossM": "1630",
+        "maxAltM": "5500",
+        "lat": 28.2111,
+        "lng": 85.5667,
+        "overnight": "Kyanjin Teahouses",
+        "mapNote": "Early morning start. Rocky and glaciated terrain to summit at 5500m. Outstanding views of Langtang Lirung, Shishapangma, and Ganesh Himal. Descend to Kyanjin Gompa."
+      },
+      {
+        "section": 4,
+        "route": "Kyanjin Gompa to Syabrubesi",
+        "distanceKm": "25",
+        "elevGainM": "200",
+        "elevLossM": "2500",
+        "maxAltM": "3870",
+        "lat": 28.1633,
+        "lng": 85.3323,
+        "overnight": "Syabrubesi (Off-trail)",
+        "mapNote": "Full descent of the Langtang valley. Bamboo forest and waterfalls below Lama Hotel. Return to Syabrubesi for bus back to Kathmandu."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Yala Peak Summit",
+        "lat": 28.235,
+        "lng": 85.58,
+        "type": "summit",
+        "altM": 5500,
+        "note": "Ideal first technical Himalayan peak. Rocky summit with fixed ropes. Shishapangma visible across the Tibetan border."
+      },
+      {
+        "name": "Kyanjin Gompa",
+        "lat": 28.2111,
+        "lng": 85.5667,
+        "type": "landmark",
+        "altM": 3870,
+        "note": "Ancient Buddhist monastery at the heart of the Langtang valley. Local yak cheese produced here."
+      },
+      {
+        "name": "Tserko Ri",
+        "lat": 28.23,
+        "lng": 85.56,
+        "type": "viewpoint",
+        "altM": 4984,
+        "note": "Classic acclimatisation hike from Kyanjin. 360\u00b0 views of Langtang Lirung, Langtang II, and the Tibetan plateau."
+      }
+    ]
+  }

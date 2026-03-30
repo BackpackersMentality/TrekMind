@@ -1,0 +1,75 @@
+"sheetName": "Mount Elbrus",
+    "slug": "mount_elbrus",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Terskol to Barrels Huts (Garabashi)",
+        "distanceKm": "4",
+        "elevGainM": "1500",
+        "elevLossM": "0",
+        "maxAltM": "3800",
+        "lat": 43.298,
+        "lng": 42.458,
+        "overnight": "Barrels Huts",
+        "mapNote": "Gondola from Azau to Mir station (3500m), then snowcat or hike to the distinctive orange Barrels Huts at 3800m. Initial acclimatisation walks."
+      },
+      {
+        "section": 2,
+        "route": "Acclimatisation: Barrels Huts to Pastukhov Rocks",
+        "distanceKm": "6",
+        "elevGainM": "900",
+        "elevLossM": "900",
+        "maxAltM": "4700",
+        "lat": 43.298,
+        "lng": 42.458,
+        "overnight": "Barrels Huts",
+        "mapNote": "Climb and descend to Pastukhov Rocks at 4700m. Critical acclimatisation. Saddle between East and West peaks visible."
+      },
+      {
+        "section": 3,
+        "route": "Summit Bid: Barrels Huts \u2192 Summit \u2192 Terskol",
+        "distanceKm": "16",
+        "elevGainM": "1842",
+        "elevLossM": "3342",
+        "maxAltM": "5642",
+        "lat": 43.349,
+        "lng": 42.439,
+        "overnight": "Terskol (Off-trail)",
+        "mapNote": "Alpine start at 2am. Snowcat to 4700m, then summit push across broad volcanic snowfield. West Summit at 5642m. Descend fully to Terskol valley."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Elbrus West Summit",
+        "lat": 43.349,
+        "lng": 42.439,
+        "type": "summit",
+        "altM": 5642,
+        "note": "Highest peak in Europe and one of the Seven Summits. Vast volcanic snowfield. Caucasus range stretches east and west."
+      },
+      {
+        "name": "Pastukhov Rocks",
+        "lat": 43.31,
+        "lng": 42.45,
+        "type": "landmark",
+        "altM": 4700,
+        "note": "Key acclimatisation waypoint. Snowcat support often available to this point on summit day."
+      },
+      {
+        "name": "Barrels Huts (Garabashi)",
+        "lat": 43.298,
+        "lng": 42.458,
+        "type": "hut",
+        "altM": 3800,
+        "note": "Iconic orange cylinder huts. Base for all summit attempts on the standard south route."
+      },
+      {
+        "name": "Elbrus Saddle",
+        "lat": 43.33,
+        "lng": 42.445,
+        "type": "landmark",
+        "altM": 5300,
+        "note": "Col between East and West summits. Critical navigation point in poor weather."
+      }
+    ]
+  }

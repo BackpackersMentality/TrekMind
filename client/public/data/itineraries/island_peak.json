@@ -1,0 +1,99 @@
+    "sheetName": "Island Peak",
+    "slug": "island_peak",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Lukla to Dingboche",
+        "distanceKm": "29",
+        "elevGainM": "2400",
+        "elevLossM": "800",
+        "maxAltM": "4410",
+        "lat": 27.8931,
+        "lng": 86.8317,
+        "overnight": "Dingboche Teahouses",
+        "mapNote": "Multi-day approach via Namche Bazaar, Tengboche, Dingboche. Khumbu valley classic teahouse trail."
+      },
+      {
+        "section": 2,
+        "route": "Dingboche to Chhukung",
+        "distanceKm": "5",
+        "elevGainM": "350",
+        "elevLossM": "50",
+        "maxAltM": "4730",
+        "lat": 27.904,
+        "lng": 86.873,
+        "overnight": "Chhukung Teahouses",
+        "mapNote": "Short acclimatisation stage up the Imja Khola valley. Chhukung Ri optional acclimatisation hike."
+      },
+      {
+        "section": 3,
+        "route": "Chhukung to Island Peak Base Camp",
+        "distanceKm": "6",
+        "elevGainM": "400",
+        "elevLossM": "50",
+        "maxAltM": "5100",
+        "lat": 27.896,
+        "lng": 86.935,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Transition to tent camping. Glacier views begin. Equipment check and crampon fitting at camp."
+      },
+      {
+        "section": 4,
+        "route": "Summit Bid: Base Camp \u2192 Summit \u2192 Chhukung",
+        "distanceKm": "11",
+        "elevGainM": "1089",
+        "elevLossM": "1489",
+        "maxAltM": "6189",
+        "lat": 27.904,
+        "lng": 86.873,
+        "overnight": "Chhukung Teahouses",
+        "mapNote": "Alpine start ~2am. Fixed rope on summit headwall. 360\u00b0 views of Lhotse, Nuptse, Makalu. Descend to Chhukung."
+      },
+      {
+        "section": 5,
+        "route": "Chhukung to Lukla",
+        "distanceKm": "34",
+        "elevGainM": "600",
+        "elevLossM": "2500",
+        "maxAltM": "4730",
+        "lat": 27.6865,
+        "lng": 86.7296,
+        "overnight": "Lukla Teahouses",
+        "mapNote": "Return through Khumbu valley. Celebration dinner in Namche or Lukla."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Island Peak Summit",
+        "lat": 27.896,
+        "lng": 86.935,
+        "type": "summit",
+        "altM": 6189,
+        "note": "Himalayan summit above Chhukung. Fixed ropes on headwall. Lhotse-Nuptse wall dominates the horizon."
+      },
+      {
+        "name": "Chhukung Ri",
+        "lat": 27.92,
+        "lng": 86.88,
+        "type": "viewpoint",
+        "altM": 5550,
+        "note": "Classic acclimatisation peak. Outstanding view of Island Peak, Lhotse, and Ama Dablam."
+      },
+      {
+        "name": "Imja Tse Glacier",
+        "lat": 27.9,
+        "lng": 86.91,
+        "type": "glacier",
+        "altM": 5400,
+        "note": "Glacier approach to base camp. Crampons required from here."
+      },
+      {
+        "name": "Namche Bazaar",
+        "lat": 27.8053,
+        "lng": 86.7147,
+        "type": "landmark",
+        "altM": 3440,
+        "note": "Gateway to the Khumbu. Rest day recommended. Trekking permits checked."
+      }
+    ]
+  }

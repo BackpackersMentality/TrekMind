@@ -1,0 +1,111 @@
+"sheetName": "Stok Kangri",
+    "slug": "stok_kangri",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Leh to Stok Village (Drive) + Acclimatisation",
+        "distanceKm": "\u2014",
+        "elevGainM": "\u2014",
+        "elevLossM": "\u2014",
+        "maxAltM": "3500",
+        "lat": 33.98,
+        "lng": 77.62,
+        "overnight": "Stok Guesthouse",
+        "mapNote": "Transfer from Leh (3500m). Acclimatisation day essential after arrival. Visit Stok Palace. Gear check."
+      },
+      {
+        "day": 2,
+        "route": "Stok Village to Base Camp",
+        "distanceKm": "12",
+        "elevGainM": "1200",
+        "elevLossM": "100",
+        "maxAltM": "4900",
+        "lat": 33.94,
+        "lng": 77.645,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Trek through Stok Valley past Changma meadows. Dramatic entry into the high Ladakhi landscape. Camp established."
+      },
+      {
+        "day": 3,
+        "route": "Base Camp Acclimatisation Hike",
+        "distanceKm": "6",
+        "elevGainM": "500",
+        "elevLossM": "500",
+        "maxAltM": "5400",
+        "lat": 33.92,
+        "lng": 77.65,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Climb high and sleep low. Acclimatisation walk toward high camp direction. Crampon practice on snow patches."
+      },
+      {
+        "day": 4,
+        "route": "Base Camp to High Camp",
+        "distanceKm": "5",
+        "elevGainM": "700",
+        "elevLossM": "0",
+        "maxAltM": "5600",
+        "lat": 33.915,
+        "lng": 77.653,
+        "overnight": "High Camp Tents",
+        "mapNote": "Carry summit packs to high camp at 5600m. Afternoon rest for alpine start. Snow and scree terrain."
+      },
+      {
+        "day": 5,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Base Camp",
+        "distanceKm": "10",
+        "elevGainM": "553",
+        "elevLossM": "1253",
+        "maxAltM": "6153",
+        "lat": 33.9142,
+        "lng": 77.6558,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Alpine start 1\u20132am. Crampons on snow slopes to summit at 6153m. Karakoram and Zanskar panorama. Descend fully to base camp."
+      },
+      {
+        "day": 6,
+        "route": "Base Camp to Stok Village (Descent)",
+        "distanceKm": "12",
+        "elevGainM": "100",
+        "elevLossM": "1200",
+        "maxAltM": "4900",
+        "lat": 33.98,
+        "lng": 77.62,
+        "overnight": "Stok Guesthouse",
+        "mapNote": "Full descent through Stok Valley to village. Return to Leh for celebration."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Stok Kangri Summit",
+        "lat": 33.9142,
+        "lng": 77.6558,
+        "type": "summit",
+        "altM": 6153,
+        "note": "India's most popular 6000m summit. Snow plateau to triangular peak. Karakoram, Zanskar, Tibetan plateau in view."
+      },
+      {
+        "name": "Stok Base Camp",
+        "lat": 33.94,
+        "lng": 77.645,
+        "type": "camp",
+        "altM": 4900,
+        "note": "Main camp for all Stok Kangri attempts. Well-equipped guiding camps in peak season."
+      },
+      {
+        "name": "Stok Palace",
+        "lat": 33.982,
+        "lng": 77.625,
+        "type": "landmark",
+        "altM": 3500,
+        "note": "Royal Ladakhi palace museum. Worth visiting on acclimatisation day."
+      },
+      {
+        "name": "High Camp",
+        "lat": 33.915,
+        "lng": 77.653,
+        "type": "camp",
+        "altM": 5600,
+        "note": "Exposed camp in a col. Cold nights. Alpine start position for summit."
+      }
+    ]
+}

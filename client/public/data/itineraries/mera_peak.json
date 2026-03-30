@@ -1,0 +1,79 @@
+    "sheetName": "Mera Peak",
+    "slug": "mera_peak",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Lukla to Khare (via Zatrwa La)",
+        "distanceKm": "38",
+        "elevGainM": "3200",
+        "elevLossM": "1800",
+        "maxAltM": "4900",
+        "lat": 27.756,
+        "lng": 86.782,
+        "overnight": "Khare Teahouses",
+        "mapNote": "Multi-day approach crossing Zatrwa La pass and descending into the Hinku valley. Remote and wild terrain."
+      },
+      {
+        "section": 2,
+        "route": "Khare to Mera High Camp",
+        "distanceKm": "6",
+        "elevGainM": "900",
+        "elevLossM": "0",
+        "maxAltM": "5800",
+        "lat": 27.721,
+        "lng": 86.866,
+        "overnight": "High Camp Tents",
+        "mapNote": "Steep glacier ascent to high camp. Spectacular ridge position with Everest, Cho Oyu, Kangchenjunga visible."
+      },
+      {
+        "section": 3,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Khare",
+        "distanceKm": "10",
+        "elevGainM": "676",
+        "elevLossM": "1576",
+        "maxAltM": "6476",
+        "lat": 27.756,
+        "lng": 86.782,
+        "overnight": "Khare Teahouses",
+        "mapNote": "Alpine start. Broad snow summit with unobstructed 360\u00b0 Himalayan panorama. Descend on glacier to Khare."
+      },
+      {
+        "section": 4,
+        "route": "Khare to Lukla",
+        "distanceKm": "38",
+        "elevGainM": "1800",
+        "elevLossM": "3200",
+        "maxAltM": "4900",
+        "lat": 27.6865,
+        "lng": 86.7296,
+        "overnight": "Lukla Teahouses",
+        "mapNote": "Retrace via Zatrwa La back to Lukla. Dramatic exit from the remote Hinku valley."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mera Peak Summit",
+        "lat": 27.721,
+        "lng": 86.866,
+        "type": "summit",
+        "altM": 6476,
+        "note": "Highest trekking peak in Nepal. On clear days: Everest, Lhotse, Cho Oyu, Makalu, and Kangchenjunga all visible."
+      },
+      {
+        "name": "Zatrwa La Pass",
+        "lat": 27.78,
+        "lng": 86.75,
+        "type": "pass",
+        "altM": 4600,
+        "note": "Key pass linking Lukla to the Hinku valley. First challenge of the route."
+      },
+      {
+        "name": "Mera La",
+        "lat": 27.71,
+        "lng": 86.88,
+        "type": "pass",
+        "altM": 5415,
+        "note": "Glacier col. Stunning camp position with evening alpenglow on surrounding 8000m peaks."
+      }
+    ]
+}

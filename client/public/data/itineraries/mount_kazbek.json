@@ -1,0 +1,79 @@
+"sheetName": "Mount Kazbek",
+    "slug": "mount_kazbek",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Stepantsminda to Meteo Station (Bethlemi Hut)",
+        "distanceKm": "10",
+        "elevGainM": "1900",
+        "elevLossM": "100",
+        "maxAltM": "3650",
+        "lat": 42.678,
+        "lng": 44.53,
+        "overnight": "Bethlemi Hut",
+        "mapNote": "Hike from Stepantsminda past Gergeti Trinity Church (2170m) and up steep ridges to the Bethlemi Hut at 3650m. Kazbek glacier visible above."
+      },
+      {
+        "day": 2,
+        "route": "Meteo Station Acclimatisation Hike",
+        "distanceKm": "4",
+        "elevGainM": "400",
+        "elevLossM": "400",
+        "maxAltM": "4050",
+        "lat": 42.678,
+        "lng": 44.53,
+        "overnight": "Bethlemi Hut",
+        "mapNote": "Acclimatisation hike up the Kazbek glacier to ~4050m and return. Equipment check and rope team practice. Rest afternoon."
+      },
+      {
+        "day": 3,
+        "route": "Summit Bid: Meteo Station \u2192 Summit \u2192 Meteo Station",
+        "distanceKm": "12",
+        "elevGainM": "1403",
+        "elevLossM": "1403",
+        "maxAltM": "5053",
+        "lat": 42.678,
+        "lng": 44.53,
+        "overnight": "Bethlemi Hut",
+        "mapNote": "Alpine start ~1am. Glacier and steep snowfield to summit at 5053m. Russia\u2013Georgia border runs through the summit. Return to hut."
+      },
+      {
+        "day": 4,
+        "route": "Meteo Station to Stepantsminda",
+        "distanceKm": "10",
+        "elevGainM": "100",
+        "elevLossM": "1900",
+        "maxAltM": "3650",
+        "lat": 42.656,
+        "lng": 44.643,
+        "overnight": "Stepantsminda (Off-trail)",
+        "mapNote": "Full descent to Stepantsminda. Pass the iconic Gergeti Trinity Church again. Celebration dinner in town."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Mount Kazbek Summit",
+        "lat": 42.697,
+        "lng": 44.518,
+        "type": "summit",
+        "altM": 5053,
+        "note": "Dormant volcano. One of the highest peaks in the Caucasus. Russia-Georgia border summit. In Greek mythology, where Prometheus was chained."
+      },
+      {
+        "name": "Gergeti Trinity Church",
+        "lat": 42.659,
+        "lng": 44.638,
+        "type": "landmark",
+        "altM": 2170,
+        "note": "14th-century Georgian Orthodox church perched on a hilltop. Iconic Kazbek backdrop. Visible from Stepantsminda."
+      },
+      {
+        "name": "Bethlemi Hut (Meteo Station)",
+        "lat": 42.678,
+        "lng": 44.53,
+        "type": "hut",
+        "altM": 3650,
+        "note": "Soviet-era meteorological station converted to climbers' hut. Crowded in peak season. Spectacular glacier views."
+      }
+    ]
+  }

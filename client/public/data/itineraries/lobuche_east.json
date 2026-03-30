@@ -1,0 +1,91 @@
+"sheetName": "Lobuche East",
+    "slug": "lobuche_east",
+    "itinerary": [
+      {
+        "section": 1,
+        "route": "Lukla to Dingboche",
+        "distanceKm": "29",
+        "elevGainM": "2400",
+        "elevLossM": "800",
+        "maxAltM": "4410",
+        "lat": 27.8931,
+        "lng": 86.8317,
+        "overnight": "Dingboche Teahouses",
+        "mapNote": "Classic Khumbu approach through Namche Bazaar, Tengboche monastery, and Dingboche. Strong acclimatisation required."
+      },
+      {
+        "section": 2,
+        "route": "Dingboche to Lobuche Base Camp",
+        "distanceKm": "9",
+        "elevGainM": "500",
+        "elevLossM": "100",
+        "maxAltM": "4950",
+        "lat": 27.954,
+        "lng": 86.804,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Pass through Lobuche village. Cross the Khumbu glacier moraines. Base camp below the rocky east ridge."
+      },
+      {
+        "section": 3,
+        "route": "Base Camp to Lobuche High Camp",
+        "distanceKm": "3",
+        "elevGainM": "450",
+        "elevLossM": "0",
+        "maxAltM": "5400",
+        "lat": 27.95,
+        "lng": 86.812,
+        "overnight": "High Camp Tents",
+        "mapNote": "Technical approach up rock and mixed ground to high camp. Fix ropes on steeper sections. Pump Ri visible across valley."
+      },
+      {
+        "section": 4,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Base Camp",
+        "distanceKm": "5",
+        "elevGainM": "719",
+        "elevLossM": "1169",
+        "maxAltM": "6119",
+        "lat": 27.954,
+        "lng": 86.804,
+        "overnight": "Base Camp Tents",
+        "mapNote": "Technical ridge with fixed ropes and near-vertical rocky sections near summit. Cho Oyu, Everest, and Pumori panorama."
+      },
+      {
+        "section": 5,
+        "route": "Base Camp to Lukla",
+        "distanceKm": "35",
+        "elevGainM": "800",
+        "elevLossM": "2900",
+        "maxAltM": "4950",
+        "lat": 27.6865,
+        "lng": 86.7296,
+        "overnight": "Lukla Teahouses",
+        "mapNote": "Return via Lobuche, Pheriche, Namche Bazaar, Phakding to Lukla. Final teahouse celebration."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Lobuche East Summit",
+        "lat": 27.95,
+        "lng": 86.812,
+        "type": "summit",
+        "altM": 6119,
+        "note": "Technical summit with exposed rocky ridge. One of the most demanding Khumbu trekking peaks. Everest, Lhotse, Nuptse and Cho Oyu views."
+      },
+      {
+        "name": "Thukla Pass Memorial",
+        "lat": 27.92,
+        "lng": 86.79,
+        "type": "landmark",
+        "altM": 4830,
+        "note": "Memorial cairns for lost climbers. Sobering and moving hilltop above Pheriche."
+      },
+      {
+        "name": "Khumbu Glacier",
+        "lat": 27.98,
+        "lng": 86.83,
+        "type": "glacier",
+        "altM": 5000,
+        "note": "World's highest glacier flows from Everest. Lobuche base camp sits on its eastern moraine."
+      }
+    ]
+  }

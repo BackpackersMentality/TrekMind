@@ -1,0 +1,67 @@
+"sheetName": "Huayna Potos\u00ed",
+    "slug": "huayna_potosi",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "La Paz to Base Camp (Zongo Pass)",
+        "distanceKm": "4",
+        "elevGainM": "150",
+        "elevLossM": "50",
+        "maxAltM": "4700",
+        "lat": -16.275,
+        "lng": -68.127,
+        "overnight": "Refugio / Tents",
+        "mapNote": "Transfer from La Paz (~4000m) to Zongo Pass area. Equipment check, crampon and axe fitting. Short acclimatisation hike."
+      },
+      {
+        "day": 2,
+        "route": "Base Camp to High Camp (Campamento Argentino)",
+        "distanceKm": "3",
+        "elevGainM": "500",
+        "elevLossM": "0",
+        "maxAltM": "5200",
+        "lat": -16.265,
+        "lng": -68.14,
+        "overnight": "Refugio / Tents",
+        "mapNote": "Carry packs to high camp on the glacier. Practice crampon technique on moderate snow slopes. Afternoon rest for summit push."
+      },
+      {
+        "day": 3,
+        "route": "Summit Bid: High Camp \u2192 Summit \u2192 La Paz",
+        "distanceKm": "8",
+        "elevGainM": "888",
+        "elevLossM": "1388",
+        "maxAltM": "6088",
+        "lat": -16.262,
+        "lng": -68.15,
+        "overnight": "La Paz (Off-trail)",
+        "mapNote": "Midnight start. Classic triangular snow face to summit at 6088m. Views over Lake Titicaca and altiplano. Descend and return to La Paz."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Huayna Potos\u00ed Summit",
+        "lat": -16.262,
+        "lng": -68.15,
+        "type": "summit",
+        "altM": 6088,
+        "note": "Iconic triangular peak above La Paz. Panoramic altiplano and Cordillera Real views."
+      },
+      {
+        "name": "Campamento Argentino",
+        "lat": -16.265,
+        "lng": -68.14,
+        "type": "camp",
+        "altM": 5200,
+        "note": "High camp on glacier. Classic red sunset views over La Paz and Illimani."
+      },
+      {
+        "name": "Zongo Pass",
+        "lat": -16.275,
+        "lng": -68.127,
+        "type": "landmark",
+        "altM": 4700,
+        "note": "Base camp area. Good altitude for early acclimatisation from La Paz."
+      }
+    ]
+  }

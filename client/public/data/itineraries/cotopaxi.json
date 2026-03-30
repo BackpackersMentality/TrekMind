@@ -1,0 +1,55 @@
+"sheetName": "Cotopaxi",
+    "slug": "cotopaxi",
+    "itinerary": [
+      {
+        "day": 1,
+        "route": "Quito to Refugio Jos\u00e9 Rivas",
+        "distanceKm": "2",
+        "elevGainM": "300",
+        "elevLossM": "0",
+        "maxAltM": "4864",
+        "lat": -0.665,
+        "lng": -78.438,
+        "overnight": "Refugio Jos\u00e9 Rivas",
+        "mapNote": "Drive from Quito or Latacunga to Cotopaxi National Park. Short hike from parking lot to Refugio at 4864m. Acclimatisation afternoon."
+      },
+      {
+        "day": 2,
+        "route": "Summit Bid: Refugio \u2192 Summit \u2192 Parking Lot",
+        "distanceKm": "5",
+        "elevGainM": "1033",
+        "elevLossM": "1333",
+        "maxAltM": "5897",
+        "lat": -0.68,
+        "lng": -78.436,
+        "overnight": "Quito (Off-trail)",
+        "mapNote": "Midnight start from Refugio at 11pm. Steep glaciated flanks to crater rim. One of world's highest active volcanoes. Descend to parking lot and return to Quito."
+      }
+    ],
+    "waypoints": [
+      {
+        "name": "Cotopaxi Summit (Crater Rim)",
+        "lat": -0.68,
+        "lng": -78.436,
+        "type": "summit",
+        "altM": 5897,
+        "note": "Active volcano crater rim. Steam vents visible on clear days. Chimborazo and Antisana in view."
+      },
+      {
+        "name": "Refugio Jos\u00e9 Rivas",
+        "lat": -0.665,
+        "lng": -78.438,
+        "type": "hut",
+        "altM": 4864,
+        "note": "Highest mountain hut in Ecuador. Essential overnight before summit attempt."
+      },
+      {
+        "name": "Cotopaxi National Park Entrance",
+        "lat": -0.7,
+        "lng": -78.39,
+        "type": "landmark",
+        "altM": 3600,
+        "note": "Entry gate. Park fees collected here. Laguna Limpiopungo nearby for acclimatisation."
+      }
+    ]
+  }
