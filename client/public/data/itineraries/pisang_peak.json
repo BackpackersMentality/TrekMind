@@ -1,135 +1,136 @@
-"sheetName": "Pisang Peak",
-    "slug": "pisang_peak",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Kathmandu to Besisahar / Bhulbhule (Drive)",
-        "distanceKm": "\u2014",
-        "elevGainM": "\u2014",
-        "elevLossM": "\u2014",
-        "maxAltM": "840",
-        "lat": 28.308,
-        "lng": 84.409,
-        "overnight": "Bhulbhule Guesthouse",
-        "mapNote": "Drive from Kathmandu to Besisahar then Bhulbhule (840m). Start of Annapurna Circuit. Marsyangdi River valley."
-      },
-      {
-        "day": 2,
-        "route": "Bhulbhule to Chamje",
-        "distanceKm": "14",
-        "elevGainM": "820",
-        "elevLossM": "200",
-        "maxAltM": "1430",
-        "lat": 28.43,
-        "lng": 84.356,
-        "overnight": "Chamje Teahouse",
-        "mapNote": "Classic Annapurna Circuit teahouse approach. Subtropical forest. River crossings and suspension bridges."
-      },
-      {
-        "day": 3,
-        "route": "Chamje to Chame",
-        "distanceKm": "18",
-        "elevGainM": "1200",
-        "elevLossM": "300",
-        "maxAltM": "2650",
-        "lat": 28.549,
-        "lng": 84.241,
-        "overnight": "Chame Teahouse",
-        "mapNote": "District headquarters. Apple orchards. Annapurna II first visible. Manang Valley transition begins."
-      },
-      {
-        "day": 4,
-        "route": "Chame to Upper Pisang",
-        "distanceKm": "15",
-        "elevGainM": "650",
-        "elevLossM": "100",
-        "maxAltM": "3300",
-        "lat": 28.5728,
-        "lng": 84.1388,
-        "overnight": "Pisang Teahouse",
-        "mapNote": "Upper Pisang base for the peak. Ancient monastery. Annapurna II, III and Pisang Peak dramatically framed."
-      },
-      {
-        "day": 5,
-        "route": "Upper Pisang to Pisang Peak Base Camp",
-        "distanceKm": "5",
-        "elevGainM": "800",
-        "elevLossM": "0",
-        "maxAltM": "4100",
-        "lat": 28.585,
-        "lng": 84.15,
-        "overnight": "Base Camp Tents",
-        "mapNote": "Transition to tent camping above Upper Pisang. Glacier views. Equipment check and crampon fitting at camp."
-      },
-      {
-        "day": 6,
-        "route": "Base Camp to High Camp",
-        "distanceKm": "4",
-        "elevGainM": "900",
-        "elevLossM": "0",
-        "maxAltM": "5000",
-        "lat": 28.59,
-        "lng": 84.142,
-        "overnight": "High Camp Tents",
-        "mapNote": "Steep approach on snow and rock to high camp at 5000m. Fixed ropes on steeper sections. Night preparation."
-      },
-      {
-        "day": 7,
-        "route": "Summit Bid: High Camp \u2192 Summit \u2192 Upper Pisang",
-        "distanceKm": "9",
-        "elevGainM": "1091",
-        "elevLossM": "1791",
-        "maxAltM": "6091",
-        "lat": 28.5728,
-        "lng": 84.1388,
-        "overnight": "Pisang Teahouse",
-        "mapNote": "Alpine start 2am. South ridge to summit at 6091m. Annapurna II face fills the horizon. Descend to Upper Pisang."
-      },
-      {
-        "day": 8,
-        "route": "Upper Pisang to Manang (Circuit continues)",
-        "distanceKm": "16",
-        "elevGainM": "500",
-        "elevLossM": "300",
-        "maxAltM": "3519",
-        "lat": 28.6665,
-        "lng": 84.022,
-        "overnight": "Manang Teahouse",
-        "mapNote": "Rejoin Annapurna Circuit to Manang. Rest day option or continue circuit to Thorong La."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Pisang Peak Summit",
-        "lat": 28.5728,
-        "lng": 84.1388,
-        "type": "summit",
-        "altM": 6091,
-        "note": "6091m on the Annapurna Circuit. Annapurna II (7937m) directly adjacent. Two route options: south ridge (standard) and north ridge (technical)."
-      },
-      {
-        "name": "Upper Pisang",
-        "lat": 28.5728,
-        "lng": 84.1388,
-        "type": "landmark",
-        "altM": 3300,
-        "note": "Ancient Tibetan-influenced village. Monastery with centuries of history. Best viewpoint for Pisang Peak profile."
-      },
-      {
-        "name": "Pisang Glacier",
-        "lat": 28.585,
-        "lng": 84.15,
-        "type": "glacier",
-        "altM": 4500,
-        "note": "Northeast-facing glacier on the peak's flank. Crampons from here to summit."
-      },
-      {
-        "name": "Annapurna II",
-        "lat": 28.5338,
-        "lng": 84.1238,
-        "type": "summit",
-        "altM": 7937,
-        "note": "Visible directly from Pisang Peak summit and approach. 7th highest in Nepal."
-      }
-    ]
-  }
+{
+  "slug": "pisang_peak",
+  "sheetName": "Pisang Peak",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Kathmandu to Besisahar / Bhulbhule (Drive)",
+      "distanceKm": "\u2014",
+      "elevGainM": "\u2014",
+      "elevLossM": "\u2014",
+      "maxAltM": "840",
+      "lat": 28.308,
+      "lng": 84.409,
+      "overnight": "Bhulbhule Guesthouse",
+      "mapNote": "Drive from Kathmandu to Besisahar then Bhulbhule (840m). Start of Annapurna Circuit. Marsyangdi River valley."
+    },
+    {
+      "day": 2,
+      "route": "Bhulbhule to Chamje",
+      "distanceKm": "14",
+      "elevGainM": "820",
+      "elevLossM": "200",
+      "maxAltM": "1430",
+      "lat": 28.43,
+      "lng": 84.356,
+      "overnight": "Chamje Teahouse",
+      "mapNote": "Classic Annapurna Circuit teahouse approach. Subtropical forest. River crossings and suspension bridges."
+    },
+    {
+      "day": 3,
+      "route": "Chamje to Chame",
+      "distanceKm": "18",
+      "elevGainM": "1200",
+      "elevLossM": "300",
+      "maxAltM": "2650",
+      "lat": 28.549,
+      "lng": 84.241,
+      "overnight": "Chame Teahouse",
+      "mapNote": "District headquarters. Apple orchards. Annapurna II first visible. Manang Valley transition begins."
+    },
+    {
+      "day": 4,
+      "route": "Chame to Upper Pisang",
+      "distanceKm": "15",
+      "elevGainM": "650",
+      "elevLossM": "100",
+      "maxAltM": "3300",
+      "lat": 28.5728,
+      "lng": 84.1388,
+      "overnight": "Pisang Teahouse",
+      "mapNote": "Upper Pisang base for the peak. Ancient monastery. Annapurna II, III and Pisang Peak dramatically framed."
+    },
+    {
+      "day": 5,
+      "route": "Upper Pisang to Pisang Peak Base Camp",
+      "distanceKm": "5",
+      "elevGainM": "800",
+      "elevLossM": "0",
+      "maxAltM": "4100",
+      "lat": 28.585,
+      "lng": 84.15,
+      "overnight": "Base Camp Tents",
+      "mapNote": "Transition to tent camping above Upper Pisang. Glacier views. Equipment check and crampon fitting at camp."
+    },
+    {
+      "day": 6,
+      "route": "Base Camp to High Camp",
+      "distanceKm": "4",
+      "elevGainM": "900",
+      "elevLossM": "0",
+      "maxAltM": "5000",
+      "lat": 28.59,
+      "lng": 84.142,
+      "overnight": "High Camp Tents",
+      "mapNote": "Steep approach on snow and rock to high camp at 5000m. Fixed ropes on steeper sections. Night preparation."
+    },
+    {
+      "day": 7,
+      "route": "Summit Bid: High Camp \u2192 Summit \u2192 Upper Pisang",
+      "distanceKm": "9",
+      "elevGainM": "1091",
+      "elevLossM": "1791",
+      "maxAltM": "6091",
+      "lat": 28.5728,
+      "lng": 84.1388,
+      "overnight": "Pisang Teahouse",
+      "mapNote": "Alpine start 2am. South ridge to summit at 6091m. Annapurna II face fills the horizon. Descend to Upper Pisang."
+    },
+    {
+      "day": 8,
+      "route": "Upper Pisang to Manang (Circuit continues)",
+      "distanceKm": "16",
+      "elevGainM": "500",
+      "elevLossM": "300",
+      "maxAltM": "3519",
+      "lat": 28.6665,
+      "lng": 84.022,
+      "overnight": "Manang Teahouse",
+      "mapNote": "Rejoin Annapurna Circuit to Manang. Rest day option or continue circuit to Thorong La."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Pisang Peak Summit",
+      "lat": 28.5728,
+      "lng": 84.1388,
+      "type": "summit",
+      "altM": 6091,
+      "note": "6091m on the Annapurna Circuit. Annapurna II (7937m) directly adjacent. Two route options: south ridge (standard) and north ridge (technical)."
+    },
+    {
+      "name": "Upper Pisang",
+      "lat": 28.5728,
+      "lng": 84.1388,
+      "type": "landmark",
+      "altM": 3300,
+      "note": "Ancient Tibetan-influenced village. Monastery with centuries of history. Best viewpoint for Pisang Peak profile."
+    },
+    {
+      "name": "Pisang Glacier",
+      "lat": 28.585,
+      "lng": 84.15,
+      "type": "glacier",
+      "altM": 4500,
+      "note": "Northeast-facing glacier on the peak's flank. Crampons from here to summit."
+    },
+    {
+      "name": "Annapurna II",
+      "lat": 28.5338,
+      "lng": 84.1238,
+      "type": "summit",
+      "altM": 7937,
+      "note": "Visible directly from Pisang Peak summit and approach. 7th highest in Nepal."
+    }
+  ]
+}
