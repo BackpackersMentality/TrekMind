@@ -1,75 +1,76 @@
-"sheetName": "Pico de Orizaba",
-    "slug": "pico_orizaba",
-    "itinerary": [
-      {
-        "day": 1,
-        "route": "Mexico City / Puebla to Tlachichuca (Drive) + Piedra Grande Hut",
-        "distanceKm": "\u2014",
-        "elevGainM": "700",
-        "elevLossM": "0",
-        "maxAltM": "4260",
-        "lat": 19.047,
-        "lng": -97.278,
-        "overnight": "Piedra Grande Hut",
-        "mapNote": "4WD truck transfer from Tlachichuca village (2600m) to Piedra Grande Hut at 4260m. 2hr bumpy 4WD road through pine forest and lava fields. Gear check and early sleep."
-      },
-      {
-        "day": 2,
-        "route": "Acclimatisation Hike above Piedra Grande",
-        "distanceKm": "6",
-        "elevGainM": "500",
-        "elevLossM": "500",
-        "maxAltM": "4760",
-        "lat": 19.04,
-        "lng": -97.272,
-        "overnight": "Piedra Grande Hut",
-        "mapNote": "Acclimatisation hike on lava and snow above the hut. Crampon practice. The vast volcanic cone above comes into scale. Early dinner and sleep by 7pm."
-      },
-      {
-        "day": 3,
-        "route": "Summit Bid: Piedra Grande \u2192 Summit \u2192 Tlachichuca",
-        "distanceKm": "14",
-        "elevGainM": "1376",
-        "elevLossM": "2076",
-        "maxAltM": "5636",
-        "lat": 19.03,
-        "lng": -97.269,
-        "overnight": "Tlachichuca / Puebla",
-        "mapNote": "Midnight start. Crampons from hut. Jamapa Glacier: 1400m of sustained snow climbing to crater rim at 5636m. Popocat\u00e9petl, Iztacc\u00edhuatl, Gulf of Mexico visible. Full descent by 4WD to Tlachichuca."
-      }
-    ],
-    "waypoints": [
-      {
-        "name": "Pico de Orizaba Summit (Crater Rim)",
-        "lat": 19.03,
-        "lng": -97.269,
-        "type": "summit",
-        "altM": 5636,
-        "note": "Third highest peak in North America. Citlalt\u00e9petl \u2014 Aztec Star Mountain. Crater with fumaroles. Popocat\u00e9petl to the west."
-      },
-      {
-        "name": "Piedra Grande Hut",
-        "lat": 19.047,
-        "lng": -97.278,
-        "type": "hut",
-        "altM": 4260,
-        "note": "Stone shelter at 4260m. Basic facilities. Starting point for all Jamapa Glacier attempts. Crucial overnight acclimatisation stop."
-      },
-      {
-        "name": "Jamapa Glacier",
-        "lat": 19.038,
-        "lng": -97.272,
-        "type": "glacier",
-        "altM": 4800,
-        "note": "Main ascent route. Sustained 40\u00b0 snow/ice slopes. Crampons and ice axe essential throughout. Begins at ~4800m."
-      },
-      {
-        "name": "Tlachichuca",
-        "lat": 18.958,
-        "lng": -97.326,
-        "type": "landmark",
-        "altM": 2600,
-        "note": "Base village. Servimont agency provides 4WD transfers and basic equipment. Start and end point."
-      }
-    ]
-  }
+{
+  "slug": "pico_orizaba",
+  "sheetName": "Pico de Orizaba",
+  "itinerary": [
+    {
+      "day": 1,
+      "route": "Mexico City / Puebla to Tlachichuca (Drive) + Piedra Grande Hut",
+      "distanceKm": "\u2014",
+      "elevGainM": "700",
+      "elevLossM": "0",
+      "maxAltM": "4260",
+      "lat": 19.047,
+      "lng": -97.278,
+      "overnight": "Piedra Grande Hut",
+      "mapNote": "4WD truck transfer from Tlachichuca village (2600m) to Piedra Grande Hut at 4260m. 2hr bumpy 4WD road through pine forest and lava fields. Gear check and early sleep."
+    },
+    {
+      "day": 2,
+      "route": "Acclimatisation Hike above Piedra Grande",
+      "distanceKm": "6",
+      "elevGainM": "500",
+      "elevLossM": "500",
+      "maxAltM": "4760",
+      "lat": 19.04,
+      "lng": -97.272,
+      "overnight": "Piedra Grande Hut",
+      "mapNote": "Acclimatisation hike on lava and snow above the hut. Crampon practice. The vast volcanic cone above comes into scale. Early dinner and sleep by 7pm."
+    },
+    {
+      "day": 3,
+      "route": "Summit Bid: Piedra Grande \u2192 Summit \u2192 Tlachichuca",
+      "distanceKm": "14",
+      "elevGainM": "1376",
+      "elevLossM": "2076",
+      "maxAltM": "5636",
+      "lat": 19.03,
+      "lng": -97.269,
+      "overnight": "Tlachichuca / Puebla",
+      "mapNote": "Midnight start. Crampons from hut. Jamapa Glacier: 1400m of sustained snow climbing to crater rim at 5636m. Popocat\u00e9petl, Iztacc\u00edhuatl, Gulf of Mexico visible. Full descent by 4WD to Tlachichuca."
+    }
+  ],
+  "waypoints": [
+    {
+      "name": "Pico de Orizaba Summit (Crater Rim)",
+      "lat": 19.03,
+      "lng": -97.269,
+      "type": "summit",
+      "altM": 5636,
+      "note": "Third highest peak in North America. Citlalt\u00e9petl \u2014 Aztec Star Mountain. Crater with fumaroles. Popocat\u00e9petl to the west."
+    },
+    {
+      "name": "Piedra Grande Hut",
+      "lat": 19.047,
+      "lng": -97.278,
+      "type": "hut",
+      "altM": 4260,
+      "note": "Stone shelter at 4260m. Basic facilities. Starting point for all Jamapa Glacier attempts. Crucial overnight acclimatisation stop."
+    },
+    {
+      "name": "Jamapa Glacier",
+      "lat": 19.038,
+      "lng": -97.272,
+      "type": "glacier",
+      "altM": 4800,
+      "note": "Main ascent route. Sustained 40\u00b0 snow/ice slopes. Crampons and ice axe essential throughout. Begins at ~4800m."
+    },
+    {
+      "name": "Tlachichuca",
+      "lat": 18.958,
+      "lng": -97.326,
+      "type": "landmark",
+      "altM": 2600,
+      "note": "Base village. Servimont agency provides 4WD transfers and basic equipment. Start and end point."
+    }
+  ]
+}
