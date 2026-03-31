@@ -1,3 +1,10 @@
+// client/src/App.tsx
+// ─────────────────────────────────────────────────────────────────────────────
+// FIX: Removed explicit .tsx extension from the AuthProvider import.
+// TypeScript/Vite resolves extensions automatically; hardcoding .tsx in the
+// import path can cause "module not found" errors in some bundler configurations.
+// ─────────────────────────────────────────────────────────────────────────────
+
 import { Switch, Route } from "wouter";
 import { Suspense, lazy } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -5,10 +12,9 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
-// ✅ ADD THIS IMPORT (Adjust the path if your provider is exported from somewhere else)
-import { AuthProvider } from "@/hooks/useAuth.tsx"; 
+import { AuthProvider } from "@/hooks/useAuth"; // ← no .tsx extension (resolved automatically)
 
-// ── Route-level code splitting ─────────────────────────────────────────────────
+// ── Route-level code splitting ────────────────────────────────────────────────
 const Home          = lazy(() => import("@/pages/Home"));
 const TrekDetail    = lazy(() => import("@/pages/TrekDetail"));
 const TrekFinder    = lazy(() => import("@/pages/TrekFinder"));
@@ -26,7 +32,7 @@ const NotFound      = lazy(() => import("@/pages/not-found"));
 const Privacy       = lazy(() => import("@/pages/Privacy"));
 const Terms         = lazy(() => import("@/pages/Terms"));
 
-// ── Skeleton shown while a page chunk downloads ───────────────────────────────
+// ── Loading skeleton ──────────────────────────────────────────────────────────
 function PageSkeleton() {
   return (
     <div className="min-h-screen bg-background animate-pulse">
@@ -40,12 +46,8 @@ function PageSkeleton() {
   );
 }
 
-// ── Per-route Suspense wrappers — defined at module level so React sees a
-//    stable component identity on every render (avoids error #300).
-//    Each is an explicit named component wrapping its own lazy import directly,
-//    which also sidesteps the temporal dead zone issue that occurs when a helper
-//    function like withSuspense() is called before lazy() vars are initialised
-//    in the minified bundle.
+// ── Per-route Suspense wrappers ───────────────────────────────────────────────
+// Defined at module level so React sees a stable component identity on every render.
 function SuspendedHome(props: any) {
   return <Suspense fallback={<PageSkeleton />}><Home {...props} /></Suspense>;
 }
@@ -101,9 +103,9 @@ function Router() {
       <Route path="/"                       component={SuspendedHome} />
       <Route path="/trek/:id"               component={SuspendedTrekDetail} />
       <Route path="/trek-finder"            component={SuspendedTrekFinder} />
-      <Route path="/top-100"                component={SuspendedTop100} />
+      <Route path="/top-100"               component={SuspendedTop100} />
       <Route path="/about"                  component={SuspendedAbout} />
-      <Route path="/my-treks"               component={SuspendedMyTreks} />
+      <Route path="/my-treks"              component={SuspendedMyTreks} />
       {/* Articles */}
       <Route path="/articles"              component={SuspendedArticles} />
       <Route path="/articles/:slug"        component={SuspendedArticleDetail} />
@@ -128,10 +130,9 @@ export default function App() {
           <AuthProvider>
             <Router />
             <Toaster />
-          </AuthProvider> {/* ✅ THIS WAS MISSING! */}
+          </AuthProvider>
         </TooltipProvider>
       </QueryClientProvider>
     </HelmetProvider>
   );
 }
-// Triggering new build
