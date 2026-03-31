@@ -1,13 +1,16 @@
 // client/src/lib/treks.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// Static JSON imports — Vite bundles these at build time.
+// REQUIRED FILES IN REPO:
+//   client/src/data/treks.json      ← copy of treks_with_season_months.json
+//   client/src/data/editorial.json  ← copy of editorial_full.json
 //
-// OPTIMISATION: itineraries.json (212KB) is no longer imported at the top.
-// Instead, getItineraryAsync() fetches only the specific trek's JSON on demand.
-// All other functions (getAllTreks, getTrekById, editorial, etc.) are IDENTICAL
-// to your original — nothing breaks.
+// itineraries.json removed from static import (was 212KB).
+// Individual itinerary files are fetched on demand via getItineraryAsync().
+// ─────────────────────────────────────────────────────────────────────────────
 
 import treksData     from '../data/treks.json';
 import editorialData from '../data/editorial.json';
-// ✅ itineraries.json import REMOVED — was 212KB loaded on every page
 
 export interface Trek {
   id: string;
@@ -26,83 +29,86 @@ export interface Trek {
   accommodation: string;
   permits: string;
   season?: string;
+  seasonMonths?: number[]; // pre-computed month numbers for filter — added in treks_with_season_months.json
   bestSeason?: string;
   best_season?: string;
   tier: number;
   latitude: number;
   longitude: number;
   imageFilename: string;
+  popularityScore?: number;
   whySpecial?: string;
   highlights?: string[];
   keyFeatures?: string;
 }
 
-// ── Unchanged sync functions (identical to your original) ────────────────────
+// ── Null-safe data access ────────────────────────────────────────────────────
+// Both treksData and editorialData could theoretically be undefined during SSR
+// or if the JSON file is missing — these guards prevent runtime crashes.
+
+const _treks: Trek[] = Array.isArray(treksData) ? (treksData as Trek[]) : [];
+const _editorial: Record<string, any> = (editorialData && typeof editorialData === 'object')
+  ? (editorialData as Record<string, any>)
+  : {};
+
+// ── Core sync functions ───────────────────────────────────────────────────────
 
 export function getAllTreks(): Trek[] {
-  return (treksData || []) as Trek[];
+  return _treks; // always an array, never null
 }
 
 export function getTrekById(id: string): Trek | null {
-  const allTreks = treksData as Trek[];
-  if (!allTreks || !Array.isArray(allTreks)) return null;
-
-  const trek = allTreks.find((t) => t.id === id);
+  if (!id) return null;
+  const trek = _treks.find((t) => t.id === id);
   if (!trek) return null;
 
-  if (editorialData && typeof editorialData === 'object') {
-    const editorial = (editorialData as any)[id];
-    if (editorial) {
-      return { ...trek, whySpecial: editorial.whySpecial, highlights: editorial.highlights };
-    }
+  const editorial = _editorial[id];
+  if (editorial) {
+    return { ...trek, whySpecial: editorial.whySpecial, highlights: editorial.highlights };
   }
-
   return trek;
 }
 
 export function getTreksByTier(tier: number): Trek[] {
-  const allTreks = treksData as Trek[];
-  if (!allTreks || !Array.isArray(allTreks)) return [];
-  return allTreks.filter((t) => t.tier === tier);
+  return _treks.filter((t) => t.tier === tier);
 }
 
 export function getTreksByRegion(region: string): Trek[] {
-  const allTreks = treksData as Trek[];
-  if (!allTreks || !Array.isArray(allTreks)) return [];
-  return allTreks.filter((t) => t.region === region);
+  return _treks.filter((t) => t.region === region);
 }
 
 export function getEditorialContent(trekId: string): any | null {
-  if (!editorialData || typeof editorialData !== 'object') return null;
+  if (!trekId) return null;
 
-  const editorial = (editorialData as any)[trekId];
-  if (editorial) return editorial;
+  // Direct key lookup first
+  const direct = _editorial[trekId];
+  if (direct) return direct;
 
-  const trek = (treksData as Trek[])?.find((t) => t.id === trekId);
+  // Fallback: match by normalised name or name property
+  const trek = _treks.find((t) => t.id === trekId);
   if (!trek) return null;
 
   try {
     const normalizedName = trek.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '');
-    const entry = Object.entries(editorialData as any).find(
-      ([key, val]: [string, any]) => key === normalizedName || val.name === trek.name
+    const entry = Object.entries(_editorial).find(
+      ([key, val]) => key === normalizedName || (val as any).name === trek.name
     );
     if (entry) return entry[1];
-  } catch (e) {
-    console.warn(`Error finding editorial for ${trekId}`);
+  } catch {
+    console.warn(`[treks] Error finding editorial for ${trekId}`);
   }
 
   return null;
 }
 
-// ── Legacy sync shim — kept so nothing crashes ───────────────────────────────
-// Returns null. TrekDetail now uses getItineraryAsync() instead.
-// Any component still calling this won't throw, it just gets null.
-export function getItinerary(trekId: string): any[] | null {
+// ── Legacy sync shim — returns null, prevents import errors ──────────────────
+// TrekDetail uses getItineraryAsync() instead.
+export function getItinerary(_trekId: string): any[] | null {
   return null;
 }
 
-// ── NEW: Async per-trek itinerary loader ─────────────────────────────────────
-// Fetches /data/itineraries/{trekId}.json — only 1–9KB per trek.
+// ── Async per-trek itinerary loader ──────────────────────────────────────────
+// Fetches /data/itineraries/{trekId}.json on demand (1–9KB per file).
 // In-memory cache prevents duplicate fetches within the same session.
 
 const _itineraryCache = new Map<string, Promise<any[] | null>>();
@@ -114,7 +120,7 @@ export function getItineraryAsync(trekId: string): Promise<any[] | null> {
     const promise = fetch(`/data/itineraries/${trekId}.json`)
       .then((res) => {
         if (!res.ok) {
-          console.warn(`[treks] No itinerary file for "${trekId}" (${res.status})`);
+          console.warn(`[treks] No itinerary for "${trekId}" (${res.status})`);
           return null;
         }
         return res.json();
@@ -134,7 +140,7 @@ export function getItineraryAsync(trekId: string): Promise<any[] | null> {
   return _itineraryCache.get(trekId)!;
 }
 
-// ── NEW: Async editorial — checks static editorial.json first, then trek JSON ─
+// ── Async editorial loader ────────────────────────────────────────────────────
 export async function getEditorialContentAsync(trekId: string): Promise<any | null> {
   if (!trekId) return null;
 
@@ -142,7 +148,7 @@ export async function getEditorialContentAsync(trekId: string): Promise<any | nu
   const staticEd = getEditorialContent(trekId);
   if (staticEd) return staticEd;
 
-  // Fallback: read whySpecial/highlights from the per-trek itinerary JSON
+  // Fallback: read from per-trek itinerary JSON
   try {
     const res = await fetch(`/data/itineraries/${trekId}.json`);
     if (!res.ok) return null;
