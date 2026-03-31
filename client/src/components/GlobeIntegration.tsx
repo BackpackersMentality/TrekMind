@@ -32,16 +32,14 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
 
   const allTreks = useMemo(() => getAllTreks(), []);
 
-  const { tier, region, accommodation, terrain, duration, popularity,
-          setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity
-        } = useFilterStore();
-
-  const currentFilters: FilterState = useMemo(() => ({
-    tier, region, accommodation, terrain, duration, popularity,
-  }), [tier, region, accommodation, terrain, duration, popularity]);
+  // ── FIX: Pull the unified `filters` object and `setFilters` from the store.
+  // The previous code destructured non-existent top-level fields
+  // (tier, region, accommodation, terrain, duration, popularity) which all
+  // returned undefined. filterTreks then called .length on undefined →
+  // TypeError → blank screen. The store holds everything inside `filters`.
+  const { filters: currentFilters, setFilters } = useFilterStore();
 
   // filtersRef must be declared AFTER currentFilters to avoid a TDZ error
-  // in the minified bundle (our earlier fix placed it before currentFilters).
   const filtersRef = useRef(currentFilters);
   filtersRef.current = currentFilters;
 
@@ -50,21 +48,23 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
     [currentFilters]
   );
 
-  // Count how many treks pass current draft filters — shown in FilterPopup button
+  // Count how many treks pass current filters — shown in FilterPopup button
   const matchingTrekCount = useMemo(
-    () => filterTreks(allTreks as any[], currentFilters as any).length,
+    () => {
+      try {
+        return filterTreks(allTreks as any[], currentFilters).length;
+      } catch {
+        return allTreks.length;
+      }
+    },
     [allTreks, currentFilters]
   );
 
+  // ── FIX: Use setFilters (single call) instead of 6 individual non-existent setters.
   const handleApplyFilters = useCallback((newFilters: FilterState) => {
-    setTier(newFilters.tier);
-    setRegion(newFilters.region);
-    setAccommodation(newFilters.accommodation);
-    setTerrain(newFilters.terrain);
-    setDuration(newFilters.duration);
-    setPopularity(newFilters.popularity);
+    setFilters(newFilters);
     setIsFilterOpen(false);
-  }, [setTier, setRegion, setAccommodation, setTerrain, setDuration, setPopularity]);
+  }, [setFilters]);
 
   const sendToGlobe = useCallback((msg: object) => {
     if (!isReadyRef.current) return;
@@ -120,10 +120,8 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
   const handleLoad = useCallback(() => {
     isReadyRef.current = true;
     setIsLoading(false);
-    // Read latest filters from ref — avoids adding currentFilters to deps
-    // which would recreate handleLoad on every filter change and re-trigger onLoad
     sendToGlobe({ type: "TREKMIND_FILTER_UPDATE", payload: filtersRef.current });
-  }, [sendToGlobe]); // stable — sendToGlobe itself never changes
+  }, [sendToGlobe]);
 
   return (
     <div
@@ -174,7 +172,7 @@ export function GlobeIntegration({ height = "100%", className = "" }: GlobeInteg
         </div>
       </div>
 
-      {/* Popups — rendered via portal in FilterPopup/SearchPopup so z-index is fine */}
+      {/* Popups */}
       <FilterPopup
         isOpen={isFilterOpen}
         onClose={() => setIsFilterOpen(false)}
