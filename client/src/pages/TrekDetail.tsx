@@ -15,8 +15,9 @@ import { RiskTag, getRiskTags } from "@/components/RiskTag";
 import {
   ChevronLeft, MapPin, Calendar, Mountain, Bookmark, BookOpen, ExternalLink,
   Clock, Activity, TrendingUp, Info, Sparkles, CheckCircle2,
-  Bed, Tent, Home, Building2, AlertTriangle
-, Share2, Link2 } from "lucide-react";
+  Bed, Tent, Home, Building2, AlertTriangle, Share2, Link2,
+  DollarSign, Users, Backpack, TrendingDown, TrendingUp as TrendingUpIcon
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, useMemo, useEffect, useRef, Suspense, lazy } from "react";
 import { GearAssistant } from "@/components/GearAssistant";
@@ -289,6 +290,126 @@ function PrepareSection({ trekId }: { trekId: string }) {
         </div>
         <ExternalLink className="w-4 h-4 text-primary/40 group-hover:text-primary shrink-0 mt-0.5 transition-colors" />
       </a>
+    </div>
+  );
+}
+
+// ── Cost & Budget Section ─────────────────────────────────────────────────────
+function CostSection({ trek }: { trek: any }) {
+  if (!trek.budget) return null;
+
+  const budget: "Low" | "Medium" | "High" = trek.budget;
+  const ind = trek.costIndependent;
+  const guided = trek.costGuided;
+  const notes: string = trek.costNotes ?? "";
+
+  const budgetConfig = {
+    Low:    { label: "Budget-Friendly",  color: "text-emerald-600",  bg: "bg-emerald-50 border-emerald-200",  dot: "bg-emerald-500", bar: "w-1/3"  },
+    Medium: { label: "Mid-Range",        color: "text-amber-600",    bg: "bg-amber-50 border-amber-200",      dot: "bg-amber-500",   bar: "w-2/3"  },
+    High:   { label: "Premium / Expensive", color: "text-rose-600",  bg: "bg-rose-50 border-rose-200",        dot: "bg-rose-500",    bar: "w-full" },
+  }[budget];
+
+  const fmtUsd = (min: number, max: number) =>
+    `$${min.toLocaleString()} – $${max.toLocaleString()} USD`;
+
+  const fmtLocal = (lc: any) => {
+    if (!lc) return null;
+    const [min, max] = lc.amount;
+    // Format with commas — use abbreviation for huge numbers (IDR, TZS etc.)
+    const fmt = (n: number) => {
+      if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+      if (n >= 100_000)   return `${Math.round(n / 1000)}K`;
+      return n.toLocaleString();
+    };
+    return `${fmt(min)} – ${fmt(max)} ${lc.code}`;
+  };
+
+  return (
+    <div className="space-y-6 pt-8 border-t">
+      {/* Section header */}
+      <div className="flex items-center gap-2">
+        <DollarSign className="w-6 h-6 text-primary" />
+        <h3 className="text-2xl font-bold">Cost & Budget</h3>
+      </div>
+
+      {/* Budget tier badge */}
+      <div className={cn("inline-flex items-center gap-2.5 px-4 py-2 rounded-full border font-semibold text-sm", budgetConfig.bg, budgetConfig.color)}>
+        <span className={cn("w-2.5 h-2.5 rounded-full shrink-0", budgetConfig.dot)} />
+        {budgetConfig.label}
+        {/* Visual bar */}
+        <div className="hidden sm:flex items-center gap-1 ml-1">
+          <div className="w-24 h-1.5 bg-gray-200 rounded-full overflow-hidden">
+            <div className={cn("h-full rounded-full", budgetConfig.dot, budgetConfig.bar)} />
+          </div>
+        </div>
+      </div>
+
+      {/* Cost cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        {/* Independent */}
+        {ind && (
+          <div className="bg-card border border-border rounded-xl p-5 space-y-3">
+            <div className="flex items-center gap-2 text-foreground font-bold">
+              <Backpack className="w-4 h-4 text-primary shrink-0" />
+              Independent Trekker
+            </div>
+            <div className="space-y-1.5">
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-bold text-foreground">
+                  {fmtUsd(ind.usd[0], ind.usd[1])}
+                </span>
+              </div>
+              {fmtLocal(ind.local) && (
+                <p className="text-sm text-muted-foreground">
+                  ≈ {fmtLocal(ind.local)}
+                </p>
+              )}
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Total estimated trip cost (accommodation, food, permits, local transport). Excludes international flights and personal gear.
+            </p>
+          </div>
+        )}
+
+        {/* Guided */}
+        {guided && (
+          <div className="bg-card border border-border rounded-xl p-5 space-y-3">
+            <div className="flex items-center gap-2 text-foreground font-bold">
+              <Users className="w-4 h-4 text-primary shrink-0" />
+              Guided Tour
+            </div>
+            <div className="space-y-1.5">
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-bold text-foreground">
+                  {fmtUsd(guided.usd[0], guided.usd[1])}
+                </span>
+              </div>
+              {fmtLocal(guided.local) && (
+                <p className="text-sm text-muted-foreground">
+                  ≈ {fmtLocal(guided.local)}
+                </p>
+              )}
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Full-service guided package per person (guide, permits, accommodation, meals). Based on standard group tours.
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Cost notes */}
+      {notes && (
+        <div className="flex gap-3 bg-muted/40 rounded-xl p-4 border border-border/50">
+          <Info className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
+          <p className="text-sm text-muted-foreground leading-relaxed">{notes}</p>
+        </div>
+      )}
+
+      {/* Disclaimer */}
+      <p className="text-xs text-muted-foreground/60 leading-relaxed">
+        Cost estimates are approximate and based on 2024–25 data. Prices vary by season, group size, operator, and exchange rates. Always verify current costs with local operators.
+      </p>
     </div>
   );
 }
@@ -641,6 +762,9 @@ export default function TrekDetail() {
             ))}
           </div>
         )}
+
+        {/* Cost & Budget */}
+        <CostSection trek={trek} />
 
         {/* Gear Assistant */}
         <div className="space-y-6 pt-8 border-t">
