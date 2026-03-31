@@ -1,6 +1,12 @@
-// client/src/hooks/useAuth.ts
+// client/src/hooks/useAuth.tsx
+// ─────────────────────────────────────────────────────────────────────────────
+// Named .tsx (not .ts) because AuthProvider returns JSX.
+// App.tsx imports this as: import { AuthProvider } from "@/hooks/useAuth"
+// (remove the .tsx extension from the import — TypeScript resolves it automatically)
+// ─────────────────────────────────────────────────────────────────────────────
 // Manages Supabase auth session using React Context.
-// Exposes: user, session, loading, isLoggedIn, signInWithGoogle, signInWithEmail, signOut
+// Exposes: user, session, loading, isLoggedIn, signInWithGoogle,
+//          signInWithEmail, signUpWithEmail, signOut
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 import type { User, Session } from '@supabase/supabase-js'
@@ -17,12 +23,10 @@ interface AuthContextType {
   signOut: () => Promise<any>
 }
 
-// 1. Create the Context
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
-// 2. Create the Provider Component
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<User | null>(null)
+  const [user, setUser]       = useState<User | null>(null)
   const [session, setSession] = useState<Session | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -63,22 +67,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user,
       session,
       loading,
-      isLoggedIn: !!user, // <-- useTrekList needs this!
+      isLoggedIn: !!user,
       signInWithGoogle,
       signInWithEmail,
       signUpWithEmail,
-      signOut
+      signOut,
     }}>
       {children}
     </AuthContext.Provider>
   )
 }
 
-// 3. Create the Hook
 export function useAuth() {
   const context = useContext(AuthContext)
   if (context === undefined) {
-    throw new Error("useAuth must be used within an AuthProvider")
+    throw new Error('useAuth must be used within an AuthProvider')
   }
   return context
 }
