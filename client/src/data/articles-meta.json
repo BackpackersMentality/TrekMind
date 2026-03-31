@@ -1,368 +1,146 @@
 [
   {
-    "slug": "50-best-treks-in-the-world",
-    "title": "50 Best Treks in the World: The Ultimate Trekking Bucket List",
-    "description": "A definitive ranked list of the 50 greatest multi-day trekking routes on earth \u2014 from the Annapurna Circuit to Torres del Paine, with distances, durations, and insider tips.",
-    "category": "Lists",
+    "slug": "best-treks-in-the-world",
+    "title": "Best Treks in the World: 20 Routes to Add to Your Bucket List",
+    "description": "A curated guide to 20 of the world's most significant multi-day trekking routes \u2014 from Himalayan classics to remote wilderness crossings.",
+    "category": "inspiration",
     "readTime": "12 min",
-    "publishedAt": "2025-03-01",
-    "featured": true,
-    "relatedTreks": [
-      "annapurna",
-      "torres",
-      "tmb",
-      "ebc",
-      "av1",
-      "jmt",
-      "huayhuash",
-      "camino",
-      "haute_route",
-      "milford"
-    ]
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "what-is-a-trek",
-    "title": "What Is a Trek? Trek vs Hike vs Backpacking vs Thru-Hiking",
-    "description": "A clear explainer on what defines a trek, how it differs from hiking, backpacking, and thru-hiking \u2014 with examples of famous routes and advice for beginners.",
-    "category": "Guides",
+    "slug": "hidden-gem-treks",
+    "title": "Hidden Gem Treks Around the World",
+    "description": "Lesser-known trekking routes that offer extraordinary scenery, genuine remoteness, and far fewer footprints than their famous counterparts.",
+    "category": "inspiration",
+    "readTime": "10 min",
+    "date": "2025-03-30",
+    "featured": false
+  },
+  {
+    "slug": "what-is-a-trekking-peak",
+    "title": "What is a Trekking Peak?",
+    "description": "A clear explanation of trekking peaks \u2014 the mountains that sit between hiking and technical mountaineering, and how to know if you're ready for one.",
+    "category": "trekking-peaks",
     "readTime": "7 min",
-    "publishedAt": "2025-03-01",
-    "featured": false,
-    "relatedTreks": [
-      "annapurna",
-      "tmb",
-      "camino",
-      "pct",
-      "appalachian"
-    ]
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "best-multi-day-treks-for-beginners",
-    "title": "10 Best Multi-Day Treks for Beginners",
-    "description": "The ten best introductory multi-day trekking routes worldwide \u2014 accessible, well-supported, and spectacular. Everything a first-time trekker needs to know.",
-    "category": "Lists",
-    "readTime": "9 min",
-    "publishedAt": "2025-03-01",
-    "featured": true,
-    "relatedTreks": [
-      "tmb",
-      "laugavegur",
-      "milford",
-      "av1",
-      "salkantay",
-      "routeburn",
-      "whw",
-      "kungsleden",
-      "tongariro"
-    ]
-  },
-  {
-    "slug": "best-treks-in-patagonia",
-    "title": "Best Treks in Patagonia: The Complete Guide",
-    "description": "Everything you need to know about trekking in Patagonia \u2014 Torres del Paine, Fitz Roy, Huemul Circuit, Dientes de Navarino \u2014 with planning tips and seasonal advice.",
-    "category": "Destinations",
+    "slug": "trekking-vs-hiking-vs-mountaineering",
+    "title": "Trekking vs Hiking vs Mountaineering: What's the Difference?",
+    "description": "A clear breakdown of three related but distinct outdoor pursuits \u2014 what separates them, when each is appropriate, and how to progress between them.",
+    "category": "guides",
     "readTime": "8 min",
-    "publishedAt": "2025-03-01",
-    "featured": true,
-    "relatedTreks": [
-      "torres",
-      "huemel",
-      "fitz_roy",
-      "dientes",
-      "cerro_castillo"
-    ]
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "best-himalayan-treks",
-    "title": "The Best Treks in the Himalayas",
-    "description": "The definitive guide to Himalayan trekking \u2014 Everest Base Camp, Annapurna Circuit, Manaslu, Gokyo Lakes, the Snowman Trek \u2014 with altitude advice and cultural context.",
-    "category": "Destinations",
-    "readTime": "11 min",
-    "publishedAt": "2025-03-01",
-    "featured": true,
-    "relatedTreks": [
-      "ebc",
-      "annapurna",
-      "manaslu",
-      "markha",
-      "gokyo",
-      "snowman",
-      "kanchenjunga",
-      "makalu_bc"
-    ]
-  },
-  {
-    "slug": "best-hut-to-hut-treks-europe",
-    "title": "Best Hut-to-Hut Treks in Europe",
-    "description": "A complete guide to alpine hut trekking in Europe \u2014 Tour du Mont Blanc, Alta Via 1, Walker's Haute Route, GR20, Julian Alps \u2014 with booking tips and gear advice.",
-    "category": "Destinations",
+    "slug": "budget-vs-luxury-treks",
+    "title": "Budget vs Mid-Range vs Luxury Treks: What You Get",
+    "description": "How trekking costs vary across budget levels \u2014 and what actually changes between a $50-a-day trek and a $300-a-day one.",
+    "category": "planning",
     "readTime": "9 min",
-    "publishedAt": "2025-03-01",
-    "featured": false,
-    "relatedTreks": [
-      "tmb",
-      "av1",
-      "haute_route",
-      "av2",
-      "gr20",
-      "berliner",
-      "monte_rosa"
-    ]
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "how-to-plan-a-multi-day-trek",
-    "title": "How to Plan a Multi-Day Trek: The Complete Planning Guide",
-    "description": "A practical step-by-step guide to planning your first or next multi-day trek \u2014 route selection, fitness prep, gear, permits, weather, safety, and logistics.",
-    "category": "Guides",
+    "slug": "best-trekking-peaks-for-beginners",
+    "title": "Best Trekking Peaks for Beginners",
+    "description": "Eight approachable trekking peaks for those making their first steps into high-altitude mountaineering \u2014 what makes each suitable and what to expect.",
+    "category": "trekking-peaks",
     "readTime": "10 min",
-    "publishedAt": "2025-03-01",
-    "featured": false,
-    "relatedTreks": [
-      "tmb",
-      "ebc",
-      "milford",
-      "inca",
-      "salkantay"
-    ]
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "best-treks-in-south-america",
-    "title": "The Best Treks in South America",
-    "description": "The top multi-day trekking routes across Peru, Chile, Argentina, Bolivia and Ecuador \u2014 from the Inca Trail to Huayhuash, Torres del Paine to the Ausangate Circuit.",
-    "category": "Destinations",
-    "readTime": "10 min",
-    "publishedAt": "2025-03-01",
-    "featured": false,
-    "relatedTreks": [
-      "inca",
-      "huayhuash",
-      "torres",
-      "salkantay",
-      "huemel",
-      "santa_cruz",
-      "ausangate",
-      "quilotoa",
-      "cordillera"
-    ]
-  },
-  {
-    "slug": "best-treks-in-canada",
-    "title": "Best Treks in Canada: Wilderness Routes from Coast to Coast",
-    "description": "Canada's greatest multi-day trekking routes \u2014 West Coast Trail, Rockwall Trail, Skyline Trail, Tombstone Territorial Park, and Berg Lake \u2014 with wilderness trekking advice.",
-    "category": "Destinations",
-    "readTime": "9 min",
-    "publishedAt": "2025-03-01",
-    "featured": false,
-    "relatedTreks": [
-      "west-coast-trail",
-      "rockwall",
-      "skyline",
-      "tombstone",
-      "berg_lake"
-    ]
-  },
-  {
-    "slug": "ultimate-trekking-bucket-list",
-    "title": "The Ultimate Trekking Bucket List: 100 Greatest Treks on Earth",
-    "description": "The complete trekker's bucket list \u2014 100 of the world's greatest multi-day routes across six continents, from beginner circuits to extreme wilderness expeditions.",
-    "category": "Lists",
-    "readTime": "13 min",
-    "publishedAt": "2025-03-01",
-    "featured": true,
-    "relatedTreks": [
-      "ebc",
-      "annapurna",
-      "torres",
-      "tmb",
-      "jmt",
-      "huayhuash",
-      "milford",
-      "gr20",
-      "camino",
-      "pct"
-    ]
-  },
-  {
-    "slug": "best-7-10-day-treks",
-    "title": "Best 7\u201310 Day Treks in the World",
-    "description": "The greatest multi-day trekking routes that fit into one week \u2014 Tour du Mont Blanc, Alta Via 1, West Highland Way, Laugavegur, and more.",
-    "category": "Lists",
-    "readTime": "10 min",
-    "publishedAt": "2025-03-19",
-    "featured": true,
-    "relatedTreks": [
-      "tmb",
-      "av1",
-      "whw",
-      "laugavegur",
-      "haute_route",
-      "kepler",
-      "salkantay",
-      "skyline"
-    ]
-  },
-  {
-    "slug": "best-short-multi-day-treks",
-    "title": "Best Short Multi-Day Treks (3\u20135 Days)",
-    "description": "Outstanding 3\u20135 day trekking routes worldwide \u2014 Acatenango, Tiger Leaping Gorge, Fitz Roy, Routeburn, and more for when time is short.",
-    "category": "Lists",
-    "readTime": "9 min",
-    "publishedAt": "2025-03-19",
-    "featured": false,
-    "relatedTreks": [
-      "acatenango",
-      "tiger_leaping",
-      "fitz_roy",
-      "routeburn",
-      "milford",
-      "laugavegur",
-      "tongariro",
-      "triglav"
-    ]
-  },
-  {
-    "slug": "hardest-treks-in-the-world",
-    "title": "The Hardest Treks in the World",
-    "description": "Routes that push the absolute limit \u2014 Snowman Trek, Huayhuash Circuit, Drakensberg Grand Traverse, Rwenzori Mountains, and more extreme wilderness routes.",
-    "category": "Guides",
-    "readTime": "10 min",
-    "publishedAt": "2025-03-19",
-    "featured": true,
-    "relatedTreks": [
-      "snowman",
-      "huayhuash",
-      "drakensberg",
-      "rwenzori",
-      "kbc",
-      "ght",
-      "dientes"
-    ]
-  },
-  {
-    "slug": "highest-altitude-treks",
-    "title": "Highest Altitude Treks in the World",
-    "description": "Routes above 4,000 metres \u2014 Everest Base Camp, Gokyo Lakes, Annapurna Circuit, Kailash Kora, and the physiological realities of high-altitude trekking.",
-    "category": "Guides",
-    "readTime": "9 min",
-    "publishedAt": "2025-03-19",
-    "featured": false,
-    "relatedTreks": [
-      "ebc",
-      "gokyo",
-      "annapurna",
-      "markha",
-      "snowman",
-      "kailash",
-      "ght"
-    ]
-  },
-  {
-    "slug": "best-treks-for-solo-travellers",
-    "title": "Best Treks for Solo Travellers",
-    "description": "The safest and most rewarding trekking routes for solo travel \u2014 with guidance on safety, route selection, and the reality of solo trekking worldwide.",
-    "category": "Guides",
-    "readTime": "9 min",
-    "publishedAt": "2025-03-19",
-    "featured": true,
-    "relatedTreks": [
-      "camino",
-      "tmb",
-      "ebc",
-      "whw",
-      "av1",
-      "laugavegur",
-      "milford",
-      "routeburn"
-    ]
-  },
-  {
-    "slug": "best-self-guided-treks",
-    "title": "Best Self-Guided Treks in the World",
-    "description": "The world's greatest routes you can complete independently \u2014 Tour du Mont Blanc, Alta Via 1, West Highland Way, Kumano Kod\u014d, John Muir Trail, and more.",
-    "category": "Guides",
+    "slug": "most-scenic-treks-in-the-world",
+    "title": "Most Scenic Treks in the World",
+    "description": "Fourteen trekking routes chosen for extraordinary visual diversity \u2014 glaciers, volcanoes, desert canyons, and coastlines that define mountain photography.",
+    "category": "inspiration",
     "readTime": "8 min",
-    "publishedAt": "2025-03-19",
-    "featured": false,
-    "relatedTreks": [
-      "tmb",
-      "av1",
-      "whw",
-      "laugavegur",
-      "ebc",
-      "kumano",
-      "annapurna",
-      "jmt"
-    ]
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "best-time-to-trek-global-seasons",
-    "title": "When Is the Best Time to Go Trekking Around the World?",
-    "description": "The complete global trekking seasons guide \u2014 Himalayas, Patagonia, Alps, New Zealand, East Africa, Scandinavia and more, month by month.",
-    "category": "Guides",
+    "slug": "best-treks-by-continent",
+    "title": "Best Treks by Continent",
+    "description": "The finest multi-day trekking routes on each continent \u2014 from the Himalayan classics of Asia to the coastal wilderness of Oceania.",
+    "category": "inspiration",
     "readTime": "11 min",
-    "publishedAt": "2025-03-19",
-    "featured": true,
-    "relatedTreks": [
-      "ebc",
-      "annapurna",
-      "torres",
-      "tmb",
-      "laugavegur",
-      "kungsleden",
-      "kilimanjaro",
-      "milford"
-    ]
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "trek-difficulty-explained",
-    "title": "Trek Difficulty Explained: From Beginner to Expert",
-    "description": "A clear framework for understanding trekking difficulty \u2014 elevation, altitude, terrain, remoteness, and duration \u2014 with TrekMind's four-tier classification system.",
-    "category": "Guides",
-    "readTime": "8 min",
-    "publishedAt": "2025-03-19",
-    "featured": false,
-    "relatedTreks": [
-      "tmb",
-      "annapurna",
-      "snowman",
-      "huayhuash",
-      "ebc",
-      "laugavegur"
-    ]
+    "slug": "how-to-train-for-a-trek",
+    "title": "How to Train for a Multi-Day Trek",
+    "description": "A practical training guide for multi-day trekking \u2014 building the aerobic base, leg strength, and load-carrying capacity that make the difference on trail.",
+    "category": "planning",
+    "readTime": "10 min",
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "best-treks-by-month",
-    "title": "Best Treks by Month: Where to Trek Every Month of the Year",
-    "description": "Month-by-month guide to the world's best trekking \u2014 January in Patagonia to December in New Zealand, with specific route recommendations for every month.",
-    "category": "Lists",
-    "readTime": "12 min",
-    "publishedAt": "2025-03-19",
-    "featured": true,
-    "relatedTreks": [
-      "torres",
-      "ebc",
-      "annapurna",
-      "tmb",
-      "laugavegur",
-      "kungsleden",
-      "milford",
-      "kilimanjaro"
-    ]
+    "slug": "how-much-does-a-trek-cost",
+    "title": "How Much Does a Trek Cost?",
+    "description": "A realistic breakdown of trekking costs by category and region \u2014 flights, permits, guides, gear, and daily expenses for the world's most popular routes.",
+    "category": "planning",
+    "readTime": "10 min",
+    "date": "2025-03-30",
+    "featured": false
   },
   {
-    "slug": "ultimate-trekking-packing-list",
-    "title": "Ultimate Packing List for Multi-Day Treks",
-    "description": "The complete multi-day trekking packing list \u2014 pack, shelter, clothing layers, navigation, water, food, and first aid \u2014 with explanations for every item.",
-    "category": "Guides",
+    "slug": "guided-vs-independent-trekking",
+    "title": "Guided vs Independent Trekking: Which Is Right for You?",
+    "description": "A clear breakdown of guided and independent trekking \u2014 the real tradeoffs in safety, cost, flexibility, and experience quality.",
+    "category": "planning",
+    "readTime": "9 min",
+    "date": "2025-03-30",
+    "featured": false
+  },
+  {
+    "slug": "trek-to-peak-progression",
+    "title": "From Trekker to Trekking Peak: A Progression Guide",
+    "description": "How to build from first multi-day hike to a 6000m summit \u2014 the stages, the skills, and what each level demands.",
+    "category": "trekking-peaks",
     "readTime": "11 min",
-    "publishedAt": "2025-03-19",
-    "featured": false,
-    "relatedTreks": [
-      "tmb",
-      "ebc",
-      "annapurna",
-      "snowman",
-      "torres"
-    ]
+    "date": "2025-03-30",
+    "featured": false
+  },
+  {
+    "slug": "expedition-style-treks",
+    "title": "Treks That Feel Like Expeditions (Without Technical Climbing)",
+    "description": "Ten multi-day trekking routes with genuine expedition character \u2014 remote, demanding, immersive \u2014 that don't require technical mountaineering skills.",
+    "category": "inspiration",
+    "readTime": "9 min",
+    "date": "2025-03-30",
+    "featured": false
+  },
+  {
+    "slug": "less-crowded-alternatives-to-famous-treks",
+    "title": "Less Crowded Alternatives to Famous Treks",
+    "description": "For every oversubscribed classic, there is a comparable route with better solitude. Here are the best like-for-like alternatives.",
+    "category": "inspiration",
+    "readTime": "10 min",
+    "date": "2025-03-30",
+    "featured": false
+  },
+  {
+    "slug": "best-hut-to-hut-treks-in-the-world",
+    "title": "Best Hut-to-Hut Treks in the World",
+    "description": "Twelve multi-day trekking routes where mountain huts, rifugios, and trail shelters provide the accommodation \u2014 combining comfort, community, and alpine access.",
+    "category": "inspiration",
+    "readTime": "9 min",
+    "date": "2025-03-30",
+    "featured": false
+  },
+  {
+    "slug": "best-thru-hikes-for-first-timers",
+    "title": "Best Thru-Hikes for First-Timers",
+    "description": "Eight entry-level long-distance routes for those making their first attempt at a multi-week trail \u2014 manageable, well-supported, and genuinely transformative.",
+    "category": "guides",
+    "readTime": "10 min",
+    "date": "2025-03-30",
+    "featured": false
   }
 ]
