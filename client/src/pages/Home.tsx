@@ -58,7 +58,22 @@ export default function Home() {
   const activeFilterCount = useMemo(() => countActiveFilters(filters as FilterState), [filters]);
 
   const filteredTreks = useMemo(() => {
-    return filterTreks(treks as any[], filters as any);
+    // Defensive guard: ensure every trek has a durationBucket string before
+    // passing to filterTreks, so a null/undefined field can never crash the
+    // filter callback with "Cannot read properties of null (reading 'length')".
+    // Root cause: treks added before durationBucket was introduced omit the
+    // field, and getAllTreks() returns null (not undefined) when totalDays
+    // parsing fails for complex formats like "165 days (thru) / 3-14 days (sections)".
+    const safeTreks = (treks as any[]).map((t) => ({
+      ...t,
+      durationBucket: t.durationBucket ?? "",
+    }));
+    try {
+      return filterTreks(safeTreks, filters as any);
+    } catch (e) {
+      console.error("[TrekMind] filterTreks threw an error — returning unfiltered list:", e);
+      return safeTreks;
+    }
   }, [treks, filters]);
 
   const handleApplyFilters = useCallback((newFilters: FilterState) => {
