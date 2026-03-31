@@ -23,7 +23,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        800,
+        1200
+      ],
+      "local": {
+        "amount": [
+          750,
+          1100
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1800,
+        2800
+      ],
+      "local": {
+        "amount": [
+          1700,
+          2600
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Rifugio beds ~€40–65/night incl. dinner & breakfast. No permit fee."
   },
   {
     "id": "haute_route",
@@ -49,7 +79,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1200,
+        2000
+      ],
+      "local": {
+        "amount": [
+          1100,
+          1850
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        4500
+      ],
+      "local": {
+        "amount": [
+          2800,
+          4200
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Swiss/French Alpine huts €50–90/night. Swiss costs noticeably higher than French side."
   },
   {
     "id": "abc",
@@ -77,7 +137,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          55000,
+          95000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1500
+      ],
+      "local": {
+        "amount": [
+          120000,
+          200000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Teahouse bed+board ~$15–30/night. ACAP & TIMS permits ~$50 total."
   },
   {
     "id": "annapurna",
@@ -105,7 +195,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          68000,
+          120000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1000,
+        1800
+      ],
+      "local": {
+        "amount": [
+          135000,
+          240000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Teahouses avg $20–35/day all-in. ACAP + TIMS permits ~$50."
   },
   {
     "id": "camino",
@@ -134,7 +254,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        900,
+        1400
+      ],
+      "local": {
+        "amount": [
+          830,
+          1300
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4000
+      ],
+      "local": {
+        "amount": [
+          2300,
+          3700
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Albergues €10–18/night. Budget €25–45/day all-in. One of Europe's best-value long walks."
   },
   {
     "id": "drakensberg",
@@ -168,7 +318,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        400
+      ],
+      "local": {
+        "amount": [
+          2800,
+          7500
+        ],
+        "currency": "South African Rand",
+        "code": "ZAR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          15000,
+          28000
+        ],
+        "currency": "South African Rand",
+        "code": "ZAR"
+      }
+    },
+    "costNotes": "Park entry ~R180/day. No staffed huts — bring all food. Extremely affordable."
   },
   {
     "id": "ebc",
@@ -196,7 +376,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        800,
+        1400
+      ],
+      "local": {
+        "amount": [
+          110000,
+          190000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          200000,
+          340000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Teahouses $20–40/night. Sagarmatha NP + TIMS ~$100. Costs rise sharply closer to EBC."
   },
   {
     "id": "gr20",
@@ -222,7 +432,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        700,
+        1100
+      ],
+      "local": {
+        "amount": [
+          650,
+          1000
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3200
+      ],
+      "local": {
+        "amount": [
+          1850,
+          3000
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Refuges €15–20/night dormitory. Full board option ~€40–55. Camping cheaper at €8–12."
   },
   {
     "id": "huayhuash",
@@ -249,7 +489,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          1100,
+          2200
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1600
+      ],
+      "local": {
+        "amount": [
+          3300,
+          5900
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costNotes": "Community entry fees ~$50 total. Fully self-sufficient camping required independently."
   },
   {
     "id": "inca",
@@ -276,7 +546,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        700,
+        1000
+      ],
+      "local": {
+        "amount": [
+          2600,
+          3700
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1000,
+        1800
+      ],
+      "local": {
+        "amount": [
+          3700,
+          6600
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costNotes": "Classic trail legally requires a licensed guide. Budget tour ~$700 pp, luxury $1800+."
   },
   {
     "id": "jmt",
@@ -301,7 +601,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          500,
+          900
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        5000
+      ],
+      "local": {
+        "amount": [
+          3000,
+          5000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Self-sufficient — resupply packages at Muir Trail Ranch ~$200. Permit fees ~$15. Gear dominates cost."
   },
   {
     "id": "kbc",
@@ -326,7 +656,37 @@
       6,
       7,
       8
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        1200,
+        2000
+      ],
+      "local": {
+        "amount": [
+          350000,
+          590000
+        ],
+        "currency": "Pakistani Rupee",
+        "code": "PKR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4000
+      ],
+      "local": {
+        "amount": [
+          730000,
+          1180000
+        ],
+        "currency": "Pakistani Rupee",
+        "code": "PKR"
+      }
+    },
+    "costNotes": "Remote Karakoram — requires tents, porters & cook for most trekkers. Porter fees ~$25/day each."
   },
   {
     "id": "kilimanjaro",
@@ -355,7 +715,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1800,
+        2800
+      ],
+      "local": {
+        "amount": [
+          4700000,
+          7400000
+        ],
+        "currency": "Tanzanian Shilling",
+        "code": "TZS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4500
+      ],
+      "local": {
+        "amount": [
+          6600000,
+          11800000
+        ],
+        "currency": "Tanzanian Shilling",
+        "code": "TZS"
+      }
+    },
+    "costNotes": "Guide mandatory by law. Park fees ~$800+. Budget operators ~$1800; reputable mid-range ~$3000."
   },
   {
     "id": "kungsleden",
@@ -380,7 +770,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        600,
+        1000
+      ],
+      "local": {
+        "amount": [
+          6500,
+          10800
+        ],
+        "currency": "Swedish Krona",
+        "code": "SEK"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          21500,
+          37800
+        ],
+        "currency": "Swedish Krona",
+        "code": "SEK"
+      }
+    },
+    "costNotes": "STF hut beds ~SEK 320–450/night. Ferry crossings ~SEK 100 each. Resupply possible at STF stations."
   },
   {
     "id": "laugavegur",
@@ -404,7 +824,37 @@
     "seasonMonths": [
       7,
       8
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          43000,
+          85000
+        ],
+        "currency": "Icelandic Krona",
+        "code": "ISK"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          113000,
+          212000
+        ],
+        "currency": "Icelandic Krona",
+        "code": "ISK"
+      }
+    },
+    "costNotes": "Hut beds ~$70–100/night. Iceland is expensive — budget $80–120/day. Camping option ~$30/night."
   },
   {
     "id": "milford",
@@ -433,7 +883,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          650,
+          1150
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          3300,
+          5700
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Hut fees NZD220/night. Independent capacity strictly limited — book months ahead."
   },
   {
     "id": "fuji",
@@ -458,7 +938,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        80,
+        200
+      ],
+      "local": {
+        "amount": [
+          12000,
+          30000
+        ],
+        "currency": "Japanese Yen",
+        "code": "JPY"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          45000,
+          90000
+        ],
+        "currency": "Japanese Yen",
+        "code": "JPY"
+      }
+    },
+    "costNotes": "Mountain hut incl. dinner & breakfast ~¥15,000. Conservation fee ¥2,000. Very accessible."
   },
   {
     "id": "kailash",
@@ -486,7 +996,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          10000,
+          17000
+        ],
+        "currency": "Chinese Yuan",
+        "code": "CNY"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4500
+      ],
+      "local": {
+        "amount": [
+          17000,
+          31000
+        ],
+        "currency": "Chinese Yuan",
+        "code": "CNY"
+      }
+    },
+    "costNotes": "Tibet Entry + Alien Travel Permit + group tour required. Logistics make independent travel near-impossible."
   },
   {
     "id": "overland",
@@ -516,7 +1056,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          450,
+          900
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          1800,
+          3300
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costNotes": "Hut fees AUD$75/night peak season. Cradle Mountain park entry ~AUD$30. Self-guided is very doable."
   },
   {
     "id": "routeburn",
@@ -545,7 +1115,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        250,
+        450
+      ],
+      "local": {
+        "amount": [
+          410,
+          740
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          2000,
+          3600
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Hut fees ~NZD$75/night. One of NZ's Great Walks — book huts months ahead in peak season."
   },
   {
     "id": "snowman",
@@ -569,7 +1169,37 @@
     "seasonMonths": [
       9,
       10
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        3000,
+        5000
+      ],
+      "local": {
+        "amount": [
+          330000,
+          550000
+        ],
+        "currency": "Bhutanese Ngultrum",
+        "code": "BTN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        4000,
+        7000
+      ],
+      "local": {
+        "amount": [
+          440000,
+          770000
+        ],
+        "currency": "Bhutanese Ngultrum",
+        "code": "BTN"
+      }
+    },
+    "costNotes": "Bhutan mandatory $200/day Sustainable Development Fee + agency required. Guide-only trek."
   },
   {
     "id": "torres",
@@ -596,7 +1226,37 @@
       3,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        600,
+        1100
+      ],
+      "local": {
+        "amount": [
+          540000,
+          990000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        3000
+      ],
+      "local": {
+        "amount": [
+          1350000,
+          2700000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costNotes": "Park entry ~$40. Camping/refugios $25–80/night. Budget carefully — booking mandatory."
   },
   {
     "id": "tmb",
@@ -622,7 +1282,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1000,
+        1800
+      ],
+      "local": {
+        "amount": [
+          930,
+          1670
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4500
+      ],
+      "local": {
+        "amount": [
+          2300,
+          4200
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Refuges €50–80/night incl. dinner. French/Italian refuges cheaper than Swiss. One of Europe's most expensive treks."
   },
   {
     "id": "west_coast",
@@ -649,7 +1339,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        350,
+        600
+      ],
+      "local": {
+        "amount": [
+          480,
+          820
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          1640,
+          3010
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "Permit CAD$130. Water taxi (Gordon River) ~CAD$30. Self-sufficient camping with all food carried."
   },
   {
     "id": "av2",
@@ -675,7 +1395,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        700,
+        1100
+      ],
+      "local": {
+        "amount": [
+          650,
+          1020
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1800,
+        2800
+      ],
+      "local": {
+        "amount": [
+          1670,
+          2600
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Rifugio bed+board €50–70/night. More remote than AV1 — less competition for beds off peak."
   },
   {
     "id": "av4",
@@ -701,7 +1451,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        800
+      ],
+      "local": {
+        "amount": [
+          460,
+          740
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          1390,
+          2320
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Smaller rifugios €40–60/night. Less-traveled Dolomite route — often cheaper than the famous variants."
   },
   {
     "id": "arctic",
@@ -728,7 +1508,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          10900,
+          18100
+        ],
+        "currency": "Danish Krone",
+        "code": "DKK"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3500,
+        6000
+      ],
+      "local": {
+        "amount": [
+          25500,
+          43700
+        ],
+        "currency": "Danish Krone",
+        "code": "DKK"
+      }
+    },
+    "costNotes": "Remote Greenland — boat transfer ~$200 each end. Huts booked via Visit Greenland. Food must be carried."
   },
   {
     "id": "ausangate",
@@ -755,7 +1565,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        450
+      ],
+      "local": {
+        "amount": [
+          730,
+          1650
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          2200,
+          4400
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costNotes": "Basic arrieros (muleteers) & cook included on most guided trips. Independent requires navigation skill."
   },
   {
     "id": "banff",
@@ -782,7 +1622,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          550,
+          960
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          2050,
+          3420
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "Backcountry permit ~CAD$10/night. All food carried. Bear canister required (hire ~CAD$50)."
   },
   {
     "id": "c2c",
@@ -808,7 +1678,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        800,
+        1400
+      ],
+      "local": {
+        "amount": [
+          630,
+          1100
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          1580,
+          2760
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costNotes": "B&Bs £50–100/night. Budget £60–90/day. Guided self-catered groups notably cheaper than full service."
   },
   {
     "id": "east_coast",
@@ -835,7 +1735,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        700,
+        1200
+      ],
+      "local": {
+        "amount": [
+          960,
+          1640
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          2740,
+          4790
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "B&Bs CAD$80–150/night in fishing villages. Trail access is free. Very manageable solo or guided."
   },
   {
     "id": "fishermans",
@@ -861,7 +1791,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          370,
+          650
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          1110,
+          2040
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Guesthouses €40–70/night. Excellent budget coastal option — cheap food and accommodation."
   },
   {
     "id": "fitz_roy",
@@ -888,7 +1848,37 @@
       3,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          105000,
+          210000
+        ],
+        "currency": "Argentine Peso",
+        "code": "ARS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          280000,
+          525000
+        ],
+        "currency": "Argentine Peso",
+        "code": "ARS"
+      }
+    },
+    "costNotes": "Park entry ~$25. El Chaltén has great affordable hostels ~$20–40/night. Argentina offers excellent value."
   },
   {
     "id": "gokyo",
@@ -914,7 +1904,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        700,
+        1200
+      ],
+      "local": {
+        "amount": [
+          95000,
+          163000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1400,
+        2200
+      ],
+      "local": {
+        "amount": [
+          190000,
+          300000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Sagarmatha NP + TIMS ~$100. Teahouses $25–45/night all-in. Costs rise above 4500m."
   },
   {
     "id": "whw",
@@ -941,7 +1961,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          390,
+          710
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          1180,
+          1970
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costNotes": "B&Bs/bunkhouses £30–80/night. Baggage transfer services add ~£150–200. Popular trail well served by budget options."
   },
   {
     "id": "jordan",
@@ -975,7 +2025,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        450
+      ],
+      "local": {
+        "amount": [
+          140,
+          320
+        ],
+        "currency": "Jordanian Dinar",
+        "code": "JOD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          420,
+          850
+        ],
+        "currency": "Jordanian Dinar",
+        "code": "JOD"
+      }
+    },
+    "costNotes": "Dana to Petra section most popular. Wild camping permitted. Jordan Pass covers entry to many sites."
   },
   {
     "id": "kalalau",
@@ -1002,7 +2082,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          100,
+          250
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          400,
+          800
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Permit required ~$15/night. Kauai food/accommodation outside trail adds up. Trail itself very cheap."
   },
   {
     "id": "kumano",
@@ -1036,7 +2146,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          60000,
+          120000
+        ],
+        "currency": "Japanese Yen",
+        "code": "JPY"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          180000,
+          330000
+        ],
+        "currency": "Japanese Yen",
+        "code": "JPY"
+      }
+    },
+    "costNotes": "Ryokans ¥10,000–20,000/night incl. dinner & breakfast. Pilgrimage stamp book (nōkyōchō) a wonderful memento."
   },
   {
     "id": "larapinta",
@@ -1064,7 +2204,37 @@
       4,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          450,
+          900
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4500
+      ],
+      "local": {
+        "amount": [
+          3750,
+          6750
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costNotes": "Trail registration AUD$20. Water cache service AUD$300+. Guided luxury camping tours ~AUD$4000."
   },
   {
     "id": "lycian",
@@ -1093,7 +2263,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          9000,
+          18000
+        ],
+        "currency": "Turkish Lira",
+        "code": "TRY"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          24000,
+          45000
+        ],
+        "currency": "Turkish Lira",
+        "code": "TRY"
+      }
+    },
+    "costNotes": "Pensions €15–30/night. Turkey extremely good value — food and accommodation cheap by European standards."
   },
   {
     "id": "manaslu",
@@ -1121,7 +2321,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        700,
+        1300
+      ],
+      "local": {
+        "amount": [
+          95000,
+          177000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          204000,
+          340000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Restricted Area Permit ~$100/week. Teahouses cheaper than Everest region. Camping required some sections."
   },
   {
     "id": "markha",
@@ -1149,7 +2379,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          25000,
+          50000
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        700,
+        1400
+      ],
+      "local": {
+        "amount": [
+          58000,
+          117000
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costNotes": "Homestays ~₹500–1200/night incl. meals. Inner Line Permit required (~₹400). One of India's best-value treks."
   },
   {
     "id": "kenya",
@@ -1183,7 +2443,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          52000,
+          91000
+        ],
+        "currency": "Kenyan Shilling",
+        "code": "KES"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1600
+      ],
+      "local": {
+        "amount": [
+          117000,
+          208000
+        ],
+        "currency": "Kenyan Shilling",
+        "code": "KES"
+      }
+    },
+    "costNotes": "Park entry ~$60/day. Mountain huts ~$20–30/night. Guide + porter strongly advised. Budget airlines from Nairobi."
   },
   {
     "id": "balkans",
@@ -1209,7 +2499,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          270,
+          540
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          720,
+          1350
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Guesthouses €20–40/night incl. meals. Albania/Kosovo extremely cheap by European standards."
   },
   {
     "id": "salkantay",
@@ -1236,7 +2556,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        250,
+        500
+      ],
+      "local": {
+        "amount": [
+          920,
+          1850
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        500,
+        1000
+      ],
+      "local": {
+        "amount": [
+          1850,
+          3700
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costNotes": "Budget agencies ~$250–400 all-inclusive. Luxury lodge option ~$1000+. One of Peru's best-value routes."
   },
   {
     "id": "simien",
@@ -1270,7 +2620,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          22000,
+          44000
+        ],
+        "currency": "Ethiopian Birr",
+        "code": "ETB"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          44000,
+          82500
+        ],
+        "currency": "Ethiopian Birr",
+        "code": "ETB"
+      }
+    },
+    "costNotes": "Guide + scout mandatory by law ~$50/day total. Camp fees ~$5/night. Affordable once in Ethiopia."
   },
   {
     "id": "tiger_leaping",
@@ -1296,7 +2676,37 @@
       5,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        50,
+        150
+      ],
+      "local": {
+        "amount": [
+          360,
+          1080
+        ],
+        "currency": "Chinese Yuan",
+        "code": "CNY"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          1440,
+          2880
+        ],
+        "currency": "Chinese Yuan",
+        "code": "CNY"
+      }
+    },
+    "costNotes": "Guesthouses ¥60–150/night. One of the world's best-value iconic walks — 2 days, very cheap."
   },
   {
     "id": "tongariro",
@@ -1324,7 +2734,37 @@
       4,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        350
+      ],
+      "local": {
+        "amount": [
+          250,
+          580
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          660,
+          1320
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Hut/camping fees ~NZD$30–55/night. Day-walk (Alpine Crossing) free entry. Great value NZ circuit."
   },
   {
     "id": "triglav",
@@ -1350,7 +2790,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          185,
+          370
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          555,
+          1110
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Mountain huts €30–50/night incl. dinner. Triglav National Park entry free. Slovenia excellent value."
   },
   {
     "id": "wonderland",
@@ -1377,7 +2847,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          300,
+          600
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2800
+      ],
+      "local": {
+        "amount": [
+          1500,
+          2800
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "NPS permit ~$30. Self-sufficient camping — no resupply. Mount Rainier NP annual pass ~$55."
   },
   {
     "id": "acatenango",
@@ -1411,7 +2911,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          780,
+          1950
+        ],
+        "currency": "Guatemalan Quetzal",
+        "code": "GTQ"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        200,
+        500
+      ],
+      "local": {
+        "amount": [
+          1560,
+          3900
+        ],
+        "currency": "Guatemalan Quetzal",
+        "code": "GTQ"
+      }
+    },
+    "costNotes": "Guided overnight ~$100 all-in from Antigua. One of the world's best budget volcano experiences."
   },
   {
     "id": "ala-kul",
@@ -1436,7 +2966,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          8700,
+          21700
+        ],
+        "currency": "Kyrgyz Som",
+        "code": "KGS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          26000,
+          52000
+        ],
+        "currency": "Kyrgyz Som",
+        "code": "KGS"
+      }
+    },
+    "costNotes": "Yurt homestays ~$15–25/night incl. meals. Guide/horse hire ~$30/day. Extremely affordable Central Asia."
   },
   {
     "id": "altai",
@@ -1470,7 +3030,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          45000,
+          81000
+        ],
+        "currency": "Russian Ruble",
+        "code": "RUB"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          108000,
+          198000
+        ],
+        "currency": "Russian Ruble",
+        "code": "RUB"
+      }
+    },
+    "costNotes": "Requires guide and permits in border zones. Yurt stays ~₽1500–2500/night. Remote logistics add cost."
   },
   {
     "id": "tusheti",
@@ -1504,7 +3094,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        350
+      ],
+      "local": {
+        "amount": [
+          400,
+          950
+        ],
+        "currency": "Georgian Lari",
+        "code": "GEL"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          1070,
+          2140
+        ],
+        "currency": "Georgian Lari",
+        "code": "GEL"
+      }
+    },
+    "costNotes": "Guesthouses with meals ~₾50–80/night. Georgia extremely affordable. 4WD taxi to Omalo ~₾200."
   },
   {
     "id": "cordillera",
@@ -1531,7 +3151,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        450
+      ],
+      "local": {
+        "amount": [
+          1380,
+          3105
+        ],
+        "currency": "Bolivian Boliviano",
+        "code": "BOB"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        500,
+        1000
+      ],
+      "local": {
+        "amount": [
+          3450,
+          6900
+        ],
+        "currency": "Bolivian Boliviano",
+        "code": "BOB"
+      }
+    },
+    "costNotes": "Bolivia one of South America's cheapest destinations. Refugios ~Bs.30–60. Guide/mule support cheap."
   },
   {
     "id": "el_choro",
@@ -1558,7 +3208,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        200
+      ],
+      "local": {
+        "amount": [
+          690,
+          1380
+        ],
+        "currency": "Bolivian Boliviano",
+        "code": "BOB"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        250,
+        500
+      ],
+      "local": {
+        "amount": [
+          1725,
+          3450
+        ],
+        "currency": "Bolivian Boliviano",
+        "code": "BOB"
+      }
+    },
+    "costNotes": "Basic campsites ~$3–5. Rustic lodges possible. La Paz is the gateway — very cheap city to base from."
   },
   {
     "id": "fish_river",
@@ -1592,7 +3272,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          3750,
+          7500
+        ],
+        "currency": "Namibian Dollar",
+        "code": "NAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          11250,
+          22500
+        ],
+        "currency": "Namibian Dollar",
+        "code": "NAD"
+      }
+    },
+    "costNotes": "Namibia Wildlife Resorts permit ~N$420. Self-sufficient camping — all water carried. Fly-in to Ai-Ais adds cost."
   },
   {
     "id": "huemel",
@@ -1619,7 +3329,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        500
+      ],
+      "local": {
+        "amount": [
+          70000,
+          175000
+        ],
+        "currency": "Argentine Peso",
+        "code": "ARS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          210000,
+          420000
+        ],
+        "currency": "Argentine Peso",
+        "code": "ARS"
+      }
+    },
+    "costNotes": "Technical route — river crossings, rope work. El Chaltén is the base. Argentina affordable for foreigners."
   },
   {
     "id": "lost_city",
@@ -1646,7 +3386,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        350,
+        600
+      ],
+      "local": {
+        "amount": [
+          1400000,
+          2400000
+        ],
+        "currency": "Colombian Peso",
+        "code": "COP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          1600000,
+          2800000
+        ],
+        "currency": "Colombian Peso",
+        "code": "COP"
+      }
+    },
+    "costNotes": "Guide-only trek mandatory. Budget agencies ~$350 pp. Colombia very affordable overall."
   },
   {
     "id": "ushguli",
@@ -1680,7 +3450,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        350
+      ],
+      "local": {
+        "amount": [
+          400,
+          950
+        ],
+        "currency": "Georgian Lari",
+        "code": "GEL"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          1070,
+          2140
+        ],
+        "currency": "Georgian Lari",
+        "code": "GEL"
+      }
+    },
+    "costNotes": "Mestia guesthouses ~₾50–80 incl. meals. 4WD taxis available. One of Europe's best-value mountain areas."
   },
   {
     "id": "mgoun",
@@ -1714,7 +3514,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          1000,
+          2500
+        ],
+        "currency": "Moroccan Dirham",
+        "code": "MAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          3000,
+          6000
+        ],
+        "currency": "Moroccan Dirham",
+        "code": "MAD"
+      }
+    },
+    "costNotes": "Guide + mule recommended. Berber villages offer simple homestay meals ~DH100. Very affordable Atlas route."
   },
   {
     "id": "rinjani",
@@ -1748,7 +3578,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        450
+      ],
+      "local": {
+        "amount": [
+          3200000,
+          7200000
+        ],
+        "currency": "Indonesian Rupiah",
+        "code": "IDR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        700
+      ],
+      "local": {
+        "amount": [
+          4800000,
+          11200000
+        ],
+        "currency": "Indonesian Rupiah",
+        "code": "IDR"
+      }
+    },
+    "costNotes": "Guided packages from Senaru ~$250–500. National park entry ~Rp150,000. Very affordable Indonesia."
   },
   {
     "id": "rwenzori",
@@ -1782,7 +3642,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1000,
+        1800
+      ],
+      "local": {
+        "amount": [
+          3700000,
+          6700000
+        ],
+        "currency": "Ugandan Shilling",
+        "code": "UGX"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2800
+      ],
+      "local": {
+        "amount": [
+          5600000,
+          10400000
+        ],
+        "currency": "Ugandan Shilling",
+        "code": "UGX"
+      }
+    },
+    "costNotes": "Guide + porter mandatory. Park fees ~$700+ for full circuit. Remote Uganda logistics add cost."
   },
   {
     "id": "santa_cruz",
@@ -1809,7 +3699,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        350
+      ],
+      "local": {
+        "amount": [
+          555,
+          1295
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          1110,
+          2220
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costNotes": "Huascarán NP entry ~$20. Huaraz agencies offer budget 4-day packages ~$150–300. Excellent Peru value."
   },
   {
     "id": "timberline",
@@ -1836,7 +3756,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        300
+      ],
+      "local": {
+        "amount": [
+          100,
+          300
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        500,
+        1200
+      ],
+      "local": {
+        "amount": [
+          500,
+          1200
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Mt Hood NF permit ~$5. Timberline Lodge makes a great base. One of US most accessible backcountry circuits."
   },
   {
     "id": "toublak",
@@ -1870,7 +3820,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          1000,
+          2500
+        ],
+        "currency": "Moroccan Dirham",
+        "code": "MAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          3000,
+          6000
+        ],
+        "currency": "Moroccan Dirham",
+        "code": "MAD"
+      }
+    },
+    "costNotes": "Guide + mule strongly recommended. Berber guesthouses ~DH150/night. Morocco very affordable."
   },
   {
     "id": "yading_kora",
@@ -1904,7 +3884,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          720,
+          1800
+        ],
+        "currency": "Chinese Yuan",
+        "code": "CNY"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          2160,
+          4320
+        ],
+        "currency": "Chinese Yuan",
+        "code": "CNY"
+      }
+    },
+    "costNotes": "Scenic area entry fee ~¥270 + shuttle. Guesthouses ¥100–200/night. Cheap and spectacular Tibetan plateau."
   },
   {
     "id": "teton_crest",
@@ -1929,7 +3939,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        450
+      ],
+      "local": {
+        "amount": [
+          200,
+          450
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          1200,
+          2200
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Backcountry permit ~$45. Grand Teton NP entry ~$35. All food carried — no services on route."
   },
   {
     "id": "wind_river",
@@ -1954,7 +3994,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          300,
+          600
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4000
+      ],
+      "local": {
+        "amount": [
+          2500,
+          4000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Pinedale permit ~$30. Fully self-sufficient — no facilities on route. Resupply cache at Big Sandy Lodge."
   },
   {
     "id": "sierra_high",
@@ -1979,7 +4049,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          400,
+          800
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        4000,
+        7000
+      ],
+      "local": {
+        "amount": [
+          4000,
+          7000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Permits from multiple ranger districts ~$20 each. Expert navigation required. No trails — true off-route travel."
   },
   {
     "id": "tombstone",
@@ -2004,7 +4104,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          410,
+          820
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1000,
+        2000
+      ],
+      "local": {
+        "amount": [
+          1370,
+          2740
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "Yukon backcountry permit required. Remote — float plane options add cost. Whitehorse flights expensive."
   },
   {
     "id": "skyline",
@@ -2029,7 +4159,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        350
+      ],
+      "local": {
+        "amount": [
+          205,
+          480
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          820,
+          1640
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "Jasper NP backcountry permit ~CAD$10/night. Short trail, easy access from Jasper townsite."
   },
   {
     "id": "rockwall",
@@ -2054,7 +4214,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        300
+      ],
+      "local": {
+        "amount": [
+          205,
+          410
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          820,
+          1640
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "Kootenay NP backcountry permit ~CAD$10/night. Accessible from highway — low logistics overhead."
   },
   {
     "id": "choquequirao",
@@ -2081,7 +4271,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          740,
+          1480
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          1850,
+          3330
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costNotes": "Entry fee ~$8. No roads, no crowds — mule support helps. One of Peru's best value secret ruins treks."
   },
   {
     "id": "quilotoa",
@@ -2107,7 +4327,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          130,
+          320
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          390,
+          780
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Ecuador uses USD. Guesthouses $10–20/night. Village homestays cheaper. Outstanding budget Andean loop."
   },
   {
     "id": "roraima",
@@ -2134,7 +4384,37 @@
       3,
       4,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          18000,
+          32000
+        ],
+        "currency": "Venezuelan Bolivar",
+        "code": "VES"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        700,
+        1300
+      ],
+      "local": {
+        "amount": [
+          25000,
+          46000
+        ],
+        "currency": "Venezuelan Bolivar",
+        "code": "VES"
+      }
+    },
+    "costNotes": "Guide mandatory by regulation. Venezuelan side cheapest; Brazilian side more expensive logistics."
   },
   {
     "id": "dientes",
@@ -2160,7 +4440,37 @@
       2,
       3,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        700
+      ],
+      "local": {
+        "amount": [
+          270000,
+          630000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          720000,
+          1350000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costNotes": "Ferry from Punta Arenas to Puerto Williams required (~$150). World's southernmost circuit — logistics intensive."
   },
   {
     "id": "cerro_castillo",
@@ -2187,7 +4497,37 @@
       3,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          270000,
+          540000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1600
+      ],
+      "local": {
+        "amount": [
+          720000,
+          1440000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costNotes": "CONAF park fee ~$10. Less-visited than Torres del Paine — no booking congestion. Coyhaique is the base."
   },
   {
     "id": "cape_wrath",
@@ -2214,7 +4554,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          470,
+          950
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          1580,
+          2760
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costNotes": "No marked trail — navigation required. Wild camping free under Scottish access laws. Ferry/minibus across Cape Wrath."
   },
   {
     "id": "monte_rosa",
@@ -2239,7 +4609,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1000,
+        1700
+      ],
+      "local": {
+        "amount": [
+          930,
+          1580
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4500
+      ],
+      "local": {
+        "amount": [
+          2320,
+          4180
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Swiss hut nights €70–100. Italian/French sections cheaper. Switzerland dominates cost."
   },
   {
     "id": "stubai",
@@ -2264,7 +4664,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        600,
+        1000
+      ],
+      "local": {
+        "amount": [
+          555,
+          925
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          1390,
+          2320
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "DAV huts €35–55/night incl. half-board. ÖAV membership gets significant hut discounts. Excellent value Alps."
   },
   {
     "id": "berliner",
@@ -2289,7 +4719,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        600,
+        1000
+      ],
+      "local": {
+        "amount": [
+          555,
+          925
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          1390,
+          2320
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Zillertal huts ~€40–60/night half-board. ÖAV membership recommended. Classic Austrian hut-to-hut."
   },
   {
     "id": "hornstrandir",
@@ -2314,7 +4774,37 @@
       6,
       7,
       8
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        800,
+        1500
+      ],
+      "local": {
+        "amount": [
+          1130000,
+          2130000
+        ],
+        "currency": "Icelandic Krona",
+        "code": "ISK"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          2840000,
+          4970000
+        ],
+        "currency": "Icelandic Krona",
+        "code": "ISK"
+      }
+    },
+    "costNotes": "Ferry from Ísafjörður ~$100 each way. Iceland expensive — budget $100+/day for food/logistics."
   },
   {
     "id": "kanchenjunga",
@@ -2341,7 +4831,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        1200,
+        2000
+      ],
+      "local": {
+        "amount": [
+          163000,
+          272000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          272000,
+          476000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Restricted Area Permit ~$20/week + park fee. Very remote — plan extra days & budget for delays."
   },
   {
     "id": "upper_mustang",
@@ -2372,7 +4892,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          204000,
+          340000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4000
+      ],
+      "local": {
+        "amount": [
+          340000,
+          544000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Restricted Area Permit $500/10 days — mandatory guide required. Most expensive Nepal trekking area."
   },
   {
     "id": "makalu_bc",
@@ -2399,7 +4949,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        900,
+        1600
+      ],
+      "local": {
+        "amount": [
+          122000,
+          217000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1800,
+        3000
+      ],
+      "local": {
+        "amount": [
+          245000,
+          408000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Restricted Area Permit ~$20/week + SNP fee. Very remote — teahouses in lower valley, camping higher up."
   },
   {
     "id": "dhaulagiri",
@@ -2423,7 +5003,37 @@
     "seasonMonths": [
       10,
       11
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        800,
+        1400
+      ],
+      "local": {
+        "amount": [
+          109000,
+          190000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1600,
+        2800
+      ],
+      "local": {
+        "amount": [
+          218000,
+          381000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Technical high route — full camping required. French Pass at 5360m. 14-day permit zone entry fees apply."
   },
   {
     "id": "chadar",
@@ -2447,7 +5057,37 @@
     "seasonMonths": [
       1,
       2
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          41500,
+          74700
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1600
+      ],
+      "local": {
+        "amount": [
+          74700,
+          132700
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costNotes": "Guide + tent + all meals required. Leh to trailhead transport extra. Short window in Jan–Feb only."
   },
   {
     "id": "maclehose",
@@ -2476,7 +5116,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        50,
+        150
+      ],
+      "local": {
+        "amount": [
+          390,
+          1170
+        ],
+        "currency": "Hong Kong Dollar",
+        "code": "HKD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          1560,
+          3120
+        ],
+        "currency": "Hong Kong Dollar",
+        "code": "HKD"
+      }
+    },
+    "costNotes": "Trail free to use. Camping HKD$12/night. Hong Kong city itself may add costs for accommodation."
   },
   {
     "id": "mount_meru",
@@ -2507,7 +5177,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        900,
+        1500
+      ],
+      "local": {
+        "amount": [
+          2370000,
+          3960000
+        ],
+        "currency": "Tanzanian Shilling",
+        "code": "TZS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2000
+      ],
+      "local": {
+        "amount": [
+          3160000,
+          5270000
+        ],
+        "currency": "Tanzanian Shilling",
+        "code": "TZS"
+      }
+    },
+    "costNotes": "Park fees ~$450 + guide mandatory. Typically done as Kilimanjaro acclimatisation add-on."
   },
   {
     "id": "berg_lake",
@@ -2532,7 +5232,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        350
+      ],
+      "local": {
+        "amount": [
+          205,
+          480
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1600
+      ],
+      "local": {
+        "amount": [
+          1095,
+          2190
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "BC Parks reservation fee ~CAD$10/night. Very accessible from Valemount. Outstanding value in the Canadian Rockies."
   },
   {
     "id": "kepler",
@@ -2561,7 +5291,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          330,
+          660
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1800
+      ],
+      "local": {
+        "amount": [
+          1480,
+          2950
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Hut fees ~NZD$80/night. One of NZ's Great Walks. Easy to do independently."
   },
   {
     "id": "dusky",
@@ -2587,7 +5347,37 @@
       2,
       3,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          660,
+          1320
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          3300,
+          5750
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Floatplane access from Queenstown ~NZD$800 each end. Basic DOC huts ~NZD$15/night. Notoriously demanding."
   },
   {
     "id": "appalachian",
@@ -2617,7 +5407,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        4000,
+        8000
+      ],
+      "local": {
+        "amount": [
+          4000,
+          8000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        8000,
+        15000
+      ],
+      "local": {
+        "amount": [
+          8000,
+          15000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "~$1/mile typical budget thru. Resupply every 3–5 days. Gear up-front cost ~$1500–3000 additional."
   },
   {
     "id": "pct",
@@ -2646,7 +5466,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        5000,
+        10000
+      ],
+      "local": {
+        "amount": [
+          5000,
+          10000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        12000,
+        20000
+      ],
+      "local": {
+        "amount": [
+          12000,
+          20000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "~$1.50–2/mile. Permit required (free but competitive). Sierra resupply by post box or Mammoth/Yosemite."
   },
   {
     "id": "cdt",
@@ -2661,8 +5511,8 @@
     "totalDays": "180 days (thru) / 3-14 days (sections)",
     "maxAltitude": "4300m",
     "permits": "Not required",
-    "latitude": 48.0,
-    "longitude": -113.0,
+    "latitude": 48,
+    "longitude": -113,
     "imageFilename": "cdt",
     "season": "April-October (NOBO thru)",
     "popularityScore": 8,
@@ -2675,7 +5525,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        5000,
+        9000
+      ],
+      "local": {
+        "amount": [
+          5000,
+          9000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        12000,
+        20000
+      ],
+      "local": {
+        "amount": [
+          12000,
+          20000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Least infrastructure of the Triple Crown. Many road walks and alternates. Water sources critical in New Mexico."
   },
   {
     "id": "te_araroa",
@@ -2704,7 +5584,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        4000,
+        8000
+      ],
+      "local": {
+        "amount": [
+          6600,
+          13200
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        10000,
+        18000
+      ],
+      "local": {
+        "amount": [
+          16500,
+          29700
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Huts and camping mix. NZ Great Walks section fees extra. Crosses remote Fiordland — floatplane optional."
   },
   {
     "id": "ght",
@@ -2730,7 +5640,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        6000,
+        12000
+      ],
+      "local": {
+        "amount": [
+          815000,
+          1630000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        15000,
+        30000
+      ],
+      "local": {
+        "amount": [
+          2040000,
+          4080000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Multiple restricted area permits required. Full camping, high logistics. One of the world's most expensive thru-hikes."
   },
   {
     "id": "israel_trail",
@@ -2759,7 +5699,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        1500,
+        3000
+      ],
+      "local": {
+        "amount": [
+          5550,
+          11100
+        ],
+        "currency": "Israeli Shekel",
+        "code": "ILS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        4000,
+        7000
+      ],
+      "local": {
+        "amount": [
+          14800,
+          25900
+        ],
+        "currency": "Israeli Shekel",
+        "code": "ILS"
+      }
+    },
+    "costNotes": "Cheap country — hostels ₪80–150/night. Water sources reliable. One of world's best-value thru-hikes."
   },
   {
     "id": "camino_primitivo",
@@ -2788,7 +5758,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        700,
+        1400
+      ],
+      "local": {
+        "amount": [
+          650,
+          1300
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          1860,
+          3250
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Albergues €10–16/night. Budget €25–40/day. Less commercial than Camino Francés — fewer tourist prices."
   },
   {
     "id": "w_trek",
@@ -2820,7 +5820,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        900
+      ],
+      "local": {
+        "amount": [
+          450000,
+          810000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1400,
+        2800
+      ],
+      "local": {
+        "amount": [
+          1260000,
+          2520000
+        ],
+        "currency": "Chilean Peso",
+        "code": "CLP"
+      }
+    },
+    "costNotes": "Park entry ~$40. Refugio beds ~$60–80/night incl. meals. Most popular version of Torres del Paine."
   },
   {
     "id": "via-alpina",
@@ -2849,7 +5879,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        3000,
+        6000
+      ],
+      "local": {
+        "amount": [
+          2780,
+          5570
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        6000,
+        12000
+      ],
+      "local": {
+        "amount": [
+          5570,
+          11130
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Traverses 8 countries with expensive Alpine huts. Switzerland/Austria sections most costly. Budget €80–150/day."
   },
   {
     "id": "gr11",
@@ -2878,7 +5938,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          1110,
+          2040
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        5000
+      ],
+      "local": {
+        "amount": [
+          2780,
+          4640
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Refugios €15–25/night. Spain very affordable — budget €30–50/day. Less crowded than GR10 French side."
   },
   {
     "id": "gr10",
@@ -2908,7 +5998,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        1500,
+        2800
+      ],
+      "local": {
+        "amount": [
+          1390,
+          2600
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3500,
+        6000
+      ],
+      "local": {
+        "amount": [
+          3250,
+          5570
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Gîtes d'étape €15–25/night incl. dinner. France more expensive than Spanish side but still good value."
   },
   {
     "id": "wicklow",
@@ -2941,7 +6061,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          275,
+          550
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1600
+      ],
+      "local": {
+        "amount": [
+          735,
+          1470
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "B&Bs €40–80/night. Starting from Dublin adds travel cost. One of Ireland's most-walked routes."
   },
   {
     "id": "pennine",
@@ -2971,7 +6121,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        700,
+        1300
+      ],
+      "local": {
+        "amount": [
+          555,
+          1030
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          1580,
+          2760
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costNotes": "B&Bs £50–90/night. Budget £60–80/day. England's classic long-distance path — well-serviced with pubs."
   },
   {
     "id": "adlerweg",
@@ -3000,7 +6180,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        1200,
+        2000
+      ],
+      "local": {
+        "amount": [
+          1110,
+          1860
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        5000
+      ],
+      "local": {
+        "amount": [
+          2780,
+          4640
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Tyrol mountain inns €45–70/night incl. dinner. ÖAV members get hut discounts. Excellent Austrian value."
   },
   {
     "id": "via-dinarica",
@@ -3030,7 +6240,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        800,
+        1800
+      ],
+      "local": {
+        "amount": [
+          720,
+          1620
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        4000
+      ],
+      "local": {
+        "amount": [
+          1800,
+          3600
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Western Balkans extremely affordable — homestays €15–30/night. One of Europe's best-value long trails."
   },
   {
     "id": "abel-tasman",
@@ -3067,7 +6307,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        200,
+        450
+      ],
+      "local": {
+        "amount": [
+          330,
+          740
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1800
+      ],
+      "local": {
+        "amount": [
+          1320,
+          2960
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Hut fees ~NZD$50/night. Water taxis NZD$40–80 each. NZ Great Walk — book ahead in summer."
   },
   {
     "id": "great-ocean-walk",
@@ -3101,7 +6371,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          450,
+          900
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        3000
+      ],
+      "local": {
+        "amount": [
+          2250,
+          4500
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costNotes": "Camp fees AUD$20–40/night. Self-sufficient camping. Guided eco-lodges ~AUD$400/night — premium option."
   },
   {
     "id": "langtang",
@@ -3132,7 +6432,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          54000,
+          95000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1600
+      ],
+      "local": {
+        "amount": [
+          122000,
+          217000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Langtang NP + TIMS ~$50. Teahouses ~$15–25/night. Closest Himalayan valley to Kathmandu — efficient & cheap."
   },
   {
     "id": "three-passes-trek",
@@ -3163,7 +6493,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        900,
+        1600
+      ],
+      "local": {
+        "amount": [
+          122000,
+          217000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1800,
+        3000
+      ],
+      "local": {
+        "amount": [
+          245000,
+          408000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "Sagarmatha NP + TIMS ~$100. Demanding 3-pass route — teahouses throughout the Khumbu region."
   },
   {
     "id": "bibbulmun",
@@ -3196,7 +6556,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        700
+      ],
+      "local": {
+        "amount": [
+          450,
+          1050
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        4000
+      ],
+      "local": {
+        "amount": [
+          3000,
+          6000
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costNotes": "Hut fees AUD$10–15/night. 1000km trail — split into manageable sections. Perth is the gateway city."
   },
   {
     "id": "fann",
@@ -3225,7 +6615,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        500
+      ],
+      "local": {
+        "amount": [
+          2250,
+          5620
+        ],
+        "currency": "Tajikistani Somoni",
+        "code": "TJS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        900
+      ],
+      "local": {
+        "amount": [
+          4500,
+          10120
+        ],
+        "currency": "Tajikistani Somoni",
+        "code": "TJS"
+      }
+    },
+    "costNotes": "Donkey hire ~$20/day. Guesthouses ~$15–25/night. Tajikistan very affordable — one of Central Asia's gems."
   },
   {
     "id": "long-trail",
@@ -3255,7 +6675,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        500
+      ],
+      "local": {
+        "amount": [
+          200,
+          500
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1800
+      ],
+      "local": {
+        "amount": [
+          800,
+          1800
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Green Mountain Club shelters ~$10/night. Vermont's 273-mile thru — great budget New England option."
   },
   {
     "id": "colorado",
@@ -3283,7 +6733,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        700
+      ],
+      "local": {
+        "amount": [
+          300,
+          700
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        5000
+      ],
+      "local": {
+        "amount": [
+          2500,
+          5000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Wilderness permit ~$15. Water & resupply at towns every 5–7 days. 500mi Colorado classic thru-hike."
   },
   {
     "id": "mount-kinabalu",
@@ -3312,7 +6792,37 @@
       3,
       4,
       8
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          900,
+          1800
+        ],
+        "currency": "Malaysian Ringgit",
+        "code": "MYR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        350,
+        700
+      ],
+      "local": {
+        "amount": [
+          1575,
+          3150
+        ],
+        "currency": "Malaysian Ringgit",
+        "code": "MYR"
+      }
+    },
+    "costNotes": "Mandatory guide + Kinabalu Park entry ~RM400–500. Laban Rata hut ~RM250/night. Must book months ahead."
   },
   {
     "id": "mount-semeru",
@@ -3345,7 +6855,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        300
+      ],
+      "local": {
+        "amount": [
+          1600000,
+          4800000
+        ],
+        "currency": "Indonesian Rupiah",
+        "code": "IDR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        200,
+        500
+      ],
+      "local": {
+        "amount": [
+          3200000,
+          8000000
+        ],
+        "currency": "Indonesian Rupiah",
+        "code": "IDR"
+      }
+    },
+    "costNotes": "Park entry ~Rp100,000/day. Guide hire ~Rp300,000/day. Permit numbers strictly limited — book early."
   },
   {
     "id": "zion-traverse",
@@ -3376,7 +6916,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        150,
+        400
+      ],
+      "local": {
+        "amount": [
+          150,
+          400
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1500
+      ],
+      "local": {
+        "amount": [
+          600,
+          1500
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Zion NP entry ~$35/vehicle. Narrows permits ~$15. Shuttle system handles logistics well — very accessible."
   },
   {
     "id": "gdt",
@@ -3404,7 +6974,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        3000,
+        6000
+      ],
+      "local": {
+        "amount": [
+          4110,
+          8220
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        8000,
+        15000
+      ],
+      "local": {
+        "amount": [
+          10960,
+          20550
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "Canada's answer to the PCT — 1000km. Very remote sections in BC require resupply planning. ~$100/day."
   },
   {
     "id": "tre_cime",
@@ -3433,7 +7033,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          185,
+          370
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1600
+      ],
+      "local": {
+        "amount": [
+          740,
+          1480
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Rifugio beds €40–60/night. Cable car options available. One of the Dolomites' most iconic short circuits."
   },
   {
     "id": "st-olavs",
@@ -3461,7 +7091,37 @@
       6,
       7,
       8
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          6500,
+          13000
+        ],
+        "currency": "Norwegian Krone",
+        "code": "NOK"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          21700,
+          38000
+        ],
+        "currency": "Norwegian Krone",
+        "code": "NOK"
+      }
+    },
+    "costNotes": "Norway expensive — budget NOK700–1200/day. Pilgrimage route with guesthouses and camping. Book ahead."
   },
   {
     "id": "lofoten",
@@ -3488,7 +7148,37 @@
     "seasonMonths": [
       7,
       8
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        500,
+        1000
+      ],
+      "local": {
+        "amount": [
+          5400,
+          10800
+        ],
+        "currency": "Norwegian Krone",
+        "code": "NOK"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        2800
+      ],
+      "local": {
+        "amount": [
+          16200,
+          30200
+        ],
+        "currency": "Norwegian Krone",
+        "code": "NOK"
+      }
+    },
+    "costNotes": "Wild camping free in Norway. Airbnb/rorbuer ~NOK800–1500/night in villages. Norway prices are high."
   },
   {
     "id": "akshayuk",
@@ -3515,7 +7205,37 @@
     "seasonMonths": [
       7,
       8
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1500,
+        3000
+      ],
+      "local": {
+        "amount": [
+          2050,
+          4110
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        6000
+      ],
+      "local": {
+        "amount": [
+          4110,
+          8220
+        ],
+        "currency": "CA Dollar",
+        "code": "CAD"
+      }
+    },
+    "costNotes": "Charter flight to Pangnirtung ~CAD$700 each way. Remote Arctic logistics. Nunavut parks permit ~CAD$25."
   },
   {
     "id": "kashmir",
@@ -3543,7 +7263,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        700
+      ],
+      "local": {
+        "amount": [
+          24900,
+          58100
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        600,
+        1200
+      ],
+      "local": {
+        "amount": [
+          49800,
+          99700
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costNotes": "Inner Line Permit required. Horsemen ~₹1500/day. Kashmir valley extremely affordable — one of India's gems."
   },
   {
     "id": "kerry",
@@ -3575,7 +7325,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          370,
+          740
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1200,
+        2200
+      ],
+      "local": {
+        "amount": [
+          1110,
+          2040
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "B&Bs €60–90/night. Ireland not cheap — budget €70–100/day. 200km Kerry Way circles the peninsula."
   },
   {
     "id": "shikoku",
@@ -3605,7 +7385,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        1500,
+        3000
+      ],
+      "local": {
+        "amount": [
+          225000,
+          450000
+        ],
+        "currency": "Japanese Yen",
+        "code": "JPY"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        4000,
+        7000
+      ],
+      "local": {
+        "amount": [
+          600000,
+          1050000
+        ],
+        "currency": "Japanese Yen",
+        "code": "JPY"
+      }
+    },
+    "costNotes": "Temple lodging (shukubo) ~¥6,000–10,000/night incl. meals. 88 temples, 1200km — budget ¥3000–5000/day."
   },
   {
     "id": "kokoda",
@@ -3636,7 +7446,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1200,
+        2000
+      ],
+      "local": {
+        "amount": [
+          4300,
+          7200
+        ],
+        "currency": "Papua New Guinean Kina",
+        "code": "PGK"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          7200,
+          12600
+        ],
+        "currency": "Papua New Guinean Kina",
+        "code": "PGK"
+      }
+    },
+    "costNotes": "Guide mandatory by law. Trek fee ~$350 AUD. PNG logistics expensive — flights/transfers add significantly."
   },
   {
     "id": "otter",
@@ -3668,7 +7508,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        100,
+        250
+      ],
+      "local": {
+        "amount": [
+          1875,
+          4688
+        ],
+        "currency": "South African Rand",
+        "code": "ZAR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          7500,
+          15000
+        ],
+        "currency": "South African Rand",
+        "code": "ZAR"
+      }
+    },
+    "costNotes": "SANParks hut fee ~R550/night. Permit strictly limited — book 12 months ahead. South Africa's most sought trail."
   },
   {
     "id": "druk",
@@ -3700,7 +7570,37 @@
       9,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1800,
+        3000
+      ],
+      "local": {
+        "amount": [
+          198000,
+          330000
+        ],
+        "currency": "Bhutanese Ngultrum",
+        "code": "BTN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4000
+      ],
+      "local": {
+        "amount": [
+          275000,
+          440000
+        ],
+        "currency": "Bhutanese Ngultrum",
+        "code": "BTN"
+      }
+    },
+    "costNotes": "Bhutan Sustainable Development Fee $200/day + agency mandatory. Guide-only trek. All-inclusive packages."
   },
   {
     "id": "great-glen",
@@ -3732,7 +7632,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          236,
+          473
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1800
+      ],
+      "local": {
+        "amount": [
+          710,
+          1420
+        ],
+        "currency": "British Pound",
+        "code": "GBP"
+      }
+    },
+    "costNotes": "B&Bs £40–80/night. Scotland's most accessible long trail — Fort William to Inverness. Wild camping free."
   },
   {
     "id": "tahoe-rim",
@@ -3760,7 +7690,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        500
+      ],
+      "local": {
+        "amount": [
+          200,
+          500
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        1500,
+        3000
+      ],
+      "local": {
+        "amount": [
+          1500,
+          3000
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Tahoe area camping permits ~$20/night. Self-sufficient circuit — resupply at South Lake Tahoe. Gear-heavy."
   },
   {
     "id": "kilimanjaro-lemosho",
@@ -3793,7 +7753,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          5280000,
+          9240000
+        ],
+        "currency": "Tanzanian Shilling",
+        "code": "TZS"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        5000
+      ],
+      "local": {
+        "amount": [
+          7920000,
+          13200000
+        ],
+        "currency": "Tanzanian Shilling",
+        "code": "TZS"
+      }
+    },
+    "costNotes": "Guide mandatory. Lemosho 8-day highest summit rate — adds one extra camp day vs Machame. Park fees ~$800+."
   },
   {
     "id": "australian-alps",
@@ -3824,7 +7814,37 @@
       4,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        400,
+        900
+      ],
+      "local": {
+        "amount": [
+          600,
+          1350
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        6000
+      ],
+      "local": {
+        "amount": [
+          4500,
+          9000
+        ],
+        "currency": "AU Dollar",
+        "code": "AUD"
+      }
+    },
+    "costNotes": "Free camping in national parks. Resupply at towns every 5–8 days. Remote — vehicle shuttle logistics needed."
   },
   {
     "id": "heaphy",
@@ -3861,7 +7881,37 @@
       10,
       11,
       12
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          330,
+          660
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        800,
+        1600
+      ],
+      "local": {
+        "amount": [
+          1320,
+          2640
+        ],
+        "currency": "NZ Dollar",
+        "code": "NZD"
+      }
+    },
+    "costNotes": "Hut fees ~NZD$65/night. One of NZ's Great Walks — diverse ecosystems from mountains to palm-lined coast."
   },
   {
     "id": "mera_peak",
@@ -3888,7 +7938,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          272000,
+          476000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        5500
+      ],
+      "local": {
+        "amount": [
+          408000,
+          748000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "NMA climbing permit ~$250. Hinku valley approach through remote Makalu region. Full camping above base camp."
   },
   {
     "id": "island_peak",
@@ -3915,7 +7995,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          272000,
+          476000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        5000
+      ],
+      "local": {
+        "amount": [
+          408000,
+          680000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "NMA climbing permit ~$350 + Sagarmatha NP + TIMS. Guide essential. Usually packaged with EBC trek."
   },
   {
     "id": "stok_kangri",
@@ -3941,7 +8051,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          33200,
+          66400
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        700,
+        1400
+      ],
+      "local": {
+        "amount": [
+          58100,
+          116200
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costNotes": "Peak permit + guide mandatory. Leh-based full package ~₹15,000–30,000. India's most popular 6000m climb."
   },
   {
     "id": "lobuche_east",
@@ -3968,7 +8108,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        2500,
+        4000
+      ],
+      "local": {
+        "amount": [
+          340000,
+          544000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3500,
+        6000
+      ],
+      "local": {
+        "amount": [
+          476000,
+          816000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "NMA climbing permit ~$400. Often combined with EBC itinerary. Technical ice and rock above high camp."
   },
   {
     "id": "pisang_peak",
@@ -3995,7 +8165,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1800,
+        3000
+      ],
+      "local": {
+        "amount": [
+          245000,
+          408000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2800,
+        4500
+      ],
+      "local": {
+        "amount": [
+          381000,
+          612000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "NMA permit ~$250 + ACAP permit. Add-on to Annapurna Circuit — very efficient in combined package."
   },
   {
     "id": "huayna_potosi",
@@ -4022,7 +8222,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          1380,
+          2760
+        ],
+        "currency": "Bolivian Boliviano",
+        "code": "BOB"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        300,
+        700
+      ],
+      "local": {
+        "amount": [
+          2070,
+          4830
+        ],
+        "currency": "Bolivian Boliviano",
+        "code": "BOB"
+      }
+    },
+    "costNotes": "World's most accessible 6000m peak. Guided from La Paz ~$300–700. Refugio overnight included."
   },
   {
     "id": "cotopaxi",
@@ -4048,7 +8278,37 @@
       2,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        450
+      ],
+      "local": {
+        "amount": [
+          200,
+          450
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          400,
+          800
+        ],
+        "currency": "US Dollar",
+        "code": "USD"
+      }
+    },
+    "costNotes": "Ecuador uses USD. Guide + park entry ~$300–500 all-in. Popular day/overnight option from Quito."
   },
   {
     "id": "nevado_pisco",
@@ -4075,7 +8335,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        400
+      ],
+      "local": {
+        "amount": [
+          740,
+          1480
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        400,
+        900
+      ],
+      "local": {
+        "amount": [
+          1480,
+          3330
+        ],
+        "currency": "Peruvian Sol",
+        "code": "PEN"
+      }
+    },
+    "costNotes": "Huascarán NP entry ~$20. Huaraz-based agencies offer good value guided packages ~$400–700 all-in."
   },
   {
     "id": "tent_peak",
@@ -4102,7 +8392,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        2000,
+        3500
+      ],
+      "local": {
+        "amount": [
+          272000,
+          476000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        3000,
+        5000
+      ],
+      "local": {
+        "amount": [
+          408000,
+          680000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "NMA permit ~$250 + ACAP + TIMS. Paired naturally with Annapurna Sanctuary/ABC itinerary."
   },
   {
     "id": "mount_elbrus",
@@ -4129,7 +8449,37 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        1000,
+        2000
+      ],
+      "local": {
+        "amount": [
+          90000,
+          180000
+        ],
+        "currency": "Russian Ruble",
+        "code": "RUB"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2000,
+        4000
+      ],
+      "local": {
+        "amount": [
+          180000,
+          360000
+        ],
+        "currency": "Russian Ruble",
+        "code": "RUB"
+      }
+    },
+    "costNotes": "Barrels Hut overnight ~$80. Gondola/snowcat optional. Accreditation permit ~$50. European highest peak."
   },
   {
     "id": "pico_orizaba",
@@ -4156,7 +8506,37 @@
       3,
       11,
       12
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        300,
+        600
+      ],
+      "local": {
+        "amount": [
+          5100,
+          10200
+        ],
+        "currency": "Mexican Peso",
+        "code": "MXN"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        500,
+        1000
+      ],
+      "local": {
+        "amount": [
+          8500,
+          17000
+        ],
+        "currency": "Mexican Peso",
+        "code": "MXN"
+      }
+    },
+    "costNotes": "Park entry ~$10. Piedra Grande hut ~$15/night. Guide ~$200–400/day. Very accessible from Mexico City."
   },
   {
     "id": "yala_peak",
@@ -4183,7 +8563,37 @@
       5,
       10,
       11
-    ]
+    ],
+    "budget": "High",
+    "costIndependent": {
+      "usd": [
+        1500,
+        2500
+      ],
+      "local": {
+        "amount": [
+          204000,
+          340000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        2500,
+        4000
+      ],
+      "local": {
+        "amount": [
+          340000,
+          544000
+        ],
+        "currency": "Nepalese Rupee",
+        "code": "NPR"
+      }
+    },
+    "costNotes": "NMA permit ~$250 + Langtang NP + TIMS. Ideal first Himalayan summit — shorter and cheaper than Khumbu peaks."
   },
   {
     "id": "friendship_peak",
@@ -4211,7 +8621,37 @@
       8,
       9,
       10
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        400,
+        800
+      ],
+      "local": {
+        "amount": [
+          33200,
+          66400
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        700,
+        1400
+      ],
+      "local": {
+        "amount": [
+          58100,
+          116200
+        ],
+        "currency": "Indian Rupee",
+        "code": "INR"
+      }
+    },
+    "costNotes": "IMF/HP permit ~₹3000. Manali guide + equipment hire ~₹5000/day. One of India's best-value alpine climbs."
   },
   {
     "id": "mount_kazbek",
@@ -4236,7 +8676,37 @@
       6,
       7,
       8
-    ]
+    ],
+    "budget": "Low",
+    "costIndependent": {
+      "usd": [
+        200,
+        500
+      ],
+      "local": {
+        "amount": [
+          540,
+          1350
+        ],
+        "currency": "Georgian Lari",
+        "code": "GEL"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        500,
+        1000
+      ],
+      "local": {
+        "amount": [
+          1350,
+          2700
+        ],
+        "currency": "Georgian Lari",
+        "code": "GEL"
+      }
+    },
+    "costNotes": "Permit ~₾30. Gergeti glacier camping ~₾20. Georgia extremely affordable — one of the best-value 5000m peaks."
   },
   {
     "id": "gran_paradiso",
@@ -4262,6 +8732,36 @@
       7,
       8,
       9
-    ]
+    ],
+    "budget": "Medium",
+    "costIndependent": {
+      "usd": [
+        400,
+        700
+      ],
+      "local": {
+        "amount": [
+          370,
+          650
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costGuided": {
+      "usd": [
+        900,
+        1800
+      ],
+      "local": {
+        "amount": [
+          835,
+          1670
+        ],
+        "currency": "Euro",
+        "code": "EUR"
+      }
+    },
+    "costNotes": "Rifugio Vittorio Emanuele €50/night incl. dinner. Guide hire ~€350/day. Italy's most accessible 4000m peak."
   }
 ]
