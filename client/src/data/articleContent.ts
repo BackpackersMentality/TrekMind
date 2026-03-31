@@ -2972,7 +2972,7 @@ There's a trek out there for every level and ambition. The only question is whic
 
 // ── New entries to add to articleContentMap ───────────────────────────────────
 
-  "best-treks-in-the-world"; {
+  "best-treks-in-the-world": {
     slug: "best-treks-in-the-world",
     title: `Best Treks in the World: 20 Routes to Add to Your Bucket List`,
     category: "inspiration",
@@ -3079,7 +3079,7 @@ Start with time. Most of the routes above require between five and twenty-one da
 Experience level is the final variable. Tier 1 routes have the best infrastructure and are appropriate for fit, motivated beginners. Tier 2 and 3 routes reward those with prior multi-day experience. If you are drawn to altitude and the idea of a summit, the world of Tier 5 trekking peaks begins where trekking ends.`,
   },
 
-  "hidden-gem-treks"; {
+  "hidden-gem-treks": {
     slug: "hidden-gem-treks",
     title: `Hidden Gem Treks Around the World`,
     category: "inspiration",
@@ -3210,7 +3210,7 @@ The Salkantay trek is itself a less-crowded alternative to the Inca Trail. The e
 *What makes it different:* The cloud forest descent beyond Machu Picchu, ending in the coffee plantations of the Urubamba valley, is rarely seen by trekkers.`,
   },
 
-  "what-is-a-trekking-peak"; {
+  "what-is-a-trekking-peak": {
     slug: "what-is-a-trekking-peak",
     title: `What is a Trekking Peak?`,
     category: "trekking-peaks",
@@ -3401,7 +3401,7 @@ Most people who end up in mountaineering started as hikers or trekkers. The natu
 There is no set timeline. Some people move from step 1 to step 4 in two or three years of active outdoor activity; others spend a decade at step 2 and are entirely satisfied. The mountains do not reward impatience.`,
   },
 
-  "budget-vs-luxury-treks"; {
+  "budget-vs-luxury-treks": {
     slug: "budget-vs-luxury-treks",
     title: `Budget vs Mid-Range vs Luxury Treks: What You Get`,
     category: "planning",
@@ -3490,7 +3490,7 @@ Full logistics management including airport transfers, in-country hotels, permit
 Tier 5 trekking peaks add a category of expense that doesn't apply to standard treks: the climbing permit (NMA fees in Nepal range from $250–$350 depending on the peak), mandatory guide fees, equipment rental, and the additional days required for acclimatisation. Budget Tier 5 trekking is possible, but skimping on guide quality is not wise at 6000m.`,
   },
 
-  "best-trekking-peaks-for-beginners"; {
+  "best-trekking-peaks-for-beginners": {
     slug: "best-trekking-peaks-for-beginners",
     title: `Best Trekking Peaks for Beginners`,
     category: "trekking-peaks",
@@ -3594,7 +3594,7 @@ The peaks below are considered the most appropriate first objectives for people 
 **What to expect:** Three days from Huaraz. The glaciated cirque below the summit is one of the finest mountain environments in South America. The Llanganuco Lakes on the approach are among the most photographed in Peru — for good reason.`,
   },
 
-  "most-scenic-treks-in-the-world"; {
+  "most-scenic-treks-in-the-world": {
     slug: "most-scenic-treks-in-the-world",
     title: `Most Scenic Treks in the World`,
     category: "inspiration",
@@ -3689,7 +3689,7 @@ Three weeks along the Sierra Nevada crest — granite peaks, clear alpine lakes 
 The Kangchenjunga circuit approaches the world's third-highest mountain from both its north and south base camps. The terrain is varied — subtropical lower valleys, high passes, and the approach to the biggest unbroken wall of ice and rock in Nepal. It is the most dramatically scaled mountain environment on the TrekMind list, in a region that receives fewer than a few thousand trekkers per year.`,
   },
 
-  "best-treks-by-continent"; {
+  "best-treks-by-continent": {
     slug: "best-treks-by-continent",
     title: `Best Treks by Continent`,
     category: "inspiration",
@@ -3796,7 +3796,7 @@ Six days through the Tasmanian Wilderness World Heritage Area — Cradle Mountai
 230km along the spine of the West MacDonnell Ranges through Central Australian desert — ancient ochre rock, Aboriginal cultural heritage, and one of the world's most distinctive trekking environments.`,
   },
 
-  "how-to-train-for-a-trek"; {
+  "how-to-train-for-a-trek": {
     slug: "how-to-train-for-a-trek",
     title: `How to Train for a Multi-Day Trek`,
     category: "planning",
@@ -3906,7 +3906,7 @@ For Tier 5 trekking peaks, the summit day may last 10–14 hours at extreme alti
 **Not practising with your exact pack.** The pack you use on training walks should be the pack you use on the trek. Everything in it should be a known quantity before the trailhead.`,
   },
 
-  "how-much-does-a-trek-cost"; {
+  "how-much-does-a-trek-cost": {
     slug: "how-much-does-a-trek-cost",
     title: `How Much Does a Trek Cost?`,
     category: "planning",
@@ -4056,7 +4056,7 @@ These are order-of-magnitude figures. Costs shift materially depending on bookin
 What is not worth compromising: insurance, guide quality on trekking peaks, and footwear.`,
   },
 
-  "guided-vs-independent-trekking"; {
+  "guided-vs-independent-trekking": {
     slug: "guided-vs-independent-trekking",
     title: `Guided vs Independent Trekking: Which Is Right for You?`,
     category: "planning",
@@ -4168,7 +4168,7 @@ Some routes legally require a licensed guide or a licensed operator:
 Check permit requirements thoroughly before planning an independent trip to any remote high-altitude area.`,
   },
 
-  "trek-to-peak-progression"; {
+  "trek-to-peak-progression": {
     slug: "trek-to-peak-progression",
     title: `From Trekker to Trekking Peak: A Progression Guide`,
     category: "trekking-peaks",
@@ -4282,7 +4282,7 @@ A realistic fast-track for someone starting from scratch who treks 2–3 times p
 Some people move faster; some more slowly. The mountains are patient. What matters is not the pace but the honesty of the preparation — arriving at each stage with the fitness, experience, and humility the objective requires.`,
   },
 
-  "expedition-style-treks"; {
+  "expedition-style-treks": {
     slug: "expedition-style-treks",
     title: `Treks That Feel Like Expeditions (Without Technical Climbing)`,
     category: "inspiration",
@@ -4388,7 +4388,7 @@ A cross-country route through the Bridger Wilderness of Wyoming, following the h
 The Kangchenjunga circuit approaches the world's third-highest mountain from both its north and south faces, moving through terrain that receives a fraction of the traffic of the Khumbu or Annapurna. Restricted area permits, basic teahouse infrastructure in the upper valleys, and the sheer scale of the Kangchenjunga massif create an experience closer to expedition travel than standard trekking.`,
   },
 
-  "less-crowded-alternatives-to-famous-treks"; {
+  "less-crowded-alternatives-to-famous-treks": {
     slug: "less-crowded-alternatives-to-famous-treks",
     title: `Less Crowded Alternatives to Famous Treks`,
     category: "inspiration",
@@ -4485,7 +4485,7 @@ For each major route below, there is a comparable alternative that delivers a si
 *Dusky Track (New Zealand)* is New Zealand's most demanding and remote multi-day route — a ten-day traverse through terrain that requires river crossings, bush navigation, and genuine self-sufficiency. One of the world's great wilderness treks, and rarely attempted.`,
   },
 
-  "best-hut-to-hut-treks-in-the-world"; {
+  "best-hut-to-hut-treks-in-the-world": {
     slug: "best-hut-to-hut-treks-in-the-world",
     title: `Best Hut-to-Hut Treks in the World`,
     category: "inspiration",
@@ -4592,7 +4592,7 @@ Iceland's most popular multi-day route connects a series of highland huts across
 The PCT does not have a traditional hut system, but sections through the Sierra Nevada offer strategically placed lodges and permitted campsites that function similarly — Vermilion Valley Resort, Red's Meadow, Kennedy Meadows. Hiking the Sierra high route sections point-to-point between lodges offers a hut-to-hut experience within the American long-distance framework.`,
   },
 
-  "best-thru-hikes-for-first-timers"; {
+  "best-thru-hikes-for-first-timers": {
     slug: "best-thru-hikes-for-first-timers",
     title: `Best Thru-Hikes for First-Timers`,
     category: "guides",
