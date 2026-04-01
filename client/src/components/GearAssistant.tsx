@@ -41,10 +41,20 @@ export function GearAssistant({
   const [budget, setBudget] = useState<Budget>("mid");
 
   const getGearRecommendations = (budget: Budget): GearItem[] => {
+    // ── Defensive altitude parse ────────────────────────────────────────────
+    // maxAltitude prop is typed as number, but in practice TrekDetail passes
+    // the raw trek.maxAltitude string (e.g. "6189m", "5,895m") due to the
+    // mixed data shape in treks.json. Strip non-numeric chars so comparisons
+    // work correctly. Without this, "6189m" >= 5000 → false (NaN comparison).
+    const altM: number = typeof maxAltitude === "number" && !isNaN(maxAltitude)
+      ? maxAltitude
+      : parseInt(String(maxAltitude).replace(/[^\d]/g, ""), 10) || 0;
+
     const isCamping      = campingRequired || accommodationType.toLowerCase().includes("camping");
     const isViaFerrata   = trekName.toLowerCase().includes("alta via") || difficulty.toLowerCase().includes("ferrata");
-    // Tier 5 trekking peaks require full alpinism kit (crampons, ice axe, harness, helmet)
-    const isTrekkingPeak = tier === 5 || maxAltitude >= 5000;
+    // Tier 5 trekking peaks require full alpinism kit (crampons, ice axe, harness, helmet).
+    // tier prop is the primary signal; altM >= 5000 is a safe secondary fallback.
+    const isTrekkingPeak = tier === 5 || altM >= 5000;
 
     const items: GearItem[] = [];
 
@@ -154,7 +164,7 @@ export function GearAssistant({
         : budget === "mid" 
           ? "Rab Microlight Alpine Down Jacket" 
           : "Decathlon Forclaz MT100 Down",
-      description: maxAltitude > 3000 
+      description: altM > 3000 
         ? "Crucial for freezing temperatures at high altitude — summit nights can drop to −20°C." 
         : "Lightweight warmth for rest stops and evenings.",
       reason: budget === "high" 
@@ -326,7 +336,7 @@ export function GearAssistant({
             : "Kelty Cosmic Down 20",
         description: isTrekkingPeak
           ? "Rated to at least −10°C / 14°F — base camp temperatures on high peaks can be brutal."
-          : maxAltitude > 3000 
+          : altM > 3000 
             ? "Rated for freezing mountain temperatures." 
             : "3-season warmth rating.",
         reason: budget === "high" 
@@ -416,7 +426,7 @@ export function GearAssistant({
   };
 
   const recommendations = getGearRecommendations(budget);
-  const isTrekkingPeak  = tier === 5 || maxAltitude >= 5000;
+  const isTrekkingPeak  = tier === 5 || altM >= 5000;
   const isViaFerrata    = trekName.toLowerCase().includes("alta via") || difficulty.toLowerCase().includes("ferrata");
 
   return (
