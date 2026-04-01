@@ -4,14 +4,55 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Ruler, Mountain, Calendar, ArrowRight, X } from "lucide-react";
 import { getTrekImageUrl } from '@/lib/images';
+import { CompareToggle } from "@/components/compare/CompareToggle";
+import { useCompareStore } from "@/store/compareStore";
+import type { CompareTrek } from "@/store/compareStore";
+
+// Map the raw trek data shape to the CompareTrek interface the store expects.
+// Kept as a plain function (not a hook) so it's safe to call in render.
+function toCompareTrek(trek: any): CompareTrek {
+  return {
+    id:              trek.id,
+    name:            trek.name,
+    region:          trek.region,
+    country:         trek.country,
+    terrain:         trek.terrain,
+    accommodation:   trek.accommodation,
+    distance:        trek.distance ?? `${trek.distanceKm ?? "?"}km`,
+    totalDays:       trek.totalDays ?? `${trek.durationDays ?? "?"} days`,
+    maxAltitude:     trek.maxAltitude ?? trek.maxAltitudeM ?? "N/A",
+    season:          trek.season ?? trek.bestSeason ?? trek.best_season ?? "Year-round",
+    permits:         trek.permits ?? "Not required",
+    popularityScore: trek.popularityScore ?? 0,
+    tier:            trek.tier ?? 1,
+    durationBucket:  trek.durationBucket ?? "Medium",
+    budget:          trek.budget,
+    costNotes:       trek.costNotes,
+    costIndependent: trek.costIndependent,
+    keyFeatures:     trek.keyFeatures,
+    imageFilename:   trek.imageFilename,
+  };
+}
 
 export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: () => void; fromCards?: boolean }) {
   const [imgError, setImgError] = useState(false);
 
+  // Subscribe to compare state so the card border highlight updates reactively
+  // when the user toggles this trek in or out of the comparison set.
+  const isSelected = useCompareStore(s => s.selectedTreks.some(t => t.id === trek.id));
+
+  const compareTrek = toCompareTrek(trek);
+
   return (
     <Link href={`/trek/${trek.id}${fromCards ? '?from=cards' : ''}`} className="group block h-full">
-      <Card className="overflow-hidden border border-border shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col relative">
-        {/* Close button - only show if onClose prop provided */}
+      <Card
+        className={`overflow-hidden border shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col relative
+          ${isSelected
+            ? "border-primary/60 shadow-primary/10 shadow-md ring-1 ring-primary/20"
+            : "border-border"
+          }`}
+      >
+        {/* ── Close button — only shown when onClose prop is provided ── */}
         {onClose && (
           <button
             onClick={(e) => {
@@ -25,7 +66,22 @@ export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: ()
             <X className="w-4 h-4 text-white" />
           </button>
         )}
-        
+
+        {/* ── Compare toggle ─────────────────────────────────────────────────
+            Positioned top-left when there's no close button, top-right when
+            there is (to avoid overlap). Hidden on desktop until card hover,
+            always visible on mobile (touch users can't hover).
+            The wrapping div intercepts click/touch events so they don't
+            bubble up to the <Link> and navigate to the detail page.        ── */}
+        <div
+          className={`absolute z-40 transition-opacity duration-200
+            ${onClose ? "top-3 right-3" : "top-3 left-3"}
+            opacity-100 sm:opacity-0 sm:group-hover:opacity-100`}
+          onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+        >
+          <CompareToggle trek={compareTrek} />
+        </div>
+
         {/* Header: Trek Name */}
         <div className="p-4 border-b bg-card/50">
           <h3 className="text-lg font-bold truncate group-hover:text-primary transition-colors">
@@ -39,8 +95,8 @@ export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: ()
 
         {/* Hero Image */}
         <div className="relative h-48 w-full overflow-hidden">
-          <img 
-            src={imgError ? '/images/placeholder-trek.jpg' : getTrekImageUrl(trek.imageFilename)} 
+          <img
+            src={imgError ? '/images/placeholder-trek.jpg' : getTrekImageUrl(trek.imageFilename)}
             alt={trek.name}
             onError={() => setImgError(true)}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
