@@ -4,6 +4,7 @@ import { getAllTreks } from "../lib/treks";
 import { TrekCard } from "@/components/TrekCard";
 import { Map, LayoutGrid, Info, Sparkles, Trophy, BookmarkCheck, BookOpen } from "lucide-react";
 import { useFilterStore } from "@/store/useFilterStore";
+import { useCompareStore } from "@/store/compareStore";
 import { filterTreks } from "@/lib/filterTreks";
 import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
@@ -12,6 +13,8 @@ import { FilterButton } from "@/components/FilterButton";
 import { FilterPopup } from "@/components/FilterPopup";
 import { SearchButton } from "@/components/SearchButton";
 import { SearchPopup } from "@/components/SearchPopup";
+import { CompareBar } from "@/components/compare/CompareBar";
+import { TrekComparison } from "@/components/compare/TrekComparison";
 import { type FilterState, countActiveFilters } from "../types/filters";
 
 // Lazy-load GlobeIntegration into its own chunk — breaks the circular
@@ -46,11 +49,10 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const { counts } = useTrekList();
 
-  // ── FIX: Pull the unified `filters` object and `setFilters` from the store.
-  // The previous code destructured non-existent top-level fields (region,
-  // duration, accommodation, terrain, popularity) which returned undefined,
-  // causing filterTreks to crash with "Cannot read properties of null
-  // (reading 'length')" and producing a blank screen.
+  // Track whether the CompareBar is visible so we can add bottom padding to
+  // the cards grid — prevents the last row of cards being obscured by the bar.
+  const compareCount = useCompareStore(s => s.selectedTreks.length);
+
   const { filters, setFilters } = useFilterStore();
 
   const activeFilterCount = useMemo(() => countActiveFilters(filters), [filters]);
@@ -72,7 +74,6 @@ export default function Home() {
   }, [treks, filters]);
 
   const handleApplyFilters = useCallback((newFilters: FilterState) => {
-    // ── FIX: Use setFilters (single call) instead of individual non-existent setters.
     setFilters(newFilters);
     setIsFilterOpen(false);
   }, [setFilters]);
@@ -247,7 +248,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
+              {/* Cards grid
+                  pb-28 when CompareBar is visible — prevents the last row
+                  being obscured by the 64px sticky bar + breathing room.
+                  pb-20 is the original value used when bar is hidden.       */}
+              <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-[padding] duration-300 ${compareCount > 0 ? "pb-28" : "pb-20"}`}>
                 {filteredTreks.map((trek: any, index: number) => (
                   <div
                     key={trek.id}
@@ -294,6 +299,14 @@ export default function Home() {
 
       {/* First-visit intro overlay */}
       <IntroOverlay />
+
+      {/* ── TrekH2H Compare Feature ──────────────────────────────────────────
+          Both components use createPortal to render into document.body,
+          so their z-index stacking is independent of the layout tree.
+          CompareBar (z-50): sticky bottom bar, visible when ≥1 trek selected.
+          TrekComparison (z-[200]): full-screen modal, above everything.     ── */}
+      <CompareBar />
+      <TrekComparison />
 
       {/* ── Footer ──────────────────────────────────────────────────────────── */}
       <footer className="border-t border-border bg-card py-1 shrink-0 relative z-10">
