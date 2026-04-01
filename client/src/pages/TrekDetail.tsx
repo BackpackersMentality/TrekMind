@@ -26,8 +26,6 @@ import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
 import { useAuth } from "@/hooks/useAuth";
 import { AuthModal } from "@/components/AuthModal";
-import { CompareToggle } from "@/components/compare/CompareToggle";
-import type { CompareTrek } from "@/store/compareStore";
 
 const RouteMap = lazy(() => import("@/components/RouteMap"));
 
@@ -416,33 +414,6 @@ function CostSection({ trek }: { trek: any }) {
   );
 }
 
-// ── toCompareTrek ─────────────────────────────────────────────────────────────
-// Maps the raw trek data shape to the CompareTrek interface the store expects.
-// Used by the CompareToggle rendered in the hero overlay.
-function toCompareTrek(trek: any): CompareTrek {
-  return {
-    id:              trek.id,
-    name:            trek.name,
-    region:          trek.region,
-    country:         trek.country,
-    terrain:         trek.terrain,
-    accommodation:   trek.accommodation,
-    distance:        trek.distance ?? `${trek.distanceKm ?? "?"}km`,
-    totalDays:       trek.totalDays ?? `${trek.durationDays ?? "?"} days`,
-    maxAltitude:     trek.maxAltitude ?? trek.maxAltitudeM ?? "N/A",
-    season:          trek.season ?? trek.bestSeason ?? trek.best_season ?? "Year-round",
-    permits:         trek.permits ?? "Not required",
-    popularityScore: trek.popularityScore ?? 0,
-    tier:            trek.tier ?? 1,
-    durationBucket:  trek.durationBucket ?? "Medium",
-    budget:          trek.budget,
-    costNotes:       trek.costNotes,
-    costIndependent: trek.costIndependent,
-    keyFeatures:     trek.keyFeatures,
-    imageFilename:   trek.imageFilename,
-  };
-}
-
 export default function TrekDetail() {
   const [, params] = useRoute("/trek/:id");
   const trekId = params?.id;
@@ -576,13 +547,8 @@ export default function TrekDetail() {
           </button>
         </div>
 
-        {/* Compare toggle + Bookmark button — top right, side by side */}
-        <div className="absolute top-4 right-4 z-50 flex items-center gap-2">
-
-          {/* Compare toggle — add/remove this trek from the H2H comparison */}
-          <CompareToggle trek={toCompareTrek(trek)} compact={false} />
-
-          {/* Bookmark button */}
+        {/* Bookmark button — top right */}
+        <div className="absolute top-4 right-4 z-50">
           <button
             onClick={() => {
               if (!isLoggedIn) { setBookmarkOpen(false); setAuthOpen(true); return; }
@@ -806,10 +772,18 @@ export default function TrekDetail() {
           <GearAssistant
             trekName={trek.name}
             difficulty={trek.terrain}
-            maxAltitude={trek.maxAltitude || trek.maxAltitudeM || 0}
+            maxAltitude={(() => {
+              // trek.maxAltitude is a string like "6189m" or "5,895m" — strip
+              // non-numeric characters so the altitude comparison works correctly.
+              // Without this, "6189m" >= 5000 evaluates to false in JS (NaN comparison).
+              const raw = trek.maxAltitude ?? trek.maxAltitudeM ?? "0";
+              const parsed = parseInt(String(raw).replace(/[^\d]/g, ""), 10);
+              return isNaN(parsed) ? 0 : parsed;
+            })()}
             durationDays={parseInt(trek.totalDays || String(trek.durationDays))}
             accommodationType={trek.accommodation}
             campingRequired={trek.accommodation === "Camping"}
+            tier={trek.tier}
           />
         </div>
 
