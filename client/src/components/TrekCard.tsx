@@ -8,8 +8,7 @@ import { CompareToggle } from "@/components/compare/CompareToggle";
 import { useCompareStore } from "@/store/compareStore";
 import type { CompareTrek } from "@/store/compareStore";
 
-// Map the raw trek data shape to the CompareTrek interface the store expects.
-// Kept as a plain function (not a hook) so it's safe to call in render.
+// Maps raw trek data to the CompareTrek shape the store expects
 function toCompareTrek(trek: any): CompareTrek {
   return {
     id:              trek.id,
@@ -37,10 +36,8 @@ function toCompareTrek(trek: any): CompareTrek {
 export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: () => void; fromCards?: boolean }) {
   const [imgError, setImgError] = useState(false);
 
-  // Subscribe to compare state so the card border highlight updates reactively
-  // when the user toggles this trek in or out of the comparison set.
+  // Reactively highlight the card border when this trek is in the compare set
   const isSelected = useCompareStore(s => s.selectedTreks.some(t => t.id === trek.id));
-
   const compareTrek = toCompareTrek(trek);
 
   return (
@@ -52,7 +49,7 @@ export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: ()
             : "border-border"
           }`}
       >
-        {/* ── Close button — only shown when onClose prop is provided ── */}
+        {/* Close button - only show if onClose prop provided */}
         {onClose && (
           <button
             onClick={(e) => {
@@ -66,21 +63,6 @@ export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: ()
             <X className="w-4 h-4 text-white" />
           </button>
         )}
-
-        {/* ── Compare toggle ─────────────────────────────────────────────────
-            Positioned top-left when there's no close button, top-right when
-            there is (to avoid overlap). Hidden on desktop until card hover,
-            always visible on mobile (touch users can't hover).
-            The wrapping div intercepts click/touch events so they don't
-            bubble up to the <Link> and navigate to the detail page.        ── */}
-        <div
-          className={`absolute z-40 transition-opacity duration-200
-            ${onClose ? "top-3 right-3" : "top-3 left-3"}
-            opacity-100 sm:opacity-0 sm:group-hover:opacity-100`}
-          onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-        >
-          <CompareToggle trek={compareTrek} />
-        </div>
 
         {/* Header: Trek Name */}
         <div className="p-4 border-b bg-card/50">
@@ -105,12 +87,30 @@ export function TrekCard({ trek, onClose, fromCards }: { trek: any; onClose?: ()
             height={192}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+          {/* Terrain badge — bottom left, unchanged */}
           <div className="absolute bottom-3 left-3">
             <Badge variant="outline" className="bg-white/90 backdrop-blur-sm text-black border-none text-[10px]">
               {trek.terrain}
             </Badge>
           </div>
-          <div className="absolute top-3 right-3">
+
+          {/* ── Compare toggle — top right of image ───────────────────────────
+              Positioned here (over the image) so it never overlaps the trek
+              name in the header above. The season badge that used to sit here
+              is moved to bottom-right of the image instead.
+              Hidden on desktop until the card is hovered; always visible on
+              mobile (touch users cannot hover). The wrapping div stops click
+              events bubbling up to the <Link> navigation.                  ── */}
+          <div
+            className="absolute top-2 right-2 z-20 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-200"
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+          >
+            <CompareToggle trek={compareTrek} />
+          </div>
+
+          {/* Season badge — moved to bottom-right to free up top-right for compare toggle */}
+          <div className="absolute bottom-3 right-3">
             <Badge className="bg-primary/90 text-primary-foreground text-[10px] uppercase tracking-wider">
               <Calendar className="w-3 h-3 mr-1" /> {trek.season || trek.best_season || "Year Round"}
             </Badge>
