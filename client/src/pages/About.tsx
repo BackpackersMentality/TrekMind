@@ -215,7 +215,6 @@ export default function About() {
               { icon: <Globe2 className="w-3 h-3" />, label: "6 Continents" },
               { icon: <Clock className="w-3 h-3" />, label: "2 Days to 165 Days" },
               { icon: <Shield className="w-3 h-3" />, label: "5 Difficulty Tiers" },
-              { icon: <Pickaxe className="w-3 h-3" />, label: "15 Trekking Peaks" },
             ].map(({ icon, label }) => (
               <div key={label} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-3 py-1">
                 <span className="text-amber-400">{icon}</span>
