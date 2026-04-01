@@ -8,60 +8,63 @@ import { Globe, Trophy, Bookmark, Sparkles, SlidersHorizontal, Pickaxe } from "l
 
 
 // ── Tier grid for welcome slide ───────────────────────────────────────────────
+// Colours match TIER_TOKENS in About.tsx and GlobeViewer TIER_COLORS exactly:
+//   1 Gold #D4AF37 · 2 Burnt Orange #E67E22 · 3 Forest Green #2E7D32
+//   4 Deep Purple #6A4C93 · 5 Alpine Blue #2E86C1
 const TIER_GRID = [
   {
     number: 1,
     name: "Iconic",
     count: 30,
-    pinBg: "bg-amber-400",
-    cardBg: "bg-amber-500/15",
-    border: "border-amber-500/30",
-    text: "text-amber-300",
-    sub: "text-amber-200/60",
+    // Gold — #D4AF37
+    pinColor: "#D4AF37",
+    cardBg: "#FDF8E7",
+    borderColor: "#EBD97A",
+    textColor: "#7A5C00",
     example: "Everest BC, Inca Trail",
   },
   {
     number: 2,
     name: "Classic",
     count: 59,
-    pinBg: "bg-blue-400",
-    cardBg: "bg-blue-500/15",
-    border: "border-blue-500/30",
-    text: "text-blue-300",
-    sub: "text-blue-200/60",
+    // Burnt Orange — #E67E22
+    pinColor: "#E67E22",
+    cardBg: "#FEF3E9",
+    borderColor: "#F0A868",
+    textColor: "#8B4000",
     example: "Cerro Castillo, Alta Via 4",
   },
   {
     number: 3,
     name: "Remote",
     count: 34,
-    pinBg: "bg-slate-400",
-    cardBg: "bg-slate-500/15",
-    border: "border-slate-500/30",
-    text: "text-slate-300",
-    sub: "text-slate-200/60",
+    // Forest Green — #2E7D32
+    pinColor: "#2E7D32",
+    cardBg: "#EBF5EC",
+    borderColor: "#81C784",
+    textColor: "#1B5E20",
     example: "Dusky Track, Huemul",
   },
   {
     number: 4,
     name: "Thru-Hike",
     count: 12,
-    pinBg: "bg-violet-400",
-    cardBg: "bg-violet-500/15",
-    border: "border-violet-500/30",
-    text: "text-violet-300",
-    sub: "text-violet-200/60",
+    // Deep Purple — #6A4C93
+    pinColor: "#6A4C93",
+    cardBg: "#F3EFF8",
+    borderColor: "#B39DDB",
+    textColor: "#4A0D6E",
     example: "PCT, Te Araroa, AT",
   },
   {
     number: 5,
     name: "Trekking Peak",
     count: 15,
-    pinBg: "bg-rose-500",
-    cardBg: "bg-rose-500/15",
-    border: "border-rose-500/30",
-    text: "text-rose-300",
-    sub: "text-rose-200/60",
+    // Alpine Blue — #2E86C1
+    pinColor: "#2E86C1",
+    cardBg: "#EBF4FB",
+    borderColor: "#90CAF9",
+    textColor: "#0D47A1",
     example: "Mera Peak, Elbrus",
   },
 ];
@@ -187,20 +190,27 @@ export function IntroOverlay() {
                   {TIER_GRID.map(tier => (
                     <div
                       key={tier.number}
-                      className={`rounded-xl border ${tier.border} ${tier.cardBg} px-3 py-2.5 flex items-start gap-2.5`}
+                      className="rounded-xl px-3 py-2.5 flex items-start gap-2.5"
+                      style={{
+                        background: `${tier.cardBg}22`, // ~13% opacity for dark bg overlay
+                        border: `1px solid ${tier.borderColor}55`,
+                      }}
                     >
                       {/* Pin dot */}
-                      <div className={`w-3 h-3 rounded-full ${tier.pinBg} shadow-sm shrink-0 mt-0.5`} />
+                      <div
+                        className="w-3 h-3 rounded-full shrink-0 mt-0.5 shadow-sm"
+                        style={{ backgroundColor: tier.pinColor }}
+                      />
                       <div className="min-w-0">
                         <div className="flex items-baseline gap-1.5">
-                          <span className={`font-black text-sm leading-none ${tier.text}`}>
+                          <span className="font-black text-sm leading-none" style={{ color: tier.pinColor }}>
                             {tier.name}
                           </span>
-                          <span className={`text-[9px] font-semibold ${tier.sub}`}>
+                          <span className="text-[9px] font-semibold" style={{ color: `${tier.pinColor}99` }}>
                             {tier.count}
                           </span>
                         </div>
-                        <p className={`text-[10px] leading-tight mt-0.5 truncate ${tier.sub}`}>
+                        <p className="text-[10px] leading-tight mt-0.5 truncate" style={{ color: `${tier.pinColor}88` }}>
                           {tier.example}
                         </p>
                       </div>
