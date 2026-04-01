@@ -26,6 +26,8 @@ import { Helmet } from "react-helmet-async";
 import { useTrekList } from "@/hooks/useTrekList";
 import { useAuth } from "@/hooks/useAuth";
 import { AuthModal } from "@/components/AuthModal";
+import { CompareToggle } from "@/components/compare/CompareToggle";
+import type { CompareTrek } from "@/store/compareStore";
 
 const RouteMap = lazy(() => import("@/components/RouteMap"));
 
@@ -414,6 +416,33 @@ function CostSection({ trek }: { trek: any }) {
   );
 }
 
+// ── toCompareTrek ─────────────────────────────────────────────────────────────
+// Maps the raw trek data shape to the CompareTrek interface the store expects.
+// Used by the CompareToggle rendered in the hero overlay.
+function toCompareTrek(trek: any): CompareTrek {
+  return {
+    id:              trek.id,
+    name:            trek.name,
+    region:          trek.region,
+    country:         trek.country,
+    terrain:         trek.terrain,
+    accommodation:   trek.accommodation,
+    distance:        trek.distance ?? `${trek.distanceKm ?? "?"}km`,
+    totalDays:       trek.totalDays ?? `${trek.durationDays ?? "?"} days`,
+    maxAltitude:     trek.maxAltitude ?? trek.maxAltitudeM ?? "N/A",
+    season:          trek.season ?? trek.bestSeason ?? trek.best_season ?? "Year-round",
+    permits:         trek.permits ?? "Not required",
+    popularityScore: trek.popularityScore ?? 0,
+    tier:            trek.tier ?? 1,
+    durationBucket:  trek.durationBucket ?? "Medium",
+    budget:          trek.budget,
+    costNotes:       trek.costNotes,
+    costIndependent: trek.costIndependent,
+    keyFeatures:     trek.keyFeatures,
+    imageFilename:   trek.imageFilename,
+  };
+}
+
 export default function TrekDetail() {
   const [, params] = useRoute("/trek/:id");
   const trekId = params?.id;
@@ -547,8 +576,13 @@ export default function TrekDetail() {
           </button>
         </div>
 
-        {/* Bookmark button — top right */}
-        <div className="absolute top-4 right-4 z-50">
+        {/* Compare toggle + Bookmark button — top right, side by side */}
+        <div className="absolute top-4 right-4 z-50 flex items-center gap-2">
+
+          {/* Compare toggle — add/remove this trek from the H2H comparison */}
+          <CompareToggle trek={toCompareTrek(trek)} compact={false} />
+
+          {/* Bookmark button */}
           <button
             onClick={() => {
               if (!isLoggedIn) { setBookmarkOpen(false); setAuthOpen(true); return; }
