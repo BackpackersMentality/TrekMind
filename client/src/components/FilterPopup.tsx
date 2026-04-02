@@ -61,6 +61,11 @@ const FILTER_OPTIONS = {
     { value: "Popular",    label: "Popular (5–7)"    },
     { value: "Hidden Gem", label: "Hidden Gem (1–4)" },
   ],
+  budget: [
+    { value: "Low",    label: "$ Budget-Friendly" },
+    { value: "Medium", label: "$$ Mid-Range"       },
+    { value: "High",   label: "$$$ Premium"        },
+  ],
   // Month filter — value is "1"–"12" matching parseSeasonMonths() in filterTreks
   month: [
     { value: "1",  label: "Jan" },
@@ -225,6 +230,13 @@ export function FilterPopup({ isOpen, onClose, currentFilters, onApply, matching
             options={FILTER_OPTIONS.popularity}
             selected={draft.popularity}
             onChange={v => toggle('popularity', v)}
+          />
+          <FilterGroup
+            label="Budget"
+            name="budget"
+            options={FILTER_OPTIONS.budget}
+            selected={draft.budget ?? []}
+            onChange={v => toggle('budget', v)}
           />
         </div>
 
