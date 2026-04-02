@@ -11,7 +11,8 @@ export interface FilterState {
   terrain:       string[];
   accommodation: string[];
   popularity:    string[];
-  month:         string[]; // ← ADDED: numeric strings "1"–"12"
+  month:         string[]; // ← numeric strings "1"–"12"
+  budget:        string[]; // ← "Low" | "Medium" | "High"
 }
 
 export const EMPTY_FILTERS: FilterState = {
@@ -21,7 +22,8 @@ export const EMPTY_FILTERS: FilterState = {
   terrain:       [],
   accommodation: [],
   popularity:    [],
-  month:         [], // ← ADDED: must be [] not undefined
+  month:         [],
+  budget:        [], // ← "Low" | "Medium" | "High"
 };
 
 export function countActiveFilters(f: FilterState): number {
@@ -33,7 +35,8 @@ export function countActiveFilters(f: FilterState): number {
     (f.terrain       ?? []).length +
     (f.accommodation ?? []).length +
     (f.popularity    ?? []).length +
-    (f.month         ?? []).length  // ← ADDED
+    (f.month         ?? []).length +
+    (f.budget        ?? []).length
   );
 }
 
