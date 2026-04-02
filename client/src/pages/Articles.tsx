@@ -1,38 +1,76 @@
 import { useMemo } from 'react';
 import { Link } from 'wouter';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Clock, ArrowRight, Compass, Map, HelpCircle, ChevronRight } from 'lucide-react';
+import { BookOpen, Clock, ArrowRight, Compass, Map, HelpCircle, Mountain, ChevronRight } from 'lucide-react';
 import { articlesMeta, type ArticleMeta } from '@/lib/articles';
 
+// ─── Category config ──────────────────────────────────────────────────────────
+// Supports BOTH old lowercase slugs and new Title-case values so the component
+// is resilient to whichever meta version the lib returns.
 const CATEGORY_ICONS: Record<string, any> = {
-  Lists: Map,
-  Destinations: Compass,
-  Guides: HelpCircle,
+  // New capitalised keys
+  Lists:            Map,
+  Destinations:     Compass,
+  Guides:           HelpCircle,
+  // Old lowercase keys (legacy fallback)
+  inspiration:      Map,
+  planning:         HelpCircle,
+  guides:           HelpCircle,
+  'trekking-peaks': Mountain,
 };
 
 const CATEGORY_COLOURS: Record<string, string> = {
-  Lists: 'bg-amber-100 text-amber-800 border-amber-200',
-  Destinations: 'bg-blue-100 text-blue-800 border-blue-200',
-  Guides: 'bg-green-100 text-green-800 border-green-200',
+  Lists:            'bg-amber-100 text-amber-800 border-amber-200',
+  Destinations:     'bg-blue-100 text-blue-800 border-blue-200',
+  Guides:           'bg-green-100 text-green-800 border-green-200',
+  inspiration:      'bg-amber-100 text-amber-800 border-amber-200',
+  planning:         'bg-green-100 text-green-800 border-green-200',
+  'trekking-peaks': 'bg-purple-100 text-purple-800 border-purple-200',
 };
 
 const ACCENT: Record<string, string> = {
-  Lists: 'bg-amber-400',
-  Destinations: 'bg-blue-400',
-  Guides: 'bg-green-400',
+  Lists:            'bg-amber-400',
+  Destinations:     'bg-blue-400',
+  Guides:           'bg-green-400',
+  inspiration:      'bg-amber-400',
+  planning:         'bg-green-400',
+  'trekking-peaks': 'bg-purple-400',
 };
 
+/** Normalise a category value to one of our four display buckets */
+function normaliseCat(raw: string): 'Lists' | 'Destinations' | 'Guides' | 'Trekking Peaks' {
+  switch (raw) {
+    case 'Lists':
+    case 'inspiration':
+      return 'Lists';
+    case 'Destinations':
+      return 'Destinations';
+    case 'Guides':
+    case 'guides':
+    case 'planning':
+      return 'Guides';
+    case 'trekking-peaks':
+      return 'Trekking Peaks';
+    default:
+      return 'Guides';
+  }
+}
+
+// ─── Article card ─────────────────────────────────────────────────────────────
 function ArticleCard({ article, featured = false }: { article: ArticleMeta; featured?: boolean }) {
-  const Icon = CATEGORY_ICONS[article.category] ?? BookOpen;
+  const Icon        = CATEGORY_ICONS[article.category] ?? BookOpen;
   const colourClass = CATEGORY_COLOURS[article.category] ?? 'bg-muted text-muted-foreground border-border';
-  const accent = ACCENT[article.category] ?? 'bg-primary';
+  const accent      = ACCENT[article.category] ?? 'bg-primary';
+  const isPending   = (article as any)._noContent === true;
 
   return (
     <Link href={`/articles/${article.slug}`}>
-      <article className={`group h-full bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-200 flex flex-col cursor-pointer ${featured ? 'md:flex-row' : ''}`}>
+      <article
+        className={`group h-full bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-200 flex flex-col cursor-pointer ${featured ? 'md:flex-row' : ''} ${isPending ? 'opacity-60' : ''}`}
+      >
         <div className={`flex-shrink-0 ${featured ? 'h-1.5 w-full md:h-auto md:w-1.5' : 'h-1.5 w-full'} ${accent}`} />
         <div className={`p-5 flex flex-col flex-1 ${featured ? 'md:p-7' : ''}`}>
-          <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center gap-2 mb-3 flex-wrap">
             <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${colourClass}`}>
               <Icon className="w-3 h-3" />
               {article.category}
@@ -41,6 +79,11 @@ function ArticleCard({ article, featured = false }: { article: ArticleMeta; feat
               <Clock className="w-3 h-3" />
               {article.readTime}
             </span>
+            {isPending && (
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-muted text-muted-foreground border border-border">
+                Coming Soon
+              </span>
+            )}
           </div>
           <h2 className={`font-bold text-foreground group-hover:text-primary transition-colors leading-snug mb-2 ${featured ? 'text-xl md:text-2xl' : 'text-base'}`}>
             {article.title}
@@ -48,21 +91,48 @@ function ArticleCard({ article, featured = false }: { article: ArticleMeta; feat
           <p className={`text-muted-foreground leading-relaxed flex-1 ${featured ? 'text-sm md:text-base' : 'text-sm line-clamp-2'}`}>
             {article.description}
           </p>
-          <div className="mt-4 flex items-center gap-1 text-primary text-sm font-semibold">
-            Read article
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-          </div>
+          {!isPending && (
+            <div className="mt-4 flex items-center gap-1 text-primary text-sm font-semibold">
+              Read article
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </div>
+          )}
         </div>
       </article>
     </Link>
   );
 }
 
+// ─── Section component ────────────────────────────────────────────────────────
+function Section({ title, accentClass, articles, featured = false }: {
+  title: string;
+  accentClass: string;
+  articles: ArticleMeta[];
+  featured?: boolean;
+}) {
+  if (articles.length === 0) return null;
+  return (
+    <section>
+      <h2 className="text-xl font-bold text-foreground mb-5 flex items-center gap-2">
+        <span className={`w-1 h-5 ${accentClass} rounded-full inline-block`} />
+        {title}
+      </h2>
+      <div className={`grid gap-4 ${featured ? 'grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
+        {articles.map(article => (
+          <ArticleCard key={article.slug} article={article} featured={featured} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
 export default function Articles() {
-  const featured     = useMemo(() => articlesMeta.filter(a => a.featured), []);
-  const lists        = useMemo(() => articlesMeta.filter(a => a.category === 'Lists'), []);
-  const destinations = useMemo(() => articlesMeta.filter(a => a.category === 'Destinations'), []);
-  const guides       = useMemo(() => articlesMeta.filter(a => a.category === 'Guides'), []);
+  const featured      = useMemo(() => articlesMeta.filter(a => a.featured), []);
+  const lists         = useMemo(() => articlesMeta.filter(a => normaliseCat(a.category) === 'Lists' && !a.featured), []);
+  const destinations  = useMemo(() => articlesMeta.filter(a => normaliseCat(a.category) === 'Destinations' && !a.featured), []);
+  const guides        = useMemo(() => articlesMeta.filter(a => normaliseCat(a.category) === 'Guides' && !a.featured), []);
+  const trekkingPeaks = useMemo(() => articlesMeta.filter(a => normaliseCat(a.category) === 'Trekking Peaks' && !a.featured), []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -106,62 +176,26 @@ export default function Articles() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-14">
 
+        {/* Featured */}
         {featured.length > 0 && (
-          <section>
-            <h2 className="text-xl font-bold text-foreground mb-5 flex items-center gap-2">
-              <span className="w-1 h-5 bg-amber-400 rounded-full inline-block" />
-              Featured
-            </h2>
-            <div className="grid grid-cols-1 gap-5">
-              {featured.map(article => (
-                <ArticleCard key={article.slug} article={article} featured />
-              ))}
-            </div>
-          </section>
+          <Section title="Featured" accentClass="bg-amber-400" articles={featured} featured />
         )}
 
-        {lists.length > 0 && (
-          <section>
-            <h2 className="text-xl font-bold text-foreground mb-5 flex items-center gap-2">
-              <span className="w-1 h-5 bg-amber-400 rounded-full inline-block" />
-              Trek Lists
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {lists.map(article => (
-                <ArticleCard key={article.slug} article={article} />
-              ))}
-            </div>
-          </section>
+        {/* Trek Lists */}
+        <Section title="Trek Lists" accentClass="bg-amber-400" articles={lists} />
+
+        {/* Destination Guides */}
+        <Section title="Destination Guides" accentClass="bg-blue-400" articles={destinations} />
+
+        {/* Planning & How-To Guides */}
+        <Section title="Planning & How-To Guides" accentClass="bg-green-400" articles={guides} />
+
+        {/* Trekking Peaks — only renders if old articles are present */}
+        {trekkingPeaks.length > 0 && (
+          <Section title="Trekking Peaks" accentClass="bg-purple-400" articles={trekkingPeaks} />
         )}
 
-        {destinations.length > 0 && (
-          <section>
-            <h2 className="text-xl font-bold text-foreground mb-5 flex items-center gap-2">
-              <span className="w-1 h-5 bg-blue-400 rounded-full inline-block" />
-              Destination Guides
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {destinations.map(article => (
-                <ArticleCard key={article.slug} article={article} />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {guides.length > 0 && (
-          <section>
-            <h2 className="text-xl font-bold text-foreground mb-5 flex items-center gap-2">
-              <span className="w-1 h-5 bg-green-400 rounded-full inline-block" />
-              Planning Guides
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {guides.map(article => (
-                <ArticleCard key={article.slug} article={article} />
-              ))}
-            </div>
-          </section>
-        )}
-
+        {/* CTA */}
         <section className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
           <h3 className="text-xl font-bold text-foreground mb-2">Ready to explore the routes?</h3>
           <p className="text-muted-foreground text-sm mb-5 max-w-md mx-auto">
