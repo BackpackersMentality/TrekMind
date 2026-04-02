@@ -16,7 +16,7 @@ import {
   ChevronLeft, MapPin, Calendar, Mountain, Bookmark, BookOpen, ExternalLink,
   Clock, Activity, TrendingUp, Info, Sparkles, CheckCircle2,
   Bed, Tent, Home, Building2, AlertTriangle, Share2, Link2,
-  DollarSign, Users, Backpack, TrendingDown
+  DollarSign, Users, Backpack
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, useMemo, useEffect, useRef, Suspense, lazy } from "react";
@@ -539,17 +539,7 @@ export default function TrekDetail() {
         {/* Back button — top left */}
         <div className="absolute top-4 left-4 z-50">
           <button
-            onClick={() => {
-              if (fromCards) {
-                setLocation('/?view=cards');
-              } else {
-                // window.history.back() is unreliable in SPAs deployed to Cloudflare Pages:
-                // on a fresh page load of a trek URL, there is no prior history entry for Home,
-                // so back() either navigates off-site or does nothing. setLocation('/') is
-                // always safe and keeps the user within the app.
-                setLocation('/');
-              }
-            }}
+            onClick={() => { if (fromCards) { setLocation('/?view=cards'); } else { setLocation('/'); } }}
             className="w-12 h-12 rounded-full bg-black/40 hover:bg-black/65 backdrop-blur-sm border border-white/20 text-white flex items-center justify-center transition-all shadow-lg"
             aria-label="Go back"
           >
