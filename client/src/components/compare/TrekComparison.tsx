@@ -6,7 +6,7 @@
 // Mobile-first: horizontally scrollable on small screens.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { useMemo, useEffect } from "react";
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "wouter";
 import {
@@ -47,18 +47,126 @@ function tierLabel(tier: number) {
   return `Tier ${tier} — ${map[tier] ?? "Unknown"}`;
 }
 
-/** Derive a "Best For" shorthand from terrain + tier + accommodation */
+/**
+ * bestFor — derives a specific, differentiating "Best For" tag from multiple
+ * trek signals: terrain, keyFeatures, accommodation, tier, altitude, distance,
+ * country/region, and trek name keywords.
+ *
+ * Designed so that treks with similar terrain (e.g. two "High Alpine" routes)
+ * still receive meaningfully different tags based on cultural context, style,
+ * and what makes each trek distinct.
+ *
+ * 25+ distinct tag types — full list:
+ *   Thru-hikers · First-time alpinists · Experienced alpinists
+ *   Cultural pilgrims · Spiritual seekers · Wildlife watchers
+ *   Coastal walkers · Jungle explorers · Desert trekkers · Volcano adventurers
+ *   Polar expeditioners · Glacier trekkers · High-altitude acclimatisers
+ *   First-time trekkers · Weekend adventurers · Ultra-distance hikers
+ *   Photography seekers · Solitude seekers · Family trekkers
+ *   Village-to-village walkers · Pub & culture walkers · Fitness challengers
+ *   Multi-country explorers · Alpine hut enthusiasts · Ridge walkers
+ *   Scenery maximisers · Off-trail navigators · Trekking peak baggers
+ */
 function bestFor(trek: CompareTrek): string {
-  const t = trek.terrain.toLowerCase();
-  if (trek.tier === 4) return "Thru-hikers";
-  if (trek.tier === 5) return "Alpinists";
-  if (t.includes("coast")) return "Coastal walkers";
-  if (t.includes("jungle") || t.includes("rainforest")) return "Jungle explorers";
-  if (t.includes("desert")) return "Desert trekkers";
-  if (t.includes("volcanic")) return "Volcano lovers";
-  if (t.includes("glacial") || t.includes("arctic")) return "Polar adventurers";
-  if (t.includes("high alpine")) return "High altitude seekers";
-  if (trek.accommodation?.toLowerCase().includes("teahouse")) return "Cultural trekkers";
+  const t   = (trek.terrain      ?? "").toLowerCase();
+  const kf  = (trek.keyFeatures  ?? "").toLowerCase();
+  const acc = (trek.accommodation ?? "").toLowerCase();
+  const nm  = (trek.name         ?? "").toLowerCase();
+  const reg = (trek.region       ?? "").toLowerCase();
+  const ctr = (trek.country      ?? "").toLowerCase();
+  const alt = parseNum(trek.maxAltitude);
+  const km  = parseNum(trek.distance);
+  const days = parseNum(trek.totalDays);
+
+  // ── Tier 4: Thru-hikes ────────────────────────────────────────────────────
+  if (trek.tier === 4) {
+    if (days >= 100) return "Ultra-distance hikers";
+    return "Thru-hikers";
+  }
+
+  // ── Tier 5: Trekking peaks ───────────────────────────────────────────────
+  if (trek.tier === 5) {
+    if (alt >= 6000) return "Experienced alpinists";
+    return "First-time alpinists";
+  }
+
+  // ── Pilgrimage & cultural routes ─────────────────────────────────────────
+  if (kf.includes("pilgrim") || nm.includes("camino") || nm.includes("kumano") || nm.includes("kailash") || nm.includes("shikoku")) return "Cultural pilgrims";
+  if (kf.includes("spiritual") || kf.includes("sacred") || kf.includes("monastery") || kf.includes("temple")) return "Spiritual seekers";
+
+  // ── Wildlife & ecology ───────────────────────────────────────────────────
+  if (kf.includes("gelada") || kf.includes("wildlife") || kf.includes("baboon") || kf.includes("endemic") || kf.includes("seal") || kf.includes("fox")) return "Wildlife watchers";
+
+  // ── Coastal ──────────────────────────────────────────────────────────────
+  if (t.includes("coastal") || t.includes("coast") || kf.includes("sea cliff") || kf.includes("beach") || kf.includes("atlantic coast") || kf.includes("na pali")) return "Coastal walkers";
+
+  // ── Jungle & rainforest ──────────────────────────────────────────────────
+  if (t.includes("jungle") || t.includes("rainforest") || t.includes("tropical") || kf.includes("cloud forest") || kf.includes("rainforest")) return "Jungle explorers";
+
+  // ── Desert & canyon ──────────────────────────────────────────────────────
+  if (t.includes("desert") || t.includes("canyon") || t.includes("wadi") || kf.includes("desert") || kf.includes("negev") || kf.includes("red desert")) return "Desert trekkers";
+
+  // ── Volcanic ─────────────────────────────────────────────────────────────
+  if (t.includes("volcanic") || kf.includes("volcano") || kf.includes("erupting") || kf.includes("lava") || kf.includes("geothermal")) return "Volcano adventurers";
+
+  // ── Polar & Arctic ───────────────────────────────────────────────────────
+  if (t.includes("arctic") || t.includes("tundra") || ctr.includes("greenland") || kf.includes("arctic") || kf.includes("ice sheet")) return "Polar expeditioners";
+
+  // ── Glacier travel without trekking peaks ────────────────────────────────
+  if (t.includes("glacial") || t.includes("glaciated") || kf.includes("glacier") || kf.includes("icefall")) return "Glacier trekkers";
+
+  // ── Frozen river / extreme winter ────────────────────────────────────────
+  if (kf.includes("frozen") || kf.includes("ice cave") || nm.includes("chadar")) return "Winter adventurers";
+
+  // ── Multi-country long routes ─────────────────────────────────────────────
+  if (kf.includes("three countr") || kf.includes("two countr") || (ctr.includes("/") && km > 100)) return "Multi-country explorers";
+
+  // ── Alta Via & rifugio culture ───────────────────────────────────────────
+  if (acc.includes("rifugio") || nm.includes("alta via") || kf.includes("rifugio")) return "Alpine hut enthusiasts";
+
+  // ── UK/Ireland cultural walking ──────────────────────────────────────────
+  if ((ctr.includes("england") || ctr.includes("ireland") || ctr.includes("scotland") || ctr.includes("united kingdom")) && !t.includes("high alpine")) return "Pub & culture walkers";
+
+  // ── Himalayan teahouse cultural ──────────────────────────────────────────
+  if (acc.includes("teahouse") && (ctr.includes("nepal") || ctr.includes("bhutan"))) {
+    if (kf.includes("tibetan") || kf.includes("buddhist") || kf.includes("sherpa") || kf.includes("gurung")) return "Cultural trekkers";
+    if (alt >= 5000) return "High-altitude acclimatisers";
+    return "Himalayan trekkers";
+  }
+
+  // ── Village homestay / guesthouse cultural ───────────────────────────────
+  if (acc.includes("homestay") || acc.includes("guesthouse") || kf.includes("village") || kf.includes("traditional")) return "Village-to-village walkers";
+
+  // ── Off-trail / navigation required ─────────────────────────────────────
+  if (kf.includes("off-trail") || kf.includes("navigation") || kf.includes("no waymark") || kf.includes("unmarked")) return "Off-trail navigators";
+
+  // ── Long ridge / panoramic walking ───────────────────────────────────────
+  if (kf.includes("ridge") || kf.includes("ridgeline") || kf.includes("panoram")) return "Ridge walkers";
+
+  // ── Photography / iconic scenery ─────────────────────────────────────────
+  if (kf.includes("granite tower") || kf.includes("granite spire") || kf.includes("turquoise lake") || kf.includes("rainbow mountain")) return "Photography seekers";
+
+  // ── Solitude & remoteness ─────────────────────────────────────────────────
+  if (kf.includes("solitude") || kf.includes("remote wilderness") || kf.includes("no crowd") || kf.includes("pristine")) return "Solitude seekers";
+
+  // ── High altitude (Annapurna Circuit type — desert-alpine mix) ───────────
+  if (t.includes("desert") && t.includes("alpine") || t.includes("plateau") || kf.includes("high pass") || kf.includes("rain shadow")) return "High-altitude trekkers";
+
+  // ── High Alpine without prior tags ──────────────────────────────────────
+  if (t.includes("high alpine") || alt >= 4500) {
+    if (km >= 150) return "Scenery maximisers";
+    return "High-altitude seekers";
+  }
+
+  // ── Shorter / accessible ─────────────────────────────────────────────────
+  if (days <= 3 && km <= 60) return "Weekend adventurers";
+  if (days <= 5) return "First-time trekkers";
+
+  // ── Fitness / challenging ─────────────────────────────────────────────────
+  if (trek.tier === 3 && km >= 150) return "Fitness challengers";
+  if (trek.tier >= 3) return "Fitness challengers";
+
+  // ── Default alpine ─────────────────────────────────────────────────────────
   return "Alpine adventurers";
 }
 
@@ -142,15 +250,58 @@ function TrekHeader({ trek, onRemove }: { trek: CompareTrek; onRemove: () => voi
 
 // ─── row definitions ──────────────────────────────────────────────────────────
 
-type WinnerFn = (treks: CompareTrek[]) => string | null; // returns winning trek id or null
-
 interface RowDef {
-  key:      string;
-  label:    string;
-  icon:     React.ReactNode;
-  render:   (trek: CompareTrek) => React.ReactNode;
-  /** Optional: return the id of the "best" trek for this row */
-  winner?:  WinnerFn;
+  key:    string;
+  label:  string;
+  icon:   React.ReactNode;
+  /** render(trek, allTreks) — allTreks passed so gradient bars can normalise */
+  render: (trek: CompareTrek, allTreks: CompareTrek[]) => React.ReactNode;
+}
+
+// ─── gradient scale helpers ───────────────────────────────────────────────────
+
+/**
+ * GradientBar — renders a proportional filled bar for a quantitative value.
+ * Colour shifts green→amber→rose as value goes from min→max within the set.
+ * Used instead of "Best" badges — more informative and less judgemental.
+ */
+function GradientBar({
+  value,
+  allValues,
+  reversed = false,
+}: {
+  value: number;
+  allValues: number[];
+  reversed?: boolean;
+}) {
+  const validValues = allValues.filter(v => v > 0);
+  if (validValues.length < 2 || value <= 0) return null;
+
+  const min = Math.min(...validValues);
+  const max = Math.max(...validValues);
+  const range = max - min;
+  const pos = range === 0 ? 0.5 : (value - min) / range;
+
+  const getColour = () => {
+    const p = reversed ? pos : 1 - pos;
+    if (p < 0.34) return "bg-emerald-400";
+    if (p < 0.67) return "bg-amber-400";
+    return "bg-rose-400";
+  };
+
+  return (
+    <div className="flex items-center gap-2 mt-1.5">
+      <div className="flex-1 h-1.5 bg-muted rounded-full overflow-hidden">
+        <div
+          className={`h-full rounded-full transition-all ${getColour()}`}
+          style={{ width: `${Math.max(8, pos * 100)}%` }}
+        />
+      </div>
+      {range === 0 && (
+        <span className="text-[9px] text-muted-foreground/60 font-medium">same</span>
+      )}
+    </div>
+  );
 }
 
 const ROW_DEFS: RowDef[] = [
@@ -158,50 +309,48 @@ const ROW_DEFS: RowDef[] = [
     key: "duration",
     label: "Duration",
     icon: <Clock className="w-4 h-4" />,
-    render: (t) => <span className="font-semibold text-foreground">{t.totalDays || "—"}</span>,
-    winner: (treks) => {
-      // Shortest duration wins
-      const parsed = treks.map(t => ({ id: t.id, v: parseNum(t.totalDays) })).filter(x => x.v > 0);
-      if (parsed.length < 2) return null;
-      const min = Math.min(...parsed.map(x => x.v));
-      const winners = parsed.filter(x => x.v === min);
-      return winners.length === 1 ? winners[0].id : null;
+    render: (t, allTreks) => {
+      const v = parseNum(t.totalDays);
+      const all = allTreks.map(x => parseNum(x.totalDays));
+      return (
+        <div>
+          <span className="font-semibold text-foreground">{t.totalDays || "—"}</span>
+          <GradientBar value={v} allValues={all} reversed={true} />
+        </div>
+      );
     },
   },
   {
     key: "distance",
     label: "Distance",
     icon: <Route className="w-4 h-4" />,
-    render: (t) => <span className="font-semibold text-foreground">{t.distance || "—"}</span>,
-    winner: (treks) => {
-      // Shortest distance (for standard treks) — no winner on thru-hikes
-      if (treks.some(t => t.tier === 4)) return null;
-      const parsed = treks.map(t => ({ id: t.id, v: parseNum(t.distance) })).filter(x => x.v > 0);
-      if (parsed.length < 2) return null;
-      const min = Math.min(...parsed.map(x => x.v));
-      const winners = parsed.filter(x => x.v === min);
-      return winners.length === 1 ? winners[0].id : null;
+    render: (t, allTreks) => {
+      const v = parseNum(t.distance);
+      const all = allTreks.map(x => parseNum(x.distance));
+      return (
+        <div>
+          <span className="font-semibold text-foreground">{t.distance || "—"}</span>
+          <GradientBar value={v} allValues={all} reversed={true} />
+        </div>
+      );
     },
   },
   {
     key: "altitude",
     label: "Max Altitude",
     icon: <Mountain className="w-4 h-4" />,
-    render: (t) => (
-      <span className={cn(
-        "font-semibold",
-        parseNum(t.maxAltitude) > 5000 ? "text-rose-600" : "text-foreground",
-      )}>
-        {t.maxAltitude || "—"}
-      </span>
-    ),
-    winner: (treks) => {
-      // Highest altitude wins
-      const parsed = treks.map(t => ({ id: t.id, v: parseNum(t.maxAltitude) })).filter(x => x.v > 0);
-      if (parsed.length < 2) return null;
-      const max = Math.max(...parsed.map(x => x.v));
-      const winners = parsed.filter(x => x.v === max);
-      return winners.length === 1 ? winners[0].id : null;
+    render: (t, allTreks) => {
+      const v = parseNum(t.maxAltitude);
+      const all = allTreks.map(x => parseNum(x.maxAltitude));
+      return (
+        <div>
+          <span className={cn("font-semibold", v > 5000 ? "text-rose-600" : "text-foreground")}>
+            {t.maxAltitude || "—"}
+          </span>
+          {/* Higher altitude = more adventurous, so not reversed */}
+          <GradientBar value={v} allValues={all} reversed={false} />
+        </div>
+      );
     },
   },
   {
@@ -209,7 +358,6 @@ const ROW_DEFS: RowDef[] = [
     label: "Difficulty",
     icon: <Zap className="w-4 h-4" />,
     render: (t) => <DifficultyDots tier={t.tier} />,
-    // No winner for difficulty — subjective
   },
   {
     key: "accommodation",
@@ -234,24 +382,20 @@ const ROW_DEFS: RowDef[] = [
     key: "budget",
     label: "Budget",
     icon: <DollarSign className="w-4 h-4" />,
-    render: (t) => {
+    render: (t, allTreks) => {
       const b = budgetSymbol(t.budget);
+      // Map budget to a numeric 1-3 for the gradient bar
+      const budgetNum = { Low: 1, Medium: 2, High: 3 }[t.budget ?? ""] ?? 0;
+      const allBudgetNums = allTreks.map(x => ({ Low: 1, Medium: 2, High: 3 }[x.budget ?? ""] ?? 0));
       return (
-        <span className={cn("inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold border", b.color)}>
-          {b.symbol} <span className="font-normal">{b.label}</span>
-        </span>
+        <div>
+          <span className={cn("inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold border", b.color)}>
+            {b.symbol} <span className="font-normal">{b.label}</span>
+          </span>
+          {/* Lower budget = greener, so reversed=true */}
+          <GradientBar value={budgetNum} allValues={allBudgetNums} reversed={true} />
+        </div>
       );
-    },
-    winner: (treks) => {
-      // Cheapest wins
-      const order = { Low: 0, Medium: 1, High: 2 };
-      const parsed = treks
-        .filter(t => t.budget)
-        .map(t => ({ id: t.id, v: order[t.budget as keyof typeof order] ?? 99 }));
-      if (parsed.length < 2) return null;
-      const min = Math.min(...parsed.map(x => x.v));
-      const winners = parsed.filter(x => x.v === min);
-      return winners.length === 1 ? winners[0].id : null;
     },
   },
   {
@@ -260,7 +404,6 @@ const ROW_DEFS: RowDef[] = [
     icon: <Star className="w-4 h-4" />,
     render: (t) => (
       <div className="flex items-center gap-2">
-        {/* Score bar */}
         <div className="w-16 h-1.5 bg-muted rounded-full overflow-hidden">
           <div
             className="h-full bg-amber-400 rounded-full"
@@ -270,13 +413,6 @@ const ROW_DEFS: RowDef[] = [
         <span className="text-xs text-muted-foreground">{popularityLabel(t.popularityScore)}</span>
       </div>
     ),
-    winner: (treks) => {
-      const parsed = treks.map(t => ({ id: t.id, v: t.popularityScore }));
-      if (parsed.length < 2) return null;
-      const max = Math.max(...parsed.map(x => x.v));
-      const winners = parsed.filter(x => x.v === max);
-      return winners.length === 1 ? winners[0].id : null;
-    },
   },
   {
     key: "bestFor",
@@ -335,15 +471,6 @@ export function TrekComparison() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [closeCompare]);
-
-  // Pre-compute winners for all rows (memoised)
-  const winnerMap = useMemo(() => {
-    const map: Record<string, string | null> = {};
-    ROW_DEFS.forEach(row => {
-      map[row.key] = row.winner ? row.winner(selectedTreks) : null;
-    });
-    return map;
-  }, [selectedTreks]);
 
   if (!isCompareOpen || selectedTreks.length < 2) return null;
 
@@ -414,52 +541,36 @@ export function TrekComparison() {
 
           {/* ── Comparison rows ────────────────────────────────────────────── */}
           <div className="space-y-0">
-            {ROW_DEFS.map((row, rowIdx) => {
-              const winnerId = winnerMap[row.key];
-
-              return (
-                <div
-                  key={row.key}
-                  className={cn(
-                    "grid gap-4 items-center py-3 border-b border-border/50",
-                    colCount === 2
-                      ? "grid-cols-[180px_1fr_1fr]"
-                      : "grid-cols-[180px_1fr_1fr_1fr]",
-                    rowIdx % 2 === 0 ? "bg-transparent" : "bg-muted/20 rounded-lg",
-                  )}
-                >
-                  {/* Row label */}
-                  <div className="flex items-center gap-2 text-muted-foreground pr-2">
-                    <span className="shrink-0 text-muted-foreground/60">{row.icon}</span>
-                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/80 leading-tight">
-                      {row.label}
-                    </span>
-                  </div>
-
-                  {/* Data cells */}
-                  {selectedTreks.map(trek => {
-                    const isWinner = winnerId === trek.id;
-                    return (
-                      <div
-                        key={trek.id}
-                        className={cn(
-                          "relative rounded-lg px-3 py-2 min-h-[44px] flex items-center transition-colors",
-                          isWinner && "bg-primary/8 ring-1 ring-primary/20",
-                        )}
-                      >
-                        {/* Winner badge */}
-                        {isWinner && (
-                          <span className="absolute -top-2 left-2 px-1.5 py-0.5 bg-primary text-primary-foreground text-[9px] font-bold uppercase tracking-wider rounded-full leading-none">
-                            Best
-                          </span>
-                        )}
-                        {row.render(trek)}
-                      </div>
-                    );
-                  })}
+            {ROW_DEFS.map((row, rowIdx) => (
+              <div
+                key={row.key}
+                className={cn(
+                  "grid gap-4 items-center py-3 border-b border-border/50",
+                  colCount === 2
+                    ? "grid-cols-[180px_1fr_1fr]"
+                    : "grid-cols-[180px_1fr_1fr_1fr]",
+                  rowIdx % 2 === 0 ? "bg-transparent" : "bg-muted/20 rounded-lg",
+                )}
+              >
+                {/* Row label */}
+                <div className="flex items-center gap-2 text-muted-foreground pr-2">
+                  <span className="shrink-0 text-muted-foreground/60">{row.icon}</span>
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground/80 leading-tight">
+                    {row.label}
+                  </span>
                 </div>
-              );
-            })}
+
+                {/* Data cells — no winner badges, just the rendered value */}
+                {selectedTreks.map(trek => (
+                  <div
+                    key={trek.id}
+                    className="rounded-lg px-3 py-2 min-h-[44px] flex items-center"
+                  >
+                    {row.render(trek, selectedTreks)}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
 
           {/* ── Key Features row (full-width, not in grid) ─────────────────── */}
@@ -509,8 +620,7 @@ export function TrekComparison() {
           <div className="mt-8 flex items-start gap-2 text-xs text-muted-foreground/50 border-t border-border pt-4">
             <Info className="w-3.5 h-3.5 shrink-0 mt-0.5" />
             <p>
-              "Best" indicators reflect objective metrics (shortest distance, cheapest budget, highest altitude).
-              The right trek depends on your personal goals — always read the full detail page before booking.
+              Gradient bars show each metric relative to the treks you're comparing — green is towards one end, rose towards the other. No trek is objectively "best" — the right choice depends entirely on your goals and experience.
             </p>
           </div>
         </div>
