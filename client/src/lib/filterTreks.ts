@@ -1,100 +1,160 @@
-// lib/filterTreks.ts
-// ─────────────────────────────────────────────────────────────────────────────
-// Month filter fix — uses pre-computed trek.seasonMonths[] array instead of
-// parsing the "season" string at runtime. This prevents blank-screen crashes
-// caused by unhandled season string formats (e.g. "March-May & Sep-Nov").
-//
-// SETUP REQUIRED:
-//   1. Add "seasonMonths": [3,4,5,10,11] to every entry in treks.json
-//      (use the pre-computed treks_with_season_months.json output)
-//   2. "season" string stays for display on trek cards and detail pages — untouched
-//   3. FilterState must include "month" in its type (see types/filters.ts snippet below)
-//
-// ─────────────────────────────────────────────────────────────────────────────
+// filterTreks.ts — updated for Tier 5 (Trekking Peaks) + month filtering
+// Tier 4 = Thru-hike ("Thru" duration bucket)
+// Tier 5 = Trekking Peaks (normal Short/Medium/Long duration buckets)
 
-// ── types/filters.ts additions ────────────────────────────────────────────────
-// Add "month" to FilterState and EMPTY_FILTERS:
-//
-//   export interface FilterState {
-//     tier:          string[];
-//     region:        string[];
-//     duration:      string[];
-//     terrain:       string[];
-//     accommodation: string[];
-//     popularity:    string[];
-//     month:         string[];   // ← ADD THIS
-//   }
-//
-//   export const EMPTY_FILTERS: FilterState = {
-//     tier: [], region: [], duration: [], terrain: [],
-//     accommodation: [], popularity: [],
-//     month: [],                          // ← ADD THIS
-//   };
-//
-//   export function countActiveFilters(f: FilterState): number {
-//     return Object.values(f).reduce((n, v) => n + v.length, 0);
-//   }
-// ─────────────────────────────────────────────────────────────────────────────
-
-export interface FilterState {
-  tier:          string[];
-  region:        string[];
-  duration:      string[];
-  terrain:       string[];
-  accommodation: string[];
-  popularity:    string[];
-  month:         string[]; // numeric strings "1"–"12"
+interface Filters {
+  tier?: string | number | null | string[];
+  region?: string | null | string[];
+  accommodation?: string | null | string[];
+  duration?: string | null | string[];
+  difficulty?: string | null;
+  month?: string | null | string[];
+  budget?: string | null | string[];
+  popularity?: string | null | string[];
+  terrain?: string | null | string[];
 }
 
-export const EMPTY_FILTERS: FilterState = {
-  tier: [], region: [], duration: [], terrain: [],
-  accommodation: [], popularity: [], month: [],
+const MONTH_MAP: Record<string, number> = {
+  jan: 1, january: 1, feb: 2, february: 2, mar: 3, march: 3,
+  apr: 4, april: 4, may: 5, jun: 6, june: 6, jul: 7, july: 7,
+  aug: 8, august: 8, sep: 9, sept: 9, september: 9,
+  oct: 10, october: 10, nov: 11, november: 11, dec: 12, december: 12,
 };
 
-export function countActiveFilters(f: FilterState): number {
-  return Object.values(f).reduce((n, v) => n + v.length, 0);
+export function parseSeasonMonths(season: string | undefined): number[] {
+  if (!season) return [];
+  const s = season.toLowerCase().trim();
+  if (s === "year-round" || s === "year round" || s === "all year") {
+    return [1,2,3,4,5,6,7,8,9,10,11,12];
+  }
+  const active = new Set<number>();
+  for (const seg of s.split(",").map(x => x.trim())) {
+    const parts = seg.split("-").map(x => x.trim());
+    if (parts.length === 2) {
+      const start = MONTH_MAP[parts[0]];
+      const end = MONTH_MAP[parts[1]];
+      if (start && end) {
+        if (end >= start) { for (let m = start; m <= end; m++) active.add(m); }
+        else { for (let m = start; m <= 12; m++) active.add(m); for (let m = 1; m <= end; m++) active.add(m); }
+      }
+    } else if (parts.length === 1) {
+      const m = MONTH_MAP[parts[0]]; if (m) active.add(m);
+    }
+  }
+  return Array.from(active);
 }
 
-// ── Safe month filter ─────────────────────────────────────────────────────────
-// Reads trek.seasonMonths (pre-computed number[]) instead of parsing season string.
-// Year-round treks have seasonMonths = [1..12] and always pass.
-// Treks without seasonMonths field default to year-round (no crash).
-function matchesMonth(trek: any, selectedMonths: string[]): boolean {
-  if (!selectedMonths.length) return true;
-  const trekMonths: number[] = Array.isArray(trek.seasonMonths)
-    ? trek.seasonMonths
-    : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // safe fallback: year-round
-  if (trekMonths.length >= 12) return true; // year-round always passes
-  return selectedMonths.some(m => trekMonths.includes(parseInt(m, 10)));
+export function filterTreks(treks: any[], filters: Filters): any[] {
+  return treks.filter((trek) => {
+    // ── Tier (supports array from multi-select FilterState or single string) ──
+    if (filters.tier && filters.tier !== "ALL" && filters.tier !== null) {
+      if (Array.isArray(filters.tier)) {
+        if (filters.tier.length > 0) {
+          const nums = filters.tier.map(t => parseInt(String(t).replace(/\D/g, ""), 10));
+          if (!nums.includes(trek.tier)) return false;
+        }
+      } else {
+        const n = parseInt(String(filters.tier).replace(/\D/g, ""), 10);
+        if (!isNaN(n) && trek.tier !== n) return false;
+      }
+    }
+    // ── Region ───────────────────────────────────────────────────────────────
+    if (filters.region && filters.region !== "ALL") {
+      if (Array.isArray(filters.region)) {
+        if (filters.region.length > 0 && !filters.region.includes(trek.region)) return false;
+      } else {
+        if (trek.region !== filters.region) return false;
+      }
+    }
+    // ── Accommodation ─────────────────────────────────────────────────────────
+    if (filters.accommodation && filters.accommodation !== "ALL") {
+      if (Array.isArray(filters.accommodation)) {
+        if (filters.accommodation.length > 0) {
+          const acc = (trek.accommodation || "").toLowerCase();
+          const match = filters.accommodation.some(fa => acc.includes(fa.toLowerCase()) || fa.toLowerCase().includes(acc));
+          if (!match) return false;
+        }
+      } else {
+        const acc = (trek.accommodation || "").toLowerCase();
+        const fa = filters.accommodation.toLowerCase();
+        if (!acc.includes(fa) && !fa.includes(acc)) return false;
+      }
+    }
+    // ── Duration ──────────────────────────────────────────────────────────────
+    if (filters.duration && filters.duration !== "ALL") {
+      const bucket = trek.durationBucket || getDurationBucket(trek.totalDays, trek.tier);
+      if (Array.isArray(filters.duration)) {
+        if (filters.duration.length > 0 && !filters.duration.includes(bucket)) return false;
+      } else {
+        if (bucket !== filters.duration) return false;
+      }
+    }
+    // ── Terrain ───────────────────────────────────────────────────────────────
+    if (filters.terrain && filters.terrain !== "ALL") {
+      if (Array.isArray(filters.terrain)) {
+        if (filters.terrain.length > 0) {
+          const terrainCat = getTerrainCategory(trek.terrain || "");
+          if (!filters.terrain.includes(terrainCat)) return false;
+        }
+      }
+    }
+    // ── Popularity ────────────────────────────────────────────────────────────
+    if (filters.popularity && filters.popularity !== "ALL") {
+      if (Array.isArray(filters.popularity)) {
+        if (filters.popularity.length > 0) {
+          const popLabel = getPopularityLabel(trek.popularityScore);
+          if (!filters.popularity.includes(popLabel)) return false;
+        }
+      }
+    }
+    // ── Budget ────────────────────────────────────────────────────────────────
+    if (filters.budget && filters.budget !== "ALL") {
+      if (Array.isArray(filters.budget)) {
+        if (filters.budget.length > 0 && trek.budget && !filters.budget.includes(trek.budget)) return false;
+      } else {
+        if (trek.budget && trek.budget !== filters.budget) return false;
+      }
+    }
+    // ── Difficulty ────────────────────────────────────────────────────────────
+    if (filters.difficulty && filters.difficulty !== "ALL") {
+      if ((trek.difficulty || "").toLowerCase() !== filters.difficulty.toLowerCase()) return false;
+    }
+    // ── Month ─────────────────────────────────────────────────────────────────
+    if (filters.month && filters.month !== "ALL") {
+      if (Array.isArray(filters.month)) {
+        if (filters.month.length > 0) {
+          const trekMonths: number[] = Array.isArray(trek.seasonMonths)
+            ? trek.seasonMonths
+            : parseSeasonMonths(trek.season);
+          if (trekMonths.length > 0 && trekMonths.length < 12) {
+            const selectedNums = filters.month.map(m => parseInt(m, 10)).filter(n => !isNaN(n));
+            if (!selectedNums.some(m => trekMonths.includes(m))) return false;
+          }
+        }
+      } else {
+        const mn = parseInt(filters.month, 10);
+        if (!isNaN(mn)) {
+          const active = parseSeasonMonths(trek.season);
+          if (active.length < 12 && !active.includes(mn)) return false;
+        }
+      }
+    }
+    return true;
+  });
 }
 
-// ── Duration bucket ───────────────────────────────────────────────────────────
-function getDurationBucket(totalDays: any, tier?: number): string {
+function getDurationBucket(totalDays: string | number | undefined, tier?: number): string {
   if (tier === 4) return "Thru";
-  const m = String(totalDays ?? "").match(/\d+/);
-  if (!m) return "Medium";
-  const d = parseInt(m[0], 10);
-  if (d <= 5)  return "Short";
+  const match = String(totalDays || "").match(/\d+/);
+  if (!match) return "Medium";
+  const d = parseInt(match[0], 10);
+  if (d <= 5) return "Short";
   if (d <= 10) return "Medium";
   if (d <= 16) return "Long";
   return "Epic";
 }
 
-// ── Accommodation bucket ──────────────────────────────────────────────────────
-function getAccommodationCategory(raw = ""): string {
-  const a = raw.toLowerCase();
-  if (a.includes("teahouse")) return "Teahouses";
-  if (a.includes("rifugio") || a.includes("refuge") || a.includes("hut") ||
-      a.includes("albergue") || a.includes("gite") || a.includes("ryokan") ||
-      a.includes("minshuku") || a.includes("monastery") || a.includes("cave")) return "Huts/Refuges";
-  if (a.includes("guesthouse") || a.includes("homestay") || a.includes("hotel") ||
-      a.includes("b&b") || a.includes("pension") || a.includes("lodge")) return "Guesthouses";
-  if (a.includes("camp") || a.includes("wilderness") || a.includes("backcountry")) return "Camping";
-  return "Guesthouses";
-}
-
-// ── Terrain bucket ────────────────────────────────────────────────────────────
-function getTerrainCategory(raw = ""): string {
+function getTerrainCategory(raw: string): string {
   const t = raw.toLowerCase();
   if (t.includes("volcanic")) return "Volcanic";
   if (t.includes("coastal")) return "Coastal";
@@ -105,74 +165,9 @@ function getTerrainCategory(raw = ""): string {
   return "Alpine";
 }
 
-// ── Popularity bucket ─────────────────────────────────────────────────────────
-function getPopularityBucket(s: any): string {
-  return !s ? "Hidden Gem" : s >= 8 ? "Iconic" : s >= 5 ? "Popular" : "Hidden Gem";
+function getPopularityLabel(score: number): string {
+  if (!score && score !== 0) return "Hidden Gem";
+  if (score >= 8) return "Iconic";
+  if (score >= 5) return "Popular";
+  return "Hidden Gem";
 }
-
-// ── Main filter function ──────────────────────────────────────────────────────
-export function filterTreks(treks: any[], filters: FilterState): any[] {
-  return treks.filter(trek => {
-    // Tier
-    if (filters.tier.length) {
-      const nums = filters.tier.map(t => parseInt(String(t).replace(/\D/g, ""), 10));
-      if (!nums.includes(trek.tier)) return false;
-    }
-
-    // Region
-    if (filters.region.length && !filters.region.includes(trek.region)) return false;
-
-    // Duration (Tier 4 → always "Thru"; Tier 5 uses normal buckets)
-    if (filters.duration.length) {
-      const bucket = getDurationBucket(trek.totalDays, trek.tier);
-      if (!filters.duration.includes(bucket)) return false;
-    }
-
-    // Terrain
-    if (filters.terrain.length && !filters.terrain.includes(getTerrainCategory(trek.terrain))) return false;
-
-    // Accommodation
-    if (filters.accommodation.length && !filters.accommodation.includes(getAccommodationCategory(trek.accommodation))) return false;
-
-    // Popularity
-    if (filters.popularity.length && !filters.popularity.includes(getPopularityBucket(trek.popularityScore))) return false;
-
-    // Month — SAFE: reads seasonMonths[], never parses season string at runtime
-    if (!matchesMonth(trek, filters.month)) return false;
-
-    return true;
-  });
-}
-
-// ── Script: pre-compute seasonMonths for treks.json ──────────────────────────
-// Run this once (Node.js) to add seasonMonths to your treks.json:
-//
-// import * as fs from "fs";
-//
-// const MONTH_MAP: Record<string, number> = {
-//   jan:1,january:1,feb:2,february:2,mar:3,march:3,apr:4,april:4,may:5,
-//   jun:6,june:6,jul:7,july:7,aug:8,august:8,sep:9,sept:9,september:9,
-//   oct:10,october:10,nov:11,november:11,dec:12,december:12,
-// };
-//
-// function parseSeasonMonths(season: string): number[] {
-//   if (!season) return [1,2,3,4,5,6,7,8,9,10,11,12];
-//   const s = season.toLowerCase();
-//   if (s.includes("year") || s.includes("all year")) return [1,2,3,4,5,6,7,8,9,10,11,12];
-//   const active = new Set<number>();
-//   const normalised = s.replace(/\s*(&|;|\band\b)\s*/g, ",");
-//   for (const seg of normalised.split(",")) {
-//     const words = seg.match(/[a-z]+/g)?.filter(w => w in MONTH_MAP) ?? [];
-//     if (words.length === 2) {
-//       const [start, end] = [MONTH_MAP[words[0]], MONTH_MAP[words[1]]];
-//       if (end >= start) { for (let m=start; m<=end; m++) active.add(m); }
-//       else { for (let m=start; m<=12; m++) active.add(m); for (let m=1; m<=end; m++) active.add(m); }
-//     } else if (words.length === 1) { active.add(MONTH_MAP[words[0]]); }
-//   }
-//   return active.size ? [...active].sort((a,b)=>a-b) : [1,2,3,4,5,6,7,8,9,10,11,12];
-// }
-//
-// const treks = JSON.parse(fs.readFileSync("treks.json", "utf8"));
-// treks.forEach((t: any) => { t.seasonMonths = parseSeasonMonths(t.season ?? ""); });
-// fs.writeFileSync("treks.json", JSON.stringify(treks, null, 2));
-// console.log(`Updated ${treks.length} treks with seasonMonths field`);
