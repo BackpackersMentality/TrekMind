@@ -44,7 +44,7 @@ const FEATURES = [
 
 const FAQS = [
   { q: "How were the 150 treks chosen?", a: "We evaluated hundreds of routes against four criteria: landscape quality, cultural significance, trekking infrastructure, and global recognition within the adventure travel community. The list spans all continents and all difficulty levels — from a 2-day coastal walk to a 165-day thru-hike, and now includes 15 trekking peaks for those stepping into technical alpinism." },
-  { q: "What exactly is a Tier 5 Trekking Peak?", a: "Trekking peaks are mountains — mostly between 5000m and 6500m — that require basic mountaineering skills: crampons, ice axe, rope travel, and glacier awareness. They are not technical rock climbs or full expeditions, but they demand more than trekking fitness alone. All 15 Tier 5 peaks have multi-day approaches with proper base camps and overnight stays. Examples include Mera Peak (Nepal), Huayna Potosí (Bolivia), Cotopaxi (Ecuador), and Mount Elbrus (Russia)." },
+  { q: "What exactly is a Tier 5 Trekking Peak?", a: "Trekking peaks are mountains — mostly between 4000m and 6500m — that require basic mountaineering skills: crampons, ice axe, rope travel, and glacier awareness. They are not technical rock climbs or full expeditions, but they demand more than trekking fitness alone. All 15 Tier 5 peaks have multi-day approaches with proper base camps and overnight stays. Examples include Mera Peak (Nepal), Huayna Potosí (Bolivia), Cotopaxi (Ecuador), and Mount Elbrus (Russia)." },
   { q: "Do I need mountaineering experience for a Tier 5 peak?", a: "Most Tier 5 peaks are achievable with no prior technical climbing experience, provided you are very fit, have prior high-altitude trekking above 4000m, and climb with a qualified guide. Peaks like Huayna Potosí and Yala Peak are suited as first alpinism objectives. Lobuche East and Pisang Peak demand more technical confidence. Always climb with a licensed mountain guide." },
   { q: "What's the difference between a multi-day trek and a thru-hike?", a: "Multi-day treks (Tiers 1–3) are typically completed as a single continuous journey over days or weeks. Thru-hikes (Tier 4) are long trails measured in months — the Appalachian Trail takes 5–7 months, the Great Himalaya Trail up to 150 days. Most people complete thru-hikes in sections over multiple years." },
   { q: "Are the difficulty ratings official?", a: "No — the tier system is TrekMind's editorial classification based on trail infrastructure, remoteness, elevation, and the experience level typically required. Always research individual treks thoroughly and consult national park authorities, local guides, and recent trip reports before setting out." },
@@ -236,34 +236,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Tier 5 spotlight */}
-        <section className="rounded-2xl p-6" style={{ border: `1px solid ${TIER_TOKENS[5].border}`, background: TIER_TOKENS[5].light }}>
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-md shrink-0" style={{ background: TIER_TOKENS[5].hex }}>
-              <span className="text-white font-black text-sm">5</span>
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h3 className="font-black text-base" style={{ color: TIER_TOKENS[5].textHex }}>Tier 5 — Trekking Peaks</h3>
-                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full" style={{ background: TIER_TOKENS[5].badgeBg, color: TIER_TOKENS[5].textHex }}>15 peaks</span>
-              </div>
-              <p className="text-xs text-muted-foreground mt-0.5">The gateway between trekking and technical mountaineering</p>
-            </div>
-          </div>
-          <p className="text-sm text-foreground/80 leading-relaxed mb-4">Trekking peaks bridge the gap between hiking and serious alpinism. Most sit between 5000m and 6500m and require crampons, ice axes, and basic rope technique — but not advanced rock climbing skills. Every peak in Tier 5 has a genuine multi-day approach with at least one overnight stay.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {[
-              { label: "Altitude range", value: "4061m – 6476m" },
-              { label: "Skills needed", value: "Crampons, ice axe, rope" },
-              { label: "Trip length", value: "2 – 16 days" },
-            ].map(s => (
-              <div key={s.label} className="rounded-xl p-3" style={{ background: "rgba(255,255,255,0.65)", border: `1px solid ${TIER_TOKENS[5].border}` }}>
-                <p className="text-[10px] font-bold uppercase tracking-widest mb-0.5" style={{ color: TIER_TOKENS[5].hex }}>{s.label}</p>
-                <p className="text-sm font-bold" style={{ color: TIER_TOKENS[5].textHex }}>{s.value}</p>
-              </div>
-            ))}
-          </div>
-        </section>
 
         <section>
           <SectionHeader label="Understanding Difficulty" title="The Five-Tier System" sub="Every route in TrekMind is classified into one of five tiers based on infrastructure, remoteness, elevation, and the experience level typically required." />
