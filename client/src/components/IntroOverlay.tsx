@@ -146,11 +146,11 @@ export function IntroOverlay() {
       className={`fixed inset-0 z-[200] flex items-end justify-center pb-8 px-4 transition-opacity duration-300 ${exiting ? "opacity-0" : "opacity-100"}`}
     >
       {/* Backdrop — tap to skip entirely */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" onClick={dismiss} />
+      <div className="absolute inset-0 bg-white/20 backdrop-blur-md" onClick={dismiss} />
 
       {/* Card */}
       <div className="relative w-full max-w-sm animate-in slide-in-from-bottom-6 duration-400 fade-in">
-        <div className="bg-white/97 backdrop-blur-md border border-slate-200 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="bg-white border border-slate-200/80 rounded-2xl shadow-2xl overflow-hidden">
 
           {/* Step dots */}
           <div className="flex items-center justify-center gap-1.5 pt-5 px-5">
@@ -170,20 +170,20 @@ export function IntroOverlay() {
             <div className="px-5 pt-4 pb-5">
               {/* App name + slogan */}
               <div className="mb-4">
-                <h1 className="text-slate-900 font-black text-2xl tracking-tight leading-none">
+                <h1 className="text-slate-950 font-black text-2xl tracking-tight leading-none">
                   Trek<span className="text-sky-500">Mind</span>
                 </h1>
                 <p className="text-amber-600 text-xs font-semibold tracking-wide mt-1">
                   The Atlas of the World's Best Treks & Peaks
                 </p>
-                <p className="text-slate-400 text-[11px] mt-0.5 leading-snug">
+                <p className="text-slate-500 text-[11px] mt-0.5 leading-snug">
                   Discover iconic trails, remote adventures, and first summits.
                 </p>
               </div>
 
               {/* Tier colour grid */}
               <div className="mb-4">
-                <p className="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">
+                <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-2">
                   Pin colours on the globe
                 </p>
                 <div className="grid grid-cols-2 gap-2">
@@ -193,12 +193,12 @@ export function IntroOverlay() {
                       className="rounded-xl px-3 py-2.5 flex items-start gap-2.5"
                       style={{
                         background: tier.cardBg,
-                        border: `1px solid ${tier.borderColor}`,
+                        border: `1.5px solid ${tier.borderColor}`,
                       }}
                     >
-                      {/* Pin dot */}
+                      {/* Pin dot — slightly larger for contrast on light bg */}
                       <div
-                        className="w-3 h-3 rounded-full shrink-0 mt-0.5 shadow-sm"
+                        className="w-3.5 h-3.5 rounded-full shrink-0 mt-0.5 shadow"
                         style={{ backgroundColor: tier.pinColor }}
                       />
                       <div className="min-w-0">
@@ -206,11 +206,11 @@ export function IntroOverlay() {
                           <span className="font-black text-sm leading-none" style={{ color: tier.textColor }}>
                             {tier.name}
                           </span>
-                          <span className="text-[9px] font-semibold" style={{ color: `${tier.textColor}99` }}>
+                          <span className="text-[9px] font-bold" style={{ color: tier.textColor, opacity: 0.65 }}>
                             {tier.count}
                           </span>
                         </div>
-                        <p className="text-[10px] leading-tight mt-0.5 truncate" style={{ color: `${tier.textColor}aa` }}>
+                        <p className="text-[10px] leading-tight mt-0.5 truncate font-medium" style={{ color: tier.textColor, opacity: 0.75 }}>
                           {tier.example}
                         </p>
                       </div>
@@ -243,8 +243,8 @@ export function IntroOverlay() {
                 <div className={`w-12 h-12 rounded-xl border flex items-center justify-center mb-4 ${current.bg}`}>
                   <Icon className={`w-6 h-6 ${current.color}`} />
                 </div>
-                <h2 className="text-slate-900 font-bold text-lg mb-1.5">{current.title}</h2>
-                <p className="text-slate-500 text-sm leading-relaxed mb-5">{current.body}</p>
+                <h2 className="text-slate-950 font-bold text-lg mb-1.5">{current.title}</h2>
+                <p className="text-slate-600 text-sm leading-relaxed mb-5">{current.body}</p>
                 <div className="flex items-center gap-3">
                   <button onClick={dismiss} className="text-slate-400 text-xs hover:text-slate-600 transition-colors">
                     Skip
