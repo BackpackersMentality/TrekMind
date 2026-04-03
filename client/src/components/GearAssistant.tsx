@@ -40,16 +40,18 @@ export function GearAssistant({
 }: GearAssistantProps) {
   const [budget, setBudget] = useState<Budget>("mid");
 
-  const getGearRecommendations = (budget: Budget): GearItem[] => {
-    // ── Defensive altitude parse ────────────────────────────────────────────
-    // maxAltitude prop is typed as number, but in practice TrekDetail passes
-    // the raw trek.maxAltitude string (e.g. "6189m", "5,895m") due to the
-    // mixed data shape in treks.json. Strip non-numeric chars so comparisons
-    // work correctly. Without this, "6189m" >= 5000 → false (NaN comparison).
-    const altM: number = typeof maxAltitude === "number" && !isNaN(maxAltitude)
-      ? maxAltitude
-      : parseInt(String(maxAltitude).replace(/[^\d]/g, ""), 10) || 0;
+  // ── altM — COMPONENT SCOPE (root cause fix) ─────────────────────────────────
+  // altM was declared inside getGearRecommendations, but was ALSO referenced
+  // at the component level: `const isTrekkingPeak = tier === 5 || altM >= 5000`
+  // That reference is outside the function scope. esbuild preserved the name
+  // `altM` as an unresolved free variable → ReferenceError: altM is not defined.
+  // Fix: declare altM at component scope; inner function uses it via closure.
+  const altM: number = typeof maxAltitude === "number" && !isNaN(maxAltitude)
+    ? maxAltitude
+    : parseInt(String(maxAltitude).replace(/[^\d]/g, ""), 10) || 0;
 
+  const getGearRecommendations = (budget: Budget): GearItem[] => {
+    // altM + trek props available via closure from component scope above.
     const isCamping      = campingRequired || accommodationType.toLowerCase().includes("camping");
     const isViaFerrata   = trekName.toLowerCase().includes("alta via") || difficulty.toLowerCase().includes("ferrata");
     // Tier 5 trekking peaks require full alpinism kit (crampons, ice axe, harness, helmet).
