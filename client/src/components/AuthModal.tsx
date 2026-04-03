@@ -10,6 +10,7 @@ import { useState } from 'react'
 import { X, Mail, Lock, Mountain } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useAuth } from '@/hooks/useAuth'
+import { AUTH_REDIRECT_URL } from '@/lib/supabaseClient'
 
 interface Props {
   isOpen:  boolean
@@ -46,8 +47,18 @@ export function AuthModal({ isOpen, onClose, prompt }: Props) {
 
   const handleGoogle = async () => {
     setError('')
-    await signInWithGoogle()
-    // Page will redirect; onClose will be called on return via auth state change
+    // ── redirectTo is critical ────────────────────────────────────────────
+    // Without this, Supabase uses the Site URL from the dashboard which was
+    // set to localhost:3000 during development — causing ERR_CONNECTION_REFUSED
+    // in production. AUTH_REDIRECT_URL resolves to:
+    //   Production : https://www.trekmind.app  (via VITE_APP_URL env var)
+    //   Local dev  : http://localhost:5173      (window.location.origin fallback)
+    // This URL must also be listed in Supabase → Auth → URL Configuration →
+    // Redirect URLs (e.g. https://www.trekmind.app/**).
+    await signInWithGoogle({ redirectTo: AUTH_REDIRECT_URL })
+    // Google OAuth is a full-page redirect — execution stops here.
+    // On return, Supabase fires an onAuthStateChange event which the
+    // useAuth hook picks up to update the logged-in state.
   }
 
   return (
