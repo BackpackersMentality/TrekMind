@@ -123,7 +123,21 @@ function TrekRow({ trek, onToggle }: { trek: any; onToggle: (id: string, s: Excl
 }
 
 export default function MyTreks() {
-  const { toggle, counts, lists } = useTrekList();
+  const { toggle, counts: rawCounts, lists: rawLists } = useTrekList();
+
+  // ── Defensive null-guards ────────────────────────────────────────────────
+  // useTrekList() can return undefined counts/lists when:
+  //   a) Supabase is paused / unreachable (network error during auth check)
+  //   b) The hook hasn't resolved its async initialisation yet
+  // Without guards, counts.completed throws "Cannot read properties of
+  // undefined (reading 'completed')" and crashes the page.
+  const counts = rawCounts ?? { completed: 0, inProgress: 0, wishlist: 0 };
+  const lists  = rawLists  ?? {
+    completed:  new Set<string>(),
+    inProgress: new Set<string>(),
+    wishlist:   new Set<string>(),
+  };
+
   const [activeTab, setActiveTab] = useState<TabId>("completed");
 
   const allTreks = useMemo(() => getAllTreks(), []);
@@ -133,9 +147,9 @@ export default function MyTreks() {
     return map;
   }, [allTreks]);
 
-  const completedTreks  = useMemo(() => Array.from(lists.completed).map(id  => trekMap[id]).filter(Boolean), [lists.completed,  trekMap]);
-  const inProgressTreks = useMemo(() => Array.from(lists.inProgress).map(id => trekMap[id]).filter(Boolean), [lists.inProgress, trekMap]);
-  const wishlistTreks   = useMemo(() => Array.from(lists.wishlist).map(id   => trekMap[id]).filter(Boolean), [lists.wishlist,   trekMap]);
+  const completedTreks  = useMemo(() => Array.from(lists.completed  ?? []).map(id => trekMap[id]).filter(Boolean), [lists.completed,  trekMap]);
+  const inProgressTreks = useMemo(() => Array.from(lists.inProgress ?? []).map(id => trekMap[id]).filter(Boolean), [lists.inProgress, trekMap]);
+  const wishlistTreks   = useMemo(() => Array.from(lists.wishlist   ?? []).map(id => trekMap[id]).filter(Boolean), [lists.wishlist,   trekMap]);
 
   const allSaved = useMemo(() => {
     const seen = new Set<string>();
