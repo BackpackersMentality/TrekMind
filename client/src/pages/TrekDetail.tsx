@@ -197,13 +197,8 @@ function ElevationProfile({ itinerary }: { itinerary: any[] }) {
 
   if (altData.length < 2) return null;
 
-  const maxAlt  = Math.max(...altData);
-  const gainPts = altData.filter((v, i) => i > 0 && v > altData[i - 1]);
-  const totalGain = gainPts.reduce((acc, v, i) => {
-    const idx = altData.indexOf(v); // find original index for gain calc
-    return acc;
-  }, 0);
-  // simpler gain calc
+  const maxAlt = Math.max(...altData);
+  // Cumulative ascent: sum all positive day-to-day altitude gains
   let gain = 0;
   for (let i = 1; i < altData.length; i++) {
     if (altData[i] > altData[i - 1]) gain += altData[i] - altData[i - 1];
