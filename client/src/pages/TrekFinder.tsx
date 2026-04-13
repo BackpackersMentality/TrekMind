@@ -46,6 +46,7 @@ function accBucket(raw: string): "lodges" | "camping" | "mixed" {
 function deriveDifficulty(trek: any): "Easy" | "Moderate" | "Hard" | "Extreme" {
   const alt = parseAlt(trek.maxAltitude);
   const tier = trek.tier;
+  if (tier === 5) return "Extreme"; // trekking peaks
   if (alt >= 5000 || tier >= 4) return "Extreme";
   if (alt >= 4000 || tier === 3) return "Hard";
   if (alt >= 2500 || tier === 2) return "Moderate";
@@ -55,11 +56,11 @@ function deriveDifficulty(trek: any): "Easy" | "Moderate" | "Hard" | "Extreme" {
 // ── Preference types ──────────────────────────────────────────────────────────
 interface Prefs {
   duration:      "short" | "medium" | "long" | "epic" | "";
-  experience:    "beginner" | "intermediate" | "experienced" | "expert" | "";
+  experience:    "beginner" | "intermediate" | "experienced" | "expert" | "alpinist" | "";
   altitude:      "low" | "moderate" | "high" | "extreme" | "";
   accommodation: "lodges" | "camping" | "either" | "";
   region:        string;
-  vibe:          "iconic" | "remote" | "scenic" | "cultural" | "";
+  vibe:          "iconic" | "remote" | "scenic" | "cultural" | "summit" | "";
 }
 
 // ── Scoring engine ────────────────────────────────────────────────────────────
@@ -107,7 +108,7 @@ function scoreTrek(trek: any, prefs: Prefs): ScoredTrek {
   // ── Experience / difficulty (20 pts) ───────────────────────────────────────
   const diffRank: Record<string, number> = { Easy: 1, Moderate: 2, Hard: 3, Extreme: 4 };
   const expRank:  Record<string, number> = {
-    beginner: 1, intermediate: 2, experienced: 3, expert: 4,
+    beginner: 1, intermediate: 2, experienced: 3, expert: 4, alpinist: 4,
   };
   const gap = Math.abs(diffRank[diff] - (expRank[prefs.experience] || 2));
   if (gap === 0)      { score += 20; reasons.push(`${diff} difficulty — matches your experience`); }
@@ -155,9 +156,15 @@ function scoreTrek(trek: any, prefs: Prefs): ScoredTrek {
   if (prefs.vibe === "cultural" && (feat.includes("village") || feat.includes("culture") || feat.includes("temple") || feat.includes("monastery"))) {
     score += 10; reasons.push(`Rich cultural experience`);
   }
+  if (prefs.vibe === "summit"   && trek.tier === 5) {
+    score += 10; reasons.push(`Tier 5 trekking peak — the gateway to alpinism`);
+  }
 
   // ── Tier bonus ──────────────────────────────────────────────────────────────
-  score += Math.max(0, (4 - trek.tier)) * 3;
+  const tierBonus = trek.tier === 5
+    ? (prefs.altitude === "extreme" ? 8 : 2) // peaks get a small base + big bonus if extreme altitude
+    : Math.max(0, (4 - trek.tier)) * 3;
+  score += tierBonus;
 
   const MAX_SCORE = 30 + 25 + 20 + 15 + 15 + 10 + 9;
   const matchPct  = Math.round(Math.max(0, Math.min(100, (score / MAX_SCORE) * 100)));
@@ -401,6 +408,7 @@ const STEPS = [
       { value: "intermediate", icon: "🥾", label: "Intermediate", sub: "A few treks under my belt" },
       { value: "experienced",  icon: "⛰️", label: "Experienced",  sub: "Comfortable at altitude" },
       { value: "expert",       icon: "🧗", label: "Expert",       sub: "Remote & technical routes" },
+      { value: "alpinist",     icon: "⛏️", label: "Alpinist",     sub: "Introductory mountaineering" },
     ],
   },
   {
@@ -447,6 +455,7 @@ const STEPS = [
       { value: "remote",   icon: "🧭", label: "Off the beaten path", sub: "Fewer people, raw adventure" },
       { value: "scenic",   icon: "📸", label: "Maximum scenery",     sub: "Glaciers, peaks, dramatic landscapes" },
       { value: "cultural", icon: "🏘️", label: "Cultural immersion",  sub: "Villages, monasteries, local life" },
+      { value: "summit",   icon: "🗻", label: "Summit a peak",       sub: "Crampons, ice axe, first alpinism" },
     ],
   },
 ];
