@@ -5,14 +5,21 @@
 // import path can cause "module not found" errors in some bundler configurations.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import { Switch, Route } from "wouter";
-import { Suspense, lazy } from "react";
+import { Switch, Route, useLocation } from "wouter";
+import { Suspense, lazy, useEffect } from "react";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
-import { AuthProvider } from "@/hooks/useAuth"; // ← no .tsx extension (resolved automatically)
+import { AuthProvider } from "@/hooks/useAuth";
+import { CookieBanner } from "@/components/CookieBanner";
+import { initAnalytics, trackPageView } from "@/lib/analytics";
+
+// ── Initialise GA4 once at module load ────────────────────────────────────────
+// Consent Mode v2 defaults (set in index.html) mean no data is sent until the
+// user accepts analytics cookies via CookieBanner.
+initAnalytics();
 
 // ── Route-level code splitting ────────────────────────────────────────────────
 const Home          = lazy(() => import("@/pages/Home"));
@@ -98,6 +105,14 @@ function SuspendedTerms(props: any) {
 }
 
 function Router() {
+  const [location] = useLocation();
+
+  // Track page views on every route change.
+  // Only fires if the user has granted analytics consent (Consent Mode v2 handles this).
+  useEffect(() => {
+    trackPageView(location);
+  }, [location]);
+
   return (
     <Switch>
       <Route path="/"                       component={SuspendedHome} />
@@ -130,6 +145,10 @@ export default function App() {
           <AuthProvider>
             <Router />
             <Toaster />
+            {/* Cookie consent banner — GDPR/CCPA/PIPEDA compliant.
+                Reads saved consent from localStorage on mount.
+                Updates GA4 Consent Mode when user makes a choice. */}
+            <CookieBanner />
           </AuthProvider>
         </TooltipProvider>
       </QueryClientProvider>
