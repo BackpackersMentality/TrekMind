@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://api.mapbox.com" />
     <link rel="preconnect" href="https://events.mapbox.com" />
     <link rel="preconnect" href="https://raw.githubusercontent.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://trekmind-globe-app.pages.dev" />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
@@ -32,16 +34,43 @@
 
     <!-- ⑥ SEO / Open Graph defaults -->
     <title>TrekMind — Discover Iconic Trekking Routes</title>
-    <meta name="description" content="Explore the world's most iconic trekking routes. Detailed itineraries, interactive maps and gear guides for 67 legendary trails." />
+    <meta name="description" content="Explore the world's most iconic trekking routes. Detailed itineraries, interactive maps and gear guides for 150 legendary trails." />
     <meta property="og:site_name" content="TrekMind" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="TrekMind — Discover Iconic Trekking Routes" />
-    <meta property="og:description" content="Explore the world's most iconic trekking routes. Detailed itineraries, interactive maps and gear guides for 67 legendary trails." />
-    <meta property="og:url" content="https://trekmind.pages.dev/" />
-    <meta property="og:image" content="https://trekmind.pages.dev/og-image.jpg" />
+    <meta property="og:description" content="Explore the world's most iconic trekking routes. Detailed itineraries, interactive maps and gear guides for 150 legendary trails." />
+    <meta property="og:url" content="https://www.trekmind.app/" />
+    <meta property="og:image" content="https://www.trekmind.app/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://trekmind.pages.dev/og-image.jpg" />
+    <meta name="twitter:image" content="https://www.trekmind.app/og-image.jpg" />
     <meta name="theme-color" content="#1a2f50" />
+
+    <!-- ⑦ Google Analytics 4 — Consent Mode v2 (GDPR compliant) ──────────────
+         Consent defaults to 'denied'. The CookieBanner component calls
+         gtag('consent','update',{analytics_storage:'granted'}) after the user
+         accepts analytics cookies, so no data is sent until then.           -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      // Set defaults to DENIED before gtag.js loads — required for GDPR
+      gtag('consent', 'default', {
+        analytics_storage:   'denied',
+        ad_storage:          'denied',
+        ad_user_data:        'denied',
+        ad_personalization:  'denied',
+        wait_for_update:     500
+      });
+    </script>
+    <!-- Load GA4 async — does NOT fire any cookies until consent is granted -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4E27WQG789"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-4E27WQG789', {
+        anonymize_ip:          true,   // GDPR: anonymise IPs
+        allow_google_signals:  false,  // Disable cross-device tracking
+        send_page_view:        false   // Page views sent manually via analytics.ts
+      });
+    </script>
   </head>
   <body style="touch-action: pan-x pan-y; overscroll-behavior: none;">
     <div id="root"></div>
