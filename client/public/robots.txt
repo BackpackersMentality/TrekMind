@@ -6,3 +6,7 @@ Disallow: /api/
 
 Sitemap: https://trekmind.pages.dev/sitemap.xml
 Sitemap: https://trekmind.app/sitemap.xml
+
+# Block user-specific and auth pages from indexing
+Disallow: /my-treks
+Disallow: /api/
