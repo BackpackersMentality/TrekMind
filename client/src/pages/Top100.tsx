@@ -21,42 +21,81 @@ function parseNum(raw: any): number {
 
 function altitudeDrama(trek: any): number {
   const alt = parseNum(trek.maxAltitude);
-  // Graduated: meaningful from 2000m, maxes at 5500m+
-  if (alt >= 5500) return 24;
-  if (alt >= 5000) return 24;
-  if (alt >= 4500) return 20;
-  if (alt >= 4000) return 16;
-  if (alt >= 3000) return 11;
-  if (alt >= 2000) return 7;
-  return 3;
+  // Graduated: meaningful from 2000m, each threshold earns a distinct step.
+  // Raw scores used here; Tier 5 technical peaks receive a 0.45× multiplier
+  // inside compositeScore so alpinism routes don’t overwhelm classic treks.
+  if (alt >= 5500) return 22;
+  if (alt >= 5000) return 19;  // was same as 5500 — now properly differentiated
+  if (alt >= 4500) return 16;
+  if (alt >= 4000) return 12;
+  if (alt >= 3000) return 8;
+  if (alt >= 2000) return 5;
+  return 2;
 }
 
 function terrainScore(trek: any): number {
-  const t = (trek.terrain + " " + trek.keyFeatures).toLowerCase();
+  const t = ((trek.terrain ?? "") + " " + (trek.keyFeatures ?? "")).toLowerCase();
   let s = 0;
-  if (t.includes("glacier") || t.includes("glacial")) s += 4;
-  if (t.includes("volcanic") || t.includes("volcano"))  s += 3;
-  if (t.includes("canyon") || t.includes("gorge"))       s += 3;
-  if (t.includes("tepui") || t.includes("plateau"))      s += 3;
-  if (t.includes("arctic") || t.includes("fjord"))       s += 3;
-  if (t.includes("alpine"))                              s += 2;
-  if (t.includes("coast") || t.includes("coastal"))     s += 2;
-  if (t.includes("jungle") || t.includes("rainforest")) s += 2;
+  if (t.includes("glacier") || t.includes("glacial") || t.includes("glaciat")) s += 4; // glaciated, glaciation
+  if (t.includes("volcanic") || t.includes("volcano"))                          s += 3;
+  if (t.includes("canyon") || t.includes("gorge"))                              s += 3;
+  if (t.includes("tepui") || t.includes("plateau"))                             s += 3;
+  if (t.includes("arctic") || t.includes("fjord") || t.includes("fiord"))      s += 3; // NZ fiordland
+  if (t.includes("alpine"))                                                      s += 2;
+  if (t.includes("coast") || t.includes("coastal"))                            s += 2;
+  if (t.includes("jungle") || t.includes("rainforest"))                        s += 2;
+  if (t.includes("desert"))                                                     s += 2;
   return Math.min(12, s);
 }
 
 function compositeScore(trek: any): number {
-  const pop = (trek.popularityScore ?? 5);
-  const tierBonus: Record<number, number> = { 1: 18, 2: 12, 3: 7, 4: 11 };
+  const pop  = trek.popularityScore ?? 5;
+  const tier = trek.tier ?? 2;
+
+  // ── Popularity: primary ranking signal (max 50 pts) ──────────────────────────
+  // Captures real-world demand — permit queues, guide bookings, search volume.
+  // Raised from ×4.2 to ×5.0 so fame outweighs pure altitude.
+  const popScore = pop * 5.0;
+
+  // ── Altitude drama ───────────────────────────────────────────────────────────
+  // Tier 5 trekking peaks (technical alpinism — crampons, ice axe, crevasse risk)
+  // receive only 45% of the altitude score. Their summits are impressive but they
+  // appeal to a small alpinist audience, not general trekkers. Without this cap,
+  // routes like Elbrus and Island Peak rank #4–8 ahead of TMB and Haute Route.
+  const rawAlt   = altitudeDrama(trek);
+  const altScore = tier === 5 ? Math.round(rawAlt * 0.45) : rawAlt;
+
+  // ── Terrain richness (0–12 pts) ───────────────────────────────────────────────
+  const terr = terrainScore(trek);
+
+  // ── Tier bonus ────────────────────────────────────────────────────────────────
+  // T1 iconic classics dominate; T5 technical peaks are explicitly penalised.
+  // T4 thru-hikes sit below T2 classics because they suit a niche long-distance
+  // audience rather than the holiday trekker majority.
+  const TIER_BONUS: Record<number, number> = {
+    1: 22,  // Iconic — TMB, EBC, Kilimanjaro, Inca Trail, Haute Route
+    2: 14,  // Classic — Alta Via, Kungsleden, Huayhuash, West Coast Trail
+    3:  6,  // Remote — Wind River, Dientes, Rwenzori (specialist audience)
+    4:  9,  // Thru — PCT, AT, GHT (ambitious but niche long-distance crowd)
+    5:  2,  // Peak — alpinism routes; impressive but not typical trekking
+  };
+
+  // ── Access bonus: 7–14 days is the sweet spot ─────────────────────────────────
+  // Most serious trekkers have 1–2 week holidays. Routes fitting that window
+  // get a meaningful bonus; very short or very long routes are penalised.
   const days = parseNum(trek.totalDays);
-  // Accessibility bonus for sweet-spot 5-14 day treks (widest audience appeal)
-  const accessBonus = days >= 5 && days <= 14 ? 5 : days < 5 ? 3 : 0;
+  const accessBonus =
+    days >= 7  && days <= 14 ? 8 :   // ideal holiday window
+    days >= 4  && days <= 6  ? 5 :   // short but rewarding
+    days >= 15 && days <= 21 ? 4 :   // longer trips, smaller audience
+    days <= 3                ? 2 :   // summit-day / weekend routes
+    1;                                // >21 days — expedition/thru-hike length
 
   return (
-    pop * 4.2 +
-    altitudeDrama(trek) +
-    terrainScore(trek) +
-    (tierBonus[trek.tier] ?? 12) +
+    popScore +
+    altScore +
+    terr +
+    (TIER_BONUS[tier] ?? 14) +
     accessBonus
   );
 }
@@ -91,6 +130,7 @@ function TierBadge({ tier }: { tier: number }) {
     2: { label: "Classic",  cls: "bg-blue-100 text-blue-800 border-blue-200" },
     3: { label: "Remote",   cls: "bg-slate-100 text-slate-700 border-slate-200" },
     4: { label: "Thru",     cls: "bg-violet-100 text-violet-800 border-violet-200" },
+    5: { label: "Peak",     cls: "bg-sky-100 text-sky-800 border-sky-200" },
   };
   const { label, cls } = cfg[tier] ?? cfg[2];
   return (
