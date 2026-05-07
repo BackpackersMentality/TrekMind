@@ -5,6 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 interface RouteMapProps {
   stops: any[] | null;
   trek: any;
+  embedMode?: boolean;
 }
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
@@ -101,7 +102,7 @@ const WP_COLOURS: Record<string, string> = {
   hot_spring: '#fb7185',
 };
 
-export default function RouteMap({ stops, trek }: RouteMapProps) {
+export default function RouteMap({ stops, trek, embedMode = false }: RouteMapProps) {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const [geo, setGeo] = useState<GeoState>({ stops: [], ready: false, geocoding: false });
