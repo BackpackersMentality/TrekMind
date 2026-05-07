@@ -506,6 +506,18 @@ return (
       {/* Map container */}
       <div ref={mapContainer} className="w-full h-full" />
 
+      {/* ── View Full Route CTA (embed only) ───────────────────────────── */}
+      {embedMode && (
+        <a
+          href={`https://trekmind.app/trek/${trek.slug || trek.id || ''}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute top-4 left-4 z-30 bg-white/95 backdrop-blur-md border border-slate-200 text-slate-900 text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-md shadow-[0_4px_12px_rgba(0,0,0,0.1)] hover:bg-white hover:scale-[1.02] transition-all flex items-center gap-2"
+        >
+          View Full Route ↗
+        </a>
+      )}
+      
       {/* ── NEW: Gesture hint overlay (embed only) ─────────────────────── */}
       {embedMode && (
         <div
