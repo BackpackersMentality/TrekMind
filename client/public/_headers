@@ -1,85 +1,26 @@
 # ── Cloudflare Pages _headers file ───────────────────────────────────────────
 # Place this at: client/public/_headers
-# It gets copied to the dist root by Vite's build.
-#
-# Strategy:
-# - HTML: no-cache (always revalidate so users get new deployments)
-# - JS/CSS chunks: immutable 1-year cache (Vite adds content hash to filename)
-# - JSON data: 1-hour cache with stale-while-revalidate (data rarely changes)
-# - Images: 1-week cache
-# - Fonts: 1-year immutable
 
-# HTML pages — always revalidate
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
-
-# Vite-generated assets (have content hash in filename — safe to cache forever)
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Per-trek JSON data (changes rarely, 1hr cache + serve stale for 24hr)
-/data/itineraries/*.json
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
-
-# Root treks.json
-/data/treks.json
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
-
-# Static images
-/images/*
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
-
-# Security headers on all routes
+# ════════════════════════════════════════════════════════════════════════
+# 1. GLOBAL SECURITY DEFAULTS (Applied to everything first)
+# ════════════════════════════════════════════════════════════════════════
 /*
   X-Content-Type-Options: nosniff
-  X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-
-# ── CRITICAL: Force sitemap.xml to serve as XML, not HTML ──────────────────
-# Without this, Cloudflare Pages' SPA fallback intercepts the request and
-# serves index.html with Content-Type: text/html — causing Google Search
-# Console to report "Sitemap is HTML" and discover 0 pages.
-/sitemap.xml
-  Content-Type: application/xml; charset=utf-8
-  X-Robots-Tag: noindex
-
-
-# ── robots.txt ──────────────────────────────────────────────────────────────
-/robots.txt
-  Content-Type: text/plain; charset=utf-8
-  Cache-Control: public, max-age=86400
-
-# Cloudflare Pages _headers file
-# Place at: client/public/_headers
-# Vite copies everything in /public to /dist at build time.
-#
-# ⚠️  ROOT CAUSE OF THE BROKEN IFRAME:
-#     The previous file had TWO separate /* blocks. Cloudflare Pages processes
-#     _headers rules in order and the LAST matching rule for a given header wins.
-#     The second /* block set `frame-ancestors 'self'` which overwrote the
-#     first block's allowance — so ALL routes (including /embed/*) ended up
-#     with frame-ancestors 'self', causing the browser to block the iframe
-#     and show the broken page icon on backpackersmentality.com.
-#
-#     FIX: Use a single /* block for defaults. Specific paths (/embed/*)
-#     are more specific and always take priority over /* in Cloudflare Pages.
-#
-# ════════════════════════════════════════════════════════════════════════
-# 1. EMBED ROUTES — allow iframing on backpackersmentality.com ONLY
-#    This MUST be listed before the /* catch-all block.
-# ════════════════════════════════════════════════════════════════════════
-/embed/*
-  Content-Security-Policy: frame-ancestors https://backpackersmentality.com https://www.backpackersmentality.com
-  X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=0, must-revalidate
 
+  # CRITICAL FIX: We must remove X-Frame-Options entirely.
+  # We rely exclusively on CSP to control framing. By allowing backpackersmentality.com
+  # globally, we ensure that even if the SPA routing serves index.html for an embed
+  # route, the framing will be permitted.
+  Content-Security-Policy: frame-ancestors 'self' https://backpackersmentality.com https://www.backpackersmentality.com
+
 # ════════════════════════════════════════════════════════════════════════
-# 2. VITE ASSETS — immutable 1-year cache (content hash in filename)
+# 2. VITE ASSETS — immutable 1-year cache
 # ════════════════════════════════════════════════════════════════════════
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
-  X-Content-Type-Options: nosniff
 
 # ════════════════════════════════════════════════════════════════════════
 # 3. JSON DATA FILES
@@ -107,16 +48,3 @@
 /robots.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=86400
-
-# ════════════════════════════════════════════════════════════════════════
-# 6. ALL OTHER ROUTES — security defaults
-#    ⚠️  ONE /* block only. Never duplicate this — duplicates cause the
-#    last entry to silently overwrite headers set by the first entry.
-# ════════════════════════════════════════════════════════════════════════
-/*
-  X-Content-Type-Options: nosniff
-  X-Frame-Options: SAMEORIGIN
-  Content-Security-Policy: frame-ancestors 'self'
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Cache-Control: public, max-age=0, must-revalidate
