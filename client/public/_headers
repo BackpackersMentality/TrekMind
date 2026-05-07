@@ -44,8 +44,9 @@
   Content-Type: application/xml; charset=utf-8
   X-Robots-Tag: noindex
 
-/embed/*
-  Content-Security-Policy: frame-ancestors https://backpackersmentality.com https://www.backpackersmentality.com
+/*
+  Content-Security-Policy: frame-ancestors 'self' https://backpackersmentality.com https://www.backpackersmentality.com;
+  X-Frame-Options: ALLOWALL
 
 /*
   Content-Security-Policy: frame-ancestors 'self'
