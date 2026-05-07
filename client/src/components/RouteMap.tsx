@@ -429,6 +429,7 @@ map.current = new mapboxgl.Map({
           const popup = new mapboxgl.Popup({
             offset: [0, -4],
             closeButton: true,
+            autoPan: false // ⬅️ ADD THIS EXACT LINE
             closeOnClick: false,
             maxWidth: '220px',
             focusAfterOpen: false,
