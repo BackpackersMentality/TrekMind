@@ -205,14 +205,61 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
     const hasRoute = geo.stops.length >= 2;
     const waypoints: any[] = trek.waypoints ?? [];
 
-    map.current = new mapboxgl.Map({
+map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/satellite-streets-v12',
       center: [trek.longitude, trek.latitude],
       zoom: hasRoute ? 10 : 9,
       pitch: 0,
-      bearing: 0,
+      // ── Step 3: Embed-mode interaction locks ─────────────────────────────
+      scrollZoom: !embedMode,   // false in embed — prevents desktop scroll trap
+      touchPitch: !embedMode,   // false in embed — frees up two-finger for page scroll
+      dragRotate: !embedMode    // false in embed — no accidental rotation in small iframe
     });
+
+    // ── Step 3: Cooperative gesture handling for mobile ───────────────────
+    if (embedMode) {
+      map.current.dragPan.disable(); // Default OFF — requires two fingers
+
+      let hintTimeout: ReturnType<typeof setTimeout>;
+      const container = map.current.getContainer();
+
+      const showHint = () => {
+        const hint = document.getElementById("embed-gesture-hint");
+        if (hint) {
+          hint.style.opacity = "1";
+          hint.style.pointerEvents = "auto";
+          clearTimeout(hintTimeout);
+          hintTimeout = setTimeout(() => {
+            hint.style.opacity  = "0";
+            hint.style.pointerEvents = "none";
+          }, 1500);
+        }
+      };
+
+      const onTouchStart = (e: TouchEvent) => {
+        if (e.touches.length >= 2) {
+          map.current?.dragPan.enable();  // Two fingers → allow map pan
+        } else {
+          map.current?.dragPan.disable(); // One finger → scroll the page
+          showHint();
+        }
+      };
+
+      const onTouchEnd = () => {
+        setTimeout(() => map.current?.dragPan.disable(), 100);
+      };
+
+      container.addEventListener("touchstart", onTouchStart, { passive: true });
+      container.addEventListener("touchend",   onTouchEnd,   { passive: true });
+
+      // Clean up touch events when map unmounts
+      map.current.on('remove', () => {
+        container.removeEventListener("touchstart", onTouchStart);
+        container.removeEventListener("touchend",   onTouchEnd);
+        clearTimeout(hintTimeout);
+      });
+    }
 
     map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
@@ -448,10 +495,44 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
     );
   }
 
-  return (
-    <div className="relative w-full h-[500px] rounded-xl overflow-hidden border border-border shadow-sm">
+return (
+    <div 
+      className={`relative w-full overflow-hidden ${
+        embedMode 
+          ? "h-full min-h-[100dvh] rounded-none border-none" 
+          : "h-[500px] rounded-xl border border-border shadow-sm"
+      }`}
+    >
+      {/* Map container */}
       <div ref={mapContainer} className="w-full h-full" />
 
+      {/* ── NEW: Gesture hint overlay (embed only) ─────────────────────── */}
+      {embedMode && (
+        <div
+          id="embed-gesture-hint"
+          style={{
+            position:       "absolute",
+            inset:          0,
+            display:        "flex",
+            alignItems:     "center",
+            justifyContent: "center",
+            background:     "rgba(0,0,0,0.45)",
+            color:          "#fff",
+            fontSize:       "14px",
+            fontWeight:     600,
+            opacity:        0,
+            pointerEvents:  "none",
+            transition:     "opacity 200ms ease",
+            zIndex:         20,
+            textAlign:      "center",
+            padding:        "0 24px",
+          }}
+        >
+          Use two fingers to move the map
+        </div>
+      )}
+
+      {/* ── EXISTING: Loading State ────────────────────────────────────── */}
       {geo.geocoding && (
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center gap-3 text-white z-10">
           <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -459,7 +540,7 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
         </div>
       )}
 
-      {/* ✅ FIX 3: Legend now includes waypoint types */}
+      {/* ── EXISTING: Waypoint Legend ──────────────────────────────────── */}
       {geo.ready && geo.stops.length >= 2 && (
         <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white text-xs rounded-lg px-3 py-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 pointer-events-none z-10 max-w-[380px]">
           <span className="flex items-center gap-1.5">
@@ -485,4 +566,3 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
       )}
     </div>
   );
-}
