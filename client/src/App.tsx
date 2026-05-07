@@ -1,24 +1,21 @@
 // client/src/App.tsx
 // ─────────────────────────────────────────────────────────────────────────────
-// FIX: Removed explicit .tsx extension from the AuthProvider import.
-// TypeScript/Vite resolves extensions automatically; hardcoding .tsx in the
-// import path can cause "module not found" errors in some bundler configurations.
+// Updated: added /embed/:id route for WordPress iframe embeds.
+// The embed route is intentionally outside the AuthProvider/CookieBanner
+// wrappers — it is a bare canvas with no app chrome.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { Switch, Route, useLocation } from "wouter";
-import { Suspense, lazy, useEffect } from "react";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { queryClient } from "./lib/queryClient";
-import { Toaster } from "@/components/ui/toaster";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { HelmetProvider } from "react-helmet-async";
-import { AuthProvider } from "@/hooks/useAuth";
-import { CookieBanner } from "@/components/CookieBanner";
+import { Suspense, lazy, useEffect }  from "react";
+import { QueryClientProvider }        from "@tanstack/react-query";
+import { queryClient }                from "./lib/queryClient";
+import { Toaster }                    from "@/components/ui/toaster";
+import { TooltipProvider }            from "@/components/ui/tooltip";
+import { HelmetProvider }             from "react-helmet-async";
+import { AuthProvider }               from "@/hooks/useAuth";
+import { CookieBanner }               from "@/components/CookieBanner";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
 
-// ── Initialise GA4 once at module load ────────────────────────────────────────
-// Consent Mode v2 defaults (set in index.html) mean no data is sent until the
-// user accepts analytics cookies via CookieBanner.
 initAnalytics();
 
 // ── Route-level code splitting ────────────────────────────────────────────────
@@ -38,8 +35,10 @@ const TierPage      = lazy(() => import("@/pages/TierPage"));
 const NotFound      = lazy(() => import("@/pages/not-found"));
 const Privacy       = lazy(() => import("@/pages/Privacy"));
 const Terms         = lazy(() => import("@/pages/Terms"));
+// ── NEW ──────────────────────────────────────────────────────────────────────
+const EmbedMap      = lazy(() => import("@/pages/EmbedMap"));
 
-// ── Loading skeleton ──────────────────────────────────────────────────────────
+// ── Loading skeletons ─────────────────────────────────────────────────────────
 function PageSkeleton() {
   return (
     <div className="min-h-screen bg-background animate-pulse">
@@ -52,79 +51,53 @@ function PageSkeleton() {
     </div>
   );
 }
+function EmbedSkeleton() {
+  return <div style={{ position: "fixed", inset: 0, background: "#0d1b2e" }} />;
+}
 
 // ── Per-route Suspense wrappers ───────────────────────────────────────────────
-// Defined at module level so React sees a stable component identity on every render.
-function SuspendedHome(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><Home {...props} /></Suspense>;
-}
-function SuspendedTrekDetail(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><TrekDetail {...props} /></Suspense>;
-}
-function SuspendedTrekFinder(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><TrekFinder {...props} /></Suspense>;
-}
-function SuspendedTop100(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><Top100 {...props} /></Suspense>;
-}
-function SuspendedAbout(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><About {...props} /></Suspense>;
-}
-function SuspendedMyTreks(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><MyTreks {...props} /></Suspense>;
-}
-function SuspendedNotFound(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><NotFound {...props} /></Suspense>;
-}
-function SuspendedArticles(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><Articles {...props} /></Suspense>;
-}
-function SuspendedArticleDetail(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><ArticleDetail {...props} /></Suspense>;
-}
-function SuspendedRegionPage(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><RegionPage {...props} /></Suspense>;
-}
-function SuspendedCountryPage(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><CountryPage {...props} /></Suspense>;
-}
-function SuspendedContinentPage(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><ContinentPage {...props} /></Suspense>;
-}
-function SuspendedDurationPage(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><DurationPage {...props} /></Suspense>;
-}
-function SuspendedTierPage(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><TierPage {...props} /></Suspense>;
-}
-function SuspendedPrivacy(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><Privacy {...props} /></Suspense>;
-}
-function SuspendedTerms(props: any) {
-  return <Suspense fallback={<PageSkeleton />}><Terms {...props} /></Suspense>;
-}
+function SuspendedHome(p: any)          { return <Suspense fallback={<PageSkeleton />}><Home {...p} /></Suspense>; }
+function SuspendedTrekDetail(p: any)    { return <Suspense fallback={<PageSkeleton />}><TrekDetail {...p} /></Suspense>; }
+function SuspendedTrekFinder(p: any)    { return <Suspense fallback={<PageSkeleton />}><TrekFinder {...p} /></Suspense>; }
+function SuspendedTop100(p: any)        { return <Suspense fallback={<PageSkeleton />}><Top100 {...p} /></Suspense>; }
+function SuspendedAbout(p: any)         { return <Suspense fallback={<PageSkeleton />}><About {...p} /></Suspense>; }
+function SuspendedMyTreks(p: any)       { return <Suspense fallback={<PageSkeleton />}><MyTreks {...p} /></Suspense>; }
+function SuspendedNotFound(p: any)      { return <Suspense fallback={<PageSkeleton />}><NotFound {...p} /></Suspense>; }
+function SuspendedArticles(p: any)      { return <Suspense fallback={<PageSkeleton />}><Articles {...p} /></Suspense>; }
+function SuspendedArticleDetail(p: any) { return <Suspense fallback={<PageSkeleton />}><ArticleDetail {...p} /></Suspense>; }
+function SuspendedRegionPage(p: any)    { return <Suspense fallback={<PageSkeleton />}><RegionPage {...p} /></Suspense>; }
+function SuspendedCountryPage(p: any)   { return <Suspense fallback={<PageSkeleton />}><CountryPage {...p} /></Suspense>; }
+function SuspendedContinentPage(p: any) { return <Suspense fallback={<PageSkeleton />}><ContinentPage {...p} /></Suspense>; }
+function SuspendedDurationPage(p: any)  { return <Suspense fallback={<PageSkeleton />}><DurationPage {...p} /></Suspense>; }
+function SuspendedTierPage(p: any)      { return <Suspense fallback={<PageSkeleton />}><TierPage {...p} /></Suspense>; }
+function SuspendedPrivacy(p: any)       { return <Suspense fallback={<PageSkeleton />}><Privacy {...p} /></Suspense>; }
+function SuspendedTerms(p: any)         { return <Suspense fallback={<PageSkeleton />}><Terms {...p} /></Suspense>; }
+// ── NEW ──────────────────────────────────────────────────────────────────────
+function SuspendedEmbedMap(p: any)      { return <Suspense fallback={<EmbedSkeleton />}><EmbedMap {...p} /></Suspense>; }
 
 function Router() {
   const [location] = useLocation();
 
-  // Track page views on every route change.
-  // Only fires if the user has granted analytics consent (Consent Mode v2 handles this).
   useEffect(() => {
-    trackPageView(location);
+    // Don't fire GA for embed views — they are iframed, not direct user sessions
+    if (!location.startsWith("/embed/")) {
+      trackPageView(location);
+    }
   }, [location]);
 
   return (
     <Switch>
+      {/* ── /embed/:id MUST be first — matched before catch-all ─────────── */}
+      <Route path="/embed/:id"              component={SuspendedEmbedMap} />
+
       <Route path="/"                       component={SuspendedHome} />
       <Route path="/trek/:id"               component={SuspendedTrekDetail} />
       <Route path="/trek-finder"            component={SuspendedTrekFinder} />
       <Route path="/top-100"               component={SuspendedTop100} />
       <Route path="/about"                  component={SuspendedAbout} />
       <Route path="/my-treks"              component={SuspendedMyTreks} />
-      {/* Articles */}
       <Route path="/articles"              component={SuspendedArticles} />
       <Route path="/articles/:slug"        component={SuspendedArticleDetail} />
-      {/* Programmatic SEO pages */}
       <Route path="/treks/region/:slug"    component={SuspendedRegionPage} />
       <Route path="/treks/country/:slug"   component={SuspendedCountryPage} />
       <Route path="/treks/continent/:slug" component={SuspendedContinentPage} />
@@ -145,9 +118,6 @@ export default function App() {
           <AuthProvider>
             <Router />
             <Toaster />
-            {/* Cookie consent banner — GDPR/CCPA/PIPEDA compliant.
-                Reads saved consent from localStorage on mount.
-                Updates GA4 Consent Mode when user makes a choice. */}
             <CookieBanner />
           </AuthProvider>
         </TooltipProvider>
