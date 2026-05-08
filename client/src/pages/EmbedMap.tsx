@@ -7,7 +7,6 @@
 //
 // Features:
 //   • 100vw × 100vh map — no chrome at all
-//   • "View Full Route" CTA button (top-right overlay)
 //   • scrollZoom disabled — prevents scroll trap on desktop
 //   • dragPan disabled on touch — prevents page-scroll trap on mobile
 //   • frame-ancestors CSP enforced via _headers (see public/_headers)
@@ -16,7 +15,7 @@
 import { useRoute }             from "wouter";
 import { Suspense, lazy, useMemo, useEffect } from "react";
 import { getTrekById, getItineraryAsync } from "@/lib/treks";
-import { ExternalLink, Mountain }          from "lucide-react";
+import { Mountain }             from "lucide-react";
 import { Helmet }               from "react-helmet-async";
 import { useState }             from "react";
 
@@ -64,8 +63,6 @@ export default function EmbedMap() {
     );
   }
 
-  const fullRouteUrl = `https://www.trekmind.app/trek/${trekId}`;
-
   return (
     <>
       {/* ── SEO / iframe title ────────────────────────────────────────────── */}
@@ -112,50 +109,6 @@ export default function EmbedMap() {
             embedMode={true}
           />
         </Suspense>
-
-        {/* ── Step 2: "View Full Route" CTA overlay ────────────────────── */}
-        <a
-          href={fullRouteUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`View full ${trek.name} route on TrekMind`}
-          style={{
-            // Positioned top-right, above the map
-            position:       "absolute",
-            top:            "12px",
-            right:          "12px",
-            zIndex:         10,
-            // Style — matches TrekMind's primary action button aesthetic
-            display:        "inline-flex",
-            alignItems:     "center",
-            gap:            "6px",
-            padding:        "8px 14px",
-            borderRadius:   "999px",
-            backgroundColor:"rgba(255,255,255,0.92)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
-            border:         "1px solid rgba(0,0,0,0.08)",
-            color:          "#0d1b2e",
-            fontSize:       "12px",
-            fontWeight:     700,
-            letterSpacing:  "0.02em",
-            textDecoration: "none",
-            boxShadow:      "0 2px 12px rgba(0,0,0,0.18)",
-            whiteSpace:     "nowrap",
-            transition:     "background-color 150ms ease, transform 150ms ease",
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "#ffffff";
-            (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,255,255,0.92)";
-            (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
-          }}
-        >
-          <ExternalLink style={{ width: 12, height: 12, flexShrink: 0 }} />
-          View Full Route
-        </a>
 
         {/* ── TrekMind branding watermark — bottom-left ─────────────────── */}
         <a
