@@ -108,10 +108,6 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
   const [geo, setGeo] = useState<GeoState>({ stops: [], ready: false, geocoding: false });
 
   // ── Step 1: Geocode stops ────────────────────────────────────────────────────
-  // Each day's lat/lng is the OVERNIGHT stop (end of day).
-  // We synthesise a Day 0 "Start" entry by geocoding the "from" location
-  // of Day 1's route string (e.g. "Kathmandu to Syange" → geocode "Kathmandu").
-  // The last day's overnight is already the Finish point.
   useEffect(() => {
     if (!trek) return;
 
@@ -122,7 +118,6 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
       return;
     }
 
-    // ✅ Already have coords — derive start from Day 1 route field
     const allHaveCoords = stops.every(s =>
       (typeof (s.lat ?? s.latitude) === 'number') && (typeof (s.lng ?? s.longitude) === 'number')
     );
@@ -130,23 +125,15 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
     if (allHaveCoords) {
       const normStops = stops.map(s => ({ ...s, lat: s.lat ?? s.latitude, lng: s.lng ?? s.longitude }));
 
-      // Derive start point from Day 1's route string name, but DON'T geocode it —
-      // remote trailhead names (e.g. "Cuartelwain", "Km 82") are unknown to Mapbox
-      // and return wrong results hundreds of km away.
-      // Instead: place the Start marker at a small offset behind Day 1's coords,
-      // interpolated back from the Day 1 → Day 2 vector. This keeps it geographically
-      // accurate and on the correct side of the route without any geocoding risk.
       const day1Route = stops[0]?.route || stops[0]?.sectionRoute || stops[0]?.routePaths || '';
       const startName = parseStartName(day1Route) || trek.name;
 
       const d1 = normStops[0];
       const d2 = normStops.length > 1 ? normStops[1] : null;
 
-      // Offset start slightly "behind" Day 1 along the Day1→Day2 vector (or use Day 1 directly)
       let startLat = d1.lat;
       let startLng = d1.lng;
       if (d2) {
-        // Step back 20% of the Day1→Day2 vector to place start before first camp
         startLat = d1.lat - (d2.lat - d1.lat) * 0.2;
         startLng = d1.lng - (d2.lng - d1.lng) * 0.2;
       }
@@ -205,21 +192,19 @@ export default function RouteMap({ stops, trek, embedMode = false }: RouteMapPro
     const hasRoute = geo.stops.length >= 2;
     const waypoints: any[] = trek.waypoints ?? [];
 
-map.current = new mapboxgl.Map({
+    map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/satellite-streets-v12',
       center: [trek.longitude, trek.latitude],
       zoom: hasRoute ? 10 : 9,
       pitch: 0,
-      // ── Step 3: Embed-mode interaction locks ─────────────────────────────
-      scrollZoom: !embedMode,   // false in embed — prevents desktop scroll trap
-      touchPitch: !embedMode,   // false in embed — frees up two-finger for page scroll
-      dragRotate: !embedMode    // false in embed — no accidental rotation in small iframe
+      scrollZoom: !embedMode,
+      touchPitch: !embedMode,
+      dragRotate: !embedMode
     });
 
-    // ── Step 3: Cooperative gesture handling for mobile ───────────────────
     if (embedMode) {
-      map.current.dragPan.disable(); // Default OFF — requires two fingers
+      map.current.dragPan.disable(); 
 
       let hintTimeout: ReturnType<typeof setTimeout>;
       const container = map.current.getContainer();
@@ -239,9 +224,9 @@ map.current = new mapboxgl.Map({
 
       const onTouchStart = (e: TouchEvent) => {
         if (e.touches.length >= 2) {
-          map.current?.dragPan.enable();  // Two fingers → allow map pan
+          map.current?.dragPan.enable();
         } else {
-          map.current?.dragPan.disable(); // One finger → scroll the page
+          map.current?.dragPan.disable();
           showHint();
         }
       };
@@ -253,7 +238,6 @@ map.current = new mapboxgl.Map({
       container.addEventListener("touchstart", onTouchStart, { passive: true });
       container.addEventListener("touchend",   onTouchEnd,   { passive: true });
 
-      // Clean up touch events when map unmounts
       map.current.on('remove', () => {
         container.removeEventListener("touchstart", onTouchStart);
         container.removeEventListener("touchend",   onTouchEnd);
@@ -263,14 +247,9 @@ map.current = new mapboxgl.Map({
 
     map.current.addControl(new mapboxgl.NavigationControl(), 'top-right');
 
-    // ✅ FIX 1: Use a single 'load' event — satellite-streets fires 'load' only
-    // after all sprite/glyph/tile resources are ready. Using 'style.load' +
-    // 'load' separately caused a race where terrain was added before the DEM
-    // source was accepted, leaving tiles black. One handler covers both.
     map.current.on('load', () => {
       if (!map.current) return;
 
-      // ── Terrain & atmosphere ──────────────────────────────────────────────
       map.current.addSource('mapbox-dem', {
         type: 'raster-dem',
         url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
@@ -294,7 +273,6 @@ map.current = new mapboxgl.Map({
         'space-color': 'rgb(11,11,25)',
       });
 
-      // ── Route line ────────────────────────────────────────────────────────
       if (hasRoute) {
         const coords = geo.stops.map(s => [s.lng, s.lat]);
         const bounds = new mapboxgl.LngLatBounds();
@@ -318,10 +296,7 @@ map.current = new mapboxgl.Map({
           paint: { 'line-color': '#facc15', 'line-width': 4, 'line-dasharray': [2, 1.5] },
         });
 
-        // ── Overnight stop markers ────────────────────────────────────────
-        // FIX: Use marker.togglePopup() on click — with 3D terrain exaggeration
-        // the visual marker position shifts from the flat-map hitbox. togglePopup()
-        // recalculates the anchor at render-time, so the popup appears correctly.
+        // ── Overnight stop markers (FIXED NESTING & AUTO-PAN) ───────────────
         geo.stops.forEach((stop, i) => {
           if (!map.current) return;
           const isFirst = i === 0;
@@ -330,16 +305,21 @@ map.current = new mapboxgl.Map({
           const size = isFirst || isLast ? 14 : isApprox ? 7 : 9;
           const colour = isFirst ? '#10b981' : isLast ? '#ef4444' : isApprox ? '#94a3b8' : '#3b82f6';
 
+          // OUTER element strictly for Mapbox positioning
           const el = document.createElement('div');
-          el.style.cssText = `
+          el.style.cssText = `cursor:pointer; padding:6px;`;
+
+          // INNER element for styling and hover scale
+          const inner = document.createElement('div');
+          inner.style.cssText = `
             width:${size}px;height:${size}px;border-radius:50%;
             background:${colour};
             border:${isApprox ? '1.5px dashed rgba(255,255,255,0.6)' : '2px solid white'};
             box-shadow:0 2px 6px rgba(0,0,0,0.5);
             opacity:${isApprox ? 0.7 : 1};
-            cursor:pointer;
             transition:transform 0.15s;
           `;
+          el.appendChild(inner);
 
           const label =
             stop.overnight ||
@@ -365,19 +345,17 @@ map.current = new mapboxgl.Map({
             </div>
           `;
 
-          // Popup anchored by LngLat — unaffected by 3D terrain visual shift.
-          // NO touchstart: mobile fires touchstart then a synthetic click, which
-          // would call the handler twice (open→close = flash). Click-only is correct.
+          // FIXED: Missing comma added after autoPan: false
           const popup = new mapboxgl.Popup({
             offset: [0, -6],
             closeButton: true,
-            autoPan: false // ⬅️ ADD THIS EXACT LINE
+            autoPan: false,
             closeOnClick: false,
             maxWidth: '220px',
             focusAfterOpen: false,
           }).setHTML(popupHtml);
 
-          const marker = new mapboxgl.Marker(el)
+          new mapboxgl.Marker(el)
             .setLngLat([stop.lng, stop.lat])
             .addTo(map.current!);
 
@@ -390,26 +368,33 @@ map.current = new mapboxgl.Map({
               popup.setLngLat([stop.lng, stop.lat]).addTo(map.current!);
             }
           });
-          el.addEventListener('mouseenter', () => { el.style.transform = 'scale(1.6)'; });
-          el.addEventListener('mouseleave', () => { el.style.transform = 'scale(1)'; });
+          
+          // Apply hover to INNER element, protecting the outer Mapbox coordinate wrapper
+          el.addEventListener('mouseenter', () => { inner.style.transform = 'scale(1.6)'; });
+          el.addEventListener('mouseleave', () => { inner.style.transform = 'scale(1)'; });
 
           bounds.extend([stop.lng, stop.lat]);
         });
 
-        // ── Waypoint markers — all blue diamonds, reference only ─────────
+        // ── Waypoint markers (FIXED NESTING & AUTO-PAN) ─────────────────────
         waypoints.forEach(wp => {
           if (!map.current || typeof wp.lat !== 'number' || typeof wp.lng !== 'number') return;
 
+          // OUTER element strictly for Mapbox positioning
           const el = document.createElement('div');
-          el.style.cssText = `
+          el.style.cssText = `cursor:pointer; padding:6px;`;
+
+          // INNER element for styling and hover scale
+          const inner = document.createElement('div');
+          inner.style.cssText = `
             width:10px;height:10px;
             background:#3b82f6;
             border:1.5px solid white;
             box-shadow:0 2px 5px rgba(0,0,0,0.6);
             transform:rotate(45deg);
-            cursor:pointer;
             transition:transform 0.15s;
           `;
+          el.appendChild(inner);
 
           const type = wp.type || 'landmark';
           const typeLabel: Record<string, string> = {
@@ -426,16 +411,17 @@ map.current = new mapboxgl.Map({
             </div>
           `;
 
+          // FIXED: Missing comma added after autoPan: false
           const popup = new mapboxgl.Popup({
             offset: [0, -4],
             closeButton: true,
-            autoPan: false // ⬅️ ADD THIS EXACT LINE
+            autoPan: false,
             closeOnClick: false,
             maxWidth: '220px',
             focusAfterOpen: false,
           }).setHTML(wpHtml);
 
-          const marker = new mapboxgl.Marker(el)
+          new mapboxgl.Marker(el)
             .setLngLat([wp.lng, wp.lat])
             .addTo(map.current!);
 
@@ -448,8 +434,10 @@ map.current = new mapboxgl.Map({
               popup.setLngLat([wp.lng, wp.lat]).addTo(map.current!);
             }
           });
-          el.addEventListener('mouseenter', () => { el.style.transform = 'rotate(45deg) scale(1.8)'; });
-          el.addEventListener('mouseleave', () => { el.style.transform = 'rotate(45deg) scale(1)'; });
+          
+          // Apply hover to INNER element, protecting the outer Mapbox coordinate wrapper
+          el.addEventListener('mouseenter', () => { inner.style.transform = 'rotate(45deg) scale(1.8)'; });
+          el.addEventListener('mouseleave', () => { inner.style.transform = 'rotate(45deg) scale(1)'; });
 
           bounds.extend([wp.lng, wp.lat]);
         });
@@ -457,16 +445,20 @@ map.current = new mapboxgl.Map({
         map.current.fitBounds(bounds, {
           padding: { top: 80, bottom: 100, left: 60, right: 80 },
           maxZoom: 12,
-
         });
 
       } else {
         // Fallback single marker
         const el = document.createElement('div');
-        el.style.cssText = 'width:20px;height:20px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.6);';
+        el.style.cssText = 'padding:6px;';
+        
+        const inner = document.createElement('div');
+        inner.style.cssText = 'width:20px;height:20px;border-radius:50%;background:#f59e0b;border:3px solid white;box-shadow:0 2px 8px rgba(0,0,0,0.6);';
+        el.appendChild(inner);
+
         new mapboxgl.Marker(el)
           .setLngLat([trek.longitude, trek.latitude])
-          .setPopup(new mapboxgl.Popup({ offset: 15 }).setHTML(
+          .setPopup(new mapboxgl.Popup({ offset: 15, autoPan: false }).setHTML(
             `<div style="padding:6px 8px;font-family:sans-serif;font-size:13px;color:#111;">
               <strong>${trek.name}</strong>
               <div style="color:#555;margin-top:2px;">${trek.region}, ${trek.country}</div>
@@ -483,7 +475,7 @@ map.current = new mapboxgl.Map({
       observer.disconnect();
       if (map.current) { map.current.remove(); map.current = null; }
     };
-  }, [geo.ready, geo.stops, trek]);
+  }, [geo.ready, geo.stops, trek, embedMode]);
 
   if (!MAPBOX_TOKEN) {
     return (
@@ -497,7 +489,7 @@ map.current = new mapboxgl.Map({
     );
   }
 
-return (
+  return (
     <div 
       className={`relative w-full overflow-hidden ${
         embedMode 
@@ -505,7 +497,6 @@ return (
           : "h-[500px] rounded-xl border border-border shadow-sm"
       }`}
     >
-      {/* Map container */}
       <div ref={mapContainer} className="w-full h-full" />
 
       {/* ── View Full Route CTA (embed only) ───────────────────────────── */}
@@ -520,7 +511,7 @@ return (
         </a>
       )}
       
-      {/* ── NEW: Gesture hint overlay (embed only) ─────────────────────── */}
+      {/* ── Gesture hint overlay (embed only) ─────────────────────── */}
       {embedMode && (
         <div
           id="embed-gesture-hint"
@@ -546,7 +537,7 @@ return (
         </div>
       )}
 
-      {/* ── EXISTING: Loading State ────────────────────────────────────── */}
+      {/* ── Loading State ────────────────────────────────────── */}
       {geo.geocoding && (
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center gap-3 text-white z-10">
           <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -554,7 +545,7 @@ return (
         </div>
       )}
 
-      {/* ── EXISTING: Waypoint Legend ──────────────────────────────────── */}
+      {/* ── Waypoint Legend ──────────────────────────────────── */}
       {geo.ready && geo.stops.length >= 2 && (
         <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white text-xs rounded-lg px-3 py-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 pointer-events-none z-10 max-w-[380px]">
           <span className="flex items-center gap-1.5">
